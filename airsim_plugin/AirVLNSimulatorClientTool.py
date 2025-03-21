@@ -281,7 +281,40 @@ class AirVLNSimulatorClientTool:
         except Exception as e:
             logger.error(e)
 
-    
+
+    def moveToSpecifyHeight(self, heights: list):
+        def _moveToSpecifyHeight(airsim_client: airsim.VehicleClient, height: float):
+            if airsim_client is None:
+                raise Exception('error')
+                return
+            airsim_client.moveToZAsync(z=height, velocity=3, timeout_sec=10).join()
+            return  
+
+        threads = []
+        thread_results = []
+        for index_1 in range(len(self.airsim_clients)):
+            threads.append([])
+            for index_2 in range(len(self.airsim_clients[index_1])):
+                threads[index_1].append(
+                    MyThread(_moveToSpecifyHeight, (self.airsim_clients[index_1][index_2], heights[index_1][index_2]))
+                )
+        for index_1, _ in enumerate(threads):
+            for index_2, _ in enumerate(threads[index_1]):
+                threads[index_1][index_2].setDaemon(True)
+                threads[index_1][index_2].start()
+        for index_1, _ in enumerate(threads):
+            for index_2, _ in enumerate(threads[index_1]):
+                threads[index_1][index_2].join()
+        for index_1, _ in enumerate(threads):
+            for index_2, _ in enumerate(threads[index_1]):
+                threads[index_1][index_2].get_result()
+                thread_results.append(threads[index_1][index_2].flag_ok)
+        threads = []
+        if not (np.array(thread_results) == True).all():
+            logger.error('moveToSpecifyHeight失败')
+            return False
+        return True
+        
 
     def move_path_by_waypoints(self, waypoints_list, start_states):
         velocity = 1

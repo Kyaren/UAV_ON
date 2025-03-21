@@ -55,10 +55,11 @@ class SceneInitializer:
         self.SimulatorClientTool.setObjects(Objects_Info)
 
     def getTargetList(self, targets:list):
-        """Gets a list of targets within a certain range.
+        """
+            Gets a list of targets within a certain range.
 
             Args:
-                targets (List[Any]): A list of potential targets.
+                targets (List[Any]): A list of Targets which we created in the scene.
 
             Returns:
                 List[Any]: A list of targets that are within the specified distance.
@@ -66,7 +67,8 @@ class SceneInitializer:
         """
 
     def getInstructionList(self, targets:list):
-        """Gets instruction for each target from json.
+        """
+            Gets instruction for each target from json.
 
             Args:
                 targets (List[Any]): A list of targets.
@@ -77,12 +79,22 @@ class SceneInitializer:
         """
 
     def calculateDistance(self, target:dict):
-        """Calculates the distance between the drone and the target.
+        """
+            Calculates the distance between the drone and the target.
 
             Args:
-                target (Dict): The target object.
+                target (Dict): The target object, the dict format is: {"target":{position}}.
 
             Returns:
                 float: The distance between the drone and the target.
 
         """
+
+    def changeEnvironment(self, ):
+        """
+            Change the objects location in the env.
+
+        """
+    
+
+    
