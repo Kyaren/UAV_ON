@@ -28,6 +28,10 @@ def load_Model_and_Tokenizer(args):
     
     return model, tokenizer, device, torch_type
 
+def preprocess(image):
+    
+
+
 def generate_Response(model, tokenizer, device, torch_type, images):
     if images is None:
         pass

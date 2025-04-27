@@ -25,7 +25,11 @@ class gridMap:
         if(self.map_width%2==0):
             self.map_width+=1
 
-        self.gridMap=np.zeros((self.map_width, self.map_width, self.feature_dim), dtype=np.float32)
+        self.gridMap=np.zeros((self.map_width, self.map_width, self.feature_dim), dtype=[
+            ('explored', bool),
+            ('obstacle', bool),
+            ('observation', np.float32)
+        ])
 
     def getCenterIndex(self):
         index = self.map_width // 2 + 1

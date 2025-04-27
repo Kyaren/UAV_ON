@@ -90,19 +90,18 @@ args.make_dir_time = datetime.datetime.now().strftime("%Y%m%d-%H%M%S-%f")
 args.logger_file_name = '{}/workdir/{}/logs/{}_{}.log'.format(args.project_prefix, args.run_type, args.collect_type, args.make_dir_time)
 
 
-# args.run_type = 'collect'
-assert args.run_type in ['collect', 'train', 'eval'], 'run_type error'
-# args.collect_type = 'TF'
-assert args.collect_type in ['TF', 'dagger'], 'collect_type error'
-
+parser.add_argument("--xOy_step_size", type=int, default=5)
+parser.add_argument("--z_step_size", type=int, default=2)
+parser.add_argument("--rotateAngle", type=int, default=45)
+parser.add_argument("--maxActions", type=int, default=150)
 
 args.machines_info = [
     {
         'MACHINE_IP': '127.0.0.1',
         'SOCKET_PORT': int(args.simulator_tool_port),
         'MAX_SCENE_NUM': 16,
-        'open_scenes': [0],
-        'gpus':[0]
+        'open_scenes': [],
+        
     },
 ]
 

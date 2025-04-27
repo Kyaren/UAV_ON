@@ -1,5 +1,5 @@
 from airsim_plugin.AirVLNSimulatorClientTool import AirVLNSimulatorClientTool
-
+import lmdb
 
 class simState:
     def __init__(self, ):
@@ -11,7 +11,12 @@ class DronePerception:
 
 
     def getObservation(self,):
-        pass
+        """
+            Get the observation from the sensors
+
+            return (list): observation from the sensors
+        """
+        
 
     def getSearchHeight(self,):
         """

@@ -65,6 +65,16 @@ class SceneInitializer:
                 List[Any]: A list of targets that are within the specified distance.
 
         """
+        target_list = {}
+        Objects_Info = self.SceneInfo["objects"]
+
+        for Object_Name, Object_Data in Objects_Info.items():
+            target_list[Object_Name] = [] 
+            for target in Object_Data.values():
+                position = target["position"]
+                if self.calculateDistance((position["x_val"], position["y_val"])) < self.distance: 
+                    target_list[Object_Name].append(target)
+        return target_list
 
     def getInstructionList(self, targets:list):
         """
@@ -78,17 +88,21 @@ class SceneInitializer:
 
         """
 
-    def calculateDistance(self, target:dict):
+    def calculateDistance(self, target:tuple):
         """
             Calculates the distance between the drone and the target.
 
             Args:
-                target (Dict): The target object, the dict format is: {"target":{position}}.
+                target (tuple[float,float]): The target object, the dict format is: {"target":{position}}.
 
             Returns:
                 float: The distance between the drone and the target.
 
         """
+        delta_x = self.StartPoint["x_val"] - target[0]
+        delta_y = self.StartPoint["y_val"] - target[1]
+        distance = np.sqrt(delta_x**2 + delta_y**2)
+        return distance
 
     def changeEnvironment(self, ):
         """

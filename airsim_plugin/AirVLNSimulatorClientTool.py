@@ -8,6 +8,7 @@ import random
 import copy
 import numpy as np
 import cv2
+import math
 import os,sys
 
 import tqdm
@@ -282,13 +283,25 @@ class AirVLNSimulatorClientTool:
             logger.error(e)
 
 
-    def moveToSpecifyHeight(self, heights: list):
-        def _moveToSpecifyHeight(airsim_client: airsim.VehicleClient, height: float):
+
+    def move_to_next_pose(self, poses_list: list, fly_types: list):
+        def _move(airsim_client: airsim.VehicleClient, pose: airsim.Pose, fly_type: str):
             if airsim_client is None:
                 raise Exception('error')
                 return
-            airsim_client.moveToZAsync(z=height, velocity=3, timeout_sec=10).join()
-            return  
+            
+            if fly_type == 'move':
+                drivetrain = airsim.DrivetrainType.ForwardOnly
+                yaw_mode=airsim.YawMode(is_rate=False)
+                airsim_client.moveToPositionAsync(pose.position.x_val, pose.position.y_val, pose.position.z_val,
+                                                  velocity=3, drivetrain=drivetrain, yaw_mode=yaw_mode).join()
+
+            elif fly_type == 'rotate':
+                (pitch, roll, yaw) = airsim.to_eularian_angles(pose.orientation)
+                airsim_client.rotateToYawAsync(math.degrees(yaw)).join()
+            
+            return
+
 
         threads = []
         thread_results = []
@@ -296,91 +309,7 @@ class AirVLNSimulatorClientTool:
             threads.append([])
             for index_2 in range(len(self.airsim_clients[index_1])):
                 threads[index_1].append(
-                    MyThread(_moveToSpecifyHeight, (self.airsim_clients[index_1][index_2], heights[index_1][index_2]))
-                )
-        for index_1, _ in enumerate(threads):
-            for index_2, _ in enumerate(threads[index_1]):
-                threads[index_1][index_2].setDaemon(True)
-                threads[index_1][index_2].start()
-        for index_1, _ in enumerate(threads):
-            for index_2, _ in enumerate(threads[index_1]):
-                threads[index_1][index_2].join()
-        for index_1, _ in enumerate(threads):
-            for index_2, _ in enumerate(threads[index_1]):
-                threads[index_1][index_2].get_result()
-                thread_results.append(threads[index_1][index_2].flag_ok)
-        threads = []
-        if not (np.array(thread_results) == True).all():
-            logger.error('moveToSpecifyHeight失败')
-            return False
-        return True
-        
-
-    def move_path_by_waypoints(self, waypoints_list, start_states):
-        velocity = 1
-        drivetrain = airsim.DrivetrainType.ForwardOnly
-        yaw_mode=airsim.YawMode(is_rate=False)
-        lookahead=3
-        adaptive_lookahead=1
-        def move_path(airsim_client: airsim.VehicleClient, waypoints, start_state):
-            results = []
-            state_sensor = State(airsim_client, )
-            imu_sensor = Imu(airsim_client, imu_name='Imu')
-            path = [airsim.Vector3r(*waypoint[0:3]) for waypoint in waypoints]
-            airsim_client.enableApiControl(True)
-            airsim_client.armDisarm(True)
-            airsim_client.simPause(False)
-            airsim_client.simSetKinematics(start_state, ignore_collision=False)
-            state_info = state_sensor.retrieve()
-            airsim_client.moveOnPathAsync(path=path, 
-                                velocity=velocity, 
-                                drivetrain=drivetrain, 
-                                yaw_mode=yaw_mode, 
-                                lookahead=lookahead, 
-                                adaptive_lookahead=adaptive_lookahead)
-            target_idx = 5
-            current_idx = 0
-            pos_queue = deque(maxlen=20)
-            start_time = time.perf_counter()
-            collision = False
-            distance = 10000
-            while True:
-                time.sleep(0.005)
-                if time.perf_counter() - start_time > 5:
-                    return None
-                target = path[current_idx]
-                state_info = copy.deepcopy(state_sensor.retrieve())
-                imu_info = copy.deepcopy(imu_sensor.retrieve())
-                position = np.array(state_info['position'])
-                pos_queue.append(position)
-                if len(pos_queue) == pos_queue.maxlen:
-                    recent_loc = position
-                    history_loc = pos_queue.popleft()
-                    delta_distance = np.linalg.norm(history_loc -recent_loc)
-                    if delta_distance < 0.1:
-                        print('move on path api: stuck max len')
-                        collision = True
-                        break
-                new_distance = np.linalg.norm(position - np.array([target.x_val, target.y_val, target.z_val]))
-                if new_distance > distance:
-                    results.append({'sensors': {'state': state_info, 'imu': imu_info}})
-                    current_idx += 1
-                    if current_idx == target_idx:
-                        airsim_client.simPause(True)
-                        break
-                    else:
-                        distance = 10000
-                else:
-                    distance = new_distance
-            return {'states': results, 'collision': collision}
-        
-        threads = []
-        thread_results = []
-        for index_1 in range(len(self.airsim_clients)):
-            threads.append([])
-            for index_2 in range(len(self.airsim_clients[index_1])):
-                threads[index_1].append(
-                    MyThread(move_path, (self.airsim_clients[index_1][index_2], waypoints_list[index_1][index_2], start_states[index_1][index_2]))
+                    MyThread(_move, (self.airsim_clients[index_1][index_2], poses_list[index_1][index_2], fly_types[index_1][index_2]))
                 )
         for index_1, _ in enumerate(threads):
             for index_2, _ in enumerate(threads[index_1]):
@@ -404,7 +333,7 @@ class AirVLNSimulatorClientTool:
                 thread_results.append(threads[index_1][index_2].flag_ok)
         threads = []
         if not (np.array(thread_results) == True).all():
-            logger.error('move path by waypoints failed.')
+            logger.error('move by position failed.')
             return None
         if error_flag:
             return None
@@ -423,9 +352,7 @@ class AirVLNSimulatorClientTool:
             )
             vehicles=airsim_client.listVehicles()
             airsim_client.simSetObjectScale(vehicles[0],airsim.Vector3r(0.5,0.5,0.5))
-            # airsim_client.simContinueForFrames(1)
-            # airsim_client.simPause(True)
-
+            
             return
 
         threads = []
@@ -455,128 +382,7 @@ class AirVLNSimulatorClientTool:
 
         return True
     
-    def setObjects(self, Objects_Info: dict):
-        def _setObject(airsim_client: airsim.VehicleClient, Objects_Info: dict) -> None:
-            if airsim_client is None:
-                raise Exception('error')
-                return
-            
-            Objects_Name=list(Objects_Info.keys())
-            Objects_Pose=list(Objects_Info.values())
-            for index1 in range(len(Objects_Info)):
-                Object_Name=Objects_Name[index1]
-                print("Object_Name: ", Object_Name)
-                Object_StartPoints=list(Objects_Pose[index1].values())
-                Object_StartPoint=random.choice(Object_StartPoints)
-                Orientation=airsim.Quaternionr( Object_StartPoint['orientation']['x_val'], Object_StartPoint['orientation']['y_val']
-                                        , Object_StartPoint['orientation']['z_val'],Object_StartPoint['orientation']['w_val'])
-                Position=airsim.Vector3r(Object_StartPoint['position']['x_val'], Object_StartPoint['position']['y_val'], 
-                                     Object_StartPoint['position']['z_val'])
-                Scale=airsim.Vector3r(Object_StartPoint['scale']['x_val'], Object_StartPoint['scale']['y_val'], 
-                                  Object_StartPoint['scale']['z_val'])
-                Pose=airsim.Pose(Position, Orientation)
-                #airsim_client.simDestroyObject(Object_Name)
-                airsim_client.simDestroyObject('BP_gondola_2')
-                airsim_client.simDestroyObject('BP_gondola3_2')
-                airsim_client.simDestroyObject('BP_gondola4')
-                airsim_client.simDestroyObject('BP_gondola2_2')
-                success=airsim_client.simSpawnObject(Object_Name + str(index1), Object_Name, Pose, Scale)
-            return success
-
-        threads = []
-        thread_results = []
-        cnt = 0
-        for index_1 in range(len(self.airsim_clients)):
-            threads.append([])
-            for index_2 in range(len(self.airsim_clients[index_1])):
-                #object_list[cnt]['object_cnt'] = self.objects_name_cnt[index_1][index_2]
-                threads[index_1].append(
-                    MyThread(_setObject, (self.airsim_clients[index_1][index_2], Objects_Info))
-                )
-                self.objects_name_cnt[index_1][index_2] += 1
-                cnt += 1
-
-        for index_1, _ in enumerate(threads):
-            for index_2, _ in enumerate(threads[index_1]):
-                threads[index_1][index_2].setDaemon(True)
-                threads[index_1][index_2].start()
-        for index_1, _ in enumerate(threads):
-            for index_2, _ in enumerate(threads[index_1]):
-                threads[index_1][index_2].join()
-        for index_1, _ in enumerate(threads):
-            for index_2, _ in enumerate(threads[index_1]):
-                threads[index_1][index_2].get_result()
-                thread_results.append(threads[index_1][index_2].flag_ok)
-        threads = []
-        if not (np.array(thread_results) == True).all():
-            logger.error('set Object失败')
-            return False
-        return True
-    
-    def getImageResponses(self, cameras=['FrontCamera', 'LeftCamera', 'RightCamera', 'RearCamera', 'DownCamera'], poses=None):
-        def _getImages(airsim_client: airsim.VehicleClient):
-            if airsim_client is None:
-                raise Exception('client is None.')
-                return None, None
-            time_sleep_cnt = 0
-            while True:
-                try:
-                    ImageRequest = []
-                    for camera_name in cameras:
-                        ImageRequest.append(airsim.ImageRequest(camera_name, airsim.ImageType.Scene, pixels_as_float=False, compress=False))
-                        ImageRequest.append(airsim.ImageRequest(camera_name, airsim.ImageType.DepthPerspective, pixels_as_float=True, compress=False))
-                    image_datas = airsim_client.simGetImages(requests=ImageRequest)
-                    images, depth_images = [], []
-                    for idx, camera_name in enumerate(cameras):
-                        rgb_resp = image_datas[2 * idx]
-                        image = np.frombuffer(rgb_resp.image_data_uint8, dtype=np.uint8).reshape(rgb_resp.height, rgb_resp.width, 3)
-                        depth_resp = image_datas[2* idx + 1]
-                        depth_img_in_meters = airsim.list_to_2d_float_array(depth_resp.image_data_float, depth_resp.width, depth_resp.height)
-                        depth_image = (np.clip(depth_img_in_meters, 0, 100) / 100 * 255).astype(np.uint8)
-                        images.append(image)
-                        depth_images.append(depth_image)
-                    break
-                except Exception as e:
-                    time_sleep_cnt += 1
-                    logger.error("图片获取错误: " + str(e))
-                    logger.error('time_sleep_cnt: {}'.format(time_sleep_cnt))
-                    time.sleep(1)
-                if time_sleep_cnt > 10:
-                    raise Exception('图片获取失败')
-            return images, depth_images
-
-        threads = []
-        thread_results = []
-        for index_1 in range(len(self.airsim_clients)):
-            threads.append([])
-            for index_2 in range(len(self.airsim_clients[index_1])):
-                threads[index_1].append(
-                    MyThread(_getImages, (self.airsim_clients[index_1][index_2], ))
-                )
-        for index_1, _ in enumerate(threads):
-            for index_2, _ in enumerate(threads[index_1]):
-                threads[index_1][index_2].setDaemon(True)
-                threads[index_1][index_2].start()
-        for index_1, _ in enumerate(threads):
-            for index_2, _ in enumerate(threads[index_1]):
-                threads[index_1][index_2].join()
-        responses = []
-        for index_1, _ in enumerate(threads):
-            responses.append([])
-            for index_2, _ in enumerate(threads[index_1]):
-                responses[index_1].append(
-                    threads[index_1][index_2].get_result()
-                )
-                thread_results.append(threads[index_1][index_2].flag_ok)
-        threads = []
-        if not (np.array(thread_results) == True).all():
-            logger.error('getImageResponses失败')
-            return None
-
-        return responses
-    
-    
-    def getImageResponsesForRecord(self, cameras=['FrontCameraRecord', 'DownCameraRecord'], poses=None):
+    def getImageResponses(self, cameras=['0', '1', '2', '3'], poses=None):
         def _getImages(airsim_client: airsim.VehicleClient):
             if airsim_client is None:
                 raise Exception('client is None.')
