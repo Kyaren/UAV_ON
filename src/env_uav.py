@@ -52,7 +52,7 @@ class AirVLNENV:
         
         self.data = self._group_scenes()
         logger.warning('dataset grouped by scene, ')
-
+        self.index_data = 0
         scenes = [item['map_name'] for item in self.data]
         self.scenes = set(scenes)
         self.sim_states: Optional[List[SimState]] = [None for _ in range(batch_size)]
@@ -67,9 +67,17 @@ class AirVLNENV:
             
             return: object_info (contains position, rotation, scale, object name, instruction )
         """
-        object_list= json.load(open(self.dataset_path, 'r'))
-
-        return 
+        data=[]
+        data_file= json.load(open(self.dataset_path, 'r'))
+        for index, item in enumerate(tqdm(data_file, desc="Loading")):
+            traj_info={}
+            traj_info['map_name'] = item['map_name']
+            traj_info['object_name'] = item['object_name']
+            traj_info['object_pose'] = item['pose']
+            traj_info['object_start_position'] = item['start_position']
+            traj_info['instruction'] = item['instruction']
+            data.append(traj_info)
+        return data
     
     def _group_scenes(self):
         """

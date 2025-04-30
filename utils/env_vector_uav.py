@@ -297,13 +297,13 @@ class VectorEnvUtil:
     def _format_obs_at(self, index: int, done, oracle_success):
         rgb_images, depth_images, sim_state = self.obs_states[index]
 
-        observations = {
-            "rgb": rgb_images,
-            "depth": depth_images,
-            #load_data实现完修改
-            "instruction": 111,
-            "pose": sim_state.pose, 
-        }
+        observations = [info for info in sim_state.trajectory[-5:]]
+        ###need fix
+        observations[-1]['instruction']="111"
+        observations[-1]['rgb']=rgb_images
+        observations[-1]['depth']=depth_images
+        
+   
         collision = sim_state.is_collisioned
 
         return observations, done, collision, oracle_success

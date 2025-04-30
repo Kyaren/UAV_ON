@@ -39,7 +39,7 @@ AIRSIM_SETTINGS_TEMPLATE = {
       "Pitch": 0,
       "Yaw": 0,
       "Cameras": {
-        "FrontCamera": {
+        "0": {
           "X": 1,
           "Y": 0,
           "Z": 0,
@@ -65,7 +65,7 @@ AIRSIM_SETTINGS_TEMPLATE = {
             }
           ]
         },
-        "RearCamera": {
+        "5": {
           "X": -1,
           "Y": 0,
           "Z": 0,
@@ -91,7 +91,7 @@ AIRSIM_SETTINGS_TEMPLATE = {
             }
           ]
         },
-        "LeftCamera": {
+        "1": {
           "X": 0,
           "Y": -1,
           "Z": 0,
@@ -117,7 +117,7 @@ AIRSIM_SETTINGS_TEMPLATE = {
             }
           ]
         },
-        "RightCamera": {
+        "2": {
           "X": 0,
           "Y": 1,
           "Z": 0,
@@ -143,7 +143,7 @@ AIRSIM_SETTINGS_TEMPLATE = {
             }
           ]
         },
-        "DownCamera": {
+        "3": {
           "X": 0,
           "Y": 0,
           "Z": 0,
