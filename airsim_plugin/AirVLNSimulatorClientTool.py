@@ -137,6 +137,9 @@ class AirVLNSimulatorClientTool:
                     while not confirmed and count < 30:
                         try:
                             self.airsim_clients[index_1][index_2].confirmConnection()
+                            self.airsim_clients[index_1][index_2].enableApiControl(True)
+                            self.airsim_clients[index_1][index_2].armDisarm(True)
+                            self.airsim_clients[index_1][index_2].takeoffAsync().join()
                             confirmed = True
                         except Exception as e:
                             time.sleep(1)
@@ -196,6 +199,8 @@ class AirVLNSimulatorClientTool:
             if result[0] == False:
                 logger.error(f'打开场景失败，机器: {socket_client.address._host}:{socket_client.address._port}')
                 raise Exception('打开场景失败')
+            
+            print("===")
             assert len(result[1]) == 2, '打开场景失败'
             print('waiting for airsim connection...')
             time.sleep(3 * len(self.machines_info[index]['open_scenes']) + 10)
@@ -290,17 +295,30 @@ class AirVLNSimulatorClientTool:
                 raise Exception('error')
                 return
             
+            state_sensor = State(airsim_client)
+            imu_sensor = Imu(airsim_client,imu_name="Imu")
+            
+            # airsim_client.armDisarm(True)
             if fly_type == 'move':
-                drivetrain = airsim.DrivetrainType.ForwardOnly
+                drivetrain = airsim.DrivetrainType.MaxDegreeOfFreedom
                 yaw_mode=airsim.YawMode(is_rate=False)
                 airsim_client.moveToPositionAsync(pose.position.x_val, pose.position.y_val, pose.position.z_val,
-                                                  velocity=3, drivetrain=drivetrain, yaw_mode=yaw_mode).join()
+                                                  velocity=1, drivetrain=drivetrain, yaw_mode=yaw_mode)
 
             elif fly_type == 'rotate':
                 (pitch, roll, yaw) = airsim.to_eularian_angles(pose.orientation)
-                airsim_client.rotateToYawAsync(math.degrees(yaw)).join()
+                airsim_client.rotateToYawAsync(math.degrees(yaw))
             
-            return
+            state_info = copy.deepcopy(state_sensor.retrieve())
+            imu_info = copy.deepcopy(imu_sensor.retrieve())
+            position = np.array(state_info['position'])
+
+            results = []
+            collision = False
+            if state_info['collision']['has_collided']:
+                collision = True
+            results.append({'sensors':{'state':state_info,'imu':imu_info}})
+            return {'states': results,'collision':collision}
 
 
         threads = []
@@ -345,11 +363,7 @@ class AirVLNSimulatorClientTool:
                 raise Exception('error')
                 return
             
-            print("Pose: ", str(pose))
-            airsim_client.simSetKinematics(
-                state=pose,
-                ignore_collision=True,
-            )
+            airsim_client.simSetVehiclePose(pose=pose, ignore_collision=True)
             vehicles=airsim_client.listVehicles()
             airsim_client.simSetObjectScale(vehicles[0],airsim.Vector3r(0.5,0.5,0.5))
             
@@ -392,13 +406,13 @@ class AirVLNSimulatorClientTool:
                 try:
                     ImageRequest = []
                     for camera_name in cameras:
-                        ImageRequest.append(airsim.ImageRequest(camera_name, airsim.ImageType.Scene, pixels_as_float=False, compress=False))
+                        ImageRequest.append(airsim.ImageRequest(camera_name, airsim.ImageType.Scene, pixels_as_float=False, compress=True))
                         ImageRequest.append(airsim.ImageRequest(camera_name, airsim.ImageType.DepthPerspective, pixels_as_float=True, compress=False))
                     image_datas = airsim_client.simGetImages(requests=ImageRequest)
                     images, depth_images = [], []
                     for idx, camera_name in enumerate(cameras):
                         rgb_resp = image_datas[2 * idx]
-                        image = np.frombuffer(rgb_resp.image_data_uint8, dtype=np.uint8).reshape(rgb_resp.height, rgb_resp.width, 3)
+                        image = rgb_resp.image_data_uint8
                         depth_resp = image_datas[2* idx + 1]
                         depth_img_in_meters = airsim.list_to_2d_float_array(depth_resp.image_data_float, depth_resp.width, depth_resp.height)
                         depth_image = (np.clip(depth_img_in_meters, 0, 100) / 100 * 255).astype(np.uint8)

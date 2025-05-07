@@ -18,20 +18,11 @@ AIRSIM_SETTINGS_TEMPLATE = {
   "SeeDocsAt": "https://microsoft.github.io/AirSim/settings/",
   "SettingsVersion": 1.2,
   "SimMode": "Multirotor",
-  "ClockSpeed": 10,
+  "ClockSpeed": 2,
   "ViewMode": "",
-  "PhysicsEngineName": "ExternalPhysicsEngine",
-  "Recording": {
-    "RecordInterval": 1,
-    "Enabled": False,
-    "Cameras": []
-  },
   "Vehicles": {
     "Drone_1": {
       "VehicleType": "SimpleFlight",
-      "UseSerial": False,
-      "LockStep": True,
-      "AutoCreate": True,
       "X": 0,
       "Y": 0,
       "Z": 0,
@@ -187,10 +178,11 @@ AIRSIM_SETTINGS_TEMPLATE = {
 }
 
 env_exec_path_dict = {
-    "NYCEnvironmentMegapa": {
-        'bash_name': 'NYCEnvironmentMegapa',
-        'exec_path': './closeloop_envs',
-    }
+    
+    "ModularNeighborhood_UnSeenThings": {
+        'bash_name': 'NewNeighborhood',
+        'exec_path': '/home/syx/Desktop/ModularNeighborhood/LinuxNoEditor',
+    },
 }
 
 def create_drones(drone_num_per_env=1, show_scene=False, uav_mode=True) -> dict:
@@ -383,33 +375,31 @@ class EventHandler(object):
 
         # search scene path 3
         choose_env_exe_paths = []
-        env_path=os.path.join('/home/syx/Desktop/LinuxNoEditor','StreetandPark.sh')
-        choose_env_exe_paths.append(env_path)
         
-        
-        
-        
-        # for scen_id, gpu_id in scen_id_gpu_list:
-        #     if str(scen_id).lower() == 'none':
-        #         choose_env_exe_paths.append(None)
-        #         continue
+        for scen_id, gpu_id in scen_id_gpu_list:
+            if isinstance(scen_id, bytes):
+                scen_id = scen_id.decode('utf-8')
+
+            if str(scen_id).lower() == 'none':
+                choose_env_exe_paths.append(None)
+                continue
             
-        #     if scen_id in env_exec_path_dict:
-        #         env_info = env_exec_path_dict.get(scen_id)
-        #         res = os.path.join(args.root_path, env_info['exec_path'], env_info['bash_name'] + '.sh')
-        #         choose_env_exe_paths.append(res)
-        #     else:
-        #         prefix_flag = False
-        #         for map_name in env_exec_path_dict.keys():
-        #             if str(scen_id).startswith(map_name):
-        #                 prefix_flag = True
-        #                 env_info = env_exec_path_dict.get(map_name)
-        #                 res = os.path.join(args.root_path, env_info['exec_path'], env_info['bash_name'] + '.sh')
-        #                 choose_env_exe_paths.append(res)
-        #         if not prefix_flag:
-        #             print(f'can not find scene file: {scen_id}')
-        #             raise KeyError
-        #         env_info = env_exec_path_dict.get(scene_id)
+            if scen_id in env_exec_path_dict:
+                env_info = env_exec_path_dict.get(scen_id)
+                res = os.path.join(args.root_path, env_info['exec_path'], env_info['bash_name'] + '.sh')
+                choose_env_exe_paths.append(res)
+            else:
+                prefix_flag = False
+                for map_name in env_exec_path_dict.keys():
+                    if str(scen_id).startswith(map_name):
+                        prefix_flag = True
+                        env_info = env_exec_path_dict.get(map_name)
+                        res = os.path.join(args.root_path, env_info['exec_path'], env_info['bash_name'] + '.sh')
+                        choose_env_exe_paths.append(res)
+                if not prefix_flag:
+                    print(f'can not find scene file: {scen_id}')
+                    raise KeyError
+                env_info = env_exec_path_dict.get(scen_id)
                 
         p_s = []
         for index, (scen_id, gpu_id) in enumerate(scen_id_gpu_list):
@@ -464,9 +454,9 @@ class EventHandler(object):
         KillPorts([port])
         
         scene_id, gpu_id = self.port_to_scene[port]
-        # env_info = env_exec_path_dict.get(scene_id)
-        # env_path = os.path.join(args.root_path, env_info['exec_path'], env_info['bash_name'] + '.sh')
-        env_path=os.path('/home/Desktop/LinuxNoEditor/StreetandPark.sh')
+        env_info = env_exec_path_dict.get(scene_id)
+        env_path = os.path.join(args.root_path, env_info['exec_path'], env_info['bash_name'] + '.sh')
+    
         # subprocess_execute = "bash {} -RenderOffscreen -NoSound -NoVSync -GraphicsAdapter={} -settings={} ".format(
         #             env_path,
         #             gpu_id,
@@ -517,6 +507,7 @@ class EventHandler(object):
                 str(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())),
             )
         )
+        print("=="+str(result))
         return result
 
     def close_scenes(self, ip: str) -> bool:

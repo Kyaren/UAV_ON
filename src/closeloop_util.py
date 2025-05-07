@@ -32,35 +32,22 @@ def CheckPort():
     return True
 
 def initialize_env(dataset_path, save_path, train_json_path, activate_maps=[]):
-    train_env = AirVLNENV(batch_size=args.batchSize, dataset_path=dataset_path, save_path=save_path, eval_json_path=train_json_path, activate_maps=activate_maps)
+    train_env = AirVLNENV(batch_size=args.batchSize, dataset_path=dataset_path, save_path=save_path, activate_maps=activate_maps)
     return train_env
 
-def initialize_env_eval(dataset_path, save_path, eval_json_path):
-    train_env = AirVLNENV(batch_size=args.batchSize, dataset_path=dataset_path, save_path=save_path, eval_json_path=eval_json_path)
+def initialize_env_eval(dataset_path, save_path):
+    train_env = AirVLNENV(batch_size=args.batchSize, dataset_path=dataset_path, save_path=save_path)
     return train_env
 
-def save_to_dataset_dagger(episodes, path, dagger_it, teacher_after_collision_steps):
-    ori_path = path
-    path_parts = ori_path.strip('/').split('/')
-    map_name, seq_name = path_parts[-2], path_parts[-1]
-    root_path = os.path.join(args.dagger_save_path, seq_name)
-    if not os.path.exists(root_path):
-        os.makedirs(root_path)
-    folder_names = ['log']
-    for folder_name in folder_names:
-        os.makedirs(os.path.join(root_path, folder_name), exist_ok=True)
-    save_logs(episodes, root_path)
-
-
-    ori_obj = os.path.join(ori_path, 'object_description.json')
-    target_obj = os.path.join(root_path, 'object_description.json')
-    shutil.copy2(ori_obj, target_obj)
-    with open(os.path.join(root_path, 'dagger_info.json'), 'w') as f:
-        json.dump({'teacher_after_collision_steps': teacher_after_collision_steps,
-                   'map_name': map_name,
-                   'seq_name': seq_name}, f)
+def get_episode_by_id(episodes, target_id):
+    """
+    episodes: List[dict]，每个 dict 都有 'episode_id' 键
+    target_id: str 或 int，要查找的 ID
+    返回：匹配的那个 dict，如果找不到返回 None
+    """
+    return next((ep for ep in episodes if ep.get('episode_id') == target_id), None)
         
-def save_to_dataset_eval(episodes, path, ori_traj_dir):
+def save_to_dataset_eval(episodes, path, ori_traj_dir, task_id):
     root_path = os.path.join(path)
     if not os.path.exists(root_path):
         os.makedirs(root_path)
@@ -70,11 +57,13 @@ def save_to_dataset_eval(episodes, path, ori_traj_dir):
     print(root_path)
     save_logs(episodes, root_path)
 
-    ori_obj = os.path.join(ori_traj_dir, 'object_description.json')
-    target_obj = os.path.join(root_path, 'object_description.json')
-    shutil.copy2(ori_obj, target_obj)
-    with open(os.path.join(path, 'ori_info.json'), 'w') as f:
-        json.dump({'ori_traj_dir': ori_traj_dir}, f)
+    with open(os.path.join(args.dataset_path),'w') as f:
+        infos = json.load(f)
+    episode_info = get_episode_by_id(infos, task_id)
+    target_obj = os.path.join(path, 'object_description.json')
+    with open(target_obj, 'w') as f:
+        json.dump(episode_info, f, indent=2, ensure_ascii=False)
+    
 
 def save_logs(episodes, trajectory_dir):
     save_dir = os.path.join(trajectory_dir, 'log')
@@ -119,97 +108,16 @@ class BatchIterator:
         if batch is None:
             raise StopIteration
         return batch
-
-class DaggerBatchState:
-    def __init__(self, bs, env_batchs, train_env):
-        self.bs = bs
-        self.episodes = [[] for _ in range(bs)]
-        self.train_env = train_env
-        self.skips = [False] * bs
-        self.dones = [False] * bs
-        self.oracle_success = [False] * bs
-        self.collisions = [False] * bs
-        self.back_count = [dict() for _ in range(bs)] 
-        self.envs_to_pause = []
-        self.paths = [b['trajectory_dir'] for b in env_batchs]
-        self.target_positions = [b['object_position'] for b in env_batchs]
-        object_desc_dict = load_object_description()
-        self.object_infos = [object_desc_dict.get(b['object']['asset_name'].replace("AA", "")) for b in env_batchs]
-        self.trajs = [b['trajectory'] for b in env_batchs]
-        
-    def update_from_env_output(self, outputs, check_collision_function=None):
-        observations, dones, collisions, oracle_success = [list(x) for x in zip(*outputs)]
-        if check_collision_function is not None:
-            collisions, dones = check_collision_function(self.episodes, observations, collisions, dones)
-        for i in range(self.bs):
-            if i in self.envs_to_pause:
-                continue
-            self.episodes[i].append(observations[i][-1])
-            if oracle_success[i]:
-                dones[i] = True
-        self.oracle_success = oracle_success
-        self.dones = dones
-        self.collisions = collisions
-        return
-    
-    
-    def check_dagger_batch_termination(self, dagger_it):
-        for i in range(self.bs):
-            ep = self.episodes[i]
-            if not self.skips[i] and ((self.dones[i] and not self.collisions[i]) or (len(self.episodes[i]) >= args.maxWaypoints * 5 // 10 and self.collisions[i])):
-                ori_path = self.paths[i]
-                self.skips[i] = True
-                if self.collisions[i]:
-                    ep = ep[:-25]
-                save_to_dataset_dagger(ep, ori_path, dagger_it, self.teacher_after_collision_steps[i])
-            elif len(ep) < args.maxWaypoints * 5 // 10 and self.collisions[i] and not self.skips[i]: # the dagger is not long enough, so we don't save this data
-                self.skips[i] = True
-        if all(self.dones):
-            return True # terminate
-        return False 
-    
-    def dagger_step_back(self):
-        # if collisions without teacher action, return to last 2 frame and move with teacher action
-        for i in range(self.bs):
-            if self.dones[i] or i in self.envs_to_pause:
-                continue
-            # If no collision occurs or no teacher intervention is required, apply ModelWrapper control.
-            # If a collision occurs and teacher intervention is required, the DAgger trajectory fails, and the training ends.
-            # If current step is using teacher action, disable the teacher flag and apply ModelWrapper control.
-            if not self.collisions[i] and self.need_teacher[i]:
-                self.need_teacher[i] = False
-            elif self.collisions[i] and not self.need_teacher[i]:
-                if (len(self.episodes[i]) in self.back_count[i] and self.back_count[i][len(self.episodes[i])] > 3) or sum(self.back_count[i].values()) > 30:
-                    continue
-                else:
-                    self.back_count[i][len(self.episodes[i])] = self.back_count[i].get(len(self.episodes[i]), 0) + 1
-                    self.train_env.revert2frame(i)
-                    self.need_teacher[i] = True
-                    self.collisions[i] = False
-                    # reset the done flag caused by collision
-                    self.dones[i] = False
-                    if len(self.episodes[i]) > 10:
-                        self.episodes[i] = self.episodes[i][0:-10]
-                    else:
-                        self.episodes[i] = self.episodes[i][0:1]
-                    assert len(self.episodes[i]) == len(self.train_env.sim_states[i].trajectory)
-                    remove_index = 0
-                    for teacher_after_collision_step in self.teacher_after_collision_steps[i][::-1]:
-                        if teacher_after_collision_step >= len(self.episodes[i]):
-                            remove_index -= 1
-                    self.teacher_after_collision_steps[i] = self.teacher_after_collision_steps[i][0: (None if remove_index==0 else remove_index)]
-                    self.teacher_after_collision_steps[i].append(len(self.episodes[i]))
-                    
                     
 class EvalBatchState:
-    def __init__(self, batch_size, env_batchs, env):
+    def __init__(self, batch_size, env_batchs, env, save_eval_path):
         self.batch_size = batch_size
         self.eval_env = env
         self.episodes = [[] for _ in range(batch_size)]
         self.target_positions = [b['object_position'] for b in env_batchs]
-        self.object_infos = [self._get_object_info(b) for b in env_batchs]
-        self.trajs = [b['trajectory'] for b in env_batchs]
+        self.save_eval_path = save_eval_path
         self.ori_data_dirs = [b['trajectory_dir'] for b in env_batchs]
+        self.task_id = [b['task_id'] for b in env_batchs]
         self.dones = [False] * batch_size
         self.predict_dones = [False] * batch_size
         self.collisions = [False] * batch_size
@@ -222,13 +130,6 @@ class EvalBatchState:
         
         self._initialize_batch_data()
 
-    def _get_object_info(self, batch):
-        object_desc_dict = self._load_object_description()
-        return object_desc_dict.get(batch['object']['asset_name'].replace("AA", ""))
-
-    def _load_object_description(self):
-        with open(args.object_name_json_path, 'r') as f:
-            return {item['object_name']: item['object_desc'] for item in json.load(f)}
 
     def _initialize_batch_data(self):
         outputs = self.eval_env.reset()
@@ -241,11 +142,18 @@ class EvalBatchState:
             self.distance_to_ends[i].append(self._calculate_distance(observations[i][-1], self.target_positions[i]))
 
     def _calculate_distance(self, observation, target_position):
-        return np.linalg.norm(np.array(observation['sensors']['state']['position']) - np.array(target_position))
+        obs_pos = np.array(observation['sensors']['state']['position'])
+        coords = np.array(target_position)
+        # 如果 coords.shape = (N,3)，说明是多点
+        if coords.ndim == 2 and coords.shape[1] == 3:
+            dists = np.linalg.norm(coords - obs_pos[None, :], axis=1)
+            return float(dists.min())
+        else:
+            return float(np.linalg.norm(obs_pos - coords))
 
     def update_from_env_output(self, outputs):
         observations, self.dones, self.collisions, self.oracle_success = [list(x) for x in zip(*outputs)]
-        self.collisions, self.dones = self.assist.check_collision_by_depth(self.episodes, observations, self.collisions, self.dones)
+    
         
         for i in range(self.batch_size):
             if i in self.envs_to_pause:
@@ -253,15 +161,19 @@ class EvalBatchState:
             for j in range(len(observations[i])):
                 self.episodes[i].append(observations[i][j])
             self.distance_to_ends[i].append(self._calculate_distance(observations[i][-1], self.target_positions[i]))
-            if target_distance_increasing_for_10frames(self.distance_to_ends[i]):
-                self.collisions[i] = True
-                self.dones[i] = True
+          
 
 
     def update_metric(self):
         for i in range(self.batch_size):
             if self.dones[i]:
                 continue
+
+            if self.collisions[i]:
+                self.dones[i] = True
+                self.success[i] = False
+                self.oracle_success[i] = False
+
             if self.predict_dones[i] and not self.skips[i]:
                 if self.distance_to_ends[i][-1] <= 20 and not self.early_end[i]:
                     self.success[i] = True
@@ -274,7 +186,7 @@ class EvalBatchState:
                     
     def check_batch_termination(self, t):
         for i in range(self.batch_size):
-            if t == args.maxWaypoints:
+            if t == args.maxActions:
                 self.dones[i] = True
             if self.dones[i] and not self.skips[i]:
                 self.envs_to_pause.append(i)
@@ -286,8 +198,11 @@ class EvalBatchState:
                     prex = "oracle_"
                     print(i, " has oracle succeed!")
                 new_traj_name = prex +  self.ori_data_dirs[i].split('/')[-1]
-                new_traj_dir = os.path.join(args.eval_save_path, new_traj_name)
-                save_to_dataset_eval(self.episodes[i], new_traj_dir, self.ori_data_dirs[i])
+                new_traj_dir = os.path.join(args.eval_save_path, new_traj_name, str("task_"+self.task_id[i]))
+                save_to_dataset_eval(self.episodes[i], new_traj_dir, self.ori_data_dirs[i], self.task_id[i])
                 self.skips[i] = True
                 print(i, " has finished!")
         return np.array(self.skips).all()
+    
+
+        

@@ -272,7 +272,7 @@ class VectorEnvUtil:
         self.obs_states = obs_states
 
         for index in range(len(obs_states)):
-            _, _, state, _, _ = obs_states[index]
+            _, _, state = obs_states[index]
             self._connection_write_fns[index](
                 (COMMAND_GET_OBS, (index, state))
             )
@@ -285,7 +285,7 @@ class VectorEnvUtil:
         sim_states = []
         for index in range(len(obs_states)):
             (done, oracle_success), sim_state = results[index]
-            self.obs_states[index] = (obs_states[index][0], obs_states[index][1], sim_state, obs_states[index][3], obs_states[index][4])
+            self.obs_states[index] = (obs_states[index][0], obs_states[index][1], sim_state)
 
             obs.append(
                 self._format_obs_at(index, done, oracle_success)
@@ -299,10 +299,17 @@ class VectorEnvUtil:
 
         observations = [info for info in sim_state.trajectory[-5:]]
         ###need fix
-        observations[-1]['instruction']="111"
+        observations[-1]['description']=sim_state.task_info['description']
         observations[-1]['rgb']=rgb_images
         observations[-1]['depth']=depth_images
-        
+        observations[-1]['pre_poses'] = [item['sensors']['state'] for item in sim_state.trajectory[-10:]]
+        observations[-1]['step'] = sim_state.step
+        observations[-1]['move_distance'] = sim_state.move_distance
+        if len(sim_state.heading_changes)>0:
+            avg_heading = sum(sim_state.heading_changes)/len(sim_state.heading_changes)
+        else:
+            avg_heading = 0.0
+        observations[-1]['avg_heading_changes'] = round(avg_heading, 2)
    
         collision = sim_state.is_collisioned
 
