@@ -1,47 +1,36 @@
-import argparse
-import cv2
 import torch
-import copy
 import numpy as np
 
+from io import BytesIO
 from PIL import Image
 from transformers import AutoModelForCausalLM, AutoTokenizer 
 
-device = 'cuda:0'
+device = 'cuda:2'
 torch_type = torch.bfloat16
-query = """System:
-            You are an image understanding assistant. Your task is to generate concise, factual scene descriptions for each of four input images. For each image, you must:
+gen_kwargs = {
+            "max_new_tokens": 64,
+            "pad_token_id": 128002, # 使用tokenizer中定义的pad_token_id
+            "top_k": 1,
+    }
+query = """<s>[INST] <<SYS>>
+            You are an image understanding assistant. Your task is to generate one concise description per image that focuses on:
+            1. The main objects present, using simple nouns .
+            2. Each object’s approximate position or relationship .
+            3. The overall scene type .
+            4. Any clear semantic context.
 
-            1. List the main objects present, using simple descriptors (e.g., “yellow slide, Springer Spaniel dog, gas station building”).
-            2. Specify the overall scene type (e.g., “playground, street, park, gas station”).
-            3. Mention basic spatial arrangement if helpful (e.g., “the slide is in the foreground; the dog stands to its right”).
-            4. Convey any clear semantic context (e.g., “looks like a children’s playground next to a service station”).
+            Use plain, factual language. Do not add opinions, judgments, or fine-grained part details.  
+            User will supply an image; you must return exactly one description string (no quotes).  
 
-            Use plain, unembellished language. Do not describe fine-grained object parts or add opinions.
-
+            <</SYS>>
             User:
-            I will provide four images. For each one, return exactly one description string. Output your response as a JSON-style list of four strings, like:
-
-            [
-                "Description of image 1.",
-                "Description of image 2.",
-                "Description of image 3.",
-                "Description of image 4."
-            ]
-
-            Images:  
-            Image 1: <IMAGE_1>  
-            Image 2: <IMAGE_2>  
-            Image 3: <IMAGE_3>  
-            Image 4: <IMAGE_4>  
+            Here is the image:
+            <IMAGE>
 
             Assistant:
+            [/INST]
         """
-gen_kwargs = {
-        "max_new_tokens": 2048,
-        "pad_token_id": 128002,
-        "top_k": 1,
-    }
+
 
 
 
@@ -55,7 +44,7 @@ def load_model(model_path):
         torch_dtype=torch_type,
         trust_remote_code=True,
         device_map=device,
-        # load_in_4bit=True,
+        load_in_4bit=True,
         # low_cpu_mem_usage=True
     ).eval()
     return model, tokenizer
@@ -100,33 +89,31 @@ def collate_fn(features, tokenizer) -> dict:
 
     return batch
 
-def generate_caption(responses, model_path):
-    model, tokenizer=load_model(model_path=model_path)
-    pil_imgs = []
+def generate_caption(model,tokenizer,responses):
+    samples = []
+    
+        
     for resp in responses:
-        arr = np.frombuffer(resp.image_data_uint8, dtype=np.uint8)
-        img = arr.reshape(resp.height, resp.width, 3)
+        pil_image = Image.open(BytesIO(resp)).convert("RGB")
+        sample = model.build_conversation_input_ids(
+            tokenizer,
+            query=query,
+            history=[],
+            images=[pil_image],
+            template_version='chat',
+        )
+        samples.append(sample)
 
-        img = np.flipud(img)
-        pil_imgs.append(Image.fromarray(img))
-
-    # 2) 构造单样本输入
-    sample = model.build_conversation_input_ids(
-        tokenizer,
-        query=query,
-        history=[],
-        images=pil_imgs,
-        template_version='chat'
-    )
-
-    batch = collate_fn([sample], tokenizer)
-    batch = recur_move_to(batch, 'cuda:0', lambda x: isinstance(x, torch.Tensor))
+       
+       
+    batch = collate_fn(samples, tokenizer)
+    batch = recur_move_to(batch, device, lambda x: isinstance(x, torch.Tensor))
     batch = recur_move_to(batch, torch.bfloat16, lambda x: isinstance(x, torch.Tensor) and torch.is_floating_point(x))
 
     with torch.no_grad():
         out = model.generate(**batch, **gen_kwargs)
         out = out[:, batch['input_ids'].shape[1]:]
         decoded = tokenizer.batch_decode(out)
-        text = decoded[0].split("<|end_of_text|>")[0].strip()
+        # text = decoded[0].split("<|end_of_text|>")[0].strip("[]").strip('\'"')
 
-    return text
+    return [text.split("<|end_of_text|>")[0].strip("[]\"'") for text in decoded]

@@ -26,8 +26,17 @@ class SimState:
         self.progress = 0.0
         self.waypoint = {}
         self.sensorInfo = {}
+        self.target_position = task_info['object_position'][-1]
         self.start_pose = task_info['start_pose']
-        self.trajectory = [{'sensors': {'state': {'position': self.start_pose['start_position'], 'quaternionr': self.start_pose['start_quaternionr']}}}]
+        self.trajectory = [{'sensors': {
+                                'state': {
+                                    'position': self.start_pose['start_position'], 
+                                    'quaternionr': self.start_pose['start_quaternionr']
+                                },
+                            },
+                            'move_distance': float(0.0),
+                            'distance_to_target': self.task_info['distance_to_target']
+                        }]
         self.move_distance = 0.0
         self.heading_changes :list[float] = []
     
@@ -57,14 +66,18 @@ class ENV:
 
 def getNextPosition(current_pose: airsim.Pose, action, step_size, is_fixed):
     current_position = np.array([current_pose.position.x_val, current_pose.position.y_val, current_pose.position.z_val])
-    current_orientation =current_pose.orientation #order is w,x,y,z
-
+    current_orientation =airsim.Quaternionr(x_val = current_pose.orientation.x_val,
+                                            y_val = current_pose.orientation.y_val,
+                                            z_val = current_pose.orientation.z_val,
+                                            w_val = current_pose.orientation.w_val) #order is x,y,z,w
+   
     (pitch, roll, yaw) = airsim.to_eularian_angles(current_orientation)
-
+    
     if action == 'forward':
-        dx = math.cos(pitch) * math.cos(yaw)
-        dy = math.cos(pitch) * math.sin(yaw)
-        dz = math.sin(pitch)
+        
+        dx = math.cos(yaw)
+        dy = math.sin(yaw)
+        dz = 0
 
         vector = np.array([dx, dy, dz])
         norm = np.linalg.norm(vector)
@@ -77,26 +90,6 @@ def getNextPosition(current_pose: airsim.Pose, action, step_size, is_fixed):
             new_position = current_position + unit_vector * AirsimActionSettings.FORWARD_STEP_SIZE
         else:
             new_position = current_position + unit_vector * step_size
-        
-        new_orientation = current_orientation
-        fly_type = "move"
-
-    elif action == 'backward':
-        dx = math.cos(pitch) * math.cos(yaw)
-        dy = math.cos(pitch) * math.sin(yaw)
-        dz = math.sin(pitch)
-
-        vector = np.array([dx, dy, dz])
-        norm = np.linalg.norm(vector)
-        if norm > 1e-6:
-            unit_vector = vector / norm
-        else:
-            unit_vector = np.array([0, 0, 0])
-        
-        if is_fixed:
-            new_position = current_position - unit_vector * AirsimActionSettings.FORWARD_STEP_SIZE
-        else:
-            new_position = current_position - unit_vector * step_size
         
         new_orientation = current_orientation
         fly_type = "move"
@@ -121,7 +114,7 @@ def getNextPosition(current_pose: airsim.Pose, action, step_size, is_fixed):
             new_yaw = yaw + math.radians(step_size)
         
         if math.degrees(new_yaw) > 180:
-            new_yaw -= math.radians(360)
+            new_yaw += math.radians(-360)
         
         new_position = current_position
         new_orientation = airsim.to_quaternion(pitch, roll, new_yaw)
@@ -193,6 +186,6 @@ def getNextPosition(current_pose: airsim.Pose, action, step_size, is_fixed):
 
     new_pose = airsim.Pose(
         airsim.Vector3r(new_position[0], new_position[1], new_position[2]),
-        airsim.Quaternionr(new_orientation.x_val, new_orientation.y_val, new_orientation.z_val, new_orientation.w_val)
+        airsim.Quaternionr(x_val=new_orientation.x_val, y_val=new_orientation.y_val, z_val=new_orientation.z_val, w_val=new_orientation.w_val)
     )
     return (new_pose, fly_type)

@@ -18,8 +18,9 @@ AIRSIM_SETTINGS_TEMPLATE = {
   "SeeDocsAt": "https://microsoft.github.io/AirSim/settings/",
   "SettingsVersion": 1.2,
   "SimMode": "Multirotor",
-  "ClockSpeed": 2,
-  "ViewMode": "",
+  "ClockSpeed": 10,
+  "ControlFrequencyHz": 100,
+  "PhysicsFrequencyHz": 100,
   "Vehicles": {
     "Drone_1": {
       "VehicleType": "SimpleFlight",
@@ -40,34 +41,8 @@ AIRSIM_SETTINGS_TEMPLATE = {
           "CaptureSettings": [
             {
               "ImageType": 0,
-              "Width": 256,
-              "Height": 256,
-              "FOV_Degrees": 90,
-              "AutoExposureMaxBrightness": 1,
-              "AutoExposureMinBrightness": 0.03
-            },
-            {
-              "ImageType": 2,
-              "Width": 256,
-              "Height": 256,
-              "FOV_Degrees": 90,
-              "AutoExposureMaxBrightness": 1,
-              "AutoExposureMinBrightness": 0.03
-            }
-          ]
-        },
-        "5": {
-          "X": -1,
-          "Y": 0,
-          "Z": 0,
-          "Pitch": 0,
-          "Roll": 0,
-          "Yaw": 180,
-          "CaptureSettings": [
-            {
-              "ImageType": 0,
-              "Width": 256,
-              "Height": 256,
+              "Width": 512,
+              "Height": 512,
               "FOV_Degrees": 90,
               "AutoExposureMaxBrightness": 1,
               "AutoExposureMinBrightness": 0.03
@@ -92,8 +67,8 @@ AIRSIM_SETTINGS_TEMPLATE = {
           "CaptureSettings": [
             {
               "ImageType": 0,
-              "Width": 256,
-              "Height": 256,
+              "Width": 512,
+              "Height": 512,
               "FOV_Degrees": 90,
               "AutoExposureMaxBrightness": 1,
               "AutoExposureMinBrightness": 0.03
@@ -118,8 +93,8 @@ AIRSIM_SETTINGS_TEMPLATE = {
           "CaptureSettings": [
             {
               "ImageType": 0,
-              "Width": 256,
-              "Height": 256,
+              "Width": 512,
+              "Height": 512,
               "FOV_Degrees": 90,
               "AutoExposureMaxBrightness": 1,
               "AutoExposureMinBrightness": 0.03
@@ -144,8 +119,8 @@ AIRSIM_SETTINGS_TEMPLATE = {
           "CaptureSettings": [
             {
               "ImageType": 0,
-              "Width": 256,
-              "Height": 256,
+              "Width": 512,
+              "Height": 512,
               "FOV_Degrees": 90,
               "AutoExposureMaxBrightness": 1,
               "AutoExposureMinBrightness": 0.03
@@ -178,11 +153,62 @@ AIRSIM_SETTINGS_TEMPLATE = {
 }
 
 env_exec_path_dict = {
-    
-    "ModularNeighborhood_UnSeenThings": {
-        'bash_name': 'NewNeighborhood',
-        'exec_path': '/home/syx/Desktop/ModularNeighborhood/LinuxNoEditor',
+    "Barnyard_test": {
+        'bash_name': 'Barnyard_test1',
+        'exec_path': 'Barnyard',
     },
+    "BrushifyRoad_test": {
+        'bash_name': 'BrushifyRoad_test1',
+        'exec_path': 'BrushifyRoad',
+    },
+    "BrushifyUrban_test": {
+        'bash_name': 'BrushifyUrban',
+        'exec_path': 'BrushifyUrban',
+    },
+    "CabinLake_test": {
+        'bash_name': 'CabinLake',
+        'exec_path': 'CabinLake',
+    },
+    "CityPark_test": {
+        'bash_name': 'CityPark',
+        'exec_path': 'CityPark',
+    },
+    "CityStreet_test": {
+        'bash_name': 'CleanCityStreet',
+        'exec_path': 'CityStreet',  
+    },
+    "DownTown_test": {
+        'bash_name': 'DownTown_test1',
+        'exec_path': 'DownTown',
+    },
+    "ModularNeighborhood_test": {
+        'bash_name': 'NewNeighborhood',
+        'exec_path': 'Neighborhood',
+    },
+    "NYC_test": {
+        'bash_name': 'NYC1950',
+        'exec_path': 'NYC',
+    },
+    "Slum_test": {
+        'bash_name': 'Slum_test1',
+        'exec_path': 'Slum',
+    },
+    "UrbanJapan_test": {
+        'bash_name': 'UrbanJapan',
+        'exec_path': 'UrbanJapan',
+    },
+    "Venice_test": {
+        'bash_name': 'Vinice_test1',
+        'exec_path': 'Vinice',
+    },
+    "WesternTown_test": {
+        'bash_name': 'WesternTown_test1',
+        'exec_path': 'WesternTown',
+    },
+    "WinterTown_test":{
+        'bash_name': 'WinterTown_test1',
+        'exec_path': 'WinterTown',
+    }
 }
 
 def create_drones(drone_num_per_env=1, show_scene=False, uav_mode=True) -> dict:
@@ -327,7 +353,7 @@ class EventHandler(object):
         for i in range(1000):
             scene_ports.append(
                 #int(args.port) + (i+1)
-                int(args.port) + i
+                int(args.port) + (i+100)
             )
         self.scene_ports = scene_ports
         
@@ -342,6 +368,7 @@ class EventHandler(object):
 
     def ping(self) -> bool:
         return True
+
 
     def _open_scenes(self, ip: str , scen_id_gpu_list: list):
         print(
@@ -417,18 +444,18 @@ class EventHandler(object):
                 p_s.append(None)
                 continue
             else:
-                subprocess_execute = "bash {}  -NoSound -NoVSync -GraphicsAdapter={} --settings={}".format(
+                subprocess_execute = "bash {}  -RenderOffscreen -NoSound -NoVSync -GraphicsAdapter={} --settings={}".format(
                     choose_env_exe_paths[index],
                     gpu_id,
                     str(CWD_DIR / 'settings' / str(ports[index]) / 'settings.json'),
                 )
-                time.sleep(1)
+                time.sleep(3)
                 print(subprocess_execute)
 
                 try:
                     p = subprocess.Popen(
                         subprocess_execute,
-                        stdin=None, stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT,
+                        stdin=None, stdout=open('ue4.log','w'), stderr=subprocess.STDOUT,
                         shell=True,
                     )
                     p_s.append(p)
@@ -462,7 +489,7 @@ class EventHandler(object):
         #             gpu_id,
         #             str(CWD_DIR / 'settings' / str(port) / 'settings.json'),
         #         )
-        subprocess_execute = "bash {}  -NoSound -NoVSync -GraphicsAdapter={} -settings={} ".format(
+        subprocess_execute = "bash {} -RenderOffscreen -NoSound -NoVSync -GraphicsAdapter={} -settings={} ".format(
                     env_path,
                     gpu_id,
                     str(CWD_DIR / 'settings' / str(port) / 'settings.json'),
@@ -507,7 +534,6 @@ class EventHandler(object):
                 str(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())),
             )
         )
-        print("=="+str(result))
         return result
 
     def close_scenes(self, ip: str) -> bool:
@@ -576,7 +602,7 @@ if __name__ == '__main__':
     parser.add_argument(
         "--root_path",
         type=str,
-        default="/nfs/airport/airdrone/",
+        default="/home/syx/Desktop/UAV/UAV_ON/ENVS",
         help='root dir for env path'
     ) 
     args = parser.parse_args()

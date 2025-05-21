@@ -4,6 +4,7 @@ import random
 import shutil
 
 import cv2
+import copy
 import numpy as np
 from utils.utils import *
 from src.common.param import args
@@ -23,13 +24,6 @@ def setup(dagger_it=0, manual_init_distributed_mode=False):
     cudnn.benchmark = False
     cudnn.deterministic = False
 
-def CheckPort():
-    pid = FromPortGetPid(int(args.DDP_MASTER_PORT))
-    if pid is not None:
-        print('DDP_MASTER_PORT ({}) is being used'.format(args.DDP_MASTER_PORT))
-        return False
-
-    return True
 
 def initialize_env(dataset_path, save_path, train_json_path, activate_maps=[]):
     train_env = AirVLNENV(batch_size=args.batchSize, dataset_path=dataset_path, save_path=save_path, activate_maps=activate_maps)
@@ -47,17 +41,23 @@ def get_episode_by_id(episodes, target_id):
     """
     return next((ep for ep in episodes if ep.get('episode_id') == target_id), None)
         
-def save_to_dataset_eval(episodes, path, ori_traj_dir, task_id):
+def save_to_dataset_eval(episodes, path, ori_traj_dir, task_id, collision, prompts, action_list, steps_size):
+    
     root_path = os.path.join(path)
     if not os.path.exists(root_path):
         os.makedirs(root_path)
-    folder_names = ['log']
-    for folder_name in folder_names:
-        os.makedirs(os.path.join(root_path, folder_name), exist_ok=True)
+    
+    os.makedirs(os.path.join(root_path, 'log'), exist_ok=True)
     print(root_path)
-    save_logs(episodes, root_path)
+    save_logs(episodes, root_path, collision, action_list,steps_size)
 
-    with open(os.path.join(args.dataset_path),'w') as f:
+    prompt_info = os.path.join(path, 'prompt_info.txt')
+    with open(prompt_info, 'w') as f:
+        for i, prompt in enumerate(prompts):
+            f.write(f"\n[STEP {i} PROMPT]\n")
+            f.write(f"{prompt}\n\n")
+
+    with open(os.path.join(args.dataset_path),'r') as f:
         infos = json.load(f)
     episode_info = get_episode_by_id(infos, task_id)
     target_obj = os.path.join(path, 'object_description.json')
@@ -65,12 +65,29 @@ def save_to_dataset_eval(episodes, path, ori_traj_dir, task_id):
         json.dump(episode_info, f, indent=2, ensure_ascii=False)
     
 
-def save_logs(episodes, trajectory_dir):
+def save_logs(episodes, trajectory_dir, collision, action_list, steps_size):
     save_dir = os.path.join(trajectory_dir, 'log')
-    for idx, episode in enumerate(episodes):
-        info = {'frame': idx, 'sensors': episode['sensors']}
-        with open(os.path.join(save_dir, str(idx).zfill(6) + '.json'), 'w') as f:
-            json.dump(info, f)
+    os.makedirs(save_dir, exist_ok=True)
+    log_path = os.path.join(save_dir, 'trajectory.jsonl')
+    with open(log_path, 'w') as f:
+        for idx, episode in enumerate(episodes):
+            md = episode['move_distance']
+            dt = episode['distance_to_target']
+
+            md_2 = round(md, 2)
+            dt_2 = round(dt, 2)
+
+            info = {
+                'frame': idx,
+                'is_collision': collision,
+                'action': action_list[idx],
+                'steps_size': steps_size[idx],
+                'move_distance': md_2,
+                'distance_to_end': dt_2,
+                'sensors': episode['sensors'],
+                
+            }
+            f.write(json.dumps(info) + '\n')
 
 
 def load_object_description():
@@ -112,6 +129,7 @@ class BatchIterator:
 class EvalBatchState:
     def __init__(self, batch_size, env_batchs, env, save_eval_path):
         self.batch_size = batch_size
+        self.DISTANCE_TO_SUCCESS = 20
         self.eval_env = env
         self.episodes = [[] for _ in range(batch_size)]
         self.target_positions = [b['object_position'] for b in env_batchs]
@@ -127,9 +145,12 @@ class EvalBatchState:
         self.skips = [False] * batch_size
         self.distance_to_ends = [[] for _ in range(batch_size)]
         self.envs_to_pause = []
-        
+        self.trajectory = [[] for _ in range(batch_size)]
+        self.user_prompt = [[] for _ in range(batch_size)]
+        self.action_list = [[None] for _ in range(batch_size)]
+        self.steps_size = [[0] for _ in range(batch_size)]
         self._initialize_batch_data()
-
+    
 
     def _initialize_batch_data(self):
         outputs = self.eval_env.reset()
@@ -141,6 +162,7 @@ class EvalBatchState:
             self.episodes[i].append(observations[i][-1])
             self.distance_to_ends[i].append(self._calculate_distance(observations[i][-1], self.target_positions[i]))
 
+
     def _calculate_distance(self, observation, target_position):
         obs_pos = np.array(observation['sensors']['state']['position'])
         coords = np.array(target_position)
@@ -151,43 +173,49 @@ class EvalBatchState:
         else:
             return float(np.linalg.norm(obs_pos - coords))
 
-    def update_from_env_output(self, outputs):
+    def update_from_env_output(self, outputs, user_prompts, actions, steps_size, is_fixed):
         observations, self.dones, self.collisions, self.oracle_success = [list(x) for x in zip(*outputs)]
-    
-        
+       
         for i in range(self.batch_size):
             if i in self.envs_to_pause:
                 continue
             for j in range(len(observations[i])):
                 self.episodes[i].append(observations[i][j])
+            self.user_prompt[i].append(user_prompts[i])
+            self.action_list[i].append(actions[i])
+            
+            if is_fixed:
+                if actions[i]=='rotr' or actions[i]=='rotl':
+                    self.steps_size[i].append(args.rotateAngle)
+                elif actions[i]=='ascend' or actions[i]=='descend':
+                    self.steps_size[i].append(args.z_step_size)
+                else:
+                    self.steps_size[i].append(args.xOy_step_size)
+            else:
+                self.steps_size[i].append(steps_size[i])
+
             self.distance_to_ends[i].append(self._calculate_distance(observations[i][-1], self.target_positions[i]))
           
 
 
     def update_metric(self):
         for i in range(self.batch_size):
-            if self.dones[i]:
-                continue
+            if self.dones[i] and not self.skips[i]:
+                if self.distance_to_ends[i][-1] <= self.DISTANCE_TO_SUCCESS:
+                    self.success[i] = True
 
             if self.collisions[i]:
                 self.dones[i] = True
+                print(f"episode {i} has collision!")
                 self.success[i] = False
                 self.oracle_success[i] = False
-
-            if self.predict_dones[i] and not self.skips[i]:
-                if self.distance_to_ends[i][-1] <= 20 and not self.early_end[i]:
-                    self.success[i] = True
-                elif self.distance_to_ends[i][-1] > 20:
-                    self.early_end[i] = True
-                if self.oracle_success[i] and self.early_end[i]:
-                    self.dones[i] = True
-                elif self.success[i]:
-                    self.dones[i] = True
                     
     def check_batch_termination(self, t):
         for i in range(self.batch_size):
-            if t == args.maxActions:
+            if t == args.maxActions - 1:
                 self.dones[i] = True
+                if self.distance_to_ends[i][-1] <= self.DISTANCE_TO_SUCCESS:
+                    self.success[i] = True
             if self.dones[i] and not self.skips[i]:
                 self.envs_to_pause.append(i)
                 prex = ''
@@ -198,8 +226,12 @@ class EvalBatchState:
                     prex = "oracle_"
                     print(i, " has oracle succeed!")
                 new_traj_name = prex +  self.ori_data_dirs[i].split('/')[-1]
-                new_traj_dir = os.path.join(args.eval_save_path, new_traj_name, str("task_"+self.task_id[i]))
-                save_to_dataset_eval(self.episodes[i], new_traj_dir, self.ori_data_dirs[i], self.task_id[i])
+                new_traj_dir = os.path.join(args.eval_save_path, new_traj_name, f"task_{self.task_id[i]}")
+                
+                full_traj = self.eval_env.sim_states[i].trajectory
+                self.trajectory[i] = copy.deepcopy(full_traj)
+                
+                save_to_dataset_eval(self.trajectory[i], new_traj_dir, self.ori_data_dirs[i], self.task_id[i], self.collisions[i], self.user_prompt[i], self.action_list[i], self.steps_size[i])
                 self.skips[i] = True
                 print(i, " has finished!")
         return np.array(self.skips).all()

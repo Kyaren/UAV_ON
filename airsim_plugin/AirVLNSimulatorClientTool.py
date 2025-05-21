@@ -136,10 +136,10 @@ class AirVLNSimulatorClientTool:
                     count = 0
                     while not confirmed and count < 30:
                         try:
-                            self.airsim_clients[index_1][index_2].confirmConnection()
-                            self.airsim_clients[index_1][index_2].enableApiControl(True)
+                            self.airsim_clients[index_1][index_2].confirmConnection()                            
+                            self.airsim_clients[index_1][index_2].enableApiControl(True)                           
                             self.airsim_clients[index_1][index_2].armDisarm(True)
-                            self.airsim_clients[index_1][index_2].takeoffAsync().join()
+                            self.airsim_clients[index_1][index_2].takeoffAsync()
                             confirmed = True
                         except Exception as e:
                             time.sleep(1)
@@ -203,7 +203,7 @@ class AirVLNSimulatorClientTool:
             print("===")
             assert len(result[1]) == 2, '打开场景失败'
             print('waiting for airsim connection...')
-            time.sleep(3 * len(self.machines_info[index]['open_scenes']) + 10)
+            time.sleep(3 * len(self.machines_info[index]['open_scenes']) + 15)
             ip = result[1][0]
             ports = result[1][1]
             if isinstance(ip, bytes):
@@ -217,6 +217,7 @@ class AirVLNSimulatorClientTool:
                     self.airsim_clients[index][i] = None
                 else:  
                     self.airsim_clients[index][i] = airsim.MultirotorClient(ip=ip, port=port, timeout_value=airsim_timeout)
+                    
                     print(port)
 
             logger.info(f'打开场景完毕，机器{index}: {socket_client.address._host}:{socket_client.address._port}')
@@ -297,17 +298,22 @@ class AirVLNSimulatorClientTool:
             
             state_sensor = State(airsim_client)
             imu_sensor = Imu(airsim_client,imu_name="Imu")
+            airsim_client.simPause(False)
             
             # airsim_client.armDisarm(True)
             if fly_type == 'move':
                 drivetrain = airsim.DrivetrainType.MaxDegreeOfFreedom
-                yaw_mode=airsim.YawMode(is_rate=False)
+                
                 airsim_client.moveToPositionAsync(pose.position.x_val, pose.position.y_val, pose.position.z_val,
-                                                  velocity=1, drivetrain=drivetrain, yaw_mode=yaw_mode)
+                                                  velocity=1, drivetrain=drivetrain)
+                
 
             elif fly_type == 'rotate':
                 (pitch, roll, yaw) = airsim.to_eularian_angles(pose.orientation)
                 airsim_client.rotateToYawAsync(math.degrees(yaw))
+                
+            airsim_client.simContinueForFrames(150)
+            airsim_client.simPause(True)
             
             state_info = copy.deepcopy(state_sensor.retrieve())
             imu_info = copy.deepcopy(imu_sensor.retrieve())
@@ -362,11 +368,13 @@ class AirVLNSimulatorClientTool:
             if airsim_client is None:
                 raise Exception('error')
                 return
-            
+            airsim_client.simPause(False)
             airsim_client.simSetVehiclePose(pose=pose, ignore_collision=True)
             vehicles=airsim_client.listVehicles()
             airsim_client.simSetObjectScale(vehicles[0],airsim.Vector3r(0.5,0.5,0.5))
-            
+            #print("当前的pose：",airsim_client.simGetVehiclePose())
+            airsim_client.simContinueForFrames(50)
+            airsim_client.simPause(True)
             return
 
         threads = []
@@ -374,7 +382,7 @@ class AirVLNSimulatorClientTool:
         for index_1 in range(len(self.airsim_clients)):
             threads.append([])
             for index_2 in range(len(self.airsim_clients[index_1])):
-                print("index_1,index_2: ", str(index_1),str(index_2))
+                #print("index_1,index_2: ", str(index_1),str(index_2))
                 threads[index_1].append(
                     MyThread(_setPoses, (self.airsim_clients[index_1][index_2], poses[index_1][index_2]))
                 )
@@ -494,4 +502,3 @@ class AirVLNSimulatorClientTool:
             logger.error('getSensorInfo failed.')
             return None
         return results 
-

@@ -300,17 +300,23 @@ class VectorEnvUtil:
         observations = [info for info in sim_state.trajectory[-5:]]
         ###need fix
         observations[-1]['description']=sim_state.task_info['description']
+        observations[-1]['object_name']=sim_state.task_info['object_name']
+        observations[-1]['object_size']=sim_state.task_info['object_size']
         observations[-1]['rgb']=rgb_images
         observations[-1]['depth']=depth_images
         observations[-1]['pre_poses'] = [item['sensors']['state'] for item in sim_state.trajectory[-10:]]
         observations[-1]['step'] = sim_state.step
         observations[-1]['move_distance'] = sim_state.move_distance
+        observations[-1]['start_position'] = sim_state.start_pose['start_position']
+        observations[-1]['start_quaternionr'] = sim_state.start_pose['start_quaternionr']
+
         if len(sim_state.heading_changes)>0:
             avg_heading = sum(sim_state.heading_changes)/len(sim_state.heading_changes)
         else:
             avg_heading = 0.0
         observations[-1]['avg_heading_changes'] = round(avg_heading, 2)
-   
+
+        oracle_success = sim_state.oracle_success
         collision = sim_state.is_collisioned
 
         return observations, done, collision, oracle_success
@@ -327,4 +333,3 @@ class VectorEnvUtil:
         ]
 
         return results
-

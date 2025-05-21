@@ -32,7 +32,7 @@ class AirVLNENV:
                  ):
         self.batch_size = batch_size
         self.dataset_path = dataset_path
-        
+        self.epoch_done = False
         self.seed = seed
         self.collected_keys = set()
         #self.dataset_group_by_scene = dataset_group_by_scene
@@ -45,7 +45,7 @@ class AirVLNENV:
         self.dataset_group_by_scene = True
         self.data = self._group_scenes()
         logger.info('dataset grouped by scene, ')
-        self.index_data = 0
+        
         scenes = [item['map_name'] for item in self.data]
         self.scenes = set(scenes)
         self.sim_states: Optional[List[SimState]] = [None for _ in range(batch_size)]
@@ -67,10 +67,12 @@ class AirVLNENV:
         for index, item in enumerate(tqdm.tqdm(data_file, desc="Loading")):
             traj_info={}
             traj_info['map_name'] = item['map_name']
-            traj_info['object_name'] = item['object_name']
+            traj_info['object_name'] = item['true_name']
+            traj_info['object_size'] = item['size']
             traj_info['object_position'] = item['pose']
             traj_info['start_pose'] = item['start_pose']
             traj_info['description'] = item['description']
+            traj_info['distance_to_target'] = item['info']['euclidean_distance']
             traj_info['trajectory_dir'] = trajectory_path
             traj_info['size'] = item['size']
             traj_info['task_id'] = item['episode_id']
@@ -99,14 +101,19 @@ class AirVLNENV:
         import gc
         gc.collect()
 
-    ###load_json后需要修改
+    
     def next_minibatch(self, skip_scenes=[], data_it=0):
         batch = []
         
+        if self.epoch_done and self.index_data >= len(self.data):
+            self.batch = None
+            return
+
         while True:
             if self.index_data >= len(self.data):
+                self.epoch_done = True
                 random.shuffle(self.data)
-                logger.warning('random shuffle data')
+                logger.warning('random shuffle data and pad to batch size')
                 if self.dataset_group_by_scene:
                     self.data = self._group_scenes()
                     logger.warning('dataset grouped by scene')
@@ -118,6 +125,7 @@ class AirVLNENV:
 
                 self.index_data = self.batch_size - len(batch)
                 batch += self.data[:self.index_data]
+                self.index_data = len(self.data)+1
                 break
 
             task = self.data[self.index_data]
@@ -142,9 +150,9 @@ class AirVLNENV:
     
     def changeToNewTask(self):
         self._changeEnv(need_change=False)
-        
+        print('change env')
         self._setDrone()
-
+        print('set drone')
         self.update_measurements()
 
     
@@ -160,7 +168,7 @@ class AirVLNENV:
                     position_val=airsim.Vector3r(
                         x_val=drone_position_info[cnt][0],
                         y_val=drone_position_info[cnt][1],
-                        z_val=-5,
+                        z_val=drone_position_info[cnt][2],
                     ),
                     orientation_val=airsim.Quaternionr(
                         x_val=drone_quaternior_info[cnt][0],
@@ -297,6 +305,7 @@ class AirVLNENV:
 
     def reset(self):
         self.changeToNewTask()
+        print("change finish")
         return self.get_obs()
 
     def revert2frame(self, index):
@@ -305,7 +314,6 @@ class AirVLNENV:
     def makeActions(self, action_list, steps_size, is_fixed):
         poses = []
         fly_types = []
-
         for index, action in enumerate(action_list):
             if self.sim_states[index].is_end == True:
                 action = 'stop'
@@ -323,8 +331,8 @@ class AirVLNENV:
         
             (new_pose, fly_type) = getNextPosition(airsim_pose, action, steps_size[index],is_fixed)
 
-            (prev_roll, prev_pitch, prev_yaw) = airsim.to_eularian_angles(airsim_pose.orientation)
-            (curr_roll, curr_pitch, curr_yaw) = airsim.to_eularian_angles(new_pose.orientation)
+            (prev_pitch,prev_roll, prev_yaw) = airsim.to_eularian_angles(airsim_pose.orientation)
+            (curr_pitch,curr_roll, curr_yaw) = airsim.to_eularian_angles(new_pose.orientation)
             delta_yaw = abs((math.degrees(curr_yaw - prev_yaw) + 180) % 360 - 180)
             self.sim_states[index].heading_changes.append(delta_yaw)
             pos = new_pose.position
@@ -342,7 +350,6 @@ class AirVLNENV:
 
             poses.append(new_pose)
             fly_types.append(fly_type)
-
         format_pose =[]
         format_fly_type =[]
         cnt = 0
@@ -353,7 +360,7 @@ class AirVLNENV:
                 format_pose[index1].append(poses[cnt])
                 format_fly_type[index1].append(fly_types[cnt])
                 cnt += 1
-
+        
         result = self.simulator_tool.move_to_next_pose(poses_list=format_pose, fly_types=format_fly_type)
         
         if not result:
@@ -372,20 +379,33 @@ class AirVLNENV:
                 self.sim_states[index].is_end = True
 
             self.sim_states[index].step += 1
+            
+            traj = self.sim_states[index].trajectory
+            if len(traj) >= 1:
+                p_prev = np.array(traj[-1]['sensors']['state']['position'])
+            else:
+                p_prev = np.array([poses[index].position.x_val,
+                                poses[index].position.y_val,
+                                poses[index].position.z_val])
+            p_curr = np.array([poses[index].position.x_val,
+                            poses[index].position.y_val,
+                            poses[index].position.z_val])
+            step_dist = np.linalg.norm(p_curr - p_prev)
+            self.sim_states[index].move_distance += step_dist
+
+            target = np.array(self.sim_states[index].target_position)
+            distance_to_target = float(np.linalg.norm(p_curr - target))
+
             self.sim_states[index].trajectory.append({
                 'sensors': {
                     'state':{
                         'position' :[poses[index].position.x_val, poses[index].position.y_val, poses[index].position.z_val],
                         'quaternionr' :[poses[index].orientation.x_val, poses[index].orientation.y_val, poses[index].orientation.z_val, poses[index].orientation.w_val]
                     }
-                }
+                },
+                'move_distance': round(self.sim_states[index].move_distance, 2),
+                'distance_to_target': round(distance_to_target, 2),
             })
-            traj = self.sim_states[index].trajectory
-            if len(traj) >=2:
-                p_prev = np.array(traj[-2]['sensors']['state']['position'])
-                p_curr = np.array(traj[-1]['sensors']['state']['position'])
-                step_dist = np.linalg.norm(p_curr - p_prev)   # 单步位移
-            self.sim_states[index].move_distance += step_dist
 
             
 
