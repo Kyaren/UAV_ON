@@ -1,3 +1,11 @@
+'''
+Author: error: error: git config user.name & please set dead value or install git && error: git config user.email & please set dead value or install git & please set dead value or install git
+Date: 2025-05-19 21:10:39
+LastEditors: error: error: git config user.name & please set dead value or install git && error: git config user.email & please set dead value or install git & please set dead value or install git
+LastEditTime: 2025-05-21 18:52:11
+FilePath: /UAV_Search/src/common/param.py
+Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+'''
 import argparse
 import os
 import datetime
@@ -9,6 +17,16 @@ from dataclasses import dataclass, field
 from typing import List, Optional
 
 
+def str2bool(v):
+    if isinstance(v, bool):
+        return v
+    if v.lower() in ("yes", "true", "t", "1"):
+        return True
+    elif v.lower() in ("no", "false", "f", "0"):
+        return False
+    else:
+        raise argparse.ArgumentTypeError("Boolean value expected.")
+
 class Param:
     def __init__(self):
         self.parser = argparse.ArgumentParser(description="UAV_Search")
@@ -19,12 +37,12 @@ class Param:
         self.parser.add_argument("--maxActions",type=int, default=150)
         self.parser.add_argument("--xOy_step_size", type=int, default=5)
         self.parser.add_argument("--z_step_size", type=int, default=2)
-        self.parser.add_argument("--rotateAngle", type=int, default=45)
+        self.parser.add_argument("--rotateAngle", type=int, default=15)
         self.parser.add_argument("--batchSize",type=int, default=6)
         self.parser.add_argument("--simulator_tool_port", type=int, default=31000, help="simulator_tool port")
         self.parser.add_argument("--dataset_path", type=str, default='../DATA/SeenThings.json', help="path to the dataset")
-        self.parser.add_argument("--is_fixed", type=bool, default=True, help="whether to use fixed action step size")
-        self.parser.add_argument("--gpu_id", type=int, default=1)
+        self.parser.add_argument("--is_fixed", type=str2bool, default=True, help="whether to use fixed action step size")
+        self.parser.add_argument("--gpu_id", type=int, default=0)
         self.parser.add_argument("--generation_model_path", type=str, default='Qwen/Qwen2.5-VL-7B-Instruct')
         self.parser.add_argument("--eval_save_path", type=str, default='./logs/eval', help="path to save the results")
 

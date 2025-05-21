@@ -46,8 +46,8 @@ def eval(modelWrapper: BaseModelWrapper, env: AirVLNENV ,is_fixed, save_eval_pat
                     if dones[i]:
                         batch_state.dones[i] = True
                         
-
-                print(actions)
+                for i in range(len(actions)):
+                    print(actions[i],":",steps_size[i])
                 env.makeActions(actions, steps_size, is_fixed)
                 
                 ###get next step observations

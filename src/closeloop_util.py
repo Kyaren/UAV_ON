@@ -79,7 +79,7 @@ def save_logs(episodes, trajectory_dir, collision, action_list, steps_size):
 
             info = {
                 'frame': idx,
-                'is_collision': collision,
+                'is_collision': collision[idx],
                 'action': action_list[idx],
                 'steps_size': steps_size[idx],
                 'move_distance': md_2,
@@ -138,7 +138,7 @@ class EvalBatchState:
         self.task_id = [b['task_id'] for b in env_batchs]
         self.dones = [False] * batch_size
         self.predict_dones = [False] * batch_size
-        self.collisions = [False] * batch_size
+        self.collisions = [[] for _ in range(batch_size)]
         self.success = [False] * batch_size
         self.oracle_success = [False] * batch_size
         self.early_end = [False] * batch_size
@@ -154,11 +154,12 @@ class EvalBatchState:
 
     def _initialize_batch_data(self):
         outputs = self.eval_env.reset()
-        observations, self.dones, self.collisions, self.oracle_success = [list(x) for x in zip(*outputs)]
+        observations, self.dones, collisions, self.oracle_success = [list(x) for x in zip(*outputs)]
         
         for i in range(self.batch_size):
             if i in self.envs_to_pause:
                 continue
+            self.collisions[i].append(collisions[i])
             self.episodes[i].append(observations[i][-1])
             self.distance_to_ends[i].append(self._calculate_distance(observations[i][-1], self.target_positions[i]))
 
@@ -174,13 +175,14 @@ class EvalBatchState:
             return float(np.linalg.norm(obs_pos - coords))
 
     def update_from_env_output(self, outputs, user_prompts, actions, steps_size, is_fixed):
-        observations, self.dones, self.collisions, self.oracle_success = [list(x) for x in zip(*outputs)]
+        observations, self.dones, collisions, self.oracle_success = [list(x) for x in zip(*outputs)]
        
         for i in range(self.batch_size):
             if i in self.envs_to_pause:
                 continue
             for j in range(len(observations[i])):
                 self.episodes[i].append(observations[i][j])
+            self.collisions[i].append(collisions[i])
             self.user_prompt[i].append(user_prompts[i])
             self.action_list[i].append(actions[i])
             
@@ -204,7 +206,7 @@ class EvalBatchState:
                 if self.distance_to_ends[i][-1] <= self.DISTANCE_TO_SUCCESS:
                     self.success[i] = True
 
-            if self.collisions[i]:
+            if self.collisions[i][-1]:
                 self.dones[i] = True
                 print(f"episode {i} has collision!")
                 self.success[i] = False
