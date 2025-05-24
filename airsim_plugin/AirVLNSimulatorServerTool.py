@@ -153,7 +153,7 @@ AIRSIM_SETTINGS_TEMPLATE = {
 }
 
 env_exec_path_dict = {
-    "Barnyard_test": {
+    "Barnyard_test": {###
         'bash_name': 'Barnyard_test1',
         'exec_path': 'Barnyard',
     },
@@ -161,19 +161,19 @@ env_exec_path_dict = {
         'bash_name': 'BrushifyRoad_test1',
         'exec_path': 'BrushifyRoad',
     },
-    "BrushifyUrban_test": {
+    "BrushifyUrban_test": {###
         'bash_name': 'BrushifyUrban',
         'exec_path': 'BrushifyUrban',
     },
-    "CabinLake_test": {
+    "CabinLake_test": {###
         'bash_name': 'CabinLake',
         'exec_path': 'CabinLake',
     },
-    "CityPark_test": {
+    "CityPark_test": {###
         'bash_name': 'CityPark',
         'exec_path': 'CityPark',
     },
-    "CityStreet_test": {
+    "CityStreet_test": {###
         'bash_name': 'CleanCityStreet',
         'exec_path': 'CityStreet',  
     },
@@ -181,31 +181,31 @@ env_exec_path_dict = {
         'bash_name': 'DownTown_test1',
         'exec_path': 'DownTown',
     },
-    "ModularNeighborhood_test": {
+    "ModularNeighborhood_test": {###
         'bash_name': 'NewNeighborhood',
         'exec_path': 'Neighborhood',
     },
-    "NYC_test": {
+    "NYC_test": {###
         'bash_name': 'NYC1950',
         'exec_path': 'NYC',
     },
-    "Slum_test": {
+    "Slum_test": {#
         'bash_name': 'Slum_test1',
         'exec_path': 'Slum',
     },
-    "UrbanJapan_test": {
+    "UrbanJapan_test": {###
         'bash_name': 'UrbanJapan',
         'exec_path': 'UrbanJapan',
     },
-    "Venice_test": {
+    "Venice_test": {###
         'bash_name': 'Vinice_test1',
-        'exec_path': 'Vinice',
+        'exec_path': 'Venice',
     },
-    "WesternTown_test": {
+    "WesternTown_test": {###
         'bash_name': 'WesternTown_test1',
         'exec_path': 'WesternTown',
     },
-    "WinterTown_test":{
+    "WinterTown_test":{###
         'bash_name': 'WinterTown_test1',
         'exec_path': 'WinterTown',
     }

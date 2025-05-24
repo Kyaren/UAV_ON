@@ -1,0 +1,85 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Apple,
+                        Size: small(0.25*0.25=0.06 squares),
+                        Description: Organic round shape, red glossy surface with subtle stem detail, smooth skin and small size, consistent with edible fruit.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-71, 30]  
+                        **Y Range**: [min_y, max_y] = [41, 142]
+
+                        # RGB Captions
+                        Front = brick wall, orange; tree with white flowers; tree branches extending from the right  
+                        Left = snow-covered ground; wooden houses; trees with bare branches; buildings in the background  
+                        Right = sun in the sky; snow-covered trees; orange and gray sky; trees in the foreground  
+                        Down = snow-covered ground; tree trunks; shadows on the snow; wooden structure on the left  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[1, 100, 100], [63, 100, 100], [57, 100, 100]]
+
+                        LeftDepth:
+                        [[29, 100, 100], [16, 33, 80], [7, 9, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 100]]
+
+                        DownDepth:
+                        [[32, 91, 100], [7, 16, 100], [6, 10, 75]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-20.37, 91.58, -10.0), -150.94],
+    [(-20.37, 91.58, -10.0), -150.94],
+    [(-20.37, 91.58, -10.0), -150.94],
+    [(-20.37, 91.58, -10.0), -150.94],
+    [(-20.37, 91.58, -10.0), -150.94],
+    [(-20.37, 91.58, -10.0), -150.94],
+    [(-20.37, 91.58, -10.0), -150.94],
+    [(-20.37, 91.58, -10.0), -150.94],
+    [(-20.37, 91.58, -10.0), -150.94],
+    [(-20.37, 91.58, -10.0), -150.94],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Apple**, described as:  Organic round shape, red glossy surface with subtle stem detail, smooth skin and small size, consistent with edible fruit.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        - Compare the captions of **Front**, **Left**, and **Right**: choose the direction whose caption best matches the target’s description.  
+
+                        # Output Format Reminder  
+                        - Your output must follow the format: `[action_type, value]`  
+                        - Only one action should be returned per step.  
+                        - Do **not** output explanations, text, or JSON — just one list-formatted string.
+
+                        **Action types and recommended ranges:**  
+                        - [forward, distance], [left, distance], [right, distance] 
+                            → Horizontal movement, **distance ∈ [1.0, 10.0]**
+
+                        - [ascend, distance], [descend, distance]  
+                            → Vertical movement, **distance ∈ [0.5, 3.0]**
+
+                        - [rotl, angle], [rotr, angle]  
+                            → Rotation, **angle ∈ [5, 90]**
+
+                        - [stop, 0]  
+                            → Stop only if you are sure the target is within **20 units** and clearly visible.
+                        - Choose a **longer distance** (e.g., 7–10) when the front direction is clear and wide.
+                        - Choose a **shorter distance** (e.g., 1–3) when the caption indicates the target is nearby, or when close to obstacles.
+                        - Avoid always choosing the same value. Your step size should reflect how confidently you can move forward.
+                        
+

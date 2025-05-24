@@ -10,7 +10,7 @@ from env_uav import AirVLNENV
 from src.closeloop_util import BatchIterator, EvalBatchState, initialize_env_eval
 from utils.logger import logger
 from model_wrapper.base_model import BaseModelWrapper
-from model_wrapper.CLIP_H import CLIP_H
+from model_wrapper.ON_Air import ONAir
 
 def eval(modelWrapper: BaseModelWrapper, env: AirVLNENV ,is_fixed, save_eval_path):
     with torch.no_grad():
@@ -29,7 +29,7 @@ def eval(modelWrapper: BaseModelWrapper, env: AirVLNENV ,is_fixed, save_eval_pat
           
             pbar.update(n = env.batch_size)
            
-            inputs ,user_prompts, depths = modelWrapper.prepare_inputs(batch_state.episodes)
+            inputs ,user_prompts = modelWrapper.prepare_inputs(batch_state.episodes,is_fixed)
             cnt+= env.batch_size
             for t in range(args.maxActions):
                 
@@ -39,7 +39,7 @@ def eval(modelWrapper: BaseModelWrapper, env: AirVLNENV ,is_fixed, save_eval_pat
 
                 
                 start1 = time.time()
-                actions, steps_size, dones = modelWrapper.run(inputs, depths)
+                actions, steps_size, dones = modelWrapper.run(inputs, is_fixed)
                 print("get actions time:",time.time()-start1)
                 
                 for i in range(env.batch_size):
@@ -59,9 +59,8 @@ def eval(modelWrapper: BaseModelWrapper, env: AirVLNENV ,is_fixed, save_eval_pat
                     break
                 
                 start2 = time.time()
-                inputs, user_prompts, depths = modelWrapper.prepare_inputs(batch_state.episodes)
+                inputs, user_prompts = modelWrapper.prepare_inputs(batch_state.episodes, is_fixed)
                 #print("prepare inputs time:",time.time()-start2)
-                time.sleep(7)
         try:
             pbar.close()
         except:
@@ -78,7 +77,7 @@ if __name__ == "__main__":
     if not os.path.exists(args.eval_save_path):
         os.makedirs(args.eval_save_path)
 
-    modelWrapper = CLIP_H()
+    modelWrapper = ONAir(fixed=fixed, batch_size=args.batchSize)
 
     eval(modelWrapper=modelWrapper, env=env, is_fixed=fixed, save_eval_path=save_eval_path)
 

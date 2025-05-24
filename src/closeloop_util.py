@@ -217,7 +217,7 @@ class EvalBatchState:
             if t == args.maxActions - 1:
                 self.dones[i] = True
                 if self.distance_to_ends[i][-1] <= self.DISTANCE_TO_SUCCESS:
-                    self.success[i] = True
+                    self.oracle_success[i] = True
             if self.dones[i] and not self.skips[i]:
                 self.envs_to_pause.append(i)
                 prex = ''
