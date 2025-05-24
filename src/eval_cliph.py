@@ -61,7 +61,7 @@ def eval(modelWrapper: BaseModelWrapper, env: AirVLNENV ,is_fixed, save_eval_pat
                 start2 = time.time()
                 inputs, user_prompts, depths = modelWrapper.prepare_inputs(batch_state.episodes)
                 #print("prepare inputs time:",time.time()-start2)
-                time.sleep(7)
+                # time.sleep(1.5)
         try:
             pbar.close()
         except:
@@ -78,7 +78,7 @@ if __name__ == "__main__":
     if not os.path.exists(args.eval_save_path):
         os.makedirs(args.eval_save_path)
 
-    modelWrapper = CLIP_H()
+    modelWrapper = CLIP_H(batch_size=args.batchSize)
 
     eval(modelWrapper=modelWrapper, env=env, is_fixed=fixed, save_eval_path=save_eval_path)
 

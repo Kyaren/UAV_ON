@@ -1,161 +1,42 @@
-Looking for binary: ../../../CityPark/Config/BinaryConfig.ini
+Looking for binary: ../../../NewNeighborhood/Config/BinaryConfig.ini
 4.27.2-0+++UE4+Release-4.27 522 0
 Disabling core dumps.
 Drone_1
 Resizing viewport due to setres change, 1024 x 768
 lookahead = 0.750000, adaptive_lookahead = 1.000000
-segment 0 done: x=0.000000, y=0.000000, z=1.424170
-overshoot=9.424170
+segment 0 done: x=0.000000, y=0.000000, z=0.614757
+overshoot=8.617483
 lookahead = 0.750000, adaptive_lookahead = 1.000000
-segment 0 done: x=-364.281708, y=-299.928467, z=-10.021972
-overshoot=0.010714
+segment 0 done: x=-263.573761, y=49.040871, z=-10.024744
+overshoot=0.008353
 lookahead = 0.750000, adaptive_lookahead = 1.000000
-segment 0 done: x=-366.579285, y=-304.289520, z=-9.998391
-overshoot=0.003199
+segment 0 done: x=-260.546722, y=44.844513, z=-10.064159
+overshoot=0.006883
 lookahead = 0.750000, adaptive_lookahead = 1.000000
-segment 0 done: x=-368.237457, y=-309.716125, z=-10.010461
-overshoot=0.011806
+segment 0 done: x=-253.292755, y=44.515816, z=-10.323030
+overshoot=0.008964
 lookahead = 0.750000, adaptive_lookahead = 1.000000
-segment 0 done: x=-369.873383, y=-314.524689, z=-10.012788
-overshoot=0.005767
+segment 0 done: x=-257.283936, y=47.705212, z=-10.294344
+overshoot=0.001343
 lookahead = 0.750000, adaptive_lookahead = 1.000000
-segment 0 done: x=-371.266388, y=-319.332184, z=-10.010051
-overshoot=0.008119
-lookahead = 0.750000, adaptive_lookahead = 1.000000
-lookahead = 0.750000, adaptive_lookahead = 1.000000
-segment 0 done: x=72.405334, y=-212.455887, z=-9.999372
-overshoot=0.009464
-lookahead = 0.750000, adaptive_lookahead = 1.000000
-segment 0 done: x=69.037849, y=-208.820404, z=-9.978797
-overshoot=0.010526
-lookahead = 0.750000, adaptive_lookahead = 1.000000
-segment 0 done: x=66.013710, y=-205.063675, z=-9.969160
-overshoot=0.008705
-lookahead = 0.750000, adaptive_lookahead = 1.000000
-segment 0 done: x=62.692436, y=-201.160538, z=-9.942662
-overshoot=0.008185
-lookahead = 0.750000, adaptive_lookahead = 1.000000
-segment 0 done: x=59.306137, y=-197.359970, z=-9.908543
-overshoot=0.003919
-lookahead = 0.750000, adaptive_lookahead = 1.000000
-segment 0 done: x=55.500885, y=-200.713577, z=-9.876793
-overshoot=0.003251
-lookahead = 0.750000, adaptive_lookahead = 1.000000
-segment 0 done: x=52.137100, y=-197.127258, z=-9.847947
-overshoot=0.002847
-lookahead = 0.750000, adaptive_lookahead = 1.000000
-segment 0 done: x=48.345245, y=-200.382996, z=-9.824125
-overshoot=0.003914
-lookahead = 0.750000, adaptive_lookahead = 1.000000
-segment 0 done: x=45.196388, y=-196.693619, z=-9.806886
-overshoot=385.042938
-lookahead = 0.750000, adaptive_lookahead = 1.000000
-segment 0 done: x=-77.178963, y=211.793594, z=-10.002048
-overshoot=0.006046
-lookahead = 0.750000, adaptive_lookahead = 1.000000
-segment 0 done: x=-80.680420, y=215.159134, z=-9.982617
-overshoot=0.007269
-lookahead = 0.750000, adaptive_lookahead = 1.000000
-segment 0 done: x=-84.265511, y=218.700012, z=-9.962892
-overshoot=0.010767
-lookahead = 0.750000, adaptive_lookahead = 1.000000
-segment 0 done: x=-80.919800, y=222.276031, z=-9.948055
-overshoot=0.004648
-lookahead = 0.750000, adaptive_lookahead = 1.000000
-segment 0 done: x=-77.414558, y=225.941437, z=-9.919842
-overshoot=0.001846
-lookahead = 0.750000, adaptive_lookahead = 1.000000
-segment 0 done: x=-73.965576, y=229.492813, z=-9.888142
-overshoot=0.004984
-lookahead = 0.750000, adaptive_lookahead = 1.000000
-segment 0 done: x=-70.470619, y=233.112854, z=-9.856266
-overshoot=0.007740
-lookahead = 0.750000, adaptive_lookahead = 1.000000
-segment 0 done: x=-67.004135, y=236.682434, z=-9.822624
-overshoot=0.003574
-lookahead = 0.750000, adaptive_lookahead = 1.000000
-segment 0 done: x=-63.477875, y=240.166367, z=-9.788991
-overshoot=0.002200
-lookahead = 0.750000, adaptive_lookahead = 1.000000
-segment 0 done: x=-60.037682, y=243.788605, z=-9.763032
-overshoot=0.009770
+segment 0 done: x=-261.131439, y=50.845535, z=-10.267819
+overshoot=0.002497
 lookahead = 0.750000, adaptive_lookahead = 1.000000
 lookahead = 0.750000, adaptive_lookahead = 1.000000
-segment 0 done: x=-270.396606, y=205.310913, z=-9.999333
-overshoot=0.009013
+segment 0 done: x=-236.081131, y=-132.561111, z=-10.529991
+overshoot=0.002401
 lookahead = 0.750000, adaptive_lookahead = 1.000000
-segment 0 done: x=-271.077972, y=200.768692, z=-9.996065
-overshoot=0.011059
+segment 0 done: x=-223.106613, y=-139.641708, z=-10.497416
+overshoot=0.000397
 lookahead = 0.750000, adaptive_lookahead = 1.000000
-segment 0 done: x=-271.592072, y=195.774384, z=-9.985442
-overshoot=0.001417
+segment 0 done: x=-225.350510, y=-135.023300, z=-10.458135
+overshoot=0.007435
 lookahead = 0.750000, adaptive_lookahead = 1.000000
-segment 0 done: x=-272.339722, y=190.386002, z=-9.959517
-overshoot=0.009622
+segment 0 done: x=-229.915482, y=-137.299118, z=-10.422090
+overshoot=0.001888
 lookahead = 0.750000, adaptive_lookahead = 1.000000
-segment 0 done: x=-268.927643, y=189.521454, z=-9.933499
-overshoot=0.010969
+segment 0 done: x=-232.007584, y=-132.674286, z=-10.386635
+overshoot=0.009884
 lookahead = 0.750000, adaptive_lookahead = 1.000000
-segment 0 done: x=-272.672638, y=190.396240, z=-9.922784
-overshoot=0.001509
-lookahead = 0.750000, adaptive_lookahead = 1.000000
-segment 0 done: x=-268.583771, y=188.586731, z=-9.895683
-overshoot=0.002898
-lookahead = 0.750000, adaptive_lookahead = 1.000000
-segment 0 done: x=-268.624359, y=184.579025, z=-9.885011
-overshoot=0.007013
-lookahead = 0.750000, adaptive_lookahead = 1.000000
-segment 0 done: x=-273.913116, y=185.773392, z=-9.878003
-overshoot=0.006247
-lookahead = 0.750000, adaptive_lookahead = 1.000000
-segment 0 done: x=-269.809296, y=183.783707, z=-9.840807
-overshoot=0.000599
-lookahead = 0.750000, adaptive_lookahead = 1.000000
-segment 0 done: x=-264.947388, y=182.689774, z=-9.835509
-overshoot=0.010594
-lookahead = 0.750000, adaptive_lookahead = 1.000000
-segment 0 done: x=-259.541870, y=181.451309, z=-9.831941
-overshoot=0.004833
-lookahead = 0.750000, adaptive_lookahead = 1.000000
-segment 0 done: x=-259.893402, y=176.946426, z=-9.805146
-overshoot=0.007810
-lookahead = 0.750000, adaptive_lookahead = 1.000000
-segment 0 done: x=-261.781403, y=171.433151, z=-9.754197
-overshoot=0.001975
-lookahead = 0.750000, adaptive_lookahead = 1.000000
-segment 0 done: x=-262.508942, y=166.629166, z=-9.725733
-overshoot=0.006885
-lookahead = 0.750000, adaptive_lookahead = 1.000000
-segment 0 done: x=-263.992889, y=161.610703, z=-9.681294
-overshoot=0.005239
-lookahead = 0.750000, adaptive_lookahead = 1.000000
-segment 0 done: x=-265.058807, y=156.988510, z=-9.639328
-overshoot=0.003677
-lookahead = 0.750000, adaptive_lookahead = 1.000000
-segment 0 done: x=-269.349945, y=155.042343, z=-9.602509
-overshoot=0.006135
-lookahead = 0.750000, adaptive_lookahead = 1.000000
-segment 0 done: x=-272.004150, y=159.364410, z=-9.561176
-overshoot=0.013516
-lookahead = 0.750000, adaptive_lookahead = 1.000000
-segment 0 done: x=-276.262665, y=156.563324, z=-9.512723
-overshoot=0.010497
-lookahead = 0.750000, adaptive_lookahead = 1.000000
-segment 0 done: x=-277.707123, y=161.482727, z=-9.530800
-overshoot=0.004598
-lookahead = 0.750000, adaptive_lookahead = 1.000000
-segment 0 done: x=-279.202667, y=166.250168, z=-9.511765
-overshoot=0.003230
-lookahead = 0.750000, adaptive_lookahead = 1.000000
-segment 0 done: x=-284.027649, y=164.636154, z=-9.519473
-overshoot=0.000484
-lookahead = 0.750000, adaptive_lookahead = 1.000000
-segment 0 done: x=-288.796234, y=163.144638, z=-9.527771
-overshoot=0.000106
-lookahead = 0.750000, adaptive_lookahead = 1.000000
-segment 0 done: x=-293.565735, y=161.650635, z=-9.519696
-overshoot=0.006071
-lookahead = 0.750000, adaptive_lookahead = 1.000000
-segment 0 done: x=-298.346252, y=160.153458, z=-9.508839
-overshoot=0.009485
-lookahead = 0.750000, adaptive_lookahead = 1.000000
+segment 0 done: x=-234.154465, y=-128.146988, z=-10.355167
+overshoot=0.009732

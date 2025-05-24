@@ -1,13 +1,16 @@
 from model_wrapper.base_model import BaseModelWrapper
 from PIL import Image
 from transformers import CLIPProcessor, CLIPModel
+from airsim_plugin.airsim_settings import AirsimActionSettings
 
+import airsim
 import io
 import torch
 import numpy as np
+import math
 
 class CLIP_H(BaseModelWrapper):
-    def __init__(self):
+    def __init__(self,batch_size):
         self.device = 'cuda:0'
         self.model, self.processor = self.load_clip()
         self.action_mapping ={
@@ -17,7 +20,9 @@ class CLIP_H(BaseModelWrapper):
             3 : 'descend',
         }
         self.threshold = 0.225
-
+        self.start_position = [[] for _ in range(batch_size)]
+        self.start_yaw = [0 for _ in range(batch_size)]
+        self.current_poses = [[] for _ in range(batch_size)]
 
     
     def load_clip(self,):
@@ -41,6 +46,32 @@ class CLIP_H(BaseModelWrapper):
                     break 
         
         for i in range(len(episodes)):
+            self.start_position[i] = episodes[i][-1]['start_position']
+
+            previous_position = episodes[i][-1]['pre_poses']
+            raw_poses = self.process_poses(poses=previous_position)
+
+            
+            if len(raw_poses) < 10 and len(raw_poses) > 0:
+                last_pose = raw_poses[-1]
+                raw_poses += [last_pose] * (10 - len(raw_poses))
+
+            
+            elif len(raw_poses) == 0:
+                last_pose = [(self.start_position[i][0], self.start_position[i][1], self.start_position[i][2]), self.start_yaw[i]]
+                raw_poses = [last_pose] * 10
+
+            if len(raw_poses) > 0:
+                last_pose = raw_poses[-1]
+                xyz = last_pose[0]  # (x, y, z)
+                yaw = last_pose[1]
+                self.current_poses[i] = [xyz[0], xyz[1], xyz[2], yaw]
+            else:
+                # fallback
+                self.current_poses[i] = [self.start_position[i][0], self.start_position[i][1], 
+                                         self.start_position[i][2], self.start_yaw[i]]
+
+
             pil_images = [Image.open(io.BytesIO(img)) for img in images[4*i:4*i+4]]   
             descriptions=episodes[i][-1]['description']
             proc_input = self.processor(text=descriptions, images=pil_images, return_tensors="pt", padding=True)
@@ -72,15 +103,20 @@ class CLIP_H(BaseModelWrapper):
                 action = self.action_mapping.get(int(max_idx.item()), None)
                 sim_value = max_val.item()
                 if sim_value >= self.threshold:
-                    action = "stop"
-                if processed_depth[i]<=5 and action == "descend":
+                    action = 'stop'
+
+                if processed_depth[i]<=5 and action == 'descend':
                     secend_val, secend_idx = cos_sim.topk(2, dim=0)
                     action = self.action_mapping.get(int(secend_idx[1].item()), None)
                     sim_value = secend_val[1].item()
                 
-                actions.append(action)
+                if sim_value >= self.threshold:
+                    action = 'stop'
 
-                done = (action == "stop")
+                new_action = self.redirect_action(action, i)
+                actions.append(new_action)
+
+                done = (action == 'stop')
                 dones.append(done)
         return actions, np.zeros(len(actions)), dones
     
@@ -92,3 +128,103 @@ class CLIP_H(BaseModelWrapper):
             depth_info.append(nearest_dist)
 
         return depth_info
+    
+    def redirect_action(self, action, i):
+        
+        new_action = action
+        try:
+            start_position = self.start_position[i]
+            x_min = round(start_position[0] - 50, 2)
+            x_max = round(start_position[0] + 50, 2)
+            y_min = round(start_position[1] - 50, 2)
+            y_max = round(start_position[1] + 50, 2)
+
+            current_pose = self.current_poses[i]
+            x, y, z, yaw = current_pose
+
+            if action == 'forward':
+                dx = math.cos(math.radians(yaw))
+                dy = math.sin(math.radians(yaw))
+                dz = 0
+
+                vector = np.array([dx, dy, dz])
+                norm = np.linalg.norm(vector)
+                if norm > 1e-6:
+                    unit_vector = vector / norm
+                else:
+                    unit_vector = np.array([0, 0, 0])
+                
+                new_position = np.array([x, y, z]) + unit_vector * AirsimActionSettings.FORWARD_STEP_SIZE
+                    
+                if new_position[0] > x_max or new_position[0] < x_min or new_position[1] > y_max or new_position[1] < y_min:
+                    new_action = 'rotl'
+                    print(f"[INFO] Episode {i}: '{action}' would go out of bounds → replaced with '{new_action}'")
+
+
+            elif action == "left":
+                unit_x = 1.0 * math.cos(math.radians(yaw + 90))
+                unit_y = 1.0 * math.sin(math.radians(yaw + 90))
+                vector = np.array([unit_x, unit_y, 0])
+
+                norm = np.linalg.norm(vector)
+                if norm > 1e-6:
+                    unit_vector = vector / norm
+                else:
+                    unit_vector = np.array([0, 0, 0])
+                    
+                    
+                new_position = np.array([x, y, z]) - unit_vector * AirsimActionSettings.LEFT_RIGHT_STEP_SIZE                    
+                    
+                if new_position[0] > x_max or new_position[0] < x_min or new_position[1] > y_max or new_position[1] < y_min:
+                    new_action = 'rotl'
+                    print(f"[INFO] Episode {i}: '{action}' would go out of bounds → replaced with '{new_action}'")
+
+            elif action == "right":
+                unit_x = 1.0 * math.cos(math.radians(yaw + 90))
+                unit_y = 1.0 * math.sin(math.radians(yaw + 90))
+                vector = np.array([unit_x, unit_y, 0])
+
+                norm = np.linalg.norm(vector)
+                if norm > 1e-6:
+                    unit_vector = vector / norm
+                else:
+                    unit_vector = np.array([0, 0, 0])
+                    
+                    
+                new_position = np.array([x, y, z]) + unit_vector * AirsimActionSettings.LEFT_RIGHT_STEP_SIZE
+                   
+                if new_position[0] > x_max or new_position[0] < x_min or new_position[1] > y_max or new_position[1] < y_min:
+                    new_action = 'rotl'
+                    
+                    print(f"[INFO] Episode {i}: '{action}' would go out of bounds → replaced with '{new_action}'")
+
+            else:
+                new_action = action
+
+        except Exception as e:
+            print(f"[WARNING] run() failed to check bounds for episode {i}: {e}")
+            # 不变更动作
+            new_action = action
+                   
+        return new_action
+    
+    def process_poses(self, poses):
+        pre_poses_xyzYaw = []
+        for pose in poses:
+            pos = pose['position']
+            raw_quaternionr = pose['quaternionr']
+            quaternionr = airsim.Quaternionr(
+                x_val=raw_quaternionr[0], y_val=raw_quaternionr[1], 
+                z_val=raw_quaternionr[2], w_val=raw_quaternionr[3]
+            )
+            pitch, roll, yaw = airsim.to_eularian_angles(quaternionr)
+            yaw_degree = round(math.degrees(yaw), 2)
+
+            # ✅ 结构化格式 [(x, y, z), yaw]
+            formatted = [
+                (round(pos[0], 2), round(pos[1], 2), round(pos[2], 2)),
+                yaw_degree
+            ]
+            pre_poses_xyzYaw.append(formatted)
+
+        return pre_poses_xyzYaw

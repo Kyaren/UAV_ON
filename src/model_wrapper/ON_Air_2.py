@@ -401,6 +401,7 @@ class ONAir(BaseModelWrapper):
             object_name = episodes[i][-1]['object_name']
             object_size = episodes[i][-1]['object_size']
             depth_info = self.process_depth(depth_images=depth_images)
+            
             previous_position = episodes[i][-1]['pre_poses']
             move_distance = episodes[i][-1]['move_distance']
             AvgHeadingChange = episodes[i][-1]['avg_heading_changes']
@@ -661,7 +662,7 @@ class ONAir(BaseModelWrapper):
         for depth_image in depth_images:
             distance_image = np.array(depth_image) / 255.0 * 100
             x = torch.from_numpy(distance_image).unsqueeze(0).unsqueeze(0).float()
-            y = F.adaptive_max_pool2d(x, (3, 3))
+            y = -F.adaptive_max_pool2d(-x, (3, 3))
             y_np = y.squeeze().cpu().numpy()
             y_int = np.round(y_np).astype(int).tolist()
             depth_info.append(y_int)
