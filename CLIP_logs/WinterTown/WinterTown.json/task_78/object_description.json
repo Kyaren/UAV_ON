@@ -1,0 +1,35 @@
+{
+  "episode_id": "78",
+  "start_pose": {
+    "start_position": [
+      -101.99530710948304,
+      -86.18009026146348,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.7767626254471648,
+      0.629793477029119
+    ]
+  },
+  "info": {
+    "geodesic_distance": 45,
+    "euclidean_distance": 33.8672
+  },
+  "map_name": "WinterTown_test",
+  "true_name": " TrashBin",
+  "object_name": "SM_Bin2_15",
+  "pose": [
+    [
+      -78.29273986816406,
+      -70.99274444580078,
+      11.82872486114502
+    ]
+  ],
+  "size": " small(0.5*0.5=0.25 squares)",
+  "description": " Rectangular upright shape, dark metallic texture with a slanted top and front-facing opening, designed for public waste disposal.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

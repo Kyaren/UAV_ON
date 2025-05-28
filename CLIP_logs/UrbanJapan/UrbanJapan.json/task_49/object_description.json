@@ -1,0 +1,35 @@
+{
+  "episode_id": "49",
+  "start_pose": {
+    "start_position": [
+      -31.474101282422712,
+      2.593374608385715,
+      -6.600000023841858
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.7560907453616712,
+      -0.6544667942519563
+    ]
+  },
+  "info": {
+    "geodesic_distance": 156,
+    "euclidean_distance": 48.703
+  },
+  "map_name": "UrbanJapan_test",
+  "true_name": "Table",
+  "object_name": "SM_CafeTable01_106",
+  "pose": [
+    [
+      -13.799999237060547,
+      47.70000076293945,
+      1.399999976158142
+    ]
+  ],
+  "size": "small(1.0*1.0=1.0 squares)",
+  "description": "Compact, square-shaped table with thin, curved metal legs, green tabletop surface, minimalistic outdoor or patio design.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

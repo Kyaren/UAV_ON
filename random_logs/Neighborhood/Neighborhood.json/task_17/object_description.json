@@ -1,0 +1,35 @@
+{
+  "episode_id": "17",
+  "start_pose": {
+    "start_position": [
+      -218.5824201667403,
+      53.16443256856882,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.8440931891296489,
+      -0.5361965013546234
+    ]
+  },
+  "info": {
+    "geodesic_distance": 60,
+    "euclidean_distance": 42.8429
+  },
+  "map_name": "ModularNeighborhood_test",
+  "true_name": "Scrap",
+  "object_name": "SM_Set4_133",
+  "pose": [
+    [
+      -179.0,
+      38.79999923706055,
+      0.8999999761581421
+    ]
+  ],
+  "size": "small(1.25*1=1.25 squares)",
+  "description": "Geometric compact shape, rusted metal with dark mechanical textures, scattered and uneven surface components, non-functional appearance consistent with discarded machinery.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

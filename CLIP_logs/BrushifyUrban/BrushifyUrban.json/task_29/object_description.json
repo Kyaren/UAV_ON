@@ -1,0 +1,35 @@
+{
+  "episode_id": "29",
+  "start_pose": {
+    "start_position": [
+      438.5786538502425,
+      -1066.7373072515495,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.6871283522758006,
+      0.7265360469369315
+    ]
+  },
+  "info": {
+    "geodesic_distance": 50,
+    "euclidean_distance": 32.7787
+  },
+  "map_name": "BrushifyUrban_test",
+  "true_name": "Table",
+  "object_name": "SM_prop_dining_table_a_688",
+  "pose": [
+    [
+      456.5,
+      -1092.699951171875,
+      1.899999976158142
+    ]
+  ],
+  "size": "small(1.25*1.25=1.56 squares)",
+  "description": "Geometric square form, glossy red surface with curved metal legs, uniform tabletop with no additional features, intended for general use or dining.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

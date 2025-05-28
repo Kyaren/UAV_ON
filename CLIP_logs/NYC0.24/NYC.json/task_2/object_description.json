@@ -1,0 +1,35 @@
+{
+  "episode_id": "2",
+  "start_pose": {
+    "start_position": [
+      441.34983811661664,
+      772.745690280082,
+      -7.779487311840057
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.6462351922816459,
+      -0.7631383074231721
+    ]
+  },
+  "info": {
+    "geodesic_distance": 38,
+    "euclidean_distance": 27.0313
+  },
+  "map_name": "NYC_test",
+  "true_name": "Human",
+  "object_name": "BP_chef_01_2",
+  "pose": [
+    [
+      416.0999755859375,
+      781.0,
+      0.22051268815994263
+    ]
+  ],
+  "size": "small(1.25*1.25=1.56 squares)",
+  "description": "Organic upright form, gray uniform with matching cap, minimalistic design with clean texture, appears to represent a uniformed figure such as security or pilot personnel.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

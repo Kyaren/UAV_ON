@@ -1,0 +1,2 @@
+{"frame": 0, "is_collision": false, "action": null, "steps_size": 0, "move_distance": 0.0, "distance_to_end": 38.26, "sensors": {"state": {"position": [385.0641802188515, -1105.993935275064, -10.0], "quaternionr": [0.0, 0.0, 0.9481031758672055, 0.31796284045548273]}}}
+{"frame": 1, "is_collision": true, "action": "forward", "steps_size": 5, "move_distance": 5.0, "distance_to_end": 41.3, "sensors": {"state": {"position": [381.0751838979567, -1102.979319486628, -10.0], "quaternionr": [0.0, 0.0, 0.9481031758672055, 0.31796284045548273]}}}

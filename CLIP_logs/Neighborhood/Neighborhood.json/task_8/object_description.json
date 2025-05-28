@@ -1,0 +1,35 @@
+{
+  "episode_id": "8",
+  "start_pose": {
+    "start_position": [
+      -102.25848270145802,
+      -73.88750767700276,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9914335943120631,
+      -0.13061174552643964
+    ]
+  },
+  "info": {
+    "geodesic_distance": 78,
+    "euclidean_distance": 51.9704
+  },
+  "map_name": "ModularNeighborhood_test",
+  "true_name": "Truck",
+  "object_name": "SM_AmericanTruck_2",
+  "pose": [
+    [
+      -130.5,
+      -31.0,
+      1.0
+    ]
+  ],
+  "size": "big(5.75*2=11.5 squares)",
+  "description": "Geometric elongated form, orange and black metal body with prominent front grille, six rear tires and open chassis frame, industrial design indicates heavy cargo transport function.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

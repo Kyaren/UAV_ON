@@ -1,0 +1,35 @@
+{
+  "episode_id": "45",
+  "start_pose": {
+    "start_position": [
+      -11.592006764918896,
+      194.77109442575977,
+      -6.400000095367432
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9998738123644266,
+      0.015885822226985195
+    ]
+  },
+  "info": {
+    "geodesic_distance": 69,
+    "euclidean_distance": 38.1606
+  },
+  "map_name": "UrbanJapan_test",
+  "true_name": "Cone",
+  "object_name": "SM_WetFloorCone_155",
+  "pose": [
+    [
+      9.699999809265137,
+      163.5,
+      1.5999999046325684
+    ]
+  ],
+  "size": "small(0.5*0.5=0.25 squares)",
+  "description": "Tapered conical shape, solid yellow plastic, broad square base with narrow pointed top, used for traffic or caution marking.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

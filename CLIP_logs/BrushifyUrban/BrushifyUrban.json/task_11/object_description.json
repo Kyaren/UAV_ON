@@ -1,0 +1,35 @@
+{
+  "episode_id": "11",
+  "start_pose": {
+    "start_position": [
+      1003.0624162150796,
+      -812.1170250038745,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9342406032166313,
+      -0.35664337271485225
+    ]
+  },
+  "info": {
+    "geodesic_distance": 55,
+    "euclidean_distance": 42.0883
+  },
+  "map_name": "BrushifyUrban_test",
+  "true_name": "Hydrant",
+  "object_name": "SM_Hydrant_35",
+  "pose": [
+    [
+      1010.8999633789062,
+      -852.5,
+      1.899999976158142
+    ]
+  ],
+  "size": "small(0.75*0.5=0.38 squares)",
+  "description": "Geometric cylindrical form, red metal body with two blue side nozzles and domed top, mounted on ground level, used for emergency water access by firefighters.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

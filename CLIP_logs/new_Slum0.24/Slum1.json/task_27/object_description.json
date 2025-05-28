@@ -1,0 +1,35 @@
+{
+  "episode_id": "27",
+  "start_pose": {
+    "start_position": [
+      71.13417837547125,
+      -16.87244473376876,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.5379181899355205,
+      0.8429970468136251
+    ]
+  },
+  "info": {
+    "geodesic_distance": 51,
+    "euclidean_distance": 34.0362
+  },
+  "map_name": "Slum_test",
+  "true_name": " SignPost",
+  "object_name": "SM_DirectionSign_20",
+  "pose": [
+    [
+      46.56232452392578,
+      6.070683479309082,
+      -1.6799978017807007
+    ]
+  ],
+  "size": " small(1.5*0.25=0.38 squares)",
+  "description": " Dual wooden posts with two directional metal arrows, weathered and rusty, used for directional guidance or wayfinding.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

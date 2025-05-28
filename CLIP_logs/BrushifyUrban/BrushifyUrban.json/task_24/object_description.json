@@ -1,0 +1,35 @@
+{
+  "episode_id": "24",
+  "start_pose": {
+    "start_position": [
+      494.9766932558583,
+      -887.6412212427916,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.07496748033131406,
+      -0.9971859790895448
+    ]
+  },
+  "info": {
+    "geodesic_distance": 60,
+    "euclidean_distance": 41.9873
+  },
+  "map_name": "BrushifyUrban_test",
+  "true_name": "GlobeSculpture",
+  "object_name": "SM_Statue01_456",
+  "pose": [
+    [
+      510.8999938964844,
+      -925.7999877929688,
+      0.29999998211860657
+    ]
+  ],
+  "size": "big(6*6=36 squares)",
+  "description": "Geometric spherical form on a pedestal, dark bronze metal with continental cutouts and orbit rings, decorative globe design, used as a public monument or park centerpiece.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

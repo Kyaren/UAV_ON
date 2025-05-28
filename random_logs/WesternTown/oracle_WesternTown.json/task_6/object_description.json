@@ -1,0 +1,35 @@
+{
+  "episode_id": "6",
+  "start_pose": {
+    "start_position": [
+      -57.19815559058157,
+      20.600803917681986,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.5901024205020162,
+      0.8073283924882498
+    ]
+  },
+  "info": {
+    "geodesic_distance": 29,
+    "euclidean_distance": 20.6368
+  },
+  "map_name": "WesternTown_test",
+  "true_name": "GrainSilo",
+  "object_name": "SM_GrainSilo_32",
+  "pose": [
+    [
+      -53.42185592651367,
+      2.0839500427246094,
+      1.2912304401397705
+    ]
+  ],
+  "size": " big(5.75*5.75=33.06 squares)",
+  "description": "Geometric cylindrical form, matte black metal surface, vertical segmentation with rooftop hatch and attached external ladder, used for bulk grain storage in agricultural settings.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

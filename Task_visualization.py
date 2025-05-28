@@ -13,7 +13,7 @@ from mpl_toolkits.mplot3d import Axes3D
 from scipy.spatial.transform import Rotation as R
 
 # 统一路径前缀
-base_path = "./logs/WinterTown/WinterTown.json/task_6"
+base_path = "./CLIP_logs/Neighborhood/oracle_Neighborhood1.json/task_0"
 # base_path = "./eval01/oracle_SeenThings.json/task_4"
 # base_path = "./eval_fixed/success_SeenThings.json/task_4"
 

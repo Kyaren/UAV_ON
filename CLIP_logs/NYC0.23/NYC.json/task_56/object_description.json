@@ -1,0 +1,35 @@
+{
+  "episode_id": "56",
+  "start_pose": {
+    "start_position": [
+      164.726041422612,
+      942.8426227430665,
+      -6.600000023841858
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.7148492858499967,
+      -0.6992785557413796
+    ]
+  },
+  "info": {
+    "geodesic_distance": 59,
+    "euclidean_distance": 38.0334
+  },
+  "map_name": "NYC_test",
+  "true_name": "Camper",
+  "object_name": "SM_Campervan_01a7",
+  "pose": [
+    [
+      189.8000030517578,
+      971.0,
+      1.399999976158142
+    ]
+  ],
+  "size": "big(3.75*7.5=28.13 squares)",
+  "description": "Geometric boxy vehicle form, beige exterior with horizontal stripes and integrated windows, features include rear ladder and spare tire, designed for mobile living or travel accommodation.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

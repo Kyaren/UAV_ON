@@ -1,0 +1,35 @@
+{
+  "episode_id": "24",
+  "start_pose": {
+    "start_position": [
+      18.50190598758148,
+      11.458751427287481,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.5514272786894487,
+      -0.8342229655896252
+    ]
+  },
+  "info": {
+    "geodesic_distance": 51,
+    "euclidean_distance": 34.0633
+  },
+  "map_name": "Slum_test",
+  "true_name": " WaterCan",
+  "object_name": "SM_Water_Can_17",
+  "pose": [
+    [
+      -10.237675666809082,
+      28.170682907104492,
+      0.42000213265419006
+    ]
+  ],
+  "size": "small(0.75*0.75=0.56 squares)",
+  "description": "Cylindrical form with long spout and top handle, dark metallic texture, narrow pouring tip, used for manually watering plants.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

@@ -1,0 +1,35 @@
+{
+  "episode_id": "7",
+  "start_pose": {
+    "start_position": [
+      -64.0754665151214,
+      74.28325286172829,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9086747901171776,
+      -0.41750464165743517
+    ]
+  },
+  "info": {
+    "geodesic_distance": 53,
+    "euclidean_distance": 46.7109
+  },
+  "map_name": "CityPark_test",
+  "true_name": "Human",
+  "object_name": "BP_ma_casual_02_a_2",
+  "pose": [
+    [
+      -64.19999694824219,
+      120.3192367553711,
+      0.9107894897460938
+    ]
+  ],
+  "size": "small(1.25*0.75=0.94 squares)",
+  "description": "Organic upright form, dark t-shirt with matching pants and brown cap, muscular build, visually identifiable as a walking person.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

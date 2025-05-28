@@ -1,0 +1,35 @@
+{
+  "episode_id": "31",
+  "start_pose": {
+    "start_position": [
+      381.97655691696565,
+      777.2178578324504,
+      -6.800000071525574
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.5128310746031794,
+      -0.8584895392032148
+    ]
+  },
+  "info": {
+    "geodesic_distance": 42,
+    "euclidean_distance": 29.7806
+  },
+  "map_name": "NYC_test",
+  "true_name": "Sheep",
+  "object_name": "Domestic_sheep_Idle_anim_47",
+  "pose": [
+    [
+      410.1999816894531,
+      785.2999877929688,
+      1.1999999284744263
+    ]
+  ],
+  "size": "small(1.5*0.75=1.13 squares)",
+  "description": "Organic quadruped form, light beige woolly coat with short tail, rounded snout and curved body, commonly used as livestock for wool and meat production.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

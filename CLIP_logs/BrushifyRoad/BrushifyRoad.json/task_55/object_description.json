@@ -1,0 +1,35 @@
+{
+  "episode_id": "55",
+  "start_pose": {
+    "start_position": [
+      5.241111625592282,
+      298.4450786741829,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.8921778692993508,
+      0.451684236533079
+    ]
+  },
+  "info": {
+    "geodesic_distance": 113,
+    "euclidean_distance": 67.0865
+  },
+  "map_name": "BrushifyRoad_test",
+  "true_name": " FabricSack",
+  "object_name": "SM_Fabric_Sack_Set3_77",
+  "pose": [
+    [
+      -29.127695083618164,
+      253.80374145507812,
+      29.421659469604492
+    ]
+  ],
+  "size": " small(1.75*1.75=3.06 squares)",
+  "description": " Organic rounded form, beige coarse fabric texture, irregularly shaped with multiple bulges, likely containing loose materials or goods.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

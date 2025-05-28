@@ -1,0 +1,35 @@
+{
+  "episode_id": "50",
+  "start_pose": {
+    "start_position": [
+      -68.01893322577033,
+      -115.63445614742541,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.5154725665356116,
+      -0.8569060818719806
+    ]
+  },
+  "info": {
+    "geodesic_distance": 72,
+    "euclidean_distance": 51.9198
+  },
+  "map_name": "WinterTown_test",
+  "true_name": " Chair",
+  "object_name": "SM_Building_Int_Reqular_Chair_97",
+  "pose": [
+    [
+      -74.09274291992188,
+      -67.59274291992188,
+      11.72872543334961
+    ]
+  ],
+  "size": " small(1.0*0.75=0.75 squares)",
+  "description": " Geometric vertical-back shape, dark wooden texture with slatted backrest and four legs, designed for sitting support.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

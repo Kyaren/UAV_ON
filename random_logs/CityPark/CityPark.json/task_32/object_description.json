@@ -1,0 +1,35 @@
+{
+  "episode_id": "32",
+  "start_pose": {
+    "start_position": [
+      -657.8584250734564,
+      359.12022527123463,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.539973262655409,
+      0.8416821701909057
+    ]
+  },
+  "info": {
+    "geodesic_distance": 86,
+    "euclidean_distance": 56.9598
+  },
+  "map_name": "CityPark_test",
+  "true_name": "Limousine",
+  "object_name": "SK_Limo_Rigged2",
+  "pose": [
+    [
+      -624.2000122070312,
+      314.0,
+      1.6999999284744263
+    ]
+  ],
+  "size": "big(6.75*1.75=11.81 squares)",
+  "description": "Elongated geometric vehicle shape, glossy white exterior with black roof accents and chrome trim, vintage design with large rear cabin space, used for luxury passenger transport.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

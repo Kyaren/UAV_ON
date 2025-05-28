@@ -4,6 +4,8 @@ import os
 from pathlib import Path
 import sys
 import time
+import random
+import numpy as np 
 sys.path.append(str(Path(str(os.getcwd())).resolve()))
 from common.param import args
 from env_uav import AirVLNENV
@@ -32,12 +34,8 @@ def eval(modelWrapper: BaseModelWrapper, env: AirVLNENV ,is_fixed, save_eval_pat
             inputs ,user_prompts, depths = modelWrapper.prepare_inputs(batch_state.episodes)
             cnt+= env.batch_size
             for t in range(args.maxActions):
-                
-                
-
                 logger.info('Step: {} \t Completed: {} / {}'.format(t, cnt-batch_state.skips.count(False), data_len))
-
-                
+          
                 start1 = time.time()
                 actions, steps_size, dones = modelWrapper.run(inputs, depths)
                 print("get actions time:",time.time()-start1)
@@ -56,12 +54,8 @@ def eval(modelWrapper: BaseModelWrapper, env: AirVLNENV ,is_fixed, save_eval_pat
                 batch_state.update_metric()
                 is_terminate = batch_state.check_batch_termination(t)
                 if is_terminate:
-                    break
-                
-                start2 = time.time()
+                    break      
                 inputs, user_prompts, depths = modelWrapper.prepare_inputs(batch_state.episodes)
-                #print("prepare inputs time:",time.time()-start2)
-                # time.sleep(1.5)
         try:
             pbar.close()
         except:
@@ -69,7 +63,11 @@ def eval(modelWrapper: BaseModelWrapper, env: AirVLNENV ,is_fixed, save_eval_pat
 
 
 if __name__ == "__main__":
-    
+    seed = 42  
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    torch.cuda.manual_seed_all(seed)
 
     env = initialize_env_eval(dataset_path=args.dataset_path, save_path=args.eval_save_path)
     fixed = args.is_fixed

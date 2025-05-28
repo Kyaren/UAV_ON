@@ -1,0 +1,35 @@
+{
+  "episode_id": "38",
+  "start_pose": {
+    "start_position": [
+      -30.967664591175087,
+      42.91854793137433,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.22238880039354972,
+      0.9749580613849592
+    ]
+  },
+  "info": {
+    "geodesic_distance": 18,
+    "euclidean_distance": 13.48
+  },
+  "map_name": "WesternTown_test",
+  "true_name": " PullupBar",
+  "object_name": "SM_PullupBar01_261",
+  "pose": [
+    [
+      -32.521854400634766,
+      32.48394775390625,
+      1.3912304639816284
+    ]
+  ],
+  "size": " small(2.5*0.25=0.63 squares)",
+  "description": " Series of upright red poles connected by yellow horizontal bars at varying heights, metal texture, used for upper body exercise and strength training.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

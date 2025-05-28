@@ -1,0 +1,35 @@
+{
+  "episode_id": "42",
+  "start_pose": {
+    "start_position": [
+      14.638444052821711,
+      39.50310208795045,
+      -6.400000095367432
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9138136840027437,
+      0.4061336614088197
+    ]
+  },
+  "info": {
+    "geodesic_distance": 55,
+    "euclidean_distance": 43.0743
+  },
+  "map_name": "UrbanJapan_test",
+  "true_name": "Car",
+  "object_name": "SK_F1_New_Rigged05_11",
+  "pose": [
+    [
+      -27.099998474121094,
+      48.89999771118164,
+      1.5999999046325684
+    ]
+  ],
+  "size": "mid(3.5*1.75=6.13 squares)",
+  "description": "Low-profile, open-top race car with a streamlined body, bright blue exterior, exposed wheels and exhaust pipes, classic vintage racing design.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

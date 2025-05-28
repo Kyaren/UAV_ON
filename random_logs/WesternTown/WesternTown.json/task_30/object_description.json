@@ -1,0 +1,35 @@
+{
+  "episode_id": "30",
+  "start_pose": {
+    "start_position": [
+      -23.869371572061354,
+      90.99243030017053,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9128047596396934,
+      0.40839621788053015
+    ]
+  },
+  "info": {
+    "geodesic_distance": 150,
+    "euclidean_distance": 49.2049
+  },
+  "map_name": "WesternTown_test",
+  "true_name": " LogStackCovered",
+  "object_name": "SM_Log_Pile_Covered_147",
+  "pose": [
+    [
+      -12.921854972839355,
+      43.383949279785156,
+      -1.1087695360183716
+    ]
+  ],
+  "size": " mid(4.0*1.25=5.0 squares)",
+  "description": " Rectangular horizontal stack shape, dark wood texture partially concealed by draped cloth cover, visible cut log ends on sides, used for storing firewood or timber.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

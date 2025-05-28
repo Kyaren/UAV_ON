@@ -1,0 +1,35 @@
+{
+  "episode_id": "17",
+  "start_pose": {
+    "start_position": [
+      401.6950282284841,
+      763.6958959859062,
+      -7.779487311840057
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9043472756864327,
+      0.4267973816209833
+    ]
+  },
+  "info": {
+    "geodesic_distance": 22,
+    "euclidean_distance": 14.565
+  },
+  "map_name": "NYC_test",
+  "true_name": "Human",
+  "object_name": "BP_ma_construction_worker_01_2",
+  "pose": [
+    [
+      406.50054931640625,
+      776.50390625,
+      0.22051268815994263
+    ]
+  ],
+  "size": "small(1.25*1.25=1.56 squares)",
+  "description": "Organic upright form, gray jumpsuit with yellow gloves and short hair, uniform appearance with practical detailing, represents a worker or technician figure.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

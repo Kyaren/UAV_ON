@@ -1,0 +1,35 @@
+{
+  "episode_id": "9",
+  "start_pose": {
+    "start_position": [
+      -103.46497484556872,
+      207.16035623119143,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.14169342217931313,
+      -0.989910588947868
+    ]
+  },
+  "info": {
+    "geodesic_distance": 79,
+    "euclidean_distance": 54.6695
+  },
+  "map_name": "BrushifyRoad_test",
+  "true_name": "Hoe",
+  "object_name": "SM_Hoe_02_53",
+  "pose": [
+    [
+      -72.42769622802734,
+      203.10374450683594,
+      37.821659088134766
+    ]
+  ],
+  "size": " small(0.25*0.25=0.06 squares)",
+  "description": " Long wooden handle with a flat, angled metal blade, worn and slightly rusted, typically used for cultivating soil or weeding.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

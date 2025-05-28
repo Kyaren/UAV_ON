@@ -1,0 +1,35 @@
+{
+  "episode_id": "21",
+  "start_pose": {
+    "start_position": [
+      267.85737560748163,
+      145.3602840463192,
+      -6.800000071525574
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.7632719708308822,
+      0.6460773162276641
+    ]
+  },
+  "info": {
+    "geodesic_distance": 59,
+    "euclidean_distance": 30.788
+  },
+  "map_name": "NYC_test",
+  "true_name": "Dog",
+  "object_name": "cane_corso_idleSit_anim2",
+  "pose": [
+    [
+      276.1000061035156,
+      174.59999084472656,
+      1.1999999284744263
+    ]
+  ],
+  "size": "small(1*0.5=0.5 squares)",
+  "description": "Organic quadruped form, solid black fur with smooth texture, upright posture with defined snout and ears, companion animal commonly used for domestic companionship.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

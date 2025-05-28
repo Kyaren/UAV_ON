@@ -1,0 +1,35 @@
+{
+  "episode_id": "9",
+  "start_pose": {
+    "start_position": [
+      -754.2480257096811,
+      -59.377540159095105,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.23412356017534466,
+      0.9722068496831432
+    ]
+  },
+  "info": {
+    "geodesic_distance": 42,
+    "euclidean_distance": 25.4516
+  },
+  "map_name": "CityPark_test",
+  "true_name": "Human",
+  "object_name": "BP_fe_casual_03_skin_2",
+  "pose": [
+    [
+      -744.2381591796875,
+      -38.30298614501953,
+      3.1710045337677
+    ]
+  ],
+  "size": "small(1.25*0.75=0.94 squares)",
+  "description": "Organic upright form, light top with dark knee-length skirt and headband, holding black jacket, visually identifiable as a walking person.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

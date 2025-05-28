@@ -1,0 +1,35 @@
+{
+  "episode_id": "42",
+  "start_pose": {
+    "start_position": [
+      -288.15984914844364,
+      -300.89803563562873,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9987037595180801,
+      0.05089990888452455
+    ]
+  },
+  "info": {
+    "geodesic_distance": 38,
+    "euclidean_distance": 26.5868
+  },
+  "map_name": "CityPark_test",
+  "true_name": "Dumpster",
+  "object_name": "SM_Dumpster2_5",
+  "pose": [
+    [
+      -283.6000061035156,
+      -276.29998779296875,
+      2.0
+    ]
+  ],
+  "size": "small(2.5*1.5=3.75 squares)",
+  "description": "Rectangular geometric shape, dark green metal exterior with hinged lid and caster wheels, rust patches and dirt stains visible, used for temporary outdoor waste storage.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

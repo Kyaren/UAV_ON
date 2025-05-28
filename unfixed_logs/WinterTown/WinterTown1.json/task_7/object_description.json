@@ -1,0 +1,35 @@
+{
+  "episode_id": "7",
+  "start_pose": {
+    "start_position": [
+      -86.07355326330213,
+      -22.69833690050486,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.7667569497308913,
+      -0.6419375203548859
+    ]
+  },
+  "info": {
+    "geodesic_distance": 89,
+    "euclidean_distance": 55.2774
+  },
+  "map_name": "WinterTown_test",
+  "true_name": " RoadBarrier",
+  "object_name": "ConcreteBarrier_A_18",
+  "pose": [
+    [
+      -115.59274291992188,
+      20.207256317138672,
+      11.528725624084473
+    ]
+  ],
+  "size": " small(2.0*0.5=1.0 squares)",
+  "description": " Rectangular wedge-like shape, white with diagonal orange stripes, solid concrete texture, used for traffic control or construction zone demarcation.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

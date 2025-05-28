@@ -1,0 +1,35 @@
+{
+  "episode_id": "39",
+  "start_pose": {
+    "start_position": [
+      -22.477849225337536,
+      -18.450726051716128,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.7366987488893018,
+      -0.6762210832153472
+    ]
+  },
+  "info": {
+    "geodesic_distance": 64,
+    "euclidean_distance": 49.2496
+  },
+  "map_name": "WesternTown_test",
+  "true_name": " Tire",
+  "object_name": "SM_Tire2_268",
+  "pose": [
+    [
+      -32.42185592651367,
+      29.08395004272461,
+      1.1912304162979126
+    ]
+  ],
+  "size": " small(0.75*0.75=0.56 squares)",
+  "description": " Circular hollow shape, black rubber texture, patterned tread surface, likely intended for vehicle use.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

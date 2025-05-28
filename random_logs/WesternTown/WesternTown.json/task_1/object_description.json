@@ -1,0 +1,35 @@
+{
+  "episode_id": "1",
+  "start_pose": {
+    "start_position": [
+      1.8484375859381146,
+      -31.251058356005554,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.07916478863820897,
+      0.996861543164279
+    ]
+  },
+  "info": {
+    "geodesic_distance": 68,
+    "euclidean_distance": 49.4479
+  },
+  "map_name": "WesternTown_test",
+  "true_name": " LightWall",
+  "object_name": "SM_LightWall01_5",
+  "pose": [
+    [
+      -20.021854400634766,
+      13.08395004272461,
+      -5.908769607543945
+    ]
+  ],
+  "size": " small(0.5*0.5=0.25 squares)",
+  "description": " Spherical shape, glossy dark surface with illuminated segments or embedded lighting, compact form suggests use as a decorative or signaling element.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

@@ -1,0 +1,35 @@
+{
+  "episode_id": "39",
+  "start_pose": {
+    "start_position": [
+      -10.352994512251477,
+      40.404605986963695,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9997430101083857,
+      0.02266966562223872
+    ]
+  },
+  "info": {
+    "geodesic_distance": 14,
+    "euclidean_distance": 11.171
+  },
+  "map_name": "Slum_test",
+  "true_name": " Apple",
+  "object_name": "SM_Apple_7",
+  "pose": [
+    [
+      -9.537675857543945,
+      30.670682907104492,
+      -1.5799977779388428
+    ]
+  ],
+  "size": " small(0.25*0.25=0.06 squares)",
+  "description": " Small, rounded shape, red-brown, smooth surface, edible fruit.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

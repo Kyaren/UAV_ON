@@ -1,0 +1,35 @@
+{
+  "episode_id": "30",
+  "start_pose": {
+    "start_position": [
+      25.840881569871158,
+      40.28621485850816,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.3348297145267528,
+      0.9422786542578226
+    ]
+  },
+  "info": {
+    "geodesic_distance": 51,
+    "euclidean_distance": 37.5231
+  },
+  "map_name": "Slum_test",
+  "true_name": " Stool",
+  "object_name": "SM_Stool_27",
+  "pose": [
+    [
+      -9.037675857543945,
+      28.670682907104492,
+      0.5200021266937256
+    ]
+  ],
+  "size": " small(0.75*0.75=0.56 squares)",
+  "description": " Geometric cylindrical seat with four legs, dark wooden texture, simple and compact build, used for sitting.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

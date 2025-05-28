@@ -1,0 +1,35 @@
+{
+  "episode_id": "81",
+  "start_pose": {
+    "start_position": [
+      252.11908240798954,
+      517.1659324781366,
+      -7.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.8012725633322207,
+      0.598299489596149
+    ]
+  },
+  "info": {
+    "geodesic_distance": 45,
+    "euclidean_distance": 38.9966
+  },
+  "map_name": "NYC_test",
+  "true_name": "Fountain",
+  "object_name": "BP_fountain_on_2",
+  "pose": [
+    [
+      213.59999084472656,
+      513.7000122070312,
+      1.0
+    ]
+  ],
+  "size": "big(7.0*7.0=49.0 squares)",
+  "description": "Circular stone structure with tiered basins, ornate central sculpture of a standing figure, water-filled base with flowing water effect, decorative installation for outdoor settings.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

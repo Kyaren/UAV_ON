@@ -1,0 +1,35 @@
+{
+  "episode_id": "54",
+  "start_pose": {
+    "start_position": [
+      -10.094310843767722,
+      33.958803590658334,
+      -6.600000023841858
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.39815676482015777,
+      -0.917317388163958
+    ]
+  },
+  "info": {
+    "geodesic_distance": 31,
+    "euclidean_distance": 25.1255
+  },
+  "map_name": "UrbanJapan_test",
+  "true_name": "LookingStand",
+  "object_name": "SM_looking_stand_tall_158",
+  "pose": [
+    [
+      -12.09999942779541,
+      58.5,
+      1.399999976158142
+    ]
+  ],
+  "size": "small(0.5*0.25=0.13 squares)",
+  "description": "Tall, narrow vertical structure with a rounded top, grey and black exterior with informational signage, typical of a public viewing or information display stand.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

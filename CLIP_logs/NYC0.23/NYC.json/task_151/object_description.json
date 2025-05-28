@@ -1,0 +1,35 @@
+{
+  "episode_id": "151",
+  "start_pose": {
+    "start_position": [
+      164.7708390652355,
+      646.461591452495,
+      -6.200000047683716
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.36835541153035173,
+      -0.9296850492485642
+    ]
+  },
+  "info": {
+    "geodesic_distance": 51,
+    "euclidean_distance": 38.9781
+  },
+  "map_name": "NYC_test",
+  "true_name": "Sign",
+  "object_name": "SM_Wooden_Sign_02_490",
+  "pose": [
+    [
+      202.1999969482422,
+      636.7999877929688,
+      1.7999999523162842
+    ]
+  ],
+  "size": "small(0.5*0.25=0.13 squares)",
+  "description": "Geometric rectangular form, flat brown wood texture with vertical post, minimal surface detailing, likely for displaying information or warnings.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

@@ -1,0 +1,35 @@
+{
+  "episode_id": "28",
+  "start_pose": {
+    "start_position": [
+      447.32441604774425,
+      -1107.300000146439,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.4498528837805891,
+      -0.8931026721235851
+    ]
+  },
+  "info": {
+    "geodesic_distance": 43,
+    "euclidean_distance": 26.2183
+  },
+  "map_name": "BrushifyUrban_test",
+  "true_name": "Umbrella",
+  "object_name": "SM_Umbrella02_709",
+  "pose": [
+    [
+      464.8999938964844,
+      -1090.0,
+      1.899999976158142
+    ]
+  ],
+  "size": "small(1*1=1 squares)",
+  "description": "Geometric vertical form, red and white striped fabric folded around a central black pole, compact configuration with a visible base, intended for outdoor use when deployed.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

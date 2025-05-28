@@ -1,0 +1,35 @@
+{
+  "episode_id": "19",
+  "start_pose": {
+    "start_position": [
+      -233.056516698393,
+      -315.91018602360447,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.5898515960335882,
+      -0.8075116684337315
+    ]
+  },
+  "info": {
+    "geodesic_distance": 102,
+    "euclidean_distance": 62.6895
+  },
+  "map_name": "BrushifyRoad_test",
+  "true_name": " TrafficCone",
+  "object_name": "S_TrafficCone_Damaged3",
+  "pose": [
+    [
+      -263.7949523925781,
+      -291.2621765136719,
+      41.760623931884766
+    ]
+  ],
+  "size": " small(0.5*0.5=0.25 squares)",
+  "description": " Geometric conical shape, bright orange-yellow with a gray base, smooth plastic surface, used for marking hazards or directing traffic.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

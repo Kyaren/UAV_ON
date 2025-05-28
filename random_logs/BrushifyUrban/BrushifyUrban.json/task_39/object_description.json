@@ -1,0 +1,35 @@
+{
+  "episode_id": "39",
+  "start_pose": {
+    "start_position": [
+      713.3323262356537,
+      -478.4114256515552,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.879372605764364,
+      -0.47613424601806614
+    ]
+  },
+  "info": {
+    "geodesic_distance": 71,
+    "euclidean_distance": 51.2885
+  },
+  "map_name": "BrushifyUrban_test",
+  "true_name": "Roadster",
+  "object_name": "SK_NYC_Car02_26",
+  "pose": [
+    [
+      665.0,
+      -463.79998779296875,
+      2.0
+    ]
+  ],
+  "size": "mid(4.25*2=8.5 squares)",
+  "description": "Compact convertible car with classic styling, beige exterior with open-top design and exposed spare tire, intended for recreational driving.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

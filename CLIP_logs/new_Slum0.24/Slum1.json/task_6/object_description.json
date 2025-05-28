@@ -1,0 +1,35 @@
+{
+  "episode_id": "6",
+  "start_pose": {
+    "start_position": [
+      -9.298758295062527,
+      39.707831157457974,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.1142803978022916,
+      0.9934485344889035
+    ]
+  },
+  "info": {
+    "geodesic_distance": 45,
+    "euclidean_distance": 28.7911
+  },
+  "map_name": "Slum_test",
+  "true_name": " Bottles",
+  "object_name": "SM_Glass_Bottle_Set1_12",
+  "pose": [
+    [
+      -31.337675094604492,
+      23.47068214416504,
+      1.9200021028518677
+    ]
+  ],
+  "size": " small(0.5*0.5=0.25 squares)",
+  "description": " Cluster of cylindrical glass containers, green and brown hues, grouped together, likely for liquid storage or decoration.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

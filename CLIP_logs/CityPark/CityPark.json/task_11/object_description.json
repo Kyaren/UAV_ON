@@ -1,0 +1,35 @@
+{
+  "episode_id": "11",
+  "start_pose": {
+    "start_position": [
+      -47.77545270746822,
+      -256.003785968814,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.8805754531759102,
+      0.4739059730200078
+    ]
+  },
+  "info": {
+    "geodesic_distance": 55,
+    "euclidean_distance": 35.3929
+  },
+  "map_name": "CityPark_test",
+  "true_name": "Human",
+  "object_name": "BP_fe_sport_02_b2",
+  "pose": [
+    [
+      -20.399999618530273,
+      -276.8999938964844,
+      1.1603795289993286
+    ]
+  ],
+  "size": "small(1.25*0.75=0.94 squares)",
+  "description": "Organic upright form, dark jacket with light gray pants and tan cap, long blond hair, visually identifiable as a walking person.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

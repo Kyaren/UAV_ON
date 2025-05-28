@@ -1,0 +1,35 @@
+{
+  "episode_id": "17",
+  "start_pose": {
+    "start_position": [
+      -22.589487834810043,
+      272.23589573205027,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9444490203133882,
+      -0.32865794989484315
+    ]
+  },
+  "info": {
+    "geodesic_distance": 100,
+    "euclidean_distance": 59.1295
+  },
+  "map_name": "BrushifyRoad_test",
+  "true_name": " Chick",
+  "object_name": "chick_walk_slow_anim_35",
+  "pose": [
+    [
+      -60.52769470214844,
+      303.0037536621094,
+      26.321659088134766
+    ]
+  ],
+  "size": " small(0.5*0.5=0.25 squares)",
+  "description": " Organic rounded form, fluffy yellow surface, small beak and eyes, resembles a young bird commonly found on farms.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

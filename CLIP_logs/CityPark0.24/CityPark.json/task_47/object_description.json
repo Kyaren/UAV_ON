@@ -1,0 +1,35 @@
+{
+  "episode_id": "47",
+  "start_pose": {
+    "start_position": [
+      92.20500228752232,
+      301.6638137757732,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.19981901170014174,
+      0.9798328237833118
+    ]
+  },
+  "info": {
+    "geodesic_distance": 20,
+    "euclidean_distance": 13.092
+  },
+  "map_name": "CityPark_test",
+  "true_name": "StatueDeer",
+  "object_name": "SM_prop_statue_deer_32",
+  "pose": [
+    [
+      102.5,
+      297.6999816894531,
+      0.04999999701976776
+    ]
+  ],
+  "size": "small(2.5*1.25=3.13 squares)",
+  "description": "Organic quadruped shape, dark bronze-like texture with sculpted antlers and muscular form, mounted on a stone base, decorative statue representing a wild deer.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

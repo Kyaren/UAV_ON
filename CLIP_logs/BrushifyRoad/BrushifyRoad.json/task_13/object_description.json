@@ -1,0 +1,35 @@
+{
+  "episode_id": "13",
+  "start_pose": {
+    "start_position": [
+      10.245453993820504,
+      242.22195348305218,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.07804453154879142,
+      0.9969498739130919
+    ]
+  },
+  "info": {
+    "geodesic_distance": 82,
+    "euclidean_distance": 54.967
+  },
+  "map_name": "BrushifyRoad_test",
+  "true_name": " Pumpkin",
+  "object_name": "SM_Pumpkin_31",
+  "pose": [
+    [
+      -31.127695083618164,
+      248.60374450683594,
+      28.621660232543945
+    ]
+  ],
+  "size": " small(0.75*0.75=0.56 squares)",
+  "description": " Rounded organic shape, vibrant orange surface with ribbed texture and short brown stem, classic appearance consistent with a harvested pumpkin.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

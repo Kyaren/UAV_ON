@@ -1,0 +1,35 @@
+{
+  "episode_id": "21",
+  "start_pose": {
+    "start_position": [
+      95.6648210759193,
+      387.1554076114869,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9230263238491863,
+      -0.3847368002692973
+    ]
+  },
+  "info": {
+    "geodesic_distance": 93,
+    "euclidean_distance": 59.328
+  },
+  "map_name": "CityPark_test",
+  "true_name": "RustyCar",
+  "object_name": "SK_NYCCar03_Rigged3",
+  "pose": [
+    [
+      59.599998474121094,
+      342.3999938964844,
+      7.699999809265137
+    ]
+  ],
+  "size": "mid(3.75*1.5=5.63 squares)",
+  "description": "Rounded geometric shape, faded red paint with heavy rust and surface wear, classic design with chrome details and whitewall tires, appears to be an old or abandoned personal vehicle.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

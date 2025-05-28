@@ -1,0 +1,35 @@
+{
+  "episode_id": "16",
+  "start_pose": {
+    "start_position": [
+      -178.3445697893555,
+      1.9541942976765334,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9759278516660922,
+      0.21809362288339829
+    ]
+  },
+  "info": {
+    "geodesic_distance": 47,
+    "euclidean_distance": 35.3247
+  },
+  "map_name": "ModularNeighborhood_test",
+  "true_name": "Scrap",
+  "object_name": "SM_Set3_130",
+  "pose": [
+    [
+      -172.1999969482422,
+      35.89999771118164,
+      0.5999999642372131
+    ]
+  ],
+  "size": "small(1*0.75=0.75 squares)",
+  "description": "Organic clustered form, rusted brown metallic barrels and debris with sharp edges and irregular contents, corroded texture indicating discarded or abandoned materials, associated with waste or recycling function.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

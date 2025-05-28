@@ -1,0 +1,97 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information  
+                        Target = [Name: Manhole,  
+                        Size: small(1.0*1.0=1.0 squares),  
+                        Description: Geometric circular form, rusted brown metal surface with slight dome curvature, flush with ground plane, serves as access cover for underground utilities.]
+
+                        # Search Area Constraint  
+                        You must strictly stay within the following 2D range:  
+                        X Range: [-50, 51]  
+                        Y Range: [105, 206]
+
+                        # RGB Captions  
+                        Front: urban street scene; tall buildings with illuminated windows; cars on the road; sidewalk with wet pavement; view from behind a wall  
+                        Left: cityscape at night; large building with lit windows; elevated structure; group of people standing; ground marked with symbols  
+                        Right: extremely dark scene; faint light source in the distance; minimal visible details  
+                        Down: indoor setting; tiled floor with water stains; metal walls; bright light source casting shadows; black object on the floor
+
+                        # Depth Information  
+                        FrontDepth: [[56, 1, 0], [12, 1, 0], [10, 1, 0]]  
+                        LeftDepth: [[18, 36, 40], [3, 3, 24], [3, 3, 7]]  
+                        RightDepth: [[4, 4, 5], [4, 1, 1], [4, 0, 0]]  
+                        DownDepth: [[7, 1, 0], [4, 1, 0], [7, 1, 0]]
+
+                        # Previous UAV Poses (last 10 steps)  
+                        {
+    [(0.89, 155.12, -6.4), -26.66],
+    [(0.89, 155.12, -6.4), -26.66],
+    [(0.89, 155.12, -6.4), -26.66],
+    [(0.89, 155.12, -6.4), -26.66],
+    [(0.89, 155.12, -6.4), -26.66],
+    [(0.89, 155.12, -6.4), -26.66],
+    [(0.89, 155.12, -6.4), -26.66],
+    [(0.89, 155.12, -6.4), -26.66],
+    [(0.89, 155.12, -6.4), -26.66],
+    [(0.89, 155.12, -6.4), -26.66],
+}
+
+                        # Trajectory Summary  
+                        StepsSoFar = 0  
+                        DistanceTraveled = 0.0  
+                        AvgHeadingChange = 0.0
+
+                        # Mission Instructions  
+                        - Your goal is to find and stop near the correct object: Manhole.  
+                        - You are flying at a fixed low altitude — you must never ascend or descend. These actions are invalid.
+                        - If any caption mentions the object name and matches at least one trait in the description (e.g., material, shape), and depth > 4.0, you must move toward that direction.
+
+                        - After moving, if the same direction still shows the object name and matches the description, and depth < 20.0, you must stop immediately by returning [stop, 0].  
+                        - Do not pass by or delay once the target is clearly confirmed in view.
+
+                        - If no caption mentions the target, move in the direction (front, left, or right) with the highest semantic similarity and safe depth.  
+                        - Avoid directions with depth < 2.0 — treat as obstacles.
+
+                        # Exploration Rules  
+                        - If all directions are shallow (depth < 3.0), you may rotate once to find a new direction.  
+                        - If no forward progress in the last 3 steps, you may rotate once, but never ascend.  
+                        - Prefer moving into unexplored space. Avoid repeating paths or spinning in place.
+
+                        # Rotation Restrictions  
+                        - Never perform two consecutive rotations (rotl or rotr).  
+                        - After any rotation, your next action must be forward, left, or right.  
+                        - Never rotate more than once within any 2-step window.
+
+                        # Step Size Guidance  
+                        - If all directions > 15 → use large step (6.0–8.0)  
+                        - If all directions < 10 → use small step (2.0–3.0)  
+                        - If only one safe direction → use step 2.0–4.0
+
+                        # Stop Logic (Early Termination)  
+                        - If StepsSoFar : 0 > 100, and one caption partially match the object with safe depth (< 20.0), you may also stop.
+
+                        ---
+
+                        # Output Format
+
+                        You must return exactly one valid Python-style list.  
+                        Example: [forward, 6.0]
+
+                        # Valid Action Types
+
+                        - [forward, distance], [left, distance], [right, distance] → distance ∈ [2.0, 8.0]  
+                        - [rotl, angle], [rotr, angle] → angle ∈ [15, 60]  
+                        - [stop, 0] → Use only if the target is visually confirmed and depth < 20.0
+
+                        Do not use [ascend, x] or [descend, x] — these actions are forbidden. You are flying at a fixed altitude.
+
+                        # Format Rules
+
+                        Do not output:
+                        - Quoted lists like '[forward, 6.0]' or "['forward', '6.0']"  
+                        - Any string-wrapped output  
+                        - Any newline characters or extra formatting  
+                        - Any explanation — just return a single valid list
+                        
+

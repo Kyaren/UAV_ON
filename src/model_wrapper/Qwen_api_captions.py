@@ -44,11 +44,15 @@ def generate_caption(image_file, temperature=0.7):
             Return your answer **only** as a JSON array of caption strings (no prose outside the array), like:
             Example output exactly:
             [
-            "yellow slide, medium-sized, plastic; slide is in the foreground; children sliding down",
-            "......",
-            "gas station building, metal canopy; two fuel pumps; pump nozzles hanging idle; canopy in the background"
+                "yellow slide, medium-sized, plastic; slide is in the foreground; children sliding down",
+                "......",
+                "gas station building, metal canopy; two fuel pumps; pump nozzles hanging idle; canopy in the background"
             ]
             Do not write anything else.
+            IMPORTANT INSTRUCTIONS:
+            - You must respond **only in valid JSON format**.
+            - Do **not** include any extra explanation, commentary, markdown formatting, or newlines.
+            - The response must be a **single-line JSON object**, not a stringified object or list.
     """
     
     

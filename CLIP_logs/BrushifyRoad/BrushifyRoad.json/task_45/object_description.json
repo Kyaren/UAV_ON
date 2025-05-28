@@ -1,0 +1,35 @@
+{
+  "episode_id": "45",
+  "start_pose": {
+    "start_position": [
+      -78.09693633891243,
+      156.7188890758387,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.7988930773347922,
+      0.6014730675487854
+    ]
+  },
+  "info": {
+    "geodesic_distance": 93,
+    "euclidean_distance": 62.2034
+  },
+  "map_name": "BrushifyRoad_test",
+  "true_name": " WateringCan",
+  "object_name": "SM_Water_Can2",
+  "pose": [
+    [
+      -71.72769165039062,
+      200.5037384033203,
+      36.72166061401367
+    ]
+  ],
+  "size": " small(0.75*0.5=0.38 squares)",
+  "description": " Cylindrical form with long spout and top handle, dark metallic texture, narrow pouring tip, used for manually watering plants.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

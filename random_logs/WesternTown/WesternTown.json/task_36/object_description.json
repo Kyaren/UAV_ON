@@ -1,0 +1,35 @@
+{
+  "episode_id": "36",
+  "start_pose": {
+    "start_position": [
+      -27.26552198014761,
+      -10.719333841010894,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.5821903455124237,
+      0.8130525208079271
+    ]
+  },
+  "info": {
+    "geodesic_distance": 40,
+    "euclidean_distance": 31.0021
+  },
+  "map_name": "WesternTown_test",
+  "true_name": " Tomato",
+  "object_name": "SM_Tomato_243",
+  "pose": [
+    [
+      -29.42185401916504,
+      19.183950424194336,
+      0.8912304639816284
+    ]
+  ],
+  "size": " small(0.25*0.25=0.06 squares)",
+  "description": " Round organic shape, bright red smooth surface, small stem nub visible, consistent with a fruit or vegetable.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

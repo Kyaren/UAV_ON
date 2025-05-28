@@ -1,0 +1,35 @@
+{
+  "episode_id": "33",
+  "start_pose": {
+    "start_position": [
+      97.34161095787405,
+      194.21781913262407,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9851613879943426,
+      -0.17163053226352354
+    ]
+  },
+  "info": {
+    "geodesic_distance": 56,
+    "euclidean_distance": 36.5837
+  },
+  "map_name": "BrushifyRoad_test",
+  "true_name": " CampingChair",
+  "object_name": "SM_Chair_01a_31",
+  "pose": [
+    [
+      76.3939437866211,
+      165.71041870117188,
+      2.321660041809082
+    ]
+  ],
+  "size": " mid(2.0*2.0=4.0 squares)",
+  "description": " Geometric collapsible form, green fabric seat with black metal frame, armrests with built-in cup holders, designed for portable outdoor seating.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

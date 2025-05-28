@@ -1,0 +1,35 @@
+{
+  "episode_id": "41",
+  "start_pose": {
+    "start_position": [
+      -142.99341574782915,
+      -4.694928636993424,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.7071654978102583,
+      -0.7070480596867299
+    ]
+  },
+  "info": {
+    "geodesic_distance": 70,
+    "euclidean_distance": 45.5703
+  },
+  "map_name": "ModularNeighborhood_test",
+  "true_name": "Cone",
+  "object_name": "SM_WetFloorCone_104",
+  "pose": [
+    [
+      -170.3000030517578,
+      30.899999618530273,
+      1.0
+    ]
+  ],
+  "size": "small(0.75*0.75=0.56 squares)",
+  "description": "Geometric conical shape, bright yellow plastic surface with smooth texture, wide base tapering to a narrow top, used for visual warning or area marking purposes.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

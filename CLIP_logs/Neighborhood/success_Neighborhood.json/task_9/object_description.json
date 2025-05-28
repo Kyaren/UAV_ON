@@ -1,0 +1,35 @@
+{
+  "episode_id": "9",
+  "start_pose": {
+    "start_position": [
+      -163.4419489637779,
+      27.678885237466638,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.8002729670729909,
+      -0.599635871318746
+    ]
+  },
+  "info": {
+    "geodesic_distance": 23,
+    "euclidean_distance": 15.3974
+  },
+  "map_name": "ModularNeighborhood_test",
+  "true_name": "Excavator",
+  "object_name": "SM_ExcavatorTracks_5",
+  "pose": [
+    [
+      -176.0,
+      31.599998474121094,
+      1.0
+    ]
+  ],
+  "size": "big(5.75*2.5=14.375 squares)",
+  "description": "Geometric articulated structure, industrial yellow and black metal with hydraulic joints, continuous track base and large front bucket, designed for excavation and heavy-duty digging operations.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

@@ -1,0 +1,35 @@
+{
+  "episode_id": "12",
+  "start_pose": {
+    "start_position": [
+      175.92620332098772,
+      -318.7396028573894,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9640976047451089,
+      0.26554812845272296
+    ]
+  },
+  "info": {
+    "geodesic_distance": 84,
+    "euclidean_distance": 57.9348
+  },
+  "map_name": "WesternTown_test",
+  "true_name": " Barrel",
+  "object_name": "SM_WoodBarrel_61",
+  "pose": [
+    [
+      136.1781463623047,
+      -360.51605224609375,
+      -1.4087694883346558
+    ]
+  ],
+  "size": " small(0.75*0.75=0.56 squares)",
+  "description": " Cylindrical shape, dark brown wood with metal bands, vertically aligned planks with rounded edges, used for storage or transport of liquids or dry goods.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

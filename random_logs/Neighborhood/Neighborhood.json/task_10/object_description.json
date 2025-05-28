@@ -1,0 +1,35 @@
+{
+  "episode_id": "10",
+  "start_pose": {
+    "start_position": [
+      -264.6930948454444,
+      -17.29831701390532,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.8982680003525414,
+      0.4394480623949167
+    ]
+  },
+  "info": {
+    "geodesic_distance": 86,
+    "euclidean_distance": 56.1736
+  },
+  "map_name": "ModularNeighborhood_test",
+  "true_name": "Human",
+  "object_name": "BP_fe_clerk_01_2",
+  "pose": [
+    [
+      -223.09999084472656,
+      19.799999237060547,
+      0.014047445729374886
+    ]
+  ],
+  "size": "small(1*0.75=0.75 squares)",
+  "description": "Organic bipedal form, dark brown and red clothing with black head covering, textured fabric and realistic human posture, function suggests walking or traveling.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

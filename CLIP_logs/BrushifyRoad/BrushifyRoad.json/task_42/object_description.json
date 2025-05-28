@@ -1,0 +1,35 @@
+{
+  "episode_id": "42",
+  "start_pose": {
+    "start_position": [
+      -89.7701230706299,
+      192.16324588153645,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.5288445122256729,
+      -0.8487187295498964
+    ]
+  },
+  "info": {
+    "geodesic_distance": 58,
+    "euclidean_distance": 47.2289
+  },
+  "map_name": "BrushifyRoad_test",
+  "true_name": " CoveredHayBale",
+  "object_name": "SM_HayBayle_Covered_12",
+  "pose": [
+    [
+      -89.92769622802734,
+      176.40374755859375,
+      37.52165985107422
+    ]
+  ],
+  "size": " mid(2*2=4 squares)",
+  "description": " Rectangular block form, dark fabric draped over rough straw texture, fabric partially torn and worn, likely protecting hay or other goods underneath.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

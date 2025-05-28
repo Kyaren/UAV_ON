@@ -1,0 +1,35 @@
+{
+  "episode_id": "1",
+  "start_pose": {
+    "start_position": [
+      18.769142056005634,
+      73.1340275058724,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.8849511582361368,
+      0.4656838493404297
+    ]
+  },
+  "info": {
+    "geodesic_distance": 43,
+    "euclidean_distance": 33.9838
+  },
+  "map_name": "ModularNeighborhood_test",
+  "true_name": "Dog",
+  "object_name": "cane_corso_eat_anim_5",
+  "pose": [
+    [
+      -13.799999237060547,
+      67.5,
+      0.8999999761581421
+    ]
+  ],
+  "size": "small(1.5*0.5=0.75 squares)",
+  "description": "Organic quadrupedal form, smooth black fur with lean muscular build, erect ears and extended tail, posture indicates alertness and readiness for movement.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

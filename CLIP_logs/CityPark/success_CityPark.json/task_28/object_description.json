@@ -1,0 +1,35 @@
+{
+  "episode_id": "28",
+  "start_pose": {
+    "start_position": [
+      1.4991805262646452,
+      75.7452358315103,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.7133788075560884,
+      -0.7007786219126931
+    ]
+  },
+  "info": {
+    "geodesic_distance": 58,
+    "euclidean_distance": 43.7911
+  },
+  "map_name": "CityPark_test",
+  "true_name": "PickupTruck",
+  "object_name": "PA_NYC_PickUptruck_PhysicsAsset3",
+  "pose": [
+    [
+      -9.136610984802246,
+      34.12586975097656,
+      1.5068978071212769
+    ]
+  ],
+  "size": "big(5.5*2=11 squares)",
+  "description": "Geometric vehicle shape, matte yellow paint with black accents and chrome bumpers, visible open cargo bed and rounded fenders, designed for transporting goods or equipment.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

@@ -1,12 +1,15 @@
 
 .vscode/
-
 **/__pycache__/
-
-
 /test/
 
-/logs/
+# Ignore method output logs
+**/logs/
 
-
+#settings.json
 /airsim_plugin/settings/
+
+#other folders
+/method
+/test
+/src/eval_random.py

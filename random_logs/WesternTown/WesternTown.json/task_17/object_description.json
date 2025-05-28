@@ -1,0 +1,35 @@
+{
+  "episode_id": "17",
+  "start_pose": {
+    "start_position": [
+      220.31307224561266,
+      189.10361241416584,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.8692313496470319,
+      -0.49440556306619315
+    ]
+  },
+  "info": {
+    "geodesic_distance": 135,
+    "euclidean_distance": 29.6877
+  },
+  "map_name": "WesternTown_test",
+  "true_name": " SatelliteDish",
+  "object_name": "SM_Satellite_Dish_89",
+  "pose": [
+    [
+      193.37814331054688,
+      180.783935546875,
+      -16.30876922607422
+    ]
+  ],
+  "size": " small(0.75*0.75=0.56 squares)",
+  "description": " Concave circular shape, gray metallic texture, tripod base with central support arm and feed horn, used for signal reception or transmission.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

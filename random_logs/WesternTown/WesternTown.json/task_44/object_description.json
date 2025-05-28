@@ -1,0 +1,35 @@
+{
+  "episode_id": "44",
+  "start_pose": {
+    "start_position": [
+      -1.649063703892029,
+      -35.41821142258483,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9705013473805161,
+      -0.24109569621335597
+    ]
+  },
+  "info": {
+    "geodesic_distance": 64,
+    "euclidean_distance": 40.0837
+  },
+  "map_name": "WesternTown_test",
+  "true_name": " WoodSign",
+  "object_name": "SM_Sign_Town_Name_29",
+  "pose": [
+    [
+      23.583377838134766,
+      -5.412377834320068,
+      1.3474706411361694
+    ]
+  ],
+  "size": " small(1.5*0.25=0.38 squares)",
+  "description": " Rectangular suspended panel, teal weathered paint, supported by two vertical rough-hewn wooden poles and rope ties, used for display or labeling.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

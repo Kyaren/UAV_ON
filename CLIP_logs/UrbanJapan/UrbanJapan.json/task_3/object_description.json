@@ -1,0 +1,35 @@
+{
+  "episode_id": "3",
+  "start_pose": {
+    "start_position": [
+      -23.430818409956178,
+      187.47596719267347,
+      -6.400000095367432
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.971944097114542,
+      -0.23521197266337826
+    ]
+  },
+  "info": {
+    "geodesic_distance": 72,
+    "euclidean_distance": 48.985
+  },
+  "map_name": "UrbanJapan_test",
+  "true_name": "RoadBarrier",
+  "object_name": "SM_Road_Barrier_2",
+  "pose": [
+    [
+      11.5,
+      153.5,
+      1.5999999046325684
+    ]
+  ],
+  "size": "small(2.5*1.25=3.13 squares)",
+  "description": "Geometric rectangular form, bright red plastic body with molded edges and dual slots, flat top and angled sides, used to block or direct vehicle and pedestrian traffic.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

@@ -1,0 +1,35 @@
+{
+  "episode_id": "8",
+  "start_pose": {
+    "start_position": [
+      777.2017131587703,
+      -131.6228270238255,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.612209037592639,
+      0.7906959556554559
+    ]
+  },
+  "info": {
+    "geodesic_distance": 66,
+    "euclidean_distance": 46.0288
+  },
+  "map_name": "BrushifyUrban_test",
+  "true_name": "Human",
+  "object_name": "BP_ma_casual_02_a_2",
+  "pose": [
+    [
+      795.0,
+      -89.9000015258789,
+      0.8153881430625916
+    ]
+  ],
+  "size": "small(1.75*0.75=1.31 squares)",
+  "description": "Organic upright form, black short-sleeve shirt with dark jeans, bald head and dark shoes, likely in motion such as running or walking.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

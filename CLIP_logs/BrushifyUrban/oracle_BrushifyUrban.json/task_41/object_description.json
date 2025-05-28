@@ -1,0 +1,35 @@
+{
+  "episode_id": "41",
+  "start_pose": {
+    "start_position": [
+      466.178930852765,
+      -495.7048266339483,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.46680878997862485,
+      0.8843582721944157
+    ]
+  },
+  "info": {
+    "geodesic_distance": 36,
+    "euclidean_distance": 23.0342
+  },
+  "map_name": "BrushifyUrban_test",
+  "true_name": "ClassicCar",
+  "object_name": "SK_NYCCar03_Rigged2",
+  "pose": [
+    [
+      475.5999755859375,
+      -514.7000122070312,
+      2.0
+    ]
+  ],
+  "size": "mid(4.5*2=9 squares)",
+  "description": "Vintage sedan with rounded fenders and rusted red exterior, chrome accents and deteriorated finish, intended for classic vehicle restoration or display.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

@@ -1,0 +1,35 @@
+{
+  "episode_id": "97",
+  "start_pose": {
+    "start_position": [
+      169.2227892767219,
+      -32.118971530469814,
+      -6.800000071525574
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.8060408850853178,
+      0.591859858049925
+    ]
+  },
+  "info": {
+    "geodesic_distance": 67,
+    "euclidean_distance": 47.1133
+  },
+  "map_name": "NYC_test",
+  "true_name": "Motorcycle",
+  "object_name": "SK_Motorbike_Rigged_14",
+  "pose": [
+    [
+      187.3000030517578,
+      11.09999942779541,
+      1.1999999284744263
+    ]
+  ],
+  "size": "small(2.0*0.75=1.5 squares)",
+  "description": "Vintage-style bike, olive green body with black seat and chrome accents, wide handlebars and spoked wheels, designed for single-rider transport.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

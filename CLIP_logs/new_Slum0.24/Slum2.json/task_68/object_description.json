@@ -1,0 +1,35 @@
+{
+  "episode_id": "68",
+  "start_pose": {
+    "start_position": [
+      15.029022506322782,
+      -17.322329823676583,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.2813799162433038,
+      0.9595964478544673
+    ]
+  },
+  "info": {
+    "geodesic_distance": 49,
+    "euclidean_distance": 32.476
+  },
+  "map_name": "Slum_test",
+  "true_name": " PipeConnection",
+  "object_name": "SM_PipeConnection_79",
+  "pose": [
+    [
+      41.662322998046875,
+      0.5706835985183716,
+      -1.9799978733062744
+    ]
+  ],
+  "size": " small(0.25*0.25=0.06 squares)",
+  "description": " Compact mechanical form, rusted metallic texture with jointed fittings, cylindrical core with side extensions, used for pipe linkage in utility systems.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

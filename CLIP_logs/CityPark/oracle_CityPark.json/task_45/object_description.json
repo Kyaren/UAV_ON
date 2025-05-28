@@ -1,0 +1,35 @@
+{
+  "episode_id": "45",
+  "start_pose": {
+    "start_position": [
+      -125.15994050274688,
+      -92.4467082855399,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.5329519128649876,
+      0.8461455303749768
+    ]
+  },
+  "info": {
+    "geodesic_distance": 60,
+    "euclidean_distance": 49.1869
+  },
+  "map_name": "CityPark_test",
+  "true_name": "SnackCart",
+  "object_name": "SM_food_cart_17",
+  "pose": [
+    [
+      -172.6999969482422,
+      -94.79999542236328,
+      5.400000095367432
+    ]
+  ],
+  "size": "mid(3.15*3.15=9.92 squares)",
+  "description": "Compact geometric cart structure, metallic body with colorful signage and large blue-yellow umbrella, mounted on two wheels with service window, used for selling street food or refreshments.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

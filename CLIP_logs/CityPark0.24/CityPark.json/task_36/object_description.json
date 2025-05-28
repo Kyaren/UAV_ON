@@ -1,0 +1,35 @@
+{
+  "episode_id": "36",
+  "start_pose": {
+    "start_position": [
+      -269.87687524497073,
+      204.94287765571767,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.7804817640810529,
+      -0.625178547246247
+    ]
+  },
+  "info": {
+    "geodesic_distance": 19,
+    "euclidean_distance": 13.061
+  },
+  "map_name": "CityPark_test",
+  "true_name": "RaceCar",
+  "object_name": "PA_F1_New_Rigged05_PhysicsAsset_51",
+  "pose": [
+    [
+      -260.99822998046875,
+      201.49940490722656,
+      1.9388490915298462
+    ]
+  ],
+  "size": "mid(4.15*1.75=7.26 squares)",
+  "description": "Elongated geometric body, bright blue paint with black tires and open cockpit, vintage aerodynamic design with exposed exhaust pipes, intended for high-speed driving or display.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

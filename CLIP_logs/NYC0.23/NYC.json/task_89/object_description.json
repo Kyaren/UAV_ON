@@ -1,0 +1,35 @@
+{
+  "episode_id": "89",
+  "start_pose": {
+    "start_position": [
+      20.921185366125304,
+      193.32919715333406,
+      -6.600000023841858
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9997948216721084,
+      0.02025622268926239
+    ]
+  },
+  "info": {
+    "geodesic_distance": 44,
+    "euclidean_distance": 33.3726
+  },
+  "map_name": "NYC_test",
+  "true_name": "RaceCar",
+  "object_name": "SK_F1_New_Rigged11",
+  "pose": [
+    [
+      52.89999771118164,
+      185.1999969482422,
+      1.399999976158142
+    ]
+  ],
+  "size": "mid(2.0*4.0=8.0 squares)",
+  "description": "Open-top vintage race car, blue exterior with exposed exhaust pipes and wire-spoke wheels, compact aerodynamic design, intended for high-speed racing.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

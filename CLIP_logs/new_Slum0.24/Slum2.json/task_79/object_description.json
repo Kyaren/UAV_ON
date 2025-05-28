@@ -1,0 +1,35 @@
+{
+  "episode_id": "79",
+  "start_pose": {
+    "start_position": [
+      34.70976513242688,
+      -61.89701434372402,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.6513257083090751,
+      0.7587982747052616
+    ]
+  },
+  "info": {
+    "geodesic_distance": 57,
+    "euclidean_distance": 47.3144
+  },
+  "map_name": "Slum_test",
+  "true_name": " Tarp",
+  "object_name": "SM_Tarp_03_152",
+  "pose": [
+    [
+      -11.637675285339355,
+      -65.92931365966797,
+      1.6200021505355835
+    ]
+  ],
+  "size": " small(1*0.75=0.75 squares)",
+  "description": " Organic rounded form, mottled greenish-brown fabric with uneven folds, soft draped contours suggesting flexibility, likely used as a cover or protective sheet.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

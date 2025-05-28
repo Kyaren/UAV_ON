@@ -1,0 +1,35 @@
+{
+  "episode_id": "65",
+  "start_pose": {
+    "start_position": [
+      -144.9713912095363,
+      159.0064772370812,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.7176812666191222,
+      0.6963717394782563
+    ]
+  },
+  "info": {
+    "geodesic_distance": 97,
+    "euclidean_distance": 62.7103
+  },
+  "map_name": "BrushifyRoad_test",
+  "true_name": " WatchTower",
+  "object_name": "SM_Wood_Structure_120",
+  "pose": [
+    [
+      -168.22769165039062,
+      180.0037384033203,
+      47.321659088134766
+    ]
+  ],
+  "size": " big(7.5*7.5=56.25 squares)",
+  "description": " Elevated rectangular structure with crossed support beams, dark metal frame with yellow reinforcement straps, open platform at the top, used for observation or surveillance.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

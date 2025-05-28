@@ -1,0 +1,35 @@
+{
+  "episode_id": "25",
+  "start_pose": {
+    "start_position": [
+      245.53917522300583,
+      177.43580827299138,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.8414030199655969,
+      -0.5404081401984738
+    ]
+  },
+  "info": {
+    "geodesic_distance": 164,
+    "euclidean_distance": 51.4366
+  },
+  "map_name": "WesternTown_test",
+  "true_name": " Crate",
+  "object_name": "SM_Wood_Box_125",
+  "pose": [
+    [
+      197.1781463623047,
+      191.88394165039062,
+      -16.908769607543945
+    ]
+  ],
+  "size": " mid(1.5*1.25=1.88 squares)",
+  "description": " Rectangular geometric shape, brown wooden slats with visible gaps, reinforced corners, typically used for storage or shipping of goods.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

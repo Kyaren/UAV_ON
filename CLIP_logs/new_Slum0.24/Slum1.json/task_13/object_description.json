@@ -1,0 +1,35 @@
+{
+  "episode_id": "13",
+  "start_pose": {
+    "start_position": [
+      23.02889421957188,
+      -22.259151672669176,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.8881065341238775,
+      0.459637666044107
+    ]
+  },
+  "info": {
+    "geodesic_distance": 79,
+    "euclidean_distance": 55.8623
+  },
+  "map_name": "Slum_test",
+  "true_name": " Antenna",
+  "object_name": "SM_Antenna01_26",
+  "pose": [
+    [
+      -20.737674713134766,
+      12.370683670043945,
+      -4.579997539520264
+    ]
+  ],
+  "size": " small(0.25*1.5=0.38 squares)",
+  "description": " Tall, slender pole with horizontal crossbars, metallic gray structure, multiple wire extensions, likely for signal reception or transmission.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

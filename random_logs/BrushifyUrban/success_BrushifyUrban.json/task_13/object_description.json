@@ -1,0 +1,35 @@
+{
+  "episode_id": "13",
+  "start_pose": {
+    "start_position": [
+      1260.8754383272217,
+      -959.1257823680057,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.823465152719,
+      -0.5673668498048454
+    ]
+  },
+  "info": {
+    "geodesic_distance": 32,
+    "euclidean_distance": 24.7066
+  },
+  "map_name": "BrushifyUrban_test",
+  "true_name": "Climber",
+  "object_name": "SM_Climber04_53",
+  "pose": [
+    [
+      1263.699951171875,
+      -982.0,
+      1.899999976158142
+    ]
+  ],
+  "size": "small(3.5*0.5=1.75 squares)",
+  "description": "Geometric overhead bar structure, red metal frame with black suspended rings forming a curved traversal path, compact vertical supports, designed for hanging and swinging in playgrounds.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

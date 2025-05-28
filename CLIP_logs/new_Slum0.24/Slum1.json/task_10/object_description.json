@@ -1,0 +1,35 @@
+{
+  "episode_id": "10",
+  "start_pose": {
+    "start_position": [
+      2.25259963504125,
+      18.68909016276102,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.8595000524278636,
+      0.5111356570192493
+    ]
+  },
+  "info": {
+    "geodesic_distance": 59,
+    "euclidean_distance": 49.384
+  },
+  "map_name": "Slum_test",
+  "true_name": " ConcreteHedge",
+  "object_name": "SM_ConcreteHedge2_21",
+  "pose": [
+    [
+      -45.53767395019531,
+      19.470684051513672,
+      5.420002460479736
+    ]
+  ],
+  "size": " small(0.25*5.0=1.25 squares)",
+  "description": " Rectangular, textured concrete surface with hexagonal cutouts along the top edge, grey rough surface, used for construction or crowd control.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

@@ -1,0 +1,35 @@
+{
+  "episode_id": "4",
+  "start_pose": {
+    "start_position": [
+      619.8318075716531,
+      -883.5380100800885,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9509665160323845,
+      -0.30929384957549455
+    ]
+  },
+  "info": {
+    "geodesic_distance": 71,
+    "euclidean_distance": 46.8179
+  },
+  "map_name": "BrushifyUrban_test",
+  "true_name": "AngelStatue",
+  "object_name": "SM_AngelStatue_37",
+  "pose": [
+    [
+      585.5,
+      -914.0999755859375,
+      1.899999976158142
+    ]
+  ],
+  "size": "mid(2*2=4 squares)",
+  "description": "Organic upright form with extended wings, dark green patina suggesting aged bronze or stone, robed angelic figure with raised arm and detailed facial features, decorative or commemorative function.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

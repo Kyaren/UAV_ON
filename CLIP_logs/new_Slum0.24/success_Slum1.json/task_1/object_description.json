@@ -1,0 +1,35 @@
+{
+  "episode_id": "1",
+  "start_pose": {
+    "start_position": [
+      -37.13412742989271,
+      17.930494969538756,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.06904596688603153,
+      -0.9976134794883101
+    ]
+  },
+  "info": {
+    "geodesic_distance": 21,
+    "euclidean_distance": 13.1207
+  },
+  "map_name": "Slum_test",
+  "true_name": " WoodenBox",
+  "object_name": "SM_Wooden_Box_Large_Set1_2",
+  "pose": [
+    [
+      -30.93767547607422,
+      22.27068328857422,
+      3.7200019359588623
+    ]
+  ],
+  "size": " mid(2.5*2.5=6.25 squares)",
+  "description": " Geometric cubic stack, weathered light brown wood with blue metal corner reinforcements, four stacked crates with rope handles, used for storage or transport of goods.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

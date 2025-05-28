@@ -1,0 +1,35 @@
+{
+  "episode_id": "19",
+  "start_pose": {
+    "start_position": [
+      1071.4239235835987,
+      -1001.7593531062863,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.1432658935318236,
+      0.9896842343649455
+    ]
+  },
+  "info": {
+    "geodesic_distance": 61,
+    "euclidean_distance": 48.6368
+  },
+  "map_name": "BrushifyUrban_test",
+  "true_name": "Barrels",
+  "object_name": "SM_Set3_11291",
+  "pose": [
+    [
+      1119.0,
+      -996.2999877929688,
+      1.5
+    ]
+  ],
+  "size": "small(1*1=1 squares)",
+  "description": "Geometric cylindrical cluster, rusty metal texture with dents and weathering, filled with various scrap materials and pipes, likely used for industrial storage or refuse.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

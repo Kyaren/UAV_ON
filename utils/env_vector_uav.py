@@ -25,7 +25,6 @@ from utils.logger import logger
 COMMAND_CLOSE = "close"
 COMMAND_SET_BATCH = "set_batch"
 COMMAND_GET_OBS = "get_obs_at"
-COMMAND_GET_COLLISION_SENSOR = 'get_collision_sensor'
 
 
 try:
@@ -168,11 +167,6 @@ class VectorEnvUtil:
                     connection_write_fn(
                         ((done, oracle_success), state)
                     )
-
-                elif command == COMMAND_GET_COLLISION_SENSOR:
-                    index, state = data
-                    is_collision = env.get_collision_sensor_result_at(index, state)
-                    connection_write_fn(bool(is_collision))
 
                 else:
                     raise NotImplementedError(f"Unknown command {command}")
@@ -321,15 +315,3 @@ class VectorEnvUtil:
 
         return observations, done, collision, oracle_success
 
-
-    def get_collision_sensor(self, states) -> List[Any]:
-        for index in range(len(states)):
-            self._connection_write_fns[index](
-                (COMMAND_GET_COLLISION_SENSOR, (index, states[index]))
-            )
-
-        results = [
-            self._connection_read_fns[index]() for index in range(len(states))
-        ]
-
-        return results

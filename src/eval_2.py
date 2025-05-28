@@ -3,6 +3,8 @@ import tqdm
 import os
 from pathlib import Path
 import sys
+import numpy as np
+import random
 import time
 sys.path.append(str(Path(str(os.getcwd())).resolve()))
 from common.param import args
@@ -68,7 +70,12 @@ def eval(modelWrapper: BaseModelWrapper, env: AirVLNENV ,is_fixed, save_eval_pat
 
 
 if __name__ == "__main__":
-    
+    seed = 42  
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    torch.cuda.manual_seed_all(seed)
+
 
     env = initialize_env_eval(dataset_path=args.dataset_path, save_path=args.eval_save_path)
     fixed = args.is_fixed

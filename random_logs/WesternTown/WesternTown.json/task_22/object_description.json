@@ -1,0 +1,35 @@
+{
+  "episode_id": "22",
+  "start_pose": {
+    "start_position": [
+      -180.04521774736395,
+      -142.08247101245902,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.8565512519170467,
+      -0.5160619660848298
+    ]
+  },
+  "info": {
+    "geodesic_distance": 148,
+    "euclidean_distance": 37.1972
+  },
+  "map_name": "WesternTown_test",
+  "true_name": " Taxi",
+  "object_name": "Vehicle_Taxi_111",
+  "pose": [
+    [
+      -207.42184448242188,
+      -117.11605072021484,
+      -3.7087695598602295
+    ]
+  ],
+  "size": " big(5*2.5=12.5 squares)",
+  "description": " Rectangular vehicle shape, bright yellow color, roof-mounted taxi sign and NYC Taxi markings on side, used for passenger transport.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

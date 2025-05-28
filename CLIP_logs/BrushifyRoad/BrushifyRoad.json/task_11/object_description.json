@@ -1,0 +1,35 @@
+{
+  "episode_id": "11",
+  "start_pose": {
+    "start_position": [
+      -23.741053837223276,
+      212.31080796667592,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9820923833354348,
+      0.18839997503854772
+    ]
+  },
+  "info": {
+    "geodesic_distance": 79,
+    "euclidean_distance": 53.7386
+  },
+  "map_name": "BrushifyRoad_test",
+  "true_name": "Watermelon",
+  "object_name": "SM_Watermelon_113",
+  "pose": [
+    [
+      -27.827693939208984,
+      252.60374450683594,
+      28.321659088134766
+    ]
+  ],
+  "size": "small(0.25*0.25=0.06 squares)",
+  "description": "Small spherical form, bright green rind with a smooth surface, resembling a miniature watermelon, likely intended for consumption.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

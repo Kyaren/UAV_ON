@@ -1,0 +1,35 @@
+{
+  "episode_id": "34",
+  "start_pose": {
+    "start_position": [
+      8.126203775814602,
+      68.48125667688687,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.8029245261221861,
+      -0.5960807037234664
+    ]
+  },
+  "info": {
+    "geodesic_distance": 60,
+    "euclidean_distance": 41.5616
+  },
+  "map_name": "Slum_test",
+  "true_name": " ShelfWheeled",
+  "object_name": "SM_Shelf_Wheeled_33",
+  "pose": [
+    [
+      -9.137675285339355,
+      31.370683670043945,
+      0.22000212967395782
+    ]
+  ],
+  "size": " small(1*0.75=0.75 squares)",
+  "description": " Rectangular frame with shelves, dark metallic structure with subtle wear, four wheels and three-tier layout, used for mobile storage or transport.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

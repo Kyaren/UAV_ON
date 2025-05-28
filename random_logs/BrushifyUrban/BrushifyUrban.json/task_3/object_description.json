@@ -1,0 +1,35 @@
+{
+  "episode_id": "3",
+  "start_pose": {
+    "start_position": [
+      1072.9432155625766,
+      -1028.3477690483812,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.5351151000053149,
+      0.8447791603409153
+    ]
+  },
+  "info": {
+    "geodesic_distance": 65,
+    "euclidean_distance": 43.323
+  },
+  "map_name": "BrushifyUrban_test",
+  "true_name": "Human",
+  "object_name": "BP_ma_construction_worker_01_2",
+  "pose": [
+    [
+      1095.7999267578125,
+      -992.3999633789062,
+      0.887078583240509
+    ]
+  ],
+  "size": "mid(1.75*0.75=1.31 squares)",
+  "description": "Standing figure wearing a gray jumpsuit with black accents, utilitarian attire, intended for representation or animation.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

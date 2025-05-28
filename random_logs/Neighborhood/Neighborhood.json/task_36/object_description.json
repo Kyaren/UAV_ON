@@ -1,0 +1,35 @@
+{
+  "episode_id": "36",
+  "start_pose": {
+    "start_position": [
+      -171.6458434966338,
+      39.505223114374374,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9073211055422056,
+      -0.4204383562874228
+    ]
+  },
+  "info": {
+    "geodesic_distance": 72,
+    "euclidean_distance": 51.3015
+  },
+  "map_name": "ModularNeighborhood_test",
+  "true_name": "Kiosk",
+  "object_name": "SM_prop_poster_pillar_with_posters_89",
+  "pose": [
+    [
+      -190.6999969482422,
+      -7.5,
+      0.699999988079071
+    ]
+  ],
+  "size": "mid(2.25*2.25=5.06 squares)",
+  "description": "Geometric cylindrical structure with octagonal green roof, multicolored posters and printed advertisements on vertical walls, circular base platform, used for public news display or printed media distribution.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

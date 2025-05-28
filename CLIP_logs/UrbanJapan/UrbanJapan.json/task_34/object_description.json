@@ -1,0 +1,35 @@
+{
+  "episode_id": "34",
+  "start_pose": {
+    "start_position": [
+      19.45544260645306,
+      130.37800451624213,
+      -6.5
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.1813378824837379,
+      -0.9834208521158752
+    ]
+  },
+  "info": {
+    "geodesic_distance": 25,
+    "euclidean_distance": 20.5597
+  },
+  "map_name": "UrbanJapan_test",
+  "true_name": "RecycleBin",
+  "object_name": "SM_prop_recycle_bin_79",
+  "pose": [
+    [
+      16.899999618530273,
+      110.5999984741211,
+      1.5
+    ]
+  ],
+  "size": "small(2.5*1.5=3.75 squares)",
+  "description": "Rectangular geometric container, matte black finish with smooth surfaces, slanted top and flat sides, used for public waste or recycling disposal.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

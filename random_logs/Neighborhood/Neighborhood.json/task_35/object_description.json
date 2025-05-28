@@ -1,0 +1,35 @@
+{
+  "episode_id": "35",
+  "start_pose": {
+    "start_position": [
+      -161.5482025278978,
+      -38.299538083307894,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9873697016226172,
+      0.15843317934594398
+    ]
+  },
+  "info": {
+    "geodesic_distance": 59,
+    "euclidean_distance": 39.8163
+  },
+  "map_name": "ModularNeighborhood_test",
+  "true_name": "Racecar",
+  "object_name": "SK_F1_New_Rigged05_20",
+  "pose": [
+    [
+      -189.5,
+      -65.9000015258789,
+      -0.5
+    ]
+  ],
+  "size": "small(2.5*1=2.5 squares)",
+  "description": "Geometric streamlined form, sky blue painted metal body with black wheels and exposed exhaust pipes, open cockpit with single seat, designed for high-speed track performance.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

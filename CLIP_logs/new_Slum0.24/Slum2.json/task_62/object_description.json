@@ -1,0 +1,35 @@
+{
+  "episode_id": "62",
+  "start_pose": {
+    "start_position": [
+      -34.54541427098415,
+      -113.94788429378353,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.6665218560511297,
+      0.7454854897354859
+    ]
+  },
+  "info": {
+    "geodesic_distance": 82,
+    "euclidean_distance": 49.997
+  },
+  "map_name": "Slum_test",
+  "true_name": " Fuse",
+  "object_name": "SM_Fuse01_60",
+  "pose": [
+    [
+      -14.737675666809082,
+      -68.62931823730469,
+      0.32000213861465454
+    ]
+  ],
+  "size": " small(0.25*0.25=0.06 squares)",
+  "description": " Cylindrical form, metallic with a yellow casing, compact and slender, typically used as an electrical safety device.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

@@ -1,0 +1,35 @@
+{
+  "episode_id": "1",
+  "start_pose": {
+    "start_position": [
+      -70.56984136305309,
+      226.9208173495308,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9310513020788878,
+      0.36488830194623634
+    ]
+  },
+  "info": {
+    "geodesic_distance": 101,
+    "euclidean_distance": 61.8683
+  },
+  "map_name": "BrushifyRoad_test",
+  "true_name": " Slide",
+  "object_name": "SM_Slide01_8",
+  "pose": [
+    [
+      -50.62769317626953,
+      274.3037414550781,
+      27.421659469604492
+    ]
+  ],
+  "size": " mid(5.5*1.5=8.25 squares)",
+  "description": " Elevated structure with a curved, smooth metal sliding surface, wooden frame with side railings, typically used as playground equipment for children.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

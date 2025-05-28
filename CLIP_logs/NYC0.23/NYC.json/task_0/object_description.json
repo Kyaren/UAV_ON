@@ -1,0 +1,35 @@
+{
+  "episode_id": "0",
+  "start_pose": {
+    "start_position": [
+      308.85435512259704,
+      848.1446835797326,
+      -6.800000071525574
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.7876417362152367,
+      -0.6161335045035674
+    ]
+  },
+  "info": {
+    "geodesic_distance": 55,
+    "euclidean_distance": 36.8215
+  },
+  "map_name": "NYC_test",
+  "true_name": "Dog",
+  "object_name": "beagle_idleB_anim_23",
+  "pose": [
+    [
+      334.79998779296875,
+      822.5,
+      1.1999999284744263
+    ]
+  ],
+  "size": "small(1.25*0.5=0.63 squares)",
+  "description": "Organic quadruped form, short brown and white fur with a dark tail tip, visible snout and upright ears, companion animal commonly used for domestic companionship.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

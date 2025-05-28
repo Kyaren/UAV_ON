@@ -1,0 +1,35 @@
+{
+  "episode_id": "56",
+  "start_pose": {
+    "start_position": [
+      -149.0654403718827,
+      219.86322122638296,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9868341049975873,
+      -0.16173573882605805
+    ]
+  },
+  "info": {
+    "geodesic_distance": 137,
+    "euclidean_distance": 80.072
+  },
+  "map_name": "BrushifyRoad_test",
+  "true_name": " Tractor",
+  "object_name": "SM_Tractor_SingleMesh_80",
+  "pose": [
+    [
+      -100.82769012451172,
+      174.30374145507812,
+      37.821659088134766
+    ]
+  ],
+  "size": " big(7.0*3.5=24.5 squares)",
+  "description": " Geometric bulky vehicle form, matte orange and black exterior with oversized rear tires, enclosed cab with side exhaust pipe and visible steps, designed for agricultural or heavy-duty field work.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

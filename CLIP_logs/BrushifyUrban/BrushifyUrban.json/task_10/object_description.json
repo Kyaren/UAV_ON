@@ -1,0 +1,35 @@
+{
+  "episode_id": "10",
+  "start_pose": {
+    "start_position": [
+      1020.4896507334449,
+      -873.5163623090913,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9124941433958372,
+      0.409089767982893
+    ]
+  },
+  "info": {
+    "geodesic_distance": 36,
+    "euclidean_distance": 23.8405
+  },
+  "map_name": "BrushifyUrban_test",
+  "true_name": "Human",
+  "object_name": "BP_ma_police_01_2",
+  "pose": [
+    [
+      1041.5999755859375,
+      -881.7999877929688,
+      0.35571685433387756
+    ]
+  ],
+  "size": "small(1.75*0.75=1.31 squares)",
+  "description": "Organic upright form, dark blue police uniform with matching hat, badge and utility belt visible, likely engaged in motion such as walking or running.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

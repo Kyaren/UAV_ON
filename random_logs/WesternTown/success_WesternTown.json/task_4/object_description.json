@@ -1,0 +1,35 @@
+{
+  "episode_id": "4",
+  "start_pose": {
+    "start_position": [
+      12.634220630625826,
+      -3.6178709331404733,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.961593590971408,
+      0.2744772591722539
+    ]
+  },
+  "info": {
+    "geodesic_distance": 19,
+    "euclidean_distance": 12.5853
+  },
+  "map_name": "WesternTown_test",
+  "true_name": " Antenna",
+  "object_name": "SM_Antenna01_22",
+  "pose": [
+    [
+      2.1781444549560547,
+      -10.616049766540527,
+      -6.70876932144165
+    ]
+  ],
+  "size": " small(0.5*0.5=0.25 squares)",
+  "description": " Tall vertical rod shape, metallic texture with multiple horizontal crossbars and a small top disk, consistent with signal transmission or reception equipment.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

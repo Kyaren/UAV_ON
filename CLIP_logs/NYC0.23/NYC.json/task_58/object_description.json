@@ -1,0 +1,35 @@
+{
+  "episode_id": "58",
+  "start_pose": {
+    "start_position": [
+      206.3471708255018,
+      408.43087926026385,
+      -5.1000001430511475
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.6438329494225775,
+      0.7651660821271581
+    ]
+  },
+  "info": {
+    "geodesic_distance": 72,
+    "euclidean_distance": 48.7604
+  },
+  "map_name": "NYC_test",
+  "true_name": "Dock",
+  "object_name": "SM_Docks_01a_317",
+  "pose": [
+    [
+      172.8000030517578,
+      373.3999938964844,
+      2.8999998569488525
+    ]
+  ],
+  "size": "mid(2.25*2.25=5.06 squares)",
+  "description": "Rectangular wooden platform, dark brown planks with cylindrical support posts extending upward, visible plank gaps and elevated structure, intended for access over water or uneven terrain.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

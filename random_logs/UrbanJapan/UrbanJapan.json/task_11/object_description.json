@@ -1,0 +1,35 @@
+{
+  "episode_id": "11",
+  "start_pose": {
+    "start_position": [
+      14.692836352747662,
+      78.40701001347136,
+      -6.600000023841858
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.02979324622528555,
+      -0.9995560827083989
+    ]
+  },
+  "info": {
+    "geodesic_distance": 56,
+    "euclidean_distance": 37.622
+  },
+  "map_name": "UrbanJapan_test",
+  "true_name": "Dog",
+  "object_name": "hellenic_hound_idleSit_anim_23",
+  "pose": [
+    [
+      -12.59999942779541,
+      53.0,
+      1.399999976158142
+    ]
+  ],
+  "size": "small(1.25*0.5=0.63 squares)",
+  "description": "Organic quadrupedal form, black fur with lighter patches on paws and chest, sitting posture with raised head, appears to be at rest or attentive.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

@@ -1,0 +1,35 @@
+{
+  "episode_id": "46",
+  "start_pose": {
+    "start_position": [
+      -71.65602848214616,
+      44.910031002417654,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.0650937631351214,
+      -0.9978791520023398
+    ]
+  },
+  "info": {
+    "geodesic_distance": 64,
+    "euclidean_distance": 46.6999
+  },
+  "map_name": "WesternTown_test",
+  "true_name": " Horse",
+  "object_name": "horse_idleA_anim_20",
+  "pose": [
+    [
+      -26.021854400634766,
+      38.1839485168457,
+      0.2912304699420929
+    ]
+  ],
+  "size": " mid(3.75*1.25=4.69 squares)",
+  "description": " Organic quadruped shape, brown and white coat with smooth fur texture, long legs, mane, and tail, consistent with a domesticated riding or working animal.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

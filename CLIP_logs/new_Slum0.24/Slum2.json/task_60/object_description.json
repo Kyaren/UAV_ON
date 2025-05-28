@@ -1,0 +1,35 @@
+{
+  "episode_id": "60",
+  "start_pose": {
+    "start_position": [
+      25.178606380822302,
+      -45.66056135367222,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.8956603853426166,
+      0.44473865823415387
+    ]
+  },
+  "info": {
+    "geodesic_distance": 68,
+    "euclidean_distance": 46.4136
+  },
+  "map_name": "Slum_test",
+  "true_name": " Table",
+  "object_name": "SM_Table01_57",
+  "pose": [
+    [
+      -14.437675476074219,
+      -68.32931518554688,
+      1.4200021028518677
+    ]
+  ],
+  "size": " small(1.25*1.25=1.56 squares)",
+  "description": " Geometric rectangular form, weathered wooden texture with worn surface, four straight legs, used as a flat elevated surface for placing objects.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

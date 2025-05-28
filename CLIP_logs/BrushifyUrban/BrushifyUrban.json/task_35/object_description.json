@@ -1,0 +1,35 @@
+{
+  "episode_id": "35",
+  "start_pose": {
+    "start_position": [
+      1018.1723764911445,
+      -220.53660532130917,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.942424542706455,
+      -0.33441887103530665
+    ]
+  },
+  "info": {
+    "geodesic_distance": 91,
+    "euclidean_distance": 60.9519
+  },
+  "map_name": "BrushifyUrban_test",
+  "true_name": "Kiosk",
+  "object_name": "SM_Buffet_Stand2_14",
+  "pose": [
+    [
+      973.699951171875,
+      -261.29998779296875,
+      1.6999999284744263
+    ]
+  ],
+  "size": "big(8*4.15=33.2 squares)",
+  "description": "Rectangular corrugated metal structure with open front counter, signage for news and drinks, and stacked wooden crates, intended for selling newspapers and beverages.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

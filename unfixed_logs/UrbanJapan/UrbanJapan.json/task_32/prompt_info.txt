@@ -1,0 +1,97 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information  
+                        Target = [Name: PosterPillar,  
+                        Size: big(4.0*4.0=16.0 squares),  
+                        Description: Cylindrical structure, mixed media texture with colorful posters and green polygonal roof, top signage bands with newspaper titles, used for public advertisement and poster display.]
+
+                        # Search Area Constraint  
+                        You must strictly stay within the following 2D range:  
+                        X Range: [-46, 55]  
+                        Y Range: [83, 184]
+
+                        # RGB Captions  
+                        Front: high-rise building, glass facade; streetlight, illuminated; buildings in the background; view from a high angle  
+                        Left: dark surface, textured; corner of a light-colored object; scene is mostly dark  
+                        Right: cityscape, illuminated signs; street with vehicles; buildings in the background; view from an elevated position  
+                        Down: red car, moving on road; sidewalk with grates; building corner in the foreground; scene viewed from above
+
+                        # Depth Information  
+                        FrontDepth: [[0, 0, 55], [0, 3, 39], [0, 3, 31]]  
+                        LeftDepth: [[0, 0, 0], [0, 0, 2], [0, 0, 2]]  
+                        RightDepth: [[62, 1, 0], [46, 3, 1], [12, 11, 2]]  
+                        DownDepth: [[0, 5, 12], [0, 1, 5], [0, 1, 2]]
+
+                        # Previous UAV Poses (last 10 steps)  
+                        {
+    [(4.47, 133.75, -6.6), 137.95],
+    [(4.47, 133.75, -6.6), 137.95],
+    [(4.47, 133.75, -6.6), 137.95],
+    [(4.47, 133.75, -6.6), 137.95],
+    [(4.47, 133.75, -6.6), 137.95],
+    [(4.47, 133.75, -6.6), 137.95],
+    [(4.47, 133.75, -6.6), 137.95],
+    [(4.47, 133.75, -6.6), 137.95],
+    [(4.47, 133.75, -6.6), 137.95],
+    [(4.47, 133.75, -6.6), 137.95],
+}
+
+                        # Trajectory Summary  
+                        StepsSoFar = 0  
+                        DistanceTraveled = 0.0  
+                        AvgHeadingChange = 0.0
+
+                        # Mission Instructions  
+                        - Your goal is to find and stop near the correct object: PosterPillar.  
+                        - You are flying at a fixed low altitude — you must never ascend or descend. These actions are invalid.
+                        - If any caption mentions the object name and matches at least one trait in the description (e.g., material, shape), and depth > 4.0, you must move toward that direction.
+
+                        - After moving, if the same direction still shows the object name and matches the description, and depth < 20.0, you must stop immediately by returning [stop, 0].  
+                        - Do not pass by or delay once the target is clearly confirmed in view.
+
+                        - If no caption mentions the target, move in the direction (front, left, or right) with the highest semantic similarity and safe depth.  
+                        - Avoid directions with depth < 2.0 — treat as obstacles.
+
+                        # Exploration Rules  
+                        - If all directions are shallow (depth < 3.0), you may rotate once to find a new direction.  
+                        - If no forward progress in the last 3 steps, you may rotate once, but never ascend.  
+                        - Prefer moving into unexplored space. Avoid repeating paths or spinning in place.
+
+                        # Rotation Restrictions  
+                        - Never perform two consecutive rotations (rotl or rotr).  
+                        - After any rotation, your next action must be forward, left, or right.  
+                        - Never rotate more than once within any 2-step window.
+
+                        # Step Size Guidance  
+                        - If all directions > 15 → use large step (6.0–8.0)  
+                        - If all directions < 10 → use small step (2.0–3.0)  
+                        - If only one safe direction → use step 2.0–4.0
+
+                        # Stop Logic (Early Termination)  
+                        - If StepsSoFar : 0 > 100, and one caption partially match the object with safe depth (< 20.0), you may also stop.
+
+                        ---
+
+                        # Output Format
+
+                        You must return exactly one valid Python-style list.  
+                        Example: [forward, 6.0]
+
+                        # Valid Action Types
+
+                        - [forward, distance], [left, distance], [right, distance] → distance ∈ [2.0, 8.0]  
+                        - [rotl, angle], [rotr, angle] → angle ∈ [15, 60]  
+                        - [stop, 0] → Use only if the target is visually confirmed and depth < 20.0
+
+                        Do not use [ascend, x] or [descend, x] — these actions are forbidden. You are flying at a fixed altitude.
+
+                        # Format Rules
+
+                        Do not output:
+                        - Quoted lists like '[forward, 6.0]' or "['forward', '6.0']"  
+                        - Any string-wrapped output  
+                        - Any newline characters or extra formatting  
+                        - Any explanation — just return a single valid list
+                        
+

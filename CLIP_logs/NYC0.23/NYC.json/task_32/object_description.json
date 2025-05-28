@@ -1,0 +1,35 @@
+{
+  "episode_id": "32",
+  "start_pose": {
+    "start_position": [
+      274.1911539478296,
+      428.08461976970193,
+      -6.800000071525574
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.610450799636094,
+      0.7920541782123578
+    ]
+  },
+  "info": {
+    "geodesic_distance": 42,
+    "euclidean_distance": 32.0322
+  },
+  "map_name": "NYC_test",
+  "true_name": "Dog",
+  "object_name": "hellenic_hound_idleA_anim_38",
+  "pose": [
+    [
+      266.6000061035156,
+      458.79998779296875,
+      1.1999999284744263
+    ]
+  ],
+  "size": "small(1.25*0.5=0.63 squares)",
+  "description": "Organic quadruped form, short black and white fur with a slim body, upright ears and extended tail, companion animal commonly used for domestic companionship.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

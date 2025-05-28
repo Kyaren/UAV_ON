@@ -1,0 +1,35 @@
+{
+  "episode_id": "13",
+  "start_pose": {
+    "start_position": [
+      43.120342843053564,
+      141.31914588771167,
+      -7.411499977111816
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9893439127495085,
+      0.14559746668638437
+    ]
+  },
+  "info": {
+    "geodesic_distance": 107,
+    "euclidean_distance": 38.5234
+  },
+  "map_name": "UrbanJapan_test",
+  "true_name": "Human",
+  "object_name": "BP_ma_construction_worker_02_a_2",
+  "pose": [
+    [
+      11.399999618530273,
+      162.59999084472656,
+      0.5885000228881836
+    ]
+  ],
+  "size": "small(1.0*1.5=1.5 squares)",
+  "description": "Organic upright form, neon yellow safety vest over dark clothing with brown boots, white hard hat, walking posture suggests construction or industrial activity.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

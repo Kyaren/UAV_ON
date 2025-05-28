@@ -1,0 +1,35 @@
+{
+  "episode_id": "9",
+  "start_pose": {
+    "start_position": [
+      841.4982685875013,
+      -93.03538559590393,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.038304275934739486,
+      -0.9992661219340498
+    ]
+  },
+  "info": {
+    "geodesic_distance": 54,
+    "euclidean_distance": 46.7019
+  },
+  "map_name": "BrushifyUrban_test",
+  "true_name": "Human",
+  "object_name": "BP_fe_clerk_02_2",
+  "pose": [
+    [
+      795.5,
+      -91.0,
+      0.8153881430625916
+    ]
+  ],
+  "size": "small(1.75*0.75=1.31 squares)",
+  "description": "Organic upright form, tan sleeveless shirt with blue jeans, bald or close-shaved head and dark shoes, likely engaged in motion such as running or walking.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

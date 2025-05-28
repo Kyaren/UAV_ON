@@ -1,0 +1,35 @@
+{
+  "episode_id": "32",
+  "start_pose": {
+    "start_position": [
+      429.3062262792018,
+      -1091.0379299240483,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9997535543450075,
+      -0.02219978771349472
+    ]
+  },
+  "info": {
+    "geodesic_distance": 39,
+    "euclidean_distance": 29.5402
+  },
+  "map_name": "BrushifyUrban_test",
+  "true_name": "IceCreamCart",
+  "object_name": "SM_FoodStalls02_676",
+  "pose": [
+    [
+      457.3999938964844,
+      -1089.0,
+      1.899999976158142
+    ]
+  ],
+  "size": "small(2*1.5=3 squares)",
+  "description": "Geometric rectangular form, metallic body with colorful ice cream advertisements on both sides, topped with rows of visible drink bottles, used for mobile frozen treat sales.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

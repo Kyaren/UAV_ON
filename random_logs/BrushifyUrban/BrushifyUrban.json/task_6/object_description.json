@@ -1,0 +1,35 @@
+{
+  "episode_id": "6",
+  "start_pose": {
+    "start_position": [
+      838.4582277366967,
+      -59.731209893205104,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.5772276937339942,
+      0.8165832410639678
+    ]
+  },
+  "info": {
+    "geodesic_distance": 83,
+    "euclidean_distance": 55.8275
+  },
+  "map_name": "BrushifyUrban_test",
+  "true_name": "TrashCan",
+  "object_name": "SM_trashbin_01_23",
+  "pose": [
+    [
+      796.7000122070312,
+      -95.69999694824219,
+      1.899999976158142
+    ]
+  ],
+  "size": "small(0.75*0.75=0.56 squares)",
+  "description": "Cylindrical metal container with vertical slats and open top, dark green color, intended for waste disposal.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

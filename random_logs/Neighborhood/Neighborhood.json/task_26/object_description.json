@@ -1,0 +1,35 @@
+{
+  "episode_id": "26",
+  "start_pose": {
+    "start_position": [
+      -249.45716475573394,
+      41.358133475538054,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9425302822940103,
+      0.33412073709779433
+    ]
+  },
+  "info": {
+    "geodesic_distance": 55,
+    "euclidean_distance": 35.6304
+  },
+  "map_name": "ModularNeighborhood_test",
+  "true_name": "Pallet",
+  "object_name": "SM_Pallet_03_124",
+  "pose": [
+    [
+      -221.6999969482422,
+      20.5,
+      1.0
+    ]
+  ],
+  "size": "small(1*0.75=0.75 squares)",
+  "description": "Geometric rectangular form, light brown wood with slatted top surface, open base structure for forklift access, used for stacking and transporting goods.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

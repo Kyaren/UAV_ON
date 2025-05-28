@@ -1,0 +1,35 @@
+{
+  "episode_id": "31",
+  "start_pose": {
+    "start_position": [
+      20.47555954101152,
+      226.17834885559407,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.39803238432012455,
+      -0.9173713648421977
+    ]
+  },
+  "info": {
+    "geodesic_distance": 59,
+    "euclidean_distance": 41.7523
+  },
+  "map_name": "BrushifyRoad_test",
+  "true_name": " StreetSign",
+  "object_name": "Street_Sign_01_289",
+  "pose": [
+    [
+      36.97230529785156,
+      230.40374755859375,
+      31.121660232543945
+    ]
+  ],
+  "size": " small(0.25*1=0.25 squares)",
+  "description": " Thin vertical pole with a rectangular green sign, metal post with directional labels, informational function for navigation.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

@@ -1,0 +1,35 @@
+{
+  "episode_id": "6",
+  "start_pose": {
+    "start_position": [
+      189.23384446679148,
+      -127.67860306086047,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9602740935933864,
+      -0.2790585335971651
+    ]
+  },
+  "info": {
+    "geodesic_distance": 66,
+    "euclidean_distance": 48.554
+  },
+  "map_name": "CityPark_test",
+  "true_name": "Human",
+  "object_name": "BP_fe_clerk_01_2",
+  "pose": [
+    [
+      143.09999084472656,
+      -115.5,
+      1.990899920463562
+    ]
+  ],
+  "size": "small(1.25*0.75=0.94 squares)",
+  "description": "Organic upright form, red top with long tan skirt or coat and dark shoes, long black hair, visually identifiable as a walking person.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

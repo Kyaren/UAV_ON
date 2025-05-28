@@ -1,0 +1,35 @@
+{
+  "episode_id": "48",
+  "start_pose": {
+    "start_position": [
+      25.472995710054576,
+      -92.63304236338256,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9691544888692146,
+      -0.2464540052517942
+    ]
+  },
+  "info": {
+    "geodesic_distance": 38,
+    "euclidean_distance": 24.2663
+  },
+  "map_name": "BrushifyUrban_test",
+  "true_name": "PickupTruck",
+  "object_name": "SK_NYC_PickUptruck5",
+  "pose": [
+    [
+      5.099999904632568,
+      -83.0,
+      2.0
+    ]
+  ],
+  "size": "mid(4.75*2=9.5 squares)",
+  "description": "Classic single-cab pickup truck with curved fenders, yellow exterior and wooden truck bed, intended for cargo transport and utility use.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

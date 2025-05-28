@@ -1,0 +1,35 @@
+{
+  "episode_id": "5",
+  "start_pose": {
+    "start_position": [
+      -64.58842550481872,
+      -22.913223066536737,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9138004723842784,
+      -0.40616338666880053
+    ]
+  },
+  "info": {
+    "geodesic_distance": 87,
+    "euclidean_distance": 56.6878
+  },
+  "map_name": "Slum_test",
+  "true_name": " Lantern",
+  "object_name": "SM_Lantern_9",
+  "pose": [
+    [
+      -31.537675857543945,
+      22.27068328857422,
+      1.9200021028518677
+    ]
+  ],
+  "size": " small(0.5*0.5=0.25 squares)",
+  "description": " Geometric cylindrical form, light blue metallic finish with a central vertical handle and transparent housing, classic oil-lamp style with protective frame, used for portable lighting.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

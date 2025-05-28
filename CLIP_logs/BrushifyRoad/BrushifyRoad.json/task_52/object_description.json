@@ -1,0 +1,35 @@
+{
+  "episode_id": "52",
+  "start_pose": {
+    "start_position": [
+      -16.342940738265895,
+      255.39975251240296,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.7926130145405184,
+      -0.6097250275173163
+    ]
+  },
+  "info": {
+    "geodesic_distance": 55,
+    "euclidean_distance": 40.5049
+  },
+  "map_name": "BrushifyRoad_test",
+  "true_name": " HayBale",
+  "object_name": "SM_Hay_Bale_Set2_66",
+  "pose": [
+    [
+      -33.02769470214844,
+      250.80374145507812,
+      29.621660232543945
+    ]
+  ],
+  "size": " mid(2.5*1.75=4.38 squares)",
+  "description": " Rectangular block form, rough straw texture, composed of two stacked bales secured with binding, commonly used for animal feed or bedding.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

@@ -1,0 +1,35 @@
+{
+  "episode_id": "64",
+  "start_pose": {
+    "start_position": [
+      0.29107362596629116,
+      262.78064649439534,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.1489245525948761,
+      0.9888485615272017
+    ]
+  },
+  "info": {
+    "geodesic_distance": 76,
+    "euclidean_distance": 46.6622
+  },
+  "map_name": "BrushifyRoad_test",
+  "true_name": " BarrelStack",
+  "object_name": "SM_Steel_Barrel_Group_116",
+  "pose": [
+    [
+      -24.42769432067871,
+      281.40374755859375,
+      27.921659469604492
+    ]
+  ],
+  "size": " mid(2.0*2.0=4.0 squares)",
+  "description": " Four dark metal barrels secured on a wooden pallet, bound with yellow straps, typically used for industrial storage or transport of liquids or chemicals.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

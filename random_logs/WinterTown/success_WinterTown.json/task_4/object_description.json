@@ -1,0 +1,35 @@
+{
+  "episode_id": "4",
+  "start_pose": {
+    "start_position": [
+      -60.87308062866277,
+      138.3412933853777,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.7499647843059375,
+      -0.6614777564672516
+    ]
+  },
+  "info": {
+    "geodesic_distance": 24,
+    "euclidean_distance": 19.1967
+  },
+  "map_name": "WinterTown_test",
+  "true_name": " Barrel",
+  "object_name": "SM_Steel_Barrel_12",
+  "pose": [
+    [
+      -57.39274215698242,
+      119.7072525024414,
+      -3.9712743759155273
+    ]
+  ],
+  "size": " small(1.0*1.0=1.00 squares)",
+  "description": " Cylindrical shape, red metallic surface, segmented with horizontal bands and visible denting, used for storage or transport of liquids or materials.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

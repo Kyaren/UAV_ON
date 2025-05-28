@@ -1,0 +1,35 @@
+{
+  "episode_id": "29",
+  "start_pose": {
+    "start_position": [
+      446.86587202950363,
+      113.52761603128027,
+      -6.800000071525574
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.7783574179922985,
+      0.627821415576406
+    ]
+  },
+  "info": {
+    "geodesic_distance": 90,
+    "euclidean_distance": 47.4188
+  },
+  "map_name": "NYC_test",
+  "true_name": "Cat",
+  "object_name": "cat_drink_anim4",
+  "pose": [
+    [
+      417.0999755859375,
+      150.09999084472656,
+      1.1999999284744263
+    ]
+  ],
+  "size": "small(1*0.5=0.5 squares)",
+  "description": "Organic quadruped form, short dark gray fur with sleek body, upright ears and curled tail, companion animal commonly kept as a household pet.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

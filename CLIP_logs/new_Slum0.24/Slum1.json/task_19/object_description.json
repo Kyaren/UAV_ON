@@ -1,0 +1,35 @@
+{
+  "episode_id": "19",
+  "start_pose": {
+    "start_position": [
+      -3.152518656263261,
+      29.64490245867126,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9058975298811461,
+      0.4234969484603614
+    ]
+  },
+  "info": {
+    "geodesic_distance": 56,
+    "euclidean_distance": 41.9738
+  },
+  "map_name": "Slum_test",
+  "true_name": " GrainSilo",
+  "object_name": "SM_GrainSilo_5",
+  "pose": [
+    [
+      5.362324237823486,
+      70.0706787109375,
+      0.42000213265419006
+    ]
+  ],
+  "size": " small(1.25*1.25=1.56 squares)",
+  "description": " Tall cylindrical structure on elevated metal supports, dark metallic texture, ladder attached, used for grain storage.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

@@ -1,0 +1,35 @@
+{
+  "episode_id": "129",
+  "start_pose": {
+    "start_position": [
+      139.61124545475474,
+      605.8226836213041,
+      -7.600000023841858
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.14641578740858155,
+      -0.9892231382238919
+    ]
+  },
+  "info": {
+    "geodesic_distance": 86,
+    "euclidean_distance": 58.6163
+  },
+  "map_name": "NYC_test",
+  "true_name": "Chair",
+  "object_name": "SM_CafeChair04_517",
+  "pose": [
+    [
+      173.1999969482422,
+      653.5999755859375,
+      0.3999999761581421
+    ]
+  ],
+  "size": "small(0.75*0.75=0.56 squares)",
+  "description": "Simple plastic chair, gray with slatted backrest and sturdy legs, lightweight and stackable design, intended for casual seating.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

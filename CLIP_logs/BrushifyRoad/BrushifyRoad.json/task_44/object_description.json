@@ -1,0 +1,35 @@
+{
+  "episode_id": "44",
+  "start_pose": {
+    "start_position": [
+      -50.84520306228832,
+      186.013592873638,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.36245150641343854,
+      -0.9320026317015575
+    ]
+  },
+  "info": {
+    "geodesic_distance": 78,
+    "euclidean_distance": 51.4445
+  },
+  "map_name": "BrushifyRoad_test",
+  "true_name": " WaterTank",
+  "object_name": "SM_WaterDepot_Cubic_24",
+  "pose": [
+    [
+      -71.52769470214844,
+      200.80374145507812,
+      37.72166061401367
+    ]
+  ],
+  "size": " small(1.5*1.5=2.25 squares)",
+  "description": " Square metal container with a grid-like exterior, dark gray and weathered, elevated on a pallet, typically used for storing large volumes of liquid.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

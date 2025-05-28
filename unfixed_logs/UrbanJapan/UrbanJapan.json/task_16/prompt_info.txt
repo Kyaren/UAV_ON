@@ -1,0 +1,97 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information  
+                        Target = [Name: IceCreamCart,  
+                        Size: small(1.25*1.0=1.25 squares),  
+                        Description: Compact rectangular cart with promotional ice cream graphics, grey metal exterior with a serving compartment on top, designed for mobile ice cream sales.]
+
+                        # Search Area Constraint  
+                        You must strictly stay within the following 2D range:  
+                        X Range: [-37, 64]  
+                        Y Range: [43, 144]
+
+                        # RGB Captions  
+                        Front: concrete pillars, large, supporting; overhead structure, dark, metallic; orange lines on ground; scene is at night; area appears empty  
+                        Left: concrete pillars, large, supporting; overhead structure, dark, metallic; stairs in the background; street visible beyond; scene is at night  
+                        Right: cityscape, illuminated, nighttime; tall buildings, lit with advertisements; traffic lights, red and green; cars on road; street signs present  
+                        Down: brick pavement, wet, reflective; shadow of person, elongated; metal railing, curved; circular manhole cover; scene is dimly lit
+
+                        # Depth Information  
+                        FrontDepth: [[1, 2, 2], [1, 2, 2], [11, 11, 11]]  
+                        LeftDepth: [[4, 4, 0], [9, 9, 13], [11, 11, 11]]  
+                        RightDepth: [[1, 1, 1], [1, 0, 0], [12, 7, 4]]  
+                        DownDepth: [[9, 8, 9], [8, 7, 8], [9, 8, 5]]
+
+                        # Previous UAV Poses (last 10 steps)  
+                        {
+    [(13.59, 93.31, -6.6), -140.32],
+    [(13.59, 93.31, -6.6), -140.32],
+    [(13.59, 93.31, -6.6), -140.32],
+    [(13.59, 93.31, -6.6), -140.32],
+    [(13.59, 93.31, -6.6), -140.32],
+    [(13.59, 93.31, -6.6), -140.32],
+    [(13.59, 93.31, -6.6), -140.32],
+    [(13.59, 93.31, -6.6), -140.32],
+    [(13.59, 93.31, -6.6), -140.32],
+    [(13.59, 93.31, -6.6), -140.32],
+}
+
+                        # Trajectory Summary  
+                        StepsSoFar = 0  
+                        DistanceTraveled = 0.0  
+                        AvgHeadingChange = 0.0
+
+                        # Mission Instructions  
+                        - Your goal is to find and stop near the correct object: IceCreamCart.  
+                        - You are flying at a fixed low altitude — you must never ascend or descend. These actions are invalid.
+                        - If any caption mentions the object name and matches at least one trait in the description (e.g., material, shape), and depth > 4.0, you must move toward that direction.
+
+                        - After moving, if the same direction still shows the object name and matches the description, and depth < 20.0, you must stop immediately by returning [stop, 0].  
+                        - Do not pass by or delay once the target is clearly confirmed in view.
+
+                        - If no caption mentions the target, move in the direction (front, left, or right) with the highest semantic similarity and safe depth.  
+                        - Avoid directions with depth < 2.0 — treat as obstacles.
+
+                        # Exploration Rules  
+                        - If all directions are shallow (depth < 3.0), you may rotate once to find a new direction.  
+                        - If no forward progress in the last 3 steps, you may rotate once, but never ascend.  
+                        - Prefer moving into unexplored space. Avoid repeating paths or spinning in place.
+
+                        # Rotation Restrictions  
+                        - Never perform two consecutive rotations (rotl or rotr).  
+                        - After any rotation, your next action must be forward, left, or right.  
+                        - Never rotate more than once within any 2-step window.
+
+                        # Step Size Guidance  
+                        - If all directions > 15 → use large step (6.0–8.0)  
+                        - If all directions < 10 → use small step (2.0–3.0)  
+                        - If only one safe direction → use step 2.0–4.0
+
+                        # Stop Logic (Early Termination)  
+                        - If StepsSoFar : 0 > 100, and one caption partially match the object with safe depth (< 20.0), you may also stop.
+
+                        ---
+
+                        # Output Format
+
+                        You must return exactly one valid Python-style list.  
+                        Example: [forward, 6.0]
+
+                        # Valid Action Types
+
+                        - [forward, distance], [left, distance], [right, distance] → distance ∈ [2.0, 8.0]  
+                        - [rotl, angle], [rotr, angle] → angle ∈ [15, 60]  
+                        - [stop, 0] → Use only if the target is visually confirmed and depth < 20.0
+
+                        Do not use [ascend, x] or [descend, x] — these actions are forbidden. You are flying at a fixed altitude.
+
+                        # Format Rules
+
+                        Do not output:
+                        - Quoted lists like '[forward, 6.0]' or "['forward', '6.0']"  
+                        - Any string-wrapped output  
+                        - Any newline characters or extra formatting  
+                        - Any explanation — just return a single valid list
+                        
+

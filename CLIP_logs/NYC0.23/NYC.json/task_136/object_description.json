@@ -1,0 +1,35 @@
+{
+  "episode_id": "136",
+  "start_pose": {
+    "start_position": [
+      431.1242685382286,
+      529.004050153947,
+      -6.600000023841858
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.987771791503831,
+      0.15590666409526022
+    ]
+  },
+  "info": {
+    "geodesic_distance": 49,
+    "euclidean_distance": 41.7511
+  },
+  "map_name": "NYC_test",
+  "true_name": "Car",
+  "object_name": "SM_MERGED_SK_NYC_Car5",
+  "pose": [
+    [
+      472.3999938964844,
+      525.2000122070312,
+      1.399999976158142
+    ]
+  ],
+  "size": "big(5.75*2.0=11.5 squares)",
+  "description": "Geometric low-profile form, glossy blue body with silver accents and chrome detailing, open-top convertible with retro design and visible interior seats, designed for personal ground transport.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

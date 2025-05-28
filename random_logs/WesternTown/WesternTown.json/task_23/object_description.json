@@ -1,0 +1,35 @@
+{
+  "episode_id": "23",
+  "start_pose": {
+    "start_position": [
+      25.32620278790248,
+      28.475824943049922,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.48739520982022805,
+      -0.8731814871172521
+    ]
+  },
+  "info": {
+    "geodesic_distance": 26,
+    "euclidean_distance": 22.968
+  },
+  "map_name": "WesternTown_test",
+  "true_name": " CrateCovered",
+  "object_name": "SM_Crates_Covered_117",
+  "pose": [
+    [
+      24.078144073486328,
+      51.383949279785156,
+      -5.908769607543945
+    ]
+  ],
+  "size": " mid(2.5*1.75=4.38 squares)",
+  "description": " Rectangular blocky shape, dark green tarp covering stacked blue crates on a wooden pallet, industrial texture and compact form, used for transporting or storing goods.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

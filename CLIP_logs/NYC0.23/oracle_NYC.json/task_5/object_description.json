@@ -1,0 +1,35 @@
+{
+  "episode_id": "5",
+  "start_pose": {
+    "start_position": [
+      423.3975462076373,
+      799.0065824319106,
+      -7.765171214938164
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9824856666371161,
+      -0.18633817336397152
+    ]
+  },
+  "info": {
+    "geodesic_distance": 18,
+    "euclidean_distance": 12.7113
+  },
+  "map_name": "NYC_test",
+  "true_name": "Human",
+  "object_name": "BP_fe_casual_03_skin_2",
+  "pose": [
+    [
+      411.8999938964844,
+      801.0999755859375,
+      0.23482878506183624
+    ]
+  ],
+  "size": "small(1.25*1.25=1.56 squares)",
+  "description": "Organic upright form, beige top with dark blue skirt and headscarf, culturally styled outfit with distinct contrast, represents a civilian figure in traditional attire.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

@@ -1,0 +1,35 @@
+{
+  "episode_id": "43",
+  "start_pose": {
+    "start_position": [
+      338.62819150802306,
+      48.36873568055033,
+      -6.600000023841858
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.36311822070611777,
+      -0.9317430749896793
+    ]
+  },
+  "info": {
+    "geodesic_distance": 31,
+    "euclidean_distance": 23.1502
+  },
+  "map_name": "NYC_test",
+  "true_name": "Truck",
+  "object_name": "SM_BoxTruck_01a_10",
+  "pose": [
+    [
+      316.6000061035156,
+      43.29999923706055,
+      1.399999976158142
+    ]
+  ],
+  "size": "big(3.75*7.5=28.13 squares)",
+  "description": "Geometric boxy form, matte gray exterior with double rear doors and small side window, riveted metal paneling with black trim, designed for cargo transport or delivery use.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

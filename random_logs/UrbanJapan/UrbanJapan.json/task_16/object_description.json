@@ -1,0 +1,35 @@
+{
+  "episode_id": "16",
+  "start_pose": {
+    "start_position": [
+      13.594785109266457,
+      93.31102218931343,
+      -6.600000023841858
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9406407366863501,
+      -0.33940389580286284
+    ]
+  },
+  "info": {
+    "geodesic_distance": 37,
+    "euclidean_distance": 25.3942
+  },
+  "map_name": "UrbanJapan_test",
+  "true_name": "IceCreamCart",
+  "object_name": "SM_FoodStalls02_43",
+  "pose": [
+    [
+      37.0,
+      101.79999542236328,
+      1.399999976158142
+    ]
+  ],
+  "size": "small(1.25*1.0=1.25 squares)",
+  "description": "Compact rectangular cart with promotional ice cream graphics, grey metal exterior with a serving compartment on top, designed for mobile ice cream sales.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

@@ -1,0 +1,35 @@
+{
+  "episode_id": "121",
+  "start_pose": {
+    "start_position": [
+      84.193082809375,
+      818.6877696389594,
+      -6.600000023841858
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.26682504717896677,
+      -0.9637449840066313
+    ]
+  },
+  "info": {
+    "geodesic_distance": 73,
+    "euclidean_distance": 49.298
+  },
+  "map_name": "NYC_test",
+  "true_name": "Truck",
+  "object_name": "SK_NYC_PickUptruck5",
+  "pose": [
+    [
+      126.19999694824219,
+      844.0,
+      1.399999976158142
+    ]
+  ],
+  "size": "mid(2.0*4.5=9.0 squares)",
+  "description": "Classic pickup truck, yellow exterior with rounded cab and wooden cargo bed, vintage design with wide fenders and chrome accents, intended for transport and utility purposes.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

@@ -1,0 +1,35 @@
+{
+  "episode_id": "29",
+  "start_pose": {
+    "start_position": [
+      -60.61141721051642,
+      300.03732233829953,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.5188342852810509,
+      0.8548748355267577
+    ]
+  },
+  "info": {
+    "geodesic_distance": 35,
+    "euclidean_distance": 30.8718
+  },
+  "map_name": "BrushifyRoad_test",
+  "true_name": " BasketballHoop",
+  "object_name": "Basketball_Hoop_01_283",
+  "pose": [
+    [
+      -55.72769546508789,
+      298.1037292480469,
+      23.421659469604492
+    ]
+  ],
+  "size": " small(1.0*3.0=3.0 squares)",
+  "description": " Geometric vertical panel with circular rim, white backboard with red square marking and metal ring, mounted hoop structure, used for playing basketball.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

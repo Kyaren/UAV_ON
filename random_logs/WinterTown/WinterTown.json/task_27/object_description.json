@@ -1,0 +1,35 @@
+{
+  "episode_id": "27",
+  "start_pose": {
+    "start_position": [
+      205.03835985131172,
+      -147.3914511064392,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.3267092959927875,
+      -0.9451248784747427
+    ]
+  },
+  "info": {
+    "geodesic_distance": 60,
+    "euclidean_distance": 38.9107
+  },
+  "map_name": "WinterTown_test",
+  "true_name": " SignPost",
+  "object_name": "SM_DirectionSign_60",
+  "pose": [
+    [
+      212.40725708007812,
+      -180.69273376464844,
+      11.72872543334961
+    ]
+  ],
+  "size": " small(2.25*0.25=0.56 squares)",
+  "description": " Narrow vertical post with a single horizontal arrow board, rusted metal texture with directional point, used for wayfinding or indicating direction.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

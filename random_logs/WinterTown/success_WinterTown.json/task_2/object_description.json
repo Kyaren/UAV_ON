@@ -1,0 +1,35 @@
+{
+  "episode_id": "2",
+  "start_pose": {
+    "start_position": [
+      -28.07781297531416,
+      134.13091944161243,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9680125083167007,
+      -0.2509019404915184
+    ]
+  },
+  "info": {
+    "geodesic_distance": 26,
+    "euclidean_distance": 30.9112
+  },
+  "map_name": "WinterTown_test",
+  "true_name": " Apple",
+  "object_name": "SM_Apple_6",
+  "pose": [
+    [
+      -57.69274139404297,
+      125.8072509765625,
+      -3.9712743759155273
+    ]
+  ],
+  "size": " small(0.25*0.25=0.06 squares)",
+  "description": " Organic round shape, red glossy surface with subtle stem detail, smooth skin and small size, consistent with edible fruit.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

@@ -1,0 +1,35 @@
+{
+  "episode_id": "66",
+  "start_pose": {
+    "start_position": [
+      -42.85167344033505,
+      18.47031181166755,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.38365795843873,
+      0.9234752681726922
+    ]
+  },
+  "info": {
+    "geodesic_distance": 98,
+    "euclidean_distance": 64.0059
+  },
+  "map_name": "Slum_test",
+  "true_name": " Trailer",
+  "object_name": "SM_Small_Trailer_75",
+  "pose": [
+    [
+      3.562324047088623,
+      61.77068328857422,
+      1.2200020551681519
+    ]
+  ],
+  "size": " mid(2.5*2=5 squares)",
+  "description": " Rectangular flatbed form with railings, dark wood platform and metal frame, dual wheels with front towing arm, designed for hauling goods or equipment.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

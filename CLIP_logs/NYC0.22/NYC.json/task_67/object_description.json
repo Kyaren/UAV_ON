@@ -1,0 +1,35 @@
+{
+  "episode_id": "67",
+  "start_pose": {
+    "start_position": [
+      302.82671282102496,
+      444.2121667294242,
+      -7.5
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.12884885855043365,
+      -0.991664243406129
+    ]
+  },
+  "info": {
+    "geodesic_distance": 37,
+    "euclidean_distance": 23.6669
+  },
+  "map_name": "NYC_test",
+  "true_name": "Seesaw",
+  "object_name": "SM_Seesaw01_56",
+  "pose": [
+    [
+      286.5,
+      460.5999755859375,
+      0.5
+    ]
+  ],
+  "size": "mid(3.75*1.75=6.56 squares)",
+  "description": "Dual-seat playground apparatus, blue and black metal frame with curved supports and handles, balanced structure allowing tilting motion, intended for recreational play.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

@@ -1,0 +1,35 @@
+{
+  "episode_id": "42",
+  "start_pose": {
+    "start_position": [
+      196.90714409068596,
+      336.7132549722253,
+      -5.900000095367432
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.8869987150659395,
+      0.4617718911663769
+    ]
+  },
+  "info": {
+    "geodesic_distance": 39,
+    "euclidean_distance": 29.2878
+  },
+  "map_name": "NYC_test",
+  "true_name": "Boat",
+  "object_name": "SM_Boat_01a_314",
+  "pose": [
+    [
+      202.09999084472656,
+      365.1000061035156,
+      2.0999999046325684
+    ]
+  ],
+  "size": "mid(4.25*1.75=7.44 squares)",
+  "description": "Geometric elongated form, weathered wooden texture with visible planks and ribs, open hull with pointed bow, designed for floating transport on water.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

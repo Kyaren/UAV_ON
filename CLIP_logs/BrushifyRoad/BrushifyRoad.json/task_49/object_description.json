@@ -1,0 +1,35 @@
+{
+  "episode_id": "49",
+  "start_pose": {
+    "start_position": [
+      -108.58399901069251,
+      148.85251252736256,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.46575570665596616,
+      -0.8849133413602722
+    ]
+  },
+  "info": {
+    "geodesic_distance": 87,
+    "euclidean_distance": 60.825
+  },
+  "map_name": "BrushifyRoad_test",
+  "true_name": " Silo",
+  "object_name": "SM_Small_Silo_Structure_54",
+  "pose": [
+    [
+      -110.92769622802734,
+      189.90374755859375,
+      37.821659088134766
+    ]
+  ],
+  "size": " big(3.25*7.25=23.56 squares)",
+  "description": " Tall cylindrical metal structure with a conical base, supported by a metal frame, connected to overhead pipes, likely used for storing and dispensing grain or other bulk materials.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

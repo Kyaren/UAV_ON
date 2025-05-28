@@ -1,0 +1,35 @@
+{
+  "episode_id": "8",
+  "start_pose": {
+    "start_position": [
+      -30.748697448152534,
+      7.104923394375653,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.8778984973563211,
+      0.4788467691647439
+    ]
+  },
+  "info": {
+    "geodesic_distance": 28,
+    "euclidean_distance": 18.6753
+  },
+  "map_name": "WesternTown_test",
+  "true_name": " SiloStructure",
+  "object_name": "SM_Wood_Silo_Structure_42",
+  "pose": [
+    [
+      -35.021854400634766,
+      23.28394889831543,
+      1.2912304401397705
+    ]
+  ],
+  "size": " mid(3*2=6 squares)",
+  "description": " Tall cylindrical frame, dark metal with vertical and spiral supports, octagonal upper rim, likely used for structural support or containment in industrial or agricultural contexts.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

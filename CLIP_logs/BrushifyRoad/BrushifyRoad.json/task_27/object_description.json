@@ -1,0 +1,35 @@
+{
+  "episode_id": "27",
+  "start_pose": {
+    "start_position": [
+      -68.5051578528724,
+      224.45655544361807,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.7167383258746997,
+      0.6973422203067392
+    ]
+  },
+  "info": {
+    "geodesic_distance": 102,
+    "euclidean_distance": 61.5318
+  },
+  "map_name": "BrushifyRoad_test",
+  "true_name": " DeerStatue",
+  "object_name": "Monument_01_271",
+  "pose": [
+    [
+      -47.327693939208984,
+      269.7037353515625,
+      28.921659469604492
+    ]
+  ],
+  "size": " mid(2.5*2=5 squares)",
+  "description": " Geometric base with organic sculpture, reddish brick pedestal with stone trim and bronze deer figure, plaque on front face, decorative commemorative structure.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

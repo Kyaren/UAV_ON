@@ -1,0 +1,35 @@
+{
+  "episode_id": "21",
+  "start_pose": {
+    "start_position": [
+      224.25017702507387,
+      185.9875612157948,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.0500376841852563,
+      0.9987473304902379
+    ]
+  },
+  "info": {
+    "geodesic_distance": 125,
+    "euclidean_distance": 24.512
+  },
+  "map_name": "WesternTown_test",
+  "true_name": " StovePipe",
+  "object_name": "SM_Stove_105",
+  "pose": [
+    [
+      201.87814331054688,
+      186.38394165039062,
+      -17.008769989013672
+    ]
+  ],
+  "size": " small(1.0*0.5=0.5 squares)",
+  "description": " Vertical cylindrical shape, dark rusted metal texture, curved exhaust pipe extending upward, three short legs at base, likely used for heating or cooking.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

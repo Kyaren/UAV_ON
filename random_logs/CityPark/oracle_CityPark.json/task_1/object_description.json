@@ -1,0 +1,35 @@
+{
+  "episode_id": "1",
+  "start_pose": {
+    "start_position": [
+      -79.84024990109911,
+      139.31033019049903,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9996198223586951,
+      0.02757191954817221
+    ]
+  },
+  "info": {
+    "geodesic_distance": 36,
+    "euclidean_distance": 23.1279
+  },
+  "map_name": "CityPark_test",
+  "true_name": "CookingStove",
+  "object_name": "SM_CookingStove_01_14",
+  "pose": [
+    [
+      -69.29999542236328,
+      120.29999542236328,
+      0.8999999761581421
+    ]
+  ],
+  "size": "small(0.75*0.75=0.56 squares)",
+  "description": "Geometric cubic shape, smooth red metallic surface with elevated burners and slim support legs, designed for portable or outdoor cooking.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

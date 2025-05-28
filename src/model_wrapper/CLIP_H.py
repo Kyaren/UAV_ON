@@ -19,11 +19,11 @@ class CLIP_H(BaseModelWrapper):
             2 : 'right',
             3 : 'descend',
         }
-        self.threshold = 0.225
+        self.threshold = 0.24
         self.start_position = [[] for _ in range(batch_size)]
         self.start_yaw = [0 for _ in range(batch_size)]
         self.current_poses = [[] for _ in range(batch_size)]
-
+        self.prev_action = [ None for _ in range(batch_size)]
     
     def load_clip(self,):
         model = CLIPModel.from_pretrained("openai/clip-vit-base-patch16")
@@ -81,6 +81,7 @@ class CLIP_H(BaseModelWrapper):
 
     def run(self, input, depth):
         actions = []
+        conflict = [False] * len(input)
         dones = []
         processed_depth = self.process_depth(depth)
         for i in range(len(input)):
@@ -99,21 +100,31 @@ class CLIP_H(BaseModelWrapper):
                 cos_sim = img_feats @ txt_feats.T    # shape [n_images, n_texts], in [-1,1]
 
                 print("probs:",cos_sim)
-                max_val, max_idx = torch.max(cos_sim, dim=0)
-                action = self.action_mapping.get(int(max_idx.item()), None)
-                sim_value = max_val.item()
+                val, idx = cos_sim.topk(4, dim=0)
+                action = self.action_mapping.get(int(idx[0].item()), None)
+                sim_value = val[0].item()
                 if sim_value >= self.threshold:
                     action = 'stop'
 
+                prev_action = self.prev_action[i]
+
+                if(prev_action == 'left' and action == 'right') or (prev_action == 'right' and action == 'left'):
+                    action = self.action_mapping.get(int(idx[1].item()), None)
+                    sim_value = val[1].item()
+                    conflict[i]=True
                 if processed_depth[i]<=5 and action == 'descend':
-                    secend_val, secend_idx = cos_sim.topk(2, dim=0)
-                    action = self.action_mapping.get(int(secend_idx[1].item()), None)
-                    sim_value = secend_val[1].item()
-                
+                    if conflict[i]:                    
+                        action = self.action_mapping.get(int(idx[2].item()), None)
+                        sim_value = val[2].item()
+                    else:
+                        action = self.action_mapping.get(int(idx[1].item()), None)
+                        sim_value = val[1].item()
+                    
                 if sim_value >= self.threshold:
                     action = 'stop'
-
+                
                 new_action = self.redirect_action(action, i)
+                self.prev_action[i] = new_action
                 actions.append(new_action)
 
                 done = (action == 'stop')

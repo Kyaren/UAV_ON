@@ -1,0 +1,35 @@
+{
+  "episode_id": "14",
+  "start_pose": {
+    "start_position": [
+      41.58288920744713,
+      805.0369016334649,
+      -7.779487311840057
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.7745300689156538,
+      -0.6325370916756681
+    ]
+  },
+  "info": {
+    "geodesic_distance": 44,
+    "euclidean_distance": 30.3213
+  },
+  "map_name": "NYC_test",
+  "true_name": "Human",
+  "object_name": "BP_ma_casual_02_a_2",
+  "pose": [
+    [
+      52.69999694824219,
+      832.7999877929688,
+      0.22051268815994263
+    ]
+  ],
+  "size": "small(1.25*1.25=1.56 squares)",
+  "description": "Organic upright form, black shirt with dark gray pants and tan cap, simple modern outfit with muted tones, represents an everyday civilian figure.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

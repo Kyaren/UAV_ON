@@ -1,0 +1,35 @@
+{
+  "episode_id": "34",
+  "start_pose": {
+    "start_position": [
+      -68.48971705911532,
+      13.069350016294763,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.42555500687982084,
+      -0.904932558879122
+    ]
+  },
+  "info": {
+    "geodesic_distance": 87,
+    "euclidean_distance": 58.5298
+  },
+  "map_name": "WesternTown_test",
+  "true_name": " WaterTower",
+  "object_name": "SM_Water_Tower_41",
+  "pose": [
+    [
+      -20.88427734375,
+      46.52334976196289,
+      -0.6525292992591858
+    ]
+  ],
+  "size": " mid(2.25*2.25=5.06 squares)",
+  "description": " Cylindrical tank on tall wooden support structure, weathered dark metal with wooden platform base and side ladder, elevated for water storage and gravity-fed distribution.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

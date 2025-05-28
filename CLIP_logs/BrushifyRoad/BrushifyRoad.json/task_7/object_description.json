@@ -1,0 +1,35 @@
+{
+  "episode_id": "7",
+  "start_pose": {
+    "start_position": [
+      -134.5864878650681,
+      252.79861548643356,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.7188413937571123,
+      -0.6951741153274712
+    ]
+  },
+  "info": {
+    "geodesic_distance": 119,
+    "euclidean_distance": 69.7663
+  },
+  "map_name": "BrushifyRoad_test",
+  "true_name": "Trough",
+  "object_name": "SM_Trough_02_47",
+  "pose": [
+    [
+      -94.09992218017578,
+      217.7537384033203,
+      37.72166061401367
+    ]
+  ],
+  "size": "small(1*0.5=0.5 squares)",
+  "description": "Rectangular open-top form, wood-textured exterior with hollow interior, simple farm utility design, used for feeding or watering animals.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

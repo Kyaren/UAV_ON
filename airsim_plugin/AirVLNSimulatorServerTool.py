@@ -157,11 +157,11 @@ env_exec_path_dict = {
         'bash_name': 'Barnyard_test1',
         'exec_path': 'Barnyard',
     },
-    "BrushifyRoad_test": {
+    "BrushifyRoad_test": {###
         'bash_name': 'BrushifyRoad_test1',
         'exec_path': 'BrushifyRoad',
     },
-    "BrushifyUrban_test": {###
+    "BrushifyUrban_test": {#
         'bash_name': 'BrushifyUrban',
         'exec_path': 'BrushifyUrban',
     },
@@ -169,7 +169,7 @@ env_exec_path_dict = {
         'bash_name': 'CabinLake',
         'exec_path': 'CabinLake',
     },
-    "CityPark_test": {###
+    "CityPark_test": {
         'bash_name': 'CityPark',
         'exec_path': 'CityPark',
     },
@@ -177,19 +177,19 @@ env_exec_path_dict = {
         'bash_name': 'CleanCityStreet',
         'exec_path': 'CityStreet',  
     },
-    "DownTown_test": {
+    "DownTown_test": {###
         'bash_name': 'DownTown_test1',
         'exec_path': 'DownTown',
     },
-    "ModularNeighborhood_test": {
+    "ModularNeighborhood_test": {###
         'bash_name': 'NewNeighborhood',
         'exec_path': 'Neighborhood',
     },
-    "NYC_test": {
+    "NYC_test": {#
         'bash_name': 'NYC1950',
         'exec_path': 'NYC',
     },
-    "Slum_test": {#
+    "Slum_test": {###
         'bash_name': 'Slum_test1',
         'exec_path': 'Slum',
     },
@@ -455,7 +455,7 @@ class EventHandler(object):
                 try:
                     p = subprocess.Popen(
                         subprocess_execute,
-                        stdin=None, stdout=open('ue4.log','w'), stderr=subprocess.STDOUT,
+                        stdin=None, stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT,
                         shell=True,
                     )
                     p_s.append(p)
@@ -484,11 +484,7 @@ class EventHandler(object):
         env_info = env_exec_path_dict.get(scene_id)
         env_path = os.path.join(args.root_path, env_info['exec_path'], env_info['bash_name'] + '.sh')
     
-        # subprocess_execute = "bash {} -RenderOffscreen -NoSound -NoVSync -GraphicsAdapter={} -settings={} ".format(
-        #             env_path,
-        #             gpu_id,
-        #             str(CWD_DIR / 'settings' / str(port) / 'settings.json'),
-        #         )
+
         subprocess_execute = "bash {} -RenderOffscreen -NoSound -NoVSync -GraphicsAdapter={} -settings={} ".format(
                     env_path,
                     gpu_id,

@@ -1,0 +1,35 @@
+{
+  "episode_id": "70",
+  "start_pose": {
+    "start_position": [
+      20.644662594835708,
+      39.79635535977664,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.33954019101579436,
+      -0.9405915472110931
+    ]
+  },
+  "info": {
+    "geodesic_distance": 63,
+    "euclidean_distance": 44.9357
+  },
+  "map_name": "Slum_test",
+  "true_name": " ThickPipe",
+  "object_name": "SM_ThickPipe_83",
+  "pose": [
+    [
+      41.06232452392578,
+      0.07068359106779099,
+      -2.0799977779388428
+    ]
+  ],
+  "size": " small(0.75*0.5=0.38 squares)",
+  "description": " Cylindrical segmented form, dark rusted metal texture, multiple ridges and a bent joint section, used for joining pipeline sections or directing flow.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

@@ -1,0 +1,35 @@
+{
+  "episode_id": "20",
+  "start_pose": {
+    "start_position": [
+      -312.52309082633724,
+      -311.83864117736067,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.1372399821980764,
+      0.9905378272869096
+    ]
+  },
+  "info": {
+    "geodesic_distance": 114,
+    "euclidean_distance": 69.4194
+  },
+  "map_name": "BrushifyRoad_test",
+  "true_name": " ConstructionSign",
+  "object_name": "Sign_Roadworks",
+  "pose": [
+    [
+      -267.6423034667969,
+      -291.7967834472656,
+      42.02135467529297
+    ]
+  ],
+  "size": " small(1.0*0.5=0.5 squares)",
+  "description": " Geometric triangular frame, red-bordered triangle with construction worker icon on white background, mounted on metal stand, used for roadwork warning.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

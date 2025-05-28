@@ -1,0 +1,35 @@
+{
+  "episode_id": "14",
+  "start_pose": {
+    "start_position": [
+      26.2599819256709,
+      -52.7668267067664,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.953974469041027,
+      0.29988783306078054
+    ]
+  },
+  "info": {
+    "geodesic_distance": 62,
+    "euclidean_distance": 45.1927
+  },
+  "map_name": "Slum_test",
+  "true_name": " FabricSack",
+  "object_name": "SM_Fabric_Sack_Set3_32",
+  "pose": [
+    [
+      -15.937675476074219,
+      -66.32931518554688,
+      1.8200020790100098
+    ]
+  ],
+  "size": " small(1*1=1 square)",
+  "description": " Irregular, beige fabric with a wrinkled texture, grouped in a cluster, likely used for carrying or storing items.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

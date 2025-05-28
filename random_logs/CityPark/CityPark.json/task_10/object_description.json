@@ -1,0 +1,35 @@
+{
+  "episode_id": "10",
+  "start_pose": {
+    "start_position": [
+      -75.35984076244338,
+      -46.757109319017744,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9358353424650055,
+      -0.35243752892307856
+    ]
+  },
+  "info": {
+    "geodesic_distance": 72,
+    "euclidean_distance": 49.2161
+  },
+  "map_name": "CityPark_test",
+  "true_name": "Rowboat",
+  "object_name": "SM_Boat_01a_44",
+  "pose": [
+    [
+      -87.0999984741211,
+      -2.3999998569488525,
+      10.800000190734863
+    ]
+  ],
+  "size": "mid(3.25*1.25=4.06 squares)",
+  "description": "Geometric boat shape, wooden texture with light coloring, visible internal seats and curved hull, intended for water transport or rowing.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

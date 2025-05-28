@@ -1,0 +1,35 @@
+{
+  "episode_id": "30",
+  "start_pose": {
+    "start_position": [
+      -4.1892242929597785,
+      73.80355423127116,
+      -6.600000023841858
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9824236790252515,
+      -0.18666471249405864
+    ]
+  },
+  "info": {
+    "geodesic_distance": 76,
+    "euclidean_distance": 50.1622
+  },
+  "map_name": "UrbanJapan_test",
+  "true_name": "NewsPaperStand",
+  "object_name": "SM_NewsPaperStand02_67",
+  "pose": [
+    [
+      30.899999618530273,
+      109.29999542236328,
+      1.399999976158142
+    ]
+  ],
+  "size": "small(1.0*0.75=0.75 squares)",
+  "description": "Geometric shelving structure, stacked newspapers in light-colored bundles, visible papers protruding from open sections, intended for public print distribution.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

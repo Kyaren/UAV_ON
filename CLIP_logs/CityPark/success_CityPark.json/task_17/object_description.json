@@ -1,0 +1,35 @@
+{
+  "episode_id": "17",
+  "start_pose": {
+    "start_position": [
+      -235.4656551651887,
+      208.20082347635088,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.21655116781998351,
+      0.9762712695331156
+    ]
+  },
+  "info": {
+    "geodesic_distance": 26,
+    "euclidean_distance": 16.3741
+  },
+  "map_name": "CityPark_test",
+  "true_name": "ConvertibleCar",
+  "object_name": "SK_NYC_Car02_8",
+  "pose": [
+    [
+      -223.09999084472656,
+      214.1999969482422,
+      1.899999976158142
+    ]
+  ],
+  "size": "mid(3.25*1.5=4.88 squares)",
+  "description": "Streamlined geometric shape, beige body with chrome trim and open-top design, classic wire-spoke wheels and spare tire mounted on the rear, designed for stylish personal transport.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

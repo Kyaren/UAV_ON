@@ -1,0 +1,35 @@
+{
+  "episode_id": "20",
+  "start_pose": {
+    "start_position": [
+      1110.589798022121,
+      -1009.3141977676314,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.46148297696619917,
+      -0.8871490641208017
+    ]
+  },
+  "info": {
+    "geodesic_distance": 26,
+    "euclidean_distance": 15.5097
+  },
+  "map_name": "BrushifyUrban_test",
+  "true_name": "Barrels",
+  "object_name": "SM_Set7_11288",
+  "pose": [
+    [
+      1119.2999267578125,
+      -999.699951171875,
+      1.5
+    ]
+  ],
+  "size": "small(1*1=1 squares)",
+  "description": "Geometric cylindrical and boxy forms, rusty metal texture with dark patches and grime, contains scattered garbage and debris, intended for waste collection.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

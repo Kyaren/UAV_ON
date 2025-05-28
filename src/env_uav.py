@@ -144,15 +144,10 @@ class AirVLNENV:
         assert len(self.batch) == self.batch_size, 'next_minibatch error'
         self.VectorEnvUtil.set_batch(self.batch)
         return self.batch
-
-    def getObjectList(self):
-        pass
     
     def changeToNewTask(self):
         self._changeEnv(need_change=False)
-        print('change env')
         self._setDrone()
-        print('set drone')
         self.update_measurements()
 
     
@@ -305,11 +300,7 @@ class AirVLNENV:
 
     def reset(self):
         self.changeToNewTask()
-        print("change finish")
         return self.get_obs()
-
-    def revert2frame(self, index):
-        self.sim_states[index].revert2frames()
         
     def makeActions(self, action_list, steps_size, is_fixed):
         poses = []
@@ -347,9 +338,9 @@ class AirVLNENV:
             if min_dist < self.sim_states[index].SUCCESS_DISTANCE:
                 self.sim_states[index].oracle_success = True
 
-
             poses.append(new_pose)
             fly_types.append(fly_type)
+            
         format_pose =[]
         format_fly_type =[]
         cnt = 0

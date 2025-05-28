@@ -1,0 +1,35 @@
+{
+  "episode_id": "45",
+  "start_pose": {
+    "start_position": [
+      -197.1732151951895,
+      64.0512111962248,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.8590181610354305,
+      -0.5119451132800344
+    ]
+  },
+  "info": {
+    "geodesic_distance": 77,
+    "euclidean_distance": 53.4029
+  },
+  "map_name": "ModularNeighborhood_test",
+  "true_name": "TomatoStack",
+  "object_name": "SM_Tomato_Stack_141",
+  "pose": [
+    [
+      -222.39999389648438,
+      17.600000381469727,
+      0.5999999642372131
+    ]
+  ],
+  "size": "small(1*0.75=0.75 squares)",
+  "description": "Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

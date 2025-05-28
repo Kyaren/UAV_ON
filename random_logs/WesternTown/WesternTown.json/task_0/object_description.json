@@ -1,0 +1,35 @@
+{
+  "episode_id": "0",
+  "start_pose": {
+    "start_position": [
+      -69.02128810689645,
+      4.155522849131074,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.48310032583199114,
+      0.8755650034012461
+    ]
+  },
+  "info": {
+    "geodesic_distance": 63,
+    "euclidean_distance": 48.8522
+  },
+  "map_name": "WesternTown_test",
+  "true_name": " AirConditioner",
+  "object_name": "SM_AirConditioner_2",
+  "pose": [
+    [
+      -22.121854782104492,
+      17.683950424194336,
+      -5.008769512176514
+    ]
+  ],
+  "size": " small(0.75*0.5=0.38 squares)",
+  "description": " Rectangular box shape, metallic texture with front-facing fan and side vents, compact structure consistent with a wall-mounted ventilation or cooling device.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

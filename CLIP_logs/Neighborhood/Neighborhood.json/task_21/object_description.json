@@ -1,0 +1,35 @@
+{
+  "episode_id": "21",
+  "start_pose": {
+    "start_position": [
+      -253.3375152460341,
+      81.60760947159497,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.15179895574030172,
+      0.9884113905839784
+    ]
+  },
+  "info": {
+    "geodesic_distance": 72,
+    "euclidean_distance": 47.4165
+  },
+  "map_name": "ModularNeighborhood_test",
+  "true_name": "Trashcan",
+  "object_name": "SM_Dustbin_04_145",
+  "pose": [
+    [
+      -226.0,
+      43.70000076293945,
+      1.0
+    ]
+  ],
+  "size": "small(0.75*0.75=0.56 squares)",
+  "description": "Geometric cylindrical form, dark metallic surface with vertical ridges, slightly tapered profile, intended for waste disposal.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

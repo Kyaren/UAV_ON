@@ -1,0 +1,35 @@
+{
+  "episode_id": "56",
+  "start_pose": {
+    "start_position": [
+      -92.28936741686618,
+      171.47950619613792,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.8939330861471388,
+      -0.4482004434306732
+    ]
+  },
+  "info": {
+    "geodesic_distance": 80,
+    "euclidean_distance": 44.8273
+  },
+  "map_name": "WinterTown_test",
+  "true_name": "Windmill",
+  "object_name": "SM_Windmill_Small_Fan_109",
+  "pose": [
+    [
+      -61.79274368286133,
+      199.90725708007812,
+      -23.47127342224121
+    ]
+  ],
+  "size": "small(2.25*1.0=2.25 squares)",
+  "description": "Circular radial shape with central axis and evenly spaced blades, dark metallic texture with slight weathering, includes tall narrow support structure, designed for wind-powered rotation.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

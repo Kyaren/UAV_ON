@@ -1,0 +1,35 @@
+{
+  "episode_id": "146",
+  "start_pose": {
+    "start_position": [
+      214.1666517558527,
+      835.5837964297506,
+      -6.800000071525574
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9963865756175919,
+      0.08493404458195118
+    ]
+  },
+  "info": {
+    "geodesic_distance": 61,
+    "euclidean_distance": 45.8075
+  },
+  "map_name": "NYC_test",
+  "true_name": "Statue",
+  "object_name": "SM_Statue02_2",
+  "pose": [
+    [
+      257.5,
+      821.5999755859375,
+      1.1999999284744263
+    ]
+  ],
+  "size": "mid(2.25*2=4.5 squares)",
+  "description": "Geometric seated human form, bronze metallic surface with realistic sculpting details, figure seated on a block chair mounted on a stone pedestal, commemorative or decorative public monument.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

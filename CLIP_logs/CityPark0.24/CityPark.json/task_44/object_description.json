@@ -1,0 +1,35 @@
+{
+  "episode_id": "44",
+  "start_pose": {
+    "start_position": [
+      -72.19619572940009,
+      -331.077875068891,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9998588687507423,
+      0.01680007679999979
+    ]
+  },
+  "info": {
+    "geodesic_distance": 80,
+    "euclidean_distance": 53.0728
+  },
+  "map_name": "CityPark_test",
+  "true_name": "NewspaperStand",
+  "object_name": "SM_NewsPaperStand_14",
+  "pose": [
+    [
+      -114.69999694824219,
+      -361.5,
+      2.200000047683716
+    ]
+  ],
+  "size": "small(1.5*1.25=1.88 squares)",
+  "description": "Rectangular stacked formation, weathered metal frame supporting bundles of light-colored newspapers arranged in tiers, dark vertical panel at back, used for displaying and selling print media.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

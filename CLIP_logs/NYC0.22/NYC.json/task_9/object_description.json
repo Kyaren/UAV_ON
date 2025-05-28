@@ -1,0 +1,35 @@
+{
+  "episode_id": "9",
+  "start_pose": {
+    "start_position": [
+      227.43464196410665,
+      421.05377841873576,
+      -7.784736186265945
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9975549414612316,
+      -0.06988661364151784
+    ]
+  },
+  "info": {
+    "geodesic_distance": 80,
+    "euclidean_distance": 53.4259
+  },
+  "map_name": "NYC_test",
+  "true_name": "Human",
+  "object_name": "BP_fe_sport_02_a_2",
+  "pose": [
+    [
+      265.8999938964844,
+      457.7926025390625,
+      0.21526381373405457
+    ]
+  ],
+  "size": "small(1.25*1.25=1.56 squares)",
+  "description": "Organic upright form, blue shirt with light gray pants and beige cap, casual modern attire with neutral tones, represents an everyday civilian figure.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

@@ -1,0 +1,35 @@
+{
+  "episode_id": "45",
+  "start_pose": {
+    "start_position": [
+      6.278591489680814,
+      76.59395521929922,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.05527997546294132,
+      0.9984708930724103
+    ]
+  },
+  "info": {
+    "geodesic_distance": 46,
+    "euclidean_distance": 48.9314
+  },
+  "map_name": "WinterTown_test",
+  "true_name": "Hammer",
+  "object_name": "SM_SledgeHammer_91",
+  "pose": [
+    [
+      9.507255554199219,
+      28.307254791259766,
+      0.2287255823612213
+    ]
+  ],
+  "size": "small(0.5*0.25=0.13 squares)",
+  "description": "Vertical geometric form, dark metallic head with wooden or dark handle, compact build with a blunt striking end, suitable for driving nails or breaking objects.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

@@ -1,0 +1,35 @@
+{
+  "episode_id": "74",
+  "start_pose": {
+    "start_position": [
+      -1.6620969081905557,
+      -33.768044305476636,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.4272195401660244,
+      -0.9041479218028047
+    ]
+  },
+  "info": {
+    "geodesic_distance": 55,
+    "euclidean_distance": 38.2559
+  },
+  "map_name": "Slum_test",
+  "true_name": " TrashBag",
+  "object_name": "SM_trashbag_02_b_141",
+  "pose": [
+    [
+      -16.337675094604492,
+      -68.02931213378906,
+      1.6200021505355835
+    ]
+  ],
+  "size": " small(0.75*0.75=0.56 squares)",
+  "description": " Organic lumpy form, glossy dark blue plastic surface, tightly knotted top with irregular bulges, used for containing refuse or debris.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

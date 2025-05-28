@@ -1,0 +1,35 @@
+{
+  "episode_id": "2",
+  "start_pose": {
+    "start_position": [
+      -52.916348395518796,
+      -24.364066418074152,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.6847507613709461,
+      0.728777328682712
+    ]
+  },
+  "info": {
+    "geodesic_distance": 77,
+    "euclidean_distance": 52.3121
+  },
+  "map_name": "Slum_test",
+  "true_name": " FoodCan",
+  "object_name": "SM_Food_Can_Set4_6",
+  "pose": [
+    [
+      -30.537675857543945,
+      22.070682525634766,
+      1.9200021028518677
+    ]
+  ],
+  "size": " small(0.5*0.5=0.25 squares)",
+  "description": " Cylindrical, metallic with a pull-tab lid, compact and sealed, intended for food storage.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

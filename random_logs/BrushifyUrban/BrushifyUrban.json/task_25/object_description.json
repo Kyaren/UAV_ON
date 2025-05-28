@@ -1,0 +1,35 @@
+{
+  "episode_id": "25",
+  "start_pose": {
+    "start_position": [
+      556.5938403046046,
+      -976.2661333968842,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.5287142566555071,
+      0.8487998791288878
+    ]
+  },
+  "info": {
+    "geodesic_distance": 60,
+    "euclidean_distance": 46.5306
+  },
+  "map_name": "BrushifyUrban_test",
+  "true_name": "Flag",
+  "object_name": "SM_USFlag_462",
+  "pose": [
+    [
+      512.2000122070312,
+      -962.699951171875,
+      -3.799999952316284
+    ]
+  ],
+  "size": "small(0.5*1=0.5 squares)",
+  "description": "Geometric vertical pole, metallic shaft with a cloth flag featuring red, white, and blue colors, diagonal mounting position with a waving fabric, used for signaling or identification.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

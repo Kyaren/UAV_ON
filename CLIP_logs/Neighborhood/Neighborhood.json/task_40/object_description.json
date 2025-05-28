@@ -1,0 +1,35 @@
+{
+  "episode_id": "40",
+  "start_pose": {
+    "start_position": [
+      -209.39623752603214,
+      66.00379459614004,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.65025781898403,
+      0.7597136097570797
+    ]
+  },
+  "info": {
+    "geodesic_distance": 66,
+    "euclidean_distance": 50.2686
+  },
+  "map_name": "ModularNeighborhood_test",
+  "true_name": "Handtruck",
+  "object_name": "SM_Trolley_101",
+  "pose": [
+    [
+      -221.1999969482422,
+      17.799999237060547,
+      1.0
+    ]
+  ],
+  "size": "small(1*0.75=0.75 squares)",
+  "description": "Geometric L-shaped frame, bright red metal with black wheels and vertical handle bars, open grid backrest indicating manual transport function for stacked loads.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

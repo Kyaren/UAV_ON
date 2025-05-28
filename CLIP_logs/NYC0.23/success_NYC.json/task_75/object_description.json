@@ -1,0 +1,35 @@
+{
+  "episode_id": "75",
+  "start_pose": {
+    "start_position": [
+      69.79643535475893,
+      455.79171540509384,
+      -6.600000023841858
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.6613875326146978,
+      -0.7500443531564264
+    ]
+  },
+  "info": {
+    "geodesic_distance": 37,
+    "euclidean_distance": 30.0389
+  },
+  "map_name": "NYC_test",
+  "true_name": "SUV",
+  "object_name": "SM_SUV_01a5",
+  "pose": [
+    [
+      65.4000015258789,
+      426.5,
+      1.399999976158142
+    ]
+  ],
+  "size": "mid(4.25*1.75=7.44 squares)",
+  "description": "Boxy four-door vehicle, red exterior with tinted windows and roof rails, elevated ground clearance and robust frame, designed for passenger transport and off-road capability.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

@@ -1,0 +1,35 @@
+{
+  "episode_id": "22",
+  "start_pose": {
+    "start_position": [
+      -228.9774996476363,
+      6.626597408666555,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9633091997502062,
+      0.2683940865157375
+    ]
+  },
+  "info": {
+    "geodesic_distance": 47,
+    "euclidean_distance": 37.52
+  },
+  "map_name": "ModularNeighborhood_test",
+  "true_name": "GarbageBag",
+  "object_name": "SM_GarbageBag_01_165",
+  "pose": [
+    [
+      -226.5,
+      43.20000076293945,
+      1.0
+    ]
+  ],
+  "size": "small(0.75*0.5=0.38 squares)",
+  "description": "Organic rounded form, glossy black plastic material with tied top, wrinkled surface texture, used for holding waste or refuse.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

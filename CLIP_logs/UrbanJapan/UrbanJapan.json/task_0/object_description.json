@@ -1,0 +1,35 @@
+{
+  "episode_id": "0",
+  "start_pose": {
+    "start_position": [
+      -30.16203876424798,
+      0.1954642596416889,
+      -6.400000095367432
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.34699427638818364,
+      -0.937867246551366
+    ]
+  },
+  "info": {
+    "geodesic_distance": 90,
+    "euclidean_distance": 38.3278
+  },
+  "map_name": "UrbanJapan_test",
+  "true_name": "Truck",
+  "object_name": "SM_BoxTruck_01a_200",
+  "pose": [
+    [
+      7.799999713897705,
+      1.899999976158142,
+      1.5999999046325684
+    ]
+  ],
+  "size": "big(3.25*7.0=22.75 squares)",
+  "description": "Geometric rectangular form, matte gray metal exterior with ribbed roof and dual rear doors, black trim and utility detailing, designed for cargo transport or delivery use.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

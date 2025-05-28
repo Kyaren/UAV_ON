@@ -1,0 +1,35 @@
+{
+  "episode_id": "14",
+  "start_pose": {
+    "start_position": [
+      -31.886885083887577,
+      285.6283329117704,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.3268549376460544,
+      0.9450745207317749
+    ]
+  },
+  "info": {
+    "geodesic_distance": 69,
+    "euclidean_distance": 48.7712
+  },
+  "map_name": "BrushifyRoad_test",
+  "true_name": " Tomato",
+  "object_name": "SM_Tomato_172",
+  "pose": [
+    [
+      -29.827693939208984,
+      252.70375061035156,
+      28.921659469604492
+    ]
+  ],
+  "size": " small(0.5*0.5=0.25 squares)",
+  "description": " Organic spherical shape, smooth red skin with slight shine, short green stem on top, suitable for consumption as a vegetable or fruit.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

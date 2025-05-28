@@ -1,0 +1,35 @@
+{
+  "episode_id": "66",
+  "start_pose": {
+    "start_position": [
+      -12.53265841168988,
+      -2.877092040364829,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9368593214050718,
+      -0.3497064653340406
+    ]
+  },
+  "info": {
+    "geodesic_distance": 40,
+    "euclidean_distance": 26.0218
+  },
+  "map_name": "WinterTown_test",
+  "true_name": " TreeOld",
+  "object_name": "SM_TreeOld02Branches_14",
+  "pose": [
+    [
+      -1.8927440643310547,
+      19.50725555419922,
+      0.92872554063797
+    ]
+  ],
+  "size": " big(5.25*6.5=34.13 squares)",
+  "description": " Organic vertical form, dark brown bark with many twisting leafless branches, gnarled trunk with irregular branching pattern, consistent with a deciduous tree in dormant or dead state.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

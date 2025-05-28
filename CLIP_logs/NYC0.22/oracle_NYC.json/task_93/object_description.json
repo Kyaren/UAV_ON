@@ -1,0 +1,35 @@
+{
+  "episode_id": "93",
+  "start_pose": {
+    "start_position": [
+      131.52927800762237,
+      446.2198695257851,
+      -6.600000023841858
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.25687440647438503,
+      0.9664447937147949
+    ]
+  },
+  "info": {
+    "geodesic_distance": 19,
+    "euclidean_distance": 14.2771
+  },
+  "map_name": "NYC_test",
+  "true_name": "Limousine",
+  "object_name": "SK_Limo_Rigged3",
+  "pose": [
+    [
+      118.19999694824219,
+      447.29998779296875,
+      1.399999976158142
+    ]
+  ],
+  "size": "big(2.0*6.25=12.5 squares)",
+  "description": "Long luxury vehicle, cream-colored exterior with extended body and multiple windows, classic design with chrome trim and spacious rear compartment, intended for chauffeured transport.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

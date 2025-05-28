@@ -1,0 +1,35 @@
+{
+  "episode_id": "3",
+  "start_pose": {
+    "start_position": [
+      -43.517989969526084,
+      -73.44742780844342,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.26712425890416003,
+      0.9636620934253372
+    ]
+  },
+  "info": {
+    "geodesic_distance": 53,
+    "euclidean_distance": 31.0416
+  },
+  "map_name": "WinterTown_test",
+  "true_name": " Tractor",
+  "object_name": "SM_Tractor_SingleMesh_9",
+  "pose": [
+    [
+      -26.6927433013916,
+      -55.39274215698242,
+      11.82872486114502
+    ]
+  ],
+  "size": " big(7.5*3.5=26.25 squares)",
+  "description": " Geometric vehicle form, orange metal body with large black treaded tires, enclosed cabin with side mirrors and exhaust pipe, used for agricultural or industrial work.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

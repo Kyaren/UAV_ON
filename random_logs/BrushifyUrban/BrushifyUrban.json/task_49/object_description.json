@@ -1,0 +1,35 @@
+{
+  "episode_id": "49",
+  "start_pose": {
+    "start_position": [
+      867.9271015948286,
+      -552.7847416543414,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9244385888052673,
+      -0.38133095275328205
+    ]
+  },
+  "info": {
+    "geodesic_distance": 33,
+    "euclidean_distance": 20.3317
+  },
+  "map_name": "BrushifyUrban_test",
+  "true_name": "Limousine",
+  "object_name": "SK_Limo_Rigged_18",
+  "pose": [
+    [
+      857.3999633789062,
+      -537.8999633789062,
+      2.0
+    ]
+  ],
+  "size": "big(5.5*2=11 squares)",
+  "description": "Extended luxury sedan with elongated body, white exterior and tinted windows, intended for chauffeured transport.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

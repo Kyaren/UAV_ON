@@ -1,0 +1,35 @@
+{
+  "episode_id": "145",
+  "start_pose": {
+    "start_position": [
+      162.4628171125675,
+      363.1617089042092,
+      -9.299999952316284
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.45319552262558854,
+      -0.8914111387413328
+    ]
+  },
+  "info": {
+    "geodesic_distance": 55,
+    "euclidean_distance": 41.5514
+  },
+  "map_name": "NYC_test",
+  "true_name": "GlobeSculpture",
+  "object_name": "SM_Statue01_417",
+  "pose": [
+    [
+      151.39999389648438,
+      402.8999938964844,
+      -1.2999999523162842
+    ]
+  ],
+  "size": "big(6.0*6.0=36.0 squares)",
+  "description": "Geometric spherical form, bronze metallic wireframe globe with map outlines, mounted on a stone pedestal, ornamental display likely for educational or symbolic purposes.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

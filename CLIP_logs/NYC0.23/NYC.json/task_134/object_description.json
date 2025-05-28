@@ -1,0 +1,35 @@
+{
+  "episode_id": "134",
+  "start_pose": {
+    "start_position": [
+      100.85154641657799,
+      253.50044256344478,
+      -6.7821338176727295
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.762879206078577,
+      -0.6465410404088205
+    ]
+  },
+  "info": {
+    "geodesic_distance": 50,
+    "euclidean_distance": 35.2411
+  },
+  "map_name": "NYC_test",
+  "true_name": "Fountain",
+  "object_name": "SM_FountainBase8",
+  "pose": [
+    [
+      70.95101165771484,
+      235.53125,
+      1.2178661823272705
+    ]
+  ],
+  "size": "big(6.0*6.0=36.0 squares)",
+  "description": "Geometric circular structure, light stone material with tiered central spout, octagonal base around spout and wide circular basin, used as a decorative water feature.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

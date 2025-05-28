@@ -1,0 +1,35 @@
+{
+  "episode_id": "58",
+  "start_pose": {
+    "start_position": [
+      -23.257500275328766,
+      273.8411847890124,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9788400761529886,
+      -0.20462674633784192
+    ]
+  },
+  "info": {
+    "geodesic_distance": 86,
+    "euclidean_distance": 51.8991
+  },
+  "map_name": "BrushifyRoad_test",
+  "true_name": " Piano",
+  "object_name": "SM_Piano_83",
+  "pose": [
+    [
+      -49.827693939208984,
+      249.30374145507812,
+      30.22165870666504
+    ]
+  ],
+  "size": " small(2.5*1.25=3.13 squares)",
+  "description": " Rectangular upright shape with detailed wooden texture, visible keyboard and carved decorative elements, designed as a musical instrument for playing melodies.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

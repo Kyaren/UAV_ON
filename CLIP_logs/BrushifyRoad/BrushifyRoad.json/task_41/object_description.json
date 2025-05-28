@@ -1,0 +1,35 @@
+{
+  "episode_id": "41",
+  "start_pose": {
+    "start_position": [
+      -54.09269685083703,
+      190.9696184143576,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.4617153133598288,
+      -0.887028167201603
+    ]
+  },
+  "info": {
+    "geodesic_distance": 65,
+    "euclidean_distance": 47.6999
+  },
+  "map_name": "BrushifyRoad_test",
+  "true_name": " HoseStand",
+  "object_name": "SM_Hose_9",
+  "pose": [
+    [
+      -70.32769012451172,
+      196.40374755859375,
+      37.52165985107422
+    ]
+  ],
+  "size": " small(0.5*0.25=0.13 squares)",
+  "description": " Vertical metal stand with a coiled green hose, slender structure with hook and base, typically used for holding and organizing garden hoses.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

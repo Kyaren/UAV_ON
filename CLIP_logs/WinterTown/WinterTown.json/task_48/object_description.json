@@ -1,0 +1,35 @@
+{
+  "episode_id": "48",
+  "start_pose": {
+    "start_position": [
+      -36.253267858229165,
+      -108.84956692731976,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.7692203013695004,
+      -0.6389836679923948
+    ]
+  },
+  "info": {
+    "geodesic_distance": 43,
+    "euclidean_distance": 60.523
+  },
+  "map_name": "WinterTown_test",
+  "true_name": " Piano",
+  "object_name": "SM_Piano_94",
+  "pose": [
+    [
+      -75.49274444580078,
+      -66.79273986816406,
+      11.82872486114502
+    ]
+  ],
+  "size": " small(2*1.25=2.5 squares)",
+  "description": " Rectangular upright shape, dark wooden texture with ornate side carvings, visible keyboard section and foot pedals, designed for musical performance.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

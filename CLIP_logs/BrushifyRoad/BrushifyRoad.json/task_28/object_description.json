@@ -1,0 +1,35 @@
+{
+  "episode_id": "28",
+  "start_pose": {
+    "start_position": [
+      -83.04761208373921,
+      244.9811643223061,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.8470525954582555,
+      0.5315090784995425
+    ]
+  },
+  "info": {
+    "geodesic_distance": 89,
+    "euclidean_distance": 52.6234
+  },
+  "map_name": "BrushifyRoad_test",
+  "true_name": " RecycleBin",
+  "object_name": "bin_277",
+  "pose": [
+    [
+      -61.62769317626953,
+      277.90374755859375,
+      28.02165985107422
+    ]
+  ],
+  "size": " small(1.0*1.0=1.0 squares)",
+  "description": " Cylindrical form, solid blue plastic surface, white recycling symbol on front, used for collecting recyclable waste.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

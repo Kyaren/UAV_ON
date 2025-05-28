@@ -1,0 +1,35 @@
+{
+  "episode_id": "2",
+  "start_pose": {
+    "start_position": [
+      -78.14844755077063,
+      279.36436036401653,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.6529770616181304,
+      0.7573776845145045
+    ]
+  },
+  "info": {
+    "geodesic_distance": 80,
+    "euclidean_distance": 48.8863
+  },
+  "map_name": "BrushifyRoad_test",
+  "true_name": " SwingSet",
+  "object_name": "SM_Swing04_11",
+  "pose": [
+    [
+      -50.02769470214844,
+      263.3037414550781,
+      29.621660232543945
+    ]
+  ],
+  "size": " small(6.0*0.25=1.5 squares)",
+  "description": " Metal frame with two suspended seats, yellow crossbar and black seats connected by yellow ropes, typical playground equipment for swinging.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

@@ -1,0 +1,35 @@
+{
+  "episode_id": "13",
+  "start_pose": {
+    "start_position": [
+      -246.7050158042518,
+      -29.91000533885194,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.7028429813530884,
+      0.7113450242763367
+    ]
+  },
+  "info": {
+    "geodesic_distance": 91,
+    "euclidean_distance": 59.5435
+  },
+  "map_name": "ModularNeighborhood_test",
+  "true_name": "Human",
+  "object_name": "BP_ma_waiter_02_2",
+  "pose": [
+    [
+      -204.39999389648438,
+      11.399999618530273,
+      0.014047445729374886
+    ]
+  ],
+  "size": "small(1*0.75=0.75 squares)",
+  "description": "Organic bipedal form, fully black attire with fitted clothing texture, bald head and upright posture, visual indicators suggest purposeful movement or patrolling function.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

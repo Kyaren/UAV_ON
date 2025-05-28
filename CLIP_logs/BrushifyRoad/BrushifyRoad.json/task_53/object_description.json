@@ -1,0 +1,35 @@
+{
+  "episode_id": "53",
+  "start_pose": {
+    "start_position": [
+      -7.260502472975531,
+      249.27665347474675,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9905740117755683,
+      0.13697856472768444
+    ]
+  },
+  "info": {
+    "geodesic_distance": 64,
+    "euclidean_distance": 43.5106
+  },
+  "map_name": "BrushifyRoad_test",
+  "true_name": " MilkCanisters",
+  "object_name": "SM_Milk_Container_Set2_69",
+  "pose": [
+    [
+      -30.527694702148438,
+      254.30374145507812,
+      29.421659469604492
+    ]
+  ],
+  "size": " small(1.0*0.75=0.75 squares)",
+  "description": " Cylindrical metal forms with rounded tops, weathered blue-gray texture, grouped together in a triangular layout, likely used for storing or transporting milk.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

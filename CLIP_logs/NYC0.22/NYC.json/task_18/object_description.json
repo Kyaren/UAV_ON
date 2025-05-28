@@ -1,0 +1,35 @@
+{
+  "episode_id": "18",
+  "start_pose": {
+    "start_position": [
+      305.8938970874709,
+      77.74665131173663,
+      -7.779487311840057
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9906046389164455,
+      -0.1367568987554877
+    ]
+  },
+  "info": {
+    "geodesic_distance": 99,
+    "euclidean_distance": 65.2504
+  },
+  "map_name": "NYC_test",
+  "true_name": "Human",
+  "object_name": "BP_ma_waiter_02_2",
+  "pose": [
+    [
+      350.3999938964844,
+      125.19999694824219,
+      0.22051268815994263
+    ]
+  ],
+  "size": "small(1.25*1.25=1.56 squares)",
+  "description": "Organic upright form, dark gray outfit with bald head, simple monochrome clothing with fitted design, represents a generic civilian or agent figure.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

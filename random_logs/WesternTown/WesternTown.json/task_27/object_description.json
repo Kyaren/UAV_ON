@@ -1,0 +1,35 @@
+{
+  "episode_id": "27",
+  "start_pose": {
+    "start_position": [
+      -74.00009526123245,
+      18.257718120792305,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.641667054935114,
+      -0.7669833053012937
+    ]
+  },
+  "info": {
+    "geodesic_distance": 40,
+    "euclidean_distance": 31.3177
+  },
+  "map_name": "WesternTown_test",
+  "true_name": " Broom",
+  "object_name": "SM_Broom_132",
+  "pose": [
+    [
+      -44.021854400634766,
+      14.383950233459473,
+      1.1912304162979126
+    ]
+  ],
+  "size": " small(1.0*0.25=0.25 squares)",
+  "description": " Long vertical stick shape with a flat, wide base, wooden texture on handle and dark bristles at the bottom, designed for sweeping surfaces.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

@@ -1,0 +1,35 @@
+{
+  "episode_id": "14",
+  "start_pose": {
+    "start_position": [
+      1326.7625556776075,
+      -1020.0230523006716,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.2648346873229854,
+      0.9642938288667705
+    ]
+  },
+  "info": {
+    "geodesic_distance": 92,
+    "euclidean_distance": 61.2325
+  },
+  "map_name": "BrushifyUrban_test",
+  "true_name": "Seesaw",
+  "object_name": "SM_Seesaw01_90",
+  "pose": [
+    [
+      1282.0,
+      -979.199951171875,
+      1.899999976158142
+    ]
+  ],
+  "size": "mid(3.25*2=6.5 squares)",
+  "description": "Rectangular metal frame with two opposing seats, blue support arms and curved base, intended for playground use or balancing play.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

@@ -1,0 +1,35 @@
+{
+  "episode_id": "38",
+  "start_pose": {
+    "start_position": [
+      -588.8314067113629,
+      319.3601010802538,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9748860899111921,
+      -0.22270408998863755
+    ]
+  },
+  "info": {
+    "geodesic_distance": 24,
+    "euclidean_distance": 16.2826
+  },
+  "map_name": "CityPark_test",
+  "true_name": "Motorcycle",
+  "object_name": "SK_Motorbike_Rigged2",
+  "pose": [
+    [
+      -602.0999755859375,
+      322.5,
+      1.899999976158142
+    ]
+  ],
+  "size": "small(2.0*0.75=1.6 squares)",
+  "description": "Elongated two-wheeled shape, matte green body with black frame and chrome accents, visible handlebars and exposed engine, designed for individual road transport.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

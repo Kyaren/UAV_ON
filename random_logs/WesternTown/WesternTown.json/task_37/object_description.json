@@ -1,0 +1,35 @@
+{
+  "episode_id": "37",
+  "start_pose": {
+    "start_position": [
+      -40.733741966916654,
+      -26.883525340054252,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.886504929519546,
+      -0.4627191480126414
+    ]
+  },
+  "info": {
+    "geodesic_distance": 61,
+    "euclidean_distance": 45.4698
+  },
+  "map_name": "WesternTown_test",
+  "true_name": " Watermelon",
+  "object_name": "SM_Watermelon_98",
+  "pose": [
+    [
+      -30.021854400634766,
+      16.683950424194336,
+      0.3912304639816284
+    ]
+  ],
+  "size": " small(0.75*0.75=0.56 squares)",
+  "description": " Spherical shape, green striped rind, smooth surface texture, consistent with a fruit used for consumption.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

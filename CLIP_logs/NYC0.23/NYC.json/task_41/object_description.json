@@ -1,0 +1,35 @@
+{
+  "episode_id": "41",
+  "start_pose": {
+    "start_position": [
+      456.3223440378621,
+      -4.520398557827278,
+      -6.600000023841858
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.4285419085535065,
+      0.9035219048884858
+    ]
+  },
+  "info": {
+    "geodesic_distance": 47,
+    "euclidean_distance": 31.0356
+  },
+  "map_name": "NYC_test",
+  "true_name": "Car",
+  "object_name": "SK_Sedan01Rigged7",
+  "pose": [
+    [
+      472.79998779296875,
+      21.299999237060547,
+      1.399999976158142
+    ]
+  ],
+  "size": "mid(4.25*2.0=9.5 squares)",
+  "description": "Geometric four-wheeled form, worn metallic green exterior with rust and dirt patches, four-door design with tinted windows, suitable for ground transportation.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

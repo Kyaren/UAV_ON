@@ -1,0 +1,35 @@
+{
+  "episode_id": "49",
+  "start_pose": {
+    "start_position": [
+      -207.4652837368867,
+      23.90573257216768,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9386401475961349,
+      0.34489806221651365
+    ]
+  },
+  "info": {
+    "geodesic_distance": 63,
+    "euclidean_distance": 44.9515
+  },
+  "map_name": "ModularNeighborhood_test",
+  "true_name": "NewspaperStand",
+  "object_name": "SM_NewsPaperStand02_173",
+  "pose": [
+    [
+      -191.3000030517578,
+      -17.5,
+      -0.29999998211860657
+    ]
+  ],
+  "size": "small(1*0.75=0.75 squares)",
+  "description": "Geometric tiered structure, beige and dark brown surface with visible stacked compartments, printed text signage on front, used for organized display and distribution of newspapers.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

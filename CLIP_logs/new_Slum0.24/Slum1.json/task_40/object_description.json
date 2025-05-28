@@ -1,0 +1,35 @@
+{
+  "episode_id": "40",
+  "start_pose": {
+    "start_position": [
+      -12.522382867231812,
+      57.09978150963771,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9652918002109602,
+      -0.26117377442132994
+    ]
+  },
+  "info": {
+    "geodesic_distance": 33,
+    "euclidean_distance": 26.5953
+  },
+  "map_name": "Slum_test",
+  "true_name": " PipeConnection",
+  "object_name": "SM_Plier_13",
+  "pose": [
+    [
+      -9.237675666809082,
+      31.27068328857422,
+      -1.5799977779388428
+    ]
+  ],
+  "size": " small(0.25*0.25=0.06 squares)",
+  "description": " Narrow vertical frame, metallic silver texture, looped ring structure at the top with a slim support pole, likely for hose attachment or alignment.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

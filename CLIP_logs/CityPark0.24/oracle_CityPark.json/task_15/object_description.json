@@ -1,0 +1,35 @@
+{
+  "episode_id": "15",
+  "start_pose": {
+    "start_position": [
+      -378.1734562929114,
+      -359.3070092676125,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.017086968966656752,
+      0.9998540070888012
+    ]
+  },
+  "info": {
+    "geodesic_distance": 53,
+    "euclidean_distance": 33.6959
+  },
+  "map_name": "CityPark_test",
+  "true_name": "SwingSet",
+  "object_name": "PlayGround6_red_swing",
+  "pose": [
+    [
+      -357.9148254394531,
+      -333.3434753417969,
+      0.13423308730125427
+    ]
+  ],
+  "size": "mid(4.25*1.5=6.38 squares)",
+  "description": "Geometric frame structure, bright red finish with suspended black swings on chains, arched support bars and evenly spaced seats, designed for children's playground activity.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

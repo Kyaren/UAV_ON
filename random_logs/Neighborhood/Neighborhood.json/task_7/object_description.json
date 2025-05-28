@@ -1,0 +1,35 @@
+{
+  "episode_id": "7",
+  "start_pose": {
+    "start_position": [
+      -211.2417789478661,
+      -61.27191228875848,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.2837608304120498,
+      0.9588950886952461
+    ]
+  },
+  "info": {
+    "geodesic_distance": 58,
+    "euclidean_distance": 38.2826
+  },
+  "map_name": "ModularNeighborhood_test",
+  "true_name": "Turntable",
+  "object_name": "SM_SpinningWheel02_51",
+  "pose": [
+    [
+      -189.6999969482422,
+      -30.299999237060547,
+      -0.5
+    ]
+  ],
+  "size": "small(2*2=4 squares)",
+  "description": "Geometric circular form, blue metal platform with yellow railings in radial configuration, slight wear on surface with central rotating axis, designed for manual spinning in playground environments.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

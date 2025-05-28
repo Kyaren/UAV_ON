@@ -1,0 +1,35 @@
+{
+  "episode_id": "5",
+  "start_pose": {
+    "start_position": [
+      30.75596050492021,
+      117.67116628592872,
+      -6.400000095367432
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9539255820675965,
+      0.3000433033363637
+    ]
+  },
+  "info": {
+    "geodesic_distance": 109,
+    "euclidean_distance": 43.6619
+  },
+  "map_name": "UrbanJapan_test",
+  "true_name": "SteamRoller",
+  "object_name": "SM_SteamRoller_176",
+  "pose": [
+    [
+      12.899999618530273,
+      157.1999969482422,
+      1.5999999046325684
+    ]
+  ],
+  "size": "big(7.0*3.5=24.5 squares)",
+  "description": "Geometric industrial form, yellow-orange body with black cabin and large cylindrical front roller, thick rear tires and safety railing, used for compacting road surfaces in construction.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

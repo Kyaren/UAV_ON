@@ -1,0 +1,35 @@
+{
+  "episode_id": "35",
+  "start_pose": {
+    "start_position": [
+      -30.03344256368618,
+      -59.91474737985912,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.7597547874544055,
+      -0.6502097068947149
+    ]
+  },
+  "info": {
+    "geodesic_distance": 19,
+    "euclidean_distance": 11.6812
+  },
+  "map_name": "BrushifyRoad_test",
+  "true_name": " Bull",
+  "object_name": "Longhorn_cattle_v2_Walk_anim_15",
+  "pose": [
+    [
+      -31.111913681030273,
+      -70.94914245605469,
+      -10.678339958190918
+    ]
+  ],
+  "size": " big(6.5*2=13 squares)",
+  "description": " Organic muscular form, pale beige hide with prominent curved horns, thick neck and broad body, commonly used in livestock farming.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

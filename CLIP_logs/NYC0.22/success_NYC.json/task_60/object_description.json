@@ -1,0 +1,35 @@
+{
+  "episode_id": "60",
+  "start_pose": {
+    "start_position": [
+      274.8570329788753,
+      473.97214684595843,
+      -7.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9397164042079486,
+      0.3419547918402131
+    ]
+  },
+  "info": {
+    "geodesic_distance": 16,
+    "euclidean_distance": 13.8093
+  },
+  "map_name": "NYC_test",
+  "true_name": "Sandbox",
+  "object_name": "SM_SandFrame01_38",
+  "pose": [
+    [
+      274.79998779296875,
+      461.0999755859375,
+      1.0
+    ]
+  ],
+  "size": "big(4.0*4.0=16.0 squares)",
+  "description": "Circular enclosed structure, gray concrete rim with embedded black tires forming a repeating arch pattern, sandy interior surface, designed for children's play.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

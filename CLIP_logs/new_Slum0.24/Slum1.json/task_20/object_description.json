@@ -1,0 +1,35 @@
+{
+  "episode_id": "20",
+  "start_pose": {
+    "start_position": [
+      -49.46573614909266,
+      -10.562670210944855,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9853750814031936,
+      0.17039938071967733
+    ]
+  },
+  "info": {
+    "geodesic_distance": 87,
+    "euclidean_distance": 56.7928
+  },
+  "map_name": "Slum_test",
+  "true_name": " CablePulley",
+  "object_name": "SM_Cable_Pulley_8",
+  "pose": [
+    [
+      -10.037675857543945,
+      29.670682907104492,
+      0.22000212967395782
+    ]
+  ],
+  "size": " small(0.75*0.75=0.56 squares)",
+  "description": " Cylindrical shape with grooved edges, dark metal texture, central opening for cable passage, used for guiding or supporting cables.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

@@ -1,0 +1,35 @@
+{
+  "episode_id": "2",
+  "start_pose": {
+    "start_position": [
+      10.828618318094215,
+      -19.357104101607817,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9837796916095592,
+      -0.17938093091686313
+    ]
+  },
+  "info": {
+    "geodesic_distance": 65,
+    "euclidean_distance": 46.0081
+  },
+  "map_name": "WesternTown_test",
+  "true_name": " SatDish",
+  "object_name": "SM_SatDish01_8",
+  "pose": [
+    [
+      -31.321855545043945,
+      -0.9160497784614563,
+      -7.108769416809082
+    ]
+  ],
+  "size": " small(0.75*0.75=0.56 squares)",
+  "description": " Concave circular shape, light gray metallic surface, mounted support arm with central feed horn, used for receiving satellite signals.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

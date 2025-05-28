@@ -1,0 +1,35 @@
+{
+  "episode_id": "61",
+  "start_pose": {
+    "start_position": [
+      291.1433261439377,
+      893.7452071674256,
+      -6.600000023841858
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.21724431646735604,
+      0.9761172608670698
+    ]
+  },
+  "info": {
+    "geodesic_distance": 47,
+    "euclidean_distance": 19.4271
+  },
+  "map_name": "NYC_test",
+  "true_name": "Car",
+  "object_name": "SM_Sedan_01a_18",
+  "pose": [
+    [
+      305.1000061035156,
+      906.2999877929688,
+      1.399999976158142
+    ]
+  ],
+  "size": "mid(4.5*2.0=9.0 squares)",
+  "description": "Compact four-door sedan, metallic blue exterior with tinted windows and rear spoiler, sleek profile with standard alloy wheels, designed for personal transportation.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

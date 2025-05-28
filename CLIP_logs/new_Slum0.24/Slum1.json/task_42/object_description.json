@@ -1,0 +1,35 @@
+{
+  "episode_id": "42",
+  "start_pose": {
+    "start_position": [
+      -40.7415411892587,
+      -2.740280315368395,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.4331869147391385,
+      -0.9013041089991692
+    ]
+  },
+  "info": {
+    "geodesic_distance": 76,
+    "euclidean_distance": 49.5423
+  },
+  "map_name": "Slum_test",
+  "true_name": " SteelStructure",
+  "object_name": "SM_Steel_Structure_16",
+  "pose": [
+    [
+      -5.937675476074219,
+      31.77068328857422,
+      0.22000212967395782
+    ]
+  ],
+  "size": " mid(2.5*6.0=15.0 squares)",
+  "description": " Geometric rectangular frame, dark rusted steel material with intersecting support beams, open-frame construction with braced legs, likely used for structural support or as a platform base.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

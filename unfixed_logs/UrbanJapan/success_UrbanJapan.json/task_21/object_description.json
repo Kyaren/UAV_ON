@@ -1,0 +1,35 @@
+{
+  "episode_id": "21",
+  "start_pose": {
+    "start_position": [
+      -5.181712836354324,
+      88.38404442372716,
+      -6.600000023841858
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.6872369067546455,
+      -0.7264333651439109
+    ]
+  },
+  "info": {
+    "geodesic_distance": 62,
+    "euclidean_distance": 43.2223
+  },
+  "map_name": "UrbanJapan_test",
+  "true_name": "Umbrella",
+  "object_name": "SM_Umbrella02_52",
+  "pose": [
+    [
+      33.599998474121094,
+      106.79999542236328,
+      1.399999976158142
+    ]
+  ],
+  "size": "small(0.75*0.75=0.56 squares)",
+  "description": "Tapered conical form, red-and-white striped fabric with closed canopy, slim central pole and round base, typically used for outdoor shade when opened.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

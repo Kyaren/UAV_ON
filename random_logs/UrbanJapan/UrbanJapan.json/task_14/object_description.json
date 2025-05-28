@@ -1,0 +1,35 @@
+{
+  "episode_id": "14",
+  "start_pose": {
+    "start_position": [
+      6.446167738720412,
+      150.53464702036894,
+      -7.411499977111816
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9544558997197155,
+      -0.29835203282402567
+    ]
+  },
+  "info": {
+    "geodesic_distance": 25,
+    "euclidean_distance": 16.0043
+  },
+  "map_name": "UrbanJapan_test",
+  "true_name": "Human",
+  "object_name": "BP_ma_construction_worker_01_2",
+  "pose": [
+    [
+      12.899999618530273,
+      164.3000030517578,
+      0.5885000228881836
+    ]
+  ],
+  "size": "small(1.0*1.5=1.5 squares)",
+  "description": "Organic upright form, gray jumpsuit with yellow gloves and black boots, bald head, walking posture suggests movement or task-oriented activity.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

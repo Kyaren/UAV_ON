@@ -1,0 +1,35 @@
+{
+  "episode_id": "18",
+  "start_pose": {
+    "start_position": [
+      1125.535463575144,
+      -996.2379074233296,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.4513050848850509,
+      0.8923697217840243
+    ]
+  },
+  "info": {
+    "geodesic_distance": 45,
+    "euclidean_distance": 34.7748
+  },
+  "map_name": "BrushifyUrban_test",
+  "true_name": "Wagon",
+  "object_name": "SM_Cart_v1_low_11273",
+  "pose": [
+    [
+      1092.199951171875,
+      -991.8999633789062,
+      1.899999976158142
+    ]
+  ],
+  "size": "mid(3.75*1.5=5.63 squares)",
+  "description": "Wooden cart with large spoked wheels and extended handle, rustic appearance, intended for carrying goods or farm use.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

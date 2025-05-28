@@ -1,0 +1,35 @@
+{
+  "episode_id": "54",
+  "start_pose": {
+    "start_position": [
+      18.92521063262867,
+      -889.3502075766686,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.5098749086277685,
+      0.8602485556813361
+    ]
+  },
+  "info": {
+    "geodesic_distance": 52,
+    "euclidean_distance": 43.3489
+  },
+  "map_name": "BrushifyUrban_test",
+  "true_name": "PhoneBooth",
+  "object_name": "SM_Booth02_SM_Booth2",
+  "pose": [
+    [
+      16.399999618530273,
+      -847.0,
+      1.899999976158142
+    ]
+  ],
+  "size": "mid(2*2=4 square)",
+  "description": "Rectangular enclosed structure with glass windows and red metal frame, labeled \"TELEPHONE,\" intended for public phone access.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

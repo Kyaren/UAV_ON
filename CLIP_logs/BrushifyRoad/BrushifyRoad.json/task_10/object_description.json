@@ -1,0 +1,35 @@
+{
+  "episode_id": "10",
+  "start_pose": {
+    "start_position": [
+      -61.614291862803306,
+      287.37567252572074,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.45137685529523935,
+      -0.8923334211514105
+    ]
+  },
+  "info": {
+    "geodesic_distance": 82,
+    "euclidean_distance": 52.3908
+  },
+  "map_name": "BrushifyRoad_test",
+  "true_name": " WoodenCart",
+  "object_name": "SM_Cart_01_65",
+  "pose": [
+    [
+      -24.368709564208984,
+      277.2331848144531,
+      28.421659469604492
+    ]
+  ],
+  "size": " mid(2.25*2=4.5 squares)",
+  "description": " Geometric open-frame structure, brown wooden texture with two large spoked wheels and front handles, used for manual or animal-assisted transport.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

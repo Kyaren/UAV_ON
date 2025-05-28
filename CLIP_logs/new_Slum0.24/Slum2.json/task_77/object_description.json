@@ -1,0 +1,35 @@
+{
+  "episode_id": "77",
+  "start_pose": {
+    "start_position": [
+      -33.92471694104789,
+      -85.87576777404387,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.08267284297793112,
+      0.9965767411664525
+    ]
+  },
+  "info": {
+    "geodesic_distance": 138,
+    "euclidean_distance": 32.3226
+  },
+  "map_name": "Slum_test",
+  "true_name": " Tarp",
+  "object_name": "SM_Tarp_04_148",
+  "pose": [
+    [
+      -10.237675666809082,
+      -65.72931671142578,
+      1.8200020790100098
+    ]
+  ],
+  "size": " small(1.25*1=1.25 squares)",
+  "description": " Organic irregular form, dark blue fabric with heavy creasing and soft shadows, highly crumpled surface suggesting pliability, used as a cover or protective sheet.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

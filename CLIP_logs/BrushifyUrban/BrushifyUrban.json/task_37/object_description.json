@@ -1,0 +1,35 @@
+{
+  "episode_id": "37",
+  "start_pose": {
+    "start_position": [
+      376.29562893954096,
+      -1051.3727994993633,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9978503875639749,
+      0.06553322850604189
+    ]
+  },
+  "info": {
+    "geodesic_distance": 93,
+    "euclidean_distance": 60.4337
+  },
+  "map_name": "BrushifyUrban_test",
+  "true_name": "NewsPaperStand",
+  "object_name": "SM_NewsPaperStand_664",
+  "pose": [
+    [
+      423.29998779296875,
+      -1088.2999267578125,
+      1.899999976158142
+    ]
+  ],
+  "size": "small(1.25*1.0=1.25 squares)",
+  "description": "Geometric upright block form, dark brown wood with exposed paper stacks and open-back shelving, filled with open and folded newspapers, used for distributing or displaying printed media.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

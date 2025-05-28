@@ -1,0 +1,35 @@
+{
+  "episode_id": "0",
+  "start_pose": {
+    "start_position": [
+      -38.40931558873909,
+      307.3989678023632,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.965695295421035,
+      0.2596778704504485
+    ]
+  },
+  "info": {
+    "geodesic_distance": 91,
+    "euclidean_distance": 57.0111
+  },
+  "map_name": "BrushifyRoad_test",
+  "true_name": " MonkeyBars",
+  "object_name": "SM_PullupBar01_2",
+  "pose": [
+    [
+      -56.22769546508789,
+      267.5037536621094,
+      29.621660232543945
+    ]
+  ],
+  "size": " small(2.0*0.5=1.0 squares)",
+  "description": " Three vertical red poles connected by horizontal yellow bars at varying heights, metal construction, typically used for climbing or swinging in playgrounds.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

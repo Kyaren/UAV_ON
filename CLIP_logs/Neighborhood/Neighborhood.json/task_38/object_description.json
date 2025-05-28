@@ -1,0 +1,35 @@
+{
+  "episode_id": "38",
+  "start_pose": {
+    "start_position": [
+      -194.8300825844785,
+      -33.63532592646215,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9805627268457203,
+      -0.19620585801877888
+    ]
+  },
+  "info": {
+    "geodesic_distance": 86,
+    "euclidean_distance": 57.7184
+  },
+  "map_name": "ModularNeighborhood_test",
+  "true_name": "Dumpster",
+  "object_name": "SM_Dumpster_95",
+  "pose": [
+    [
+      -227.59999084472656,
+      13.199999809265137,
+      1.0
+    ]
+  ],
+  "size": "small(2*1.25=2.5 squares)",
+  "description": "Geometric rectangular form, dark green metal body with black hinged lid, surface shows wear and rust streaks, used for temporary waste storage.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

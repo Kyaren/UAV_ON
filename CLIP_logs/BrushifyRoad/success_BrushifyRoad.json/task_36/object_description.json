@@ -1,0 +1,35 @@
+{
+  "episode_id": "36",
+  "start_pose": {
+    "start_position": [
+      0.44903844026075745,
+      112.30228729627814,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.41457758995072075,
+      -0.9100139679755757
+    ]
+  },
+  "info": {
+    "geodesic_distance": 64,
+    "euclidean_distance": 48.9073
+  },
+  "map_name": "BrushifyRoad_test",
+  "true_name": " Bull",
+  "object_name": "Scottland_cattle_Eat_anim_2",
+  "pose": [
+    [
+      11.072304725646973,
+      65.40374755859375,
+      1.92166006565094
+    ]
+  ],
+  "size": " big(6.5*2=13 squares)",
+  "description": " Organic muscular form, reddish-brown hide with large curved horns, broad chest and sturdy legs, typically used in livestock farming.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

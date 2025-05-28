@@ -1,0 +1,35 @@
+{
+  "episode_id": "32",
+  "start_pose": {
+    "start_position": [
+      4.471999339945672,
+      133.74629229397488,
+      -6.600000023841858
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9334228696400038,
+      0.3587781298142635
+    ]
+  },
+  "info": {
+    "geodesic_distance": 41,
+    "euclidean_distance": 26.5671
+  },
+  "map_name": "UrbanJapan_test",
+  "true_name": "PosterPillar",
+  "object_name": "SM_prop_poster_pillar_with_posters_73",
+  "pose": [
+    [
+      23.600000381469727,
+      116.0,
+      1.399999976158142
+    ]
+  ],
+  "size": "big(4.0*4.0=16.0 squares)",
+  "description": "Cylindrical structure, mixed media texture with colorful posters and green polygonal roof, top signage bands with newspaper titles, used for public advertisement and poster display.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

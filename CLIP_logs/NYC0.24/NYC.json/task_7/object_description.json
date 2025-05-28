@@ -1,0 +1,35 @@
+{
+  "episode_id": "7",
+  "start_pose": {
+    "start_position": [
+      392.3260806331163,
+      807.3467738003072,
+      -7.779487311840057
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.5554635485052141,
+      -0.8315408867169405
+    ]
+  },
+  "info": {
+    "geodesic_distance": 41,
+    "euclidean_distance": 27.5649
+  },
+  "map_name": "NYC_test",
+  "true_name": "Human",
+  "object_name": "BP_fe_clerk_02_2",
+  "pose": [
+    [
+      415.1999816894531,
+      792.7999877929688,
+      0.22051268815994263
+    ]
+  ],
+  "size": "small(1.25*1.25=1.56 squares)",
+  "description": "Organic upright form, orange-brown sleeveless top with dark blue pants and short hair, casual attire with muscular build, represents an active civilian figure.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

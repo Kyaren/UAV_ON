@@ -1,0 +1,35 @@
+{
+  "episode_id": "33",
+  "start_pose": {
+    "start_position": [
+      474.0877749675215,
+      -1075.3335657142495,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9971175977088103,
+      -0.07587157794201477
+    ]
+  },
+  "info": {
+    "geodesic_distance": 33,
+    "euclidean_distance": 21.1809
+  },
+  "map_name": "BrushifyUrban_test",
+  "true_name": "SnackCart",
+  "object_name": "SM_FoodStalls01_673",
+  "pose": [
+    [
+      459.8999938964844,
+      -1088.2999267578125,
+      1.899999976158142
+    ]
+  ],
+  "size": "mid(3*2.5=7.5 squares)",
+  "description": "Geometric rectangular structure, green and white striped canopy with printed signage reading “Snack Stop” and “Green Park,” open counter with visible snacks and bottles, designed for mobile food vending.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

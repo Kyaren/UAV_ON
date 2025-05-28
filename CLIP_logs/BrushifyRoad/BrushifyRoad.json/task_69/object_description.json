@@ -1,0 +1,35 @@
+{
+  "episode_id": "69",
+  "start_pose": {
+    "start_position": [
+      18.205212063501918,
+      259.60650794276864,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9892946709155495,
+      -0.1459316761299436
+    ]
+  },
+  "info": {
+    "geodesic_distance": 91,
+    "euclidean_distance": 61.6625
+  },
+  "map_name": "BrushifyRoad_test",
+  "true_name": " CoveredCart",
+  "object_name": "SM_WoodPalette_Covered_134",
+  "pose": [
+    [
+      -30.72769546508789,
+      251.0037384033203,
+      29.52165985107422
+    ]
+  ],
+  "size": " mid(2.25*2=4.5 squares)",
+  "description": " Rectangular structure with four legs and a fabric cover, dark green cloth draped over wooden frame, slightly elevated platform, likely used for storage or transport.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

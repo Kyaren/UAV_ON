@@ -1,0 +1,35 @@
+{
+  "episode_id": "80",
+  "start_pose": {
+    "start_position": [
+      499.724112070246,
+      123.84556144965877,
+      -6.800000071525574
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.06708893367368701,
+      0.9977469994836003
+    ]
+  },
+  "info": {
+    "geodesic_distance": 69,
+    "euclidean_distance": 49.1254
+  },
+  "map_name": "NYC_test",
+  "true_name": "VendingMachine",
+  "object_name": "SM_VendingMachine_71",
+  "pose": [
+    [
+      457.6999816894531,
+      98.9000015258789,
+      1.1999999284744263
+    ]
+  ],
+  "size": "small(1.0*1.75=1.75 squares)",
+  "description": "Rectangular metal cabinet, red exterior with transparent display showcasing snacks and beverages, coin and selection interface on the front, designed for automated dispensing of items.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

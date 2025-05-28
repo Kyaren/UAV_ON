@@ -1,0 +1,35 @@
+{
+  "episode_id": "59",
+  "start_pose": {
+    "start_position": [
+      -39.012687810326824,
+      -5.9189877121250305,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.7356392751763421,
+      -0.6773734987567981
+    ]
+  },
+  "info": {
+    "geodesic_distance": 52,
+    "euclidean_distance": 35.4742
+  },
+  "map_name": "BrushifyRoad_test",
+  "true_name": " TreeOld",
+  "object_name": "SM_TreeOld02Branches_92",
+  "pose": [
+    [
+      -10.22769546508789,
+      -26.19624900817871,
+      -2.678339719772339
+    ]
+  ],
+  "size": " big(5.5*5.5=25.25 squares)",
+  "description": " Organic branching form, dark textured bark with bare twisting limbs, no foliage present suggesting a winter or dead state, serves as natural vegetation.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

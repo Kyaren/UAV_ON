@@ -1,0 +1,35 @@
+{
+  "episode_id": "50",
+  "start_pose": {
+    "start_position": [
+      -56.46312202143917,
+      264.32112233099804,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.4999653346802358,
+      -0.8660454168911004
+    ]
+  },
+  "info": {
+    "geodesic_distance": 71,
+    "euclidean_distance": 43.5447
+  },
+  "map_name": "BrushifyRoad_test",
+  "true_name": "SatelliteDish",
+  "object_name": "SM_SatDIsh01_57",
+  "pose": [
+    [
+      -43.12769317626953,
+      298.1037292480469,
+      17.02165985107422
+    ]
+  ],
+  "size": "small(0.5*0.5=0.25 squares)",
+  "description": "Circular concave form with a central support rod, light gray metallic surface, designed for signal reception or transmission.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

@@ -1,0 +1,35 @@
+{
+  "episode_id": "3",
+  "start_pose": {
+    "start_position": [
+      340.34893709549885,
+      134.17764252992714,
+      -7.779487311840057
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.15479846498906405,
+      0.9879460689921437
+    ]
+  },
+  "info": {
+    "geodesic_distance": 25,
+    "euclidean_distance": 15.4515
+  },
+  "map_name": "NYC_test",
+  "true_name": "Human",
+  "object_name": "BP_fe_casual_02_2",
+  "pose": [
+    [
+      352.3999938964844,
+      125.89999389648438,
+      0.22051268815994263
+    ]
+  ],
+  "size": "small(1.25*1.25=1.56 squares)",
+  "description": "Organic upright form, light blue shirt with dark blue pants and dark hair, casual outfit with natural movement, represents an everyday civilian figure.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

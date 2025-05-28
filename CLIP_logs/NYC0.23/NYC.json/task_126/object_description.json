@@ -1,0 +1,35 @@
+{
+  "episode_id": "126",
+  "start_pose": {
+    "start_position": [
+      222.00291038268335,
+      658.1764637111723,
+      -5.900000095367432
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.5075706397002591,
+      0.8616101471746197
+    ]
+  },
+  "info": {
+    "geodesic_distance": 66,
+    "euclidean_distance": 50.3498
+  },
+  "map_name": "NYC_test",
+  "true_name": "Rowboat",
+  "object_name": "SM_Boat_02_457",
+  "pose": [
+    [
+      235.39999389648438,
+      609.8999633789062,
+      2.0999999046325684
+    ]
+  ],
+  "size": "big(7.0*2.0=14.0 squares)",
+  "description": "Wooden rowing boat, dark brown hull with multiple oars extending from the sides, elongated and open structure, designed for manual paddling on water.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}
