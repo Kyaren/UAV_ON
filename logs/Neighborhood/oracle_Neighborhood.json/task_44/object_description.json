@@ -1,0 +1,35 @@
+{
+  "episode_id": "44",
+  "start_pose": {
+    "start_position": [
+      -189.67388903022854,
+      20.75308393284468,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9475466204136215,
+      -0.3196175873488884
+    ]
+  },
+  "info": {
+    "geodesic_distance": 18,
+    "euclidean_distance": 12.2101
+  },
+  "map_name": "ModularNeighborhood_test",
+  "true_name": "Barrier",
+  "object_name": "SM_RoadBarriers_03_11",
+  "pose": [
+    [
+      -180.6999969482422,
+      21.899999618530273,
+      1.1999999284744263
+    ]
+  ],
+  "size": "small(1*0.5=0.5 squares)",
+  "description": "Geometric trapezoidal form, solid gray concrete texture with diagonal yellow-red hazard stripes, used for traffic control or restricted access demarcation.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

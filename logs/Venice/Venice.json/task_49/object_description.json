@@ -1,0 +1,35 @@
+{
+  "episode_id": "49",
+  "start_pose": {
+    "start_position": [
+      64.24343863038939,
+      74.22274809152766,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.8920183349447144,
+      -0.4519992147365517
+    ]
+  },
+  "info": {
+    "geodesic_distance": 74,
+    "euclidean_distance": 51.0997
+  },
+  "map_name": "Venice_test",
+  "true_name": " Table",
+  "object_name": "SM_SpanishCourtyard_Table_01",
+  "pose": [
+    [
+      19.997705459594727,
+      49.91699981689453,
+      0.9200018048286438
+    ]
+  ],
+  "size": " small(1.5*1.5=2.25 squares)",
+  "description": " Geometric circular top, polished brown wood material, ornate carved pedestal legs, intended for dining or display use.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

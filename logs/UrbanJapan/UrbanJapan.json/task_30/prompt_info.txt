@@ -1,0 +1,189 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:NewsPaperStand,
+                        Size:small(1.0*0.75=0.75 squares),
+                        Description:Geometric shelving structure, stacked newspapers in light-colored bundles, visible papers protruding from open sections, intended for public print distribution.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-55, 46]  
+                        **Y Range**: [min_y, max_y] = [23, 124]
+
+                        # RGB Captions
+                        Front = tall buildings, illuminated signs; street with vehicles; traffic lights in the foreground; buildings in the background  
+                        Left = overpass, blue lighting; traffic lights; vehicles on the road; overpass in the foreground  
+                        Right = cityscape, tall buildings; illuminated signs; taxi on the road; buildings on both sides of the street  
+                        Down = crosswalk, white stripes; Chinese characters on the road; shadows of people; crosswalk in the foreground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 64, 72], [33, 26, 33]]
+
+                        LeftDepth:
+                        [[17, 19, 20], [100, 100, 49], [32, 27, 29]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 44], [33, 26, 33]]
+
+                        DownDepth:
+                        [[13, 11, 14], [11, 9, 11], [14, 11, 14]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-4.19, 73.8, -6.6), -158.48],
+    [(-4.19, 73.8, -6.6), -158.48],
+    [(-4.19, 73.8, -6.6), -158.48],
+    [(-4.19, 73.8, -6.6), -158.48],
+    [(-4.19, 73.8, -6.6), -158.48],
+    [(-4.19, 73.8, -6.6), -158.48],
+    [(-4.19, 73.8, -6.6), -158.48],
+    [(-4.19, 73.8, -6.6), -158.48],
+    [(-4.19, 73.8, -6.6), -158.48],
+    [(-4.19, 73.8, -6.6), -158.48],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **NewsPaperStand**, described as: Geometric shelving structure, stacked newspapers in light-colored bundles, visible papers protruding from open sections, intended for public print distribution.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 1 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:NewsPaperStand,
+                        Size:small(1.0*0.75=0.75 squares),
+                        Description:Geometric shelving structure, stacked newspapers in light-colored bundles, visible papers protruding from open sections, intended for public print distribution.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-55, 46]  
+                        **Y Range**: [min_y, max_y] = [23, 124]
+
+                        # RGB Captions
+                        Front = orange traffic barrier, on the ground; barrier is in the foreground; tall buildings in the background  
+                        Left = traffic light, green signal; light is in the foreground; elevated train tracks above  
+                        Right = city street, multiple lanes; street is in the foreground; tall buildings with illuminated signs in the background  
+                        Down = crosswalk, white stripes; crosswalk is in the foreground; shadow of a person on the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 59, 66], [31, 26, 35]]
+
+                        LeftDepth:
+                        [[20, 45, 76], [100, 100, 71], [35, 25, 33]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 55], [29, 27, 35]]
+
+                        DownDepth:
+                        [[13, 11, 14], [11, 9, 11], [14, 11, 14]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-4.19, 73.8, -6.6), -158.48],
+    [(-8.84, 71.97, -6.6), -158.48],
+    [(-8.84, 71.97, -6.6), -158.48],
+    [(-8.84, 71.97, -6.6), -158.48],
+    [(-8.84, 71.97, -6.6), -158.48],
+    [(-8.84, 71.97, -6.6), -158.48],
+    [(-8.84, 71.97, -6.6), -158.48],
+    [(-8.84, 71.97, -6.6), -158.48],
+    [(-8.84, 71.97, -6.6), -158.48],
+    [(-8.84, 71.97, -6.6), -158.48],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 1
+                        DistanceTraveled = 4.9999999999999964
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **NewsPaperStand**, described as: Geometric shelving structure, stacked newspapers in light-colored bundles, visible papers protruding from open sections, intended for public print distribution.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:1 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 2 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:NewsPaperStand,
+                        Size:small(1.0*0.75=0.75 squares),
+                        Description:Geometric shelving structure, stacked newspapers in light-colored bundles, visible papers protruding from open sections, intended for public print distribution.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-55, 46]  
+                        **Y Range**: [min_y, max_y] = [23, 124]
+
+                        # RGB Captions
+                        Front = orange traffic barriers, on the ground; barriers in the foreground; green traffic light, illuminated; light to the left of the barriers  
+                        Left = metal box, white; box in the foreground; dark environment, low visibility; box positioned to the left  
+                        Right = tall buildings, lit up; buildings in the background; street signs, illuminated; signs above the street; car on the road, moving; road in the foreground  
+                        Down = crosswalk, painted white; crosswalk in the foreground; shadow on the ground; shadow to the left of the crosswalk  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 69], [30, 26, 35]]
+
+                        LeftDepth:
+                        [[18, 16, 6], [100, 100, 52], [1, 25, 19]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 59], [35, 26, 34]]
+
+                        DownDepth:
+                        [[12, 11, 14], [11, 9, 11], [14, 11, 14]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-4.19, 73.8, -6.6), -158.48],
+    [(-8.84, 71.97, -6.6), -158.48],
+    [(-10.67, 76.62, -6.6), -158.48],
+    [(-10.67, 76.62, -6.6), -158.48],
+    [(-10.67, 76.62, -6.6), -158.48],
+    [(-10.67, 76.62, -6.6), -158.48],
+    [(-10.67, 76.62, -6.6), -158.48],
+    [(-10.67, 76.62, -6.6), -158.48],
+    [(-10.67, 76.62, -6.6), -158.48],
+    [(-10.67, 76.62, -6.6), -158.48],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 2
+                        DistanceTraveled = 10.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **NewsPaperStand**, described as: Geometric shelving structure, stacked newspapers in light-colored bundles, visible papers protruding from open sections, intended for public print distribution.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:2 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

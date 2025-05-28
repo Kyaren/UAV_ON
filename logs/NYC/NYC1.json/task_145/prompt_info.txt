@@ -1,0 +1,1638 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:GlobeSculpture,
+                        Size:big(6.0*6.0=36.0 squares),
+                        Description:Geometric spherical form, bronze metallic wireframe globe with map outlines, mounted on a stone pedestal, ornamental display likely for educational or symbolic purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [112, 213]  
+                        **Y Range**: [min_y, max_y] = [313, 414]
+
+                        # RGB Captions
+                        Front = tall buildings, modern architecture; trees with red leaves; calm water in the foreground; buildings stand in the background  
+                        Left = tall buildings, modern architecture; trees with red leaves; calm water in the foreground; buildings stand in the background  
+                        Right = tall buildings, modern architecture; trees with green leaves; calm water in the foreground; buildings stand in the background  
+                        Down = textured surface, dark color; light source in the top right corner  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [43, 33, 42]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 35, 43]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [41, 33, 44]]
+
+                        DownDepth:
+                        [[18, 15, 17], [15, 11, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(162.46, 363.16, -9.3), -53.9],
+    [(162.46, 363.16, -9.3), -53.9],
+    [(162.46, 363.16, -9.3), -53.9],
+    [(162.46, 363.16, -9.3), -53.9],
+    [(162.46, 363.16, -9.3), -53.9],
+    [(162.46, 363.16, -9.3), -53.9],
+    [(162.46, 363.16, -9.3), -53.9],
+    [(162.46, 363.16, -9.3), -53.9],
+    [(162.46, 363.16, -9.3), -53.9],
+    [(162.46, 363.16, -9.3), -53.9],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **GlobeSculpture**, described as: Geometric spherical form, bronze metallic wireframe globe with map outlines, mounted on a stone pedestal, ornamental display likely for educational or symbolic purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 1 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:GlobeSculpture,
+                        Size:big(6.0*6.0=36.0 squares),
+                        Description:Geometric spherical form, bronze metallic wireframe globe with map outlines, mounted on a stone pedestal, ornamental display likely for educational or symbolic purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [112, 213]  
+                        **Y Range**: [min_y, max_y] = [313, 414]
+
+                        # RGB Captions
+                        Front = tall buildings, modern architecture; buildings in the background; red-leaved trees in the foreground  
+                        Left = red-leaved trees, vibrant colors; trees in the foreground; tall buildings in the background  
+                        Right = small boat, on calm water; boat in the middle of the lake; tall buildings in the distant background  
+                        Down = green plants, lush foliage; plants in the foreground; dark water reflecting light  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [41, 33, 43]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 33, 39]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [42, 35, 45]]
+
+                        DownDepth:
+                        [[18, 15, 18], [15, 12, 16], [17, 15, 17]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(162.46, 363.16, -9.3), -53.9],
+    [(165.41, 359.12, -9.3), -53.9],
+    [(165.41, 359.12, -9.3), -53.9],
+    [(165.41, 359.12, -9.3), -53.9],
+    [(165.41, 359.12, -9.3), -53.9],
+    [(165.41, 359.12, -9.3), -53.9],
+    [(165.41, 359.12, -9.3), -53.9],
+    [(165.41, 359.12, -9.3), -53.9],
+    [(165.41, 359.12, -9.3), -53.9],
+    [(165.41, 359.12, -9.3), -53.9],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 1
+                        DistanceTraveled = 5.000000000000022
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **GlobeSculpture**, described as: Geometric spherical form, bronze metallic wireframe globe with map outlines, mounted on a stone pedestal, ornamental display likely for educational or symbolic purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:1 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 2 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:GlobeSculpture,
+                        Size:big(6.0*6.0=36.0 squares),
+                        Description:Geometric spherical form, bronze metallic wireframe globe with map outlines, mounted on a stone pedestal, ornamental display likely for educational or symbolic purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [112, 213]  
+                        **Y Range**: [min_y, max_y] = [313, 414]
+
+                        # RGB Captions
+                        Front = tall buildings, modern architecture; buildings in the background; red-leaved trees in the foreground  
+                        Left = red-leaved trees, dense foliage; trees in the foreground; tall buildings in the background  
+                        Right = lake, calm water; lake in the foreground; tall buildings in the background; small boat on the lake  
+                        Down = water, dark surface; water in the foreground; green plants along the edge  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [40, 35, 48]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [35, 31, 40]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 37, 49]]
+
+                        DownDepth:
+                        [[18, 16, 19], [15, 12, 16], [16, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(162.46, 363.16, -9.3), -53.9],
+    [(165.41, 359.12, -9.3), -53.9],
+    [(168.36, 355.08, -9.3), -53.9],
+    [(168.36, 355.08, -9.3), -53.9],
+    [(168.36, 355.08, -9.3), -53.9],
+    [(168.36, 355.08, -9.3), -53.9],
+    [(168.36, 355.08, -9.3), -53.9],
+    [(168.36, 355.08, -9.3), -53.9],
+    [(168.36, 355.08, -9.3), -53.9],
+    [(168.36, 355.08, -9.3), -53.9],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 2
+                        DistanceTraveled = 10.000000000000044
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **GlobeSculpture**, described as: Geometric spherical form, bronze metallic wireframe globe with map outlines, mounted on a stone pedestal, ornamental display likely for educational or symbolic purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:2 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 3 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:GlobeSculpture,
+                        Size:big(6.0*6.0=36.0 squares),
+                        Description:Geometric spherical form, bronze metallic wireframe globe with map outlines, mounted on a stone pedestal, ornamental display likely for educational or symbolic purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [112, 213]  
+                        **Y Range**: [min_y, max_y] = [313, 414]
+
+                        # RGB Captions
+                        Front = red trees, dense foliage; green grass, lush; trees in the foreground; buildings in the background  
+                        Left = red trees, dense foliage; green grass, lush; trees in the foreground; buildings in the background  
+                        Right = small boat, white; calm water, reflective; sun reflecting on water; buildings in the distant background  
+                        Down = green grass, dense; dark water, reflective; grass along the water edge; top-down view  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [39, 34, 45]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 32, 39]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 36, 49]]
+
+                        DownDepth:
+                        [[17, 16, 18], [15, 12, 16], [18, 16, 19]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(162.46, 363.16, -9.3), -53.9],
+    [(165.41, 359.12, -9.3), -53.9],
+    [(168.36, 355.08, -9.3), -53.9],
+    [(171.3, 351.04, -9.3), -53.9],
+    [(171.3, 351.04, -9.3), -53.9],
+    [(171.3, 351.04, -9.3), -53.9],
+    [(171.3, 351.04, -9.3), -53.9],
+    [(171.3, 351.04, -9.3), -53.9],
+    [(171.3, 351.04, -9.3), -53.9],
+    [(171.3, 351.04, -9.3), -53.9],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 3
+                        DistanceTraveled = 15.000000000000068
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **GlobeSculpture**, described as: Geometric spherical form, bronze metallic wireframe globe with map outlines, mounted on a stone pedestal, ornamental display likely for educational or symbolic purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:3 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 4 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:GlobeSculpture,
+                        Size:big(6.0*6.0=36.0 squares),
+                        Description:Geometric spherical form, bronze metallic wireframe globe with map outlines, mounted on a stone pedestal, ornamental display likely for educational or symbolic purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [112, 213]  
+                        **Y Range**: [min_y, max_y] = [313, 414]
+
+                        # RGB Captions
+                        Front = red trees, vibrant; green grass, lush; buildings in the background; water in the foreground  
+                        Left = red trees, vibrant; green grass, lush; tall building, stone facade; sky clear, blue  
+                        Right = water, calm; sun reflection, bright; buildings in the distance; small boat on the water  
+                        Down = green grass, patchy; muddy ground, wet; sunlight reflecting on the water  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [41, 33, 44]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [43, 33, 39]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 36, 49]]
+
+                        DownDepth:
+                        [[17, 15, 18], [15, 12, 16], [18, 16, 19]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(162.46, 363.16, -9.3), -53.9],
+    [(165.41, 359.12, -9.3), -53.9],
+    [(168.36, 355.08, -9.3), -53.9],
+    [(171.3, 351.04, -9.3), -53.9],
+    [(174.25, 347.0, -9.3), -53.9],
+    [(174.25, 347.0, -9.3), -53.9],
+    [(174.25, 347.0, -9.3), -53.9],
+    [(174.25, 347.0, -9.3), -53.9],
+    [(174.25, 347.0, -9.3), -53.9],
+    [(174.25, 347.0, -9.3), -53.9],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 4
+                        DistanceTraveled = 20.00000000000009
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **GlobeSculpture**, described as: Geometric spherical form, bronze metallic wireframe globe with map outlines, mounted on a stone pedestal, ornamental display likely for educational or symbolic purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:4 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 5 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:GlobeSculpture,
+                        Size:big(6.0*6.0=36.0 squares),
+                        Description:Geometric spherical form, bronze metallic wireframe globe with map outlines, mounted on a stone pedestal, ornamental display likely for educational or symbolic purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [112, 213]  
+                        **Y Range**: [min_y, max_y] = [313, 414]
+
+                        # RGB Captions
+                        Front = red trees, vibrant leaves; green grass, lush; buildings in the background, tall  
+                        Left = red tree, vibrant leaves; buildings in the background, tall  
+                        Right = lake, calm water; small boat, floating; buildings in the distant background, tall  
+                        Down = green grass, dense; dark water, reflective; rock on the left, large  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [43, 35, 45]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 34, 44]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 34, 44]]
+
+                        DownDepth:
+                        [[18, 16, 18], [15, 12, 16], [18, 16, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(162.46, 363.16, -9.3), -53.9],
+    [(165.41, 359.12, -9.3), -53.9],
+    [(168.36, 355.08, -9.3), -53.9],
+    [(171.3, 351.04, -9.3), -53.9],
+    [(174.25, 347.0, -9.3), -53.9],
+    [(177.19, 342.96, -9.3), -53.9],
+    [(177.19, 342.96, -9.3), -53.9],
+    [(177.19, 342.96, -9.3), -53.9],
+    [(177.19, 342.96, -9.3), -53.9],
+    [(177.19, 342.96, -9.3), -53.9],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 5
+                        DistanceTraveled = 25.00000000000011
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **GlobeSculpture**, described as: Geometric spherical form, bronze metallic wireframe globe with map outlines, mounted on a stone pedestal, ornamental display likely for educational or symbolic purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:5 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 6 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:GlobeSculpture,
+                        Size:big(6.0*6.0=36.0 squares),
+                        Description:Geometric spherical form, bronze metallic wireframe globe with map outlines, mounted on a stone pedestal, ornamental display likely for educational or symbolic purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [112, 213]  
+                        **Y Range**: [min_y, max_y] = [313, 414]
+
+                        # RGB Captions
+                        Front = red-leaved trees, dense cluster; buildings in the background; tallest building centrally located  
+                        Left = red-leaved trees, dense cluster; buildings in the background; tallest building centrally located  
+                        Right = lake, calm water; sun reflection on surface; buildings in the distant background  
+                        Down = beaver, swimming; tail visible; grassy bank to the left  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [43, 33, 44]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [43, 34, 41]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [43, 34, 46]]
+
+                        DownDepth:
+                        [[16, 16, 18], [15, 12, 16], [18, 16, 19]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(162.46, 363.16, -9.3), -53.9],
+    [(165.41, 359.12, -9.3), -53.9],
+    [(168.36, 355.08, -9.3), -53.9],
+    [(171.3, 351.04, -9.3), -53.9],
+    [(174.25, 347.0, -9.3), -53.9],
+    [(177.19, 342.96, -9.3), -53.9],
+    [(180.14, 338.92, -9.3), -53.9],
+    [(180.14, 338.92, -9.3), -53.9],
+    [(180.14, 338.92, -9.3), -53.9],
+    [(180.14, 338.92, -9.3), -53.9],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 6
+                        DistanceTraveled = 30.00000000000013
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **GlobeSculpture**, described as: Geometric spherical form, bronze metallic wireframe globe with map outlines, mounted on a stone pedestal, ornamental display likely for educational or symbolic purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:6 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 7 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:GlobeSculpture,
+                        Size:big(6.0*6.0=36.0 squares),
+                        Description:Geometric spherical form, bronze metallic wireframe globe with map outlines, mounted on a stone pedestal, ornamental display likely for educational or symbolic purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [112, 213]  
+                        **Y Range**: [min_y, max_y] = [313, 414]
+
+                        # RGB Captions
+                        Front = red-leaved trees, dense cluster; tall buildings, modern architecture; buildings in the background; river in the foreground  
+                        Left = red-leaved trees, dense cluster; tall buildings, modern architecture; buildings in the background; clear blue sky  
+                        Right = tall buildings, modern architecture; buildings in the background; river in the foreground; small boat on the water  
+                        Down = rock, large; moss, green; rock near the water; water reflecting light  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [39, 34, 44]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [43, 34, 38]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [43, 34, 45]]
+
+                        DownDepth:
+                        [[17, 15, 18], [16, 12, 16], [18, 16, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(162.46, 363.16, -9.3), -53.9],
+    [(165.41, 359.12, -9.3), -53.9],
+    [(168.36, 355.08, -9.3), -53.9],
+    [(171.3, 351.04, -9.3), -53.9],
+    [(174.25, 347.0, -9.3), -53.9],
+    [(177.19, 342.96, -9.3), -53.9],
+    [(180.14, 338.92, -9.3), -53.9],
+    [(183.09, 334.88, -9.3), -53.9],
+    [(183.09, 334.88, -9.3), -53.9],
+    [(183.09, 334.88, -9.3), -53.9],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 7
+                        DistanceTraveled = 35.000000000000156
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **GlobeSculpture**, described as: Geometric spherical form, bronze metallic wireframe globe with map outlines, mounted on a stone pedestal, ornamental display likely for educational or symbolic purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:7 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 8 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:GlobeSculpture,
+                        Size:big(6.0*6.0=36.0 squares),
+                        Description:Geometric spherical form, bronze metallic wireframe globe with map outlines, mounted on a stone pedestal, ornamental display likely for educational or symbolic purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [112, 213]  
+                        **Y Range**: [min_y, max_y] = [313, 414]
+
+                        # RGB Captions
+                        Front = red-leaved tree, foreground; tall buildings, background; sun shining from the left  
+                        Left = red-leaved tree, foreground; tall building, background center; clear blue sky  
+                        Right = calm lake, foreground; tall buildings, background; sun reflection on water  
+                        Down = green foliage, foreground; dark water, background; light reflection on water  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [42, 33, 45]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [43, 34, 37]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 34, 44]]
+
+                        DownDepth:
+                        [[17, 16, 18], [15, 12, 16], [18, 16, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(162.46, 363.16, -9.3), -53.9],
+    [(165.41, 359.12, -9.3), -53.9],
+    [(168.36, 355.08, -9.3), -53.9],
+    [(171.3, 351.04, -9.3), -53.9],
+    [(174.25, 347.0, -9.3), -53.9],
+    [(177.19, 342.96, -9.3), -53.9],
+    [(180.14, 338.92, -9.3), -53.9],
+    [(183.09, 334.88, -9.3), -53.9],
+    [(186.03, 330.84, -9.3), -53.9],
+    [(186.03, 330.84, -9.3), -53.9],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 8
+                        DistanceTraveled = 40.00000000000018
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **GlobeSculpture**, described as: Geometric spherical form, bronze metallic wireframe globe with map outlines, mounted on a stone pedestal, ornamental display likely for educational or symbolic purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:8 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 9 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:GlobeSculpture,
+                        Size:big(6.0*6.0=36.0 squares),
+                        Description:Geometric spherical form, bronze metallic wireframe globe with map outlines, mounted on a stone pedestal, ornamental display likely for educational or symbolic purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [112, 213]  
+                        **Y Range**: [min_y, max_y] = [313, 414]
+
+                        # RGB Captions
+                        Front = red and green trees, autumn leaves; buildings in the background; sun shining through clouds  
+                        Left = red and green trees, autumn leaves; tall building in the background; clear blue sky  
+                        Right = lake, calm water; small boat; tall buildings in the background; sun reflecting on water  
+                        Down = green plants, dense foliage; dark water; light reflecting on water; plants in the foreground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [39, 33, 47]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [40, 33, 39]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 35, 44]]
+
+                        DownDepth:
+                        [[17, 15, 18], [14, 12, 16], [18, 16, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(162.46, 363.16, -9.3), -53.9],
+    [(165.41, 359.12, -9.3), -53.9],
+    [(168.36, 355.08, -9.3), -53.9],
+    [(171.3, 351.04, -9.3), -53.9],
+    [(174.25, 347.0, -9.3), -53.9],
+    [(177.19, 342.96, -9.3), -53.9],
+    [(180.14, 338.92, -9.3), -53.9],
+    [(183.09, 334.88, -9.3), -53.9],
+    [(186.03, 330.84, -9.3), -53.9],
+    [(188.98, 326.8, -9.3), -53.9],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 9
+                        DistanceTraveled = 45.0000000000002
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **GlobeSculpture**, described as: Geometric spherical form, bronze metallic wireframe globe with map outlines, mounted on a stone pedestal, ornamental display likely for educational or symbolic purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:9 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 10 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:GlobeSculpture,
+                        Size:big(6.0*6.0=36.0 squares),
+                        Description:Geometric spherical form, bronze metallic wireframe globe with map outlines, mounted on a stone pedestal, ornamental display likely for educational or symbolic purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [112, 213]  
+                        **Y Range**: [min_y, max_y] = [313, 414]
+
+                        # RGB Captions
+                        Front = red and green bushes, dense foliage; buildings in the background; sun shining through  
+                        Left = green and red bushes, dense foliage; tall building in the background; clear blue sky  
+                        Right = lake, calm water; city skyline in the background; sun reflecting on water  
+                        Down = owl, perched on a branch; surrounded by dense foliage; night scene  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [32, 31, 47]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [41, 31, 38]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 36, 49]]
+
+                        DownDepth:
+                        [[16, 15, 18], [14, 12, 16], [17, 16, 19]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(165.41, 359.12, -9.3), -53.9],
+    [(168.36, 355.08, -9.3), -53.9],
+    [(171.3, 351.04, -9.3), -53.9],
+    [(174.25, 347.0, -9.3), -53.9],
+    [(177.19, 342.96, -9.3), -53.9],
+    [(180.14, 338.92, -9.3), -53.9],
+    [(183.09, 334.88, -9.3), -53.9],
+    [(186.03, 330.84, -9.3), -53.9],
+    [(188.98, 326.8, -9.3), -53.9],
+    [(191.92, 322.76, -9.3), -53.9],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 10
+                        DistanceTraveled = 50.00000000000022
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **GlobeSculpture**, described as: Geometric spherical form, bronze metallic wireframe globe with map outlines, mounted on a stone pedestal, ornamental display likely for educational or symbolic purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:10 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 11 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:GlobeSculpture,
+                        Size:big(6.0*6.0=36.0 squares),
+                        Description:Geometric spherical form, bronze metallic wireframe globe with map outlines, mounted on a stone pedestal, ornamental display likely for educational or symbolic purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [112, 213]  
+                        **Y Range**: [min_y, max_y] = [313, 414]
+
+                        # RGB Captions
+                        Front = red leaves, vibrant; leaves in the foreground; tall buildings in the background  
+                        Left = red leaves, vibrant; leaves in the foreground; tall buildings in the background  
+                        Right = red leaves, vibrant; leaves in the foreground; lake and tall buildings in the background  
+                        Down = red leaves, vibrant; leaves cover the image  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [33, 31, 45]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [32, 32, 27]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 36, 49]]
+
+                        DownDepth:
+                        [[16, 14, 18], [14, 12, 16], [16, 15, 19]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(168.36, 355.08, -9.3), -53.9],
+    [(171.3, 351.04, -9.3), -53.9],
+    [(174.25, 347.0, -9.3), -53.9],
+    [(177.19, 342.96, -9.3), -53.9],
+    [(180.14, 338.92, -9.3), -53.9],
+    [(183.09, 334.88, -9.3), -53.9],
+    [(186.03, 330.84, -9.3), -53.9],
+    [(188.98, 326.8, -9.3), -53.9],
+    [(191.92, 322.76, -9.3), -53.9],
+    [(194.87, 318.72, -9.3), -53.9],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 11
+                        DistanceTraveled = 55.00000000000024
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **GlobeSculpture**, described as: Geometric spherical form, bronze metallic wireframe globe with map outlines, mounted on a stone pedestal, ornamental display likely for educational or symbolic purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:11 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 12 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:GlobeSculpture,
+                        Size:big(6.0*6.0=36.0 squares),
+                        Description:Geometric spherical form, bronze metallic wireframe globe with map outlines, mounted on a stone pedestal, ornamental display likely for educational or symbolic purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [112, 213]  
+                        **Y Range**: [min_y, max_y] = [313, 414]
+
+                        # RGB Captions
+                        Front = tall buildings, modern architecture; buildings in the background; red-leaved trees in the foreground  
+                        Left = red-leaved bushes, dense foliage; buildings in the background; clear blue sky  
+                        Right = modern skyscrapers, tall structures; buildings in the background; water body in the foreground  
+                        Down = red-leaved plants, dense foliage; tree trunk visible; dark environment  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [40, 31, 44]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [34, 29, 41]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 36, 49]]
+
+                        DownDepth:
+                        [[16, 14, 17], [14, 11, 16], [17, 15, 19]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(171.3, 351.04, -9.3), -53.9],
+    [(174.25, 347.0, -9.3), -53.9],
+    [(177.19, 342.96, -9.3), -53.9],
+    [(180.14, 338.92, -9.3), -53.9],
+    [(183.09, 334.88, -9.3), -53.9],
+    [(186.03, 330.84, -9.3), -53.9],
+    [(188.98, 326.8, -9.3), -53.9],
+    [(191.92, 322.76, -9.3), -53.9],
+    [(194.87, 318.72, -9.3), -53.9],
+    [(197.82, 314.68, -9.3), -53.9],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 12
+                        DistanceTraveled = 60.00000000000026
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **GlobeSculpture**, described as: Geometric spherical form, bronze metallic wireframe globe with map outlines, mounted on a stone pedestal, ornamental display likely for educational or symbolic purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:12 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 13 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:GlobeSculpture,
+                        Size:big(6.0*6.0=36.0 squares),
+                        Description:Geometric spherical form, bronze metallic wireframe globe with map outlines, mounted on a stone pedestal, ornamental display likely for educational or symbolic purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [112, 213]  
+                        **Y Range**: [min_y, max_y] = [313, 414]
+
+                        # RGB Captions
+                        Front = red-leaved trees, foreground; high-rise buildings, background; buildings in the distance  
+                        Left = red-leaved trees, foreground; tall building, background; building to the right  
+                        Right = lake, foreground; high-rise buildings, background; buildings on the horizon  
+                        Down = red leaves, foreground; dark background; tree branches visible  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [37, 33, 34]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 30, 40]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [38, 35, 47]]
+
+                        DownDepth:
+                        [[16, 14, 15], [14, 12, 16], [16, 15, 19]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(174.25, 347.0, -9.3), -53.9],
+    [(177.19, 342.96, -9.3), -53.9],
+    [(180.14, 338.92, -9.3), -53.9],
+    [(183.09, 334.88, -9.3), -53.9],
+    [(186.03, 330.84, -9.3), -53.9],
+    [(188.98, 326.8, -9.3), -53.9],
+    [(191.92, 322.76, -9.3), -53.9],
+    [(194.87, 318.72, -9.3), -53.9],
+    [(197.82, 314.68, -9.3), -53.9],
+    [(197.82, 314.68, -9.3), -68.9],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 13
+                        DistanceTraveled = 60.00000000000026
+                        AvgHeadingChange = 1.15
+
+                        # Reminder  
+                        - The target is **GlobeSculpture**, described as: Geometric spherical form, bronze metallic wireframe globe with map outlines, mounted on a stone pedestal, ornamental display likely for educational or symbolic purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:13 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 14 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:GlobeSculpture,
+                        Size:big(6.0*6.0=36.0 squares),
+                        Description:Geometric spherical form, bronze metallic wireframe globe with map outlines, mounted on a stone pedestal, ornamental display likely for educational or symbolic purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [112, 213]  
+                        **Y Range**: [min_y, max_y] = [313, 414]
+
+                        # RGB Captions
+                        Front = red bushes, vibrant leaves; buildings in the background; bushes in the foreground  
+                        Left = red bushes, vibrant leaves; buildings in the background; bushes in the foreground  
+                        Right = city skyline, tall buildings; water in the foreground; sun reflecting on water  
+                        Down = red bushes, vibrant leaves; dark ground; bushes in the foreground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 33, 36]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [38, 32, 40]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [23, 35, 46]]
+
+                        DownDepth:
+                        [[17, 14, 16], [14, 12, 15], [17, 16, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(177.19, 342.96, -9.3), -53.9],
+    [(180.14, 338.92, -9.3), -53.9],
+    [(183.09, 334.88, -9.3), -53.9],
+    [(186.03, 330.84, -9.3), -53.9],
+    [(188.98, 326.8, -9.3), -53.9],
+    [(191.92, 322.76, -9.3), -53.9],
+    [(194.87, 318.72, -9.3), -53.9],
+    [(197.82, 314.68, -9.3), -53.9],
+    [(197.82, 314.68, -9.3), -68.9],
+    [(197.82, 314.68, -9.3), -83.9],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 14
+                        DistanceTraveled = 60.00000000000026
+                        AvgHeadingChange = 2.14
+
+                        # Reminder  
+                        - The target is **GlobeSculpture**, described as: Geometric spherical form, bronze metallic wireframe globe with map outlines, mounted on a stone pedestal, ornamental display likely for educational or symbolic purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:14 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 15 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:GlobeSculpture,
+                        Size:big(6.0*6.0=36.0 squares),
+                        Description:Geometric spherical form, bronze metallic wireframe globe with map outlines, mounted on a stone pedestal, ornamental display likely for educational or symbolic purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [112, 213]  
+                        **Y Range**: [min_y, max_y] = [313, 414]
+
+                        # RGB Captions
+                        Front = red-leaved bushes, vibrant; buildings in the background; bushes in the foreground  
+                        Left = red-leaved branches, vivid; buildings in the distance; branches in the foreground  
+                        Right = city skyline, tall buildings; river in the foreground; bushes on the left  
+                        Down = red leaves, dark setting; rocks and moss; leaves in the foreground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 33, 40]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 27, 37]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [38, 35, 46]]
+
+                        DownDepth:
+                        [[17, 14, 17], [14, 12, 15], [17, 16, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(180.14, 338.92, -9.3), -53.9],
+    [(183.09, 334.88, -9.3), -53.9],
+    [(186.03, 330.84, -9.3), -53.9],
+    [(188.98, 326.8, -9.3), -53.9],
+    [(191.92, 322.76, -9.3), -53.9],
+    [(194.87, 318.72, -9.3), -53.9],
+    [(197.82, 314.68, -9.3), -53.9],
+    [(197.82, 314.68, -9.3), -68.9],
+    [(197.82, 314.68, -9.3), -83.9],
+    [(197.82, 314.68, -9.3), -98.9],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 15
+                        DistanceTraveled = 60.00000000000026
+                        AvgHeadingChange = 3.0
+
+                        # Reminder  
+                        - The target is **GlobeSculpture**, described as: Geometric spherical form, bronze metallic wireframe globe with map outlines, mounted on a stone pedestal, ornamental display likely for educational or symbolic purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:15 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 16 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:GlobeSculpture,
+                        Size:big(6.0*6.0=36.0 squares),
+                        Description:Geometric spherical form, bronze metallic wireframe globe with map outlines, mounted on a stone pedestal, ornamental display likely for educational or symbolic purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [112, 213]  
+                        **Y Range**: [min_y, max_y] = [313, 414]
+
+                        # RGB Captions
+                        Front = red-leaved tree, foreground; tall building, background; clear sky  
+                        Left = red-leaved tree, foreground; tall building, background; clear sky  
+                        Right = tall buildings, background; red-leaved trees, foreground; sunset  
+                        Down = red leaves, foreground; large rock, background; dark setting  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [42, 31, 44]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 35, 28]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 31, 46]]
+
+                        DownDepth:
+                        [[17, 14, 17], [15, 12, 14], [18, 16, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(183.09, 334.88, -9.3), -53.9],
+    [(186.03, 330.84, -9.3), -53.9],
+    [(188.98, 326.8, -9.3), -53.9],
+    [(191.92, 322.76, -9.3), -53.9],
+    [(194.87, 318.72, -9.3), -53.9],
+    [(197.82, 314.68, -9.3), -53.9],
+    [(197.82, 314.68, -9.3), -68.9],
+    [(197.82, 314.68, -9.3), -83.9],
+    [(197.82, 314.68, -9.3), -98.9],
+    [(197.82, 314.68, -9.3), -113.9],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 16
+                        DistanceTraveled = 60.00000000000026
+                        AvgHeadingChange = 3.75
+
+                        # Reminder  
+                        - The target is **GlobeSculpture**, described as: Geometric spherical form, bronze metallic wireframe globe with map outlines, mounted on a stone pedestal, ornamental display likely for educational or symbolic purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:16 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 17 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:GlobeSculpture,
+                        Size:big(6.0*6.0=36.0 squares),
+                        Description:Geometric spherical form, bronze metallic wireframe globe with map outlines, mounted on a stone pedestal, ornamental display likely for educational or symbolic purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [112, 213]  
+                        **Y Range**: [min_y, max_y] = [313, 414]
+
+                        # RGB Captions
+                        Front = red bushes, dense; buildings in the background; tall tower  
+                        Left = red leaves, vibrant; city skyline in the distance; river to the left  
+                        Right = buildings, modern architecture; red bushes in the foreground; sun setting behind  
+                        Down = tree branches, intertwined; red leaves, scattered; dark background  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [35, 31, 44]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 35, 33]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 32, 45]]
+
+                        DownDepth:
+                        [[17, 14, 17], [15, 12, 14], [18, 16, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(186.03, 330.84, -9.3), -53.9],
+    [(188.98, 326.8, -9.3), -53.9],
+    [(191.92, 322.76, -9.3), -53.9],
+    [(194.87, 318.72, -9.3), -53.9],
+    [(197.82, 314.68, -9.3), -53.9],
+    [(197.82, 314.68, -9.3), -68.9],
+    [(197.82, 314.68, -9.3), -83.9],
+    [(197.82, 314.68, -9.3), -98.9],
+    [(197.82, 314.68, -9.3), -113.9],
+    [(197.82, 314.68, -9.3), -128.9],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 17
+                        DistanceTraveled = 60.00000000000026
+                        AvgHeadingChange = 4.41
+
+                        # Reminder  
+                        - The target is **GlobeSculpture**, described as: Geometric spherical form, bronze metallic wireframe globe with map outlines, mounted on a stone pedestal, ornamental display likely for educational or symbolic purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:17 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 18 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:GlobeSculpture,
+                        Size:big(6.0*6.0=36.0 squares),
+                        Description:Geometric spherical form, bronze metallic wireframe globe with map outlines, mounted on a stone pedestal, ornamental display likely for educational or symbolic purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [112, 213]  
+                        **Y Range**: [min_y, max_y] = [313, 414]
+
+                        # RGB Captions
+                        Front = red leaves, vibrant; leaves in the foreground; tall building in the background  
+                        Left = red leaves, vibrant; leaves in the foreground; river and buildings in the background  
+                        Right = red leaves, vibrant; leaves in the foreground; multiple buildings in the background  
+                        Down = red leaves, vibrant; leaves in the foreground; tree trunk visible  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [28, 31, 37]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 35, 33]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [42, 33, 31]]
+
+                        DownDepth:
+                        [[16, 14, 17], [15, 11, 14], [18, 16, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(188.98, 326.8, -9.3), -53.9],
+    [(191.92, 322.76, -9.3), -53.9],
+    [(194.87, 318.72, -9.3), -53.9],
+    [(197.82, 314.68, -9.3), -53.9],
+    [(197.82, 314.68, -9.3), -68.9],
+    [(197.82, 314.68, -9.3), -83.9],
+    [(197.82, 314.68, -9.3), -98.9],
+    [(197.82, 314.68, -9.3), -113.9],
+    [(197.82, 314.68, -9.3), -128.9],
+    [(197.82, 314.68, -9.3), -143.9],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 18
+                        DistanceTraveled = 60.00000000000026
+                        AvgHeadingChange = 5.0
+
+                        # Reminder  
+                        - The target is **GlobeSculpture**, described as: Geometric spherical form, bronze metallic wireframe globe with map outlines, mounted on a stone pedestal, ornamental display likely for educational or symbolic purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:18 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 19 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:GlobeSculpture,
+                        Size:big(6.0*6.0=36.0 squares),
+                        Description:Geometric spherical form, bronze metallic wireframe globe with map outlines, mounted on a stone pedestal, ornamental display likely for educational or symbolic purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [112, 213]  
+                        **Y Range**: [min_y, max_y] = [313, 414]
+
+                        # RGB Captions
+                        Front = red leaves, vibrant; leaves in the foreground; tall building in the background  
+                        Left = red leaves, vibrant; leaves in the foreground; lake in the middle ground; city skyline in the background  
+                        Right = red leaves, vibrant; leaves in the foreground; buildings in the background  
+                        Down = red leaves, vibrant; leaves in the foreground; tree trunk in the middle ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [32, 29, 33]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 35, 39]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [37, 33, 39]]
+
+                        DownDepth:
+                        [[16, 14, 17], [15, 11, 14], [18, 16, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(191.92, 322.76, -9.3), -53.9],
+    [(194.87, 318.72, -9.3), -53.9],
+    [(197.82, 314.68, -9.3), -53.9],
+    [(197.82, 314.68, -9.3), -68.9],
+    [(197.82, 314.68, -9.3), -83.9],
+    [(197.82, 314.68, -9.3), -98.9],
+    [(197.82, 314.68, -9.3), -113.9],
+    [(197.82, 314.68, -9.3), -128.9],
+    [(197.82, 314.68, -9.3), -143.9],
+    [(197.82, 314.68, -9.3), -158.9],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 19
+                        DistanceTraveled = 60.00000000000026
+                        AvgHeadingChange = 5.53
+
+                        # Reminder  
+                        - The target is **GlobeSculpture**, described as: Geometric spherical form, bronze metallic wireframe globe with map outlines, mounted on a stone pedestal, ornamental display likely for educational or symbolic purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:19 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 20 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:GlobeSculpture,
+                        Size:big(6.0*6.0=36.0 squares),
+                        Description:Geometric spherical form, bronze metallic wireframe globe with map outlines, mounted on a stone pedestal, ornamental display likely for educational or symbolic purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [112, 213]  
+                        **Y Range**: [min_y, max_y] = [313, 414]
+
+                        # RGB Captions
+                        Front = red leaves, vibrant; leaves in the foreground; buildings in the background  
+                        Left = red leaves, vibrant; leaves in the foreground; lake in the middle ground; city skyline in the background  
+                        Right = red leaves, vibrant; leaves in the foreground; buildings in the background  
+                        Down = red leaves, vibrant; leaves in the foreground; tree trunk in the middle ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [37, 30, 39]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 35, 44]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 33, 38]]
+
+                        DownDepth:
+                        [[16, 14, 16], [16, 12, 14], [18, 15, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(194.87, 318.72, -9.3), -53.9],
+    [(197.82, 314.68, -9.3), -53.9],
+    [(197.82, 314.68, -9.3), -68.9],
+    [(197.82, 314.68, -9.3), -83.9],
+    [(197.82, 314.68, -9.3), -98.9],
+    [(197.82, 314.68, -9.3), -113.9],
+    [(197.82, 314.68, -9.3), -128.9],
+    [(197.82, 314.68, -9.3), -143.9],
+    [(197.82, 314.68, -9.3), -158.9],
+    [(197.82, 314.68, -9.3), -173.9],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 20
+                        DistanceTraveled = 60.00000000000026
+                        AvgHeadingChange = 6.0
+
+                        # Reminder  
+                        - The target is **GlobeSculpture**, described as: Geometric spherical form, bronze metallic wireframe globe with map outlines, mounted on a stone pedestal, ornamental display likely for educational or symbolic purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:20 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 21 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:GlobeSculpture,
+                        Size:big(6.0*6.0=36.0 squares),
+                        Description:Geometric spherical form, bronze metallic wireframe globe with map outlines, mounted on a stone pedestal, ornamental display likely for educational or symbolic purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [112, 213]  
+                        **Y Range**: [min_y, max_y] = [313, 414]
+
+                        # RGB Captions
+                        Front = red leaves, vibrant; leaves in the foreground; buildings in the background  
+                        Left = red leaves, vibrant; leaves in the foreground; cityscape in the background  
+                        Right = red leaves, vibrant; leaves in the foreground; buildings in the background  
+                        Down = red leaves, dark; leaves in the foreground; dim lighting  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 31, 39]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [42, 35, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [42, 31, 42]]
+
+                        DownDepth:
+                        [[17, 14, 17], [15, 11, 14], [18, 15, 17]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(197.82, 314.68, -9.3), -53.9],
+    [(197.82, 314.68, -9.3), -68.9],
+    [(197.82, 314.68, -9.3), -83.9],
+    [(197.82, 314.68, -9.3), -98.9],
+    [(197.82, 314.68, -9.3), -113.9],
+    [(197.82, 314.68, -9.3), -128.9],
+    [(197.82, 314.68, -9.3), -143.9],
+    [(197.82, 314.68, -9.3), -158.9],
+    [(197.82, 314.68, -9.3), -173.9],
+    [(192.84, 314.15, -9.3), -173.9],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 21
+                        DistanceTraveled = 65.00000000000027
+                        AvgHeadingChange = 5.71
+
+                        # Reminder  
+                        - The target is **GlobeSculpture**, described as: Geometric spherical form, bronze metallic wireframe globe with map outlines, mounted on a stone pedestal, ornamental display likely for educational or symbolic purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:21 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 22 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:GlobeSculpture,
+                        Size:big(6.0*6.0=36.0 squares),
+                        Description:Geometric spherical form, bronze metallic wireframe globe with map outlines, mounted on a stone pedestal, ornamental display likely for educational or symbolic purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [112, 213]  
+                        **Y Range**: [min_y, max_y] = [313, 414]
+
+                        # RGB Captions
+                        Front = red and green bushes, vibrant colors; buildings in the background; sunny sky  
+                        Left = leaves, dark and shadowed; buildings faintly visible in the background  
+                        Right = red and orange leaves, bright colors; buildings in the background; sunny sky  
+                        Down = red leaves, bright and vivid; leaves clustered together  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [42, 33, 42]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 35, 36]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [42, 33, 35]]
+
+                        DownDepth:
+                        [[16, 14, 16], [15, 11, 14], [18, 14, 17]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(197.82, 314.68, -9.3), -68.9],
+    [(197.82, 314.68, -9.3), -83.9],
+    [(197.82, 314.68, -9.3), -98.9],
+    [(197.82, 314.68, -9.3), -113.9],
+    [(197.82, 314.68, -9.3), -128.9],
+    [(197.82, 314.68, -9.3), -143.9],
+    [(197.82, 314.68, -9.3), -158.9],
+    [(197.82, 314.68, -9.3), -173.9],
+    [(192.84, 314.15, -9.3), -173.9],
+    [(187.87, 313.62, -9.3), -173.9],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 22
+                        DistanceTraveled = 70.00000000000027
+                        AvgHeadingChange = 5.45
+
+                        # Reminder  
+                        - The target is **GlobeSculpture**, described as: Geometric spherical form, bronze metallic wireframe globe with map outlines, mounted on a stone pedestal, ornamental display likely for educational or symbolic purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:22 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 23 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:GlobeSculpture,
+                        Size:big(6.0*6.0=36.0 squares),
+                        Description:Geometric spherical form, bronze metallic wireframe globe with map outlines, mounted on a stone pedestal, ornamental display likely for educational or symbolic purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [112, 213]  
+                        **Y Range**: [min_y, max_y] = [313, 414]
+
+                        # RGB Captions
+                        Front = red and green bushes, foreground; buildings in the background  
+                        Left = leaves, dark and shadowed; sky visible through branches  
+                        Right = red and green bushes, foreground; tall buildings, stone facade; buildings stand in the background  
+                        Down = red leaves, bright and clustered; leaves are in the foreground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [42, 32, 43]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [41, 35, 41]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [43, 33, 39]]
+
+                        DownDepth:
+                        [[15, 14, 16], [15, 11, 14], [16, 14, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(197.82, 314.68, -9.3), -83.9],
+    [(197.82, 314.68, -9.3), -98.9],
+    [(197.82, 314.68, -9.3), -113.9],
+    [(197.82, 314.68, -9.3), -128.9],
+    [(197.82, 314.68, -9.3), -143.9],
+    [(197.82, 314.68, -9.3), -158.9],
+    [(197.82, 314.68, -9.3), -173.9],
+    [(192.84, 314.15, -9.3), -173.9],
+    [(187.87, 313.62, -9.3), -173.9],
+    [(187.87, 313.62, -9.3), 171.1],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 23
+                        DistanceTraveled = 70.00000000000027
+                        AvgHeadingChange = 5.87
+
+                        # Reminder  
+                        - The target is **GlobeSculpture**, described as: Geometric spherical form, bronze metallic wireframe globe with map outlines, mounted on a stone pedestal, ornamental display likely for educational or symbolic purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:23 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 24 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:GlobeSculpture,
+                        Size:big(6.0*6.0=36.0 squares),
+                        Description:Geometric spherical form, bronze metallic wireframe globe with map outlines, mounted on a stone pedestal, ornamental display likely for educational or symbolic purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [112, 213]  
+                        **Y Range**: [min_y, max_y] = [313, 414]
+
+                        # RGB Captions
+                        Front = red flowers, dense cluster; green leaves, surrounding; buildings in the background  
+                        Left = black leaves, elongated shape; yellow flowers, sparse; cityscape in the distance  
+                        Right = green leaves, vibrant color; red berries, scattered; tall building, distant background  
+                        Down = yellow leaves, illuminated; dark branches, intertwined; low light setting  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [39, 31, 42]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 35, 39]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [43, 33, 40]]
+
+                        DownDepth:
+                        [[17, 14, 17], [14, 11, 14], [17, 14, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(197.82, 314.68, -9.3), -98.9],
+    [(197.82, 314.68, -9.3), -113.9],
+    [(197.82, 314.68, -9.3), -128.9],
+    [(197.82, 314.68, -9.3), -143.9],
+    [(197.82, 314.68, -9.3), -158.9],
+    [(197.82, 314.68, -9.3), -173.9],
+    [(192.84, 314.15, -9.3), -173.9],
+    [(187.87, 313.62, -9.3), -173.9],
+    [(187.87, 313.62, -9.3), 171.1],
+    [(182.93, 314.39, -9.3), 171.1],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 24
+                        DistanceTraveled = 75.00000000000027
+                        AvgHeadingChange = 5.62
+
+                        # Reminder  
+                        - The target is **GlobeSculpture**, described as: Geometric spherical form, bronze metallic wireframe globe with map outlines, mounted on a stone pedestal, ornamental display likely for educational or symbolic purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:24 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 25 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:GlobeSculpture,
+                        Size:big(6.0*6.0=36.0 squares),
+                        Description:Geometric spherical form, bronze metallic wireframe globe with map outlines, mounted on a stone pedestal, ornamental display likely for educational or symbolic purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [112, 213]  
+                        **Y Range**: [min_y, max_y] = [313, 414]
+
+                        # RGB Captions
+                        Front = red and green trees, foreground; buildings in the background; clear sky  
+                        Left = red and green trees, foreground; buildings in the background; clear sky  
+                        Right = green and red trees, foreground; tall buildings, modern architecture; sunny day  
+                        Down = red leaves, dense foliage; dark background; illuminated by light  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [43, 26, 43]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 35, 39]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [42, 33, 43]]
+
+                        DownDepth:
+                        [[17, 14, 17], [14, 11, 14], [18, 14, 17]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(197.82, 314.68, -9.3), -113.9],
+    [(197.82, 314.68, -9.3), -128.9],
+    [(197.82, 314.68, -9.3), -143.9],
+    [(197.82, 314.68, -9.3), -158.9],
+    [(197.82, 314.68, -9.3), -173.9],
+    [(192.84, 314.15, -9.3), -173.9],
+    [(187.87, 313.62, -9.3), -173.9],
+    [(187.87, 313.62, -9.3), 171.1],
+    [(182.93, 314.39, -9.3), 171.1],
+    [(177.99, 315.17, -9.3), 171.1],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 25
+                        DistanceTraveled = 80.00000000000027
+                        AvgHeadingChange = 5.4
+
+                        # Reminder  
+                        - The target is **GlobeSculpture**, described as: Geometric spherical form, bronze metallic wireframe globe with map outlines, mounted on a stone pedestal, ornamental display likely for educational or symbolic purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:25 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

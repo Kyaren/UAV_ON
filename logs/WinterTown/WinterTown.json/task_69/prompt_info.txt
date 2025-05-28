@@ -1,0 +1,252 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: TreeOld,
+                        Size: big(5.25*6.5=34.13 squares),
+                        Description: Organic vertical form, dark brown bark with many twisting leafless branches, gnarled trunk with irregular branching pattern, consistent with a deciduous tree in dormant or dead state.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-34, 67]  
+                        **Y Range**: [min_y, max_y] = [0, 101]
+
+                        # RGB Captions
+                        Front = bare tree, snow-covered ground; tree in the foreground; buildings in the background  
+                        Left = snow-covered tree, twisted trunk; tree in the center; snowy landscape surrounding  
+                        Right = brick house, snow-covered roof; house on the left; large tree to the right of the house  
+                        Down = round object, snow-covered ground; object in the center; shadows cast by nearby structures  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [93, 31, 35]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 73, 92]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [18, 96, 100]]
+
+                        DownDepth:
+                        [[16, 15, 17], [15, 11, 15], [14, 12, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(16.55, 50.57, -10.0), -139.06],
+    [(16.55, 50.57, -10.0), -139.06],
+    [(16.55, 50.57, -10.0), -139.06],
+    [(16.55, 50.57, -10.0), -139.06],
+    [(16.55, 50.57, -10.0), -139.06],
+    [(16.55, 50.57, -10.0), -139.06],
+    [(16.55, 50.57, -10.0), -139.06],
+    [(16.55, 50.57, -10.0), -139.06],
+    [(16.55, 50.57, -10.0), -139.06],
+    [(16.55, 50.57, -10.0), -139.06],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** TreeOld**, described as:  Organic vertical form, dark brown bark with many twisting leafless branches, gnarled trunk with irregular branching pattern, consistent with a deciduous tree in dormant or dead state.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 1 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: TreeOld,
+                        Size: big(5.25*6.5=34.13 squares),
+                        Description: Organic vertical form, dark brown bark with many twisting leafless branches, gnarled trunk with irregular branching pattern, consistent with a deciduous tree in dormant or dead state.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-34, 67]  
+                        **Y Range**: [min_y, max_y] = [0, 101]
+
+                        # RGB Captions
+                        Front = trees, snow-covered; buildings in the background; trees are scattered  
+                        Left = tree with twisted trunk, snow-covered branches; tree is in the foreground; snow on the ground  
+                        Right = house with snow-covered roof, brick walls; tree next to the house; sun low in the sky  
+                        Down = fire hydrant, small, metallic; hydrant is in the foreground; snow on the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [93, 36, 45]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [89, 70, 93]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [23, 100, 100]]
+
+                        DownDepth:
+                        [[16, 15, 18], [15, 11, 16], [18, 12, 15]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(16.55, 50.57, -10.0), -139.06],
+    [(13.27, 54.35, -10.0), -139.06],
+    [(13.27, 54.35, -10.0), -139.06],
+    [(13.27, 54.35, -10.0), -139.06],
+    [(13.27, 54.35, -10.0), -139.06],
+    [(13.27, 54.35, -10.0), -139.06],
+    [(13.27, 54.35, -10.0), -139.06],
+    [(13.27, 54.35, -10.0), -139.06],
+    [(13.27, 54.35, -10.0), -139.06],
+    [(13.27, 54.35, -10.0), -139.06],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 1
+                        DistanceTraveled = 4.999999999999998
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** TreeOld**, described as:  Organic vertical form, dark brown bark with many twisting leafless branches, gnarled trunk with irregular branching pattern, consistent with a deciduous tree in dormant or dead state.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:1 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 2 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: TreeOld,
+                        Size: big(5.25*6.5=34.13 squares),
+                        Description: Organic vertical form, dark brown bark with many twisting leafless branches, gnarled trunk with irregular branching pattern, consistent with a deciduous tree in dormant or dead state.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-34, 67]  
+                        **Y Range**: [min_y, max_y] = [0, 101]
+
+                        # RGB Captions
+                        Front = tall tree, twisted trunk, snow-covered branches; tree is in the foreground; buildings in the background  
+                        Left = pine trees, snow-covered, scattered; trees are in the foreground; road in the middle ground  
+                        Right = house, small, stone; house is in the foreground; large tree, snow-covered, to the right of the house  
+                        Down = snowy ground, textured, with shadows; shadow of a person and a pole on the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [93, 35, 44]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [90, 64, 93]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 72, 100]]
+
+                        DownDepth:
+                        [[15, 15, 17], [18, 11, 14], [32, 21, 15]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(16.55, 50.57, -10.0), -139.06],
+    [(13.27, 54.35, -10.0), -139.06],
+    [(9.99, 58.12, -10.0), -139.06],
+    [(9.99, 58.12, -10.0), -139.06],
+    [(9.99, 58.12, -10.0), -139.06],
+    [(9.99, 58.12, -10.0), -139.06],
+    [(9.99, 58.12, -10.0), -139.06],
+    [(9.99, 58.12, -10.0), -139.06],
+    [(9.99, 58.12, -10.0), -139.06],
+    [(9.99, 58.12, -10.0), -139.06],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 2
+                        DistanceTraveled = 9.999999999999996
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** TreeOld**, described as:  Organic vertical form, dark brown bark with many twisting leafless branches, gnarled trunk with irregular branching pattern, consistent with a deciduous tree in dormant or dead state.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:2 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 3 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: TreeOld,
+                        Size: big(5.25*6.5=34.13 squares),
+                        Description: Organic vertical form, dark brown bark with many twisting leafless branches, gnarled trunk with irregular branching pattern, consistent with a deciduous tree in dormant or dead state.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-34, 67]  
+                        **Y Range**: [min_y, max_y] = [0, 101]
+
+                        # RGB Captions
+                        Front = twisted tree trunk, brown; tree trunk is in the foreground; snow-covered ground  
+                        Left = dilapidated building, brick; building is in the background; snow-covered trees  
+                        Right = snow-covered cabin, wooden; cabin is in the middle ground; sun low in the sky  
+                        Down = shadow on snow, dark; shadow is across the snow-covered ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [88, 68, 44]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [89, 60, 88]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 75, 100]]
+
+                        DownDepth:
+                        [[16, 13, 18], [27, 12, 14], [38, 26, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(16.55, 50.57, -10.0), -139.06],
+    [(13.27, 54.35, -10.0), -139.06],
+    [(9.99, 58.12, -10.0), -139.06],
+    [(6.22, 54.85, -10.0), -139.06],
+    [(6.22, 54.85, -10.0), -139.06],
+    [(6.22, 54.85, -10.0), -139.06],
+    [(6.22, 54.85, -10.0), -139.06],
+    [(6.22, 54.85, -10.0), -139.06],
+    [(6.22, 54.85, -10.0), -139.06],
+    [(6.22, 54.85, -10.0), -139.06],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 3
+                        DistanceTraveled = 14.999999999999995
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** TreeOld**, described as:  Organic vertical form, dark brown bark with many twisting leafless branches, gnarled trunk with irregular branching pattern, consistent with a deciduous tree in dormant or dead state.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:3 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

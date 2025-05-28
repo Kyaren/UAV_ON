@@ -1,0 +1,63 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Deckchair,
+                        Size: small(1.5*0.75=1.125 squares),
+                        Description: Geometric reclined form, red and white striped fabric stretched over thin metal frame, open angled seating structure, designed for outdoor relaxation use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-61, 40]  
+                        **Y Range**: [min_y, max_y] = [-23, 78]
+
+                        # RGB Captions
+                        Front = tree, orange leaves, dense foliage; tree fills the foreground  
+                        Left = buildings, white facades, red roofs; buildings are in the midground; canal in front of buildings  
+                        Right = buildings, beige walls, red roofs; trees with yellow leaves; buildings and trees surround a canal  
+                        Down = bridge, stone steps, over canal; bridge is in the foreground; orange leaves above  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [52, 28, 27]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [64, 37, 59]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [53, 31, 16]]
+
+                        DownDepth:
+                        [[16, 15, 23], [17, 15, 20], [24, 18, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-10.25, 27.02, -10.0), -140.12],
+    [(-10.25, 27.02, -10.0), -140.12],
+    [(-10.25, 27.02, -10.0), -140.12],
+    [(-10.25, 27.02, -10.0), -140.12],
+    [(-10.25, 27.02, -10.0), -140.12],
+    [(-10.25, 27.02, -10.0), -140.12],
+    [(-10.25, 27.02, -10.0), -140.12],
+    [(-10.25, 27.02, -10.0), -140.12],
+    [(-10.25, 27.02, -10.0), -140.12],
+    [(-10.25, 27.02, -10.0), -140.12],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Deckchair**, described as:  Geometric reclined form, red and white striped fabric stretched over thin metal frame, open angled seating structure, designed for outdoor relaxation use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

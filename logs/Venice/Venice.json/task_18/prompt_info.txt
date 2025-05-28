@@ -1,0 +1,378 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Tank,
+                        Size: small(1.5*1.5=2.25 squares),
+                        Description: Geometric cuboid structure, translucent white plastic encased in a black metal grid, top inlet valve and bottom outlet spigot visible, designed for fluid containment and transport.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [47, 148]  
+                        **Y Range**: [min_y, max_y] = [-71, 30]
+
+                        # RGB Captions
+                        Front = building, beige facade, multiple windows; building stands in the foreground; canal in front of the building  
+                        Left = canal, waterway, surrounded by buildings; canal runs through the center; bridge over the canal  
+                        Right = bridge, white structure, spans canal; bridge is in the middle; tree to the left of the bridge  
+                        Down = pool, rectangular, filled with water; pool is in the center; stairs on the left side of the pool  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [14, 100, 100], [29, 45, 47]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 24], [46, 45, 25]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 42, 26]]
+
+                        DownDepth:
+                        [[18, 16, 22], [16, 15, 20], [21, 15, 17]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(97.37, -20.12, -10.0), 104.51],
+    [(97.37, -20.12, -10.0), 104.51],
+    [(97.37, -20.12, -10.0), 104.51],
+    [(97.37, -20.12, -10.0), 104.51],
+    [(97.37, -20.12, -10.0), 104.51],
+    [(97.37, -20.12, -10.0), 104.51],
+    [(97.37, -20.12, -10.0), 104.51],
+    [(97.37, -20.12, -10.0), 104.51],
+    [(97.37, -20.12, -10.0), 104.51],
+    [(97.37, -20.12, -10.0), 104.51],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Tank**, described as:  Geometric cuboid structure, translucent white plastic encased in a black metal grid, top inlet valve and bottom outlet spigot visible, designed for fluid containment and transport.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 1 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Tank,
+                        Size: small(1.5*1.5=2.25 squares),
+                        Description: Geometric cuboid structure, translucent white plastic encased in a black metal grid, top inlet valve and bottom outlet spigot visible, designed for fluid containment and transport.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [47, 148]  
+                        **Y Range**: [min_y, max_y] = [-71, 30]
+
+                        # RGB Captions
+                        Front = buildings, beige and pink; canal in the foreground; bridge over the canal; buildings on both sides of the canal  
+                        Left = building, yellow facade; balconies with black railings; building stretches across the image; canal to the left of the building  
+                        Right = canal, narrow; bridge over the canal; tree on the left side; buildings with red roofs on both sides  
+                        Down = bridge, white railing; stairs leading down to the canal; lamp post near the stairs; canal water below  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[5, 100, 100], [4, 100, 100], [5, 46, 39]]
+
+                        LeftDepth:
+                        [[100, 100, 10], [100, 100, 7], [50, 36, 17]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 45, 27]]
+
+                        DownDepth:
+                        [[11, 20, 23], [16, 15, 20], [24, 20, 22]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(97.37, -20.12, -10.0), 104.51],
+    [(96.12, -15.28, -10.0), 104.51],
+    [(96.12, -15.28, -10.0), 104.51],
+    [(96.12, -15.28, -10.0), 104.51],
+    [(96.12, -15.28, -10.0), 104.51],
+    [(96.12, -15.28, -10.0), 104.51],
+    [(96.12, -15.28, -10.0), 104.51],
+    [(96.12, -15.28, -10.0), 104.51],
+    [(96.12, -15.28, -10.0), 104.51],
+    [(96.12, -15.28, -10.0), 104.51],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 1
+                        DistanceTraveled = 5.000000000000001
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Tank**, described as:  Geometric cuboid structure, translucent white plastic encased in a black metal grid, top inlet valve and bottom outlet spigot visible, designed for fluid containment and transport.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:1 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 2 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Tank,
+                        Size: small(1.5*1.5=2.25 squares),
+                        Description: Geometric cuboid structure, translucent white plastic encased in a black metal grid, top inlet valve and bottom outlet spigot visible, designed for fluid containment and transport.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [47, 148]  
+                        **Y Range**: [min_y, max_y] = [-71, 30]
+
+                        # RGB Captions
+                        Front = canal, narrow, water; bridge, arched, stone; buildings, multi-story, beige; bridge spans canal, buildings on both sides  
+                        Left = wall, plain, brown; shadows, vertical, dark  
+                        Right = canal, narrow, water; bridge, arched, stone; tree, large, green; buildings, multi-story, beige; tree near bridge, buildings on both sides  
+                        Down = staircase, metal, spiral; wall, textured, yellow; staircase against wall, view from above  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [20, 100, 100], [22, 46, 39]]
+
+                        LeftDepth:
+                        [[0, 1, 1], [0, 0, 1], [0, 1, 1]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [41, 45, 37]]
+
+                        DownDepth:
+                        [[16, 20, 23], [5, 12, 20], [21, 20, 24]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(97.37, -20.12, -10.0), 104.51],
+    [(96.12, -15.28, -10.0), 104.51],
+    [(94.86, -10.44, -10.0), 104.51],
+    [(94.86, -10.44, -10.0), 104.51],
+    [(94.86, -10.44, -10.0), 104.51],
+    [(94.86, -10.44, -10.0), 104.51],
+    [(94.86, -10.44, -10.0), 104.51],
+    [(94.86, -10.44, -10.0), 104.51],
+    [(94.86, -10.44, -10.0), 104.51],
+    [(94.86, -10.44, -10.0), 104.51],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 2
+                        DistanceTraveled = 10.000000000000002
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Tank**, described as:  Geometric cuboid structure, translucent white plastic encased in a black metal grid, top inlet valve and bottom outlet spigot visible, designed for fluid containment and transport.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:2 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 3 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Tank,
+                        Size: small(1.5*1.5=2.25 squares),
+                        Description: Geometric cuboid structure, translucent white plastic encased in a black metal grid, top inlet valve and bottom outlet spigot visible, designed for fluid containment and transport.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [47, 148]  
+                        **Y Range**: [min_y, max_y] = [-71, 30]
+
+                        # RGB Captions
+                        Front = canal, narrow, water; canal runs between buildings; bridge spans canal; buildings on both sides  
+                        Left = building wall, beige, plastered; window ledge, stone, protruding; archway, dark, entrance  
+                        Right = tree, large, green leaves; tree in the center; buildings surround tree; bridge over canal  
+                        Down = bridge, narrow, metal railing; bridge crosses canal; building facade, yellow, plastered  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [33, 45, 41]]
+
+                        LeftDepth:
+                        [[2, 2, 4], [2, 2, 3], [2, 2, 4]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [37, 45, 44]]
+
+                        DownDepth:
+                        [[16, 20, 22], [9, 15, 20], [6, 16, 24]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(97.37, -20.12, -10.0), 104.51],
+    [(96.12, -15.28, -10.0), 104.51],
+    [(94.86, -10.44, -10.0), 104.51],
+    [(93.61, -5.6, -10.0), 104.51],
+    [(93.61, -5.6, -10.0), 104.51],
+    [(93.61, -5.6, -10.0), 104.51],
+    [(93.61, -5.6, -10.0), 104.51],
+    [(93.61, -5.6, -10.0), 104.51],
+    [(93.61, -5.6, -10.0), 104.51],
+    [(93.61, -5.6, -10.0), 104.51],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 3
+                        DistanceTraveled = 15.000000000000004
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Tank**, described as:  Geometric cuboid structure, translucent white plastic encased in a black metal grid, top inlet valve and bottom outlet spigot visible, designed for fluid containment and transport.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:3 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 4 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Tank,
+                        Size: small(1.5*1.5=2.25 squares),
+                        Description: Geometric cuboid structure, translucent white plastic encased in a black metal grid, top inlet valve and bottom outlet spigot visible, designed for fluid containment and transport.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [47, 148]  
+                        **Y Range**: [min_y, max_y] = [-71, 30]
+
+                        # RGB Captions
+                        Front = canal, narrow, water; bridge, arched, stone; buildings on both sides, multi-story, pastel colors; bridge spans canal in the foreground  
+                        Left = building facade, beige, multiple windows; windows arranged in rows, closed shutters, symmetrical layout  
+                        Right = tree, large, yellow leaves; canal, narrow, water; bridge, arched, stone; tree is in the foreground near the bridge  
+                        Down = canal, narrow, water; bridge, flat, stone; buildings on both sides, multi-story, pastel colors; bridge crosses canal in the foreground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [37, 45, 36]]
+
+                        LeftDepth:
+                        [[9, 11, 100], [7, 8, 13], [9, 10, 27]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [40, 45, 42]]
+
+                        DownDepth:
+                        [[20, 20, 20], [14, 15, 17], [19, 20, 24]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(97.37, -20.12, -10.0), 104.51],
+    [(96.12, -15.28, -10.0), 104.51],
+    [(94.86, -10.44, -10.0), 104.51],
+    [(93.61, -5.6, -10.0), 104.51],
+    [(88.77, -6.86, -10.0), 104.51],
+    [(88.77, -6.86, -10.0), 104.51],
+    [(88.77, -6.86, -10.0), 104.51],
+    [(88.77, -6.86, -10.0), 104.51],
+    [(88.77, -6.86, -10.0), 104.51],
+    [(88.77, -6.86, -10.0), 104.51],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 4
+                        DistanceTraveled = 20.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Tank**, described as:  Geometric cuboid structure, translucent white plastic encased in a black metal grid, top inlet valve and bottom outlet spigot visible, designed for fluid containment and transport.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:4 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 5 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Tank,
+                        Size: small(1.5*1.5=2.25 squares),
+                        Description: Geometric cuboid structure, translucent white plastic encased in a black metal grid, top inlet valve and bottom outlet spigot visible, designed for fluid containment and transport.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [47, 148]  
+                        **Y Range**: [min_y, max_y] = [-71, 30]
+
+                        # RGB Captions
+                        Front = canal, narrow, water; bridge, arched, stone; buildings, multi-story, beige; bridge spans canal, connects buildings  
+                        Left = building, old, beige; windows, arched, dark; wall stains, dark, vertical; windows symmetrically placed  
+                        Right = tree, large, green; canal, narrow, water; bridge, arched, stone; tree stands near canal, bridge spans canal  
+                        Down = bridge, narrow, metal; building, old, beige; windows, arched, dark; bridge extends over water, near building  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [33, 45, 41]]
+
+                        LeftDepth:
+                        [[3, 3, 5], [2, 2, 4], [3, 3, 5]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [38, 46, 43]]
+
+                        DownDepth:
+                        [[16, 20, 22], [13, 15, 20], [7, 16, 24]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(97.37, -20.12, -10.0), 104.51],
+    [(96.12, -15.28, -10.0), 104.51],
+    [(94.86, -10.44, -10.0), 104.51],
+    [(93.61, -5.6, -10.0), 104.51],
+    [(88.77, -6.86, -10.0), 104.51],
+    [(93.61, -5.6, -10.0), 104.51],
+    [(93.61, -5.6, -10.0), 104.51],
+    [(93.61, -5.6, -10.0), 104.51],
+    [(93.61, -5.6, -10.0), 104.51],
+    [(93.61, -5.6, -10.0), 104.51],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 5
+                        DistanceTraveled = 24.999999999999996
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Tank**, described as:  Geometric cuboid structure, translucent white plastic encased in a black metal grid, top inlet valve and bottom outlet spigot visible, designed for fluid containment and transport.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:5 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

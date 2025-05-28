@@ -1,0 +1,35 @@
+{
+  "episode_id": "31",
+  "start_pose": {
+    "start_position": [
+      114.88336147416517,
+      77.2726713801565,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.17845372579854377,
+      -0.9839483054249436
+    ]
+  },
+  "info": {
+    "geodesic_distance": 63,
+    "euclidean_distance": 46.0441
+  },
+  "map_name": "Venice_test",
+  "true_name": "Flag",
+  "object_name": "Flag_58",
+  "pose": [
+    [
+      94.69770050048828,
+      35.91699981689453,
+      -5.4799981117248535
+    ]
+  ],
+  "size": "small(3.25*0.5=1.625 squares)",
+  "description": "Geometric vertical form, tricolor fabric (red, white, blue) with central emblem, mounted on a slanted dark metal pole, fluttering structure used for identification or symbolism.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

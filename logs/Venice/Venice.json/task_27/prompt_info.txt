@@ -1,0 +1,756 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Firewood,
+                        Size: mid(2*2=4 squares),
+                        Description: Organic rounded pile, stacked light brown logs under a weathered blue tarpaulin, natural wood texture with cylindrical cut ends, likely for fuel or outdoor use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [90, 191]  
+                        **Y Range**: [min_y, max_y] = [7, 108]
+
+                        # RGB Captions
+                        Front = green basketball court, outdoor; court is in the foreground; buildings with red-tiled roofs in the background  
+                        Left = metal fence, long; fence runs horizontally across the image; water body beyond the fence  
+                        Right = green basketball court, outdoor; court is in the foreground; buildings with red-tiled roofs and shutters in the background  
+                        Down = green basketball court, outdoor; court covers the entire image; basketball hoop casts shadow on the court  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [61, 36, 43]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [63, 47, 61]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [25, 30, 47]]
+
+                        DownDepth:
+                        [[19, 16, 18], [20, 12, 16], [24, 16, 19]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(140.31, 57.64, -10.0), 111.35],
+    [(140.31, 57.64, -10.0), 111.35],
+    [(140.31, 57.64, -10.0), 111.35],
+    [(140.31, 57.64, -10.0), 111.35],
+    [(140.31, 57.64, -10.0), 111.35],
+    [(140.31, 57.64, -10.0), 111.35],
+    [(140.31, 57.64, -10.0), 111.35],
+    [(140.31, 57.64, -10.0), 111.35],
+    [(140.31, 57.64, -10.0), 111.35],
+    [(140.31, 57.64, -10.0), 111.35],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Firewood**, described as:  Organic rounded pile, stacked light brown logs under a weathered blue tarpaulin, natural wood texture with cylindrical cut ends, likely for fuel or outdoor use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 1 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Firewood,
+                        Size: mid(2*2=4 squares),
+                        Description: Organic rounded pile, stacked light brown logs under a weathered blue tarpaulin, natural wood texture with cylindrical cut ends, likely for fuel or outdoor use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [90, 191]  
+                        **Y Range**: [min_y, max_y] = [7, 108]
+
+                        # RGB Captions
+                        Front = green and red basketball court, fenced; buildings in the background; person standing near the fence  
+                        Left = calm water surface, foggy atmosphere; sky with light clouds  
+                        Right = green and red basketball court, fenced; buildings with orange roofs in the background; two tarps on the court  
+                        Down = aerial view of green and red basketball court, shadow of a bridge; water with reflections  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [64, 37, 47]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [65, 49, 64]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 36, 47]]
+
+                        DownDepth:
+                        [[25, 16, 19], [21, 16, 16], [25, 21, 19]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(140.31, 57.64, -10.0), 111.35],
+    [(138.49, 62.3, -10.0), 111.35],
+    [(138.49, 62.3, -10.0), 111.35],
+    [(138.49, 62.3, -10.0), 111.35],
+    [(138.49, 62.3, -10.0), 111.35],
+    [(138.49, 62.3, -10.0), 111.35],
+    [(138.49, 62.3, -10.0), 111.35],
+    [(138.49, 62.3, -10.0), 111.35],
+    [(138.49, 62.3, -10.0), 111.35],
+    [(138.49, 62.3, -10.0), 111.35],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 1
+                        DistanceTraveled = 5.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Firewood**, described as:  Organic rounded pile, stacked light brown logs under a weathered blue tarpaulin, natural wood texture with cylindrical cut ends, likely for fuel or outdoor use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:1 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 2 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Firewood,
+                        Size: mid(2*2=4 squares),
+                        Description: Organic rounded pile, stacked light brown logs under a weathered blue tarpaulin, natural wood texture with cylindrical cut ends, likely for fuel or outdoor use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [90, 191]  
+                        **Y Range**: [min_y, max_y] = [7, 108]
+
+                        # RGB Captions
+                        Front = basketball court, green and red surface; person walking on the court; buildings in the background  
+                        Left = fence, metal railing; fence is in the foreground; water body in the background  
+                        Right = buildings, orange roofs; basketball court in the foreground; clothes hanging on a line  
+                        Down = basketball court, green and red surface; shadows of structures cast on the court  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [61, 38, 46]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [59, 46, 61]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [28, 32, 49]]
+
+                        DownDepth:
+                        [[19, 16, 20], [20, 12, 16], [24, 16, 19]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(140.31, 57.64, -10.0), 111.35],
+    [(138.49, 62.3, -10.0), 111.35],
+    [(133.83, 60.48, -10.0), 111.35],
+    [(133.83, 60.48, -10.0), 111.35],
+    [(133.83, 60.48, -10.0), 111.35],
+    [(133.83, 60.48, -10.0), 111.35],
+    [(133.83, 60.48, -10.0), 111.35],
+    [(133.83, 60.48, -10.0), 111.35],
+    [(133.83, 60.48, -10.0), 111.35],
+    [(133.83, 60.48, -10.0), 111.35],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 2
+                        DistanceTraveled = 10.000000000000007
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Firewood**, described as:  Organic rounded pile, stacked light brown logs under a weathered blue tarpaulin, natural wood texture with cylindrical cut ends, likely for fuel or outdoor use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:2 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 3 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Firewood,
+                        Size: mid(2*2=4 squares),
+                        Description: Organic rounded pile, stacked light brown logs under a weathered blue tarpaulin, natural wood texture with cylindrical cut ends, likely for fuel or outdoor use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [90, 191]  
+                        **Y Range**: [min_y, max_y] = [7, 108]
+
+                        # RGB Captions
+                        Front = multi-story building, beige facade; building in the background; green and brown sports court in the foreground  
+                        Left = chain-link fence, metal; fence in the foreground; water body in the background  
+                        Right = multi-story building, beige facade; building in the background; green and brown sports court in the foreground  
+                        Down = green and brown basketball court; person playing basketball; court surrounded by chain-link fence  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [62, 35, 43]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [60, 46, 62]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [56, 30, 49]]
+
+                        DownDepth:
+                        [[19, 16, 19], [16, 12, 16], [24, 16, 19]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(140.31, 57.64, -10.0), 111.35],
+    [(138.49, 62.3, -10.0), 111.35],
+    [(133.83, 60.48, -10.0), 111.35],
+    [(132.01, 65.13, -10.0), 111.35],
+    [(132.01, 65.13, -10.0), 111.35],
+    [(132.01, 65.13, -10.0), 111.35],
+    [(132.01, 65.13, -10.0), 111.35],
+    [(132.01, 65.13, -10.0), 111.35],
+    [(132.01, 65.13, -10.0), 111.35],
+    [(132.01, 65.13, -10.0), 111.35],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 3
+                        DistanceTraveled = 15.000000000000007
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Firewood**, described as:  Organic rounded pile, stacked light brown logs under a weathered blue tarpaulin, natural wood texture with cylindrical cut ends, likely for fuel or outdoor use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:3 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 4 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Firewood,
+                        Size: mid(2*2=4 squares),
+                        Description: Organic rounded pile, stacked light brown logs under a weathered blue tarpaulin, natural wood texture with cylindrical cut ends, likely for fuel or outdoor use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [90, 191]  
+                        **Y Range**: [min_y, max_y] = [7, 108]
+
+                        # RGB Captions
+                        Front = building, beige facade, red-tiled roof; building is in the foreground; fence in front of the building  
+                        Left = water, calm surface, light blue; water is in the background; fence in the foreground  
+                        Right = building, beige facade, red-tiled roof; building is in the background; basketball court in the foreground  
+                        Down = basketball court, green and brown surface, white lines; two people playing basketball; shadows on the court  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [60, 29, 36]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [62, 46, 60]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [53, 28, 51]]
+
+                        DownDepth:
+                        [[18, 16, 19], [16, 12, 16], [23, 16, 19]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(140.31, 57.64, -10.0), 111.35],
+    [(138.49, 62.3, -10.0), 111.35],
+    [(133.83, 60.48, -10.0), 111.35],
+    [(132.01, 65.13, -10.0), 111.35],
+    [(130.19, 69.79, -10.0), 111.35],
+    [(130.19, 69.79, -10.0), 111.35],
+    [(130.19, 69.79, -10.0), 111.35],
+    [(130.19, 69.79, -10.0), 111.35],
+    [(130.19, 69.79, -10.0), 111.35],
+    [(130.19, 69.79, -10.0), 111.35],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 4
+                        DistanceTraveled = 20.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Firewood**, described as:  Organic rounded pile, stacked light brown logs under a weathered blue tarpaulin, natural wood texture with cylindrical cut ends, likely for fuel or outdoor use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:4 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 5 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Firewood,
+                        Size: mid(2*2=4 squares),
+                        Description: Organic rounded pile, stacked light brown logs under a weathered blue tarpaulin, natural wood texture with cylindrical cut ends, likely for fuel or outdoor use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [90, 191]  
+                        **Y Range**: [min_y, max_y] = [7, 108]
+
+                        # RGB Captions
+                        Front = building, beige facade, orange roof; building occupies the foreground; fence in front of the building; clear sky above  
+                        Left = pier, concrete surface, metal railing; pier extends into the water; fog over the water; sky is clear above  
+                        Right = apartment building, pink facade, orange roof; building stands in the background; basketball court in the foreground; fence around the court  
+                        Down = basketball court, green surface, white lines; person standing near the hoop; shadows cast by the sun; court is enclosed  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [20, 25, 33]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [62, 47, 60]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [50, 26, 47]]
+
+                        DownDepth:
+                        [[19, 15, 19], [16, 12, 16], [18, 16, 19]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(140.31, 57.64, -10.0), 111.35],
+    [(138.49, 62.3, -10.0), 111.35],
+    [(133.83, 60.48, -10.0), 111.35],
+    [(132.01, 65.13, -10.0), 111.35],
+    [(130.19, 69.79, -10.0), 111.35],
+    [(128.37, 74.45, -10.0), 111.35],
+    [(128.37, 74.45, -10.0), 111.35],
+    [(128.37, 74.45, -10.0), 111.35],
+    [(128.37, 74.45, -10.0), 111.35],
+    [(128.37, 74.45, -10.0), 111.35],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 5
+                        DistanceTraveled = 25.000000000000007
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Firewood**, described as:  Organic rounded pile, stacked light brown logs under a weathered blue tarpaulin, natural wood texture with cylindrical cut ends, likely for fuel or outdoor use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:5 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 6 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Firewood,
+                        Size: mid(2*2=4 squares),
+                        Description: Organic rounded pile, stacked light brown logs under a weathered blue tarpaulin, natural wood texture with cylindrical cut ends, likely for fuel or outdoor use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [90, 191]  
+                        **Y Range**: [min_y, max_y] = [7, 108]
+
+                        # RGB Captions
+                        Front = building, beige facade, red-tiled roof; building stands in the foreground; clear sky above  
+                        Left = basketball court, green and brown surface; court is enclosed by a fence; foggy background  
+                        Right = building, beige facade, red-tiled roof; multiple windows with awnings; building in the foreground; clear sky above  
+                        Down = basketball court, green and brown surface; white boundary lines; court is enclosed by a fence  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [27, 26, 30]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [62, 47, 54]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 20, 100], [47, 22, 36]]
+
+                        DownDepth:
+                        [[19, 16, 19], [16, 12, 16], [19, 16, 19]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(140.31, 57.64, -10.0), 111.35],
+    [(138.49, 62.3, -10.0), 111.35],
+    [(133.83, 60.48, -10.0), 111.35],
+    [(132.01, 65.13, -10.0), 111.35],
+    [(130.19, 69.79, -10.0), 111.35],
+    [(128.37, 74.45, -10.0), 111.35],
+    [(123.71, 72.63, -10.0), 111.35],
+    [(123.71, 72.63, -10.0), 111.35],
+    [(123.71, 72.63, -10.0), 111.35],
+    [(123.71, 72.63, -10.0), 111.35],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 6
+                        DistanceTraveled = 30.000000000000014
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Firewood**, described as:  Organic rounded pile, stacked light brown logs under a weathered blue tarpaulin, natural wood texture with cylindrical cut ends, likely for fuel or outdoor use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:6 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 7 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Firewood,
+                        Size: mid(2*2=4 squares),
+                        Description: Organic rounded pile, stacked light brown logs under a weathered blue tarpaulin, natural wood texture with cylindrical cut ends, likely for fuel or outdoor use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [90, 191]  
+                        **Y Range**: [min_y, max_y] = [7, 108]
+
+                        # RGB Captions
+                        Front = multi-story building, orange roof, beige walls; building is in the foreground; clear blue sky  
+                        Left = basketball court, green surface, white lines; court is in the foreground; foggy background  
+                        Right = apartment building, multiple windows, beige facade; building is in the foreground; clear blue sky  
+                        Down = basketball court, green and brown surface, white lines; court is in the foreground; night setting  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [18, 21, 26]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [60, 46, 47]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 43, 31]]
+
+                        DownDepth:
+                        [[18, 16, 19], [16, 12, 16], [19, 16, 19]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(140.31, 57.64, -10.0), 111.35],
+    [(138.49, 62.3, -10.0), 111.35],
+    [(133.83, 60.48, -10.0), 111.35],
+    [(132.01, 65.13, -10.0), 111.35],
+    [(130.19, 69.79, -10.0), 111.35],
+    [(128.37, 74.45, -10.0), 111.35],
+    [(123.71, 72.63, -10.0), 111.35],
+    [(121.89, 77.28, -10.0), 111.35],
+    [(121.89, 77.28, -10.0), 111.35],
+    [(121.89, 77.28, -10.0), 111.35],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 7
+                        DistanceTraveled = 35.00000000000002
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Firewood**, described as:  Organic rounded pile, stacked light brown logs under a weathered blue tarpaulin, natural wood texture with cylindrical cut ends, likely for fuel or outdoor use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:7 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 8 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Firewood,
+                        Size: mid(2*2=4 squares),
+                        Description: Organic rounded pile, stacked light brown logs under a weathered blue tarpaulin, natural wood texture with cylindrical cut ends, likely for fuel or outdoor use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [90, 191]  
+                        **Y Range**: [min_y, max_y] = [7, 108]
+
+                        # RGB Captions
+                        Front = building, orange facade, red-tiled roof; building occupies the foreground and background; windows closed  
+                        Left = building, orange facade, red-tiled roof; building is in the background; sports court in the foreground  
+                        Right = buildings, orange facades, red-tiled roofs; buildings are in the background and foreground; sports court in the middle ground  
+                        Down = basketball court, green surface, brown key area; court is in the foreground; building shadow on the court  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [12, 16, 23]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [64, 48, 18]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [42, 44, 30]]
+
+                        DownDepth:
+                        [[16, 16, 19], [16, 12, 16], [19, 16, 19]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(140.31, 57.64, -10.0), 111.35],
+    [(138.49, 62.3, -10.0), 111.35],
+    [(133.83, 60.48, -10.0), 111.35],
+    [(132.01, 65.13, -10.0), 111.35],
+    [(130.19, 69.79, -10.0), 111.35],
+    [(128.37, 74.45, -10.0), 111.35],
+    [(123.71, 72.63, -10.0), 111.35],
+    [(121.89, 77.28, -10.0), 111.35],
+    [(120.07, 81.94, -10.0), 111.35],
+    [(120.07, 81.94, -10.0), 111.35],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 8
+                        DistanceTraveled = 40.00000000000003
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Firewood**, described as:  Organic rounded pile, stacked light brown logs under a weathered blue tarpaulin, natural wood texture with cylindrical cut ends, likely for fuel or outdoor use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:8 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 9 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Firewood,
+                        Size: mid(2*2=4 squares),
+                        Description: Organic rounded pile, stacked light brown logs under a weathered blue tarpaulin, natural wood texture with cylindrical cut ends, likely for fuel or outdoor use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [90, 191]  
+                        **Y Range**: [min_y, max_y] = [7, 108]
+
+                        # RGB Captions
+                        Front = building, orange facade, red tiled roof; building occupies the foreground and middle ground; windows with closed shutters  
+                        Left = building, orange facade, red tiled roof; building is in the middle ground; water body adjacent to the building on the left  
+                        Right = multiple buildings, orange facades, red tiled roofs; buildings are arranged around a courtyard; awnings extended over some windows  
+                        Down = basketball court, green surface, brown boundary lines; court is in the foreground; building facade above the court  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [5, 7, 12]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [64, 48, 9]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 24], [20, 44, 25]]
+
+                        DownDepth:
+                        [[11, 13, 18], [16, 12, 16], [19, 16, 19]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(140.31, 57.64, -10.0), 111.35],
+    [(138.49, 62.3, -10.0), 111.35],
+    [(133.83, 60.48, -10.0), 111.35],
+    [(132.01, 65.13, -10.0), 111.35],
+    [(130.19, 69.79, -10.0), 111.35],
+    [(128.37, 74.45, -10.0), 111.35],
+    [(123.71, 72.63, -10.0), 111.35],
+    [(121.89, 77.28, -10.0), 111.35],
+    [(120.07, 81.94, -10.0), 111.35],
+    [(118.25, 86.6, -10.0), 111.35],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 9
+                        DistanceTraveled = 45.000000000000036
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Firewood**, described as:  Organic rounded pile, stacked light brown logs under a weathered blue tarpaulin, natural wood texture with cylindrical cut ends, likely for fuel or outdoor use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:9 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 10 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Firewood,
+                        Size: mid(2*2=4 squares),
+                        Description: Organic rounded pile, stacked light brown logs under a weathered blue tarpaulin, natural wood texture with cylindrical cut ends, likely for fuel or outdoor use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [90, 191]  
+                        **Y Range**: [min_y, max_y] = [7, 108]
+
+                        # RGB Captions
+                        Front = orange roof tiles, weathered; tiles cover the foreground; two chimneys on the roof  
+                        Left = orange roof tiles, weathered; tiles cover the foreground; two chimneys on the roof  
+                        Right = multi-story buildings, beige and orange; buildings surround a courtyard; bridge in the background  
+                        Down = orange roof tiles, weathered; tiles are in the foreground; shadow of a railing on the tiles  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [1, 1, 2]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [64, 2, 1]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [3, 47, 47]]
+
+                        DownDepth:
+                        [[1, 0, 1], [1, 1, 16], [19, 16, 19]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(138.49, 62.3, -10.0), 111.35],
+    [(133.83, 60.48, -10.0), 111.35],
+    [(132.01, 65.13, -10.0), 111.35],
+    [(130.19, 69.79, -10.0), 111.35],
+    [(128.37, 74.45, -10.0), 111.35],
+    [(123.71, 72.63, -10.0), 111.35],
+    [(121.89, 77.28, -10.0), 111.35],
+    [(120.07, 81.94, -10.0), 111.35],
+    [(118.25, 86.6, -10.0), 111.35],
+    [(116.43, 91.26, -10.0), 111.35],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 10
+                        DistanceTraveled = 50.00000000000004
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Firewood**, described as:  Organic rounded pile, stacked light brown logs under a weathered blue tarpaulin, natural wood texture with cylindrical cut ends, likely for fuel or outdoor use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:10 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 11 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Firewood,
+                        Size: mid(2*2=4 squares),
+                        Description: Organic rounded pile, stacked light brown logs under a weathered blue tarpaulin, natural wood texture with cylindrical cut ends, likely for fuel or outdoor use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [90, 191]  
+                        **Y Range**: [min_y, max_y] = [7, 108]
+
+                        # RGB Captions
+                        Front = red tiled roof, weathered; chimney on the right; blue sky in the background  
+                        Left = orange building, multiple windows; red tiled roof; clear sky above  
+                        Right = multiple buildings, orange and yellow facades; red tiled roofs; narrow canal with bridge in the background  
+                        Down = building facade, brown wall; two windows with curtains; green awning below; cobblestone street in the foreground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [2, 2, 4]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [63, 47, 3]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [13, 43, 44]]
+
+                        DownDepth:
+                        [[4, 10, 15], [16, 12, 16], [19, 16, 19]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(133.83, 60.48, -10.0), 111.35],
+    [(132.01, 65.13, -10.0), 111.35],
+    [(130.19, 69.79, -10.0), 111.35],
+    [(128.37, 74.45, -10.0), 111.35],
+    [(123.71, 72.63, -10.0), 111.35],
+    [(121.89, 77.28, -10.0), 111.35],
+    [(120.07, 81.94, -10.0), 111.35],
+    [(118.25, 86.6, -10.0), 111.35],
+    [(116.43, 91.26, -10.0), 111.35],
+    [(111.78, 89.44, -10.0), 111.35],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 11
+                        DistanceTraveled = 55.00000000000005
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Firewood**, described as:  Organic rounded pile, stacked light brown logs under a weathered blue tarpaulin, natural wood texture with cylindrical cut ends, likely for fuel or outdoor use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:11 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

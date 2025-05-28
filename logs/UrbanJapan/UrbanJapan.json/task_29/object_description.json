@@ -1,0 +1,35 @@
+{
+  "episode_id": "29",
+  "start_pose": {
+    "start_position": [
+      10.720076197238654,
+      144.96233930704113,
+      -6.600000023841858
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.3004727697846087,
+      0.9537903934397566
+    ]
+  },
+  "info": {
+    "geodesic_distance": 39,
+    "euclidean_distance": 26.8528
+  },
+  "map_name": "UrbanJapan_test",
+  "true_name": "Bicycle",
+  "object_name": "SM_Bicycle_01_58",
+  "pose": [
+    [
+      22.56050682067871,
+      121.38525390625,
+      1.399999976158142
+    ]
+  ],
+  "size": "small(2.0*0.5=1.0 squares)",
+  "description": "Slim, two-wheeled form with a minimal frame, black exterior with a brown leather saddle, classic road bike design with thin tires and drop handlebars.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

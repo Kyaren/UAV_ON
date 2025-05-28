@@ -1,0 +1,1323 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Dumpster,
+                        Size:mid(4.0*2.0=8.0 squares),
+                        Description:Large rectangular container on wheels with a hinged lid, dark green metal exterior, ribbed top surface, typical of commercial waste disposal units.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-56, 45]  
+                        **Y Range**: [min_y, max_y] = [100, 201]
+
+                        # RGB Captions
+                        Front = concrete buildings, tall, modern; construction cranes, metal, in the background; cement mixer truck, orange and white, on the road; traffic lights, green, above the road  
+                        Left = multi-story building, concrete, with lit windows; construction site, active, in front of the building; yellow crane, large, near the building; workers, several, around the construction area  
+                        Right = cityscape, nighttime, blurry; lights, numerous, from buildings and streets; reflections, visible, on a surface in the foreground  
+                        Down = wall, textured, brown and orange; shadow, large, covering part of the wall; corner, sharp, where two walls meet  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 64], [29, 27, 34]]
+
+                        LeftDepth:
+                        [[49, 35, 85], [41, 33, 71], [34, 26, 33]]
+
+                        RightDepth:
+                        [[73, 53, 20], [62, 37, 25], [34, 26, 25]]
+
+                        DownDepth:
+                        [[14, 11, 13], [11, 9, 11], [14, 11, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-5.07, 150.46, -6.6), 90.37],
+    [(-5.07, 150.46, -6.6), 90.37],
+    [(-5.07, 150.46, -6.6), 90.37],
+    [(-5.07, 150.46, -6.6), 90.37],
+    [(-5.07, 150.46, -6.6), 90.37],
+    [(-5.07, 150.46, -6.6), 90.37],
+    [(-5.07, 150.46, -6.6), 90.37],
+    [(-5.07, 150.46, -6.6), 90.37],
+    [(-5.07, 150.46, -6.6), 90.37],
+    [(-5.07, 150.46, -6.6), 90.37],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Dumpster**, described as: Large rectangular container on wheels with a hinged lid, dark green metal exterior, ribbed top surface, typical of commercial waste disposal units.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 1 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Dumpster,
+                        Size:mid(4.0*2.0=8.0 squares),
+                        Description:Large rectangular container on wheels with a hinged lid, dark green metal exterior, ribbed top surface, typical of commercial waste disposal units.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-56, 45]  
+                        **Y Range**: [min_y, max_y] = [100, 201]
+
+                        # RGB Captions
+                        Front = tall buildings, illuminated windows; construction vehicles on the street; evening setting  
+                        Left = construction site, large building; orange truck; workers near equipment; building facade with lit windows  
+                        Right = blurred lights, nighttime; cityscape in background; reflections on surface  
+                        Down = wall, textured surface; dark area adjacent; minimal lighting  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 47], [31, 26, 34]]
+
+                        LeftDepth:
+                        [[49, 36, 86], [43, 33, 67], [34, 26, 29]]
+
+                        RightDepth:
+                        [[100, 16, 19], [81, 37, 26], [34, 25, 26]]
+
+                        DownDepth:
+                        [[14, 11, 13], [11, 9, 11], [14, 11, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-5.07, 150.46, -6.6), 90.37],
+    [(-5.1, 155.46, -6.6), 90.37],
+    [(-5.1, 155.46, -6.6), 90.37],
+    [(-5.1, 155.46, -6.6), 90.37],
+    [(-5.1, 155.46, -6.6), 90.37],
+    [(-5.1, 155.46, -6.6), 90.37],
+    [(-5.1, 155.46, -6.6), 90.37],
+    [(-5.1, 155.46, -6.6), 90.37],
+    [(-5.1, 155.46, -6.6), 90.37],
+    [(-5.1, 155.46, -6.6), 90.37],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 1
+                        DistanceTraveled = 5.000000000000007
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Dumpster**, described as: Large rectangular container on wheels with a hinged lid, dark green metal exterior, ribbed top surface, typical of commercial waste disposal units.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:1 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 2 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Dumpster,
+                        Size:mid(4.0*2.0=8.0 squares),
+                        Description:Large rectangular container on wheels with a hinged lid, dark green metal exterior, ribbed top surface, typical of commercial waste disposal units.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-56, 45]  
+                        **Y Range**: [min_y, max_y] = [100, 201]
+
+                        # RGB Captions
+                        Front = tall buildings, lit windows; bridge overhead; traffic lights visible; nighttime setting  
+                        Left = construction site, orange mixer truck; bulldozer; workers standing; building in background  
+                        Right = pavement, wet surface; reflections of lights; building with illuminated windows; nighttime  
+                        Down = wall, textured surface; dark shadow; corner of the wall; dim lighting  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 42], [34, 26, 34]]
+
+                        LeftDepth:
+                        [[49, 36, 100], [44, 33, 60], [34, 26, 34]]
+
+                        RightDepth:
+                        [[97, 62, 19], [78, 47, 29], [34, 26, 29]]
+
+                        DownDepth:
+                        [[14, 11, 13], [11, 9, 11], [14, 11, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-5.07, 150.46, -6.6), 90.37],
+    [(-5.1, 155.46, -6.6), 90.37],
+    [(-5.13, 160.46, -6.6), 90.37],
+    [(-5.13, 160.46, -6.6), 90.37],
+    [(-5.13, 160.46, -6.6), 90.37],
+    [(-5.13, 160.46, -6.6), 90.37],
+    [(-5.13, 160.46, -6.6), 90.37],
+    [(-5.13, 160.46, -6.6), 90.37],
+    [(-5.13, 160.46, -6.6), 90.37],
+    [(-5.13, 160.46, -6.6), 90.37],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 2
+                        DistanceTraveled = 10.000000000000014
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Dumpster**, described as: Large rectangular container on wheels with a hinged lid, dark green metal exterior, ribbed top surface, typical of commercial waste disposal units.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:2 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 3 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Dumpster,
+                        Size:mid(4.0*2.0=8.0 squares),
+                        Description:Large rectangular container on wheels with a hinged lid, dark green metal exterior, ribbed top surface, typical of commercial waste disposal units.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-56, 45]  
+                        **Y Range**: [min_y, max_y] = [100, 201]
+
+                        # RGB Captions
+                        Front = tall buildings, modern design; bridge overhead; truck on the road; scene is at dusk  
+                        Left = construction site, large building; steamroller, orange; cement mixer, yellow; workers in hard hats; equipment scattered  
+                        Right = cityscape at night, tall buildings; lights on; reflections on water; view from a distance  
+                        Down = wall with graffiti, weathered; orange stripe; shadow cast; close-up view  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [45, 100, 42], [34, 26, 33]]
+
+                        LeftDepth:
+                        [[33, 27, 77], [33, 27, 56], [28, 22, 34]]
+
+                        RightDepth:
+                        [[100, 70, 28], [82, 53, 33], [32, 26, 29]]
+
+                        DownDepth:
+                        [[14, 11, 14], [11, 9, 11], [14, 11, 14]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-5.07, 150.46, -6.6), 90.37],
+    [(-5.1, 155.46, -6.6), 90.37],
+    [(-5.13, 160.46, -6.6), 90.37],
+    [(-0.13, 160.49, -6.6), 90.37],
+    [(-0.13, 160.49, -6.6), 90.37],
+    [(-0.13, 160.49, -6.6), 90.37],
+    [(-0.13, 160.49, -6.6), 90.37],
+    [(-0.13, 160.49, -6.6), 90.37],
+    [(-0.13, 160.49, -6.6), 90.37],
+    [(-0.13, 160.49, -6.6), 90.37],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 3
+                        DistanceTraveled = 15.000000000000014
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Dumpster**, described as: Large rectangular container on wheels with a hinged lid, dark green metal exterior, ribbed top surface, typical of commercial waste disposal units.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:3 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 4 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Dumpster,
+                        Size:mid(4.0*2.0=8.0 squares),
+                        Description:Large rectangular container on wheels with a hinged lid, dark green metal exterior, ribbed top surface, typical of commercial waste disposal units.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-56, 45]  
+                        **Y Range**: [min_y, max_y] = [100, 201]
+
+                        # RGB Captions
+                        Front = tunnel entrance, dark; green traffic light; buildings in the background  
+                        Left = construction site, orange steamroller; cement mixer truck; workers on the ground; building facade in the background  
+                        Right = street scene, nighttime; blurred lights; buildings with lit windows  
+                        Down = wall, textured surface; dark shadow; small light source  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 43], [34, 26, 34]]
+
+                        LeftDepth:
+                        [[50, 36, 100], [44, 33, 61], [34, 25, 34]]
+
+                        RightDepth:
+                        [[97, 61, 17], [78, 46, 29], [34, 25, 29]]
+
+                        DownDepth:
+                        [[13, 11, 13], [11, 9, 11], [13, 11, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-5.07, 150.46, -6.6), 90.37],
+    [(-5.1, 155.46, -6.6), 90.37],
+    [(-5.13, 160.46, -6.6), 90.37],
+    [(-0.13, 160.49, -6.6), 90.37],
+    [(-5.13, 160.46, -6.6), 90.37],
+    [(-5.13, 160.46, -6.6), 90.37],
+    [(-5.13, 160.46, -6.6), 90.37],
+    [(-5.13, 160.46, -6.6), 90.37],
+    [(-5.13, 160.46, -6.6), 90.37],
+    [(-5.13, 160.46, -6.6), 90.37],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 4
+                        DistanceTraveled = 20.000000000000014
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Dumpster**, described as: Large rectangular container on wheels with a hinged lid, dark green metal exterior, ribbed top surface, typical of commercial waste disposal units.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:4 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 5 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Dumpster,
+                        Size:mid(4.0*2.0=8.0 squares),
+                        Description:Large rectangular container on wheels with a hinged lid, dark green metal exterior, ribbed top surface, typical of commercial waste disposal units.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-56, 45]  
+                        **Y Range**: [min_y, max_y] = [100, 201]
+
+                        # RGB Captions
+                        Front = tall buildings, modern design; bridge overhead; truck on the road; scene is at dusk  
+                        Left = construction site, orange steamroller; cement mixer truck; workers near equipment; building in background  
+                        Right = cityscape, nighttime; lights reflecting on water; buildings with illuminated windows; view from a distance  
+                        Down = wall, textured surface; orange stripe; dark shadow on the right; abstract shapes  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [45, 100, 42], [34, 26, 33]]
+
+                        LeftDepth:
+                        [[33, 27, 77], [33, 27, 56], [28, 22, 34]]
+
+                        RightDepth:
+                        [[100, 70, 28], [82, 53, 33], [32, 25, 26]]
+
+                        DownDepth:
+                        [[13, 11, 13], [11, 9, 11], [13, 11, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-5.07, 150.46, -6.6), 90.37],
+    [(-5.1, 155.46, -6.6), 90.37],
+    [(-5.13, 160.46, -6.6), 90.37],
+    [(-0.13, 160.49, -6.6), 90.37],
+    [(-5.13, 160.46, -6.6), 90.37],
+    [(-0.13, 160.49, -6.6), 90.37],
+    [(-0.13, 160.49, -6.6), 90.37],
+    [(-0.13, 160.49, -6.6), 90.37],
+    [(-0.13, 160.49, -6.6), 90.37],
+    [(-0.13, 160.49, -6.6), 90.37],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 5
+                        DistanceTraveled = 25.000000000000014
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Dumpster**, described as: Large rectangular container on wheels with a hinged lid, dark green metal exterior, ribbed top surface, typical of commercial waste disposal units.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:5 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 6 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Dumpster,
+                        Size:mid(4.0*2.0=8.0 squares),
+                        Description:Large rectangular container on wheels with a hinged lid, dark green metal exterior, ribbed top surface, typical of commercial waste disposal units.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-56, 45]  
+                        **Y Range**: [min_y, max_y] = [100, 201]
+
+                        # RGB Captions
+                        Front = tall building, many windows; building in the background; construction site in the foreground; orange cement mixer truck; workers near the truck  
+                        Left = roundabout, concrete; roundabout in the foreground; tall buildings in the background; green traffic light; orange double lines on the road  
+                        Right = building, illuminated windows; building in the background; sidewalk in the foreground; nighttime setting  
+                        Down = wall, textured surface; shadow of a rounded object on the wall; orange line on the wall  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 35], [32, 26, 33]]
+
+                        LeftDepth:
+                        [[33, 28, 100], [36, 28, 57], [29, 22, 33]]
+
+                        RightDepth:
+                        [[100, 100, 27], [78, 77, 36], [33, 25, 29]]
+
+                        DownDepth:
+                        [[13, 11, 13], [11, 9, 11], [13, 11, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-5.07, 150.46, -6.6), 90.37],
+    [(-5.1, 155.46, -6.6), 90.37],
+    [(-5.13, 160.46, -6.6), 90.37],
+    [(-0.13, 160.49, -6.6), 90.37],
+    [(-5.13, 160.46, -6.6), 90.37],
+    [(-0.13, 160.49, -6.6), 90.37],
+    [(-0.16, 165.49, -6.6), 90.37],
+    [(-0.16, 165.49, -6.6), 90.37],
+    [(-0.16, 165.49, -6.6), 90.37],
+    [(-0.16, 165.49, -6.6), 90.37],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 6
+                        DistanceTraveled = 30.00000000000002
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Dumpster**, described as: Large rectangular container on wheels with a hinged lid, dark green metal exterior, ribbed top surface, typical of commercial waste disposal units.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:6 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 7 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Dumpster,
+                        Size:mid(4.0*2.0=8.0 squares),
+                        Description:Large rectangular container on wheels with a hinged lid, dark green metal exterior, ribbed top surface, typical of commercial waste disposal units.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-56, 45]  
+                        **Y Range**: [min_y, max_y] = [100, 201]
+
+                        # RGB Captions
+                        Front = Description time out. [ServerError]  
+                        Left = Description time out. [ServerError]  
+                        Right = Description time out. [ServerError]  
+                        Down = Description time out. [ServerError]  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[21, 16, 21], [100, 100, 31], [29, 26, 27]]
+
+                        LeftDepth:
+                        [[33, 100, 66], [33, 100, 33], [29, 25, 31]]
+
+                        RightDepth:
+                        [[79, 100, 29], [43, 51, 40], [31, 25, 33]]
+
+                        DownDepth:
+                        [[13, 11, 13], [11, 9, 11], [13, 11, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-5.07, 150.46, -6.6), 90.37],
+    [(-5.1, 155.46, -6.6), 90.37],
+    [(-5.13, 160.46, -6.6), 90.37],
+    [(-0.13, 160.49, -6.6), 90.37],
+    [(-5.13, 160.46, -6.6), 90.37],
+    [(-0.13, 160.49, -6.6), 90.37],
+    [(-0.16, 165.49, -6.6), 90.37],
+    [(-0.2, 170.49, -6.6), 90.37],
+    [(-0.2, 170.49, -6.6), 90.37],
+    [(-0.2, 170.49, -6.6), 90.37],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 7
+                        DistanceTraveled = 35.00000000000003
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Dumpster**, described as: Large rectangular container on wheels with a hinged lid, dark green metal exterior, ribbed top surface, typical of commercial waste disposal units.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:7 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 8 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Dumpster,
+                        Size:mid(4.0*2.0=8.0 squares),
+                        Description:Large rectangular container on wheels with a hinged lid, dark green metal exterior, ribbed top surface, typical of commercial waste disposal units.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-56, 45]  
+                        **Y Range**: [min_y, max_y] = [100, 201]
+
+                        # RGB Captions
+                        Front = concrete mixer truck, orange drum, parked; building with multiple windows, illuminated; truck in the foreground, building in the background  
+                        Left = building, modern design, lit up; lights in a row, bright; lights are on the right side of the image  
+                        Right = orange line, straight, on the ground; line is in the foreground; dark surroundings  
+                        Down = shadow, large, on the ground; shadow is in the foreground; dark surroundings  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[21, 16, 21], [100, 100, 31], [29, 26, 26]]
+
+                        LeftDepth:
+                        [[33, 24, 21], [36, 33, 30], [29, 25, 29]]
+
+                        RightDepth:
+                        [[20, 54, 45], [40, 51, 46], [28, 25, 29]]
+
+                        DownDepth:
+                        [[13, 11, 13], [11, 9, 11], [13, 11, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-5.07, 150.46, -6.6), 90.37],
+    [(-5.1, 155.46, -6.6), 90.37],
+    [(-5.13, 160.46, -6.6), 90.37],
+    [(-0.13, 160.49, -6.6), 90.37],
+    [(-5.13, 160.46, -6.6), 90.37],
+    [(-0.13, 160.49, -6.6), 90.37],
+    [(-0.16, 165.49, -6.6), 90.37],
+    [(-0.2, 170.49, -6.6), 90.37],
+    [(-0.23, 175.49, -6.6), 90.37],
+    [(-0.23, 175.49, -6.6), 90.37],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 8
+                        DistanceTraveled = 40.000000000000036
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Dumpster**, described as: Large rectangular container on wheels with a hinged lid, dark green metal exterior, ribbed top surface, typical of commercial waste disposal units.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:8 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 9 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Dumpster,
+                        Size:mid(4.0*2.0=8.0 squares),
+                        Description:Large rectangular container on wheels with a hinged lid, dark green metal exterior, ribbed top surface, typical of commercial waste disposal units.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-56, 45]  
+                        **Y Range**: [min_y, max_y] = [100, 201]
+
+                        # RGB Captions
+                        Front = concrete platform, dimly lit; platform is in the foreground; building structure above  
+                        Left = cement mixer truck, orange cab; truck is parked on the left; building with windows in the background  
+                        Right = subway station platform, dim lighting; platform is in the foreground; train lights visible in the distance  
+                        Down = orange line, vertical; line is near the bottom center; dark background  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[15, 11, 15], [100, 100, 31], [29, 26, 26]]
+
+                        LeftDepth:
+                        [[30, 19, 20], [33, 28, 29], [27, 25, 26]]
+
+                        RightDepth:
+                        [[19, 17, 36], [24, 39, 49], [24, 25, 32]]
+
+                        DownDepth:
+                        [[13, 11, 13], [11, 8, 11], [13, 11, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-5.07, 150.46, -6.6), 90.37],
+    [(-5.1, 155.46, -6.6), 90.37],
+    [(-5.13, 160.46, -6.6), 90.37],
+    [(-0.13, 160.49, -6.6), 90.37],
+    [(-5.13, 160.46, -6.6), 90.37],
+    [(-0.13, 160.49, -6.6), 90.37],
+    [(-0.16, 165.49, -6.6), 90.37],
+    [(-0.2, 170.49, -6.6), 90.37],
+    [(-0.23, 175.49, -6.6), 90.37],
+    [(-0.26, 180.49, -6.6), 90.37],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 9
+                        DistanceTraveled = 45.00000000000004
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Dumpster**, described as: Large rectangular container on wheels with a hinged lid, dark green metal exterior, ribbed top surface, typical of commercial waste disposal units.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:9 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 10 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Dumpster,
+                        Size:mid(4.0*2.0=8.0 squares),
+                        Description:Large rectangular container on wheels with a hinged lid, dark green metal exterior, ribbed top surface, typical of commercial waste disposal units.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-56, 45]  
+                        **Y Range**: [min_y, max_y] = [100, 201]
+
+                        # RGB Captions
+                        Front = concrete path, narrow; wooden fence, low; fence runs parallel to the path; path is in the foreground  
+                        Left = staircase, brick; yellow lights, dim; staircase ascends to the left; lights illuminate the steps  
+                        Right = underpass, dark; concrete walls, tall; underpass extends from left to right; walls are on both sides  
+                        Down = black background, uniform; no visible objects  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[8, 7, 8], [100, 100, 30], [29, 25, 26]]
+
+                        LeftDepth:
+                        [[28, 20, 18], [36, 28, 20], [29, 25, 21]]
+
+                        RightDepth:
+                        [[17, 18, 33], [17, 40, 52], [17, 25, 33]]
+
+                        DownDepth:
+                        [[13, 11, 13], [11, 8, 11], [13, 11, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-5.1, 155.46, -6.6), 90.37],
+    [(-5.13, 160.46, -6.6), 90.37],
+    [(-0.13, 160.49, -6.6), 90.37],
+    [(-5.13, 160.46, -6.6), 90.37],
+    [(-0.13, 160.49, -6.6), 90.37],
+    [(-0.16, 165.49, -6.6), 90.37],
+    [(-0.2, 170.49, -6.6), 90.37],
+    [(-0.23, 175.49, -6.6), 90.37],
+    [(-0.26, 180.49, -6.6), 90.37],
+    [(-0.29, 185.49, -6.6), 90.37],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 10
+                        DistanceTraveled = 50.00000000000005
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Dumpster**, described as: Large rectangular container on wheels with a hinged lid, dark green metal exterior, ribbed top surface, typical of commercial waste disposal units.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:10 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 11 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Dumpster,
+                        Size:mid(4.0*2.0=8.0 squares),
+                        Description:Large rectangular container on wheels with a hinged lid, dark green metal exterior, ribbed top surface, typical of commercial waste disposal units.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-56, 45]  
+                        **Y Range**: [min_y, max_y] = [100, 201]
+
+                        # RGB Captions
+                        Front = tunnel, long, dark; tunnel stretches from foreground to background  
+                        Left = tunnel, long, dark; tunnel stretches from foreground to background  
+                        Right = tunnel, long, dark; tunnel stretches from foreground to background  
+                        Down = black background, uniform, dark  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[69, 100, 46], [98, 100, 45], [56, 25, 26]]
+
+                        LeftDepth:
+                        [[21, 63, 41], [32, 47, 42], [31, 25, 21]]
+
+                        RightDepth:
+                        [[14, 67, 20], [13, 39, 53], [14, 24, 31]]
+
+                        DownDepth:
+                        [[13, 11, 13], [11, 8, 11], [13, 11, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-5.13, 160.46, -6.6), 90.37],
+    [(-0.13, 160.49, -6.6), 90.37],
+    [(-5.13, 160.46, -6.6), 90.37],
+    [(-0.13, 160.49, -6.6), 90.37],
+    [(-0.16, 165.49, -6.6), 90.37],
+    [(-0.2, 170.49, -6.6), 90.37],
+    [(-0.23, 175.49, -6.6), 90.37],
+    [(-0.26, 180.49, -6.6), 90.37],
+    [(-0.29, 185.49, -6.6), 90.37],
+    [(-0.32, 190.49, -6.6), 90.37],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 11
+                        DistanceTraveled = 55.00000000000006
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Dumpster**, described as: Large rectangular container on wheels with a hinged lid, dark green metal exterior, ribbed top surface, typical of commercial waste disposal units.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:11 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 12 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Dumpster,
+                        Size:mid(4.0*2.0=8.0 squares),
+                        Description:Large rectangular container on wheels with a hinged lid, dark green metal exterior, ribbed top surface, typical of commercial waste disposal units.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-56, 45]  
+                        **Y Range**: [min_y, max_y] = [100, 201]
+
+                        # RGB Captions
+                        Front = tall buildings, gray; road in the foreground; car moving on the road; buildings in the background  
+                        Left = building corner, dark; partial view of building; corner in the foreground  
+                        Right = yellow line, thin; line in the foreground; darkness surrounding the line  
+                        Down = darkness, complete; no visible objects  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 42], [96, 100, 41], [58, 25, 26]]
+
+                        LeftDepth:
+                        [[16, 22, 42], [36, 28, 62], [31, 16, 58]]
+
+                        RightDepth:
+                        [[20, 14, 16], [13, 9, 52], [14, 12, 33]]
+
+                        DownDepth:
+                        [[13, 11, 13], [11, 8, 11], [13, 11, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-0.13, 160.49, -6.6), 90.37],
+    [(-5.13, 160.46, -6.6), 90.37],
+    [(-0.13, 160.49, -6.6), 90.37],
+    [(-0.16, 165.49, -6.6), 90.37],
+    [(-0.2, 170.49, -6.6), 90.37],
+    [(-0.23, 175.49, -6.6), 90.37],
+    [(-0.26, 180.49, -6.6), 90.37],
+    [(-0.29, 185.49, -6.6), 90.37],
+    [(-0.32, 190.49, -6.6), 90.37],
+    [(-0.36, 195.49, -6.6), 90.37],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 12
+                        DistanceTraveled = 60.000000000000064
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Dumpster**, described as: Large rectangular container on wheels with a hinged lid, dark green metal exterior, ribbed top surface, typical of commercial waste disposal units.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:12 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 13 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Dumpster,
+                        Size:mid(4.0*2.0=8.0 squares),
+                        Description:Large rectangular container on wheels with a hinged lid, dark green metal exterior, ribbed top surface, typical of commercial waste disposal units.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-56, 45]  
+                        **Y Range**: [min_y, max_y] = [100, 201]
+
+                        # RGB Captions
+                        Front = tall buildings, gray; road in the foreground; buildings on both sides of the road  
+                        Left = dark image, low light; faint lines visible; lines appear to be diagonal  
+                        Right = dark image, low light; small bright object near the bottom right corner  
+                        Down = dark image, low light; no distinguishable objects  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[65, 100, 53], [91, 100, 50], [53, 25, 28]]
+
+                        LeftDepth:
+                        [[15, 16, 18], [30, 9, 13], [30, 12, 14]]
+
+                        RightDepth:
+                        [[29, 22, 15], [28, 45, 56], [21, 25, 31]]
+
+                        DownDepth:
+                        [[13, 11, 13], [11, 8, 11], [13, 11, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-5.13, 160.46, -6.6), 90.37],
+    [(-0.13, 160.49, -6.6), 90.37],
+    [(-0.16, 165.49, -6.6), 90.37],
+    [(-0.2, 170.49, -6.6), 90.37],
+    [(-0.23, 175.49, -6.6), 90.37],
+    [(-0.26, 180.49, -6.6), 90.37],
+    [(-0.29, 185.49, -6.6), 90.37],
+    [(-0.32, 190.49, -6.6), 90.37],
+    [(-0.36, 195.49, -6.6), 90.37],
+    [(4.64, 195.52, -6.6), 90.37],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 13
+                        DistanceTraveled = 65.00000000000006
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Dumpster**, described as: Large rectangular container on wheels with a hinged lid, dark green metal exterior, ribbed top surface, typical of commercial waste disposal units.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:13 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 14 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Dumpster,
+                        Size:mid(4.0*2.0=8.0 squares),
+                        Description:Large rectangular container on wheels with a hinged lid, dark green metal exterior, ribbed top surface, typical of commercial waste disposal units.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-56, 45]  
+                        **Y Range**: [min_y, max_y] = [100, 201]
+
+                        # RGB Captions
+                        Front = tall buildings, modern architecture; buildings in the background; road in the foreground  
+                        Left = dark environment, minimal light; one illuminated window; window on the left side  
+                        Right = dark environment, minimal light; no visible objects; darkness throughout  
+                        Down = dark environment, minimal light; no visible objects; darkness throughout  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[45, 100, 100], [62, 100, 100], [45, 44, 33]]
+
+                        LeftDepth:
+                        [[9, 16, 14], [44, 27, 10], [32, 25, 12]]
+
+                        RightDepth:
+                        [[45, 20, 23], [45, 24, 45], [31, 19, 33]]
+
+                        DownDepth:
+                        [[13, 11, 13], [11, 8, 11], [13, 11, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-0.13, 160.49, -6.6), 90.37],
+    [(-0.16, 165.49, -6.6), 90.37],
+    [(-0.2, 170.49, -6.6), 90.37],
+    [(-0.23, 175.49, -6.6), 90.37],
+    [(-0.26, 180.49, -6.6), 90.37],
+    [(-0.29, 185.49, -6.6), 90.37],
+    [(-0.32, 190.49, -6.6), 90.37],
+    [(-0.36, 195.49, -6.6), 90.37],
+    [(4.64, 195.52, -6.6), 90.37],
+    [(4.64, 195.52, -6.6), 75.37],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 14
+                        DistanceTraveled = 65.00000000000006
+                        AvgHeadingChange = 1.07
+
+                        # Reminder  
+                        - The target is **Dumpster**, described as: Large rectangular container on wheels with a hinged lid, dark green metal exterior, ribbed top surface, typical of commercial waste disposal units.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:14 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 15 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Dumpster,
+                        Size:mid(4.0*2.0=8.0 squares),
+                        Description:Large rectangular container on wheels with a hinged lid, dark green metal exterior, ribbed top surface, typical of commercial waste disposal units.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-56, 45]  
+                        **Y Range**: [min_y, max_y] = [100, 201]
+
+                        # RGB Captions
+                        Front = tall buildings, gray; buildings are in the background; road in the foreground  
+                        Left = dark image, no visible objects  
+                        Right = dark image, no visible objects  
+                        Down = dark image, no visible objects  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[67, 100, 100], [85, 100, 100], [48, 44, 33]]
+
+                        LeftDepth:
+                        [[15, 14, 13], [35, 9, 9], [31, 12, 10]]
+
+                        RightDepth:
+                        [[45, 27, 25], [43, 26, 21], [33, 20, 18]]
+
+                        DownDepth:
+                        [[12, 11, 13], [11, 8, 11], [13, 11, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-0.16, 165.49, -6.6), 90.37],
+    [(-0.2, 170.49, -6.6), 90.37],
+    [(-0.23, 175.49, -6.6), 90.37],
+    [(-0.26, 180.49, -6.6), 90.37],
+    [(-0.29, 185.49, -6.6), 90.37],
+    [(-0.32, 190.49, -6.6), 90.37],
+    [(-0.36, 195.49, -6.6), 90.37],
+    [(4.64, 195.52, -6.6), 90.37],
+    [(4.64, 195.52, -6.6), 75.37],
+    [(5.91, 200.36, -6.6), 75.37],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 15
+                        DistanceTraveled = 70.00000000000007
+                        AvgHeadingChange = 1.0
+
+                        # Reminder  
+                        - The target is **Dumpster**, described as: Large rectangular container on wheels with a hinged lid, dark green metal exterior, ribbed top surface, typical of commercial waste disposal units.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:15 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 16 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Dumpster,
+                        Size:mid(4.0*2.0=8.0 squares),
+                        Description:Large rectangular container on wheels with a hinged lid, dark green metal exterior, ribbed top surface, typical of commercial waste disposal units.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-56, 45]  
+                        **Y Range**: [min_y, max_y] = [100, 201]
+
+                        # RGB Captions
+                        Front = tall buildings, modern architecture; buildings in the background; road in the foreground  
+                        Left = bridge structure, metal framework; bridge in the background; dark surroundings  
+                        Right = indoor setting, dim lighting; door frame in the foreground; dark room beyond  
+                        Down = dark image, no visible objects  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[33, 100, 100], [10, 85, 100], [13, 44, 33]]
+
+                        LeftDepth:
+                        [[13, 16, 13], [63, 33, 8], [32, 24, 11]]
+
+                        RightDepth:
+                        [[100, 45, 21], [100, 43, 22], [33, 25, 17]]
+
+                        DownDepth:
+                        [[12, 11, 13], [11, 8, 11], [13, 11, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-0.2, 170.49, -6.6), 90.37],
+    [(-0.23, 175.49, -6.6), 90.37],
+    [(-0.26, 180.49, -6.6), 90.37],
+    [(-0.29, 185.49, -6.6), 90.37],
+    [(-0.32, 190.49, -6.6), 90.37],
+    [(-0.36, 195.49, -6.6), 90.37],
+    [(4.64, 195.52, -6.6), 90.37],
+    [(4.64, 195.52, -6.6), 75.37],
+    [(5.91, 200.36, -6.6), 75.37],
+    [(5.91, 200.36, -6.6), 60.37],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 16
+                        DistanceTraveled = 70.00000000000007
+                        AvgHeadingChange = 1.88
+
+                        # Reminder  
+                        - The target is **Dumpster**, described as: Large rectangular container on wheels with a hinged lid, dark green metal exterior, ribbed top surface, typical of commercial waste disposal units.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:16 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 17 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Dumpster,
+                        Size:mid(4.0*2.0=8.0 squares),
+                        Description:Large rectangular container on wheels with a hinged lid, dark green metal exterior, ribbed top surface, typical of commercial waste disposal units.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-56, 45]  
+                        **Y Range**: [min_y, max_y] = [100, 201]
+
+                        # RGB Captions
+                        Front = tall buildings, dark; buildings in the background; street in the foreground  
+                        Left = car on the road, yellow; car moving forward; bridge structure above  
+                        Right = building with antenna, tall; antenna on top; building in the background; street in the foreground  
+                        Down = dark image, no visible objects  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[13, 65, 100], [9, 83, 100], [11, 44, 44]]
+
+                        LeftDepth:
+                        [[11, 15, 14], [100, 51, 9], [33, 25, 12]]
+
+                        RightDepth:
+                        [[100, 51, 25], [100, 43, 25], [33, 25, 19]]
+
+                        DownDepth:
+                        [[11, 11, 13], [11, 8, 11], [13, 11, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-0.23, 175.49, -6.6), 90.37],
+    [(-0.26, 180.49, -6.6), 90.37],
+    [(-0.29, 185.49, -6.6), 90.37],
+    [(-0.32, 190.49, -6.6), 90.37],
+    [(-0.36, 195.49, -6.6), 90.37],
+    [(4.64, 195.52, -6.6), 90.37],
+    [(4.64, 195.52, -6.6), 75.37],
+    [(5.91, 200.36, -6.6), 75.37],
+    [(5.91, 200.36, -6.6), 60.37],
+    [(5.91, 200.36, -6.6), 45.37],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 17
+                        DistanceTraveled = 70.00000000000007
+                        AvgHeadingChange = 2.65
+
+                        # Reminder  
+                        - The target is **Dumpster**, described as: Large rectangular container on wheels with a hinged lid, dark green metal exterior, ribbed top surface, typical of commercial waste disposal units.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:17 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 18 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Dumpster,
+                        Size:mid(4.0*2.0=8.0 squares),
+                        Description:Large rectangular container on wheels with a hinged lid, dark green metal exterior, ribbed top surface, typical of commercial waste disposal units.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-56, 45]  
+                        **Y Range**: [min_y, max_y] = [100, 201]
+
+                        # RGB Captions
+                        Front = tall buildings, dark; road in the foreground; buildings in the background  
+                        Left = truck on the road, moving; road in the foreground; buildings in the background  
+                        Right = building with crane, under construction; building in the background; crane visible  
+                        Down = dark image, no objects  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[9, 13, 100], [5, 9, 100], [6, 11, 48]]
+
+                        LeftDepth:
+                        [[7, 11, 9], [100, 30, 5], [33, 25, 7]]
+
+                        RightDepth:
+                        [[100, 55, 25], [100, 51, 29], [33, 24, 23]]
+
+                        DownDepth:
+                        [[9, 11, 13], [11, 8, 11], [13, 11, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-0.26, 180.49, -6.6), 90.37],
+    [(-0.29, 185.49, -6.6), 90.37],
+    [(-0.32, 190.49, -6.6), 90.37],
+    [(-0.36, 195.49, -6.6), 90.37],
+    [(4.64, 195.52, -6.6), 90.37],
+    [(4.64, 195.52, -6.6), 75.37],
+    [(5.91, 200.36, -6.6), 75.37],
+    [(5.91, 200.36, -6.6), 60.37],
+    [(5.91, 200.36, -6.6), 45.37],
+    [(9.46, 196.84, -6.6), 45.37],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 18
+                        DistanceTraveled = 75.00000000000007
+                        AvgHeadingChange = 2.5
+
+                        # Reminder  
+                        - The target is **Dumpster**, described as: Large rectangular container on wheels with a hinged lid, dark green metal exterior, ribbed top surface, typical of commercial waste disposal units.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:18 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 19 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Dumpster,
+                        Size:mid(4.0*2.0=8.0 squares),
+                        Description:Large rectangular container on wheels with a hinged lid, dark green metal exterior, ribbed top surface, typical of commercial waste disposal units.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-56, 45]  
+                        **Y Range**: [min_y, max_y] = [100, 201]
+
+                        # RGB Captions
+                        Front = tall building, dark facade; building is in the background; street in the foreground  
+                        Left = parking garage structure, concrete; garage is on the left; parked cars visible  
+                        Right = skyscraper buildings, modern design; buildings are in the background; road in the foreground  
+                        Down = dark image, no discernible objects  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[1, 3, 100], [1, 2, 100], [2, 3, 34]]
+
+                        LeftDepth:
+                        [[11, 4, 2], [100, 3, 1], [30, 4, 2]]
+
+                        RightDepth:
+                        [[100, 93, 34], [100, 73, 33], [34, 26, 26]]
+
+                        DownDepth:
+                        [[3, 9, 13], [9, 8, 11], [13, 11, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-0.29, 185.49, -6.6), 90.37],
+    [(-0.32, 190.49, -6.6), 90.37],
+    [(-0.36, 195.49, -6.6), 90.37],
+    [(4.64, 195.52, -6.6), 90.37],
+    [(4.64, 195.52, -6.6), 75.37],
+    [(5.91, 200.36, -6.6), 75.37],
+    [(5.91, 200.36, -6.6), 60.37],
+    [(5.91, 200.36, -6.6), 45.37],
+    [(9.46, 196.84, -6.6), 45.37],
+    [(12.98, 200.4, -6.6), 45.37],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 19
+                        DistanceTraveled = 80.00000000000007
+                        AvgHeadingChange = 2.37
+
+                        # Reminder  
+                        - The target is **Dumpster**, described as: Large rectangular container on wheels with a hinged lid, dark green metal exterior, ribbed top surface, typical of commercial waste disposal units.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:19 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 20 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Dumpster,
+                        Size:mid(4.0*2.0=8.0 squares),
+                        Description:Large rectangular container on wheels with a hinged lid, dark green metal exterior, ribbed top surface, typical of commercial waste disposal units.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-56, 45]  
+                        **Y Range**: [min_y, max_y] = [100, 201]
+
+                        # RGB Captions
+                        Front = yellow slide, medium-sized, plastic; slide is in the foreground; children sliding down  
+                        Left = truck on road, headlights on; traffic lights in the background; road stretches into the distance  
+                        Right = cityscape with tall buildings, modern architecture; street level view; red light reflections on pavement  
+                        Down = black background, no visible objects  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[1, 2, 3], [1, 1, 3], [1, 2, 3]]
+
+                        LeftDepth:
+                        [[11, 11, 2], [100, 8, 2], [33, 11, 2]]
+
+                        RightDepth:
+                        [[100, 100, 51], [100, 100, 51], [54, 25, 27]]
+
+                        DownDepth:
+                        [[3, 8, 12], [11, 8, 11], [13, 11, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-0.32, 190.49, -6.6), 90.37],
+    [(-0.36, 195.49, -6.6), 90.37],
+    [(4.64, 195.52, -6.6), 90.37],
+    [(4.64, 195.52, -6.6), 75.37],
+    [(5.91, 200.36, -6.6), 75.37],
+    [(5.91, 200.36, -6.6), 60.37],
+    [(5.91, 200.36, -6.6), 45.37],
+    [(9.46, 196.84, -6.6), 45.37],
+    [(12.98, 200.4, -6.6), 45.37],
+    [(12.98, 200.4, -6.6), 30.37],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 20
+                        DistanceTraveled = 80.00000000000007
+                        AvgHeadingChange = 3.0
+
+                        # Reminder  
+                        - The target is **Dumpster**, described as: Large rectangular container on wheels with a hinged lid, dark green metal exterior, ribbed top surface, typical of commercial waste disposal units.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:20 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

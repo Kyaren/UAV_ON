@@ -1,0 +1,35 @@
+{
+  "episode_id": "33",
+  "start_pose": {
+    "start_position": [
+      41.24275519087196,
+      109.69575385995991,
+      -6.600000023841858
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9999981144196344,
+      0.0019419467489937407
+    ]
+  },
+  "info": {
+    "geodesic_distance": 70,
+    "euclidean_distance": 27.1633
+  },
+  "map_name": "UrbanJapan_test",
+  "true_name": "PosterStand",
+  "object_name": "SM_prop_poster_stand_76",
+  "pose": [
+    [
+      17.600000381469727,
+      122.0999984741211,
+      1.399999976158142
+    ]
+  ],
+  "size": "mid(2.25*3.75=8.44 squares)",
+  "description": "Rectangular vertical panel, dark metal frame with lighted poster display and arched black canopy, stone base platform, used for public information or advertisement.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

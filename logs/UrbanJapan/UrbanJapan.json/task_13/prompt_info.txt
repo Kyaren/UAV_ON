@@ -1,0 +1,1323 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Human,
+                        Size:small(1.0*1.5=1.5 squares),
+                        Description:Organic upright form, neon yellow safety vest over dark clothing with brown boots, white hard hat, walking posture suggests construction or industrial activity.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-7, 94]  
+                        **Y Range**: [min_y, max_y] = [91, 192]
+
+                        # RGB Captions
+                        Front = no visible objects  
+                        Left = multiple buildings, tall, modern; buildings in the foreground and background; clear sky above  
+                        Right = no visible objects  
+                        Down = partial building, low lighting; building in the bottom left corner  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[2, 1, 1], [4, 2, 1], [19, 7, 4]]
+
+                        LeftDepth:
+                        [[100, 100, 9], [100, 100, 100], [100, 100, 54]]
+
+                        RightDepth:
+                        [[2, 1, 1], [2, 1, 1], [2, 1, 1]]
+
+                        DownDepth:
+                        [[24, 16, 15], [41, 25, 22], [45, 54, 55]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(43.12, 141.32, -7.41), 163.26],
+    [(43.12, 141.32, -7.41), 163.26],
+    [(43.12, 141.32, -7.41), 163.26],
+    [(43.12, 141.32, -7.41), 163.26],
+    [(43.12, 141.32, -7.41), 163.26],
+    [(43.12, 141.32, -7.41), 163.26],
+    [(43.12, 141.32, -7.41), 163.26],
+    [(43.12, 141.32, -7.41), 163.26],
+    [(43.12, 141.32, -7.41), 163.26],
+    [(43.12, 141.32, -7.41), 163.26],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Human**, described as: Organic upright form, neon yellow safety vest over dark clothing with brown boots, white hard hat, walking posture suggests construction or industrial activity.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 1 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Human,
+                        Size:small(1.0*1.5=1.5 squares),
+                        Description:Organic upright form, neon yellow safety vest over dark clothing with brown boots, white hard hat, walking posture suggests construction or industrial activity.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-7, 94]  
+                        **Y Range**: [min_y, max_y] = [91, 192]
+
+                        # RGB Captions
+                        Front = skyscrapers, tall, illuminated; buildings in the background; streetlights on  
+                        Left = buildings, modern, high-rise; buildings in the foreground; sky visible above  
+                        Right = street, urban, dark; buildings on both sides; signs lit up  
+                        Down = image entirely black  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [30, 17, 15], [31, 26, 27]]
+
+                        LeftDepth:
+                        [[91, 100, 100], [100, 100, 100], [50, 47, 54]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 47, 61]]
+
+                        DownDepth:
+                        [[24, 20, 24], [20, 16, 20], [24, 20, 24]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(43.12, 141.32, -7.41), 163.26],
+    [(44.56, 146.11, -7.41), 163.26],
+    [(44.56, 146.11, -7.41), 163.26],
+    [(44.56, 146.11, -7.41), 163.26],
+    [(44.56, 146.11, -7.41), 163.26],
+    [(44.56, 146.11, -7.41), 163.26],
+    [(44.56, 146.11, -7.41), 163.26],
+    [(44.56, 146.11, -7.41), 163.26],
+    [(44.56, 146.11, -7.41), 163.26],
+    [(44.56, 146.11, -7.41), 163.26],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 1
+                        DistanceTraveled = 4.999999999999993
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Human**, described as: Organic upright form, neon yellow safety vest over dark clothing with brown boots, white hard hat, walking posture suggests construction or industrial activity.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:1 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 2 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Human,
+                        Size:small(1.0*1.5=1.5 squares),
+                        Description:Organic upright form, neon yellow safety vest over dark clothing with brown boots, white hard hat, walking posture suggests construction or industrial activity.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-7, 94]  
+                        **Y Range**: [min_y, max_y] = [91, 192]
+
+                        # RGB Captions
+                        Front = building, tall, illuminated; building in the background; construction scaffolding in the foreground  
+                        Left = buildings, modern, high-rise; buildings in the background; alleyway in the foreground  
+                        Right = cityscape, evening, illuminated; buildings in the background; construction scaffolding in the foreground  
+                        Down = ground, textured, brown; ground in the foreground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [27, 16, 14], [31, 25, 27]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [53, 48, 54]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 48, 61]]
+
+                        DownDepth:
+                        [[25, 21, 25], [21, 16, 21], [25, 21, 25]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(43.12, 141.32, -7.41), 163.26],
+    [(44.56, 146.11, -7.41), 163.26],
+    [(39.77, 147.55, -7.41), 163.26],
+    [(39.77, 147.55, -7.41), 163.26],
+    [(39.77, 147.55, -7.41), 163.26],
+    [(39.77, 147.55, -7.41), 163.26],
+    [(39.77, 147.55, -7.41), 163.26],
+    [(39.77, 147.55, -7.41), 163.26],
+    [(39.77, 147.55, -7.41), 163.26],
+    [(39.77, 147.55, -7.41), 163.26],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 2
+                        DistanceTraveled = 9.99999999999999
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Human**, described as: Organic upright form, neon yellow safety vest over dark clothing with brown boots, white hard hat, walking posture suggests construction or industrial activity.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:2 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 3 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Human,
+                        Size:small(1.0*1.5=1.5 squares),
+                        Description:Organic upright form, neon yellow safety vest over dark clothing with brown boots, white hard hat, walking posture suggests construction or industrial activity.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-7, 94]  
+                        **Y Range**: [min_y, max_y] = [91, 192]
+
+                        # RGB Captions
+                        Front = building, tall, modern; building is in the background; sky visible above  
+                        Left = buildings, multiple, modern; buildings are in the background; street light on  
+                        Right = construction site, metal framework; construction site is in the foreground; buildings in the background  
+                        Down = ground, dirt, dark; ground is in the foreground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 11], [19, 10, 9], [20, 13, 11]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [58, 47, 49]]
+
+                        RightDepth:
+                        [[100, 100, 100], [13, 100, 100], [23, 48, 64]]
+
+                        DownDepth:
+                        [[22, 18, 22], [21, 16, 21], [25, 21, 25]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(43.12, 141.32, -7.41), 163.26],
+    [(44.56, 146.11, -7.41), 163.26],
+    [(39.77, 147.55, -7.41), 163.26],
+    [(34.98, 148.99, -7.41), 163.26],
+    [(34.98, 148.99, -7.41), 163.26],
+    [(34.98, 148.99, -7.41), 163.26],
+    [(34.98, 148.99, -7.41), 163.26],
+    [(34.98, 148.99, -7.41), 163.26],
+    [(34.98, 148.99, -7.41), 163.26],
+    [(34.98, 148.99, -7.41), 163.26],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 3
+                        DistanceTraveled = 14.999999999999986
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Human**, described as: Organic upright form, neon yellow safety vest over dark clothing with brown boots, white hard hat, walking posture suggests construction or industrial activity.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:3 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 4 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Human,
+                        Size:small(1.0*1.5=1.5 squares),
+                        Description:Organic upright form, neon yellow safety vest over dark clothing with brown boots, white hard hat, walking posture suggests construction or industrial activity.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-7, 94]  
+                        **Y Range**: [min_y, max_y] = [91, 192]
+
+                        # RGB Captions
+                        Front = dark image, no visible objects  
+                        Left = tall buildings, modern architecture; buildings in the background; dark alleyway in the foreground  
+                        Right = construction scaffolding, metal structure; scaffolding in the foreground; building with lights on in the background  
+                        Down = dark image, no visible objects  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[7, 5, 4], [7, 4, 3], [9, 5, 4]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 98], [63, 48, 29]]
+
+                        RightDepth:
+                        [[6, 100, 100], [5, 81, 100], [7, 47, 62]]
+
+                        DownDepth:
+                        [[14, 10, 9], [21, 16, 20], [25, 20, 24]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(43.12, 141.32, -7.41), 163.26],
+    [(44.56, 146.11, -7.41), 163.26],
+    [(39.77, 147.55, -7.41), 163.26],
+    [(34.98, 148.99, -7.41), 163.26],
+    [(30.2, 150.43, -7.41), 163.26],
+    [(30.2, 150.43, -7.41), 163.26],
+    [(30.2, 150.43, -7.41), 163.26],
+    [(30.2, 150.43, -7.41), 163.26],
+    [(30.2, 150.43, -7.41), 163.26],
+    [(30.2, 150.43, -7.41), 163.26],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 4
+                        DistanceTraveled = 19.999999999999982
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Human**, described as: Organic upright form, neon yellow safety vest over dark clothing with brown boots, white hard hat, walking posture suggests construction or industrial activity.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:4 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 5 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Human,
+                        Size:small(1.0*1.5=1.5 squares),
+                        Description:Organic upright form, neon yellow safety vest over dark clothing with brown boots, white hard hat, walking posture suggests construction or industrial activity.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-7, 94]  
+                        **Y Range**: [min_y, max_y] = [91, 192]
+
+                        # RGB Captions
+                        Front = red traffic light, glowing; positioned in the upper right corner  
+                        Left = skyscraper buildings, tall, modern; buildings are in the background, slightly left of center  
+                        Right = metal scaffolding, complex structure; scaffolding is in the foreground, spanning horizontally across the image  
+                        Down = concrete platform, flat surface; platform is at the bottom of the image  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[4, 3, 2], [4, 2, 2], [4, 3, 2]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [58, 47, 28]]
+
+                        RightDepth:
+                        [[4, 8, 100], [3, 6, 89], [4, 9, 63]]
+
+                        DownDepth:
+                        [[13, 15, 5], [20, 16, 18], [24, 20, 25]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(43.12, 141.32, -7.41), 163.26],
+    [(44.56, 146.11, -7.41), 163.26],
+    [(39.77, 147.55, -7.41), 163.26],
+    [(34.98, 148.99, -7.41), 163.26],
+    [(30.2, 150.43, -7.41), 163.26],
+    [(28.76, 145.64, -7.41), 163.26],
+    [(28.76, 145.64, -7.41), 163.26],
+    [(28.76, 145.64, -7.41), 163.26],
+    [(28.76, 145.64, -7.41), 163.26],
+    [(28.76, 145.64, -7.41), 163.26],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 5
+                        DistanceTraveled = 24.99999999999997
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Human**, described as: Organic upright form, neon yellow safety vest over dark clothing with brown boots, white hard hat, walking posture suggests construction or industrial activity.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:5 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 6 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Human,
+                        Size:small(1.0*1.5=1.5 squares),
+                        Description:Organic upright form, neon yellow safety vest over dark clothing with brown boots, white hard hat, walking posture suggests construction or industrial activity.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-7, 94]  
+                        **Y Range**: [min_y, max_y] = [91, 192]
+
+                        # RGB Captions
+                        Front = tall buildings, modern architecture; buildings in the background; scaffolding in the foreground  
+                        Left = yellow slide, medium-sized, plastic; slide is in the foreground; children sliding down  
+                        Right = gas station building, metal canopy; two fuel pumps; pump nozzles hanging idle; canopy in the background  
+                        Down = red apple, shiny surface; apple in the center  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+
+                        LeftDepth:
+                        [[100, 100, 10], [100, 100, 31], [55, 47, 29]]
+
+                        RightDepth:
+                        [[1, 2, 2], [1, 1, 1], [1, 2, 2]]
+
+                        DownDepth:
+                        [[18, 4, 2], [20, 16, 5], [25, 20, 21]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(43.12, 141.32, -7.41), 163.26],
+    [(44.56, 146.11, -7.41), 163.26],
+    [(39.77, 147.55, -7.41), 163.26],
+    [(34.98, 148.99, -7.41), 163.26],
+    [(30.2, 150.43, -7.41), 163.26],
+    [(28.76, 145.64, -7.41), 163.26],
+    [(27.32, 140.85, -7.41), 163.26],
+    [(27.32, 140.85, -7.41), 163.26],
+    [(27.32, 140.85, -7.41), 163.26],
+    [(27.32, 140.85, -7.41), 163.26],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 6
+                        DistanceTraveled = 29.999999999999964
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Human**, described as: Organic upright form, neon yellow safety vest over dark clothing with brown boots, white hard hat, walking posture suggests construction or industrial activity.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:6 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 7 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Human,
+                        Size:small(1.0*1.5=1.5 squares),
+                        Description:Organic upright form, neon yellow safety vest over dark clothing with brown boots, white hard hat, walking posture suggests construction or industrial activity.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-7, 94]  
+                        **Y Range**: [min_y, max_y] = [91, 192]
+
+                        # RGB Captions
+                        Front = image is mostly dark; no discernible objects  
+                        Left = tall buildings, modern architecture; buildings in the background; construction scaffolding in the foreground  
+                        Right = construction scaffolding, metal frame; scaffolding in the foreground; tall buildings in the background  
+                        Down = image is mostly dark; no discernible objects  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[4, 3, 2], [4, 2, 2], [4, 3, 2]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [56, 47, 28]]
+
+                        RightDepth:
+                        [[4, 8, 100], [3, 7, 89], [4, 9, 62]]
+
+                        DownDepth:
+                        [[13, 9, 5], [20, 16, 18], [24, 20, 24]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(43.12, 141.32, -7.41), 163.26],
+    [(44.56, 146.11, -7.41), 163.26],
+    [(39.77, 147.55, -7.41), 163.26],
+    [(34.98, 148.99, -7.41), 163.26],
+    [(30.2, 150.43, -7.41), 163.26],
+    [(28.76, 145.64, -7.41), 163.26],
+    [(27.32, 140.85, -7.41), 163.26],
+    [(28.76, 145.64, -7.41), 163.26],
+    [(28.76, 145.64, -7.41), 163.26],
+    [(28.76, 145.64, -7.41), 163.26],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 7
+                        DistanceTraveled = 34.99999999999996
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Human**, described as: Organic upright form, neon yellow safety vest over dark clothing with brown boots, white hard hat, walking posture suggests construction or industrial activity.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:7 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 8 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Human,
+                        Size:small(1.0*1.5=1.5 squares),
+                        Description:Organic upright form, neon yellow safety vest over dark clothing with brown boots, white hard hat, walking posture suggests construction or industrial activity.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-7, 94]  
+                        **Y Range**: [min_y, max_y] = [91, 192]
+
+                        # RGB Captions
+                        Front = yellow slide, medium-sized, plastic; slide is in the foreground; children sliding down  
+                        Left = tall buildings, modern design; buildings are in the background; sky is clear and blue  
+                        Right = construction crane, large metal structure; crane is in the foreground; lights on the crane are on  
+                        Down = dark scene, no visible objects  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[7, 5, 4], [7, 4, 3], [9, 5, 4]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 98], [61, 47, 29]]
+
+                        RightDepth:
+                        [[6, 100, 100], [5, 81, 100], [7, 47, 61]]
+
+                        DownDepth:
+                        [[13, 10, 9], [20, 16, 20], [24, 20, 24]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(43.12, 141.32, -7.41), 163.26],
+    [(44.56, 146.11, -7.41), 163.26],
+    [(39.77, 147.55, -7.41), 163.26],
+    [(34.98, 148.99, -7.41), 163.26],
+    [(30.2, 150.43, -7.41), 163.26],
+    [(28.76, 145.64, -7.41), 163.26],
+    [(27.32, 140.85, -7.41), 163.26],
+    [(28.76, 145.64, -7.41), 163.26],
+    [(30.2, 150.43, -7.41), 163.26],
+    [(30.2, 150.43, -7.41), 163.26],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 8
+                        DistanceTraveled = 39.99999999999995
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Human**, described as: Organic upright form, neon yellow safety vest over dark clothing with brown boots, white hard hat, walking posture suggests construction or industrial activity.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:8 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 9 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Human,
+                        Size:small(1.0*1.5=1.5 squares),
+                        Description:Organic upright form, neon yellow safety vest over dark clothing with brown boots, white hard hat, walking posture suggests construction or industrial activity.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-7, 94]  
+                        **Y Range**: [min_y, max_y] = [91, 192]
+
+                        # RGB Captions
+                        Front = yellow slide, medium-sized, plastic; slide is in the foreground; children sliding down  
+                        Left = tall buildings, modern architecture; buildings are in the background; scene is dimly lit  
+                        Right = street sign, illuminated; sign is on the right side; traffic lights visible in the distance  
+                        Down = dark image, no discernible objects  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[4, 3, 2], [4, 2, 2], [4, 3, 2]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [58, 47, 28]]
+
+                        RightDepth:
+                        [[4, 8, 100], [3, 6, 89], [4, 9, 61]]
+
+                        DownDepth:
+                        [[13, 15, 5], [20, 16, 18], [24, 20, 24]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(43.12, 141.32, -7.41), 163.26],
+    [(44.56, 146.11, -7.41), 163.26],
+    [(39.77, 147.55, -7.41), 163.26],
+    [(34.98, 148.99, -7.41), 163.26],
+    [(30.2, 150.43, -7.41), 163.26],
+    [(28.76, 145.64, -7.41), 163.26],
+    [(27.32, 140.85, -7.41), 163.26],
+    [(28.76, 145.64, -7.41), 163.26],
+    [(30.2, 150.43, -7.41), 163.26],
+    [(28.76, 145.64, -7.41), 163.26],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 9
+                        DistanceTraveled = 44.99999999999994
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Human**, described as: Organic upright form, neon yellow safety vest over dark clothing with brown boots, white hard hat, walking posture suggests construction or industrial activity.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:9 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 10 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Human,
+                        Size:small(1.0*1.5=1.5 squares),
+                        Description:Organic upright form, neon yellow safety vest over dark clothing with brown boots, white hard hat, walking posture suggests construction or industrial activity.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-7, 94]  
+                        **Y Range**: [min_y, max_y] = [91, 192]
+
+                        # RGB Captions
+                        Front = tall buildings, modern architecture; buildings in the background; dark alleyway in the foreground  
+                        Left = yellow slide, medium-sized, plastic; slide is in the foreground; children sliding down  
+                        Right = gas station building, metal canopy; two fuel pumps; pump nozzles hanging idle; canopy in the background  
+                        Down = tall buildings, modern architecture; buildings in the background; dark alleyway in the foreground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+
+                        LeftDepth:
+                        [[100, 100, 11], [100, 100, 31], [53, 47, 28]]
+
+                        RightDepth:
+                        [[1, 2, 1], [0, 1, 1], [1, 2, 1]]
+
+                        DownDepth:
+                        [[18, 3, 2], [20, 15, 5], [24, 20, 20]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(44.56, 146.11, -7.41), 163.26],
+    [(39.77, 147.55, -7.41), 163.26],
+    [(34.98, 148.99, -7.41), 163.26],
+    [(30.2, 150.43, -7.41), 163.26],
+    [(28.76, 145.64, -7.41), 163.26],
+    [(27.32, 140.85, -7.41), 163.26],
+    [(28.76, 145.64, -7.41), 163.26],
+    [(30.2, 150.43, -7.41), 163.26],
+    [(28.76, 145.64, -7.41), 163.26],
+    [(27.32, 140.85, -7.41), 163.26],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 10
+                        DistanceTraveled = 49.999999999999936
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Human**, described as: Organic upright form, neon yellow safety vest over dark clothing with brown boots, white hard hat, walking posture suggests construction or industrial activity.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:10 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 11 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Human,
+                        Size:small(1.0*1.5=1.5 squares),
+                        Description:Organic upright form, neon yellow safety vest over dark clothing with brown boots, white hard hat, walking posture suggests construction or industrial activity.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-7, 94]  
+                        **Y Range**: [min_y, max_y] = [91, 192]
+
+                        # RGB Captions
+                        Front = empty image  
+                        Left = buildings, tall, modern; buildings in the background; dark alley in the foreground  
+                        Right = buildings, tall, modern; buildings in the background; dark alley in the foreground  
+                        Down = empty image  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[4, 3, 2], [4, 2, 2], [4, 3, 2]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [56, 46, 27]]
+
+                        RightDepth:
+                        [[4, 8, 100], [3, 7, 89], [4, 9, 62]]
+
+                        DownDepth:
+                        [[13, 15, 5], [20, 15, 18], [24, 20, 24]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(39.77, 147.55, -7.41), 163.26],
+    [(34.98, 148.99, -7.41), 163.26],
+    [(30.2, 150.43, -7.41), 163.26],
+    [(28.76, 145.64, -7.41), 163.26],
+    [(27.32, 140.85, -7.41), 163.26],
+    [(28.76, 145.64, -7.41), 163.26],
+    [(30.2, 150.43, -7.41), 163.26],
+    [(28.76, 145.64, -7.41), 163.26],
+    [(27.32, 140.85, -7.41), 163.26],
+    [(28.76, 145.64, -7.41), 163.26],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 11
+                        DistanceTraveled = 54.99999999999993
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Human**, described as: Organic upright form, neon yellow safety vest over dark clothing with brown boots, white hard hat, walking posture suggests construction or industrial activity.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:11 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 12 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Human,
+                        Size:small(1.0*1.5=1.5 squares),
+                        Description:Organic upright form, neon yellow safety vest over dark clothing with brown boots, white hard hat, walking posture suggests construction or industrial activity.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-7, 94]  
+                        **Y Range**: [min_y, max_y] = [91, 192]
+
+                        # RGB Captions
+                        Front = tall buildings, modern architecture; buildings in the background; dark alleyway in the foreground  
+                        Left = yellow slide, medium-sized, plastic; slide is in the foreground; children sliding down  
+                        Right = gas station building, metal canopy; two fuel pumps; pump nozzles hanging idle; canopy in the background  
+                        Down = red apple, shiny surface; apple in the center  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+
+                        LeftDepth:
+                        [[100, 100, 11], [100, 100, 31], [53, 46, 28]]
+
+                        RightDepth:
+                        [[1, 2, 1], [0, 1, 1], [1, 2, 1]]
+
+                        DownDepth:
+                        [[18, 3, 2], [20, 15, 5], [24, 20, 20]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(34.98, 148.99, -7.41), 163.26],
+    [(30.2, 150.43, -7.41), 163.26],
+    [(28.76, 145.64, -7.41), 163.26],
+    [(27.32, 140.85, -7.41), 163.26],
+    [(28.76, 145.64, -7.41), 163.26],
+    [(30.2, 150.43, -7.41), 163.26],
+    [(28.76, 145.64, -7.41), 163.26],
+    [(27.32, 140.85, -7.41), 163.26],
+    [(28.76, 145.64, -7.41), 163.26],
+    [(27.32, 140.85, -7.41), 163.26],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 12
+                        DistanceTraveled = 59.99999999999992
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Human**, described as: Organic upright form, neon yellow safety vest over dark clothing with brown boots, white hard hat, walking posture suggests construction or industrial activity.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:12 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 13 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Human,
+                        Size:small(1.0*1.5=1.5 squares),
+                        Description:Organic upright form, neon yellow safety vest over dark clothing with brown boots, white hard hat, walking posture suggests construction or industrial activity.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-7, 94]  
+                        **Y Range**: [min_y, max_y] = [91, 192]
+
+                        # RGB Captions
+                        Front = empty image  
+                        Left = multiple buildings, high-rise; buildings in the background; scaffolding in the foreground  
+                        Right = street scene, nighttime; traffic light, red signal; street sign, illuminated; scaffolding in the foreground  
+                        Down = empty image  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[4, 3, 2], [4, 2, 2], [4, 3, 2]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [56, 46, 27]]
+
+                        RightDepth:
+                        [[4, 9, 100], [3, 7, 89], [4, 9, 61]]
+
+                        DownDepth:
+                        [[13, 9, 5], [20, 15, 18], [24, 20, 24]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(30.2, 150.43, -7.41), 163.26],
+    [(28.76, 145.64, -7.41), 163.26],
+    [(27.32, 140.85, -7.41), 163.26],
+    [(28.76, 145.64, -7.41), 163.26],
+    [(30.2, 150.43, -7.41), 163.26],
+    [(28.76, 145.64, -7.41), 163.26],
+    [(27.32, 140.85, -7.41), 163.26],
+    [(28.76, 145.64, -7.41), 163.26],
+    [(27.32, 140.85, -7.41), 163.26],
+    [(28.76, 145.64, -7.41), 163.26],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 13
+                        DistanceTraveled = 64.99999999999991
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Human**, described as: Organic upright form, neon yellow safety vest over dark clothing with brown boots, white hard hat, walking posture suggests construction or industrial activity.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:13 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 14 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Human,
+                        Size:small(1.0*1.5=1.5 squares),
+                        Description:Organic upright form, neon yellow safety vest over dark clothing with brown boots, white hard hat, walking posture suggests construction or industrial activity.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-7, 94]  
+                        **Y Range**: [min_y, max_y] = [91, 192]
+
+                        # RGB Captions
+                        Front = yellow slide, medium-sized, plastic; slide is in the foreground; children sliding down  
+                        Left = tall buildings, modern architecture; buildings are in the background; sunlight reflecting on windows  
+                        Right = construction scaffolding, metal frame; scaffolding is in the foreground; buildings in the background  
+                        Down = dark scene, no visible objects  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[8, 5, 4], [7, 4, 3], [9, 5, 4]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 98], [61, 47, 29]]
+
+                        RightDepth:
+                        [[6, 100, 100], [5, 81, 100], [7, 45, 59]]
+
+                        DownDepth:
+                        [[13, 10, 9], [20, 15, 20], [24, 20, 24]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(28.76, 145.64, -7.41), 163.26],
+    [(27.32, 140.85, -7.41), 163.26],
+    [(28.76, 145.64, -7.41), 163.26],
+    [(30.2, 150.43, -7.41), 163.26],
+    [(28.76, 145.64, -7.41), 163.26],
+    [(27.32, 140.85, -7.41), 163.26],
+    [(28.76, 145.64, -7.41), 163.26],
+    [(27.32, 140.85, -7.41), 163.26],
+    [(28.76, 145.64, -7.41), 163.26],
+    [(30.2, 150.43, -7.41), 163.26],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 14
+                        DistanceTraveled = 69.9999999999999
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Human**, described as: Organic upright form, neon yellow safety vest over dark clothing with brown boots, white hard hat, walking posture suggests construction or industrial activity.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:14 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 15 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Human,
+                        Size:small(1.0*1.5=1.5 squares),
+                        Description:Organic upright form, neon yellow safety vest over dark clothing with brown boots, white hard hat, walking posture suggests construction or industrial activity.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-7, 94]  
+                        **Y Range**: [min_y, max_y] = [91, 192]
+
+                        # RGB Captions
+                        Front = dark environment, low visibility; no discernible objects  
+                        Left = buildings, tall structures, metallic surfaces; buildings in the background, lit by ambient light  
+                        Right = construction scaffolding, metal frames; scaffolding on the right side, partially illuminated  
+                        Down = dark environment, low visibility; no discernible objects  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[4, 3, 2], [4, 2, 2], [4, 3, 2]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [58, 47, 27]]
+
+                        RightDepth:
+                        [[4, 8, 100], [3, 6, 89], [4, 9, 60]]
+
+                        DownDepth:
+                        [[13, 15, 5], [20, 15, 18], [24, 20, 24]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(27.32, 140.85, -7.41), 163.26],
+    [(28.76, 145.64, -7.41), 163.26],
+    [(30.2, 150.43, -7.41), 163.26],
+    [(28.76, 145.64, -7.41), 163.26],
+    [(27.32, 140.85, -7.41), 163.26],
+    [(28.76, 145.64, -7.41), 163.26],
+    [(27.32, 140.85, -7.41), 163.26],
+    [(28.76, 145.64, -7.41), 163.26],
+    [(30.2, 150.43, -7.41), 163.26],
+    [(28.76, 145.64, -7.41), 163.26],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 15
+                        DistanceTraveled = 74.99999999999989
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Human**, described as: Organic upright form, neon yellow safety vest over dark clothing with brown boots, white hard hat, walking posture suggests construction or industrial activity.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:15 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 16 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Human,
+                        Size:small(1.0*1.5=1.5 squares),
+                        Description:Organic upright form, neon yellow safety vest over dark clothing with brown boots, white hard hat, walking posture suggests construction or industrial activity.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-7, 94]  
+                        **Y Range**: [min_y, max_y] = [91, 192]
+
+                        # RGB Captions
+                        Front = tall buildings, modern architecture; buildings in the background; dark alleyway in the foreground  
+                        Left = yellow slide, medium-sized, plastic; slide is in the foreground; children sliding down  
+                        Right = gas station building, metal canopy; two fuel pumps; pump nozzles hanging idle; canopy in the background  
+                        Down = red apple, shiny surface; apple in the center  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+
+                        LeftDepth:
+                        [[100, 100, 11], [100, 100, 31], [53, 46, 27]]
+
+                        RightDepth:
+                        [[1, 2, 1], [1, 1, 1], [1, 2, 1]]
+
+                        DownDepth:
+                        [[18, 3, 2], [20, 15, 5], [24, 20, 20]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(28.76, 145.64, -7.41), 163.26],
+    [(30.2, 150.43, -7.41), 163.26],
+    [(28.76, 145.64, -7.41), 163.26],
+    [(27.32, 140.85, -7.41), 163.26],
+    [(28.76, 145.64, -7.41), 163.26],
+    [(27.32, 140.85, -7.41), 163.26],
+    [(28.76, 145.64, -7.41), 163.26],
+    [(30.2, 150.43, -7.41), 163.26],
+    [(28.76, 145.64, -7.41), 163.26],
+    [(27.32, 140.85, -7.41), 163.26],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 16
+                        DistanceTraveled = 79.99999999999987
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Human**, described as: Organic upright form, neon yellow safety vest over dark clothing with brown boots, white hard hat, walking posture suggests construction or industrial activity.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:16 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 17 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Human,
+                        Size:small(1.0*1.5=1.5 squares),
+                        Description:Organic upright form, neon yellow safety vest over dark clothing with brown boots, white hard hat, walking posture suggests construction or industrial activity.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-7, 94]  
+                        **Y Range**: [min_y, max_y] = [91, 192]
+
+                        # RGB Captions
+                        Front = empty image  
+                        Left = buildings, tall, modern; buildings in the background; dark alley in the foreground  
+                        Right = streetlights, glowing; streetlights on the right side; buildings in the distant background  
+                        Down = empty image  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[4, 3, 2], [4, 2, 2], [4, 3, 2]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [56, 45, 27]]
+
+                        RightDepth:
+                        [[4, 9, 100], [3, 7, 89], [4, 9, 61]]
+
+                        DownDepth:
+                        [[13, 15, 5], [20, 15, 18], [24, 20, 24]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(30.2, 150.43, -7.41), 163.26],
+    [(28.76, 145.64, -7.41), 163.26],
+    [(27.32, 140.85, -7.41), 163.26],
+    [(28.76, 145.64, -7.41), 163.26],
+    [(27.32, 140.85, -7.41), 163.26],
+    [(28.76, 145.64, -7.41), 163.26],
+    [(30.2, 150.43, -7.41), 163.26],
+    [(28.76, 145.64, -7.41), 163.26],
+    [(27.32, 140.85, -7.41), 163.26],
+    [(28.76, 145.64, -7.41), 163.26],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 17
+                        DistanceTraveled = 84.99999999999986
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Human**, described as: Organic upright form, neon yellow safety vest over dark clothing with brown boots, white hard hat, walking posture suggests construction or industrial activity.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:17 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 18 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Human,
+                        Size:small(1.0*1.5=1.5 squares),
+                        Description:Organic upright form, neon yellow safety vest over dark clothing with brown boots, white hard hat, walking posture suggests construction or industrial activity.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-7, 94]  
+                        **Y Range**: [min_y, max_y] = [91, 192]
+
+                        # RGB Captions
+                        Front = yellow slide, medium-sized, plastic; slide is in the foreground; children sliding down  
+                        Left = tall buildings, modern architecture; buildings are in the background; red light visible  
+                        Right = construction scaffolding, metal frame; scaffolding is in the foreground; buildings in the background  
+                        Down = dark scene, no visible objects  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[8, 5, 4], [7, 4, 3], [9, 5, 4]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 98], [61, 47, 28]]
+
+                        RightDepth:
+                        [[6, 100, 100], [5, 81, 100], [7, 45, 59]]
+
+                        DownDepth:
+                        [[13, 10, 9], [20, 15, 20], [24, 20, 24]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(28.76, 145.64, -7.41), 163.26],
+    [(27.32, 140.85, -7.41), 163.26],
+    [(28.76, 145.64, -7.41), 163.26],
+    [(27.32, 140.85, -7.41), 163.26],
+    [(28.76, 145.64, -7.41), 163.26],
+    [(30.2, 150.43, -7.41), 163.26],
+    [(28.76, 145.64, -7.41), 163.26],
+    [(27.32, 140.85, -7.41), 163.26],
+    [(28.76, 145.64, -7.41), 163.26],
+    [(30.2, 150.43, -7.41), 163.26],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 18
+                        DistanceTraveled = 89.99999999999984
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Human**, described as: Organic upright form, neon yellow safety vest over dark clothing with brown boots, white hard hat, walking posture suggests construction or industrial activity.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:18 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 19 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Human,
+                        Size:small(1.0*1.5=1.5 squares),
+                        Description:Organic upright form, neon yellow safety vest over dark clothing with brown boots, white hard hat, walking posture suggests construction or industrial activity.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-7, 94]  
+                        **Y Range**: [min_y, max_y] = [91, 192]
+
+                        # RGB Captions
+                        Front = Description time out. [ServerError]  
+                        Left = Description time out. [ServerError]  
+                        Right = Description time out. [ServerError]  
+                        Down = Description time out. [ServerError]  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[4, 3, 2], [4, 2, 2], [4, 3, 2]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [56, 46, 27]]
+
+                        RightDepth:
+                        [[4, 8, 100], [3, 6, 89], [4, 9, 60]]
+
+                        DownDepth:
+                        [[13, 15, 5], [20, 15, 18], [24, 20, 24]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(27.32, 140.85, -7.41), 163.26],
+    [(28.76, 145.64, -7.41), 163.26],
+    [(27.32, 140.85, -7.41), 163.26],
+    [(28.76, 145.64, -7.41), 163.26],
+    [(30.2, 150.43, -7.41), 163.26],
+    [(28.76, 145.64, -7.41), 163.26],
+    [(27.32, 140.85, -7.41), 163.26],
+    [(28.76, 145.64, -7.41), 163.26],
+    [(30.2, 150.43, -7.41), 163.26],
+    [(28.76, 145.64, -7.41), 163.26],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 19
+                        DistanceTraveled = 94.99999999999983
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Human**, described as: Organic upright form, neon yellow safety vest over dark clothing with brown boots, white hard hat, walking posture suggests construction or industrial activity.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:19 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 20 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Human,
+                        Size:small(1.0*1.5=1.5 squares),
+                        Description:Organic upright form, neon yellow safety vest over dark clothing with brown boots, white hard hat, walking posture suggests construction or industrial activity.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-7, 94]  
+                        **Y Range**: [min_y, max_y] = [91, 192]
+
+                        # RGB Captions
+                        Front = tall buildings, modern architecture; buildings in the background; dark alleyway in the foreground  
+                        Left = yellow slide, medium-sized, plastic; slide is in the foreground; children sliding down  
+                        Right = gas station building, metal canopy; two fuel pumps; pump nozzles hanging idle; canopy in the background  
+                        Down = red apple, shiny surface; apple in the center  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+
+                        LeftDepth:
+                        [[100, 100, 11], [100, 100, 31], [53, 46, 27]]
+
+                        RightDepth:
+                        [[1, 2, 1], [1, 1, 1], [1, 2, 1]]
+
+                        DownDepth:
+                        [[18, 3, 2], [20, 15, 5], [24, 20, 20]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(28.76, 145.64, -7.41), 163.26],
+    [(27.32, 140.85, -7.41), 163.26],
+    [(28.76, 145.64, -7.41), 163.26],
+    [(30.2, 150.43, -7.41), 163.26],
+    [(28.76, 145.64, -7.41), 163.26],
+    [(27.32, 140.85, -7.41), 163.26],
+    [(28.76, 145.64, -7.41), 163.26],
+    [(30.2, 150.43, -7.41), 163.26],
+    [(28.76, 145.64, -7.41), 163.26],
+    [(27.32, 140.85, -7.41), 163.26],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 20
+                        DistanceTraveled = 99.99999999999982
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Human**, described as: Organic upright form, neon yellow safety vest over dark clothing with brown boots, white hard hat, walking posture suggests construction or industrial activity.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:20 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

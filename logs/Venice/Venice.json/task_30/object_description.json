@@ -1,0 +1,35 @@
+{
+  "episode_id": "30",
+  "start_pose": {
+    "start_position": [
+      -33.80782630419454,
+      -53.94586542166914,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9891966443826767,
+      0.14659467501260784
+    ]
+  },
+  "info": {
+    "geodesic_distance": 56,
+    "euclidean_distance": 30.9185
+  },
+  "map_name": "Venice_test",
+  "true_name": " Hat",
+  "object_name": "SM_Hat_51",
+  "pose": [
+    [
+      -18.902294158935547,
+      -27.782997131347656,
+      0.020001830533146858
+    ]
+  ],
+  "size": " small(0.5*0.5=0.25 squares)",
+  "description": " Organic rounded form, light brown fabric with stitched brim, soft texture and creased crown, commonly worn for head protection or fashion.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

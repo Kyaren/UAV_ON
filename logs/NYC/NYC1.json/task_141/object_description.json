@@ -1,0 +1,35 @@
+{
+  "episode_id": "141",
+  "start_pose": {
+    "start_position": [
+      152.35571047329705,
+      623.4676315481402,
+      -7.800000011920929
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.858872529171683,
+      -0.51218939722942
+    ]
+  },
+  "info": {
+    "geodesic_distance": 54,
+    "euclidean_distance": 36.6236
+  },
+  "map_name": "NYC_test",
+  "true_name": "Table",
+  "object_name": "SM_prop_dining_table_a_502",
+  "pose": [
+    [
+      170.3000030517578,
+      655.0,
+      0.19999998807907104
+    ]
+  ],
+  "size": "small(1*1=1 squares)",
+  "description": "Geometric square form, glossy red surface with curved metal legs, symmetrical support structure, intended for placing objects or casual use.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

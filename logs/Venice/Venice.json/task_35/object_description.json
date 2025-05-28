@@ -1,0 +1,35 @@
+{
+  "episode_id": "35",
+  "start_pose": {
+    "start_position": [
+      138.7599298687062,
+      59.44233822382613,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.22530226920734084,
+      -0.9742889137673809
+    ]
+  },
+  "info": {
+    "geodesic_distance": 30,
+    "euclidean_distance": 23.4676
+  },
+  "map_name": "Venice_test",
+  "true_name": " VendingMachine",
+  "object_name": "SM_VendingMachine2_142",
+  "pose": [
+    [
+      136.49769592285156,
+      81.41699981689453,
+      0.9200018048286438
+    ]
+  ],
+  "size": " mid(2*1=2 squares)",
+  "description": " Geometric rectangular form, glossy red metal casing with transparent front panel, internal grid of drink bottles and digital display, functions as automated beverage dispenser.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

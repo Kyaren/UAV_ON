@@ -1,0 +1,1953 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Scrap,
+                        Size:small(1*1=1 square),
+                        Description:Geometric low-profile form, rusted brown and gray metal with fragmented surface, jagged scattered components, consistent with broken or discarded machine debris.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-254, -153]  
+                        **Y Range**: [min_y, max_y] = [-36, 65]
+
+                        # RGB Captions
+                        Front = wooden houses, dark brown; several houses in the scene; houses are spread out; trees in the background  
+                        Left = yellow truck, parked; red car, parked; black car, parked; vehicles on the left side; wooden houses in the background  
+                        Right = construction equipment, yellow; parked cars; houses with gray roofs; green hedges; construction site on the right  
+                        Down = blue umbrella, open; brick patio; lawn chairs; hedge in the background; umbrella casting a shadow  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 32, 41]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 36, 42]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [41, 36, 47]]
+
+                        DownDepth:
+                        [[18, 16, 18], [16, 12, 16], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-203.22, 14.22, -10.0), -84.44],
+    [(-203.22, 14.22, -10.0), -84.44],
+    [(-203.22, 14.22, -10.0), -84.44],
+    [(-203.22, 14.22, -10.0), -84.44],
+    [(-203.22, 14.22, -10.0), -84.44],
+    [(-203.22, 14.22, -10.0), -84.44],
+    [(-203.22, 14.22, -10.0), -84.44],
+    [(-203.22, 14.22, -10.0), -84.44],
+    [(-203.22, 14.22, -10.0), -84.44],
+    [(-203.22, 14.22, -10.0), -84.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Scrap**, described as: Geometric low-profile form, rusted brown and gray metal with fragmented surface, jagged scattered components, consistent with broken or discarded machine debris.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 1 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Scrap,
+                        Size:small(1*1=1 square),
+                        Description:Geometric low-profile form, rusted brown and gray metal with fragmented surface, jagged scattered components, consistent with broken or discarded machine debris.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-254, -153]  
+                        **Y Range**: [min_y, max_y] = [-36, 65]
+
+                        # RGB Captions
+                        Front = wooden houses, brown; several houses in a row; green trees in the background; playground equipment in the foreground  
+                        Left = yellow truck, parked; red car, parked; telephone poles, tall; houses in the background; trees on both sides of the road  
+                        Right = telephone poles, tall; cars parked along the street; houses in the background; green grass and trees on the side  
+                        Down = blue umbrella, open; patio furniture, arranged; brick patio, square; hedge, long; grassy area next to the patio  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 32, 40]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 36, 42]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [41, 36, 46]]
+
+                        DownDepth:
+                        [[18, 16, 18], [15, 12, 16], [18, 16, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-203.22, 14.22, -10.0), -84.44],
+    [(-202.74, 9.24, -10.0), -84.44],
+    [(-202.74, 9.24, -10.0), -84.44],
+    [(-202.74, 9.24, -10.0), -84.44],
+    [(-202.74, 9.24, -10.0), -84.44],
+    [(-202.74, 9.24, -10.0), -84.44],
+    [(-202.74, 9.24, -10.0), -84.44],
+    [(-202.74, 9.24, -10.0), -84.44],
+    [(-202.74, 9.24, -10.0), -84.44],
+    [(-202.74, 9.24, -10.0), -84.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 1
+                        DistanceTraveled = 4.999999999999998
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Scrap**, described as: Geometric low-profile form, rusted brown and gray metal with fragmented surface, jagged scattered components, consistent with broken or discarded machine debris.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:1 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 2 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Scrap,
+                        Size:small(1*1=1 square),
+                        Description:Geometric low-profile form, rusted brown and gray metal with fragmented surface, jagged scattered components, consistent with broken or discarded machine debris.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-254, -153]  
+                        **Y Range**: [min_y, max_y] = [-36, 65]
+
+                        # RGB Captions
+                        Front = wooden houses, brown roofs; houses are in the foreground and background; green trees scattered around  
+                        Left = street with asphalt pavement; red car parked on the left; telephone pole on the right; houses along both sides  
+                        Right = car driving on the road; road stretches from foreground to background; green trees on both sides of the road  
+                        Down = manhole cover on the street; street corner with brick pavement; grassy area with a bush in the bottom right  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [43, 32, 40]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 36, 42]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [40, 36, 47]]
+
+                        DownDepth:
+                        [[18, 15, 18], [15, 12, 16], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-203.22, 14.22, -10.0), -84.44],
+    [(-202.74, 9.24, -10.0), -84.44],
+    [(-202.25, 4.26, -10.0), -84.44],
+    [(-202.25, 4.26, -10.0), -84.44],
+    [(-202.25, 4.26, -10.0), -84.44],
+    [(-202.25, 4.26, -10.0), -84.44],
+    [(-202.25, 4.26, -10.0), -84.44],
+    [(-202.25, 4.26, -10.0), -84.44],
+    [(-202.25, 4.26, -10.0), -84.44],
+    [(-202.25, 4.26, -10.0), -84.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 2
+                        DistanceTraveled = 9.999999999999996
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Scrap**, described as: Geometric low-profile form, rusted brown and gray metal with fragmented surface, jagged scattered components, consistent with broken or discarded machine debris.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:2 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 3 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Scrap,
+                        Size:small(1*1=1 square),
+                        Description:Geometric low-profile form, rusted brown and gray metal with fragmented surface, jagged scattered components, consistent with broken or discarded machine debris.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-254, -153]  
+                        **Y Range**: [min_y, max_y] = [-36, 65]
+
+                        # RGB Captions
+                        Front = wooden houses, dark brown; several houses in a row; red slide in the playground; playground in the center  
+                        Left = street with asphalt road; two cars parked; houses on both sides; trees lining the street  
+                        Right = street with asphalt road; one car parked; houses on both sides; trees and bushes along the sidewalk  
+                        Down = pavement with manhole cover; shadow of a person; brick wall on the left; grass on the right  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [28, 32, 37]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 36, 38]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [41, 36, 47]]
+
+                        DownDepth:
+                        [[18, 15, 18], [15, 12, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-203.22, 14.22, -10.0), -84.44],
+    [(-202.74, 9.24, -10.0), -84.44],
+    [(-202.25, 4.26, -10.0), -84.44],
+    [(-201.77, -0.71, -10.0), -84.44],
+    [(-201.77, -0.71, -10.0), -84.44],
+    [(-201.77, -0.71, -10.0), -84.44],
+    [(-201.77, -0.71, -10.0), -84.44],
+    [(-201.77, -0.71, -10.0), -84.44],
+    [(-201.77, -0.71, -10.0), -84.44],
+    [(-201.77, -0.71, -10.0), -84.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 3
+                        DistanceTraveled = 14.999999999999996
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Scrap**, described as: Geometric low-profile form, rusted brown and gray metal with fragmented surface, jagged scattered components, consistent with broken or discarded machine debris.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:3 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 4 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Scrap,
+                        Size:small(1*1=1 square),
+                        Description:Geometric low-profile form, rusted brown and gray metal with fragmented surface, jagged scattered components, consistent with broken or discarded machine debris.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-254, -153]  
+                        **Y Range**: [min_y, max_y] = [-36, 65]
+
+                        # RGB Captions
+                        Front = wooden houses, brown roofs; playground with red slide and swings; houses in the background  
+                        Left = street with parked cars, residential area; houses on both sides; trees lining the street  
+                        Right = street with parked cars, residential area; houses on both sides; trees lining the street  
+                        Down = paved road, grassy areas; car parked on the side; tree shadows on the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [29, 33, 38]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 36, 39]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [38, 36, 47]]
+
+                        DownDepth:
+                        [[17, 15, 18], [15, 12, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-203.22, 14.22, -10.0), -84.44],
+    [(-202.74, 9.24, -10.0), -84.44],
+    [(-202.25, 4.26, -10.0), -84.44],
+    [(-201.77, -0.71, -10.0), -84.44],
+    [(-196.79, -0.23, -10.0), -84.44],
+    [(-196.79, -0.23, -10.0), -84.44],
+    [(-196.79, -0.23, -10.0), -84.44],
+    [(-196.79, -0.23, -10.0), -84.44],
+    [(-196.79, -0.23, -10.0), -84.44],
+    [(-196.79, -0.23, -10.0), -84.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 4
+                        DistanceTraveled = 19.99999999999999
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Scrap**, described as: Geometric low-profile form, rusted brown and gray metal with fragmented surface, jagged scattered components, consistent with broken or discarded machine debris.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:4 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 5 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Scrap,
+                        Size:small(1*1=1 square),
+                        Description:Geometric low-profile form, rusted brown and gray metal with fragmented surface, jagged scattered components, consistent with broken or discarded machine debris.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-254, -153]  
+                        **Y Range**: [min_y, max_y] = [-36, 65]
+
+                        # RGB Captions
+                        Front = wooden houses, brown; playground with red slide; houses in the background; playground in the center  
+                        Left = street with cars, parked; houses on both sides; trees lining the street; sunny day  
+                        Right = street with moving cars; houses on both sides; trees and bushes along the road; sunny day  
+                        Down = basketball hoop, green backboard; car parked nearby; building with brick wall; grassy area  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [30, 31, 38]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 35, 36]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [38, 35, 47]]
+
+                        DownDepth:
+                        [[16, 14, 17], [15, 12, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-203.22, 14.22, -10.0), -84.44],
+    [(-202.74, 9.24, -10.0), -84.44],
+    [(-202.25, 4.26, -10.0), -84.44],
+    [(-201.77, -0.71, -10.0), -84.44],
+    [(-196.79, -0.23, -10.0), -84.44],
+    [(-196.31, -5.21, -10.0), -84.44],
+    [(-196.31, -5.21, -10.0), -84.44],
+    [(-196.31, -5.21, -10.0), -84.44],
+    [(-196.31, -5.21, -10.0), -84.44],
+    [(-196.31, -5.21, -10.0), -84.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 5
+                        DistanceTraveled = 24.99999999999999
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Scrap**, described as: Geometric low-profile form, rusted brown and gray metal with fragmented surface, jagged scattered components, consistent with broken or discarded machine debris.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:5 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 6 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Scrap,
+                        Size:small(1*1=1 square),
+                        Description:Geometric low-profile form, rusted brown and gray metal with fragmented surface, jagged scattered components, consistent with broken or discarded machine debris.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-254, -153]  
+                        **Y Range**: [min_y, max_y] = [-36, 65]
+
+                        # RGB Captions
+                        Front = playground equipment, red slide, wooden playhouse; playground in the foreground; houses with shingled roofs in the background  
+                        Left = street with parked cars, residential houses, green trees; street runs through the center; houses on both sides  
+                        Right = street with moving car, houses with shingled roofs, green trees; street in the foreground; houses on both sides  
+                        Down = green lawn, brick wall, mailbox, fire hydrant; mailbox and fire hydrant near the sidewalk; shadow of a building on the lawn  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [29, 31, 35]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 35, 20]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [34, 36, 47]]
+
+                        DownDepth:
+                        [[16, 13, 16], [15, 11, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-203.22, 14.22, -10.0), -84.44],
+    [(-202.74, 9.24, -10.0), -84.44],
+    [(-202.25, 4.26, -10.0), -84.44],
+    [(-201.77, -0.71, -10.0), -84.44],
+    [(-196.79, -0.23, -10.0), -84.44],
+    [(-196.31, -5.21, -10.0), -84.44],
+    [(-195.82, -10.18, -10.0), -84.44],
+    [(-195.82, -10.18, -10.0), -84.44],
+    [(-195.82, -10.18, -10.0), -84.44],
+    [(-195.82, -10.18, -10.0), -84.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 6
+                        DistanceTraveled = 29.99999999999999
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Scrap**, described as: Geometric low-profile form, rusted brown and gray metal with fragmented surface, jagged scattered components, consistent with broken or discarded machine debris.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:6 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 7 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Scrap,
+                        Size:small(1*1=1 square),
+                        Description:Geometric low-profile form, rusted brown and gray metal with fragmented surface, jagged scattered components, consistent with broken or discarded machine debris.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-254, -153]  
+                        **Y Range**: [min_y, max_y] = [-36, 65]
+
+                        # RGB Captions
+                        Front = playground equipment, red and yellow; in the foreground; grassy area  
+                        Left = street, asphalt; houses on both sides; trees lining the street; sunny day  
+                        Right = swing set, metal; in the foreground; residential area; sunny day  
+                        Down = basketball hoop, black and white; on the grass; shadow on the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [40, 31, 38]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 35, 37]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [31, 35, 47]]
+
+                        DownDepth:
+                        [[16, 13, 16], [15, 11, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-203.22, 14.22, -10.0), -84.44],
+    [(-202.74, 9.24, -10.0), -84.44],
+    [(-202.25, 4.26, -10.0), -84.44],
+    [(-201.77, -0.71, -10.0), -84.44],
+    [(-196.79, -0.23, -10.0), -84.44],
+    [(-196.31, -5.21, -10.0), -84.44],
+    [(-195.82, -10.18, -10.0), -84.44],
+    [(-195.34, -15.16, -10.0), -84.44],
+    [(-195.34, -15.16, -10.0), -84.44],
+    [(-195.34, -15.16, -10.0), -84.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 7
+                        DistanceTraveled = 34.999999999999986
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Scrap**, described as: Geometric low-profile form, rusted brown and gray metal with fragmented surface, jagged scattered components, consistent with broken or discarded machine debris.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:7 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 8 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Scrap,
+                        Size:small(1*1=1 square),
+                        Description:Geometric low-profile form, rusted brown and gray metal with fragmented surface, jagged scattered components, consistent with broken or discarded machine debris.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-254, -153]  
+                        **Y Range**: [min_y, max_y] = [-36, 65]
+
+                        # RGB Captions
+                        Front = house, brown siding; house is in the foreground; trees behind the house  
+                        Left = street, asphalt; street is in the foreground; houses on both sides of the street  
+                        Right = swing set, metal frame; swing set is in the foreground; house in the background  
+                        Down = playground, green grass; playground is in the foreground; orange slide on the right  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [40, 31, 36]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 15, 38]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [38, 31, 44]]
+
+                        DownDepth:
+                        [[17, 13, 15], [13, 11, 14], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-203.22, 14.22, -10.0), -84.44],
+    [(-202.74, 9.24, -10.0), -84.44],
+    [(-202.25, 4.26, -10.0), -84.44],
+    [(-201.77, -0.71, -10.0), -84.44],
+    [(-196.79, -0.23, -10.0), -84.44],
+    [(-196.31, -5.21, -10.0), -84.44],
+    [(-195.82, -10.18, -10.0), -84.44],
+    [(-195.34, -15.16, -10.0), -84.44],
+    [(-194.86, -20.14, -10.0), -84.44],
+    [(-194.86, -20.14, -10.0), -84.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 8
+                        DistanceTraveled = 39.999999999999986
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Scrap**, described as: Geometric low-profile form, rusted brown and gray metal with fragmented surface, jagged scattered components, consistent with broken or discarded machine debris.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:8 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 9 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Scrap,
+                        Size:small(1*1=1 square),
+                        Description:Geometric low-profile form, rusted brown and gray metal with fragmented surface, jagged scattered components, consistent with broken or discarded machine debris.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-254, -153]  
+                        **Y Range**: [min_y, max_y] = [-36, 65]
+
+                        # RGB Captions
+                        Front = round fountain, stone base; fountain is in the center; trees surrounding the fountain  
+                        Left = wooden house, brown roof; house is in the foreground; trees behind the house  
+                        Right = swing set, red and yellow; swing set is in the foreground; houses in the background  
+                        Down = yellow slide, orange base; slide is in the foreground; blue sandbox nearby  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [40, 31, 36]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [18, 27, 38]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [35, 30, 46]]
+
+                        DownDepth:
+                        [[16, 13, 16], [14, 10, 13], [16, 14, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-203.22, 14.22, -10.0), -84.44],
+    [(-202.74, 9.24, -10.0), -84.44],
+    [(-202.25, 4.26, -10.0), -84.44],
+    [(-201.77, -0.71, -10.0), -84.44],
+    [(-196.79, -0.23, -10.0), -84.44],
+    [(-196.31, -5.21, -10.0), -84.44],
+    [(-195.82, -10.18, -10.0), -84.44],
+    [(-195.34, -15.16, -10.0), -84.44],
+    [(-194.86, -20.14, -10.0), -84.44],
+    [(-194.37, -25.11, -10.0), -84.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 9
+                        DistanceTraveled = 44.999999999999986
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Scrap**, described as: Geometric low-profile form, rusted brown and gray metal with fragmented surface, jagged scattered components, consistent with broken or discarded machine debris.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:9 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 10 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Scrap,
+                        Size:small(1*1=1 square),
+                        Description:Geometric low-profile form, rusted brown and gray metal with fragmented surface, jagged scattered components, consistent with broken or discarded machine debris.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-254, -153]  
+                        **Y Range**: [min_y, max_y] = [-36, 65]
+
+                        # RGB Captions
+                        Front = stone fountain, central; green lawn, surrounding; trees, lining the background; buildings, stone, in the distance  
+                        Left = wooden house, brown; roof, mossy; trees, behind; road, adjacent  
+                        Right = houses, clustered; roofs, shingled; trees, scattered; street, dividing  
+                        Down = yellow slide, plastic; orange tunnel; blue merry-go-round; playground equipment, on grass  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [40, 31, 35]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 30, 40]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [35, 26, 44]]
+
+                        DownDepth:
+                        [[15, 13, 16], [13, 10, 13], [16, 14, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-202.74, 9.24, -10.0), -84.44],
+    [(-202.25, 4.26, -10.0), -84.44],
+    [(-201.77, -0.71, -10.0), -84.44],
+    [(-196.79, -0.23, -10.0), -84.44],
+    [(-196.31, -5.21, -10.0), -84.44],
+    [(-195.82, -10.18, -10.0), -84.44],
+    [(-195.34, -15.16, -10.0), -84.44],
+    [(-194.86, -20.14, -10.0), -84.44],
+    [(-194.37, -25.11, -10.0), -84.44],
+    [(-189.4, -24.63, -10.0), -84.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 10
+                        DistanceTraveled = 49.99999999999998
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Scrap**, described as: Geometric low-profile form, rusted brown and gray metal with fragmented surface, jagged scattered components, consistent with broken or discarded machine debris.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:10 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 11 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Scrap,
+                        Size:small(1*1=1 square),
+                        Description:Geometric low-profile form, rusted brown and gray metal with fragmented surface, jagged scattered components, consistent with broken or discarded machine debris.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-254, -153]  
+                        **Y Range**: [min_y, max_y] = [-36, 65]
+
+                        # RGB Captions
+                        Front = fountain, circular, stone; fountain is in the center; surrounded by grass and trees  
+                        Left = wooden house, brown; house is in the foreground; trees behind the house  
+                        Right = wooden houses, gray; houses are in a row; trees in the background  
+                        Down = blue merry-go-round, small; merry-go-round is in the center; yellow playground equipment in the foreground; slide to the left  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [38, 31, 34]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [32, 31, 40]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [32, 29, 46]]
+
+                        DownDepth:
+                        [[16, 13, 16], [13, 10, 13], [16, 13, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-202.25, 4.26, -10.0), -84.44],
+    [(-201.77, -0.71, -10.0), -84.44],
+    [(-196.79, -0.23, -10.0), -84.44],
+    [(-196.31, -5.21, -10.0), -84.44],
+    [(-195.82, -10.18, -10.0), -84.44],
+    [(-195.34, -15.16, -10.0), -84.44],
+    [(-194.86, -20.14, -10.0), -84.44],
+    [(-194.37, -25.11, -10.0), -84.44],
+    [(-189.4, -24.63, -10.0), -84.44],
+    [(-188.91, -29.6, -10.0), -84.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 11
+                        DistanceTraveled = 54.99999999999998
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Scrap**, described as: Geometric low-profile form, rusted brown and gray metal with fragmented surface, jagged scattered components, consistent with broken or discarded machine debris.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:11 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 12 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Scrap,
+                        Size:small(1*1=1 square),
+                        Description:Geometric low-profile form, rusted brown and gray metal with fragmented surface, jagged scattered components, consistent with broken or discarded machine debris.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-254, -153]  
+                        **Y Range**: [min_y, max_y] = [-36, 65]
+
+                        # RGB Captions
+                        Front = bird bath, small, stone; bird bath is in the foreground; trees and houses in the background  
+                        Left = houses, wooden, brown; houses are arranged in a row; trees in the background  
+                        Right = houses, dark, clustered; houses are close together; trees in the background  
+                        Down = lawn mower, red, metal; lawn mower is on the grass; trampoline nearby  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [40, 29, 34]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [24, 32, 40]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [29, 29, 33]]
+
+                        DownDepth:
+                        [[15, 13, 16], [13, 10, 13], [16, 13, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-201.77, -0.71, -10.0), -84.44],
+    [(-196.79, -0.23, -10.0), -84.44],
+    [(-196.31, -5.21, -10.0), -84.44],
+    [(-195.82, -10.18, -10.0), -84.44],
+    [(-195.34, -15.16, -10.0), -84.44],
+    [(-194.86, -20.14, -10.0), -84.44],
+    [(-194.37, -25.11, -10.0), -84.44],
+    [(-189.4, -24.63, -10.0), -84.44],
+    [(-188.91, -29.6, -10.0), -84.44],
+    [(-188.43, -34.58, -10.0), -84.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 12
+                        DistanceTraveled = 59.99999999999998
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Scrap**, described as: Geometric low-profile form, rusted brown and gray metal with fragmented surface, jagged scattered components, consistent with broken or discarded machine debris.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:12 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 13 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Scrap,
+                        Size:small(1*1=1 square),
+                        Description:Geometric low-profile form, rusted brown and gray metal with fragmented surface, jagged scattered components, consistent with broken or discarded machine debris.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-254, -153]  
+                        **Y Range**: [min_y, max_y] = [-36, 65]
+
+                        # RGB Captions
+                        Front = wooden house, brown; green lawn; tree in the foreground; fountain in the background  
+                        Left = wooden houses, brown; green lawn; trees in the background; houses in a row  
+                        Right = wooden houses, brown; green lawn; houses close together; trees in the background  
+                        Down = blue merry-go-round; red seesaw; yellow slide; playground equipment on grass  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [40, 30, 36]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 31, 38]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [38, 29, 18]]
+
+                        DownDepth:
+                        [[16, 13, 15], [13, 10, 13], [15, 13, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-196.79, -0.23, -10.0), -84.44],
+    [(-196.31, -5.21, -10.0), -84.44],
+    [(-195.82, -10.18, -10.0), -84.44],
+    [(-195.34, -15.16, -10.0), -84.44],
+    [(-194.86, -20.14, -10.0), -84.44],
+    [(-194.37, -25.11, -10.0), -84.44],
+    [(-189.4, -24.63, -10.0), -84.44],
+    [(-188.91, -29.6, -10.0), -84.44],
+    [(-188.43, -34.58, -10.0), -84.44],
+    [(-188.43, -34.58, -10.0), -99.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 13
+                        DistanceTraveled = 59.99999999999998
+                        AvgHeadingChange = 1.15
+
+                        # Reminder  
+                        - The target is **Scrap**, described as: Geometric low-profile form, rusted brown and gray metal with fragmented surface, jagged scattered components, consistent with broken or discarded machine debris.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:13 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 14 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Scrap,
+                        Size:small(1*1=1 square),
+                        Description:Geometric low-profile form, rusted brown and gray metal with fragmented surface, jagged scattered components, consistent with broken or discarded machine debris.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-254, -153]  
+                        **Y Range**: [min_y, max_y] = [-36, 65]
+
+                        # RGB Captions
+                        Front = wooden house, brown; house is in the foreground; trees surrounding the house  
+                        Left = wooden house, brown; house is in the foreground; yellow playhouse nearby; trees surrounding the house  
+                        Right = wooden house, brown; house is in the foreground; trees surrounding the house  
+                        Down = blue merry-go-round; merry-go-round is in the foreground; red slide nearby; green grass covering the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 31, 47]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 31, 33]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 29, 29]]
+
+                        DownDepth:
+                        [[16, 13, 15], [13, 10, 13], [15, 13, 15]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-196.31, -5.21, -10.0), -84.44],
+    [(-195.82, -10.18, -10.0), -84.44],
+    [(-195.34, -15.16, -10.0), -84.44],
+    [(-194.86, -20.14, -10.0), -84.44],
+    [(-194.37, -25.11, -10.0), -84.44],
+    [(-189.4, -24.63, -10.0), -84.44],
+    [(-188.91, -29.6, -10.0), -84.44],
+    [(-188.43, -34.58, -10.0), -84.44],
+    [(-188.43, -34.58, -10.0), -99.44],
+    [(-188.43, -34.58, -10.0), -114.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 14
+                        DistanceTraveled = 59.99999999999998
+                        AvgHeadingChange = 2.14
+
+                        # Reminder  
+                        - The target is **Scrap**, described as: Geometric low-profile form, rusted brown and gray metal with fragmented surface, jagged scattered components, consistent with broken or discarded machine debris.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:14 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 15 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Scrap,
+                        Size:small(1*1=1 square),
+                        Description:Geometric low-profile form, rusted brown and gray metal with fragmented surface, jagged scattered components, consistent with broken or discarded machine debris.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-254, -153]  
+                        **Y Range**: [min_y, max_y] = [-36, 65]
+
+                        # RGB Captions
+                        Front = wooden fence, long, white; fence surrounds the grassy area; tree in the background  
+                        Left = yellow playground equipment, colorful; equipment in the foreground; wooden house, brown; house in the background  
+                        Right = round fountain, black; fountain in the foreground; wooden house, brown; house in the background  
+                        Down = blue merry-go-round, small; merry-go-round on the grass; red slide, small; slide near the merry-go-round  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [35, 31, 37]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 35, 40]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [42, 29, 34]]
+
+                        DownDepth:
+                        [[16, 13, 15], [13, 10, 13], [15, 13, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-195.82, -10.18, -10.0), -84.44],
+    [(-195.34, -15.16, -10.0), -84.44],
+    [(-194.86, -20.14, -10.0), -84.44],
+    [(-194.37, -25.11, -10.0), -84.44],
+    [(-189.4, -24.63, -10.0), -84.44],
+    [(-188.91, -29.6, -10.0), -84.44],
+    [(-188.43, -34.58, -10.0), -84.44],
+    [(-188.43, -34.58, -10.0), -99.44],
+    [(-188.43, -34.58, -10.0), -114.44],
+    [(-188.43, -34.58, -10.0), -129.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 15
+                        DistanceTraveled = 59.99999999999998
+                        AvgHeadingChange = 3.0
+
+                        # Reminder  
+                        - The target is **Scrap**, described as: Geometric low-profile form, rusted brown and gray metal with fragmented surface, jagged scattered components, consistent with broken or discarded machine debris.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:15 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 16 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Scrap,
+                        Size:small(1*1=1 square),
+                        Description:Geometric low-profile form, rusted brown and gray metal with fragmented surface, jagged scattered components, consistent with broken or discarded machine debris.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-254, -153]  
+                        **Y Range**: [min_y, max_y] = [-36, 65]
+
+                        # RGB Captions
+                        Front = wooden fence, white; green grass, short; trees, tall; fence in the foreground; trees in the background  
+                        Left = house, wooden; car, parked; mailbox, yellow; house in the foreground; car on the road; mailbox near the road  
+                        Right = fountain, stone; trees, tall; houses, wooden; fountain in the foreground; trees surrounding; houses in the background  
+                        Down = blue merry-go-round, small; red slide, small; child, lying down; merry-go-round in the foreground; slide nearby; child on the grass  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [39, 31, 36]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 35, 24]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [37, 29, 29]]
+
+                        DownDepth:
+                        [[15, 13, 16], [13, 10, 13], [16, 13, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-195.34, -15.16, -10.0), -84.44],
+    [(-194.86, -20.14, -10.0), -84.44],
+    [(-194.37, -25.11, -10.0), -84.44],
+    [(-189.4, -24.63, -10.0), -84.44],
+    [(-188.91, -29.6, -10.0), -84.44],
+    [(-188.43, -34.58, -10.0), -84.44],
+    [(-188.43, -34.58, -10.0), -99.44],
+    [(-188.43, -34.58, -10.0), -114.44],
+    [(-188.43, -34.58, -10.0), -129.44],
+    [(-188.43, -34.58, -10.0), -144.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 16
+                        DistanceTraveled = 59.99999999999998
+                        AvgHeadingChange = 3.75
+
+                        # Reminder  
+                        - The target is **Scrap**, described as: Geometric low-profile form, rusted brown and gray metal with fragmented surface, jagged scattered components, consistent with broken or discarded machine debris.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:16 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 17 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Scrap,
+                        Size:small(1*1=1 square),
+                        Description:Geometric low-profile form, rusted brown and gray metal with fragmented surface, jagged scattered components, consistent with broken or discarded machine debris.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-254, -153]  
+                        **Y Range**: [min_y, max_y] = [-36, 65]
+
+                        # RGB Captions
+                        Front = wooden houses, brown shingles; several houses in a row; green grass in the foreground; trees behind the houses  
+                        Left = playground equipment, yellow and red; slide and swings; playground in the foreground; houses and trees in the background  
+                        Right = fountain, stone base; water spraying up; fountain in the foreground; houses and trees in the background  
+                        Down = blue merry-go-round, yellow supports; orange seesaw; playground equipment on grass; fence along the side  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [34, 31, 40]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 35, 36]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [40, 29, 33]]
+
+                        DownDepth:
+                        [[16, 13, 16], [13, 10, 13], [16, 13, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-194.86, -20.14, -10.0), -84.44],
+    [(-194.37, -25.11, -10.0), -84.44],
+    [(-189.4, -24.63, -10.0), -84.44],
+    [(-188.91, -29.6, -10.0), -84.44],
+    [(-188.43, -34.58, -10.0), -84.44],
+    [(-188.43, -34.58, -10.0), -99.44],
+    [(-188.43, -34.58, -10.0), -114.44],
+    [(-188.43, -34.58, -10.0), -129.44],
+    [(-188.43, -34.58, -10.0), -144.44],
+    [(-188.43, -34.58, -10.0), -159.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 17
+                        DistanceTraveled = 59.99999999999998
+                        AvgHeadingChange = 4.41
+
+                        # Reminder  
+                        - The target is **Scrap**, described as: Geometric low-profile form, rusted brown and gray metal with fragmented surface, jagged scattered components, consistent with broken or discarded machine debris.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:17 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 18 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Scrap,
+                        Size:small(1*1=1 square),
+                        Description:Geometric low-profile form, rusted brown and gray metal with fragmented surface, jagged scattered components, consistent with broken or discarded machine debris.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-254, -153]  
+                        **Y Range**: [min_y, max_y] = [-36, 65]
+
+                        # RGB Captions
+                        Front = wooden houses, brown; several houses in a row; green grass in front  
+                        Left = road with cars; wooden houses on the side; trees in the background  
+                        Right = fountain in the center; round stone basin; water spraying up; surrounded by grass and trees  
+                        Down = yellow playground equipment; blue merry-go-round; fence along the side; child standing near  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [18, 30, 39]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 35, 36]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [40, 30, 31]]
+
+                        DownDepth:
+                        [[16, 13, 15], [13, 10, 13], [16, 13, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-194.37, -25.11, -10.0), -84.44],
+    [(-189.4, -24.63, -10.0), -84.44],
+    [(-188.91, -29.6, -10.0), -84.44],
+    [(-188.43, -34.58, -10.0), -84.44],
+    [(-188.43, -34.58, -10.0), -99.44],
+    [(-188.43, -34.58, -10.0), -114.44],
+    [(-188.43, -34.58, -10.0), -129.44],
+    [(-188.43, -34.58, -10.0), -144.44],
+    [(-188.43, -34.58, -10.0), -159.44],
+    [(-190.18, -29.9, -10.0), -159.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 18
+                        DistanceTraveled = 64.99999999999999
+                        AvgHeadingChange = 4.17
+
+                        # Reminder  
+                        - The target is **Scrap**, described as: Geometric low-profile form, rusted brown and gray metal with fragmented surface, jagged scattered components, consistent with broken or discarded machine debris.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:18 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 19 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Scrap,
+                        Size:small(1*1=1 square),
+                        Description:Geometric low-profile form, rusted brown and gray metal with fragmented surface, jagged scattered components, consistent with broken or discarded machine debris.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-254, -153]  
+                        **Y Range**: [min_y, max_y] = [-36, 65]
+
+                        # RGB Captions
+                        Front = wooden houses, brown shingles; houses are in the foreground and background; green trees surround the houses  
+                        Left = suburban houses, brown roofs; houses are spread out; cars on the street; playground equipment in the foreground  
+                        Right = fountain, stone base; fountain is in the center; trees around the fountain; buildings in the background  
+                        Down = playground, yellow slide; blue trampoline; playground is in the foreground; house in the background  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [18, 31, 40]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 35, 18]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [40, 30, 33]]
+
+                        DownDepth:
+                        [[15, 14, 16], [14, 10, 13], [15, 13, 15]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-189.4, -24.63, -10.0), -84.44],
+    [(-188.91, -29.6, -10.0), -84.44],
+    [(-188.43, -34.58, -10.0), -84.44],
+    [(-188.43, -34.58, -10.0), -99.44],
+    [(-188.43, -34.58, -10.0), -114.44],
+    [(-188.43, -34.58, -10.0), -129.44],
+    [(-188.43, -34.58, -10.0), -144.44],
+    [(-188.43, -34.58, -10.0), -159.44],
+    [(-190.18, -29.9, -10.0), -159.44],
+    [(-194.86, -31.65, -10.0), -159.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 19
+                        DistanceTraveled = 69.99999999999999
+                        AvgHeadingChange = 3.95
+
+                        # Reminder  
+                        - The target is **Scrap**, described as: Geometric low-profile form, rusted brown and gray metal with fragmented surface, jagged scattered components, consistent with broken or discarded machine debris.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:19 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 20 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Scrap,
+                        Size:small(1*1=1 square),
+                        Description:Geometric low-profile form, rusted brown and gray metal with fragmented surface, jagged scattered components, consistent with broken or discarded machine debris.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-254, -153]  
+                        **Y Range**: [min_y, max_y] = [-36, 65]
+
+                        # RGB Captions
+                        Front = wooden buildings, moss-covered roofs; buildings are in the foreground and background; trees surround the buildings  
+                        Left = road, two cars parked; houses on either side of the road; trees in the background  
+                        Right = fountain in the center; grassy area surrounding the fountain; buildings in the background  
+                        Down = playground equipment, yellow slide, blue trampoline; equipment is in the foreground; house in the background  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [40, 27, 40]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 34, 44]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [40, 30, 34]]
+
+                        DownDepth:
+                        [[14, 14, 15], [14, 11, 13], [16, 13, 15]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-188.91, -29.6, -10.0), -84.44],
+    [(-188.43, -34.58, -10.0), -84.44],
+    [(-188.43, -34.58, -10.0), -99.44],
+    [(-188.43, -34.58, -10.0), -114.44],
+    [(-188.43, -34.58, -10.0), -129.44],
+    [(-188.43, -34.58, -10.0), -144.44],
+    [(-188.43, -34.58, -10.0), -159.44],
+    [(-190.18, -29.9, -10.0), -159.44],
+    [(-194.86, -31.65, -10.0), -159.44],
+    [(-196.62, -26.97, -10.0), -159.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 20
+                        DistanceTraveled = 74.99999999999999
+                        AvgHeadingChange = 3.75
+
+                        # Reminder  
+                        - The target is **Scrap**, described as: Geometric low-profile form, rusted brown and gray metal with fragmented surface, jagged scattered components, consistent with broken or discarded machine debris.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:20 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 21 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Scrap,
+                        Size:small(1*1=1 square),
+                        Description:Geometric low-profile form, rusted brown and gray metal with fragmented surface, jagged scattered components, consistent with broken or discarded machine debris.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-254, -153]  
+                        **Y Range**: [min_y, max_y] = [-36, 65]
+
+                        # RGB Captions
+                        Front = houses, brown roofs, wooden; houses are in the background; trees surrounding houses  
+                        Left = road, gray pavement; road is in the foreground; cars parked on the side; houses and trees in the background  
+                        Right = fountain, water feature; fountain is in the center; trees around the fountain; buildings in the background  
+                        Down = roof, gray shingles; roof is in the foreground; hedge along the edge; grassy area next to the hedge  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [30, 28, 39]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 35, 40]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [39, 30, 37]]
+
+                        DownDepth:
+                        [[6, 13, 15], [14, 10, 13], [16, 13, 15]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-188.43, -34.58, -10.0), -84.44],
+    [(-188.43, -34.58, -10.0), -99.44],
+    [(-188.43, -34.58, -10.0), -114.44],
+    [(-188.43, -34.58, -10.0), -129.44],
+    [(-188.43, -34.58, -10.0), -144.44],
+    [(-188.43, -34.58, -10.0), -159.44],
+    [(-190.18, -29.9, -10.0), -159.44],
+    [(-194.86, -31.65, -10.0), -159.44],
+    [(-196.62, -26.97, -10.0), -159.44],
+    [(-201.3, -28.73, -10.0), -159.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 21
+                        DistanceTraveled = 79.99999999999999
+                        AvgHeadingChange = 3.57
+
+                        # Reminder  
+                        - The target is **Scrap**, described as: Geometric low-profile form, rusted brown and gray metal with fragmented surface, jagged scattered components, consistent with broken or discarded machine debris.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:21 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 22 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Scrap,
+                        Size:small(1*1=1 square),
+                        Description:Geometric low-profile form, rusted brown and gray metal with fragmented surface, jagged scattered components, consistent with broken or discarded machine debris.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-254, -153]  
+                        **Y Range**: [min_y, max_y] = [-36, 65]
+
+                        # RGB Captions
+                        Front = roofs, gray shingles; multiple buildings; trees in the background  
+                        Left = road, asphalt; tank on the left; buildings along the road; trees in the background  
+                        Right = fountain in the center; grassy area; trees around; buildings in the background  
+                        Down = asphalt road; tire tracks; grass on the side; shadow of a structure  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [35, 27, 35]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [40, 34, 44]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [37, 30, 36]]
+
+                        DownDepth:
+                        [[5, 5, 8], [7, 10, 13], [16, 13, 15]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-188.43, -34.58, -10.0), -99.44],
+    [(-188.43, -34.58, -10.0), -114.44],
+    [(-188.43, -34.58, -10.0), -129.44],
+    [(-188.43, -34.58, -10.0), -144.44],
+    [(-188.43, -34.58, -10.0), -159.44],
+    [(-190.18, -29.9, -10.0), -159.44],
+    [(-194.86, -31.65, -10.0), -159.44],
+    [(-196.62, -26.97, -10.0), -159.44],
+    [(-201.3, -28.73, -10.0), -159.44],
+    [(-203.06, -24.05, -10.0), -159.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 22
+                        DistanceTraveled = 84.99999999999999
+                        AvgHeadingChange = 3.41
+
+                        # Reminder  
+                        - The target is **Scrap**, described as: Geometric low-profile form, rusted brown and gray metal with fragmented surface, jagged scattered components, consistent with broken or discarded machine debris.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:22 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 23 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Scrap,
+                        Size:small(1*1=1 square),
+                        Description:Geometric low-profile form, rusted brown and gray metal with fragmented surface, jagged scattered components, consistent with broken or discarded machine debris.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-254, -153]  
+                        **Y Range**: [min_y, max_y] = [-36, 65]
+
+                        # RGB Captions
+                        Front = houses, wooden; trees, green leaves; houses in the background; trees surround houses  
+                        Left = road, gray pavement; houses, wooden; cars, parked; road in the foreground; houses and cars on the side  
+                        Right = fountain, water feature; trees, green leaves; fence, white picket; fountain in the center; trees around  
+                        Down = roof, shingled; hedge, green; fence, black; roof in the top left; hedge along the side  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [30, 28, 39]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 34, 40]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [39, 30, 36]]
+
+                        DownDepth:
+                        [[6, 11, 15], [14, 10, 13], [16, 13, 15]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-188.43, -34.58, -10.0), -114.44],
+    [(-188.43, -34.58, -10.0), -129.44],
+    [(-188.43, -34.58, -10.0), -144.44],
+    [(-188.43, -34.58, -10.0), -159.44],
+    [(-190.18, -29.9, -10.0), -159.44],
+    [(-194.86, -31.65, -10.0), -159.44],
+    [(-196.62, -26.97, -10.0), -159.44],
+    [(-201.3, -28.73, -10.0), -159.44],
+    [(-203.06, -24.05, -10.0), -159.44],
+    [(-201.3, -28.73, -10.0), -159.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 23
+                        DistanceTraveled = 89.99999999999999
+                        AvgHeadingChange = 3.26
+
+                        # Reminder  
+                        - The target is **Scrap**, described as: Geometric low-profile form, rusted brown and gray metal with fragmented surface, jagged scattered components, consistent with broken or discarded machine debris.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:23 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 24 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Scrap,
+                        Size:small(1*1=1 square),
+                        Description:Geometric low-profile form, rusted brown and gray metal with fragmented surface, jagged scattered components, consistent with broken or discarded machine debris.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-254, -153]  
+                        **Y Range**: [min_y, max_y] = [-36, 65]
+
+                        # RGB Captions
+                        Front = houses, brown siding; houses are in the foreground; trees behind the houses  
+                        Left = road, gray pavement; road is in the foreground; houses on both sides of the road  
+                        Right = tree, large and leafy; tree is in the foreground; fountain to the right of the tree  
+                        Down = roof, gray shingles; roof is in the foreground; grass next to the roof  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [18, 30, 29]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 33, 37]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 30, 38]]
+
+                        DownDepth:
+                        [[7, 13, 15], [5, 10, 13], [6, 13, 15]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-188.43, -34.58, -10.0), -129.44],
+    [(-188.43, -34.58, -10.0), -144.44],
+    [(-188.43, -34.58, -10.0), -159.44],
+    [(-190.18, -29.9, -10.0), -159.44],
+    [(-194.86, -31.65, -10.0), -159.44],
+    [(-196.62, -26.97, -10.0), -159.44],
+    [(-201.3, -28.73, -10.0), -159.44],
+    [(-203.06, -24.05, -10.0), -159.44],
+    [(-201.3, -28.73, -10.0), -159.44],
+    [(-205.98, -30.48, -10.0), -159.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 24
+                        DistanceTraveled = 94.99999999999999
+                        AvgHeadingChange = 3.12
+
+                        # Reminder  
+                        - The target is **Scrap**, described as: Geometric low-profile form, rusted brown and gray metal with fragmented surface, jagged scattered components, consistent with broken or discarded machine debris.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:24 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 25 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Scrap,
+                        Size:small(1*1=1 square),
+                        Description:Geometric low-profile form, rusted brown and gray metal with fragmented surface, jagged scattered components, consistent with broken or discarded machine debris.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-254, -153]  
+                        **Y Range**: [min_y, max_y] = [-36, 65]
+
+                        # RGB Captions
+                        Front = houses, brown roofs, wooden; houses are in the foreground; trees behind the houses  
+                        Left = road, gray pavement; road is in the foreground; houses on both sides of the road  
+                        Right = fountain, circular base, metal; fountain is in the center; trees surrounding the fountain  
+                        Down = wooden floor, gray planks, textured; floor is in the foreground; grass at the edge  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [30, 29, 24]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [43, 34, 39]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [34, 30, 39]]
+
+                        DownDepth:
+                        [[6, 6, 15], [6, 4, 7], [7, 5, 7]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-188.43, -34.58, -10.0), -144.44],
+    [(-188.43, -34.58, -10.0), -159.44],
+    [(-190.18, -29.9, -10.0), -159.44],
+    [(-194.86, -31.65, -10.0), -159.44],
+    [(-196.62, -26.97, -10.0), -159.44],
+    [(-201.3, -28.73, -10.0), -159.44],
+    [(-203.06, -24.05, -10.0), -159.44],
+    [(-201.3, -28.73, -10.0), -159.44],
+    [(-205.98, -30.48, -10.0), -159.44],
+    [(-207.74, -25.8, -10.0), -159.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 25
+                        DistanceTraveled = 99.99999999999999
+                        AvgHeadingChange = 3.0
+
+                        # Reminder  
+                        - The target is **Scrap**, described as: Geometric low-profile form, rusted brown and gray metal with fragmented surface, jagged scattered components, consistent with broken or discarded machine debris.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:25 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 26 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Scrap,
+                        Size:small(1*1=1 square),
+                        Description:Geometric low-profile form, rusted brown and gray metal with fragmented surface, jagged scattered components, consistent with broken or discarded machine debris.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-254, -153]  
+                        **Y Range**: [min_y, max_y] = [-36, 65]
+
+                        # RGB Captions
+                        Front = multiple houses, brown roofs, scattered; trees in the background; clear sky  
+                        Left = houses with brown roofs, green lawns, cars parked on the street; trees surrounding the area; clear sky  
+                        Right = large tree, green leaves, near a building; fenced area, grassy ground; clear sky  
+                        Down = roof, gray shingles, moss patches; roof occupies most of the frame; some greenery at the edge  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [20, 33, 17]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 34, 35]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [31, 30, 37]]
+
+                        DownDepth:
+                        [[5, 7, 15], [5, 5, 13], [7, 6, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-188.43, -34.58, -10.0), -159.44],
+    [(-190.18, -29.9, -10.0), -159.44],
+    [(-194.86, -31.65, -10.0), -159.44],
+    [(-196.62, -26.97, -10.0), -159.44],
+    [(-201.3, -28.73, -10.0), -159.44],
+    [(-203.06, -24.05, -10.0), -159.44],
+    [(-201.3, -28.73, -10.0), -159.44],
+    [(-205.98, -30.48, -10.0), -159.44],
+    [(-207.74, -25.8, -10.0), -159.44],
+    [(-212.42, -27.56, -10.0), -159.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 26
+                        DistanceTraveled = 104.99999999999999
+                        AvgHeadingChange = 2.88
+
+                        # Reminder  
+                        - The target is **Scrap**, described as: Geometric low-profile form, rusted brown and gray metal with fragmented surface, jagged scattered components, consistent with broken or discarded machine debris.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:26 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 27 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Scrap,
+                        Size:small(1*1=1 square),
+                        Description:Geometric low-profile form, rusted brown and gray metal with fragmented surface, jagged scattered components, consistent with broken or discarded machine debris.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-254, -153]  
+                        **Y Range**: [min_y, max_y] = [-36, 65]
+
+                        # RGB Captions
+                        Front = houses, gray roofs, scattered; trees, green leaves, surrounding; houses in the foreground and background  
+                        Left = street, curved, asphalt; houses, gray roofs, along street; cars, parked, near houses; trees, green leaves, background  
+                        Right = house, central, surrounded by grass; tree, large, beside house; fence, wooden, around property; trees, evergreen, background  
+                        Down = roof, moss-covered, textured; wall, dark, adjacent; hedge, green, beside wall; roof in the foreground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [16, 33, 15]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 34, 24]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [14, 30, 38]]
+
+                        DownDepth:
+                        [[6, 12, 13], [5, 9, 13], [5, 7, 15]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-190.18, -29.9, -10.0), -159.44],
+    [(-194.86, -31.65, -10.0), -159.44],
+    [(-196.62, -26.97, -10.0), -159.44],
+    [(-201.3, -28.73, -10.0), -159.44],
+    [(-203.06, -24.05, -10.0), -159.44],
+    [(-201.3, -28.73, -10.0), -159.44],
+    [(-205.98, -30.48, -10.0), -159.44],
+    [(-207.74, -25.8, -10.0), -159.44],
+    [(-212.42, -27.56, -10.0), -159.44],
+    [(-217.1, -29.31, -10.0), -159.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 27
+                        DistanceTraveled = 109.99999999999999
+                        AvgHeadingChange = 2.78
+
+                        # Reminder  
+                        - The target is **Scrap**, described as: Geometric low-profile form, rusted brown and gray metal with fragmented surface, jagged scattered components, consistent with broken or discarded machine debris.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:27 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 28 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Scrap,
+                        Size:small(1*1=1 square),
+                        Description:Geometric low-profile form, rusted brown and gray metal with fragmented surface, jagged scattered components, consistent with broken or discarded machine debris.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-254, -153]  
+                        **Y Range**: [min_y, max_y] = [-36, 65]
+
+                        # RGB Captions
+                        Front = houses, green roofs, multiple; trees, tall, numerous; houses in the foreground; trees in the background  
+                        Left = houses, green roofs, multiple; trees, tall, numerous; houses in the foreground; trees in the background  
+                        Right = house, large, central; trees, tall, aligned; house in the background; trees in a row in the foreground  
+                        Down = buildings, dark walls, two; roof, shingled, visible; buildings adjacent; vegetation between  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 34, 45]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 34, 39]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 30, 39]]
+
+                        DownDepth:
+                        [[15, 13, 11], [15, 11, 11], [6, 13, 15]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-194.86, -31.65, -10.0), -159.44],
+    [(-196.62, -26.97, -10.0), -159.44],
+    [(-201.3, -28.73, -10.0), -159.44],
+    [(-203.06, -24.05, -10.0), -159.44],
+    [(-201.3, -28.73, -10.0), -159.44],
+    [(-205.98, -30.48, -10.0), -159.44],
+    [(-207.74, -25.8, -10.0), -159.44],
+    [(-212.42, -27.56, -10.0), -159.44],
+    [(-217.1, -29.31, -10.0), -159.44],
+    [(-221.78, -31.07, -10.0), -159.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 28
+                        DistanceTraveled = 114.99999999999999
+                        AvgHeadingChange = 2.68
+
+                        # Reminder  
+                        - The target is **Scrap**, described as: Geometric low-profile form, rusted brown and gray metal with fragmented surface, jagged scattered components, consistent with broken or discarded machine debris.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:28 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 29 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Scrap,
+                        Size:small(1*1=1 square),
+                        Description:Geometric low-profile form, rusted brown and gray metal with fragmented surface, jagged scattered components, consistent with broken or discarded machine debris.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-254, -153]  
+                        **Y Range**: [min_y, max_y] = [-36, 65]
+
+                        # RGB Captions
+                        Front = wooden house, brown shingles; tree, large, green leaves; house in the foreground; tree to the right  
+                        Left = wooden house, brown shingles; road, curved, asphalt; house in the background; road in the foreground  
+                        Right = wooden house, brown shingles; tree, large, green leaves; house in the background; tree to the left  
+                        Down = roof, gray shingles; grass, green, between buildings; roof in the foreground; grass in the middle  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 34, 43]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 34, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 13, 39]]
+
+                        DownDepth:
+                        [[15, 14, 6], [14, 10, 10], [15, 13, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-196.62, -26.97, -10.0), -159.44],
+    [(-201.3, -28.73, -10.0), -159.44],
+    [(-203.06, -24.05, -10.0), -159.44],
+    [(-201.3, -28.73, -10.0), -159.44],
+    [(-205.98, -30.48, -10.0), -159.44],
+    [(-207.74, -25.8, -10.0), -159.44],
+    [(-212.42, -27.56, -10.0), -159.44],
+    [(-217.1, -29.31, -10.0), -159.44],
+    [(-221.78, -31.07, -10.0), -159.44],
+    [(-226.47, -32.83, -10.0), -159.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 29
+                        DistanceTraveled = 119.99999999999999
+                        AvgHeadingChange = 2.59
+
+                        # Reminder  
+                        - The target is **Scrap**, described as: Geometric low-profile form, rusted brown and gray metal with fragmented surface, jagged scattered components, consistent with broken or discarded machine debris.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:29 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 30 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Scrap,
+                        Size:small(1*1=1 square),
+                        Description:Geometric low-profile form, rusted brown and gray metal with fragmented surface, jagged scattered components, consistent with broken or discarded machine debris.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-254, -153]  
+                        **Y Range**: [min_y, max_y] = [-36, 65]
+
+                        # RGB Captions
+                        Front = car, blue, parked; car is on the road; trees in the background  
+                        Left = house, brown, roof; house is in the foreground; trees in the background  
+                        Right = house, brown, roof; house is in the foreground; trees in the background  
+                        Down = roof, gray, shingled; roof is in the foreground; grass in the background  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 34, 45]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 32, 44]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [41, 30, 39]]
+
+                        DownDepth:
+                        [[18, 15, 16], [13, 10, 5], [15, 14, 6]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-201.3, -28.73, -10.0), -159.44],
+    [(-203.06, -24.05, -10.0), -159.44],
+    [(-201.3, -28.73, -10.0), -159.44],
+    [(-205.98, -30.48, -10.0), -159.44],
+    [(-207.74, -25.8, -10.0), -159.44],
+    [(-212.42, -27.56, -10.0), -159.44],
+    [(-217.1, -29.31, -10.0), -159.44],
+    [(-221.78, -31.07, -10.0), -159.44],
+    [(-226.47, -32.83, -10.0), -159.44],
+    [(-231.15, -34.58, -10.0), -159.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 30
+                        DistanceTraveled = 124.99999999999999
+                        AvgHeadingChange = 2.5
+
+                        # Reminder  
+                        - The target is **Scrap**, described as: Geometric low-profile form, rusted brown and gray metal with fragmented surface, jagged scattered components, consistent with broken or discarded machine debris.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:30 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

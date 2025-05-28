@@ -1,15 +1,25 @@
 
 .vscode/
 **/__pycache__/
-/test/
-
-# Ignore method output logs
-**/logs/
 
 #settings.json
 /airsim_plugin/settings/
 
 #other folders
-/method
-/test
-/src/eval_random.py
+test/
+src/eval_random.py
+scripts/eval_random.sh
+.DS_Store
+# Ignore all log folders
+CLIP_logs/
+random_logs/
+unfixed_logs/
+
+# Ignore the method folder entirely
+method/
+
+# Optional: Ignore any future *_logs folders dynamically
+*_logs/
+
+# Optional: Ignore logs or temp files
+*.log

@@ -1,0 +1,504 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Cloth,
+                        Size: small(1*0.25=0.25 squares),
+                        Description: Organic vertical drape, matte navy blue fabric, symmetrical folds and hanging curvature, likely decorative or functional for shading.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-19, 82]  
+                        **Y Range**: [min_y, max_y] = [-63, 38]
+
+                        # RGB Captions
+                        Front = canal, narrow, water; bridge, white, stone; buildings, beige, multi-story; tree, yellow, leaves; bridge spans the canal  
+                        Left = building, beige, multi-story; roof, red, tiled; chimney, single, brown; sky, clear, blue; building occupies the foreground  
+                        Right = canal, narrow, water; bridge, white, stone; buildings, beige, multi-story; fog, light, pervasive; bridge spans the canal  
+                        Down = street, narrow, paved; wall, yellow, plastered; window, black, shutters; lamp post, metal, ornate; shadow on the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [51, 38, 31]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [1, 2, 51]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [40, 35, 49]]
+
+                        DownDepth:
+                        [[19, 20, 21], [12, 12, 20], [2, 13, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(31.81, -12.61, -10.0), -134.9],
+    [(31.81, -12.61, -10.0), -134.9],
+    [(31.81, -12.61, -10.0), -134.9],
+    [(31.81, -12.61, -10.0), -134.9],
+    [(31.81, -12.61, -10.0), -134.9],
+    [(31.81, -12.61, -10.0), -134.9],
+    [(31.81, -12.61, -10.0), -134.9],
+    [(31.81, -12.61, -10.0), -134.9],
+    [(31.81, -12.61, -10.0), -134.9],
+    [(31.81, -12.61, -10.0), -134.9],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Cloth**, described as:  Organic vertical drape, matte navy blue fabric, symmetrical folds and hanging curvature, likely decorative or functional for shading.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 1 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Cloth,
+                        Size: small(1*0.25=0.25 squares),
+                        Description: Organic vertical drape, matte navy blue fabric, symmetrical folds and hanging curvature, likely decorative or functional for shading.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-19, 82]  
+                        **Y Range**: [min_y, max_y] = [-63, 38]
+
+                        # RGB Captions
+                        Front = canal, calm water; bridge with white railing; yellow tree near the bridge; buildings with red roofs in the background  
+                        Left = building, beige walls; orange roof tiles; black shutters on windows; chimney on the roof  
+                        Right = canal, calm water; bridge with white railing; buildings with red roofs on both sides of the canal; fog in the distance  
+                        Down = canal, calm water; person walking on the sidewalk; lamp post casting shadow on the ground; building with beige walls and black shutters  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 36, 29]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [7, 13, 44]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [38, 37, 57]]
+
+                        DownDepth:
+                        [[22, 20, 19], [15, 15, 20], [11, 15, 22]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(31.81, -12.61, -10.0), -134.9],
+    [(28.28, -16.15, -10.0), -134.9],
+    [(28.28, -16.15, -10.0), -134.9],
+    [(28.28, -16.15, -10.0), -134.9],
+    [(28.28, -16.15, -10.0), -134.9],
+    [(28.28, -16.15, -10.0), -134.9],
+    [(28.28, -16.15, -10.0), -134.9],
+    [(28.28, -16.15, -10.0), -134.9],
+    [(28.28, -16.15, -10.0), -134.9],
+    [(28.28, -16.15, -10.0), -134.9],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 1
+                        DistanceTraveled = 4.999999999999999
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Cloth**, described as:  Organic vertical drape, matte navy blue fabric, symmetrical folds and hanging curvature, likely decorative or functional for shading.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:1 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 2 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Cloth,
+                        Size: small(1*0.25=0.25 squares),
+                        Description: Organic vertical drape, matte navy blue fabric, symmetrical folds and hanging curvature, likely decorative or functional for shading.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-19, 82]  
+                        **Y Range**: [min_y, max_y] = [-63, 38]
+
+                        # RGB Captions
+                        Front = canal, calm water; bridge over canal, white railing; buildings on both sides, red-tiled roofs; tree with yellow leaves in the foreground  
+                        Left = chimney, beige and red; chimney is on the roof; roof tiles are red; chimney stands tall above the roofline  
+                        Right = canal, calm water; bridge over canal, white railing; buildings on both sides, white facades; fog in the background  
+                        Down = staircase, concrete steps; staircase is in the foreground; lamp post near the stairs; shadows cast by the building  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 36, 39]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [0, 1, 34]]
+
+                        RightDepth:
+                        [[100, 100, 100], [24, 100, 100], [26, 36, 55]]
+
+                        DownDepth:
+                        [[18, 20, 21], [12, 12, 20], [2, 12, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(31.81, -12.61, -10.0), -134.9],
+    [(28.28, -16.15, -10.0), -134.9],
+    [(24.74, -12.62, -10.0), -134.9],
+    [(24.74, -12.62, -10.0), -134.9],
+    [(24.74, -12.62, -10.0), -134.9],
+    [(24.74, -12.62, -10.0), -134.9],
+    [(24.74, -12.62, -10.0), -134.9],
+    [(24.74, -12.62, -10.0), -134.9],
+    [(24.74, -12.62, -10.0), -134.9],
+    [(24.74, -12.62, -10.0), -134.9],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 2
+                        DistanceTraveled = 10.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Cloth**, described as:  Organic vertical drape, matte navy blue fabric, symmetrical folds and hanging curvature, likely decorative or functional for shading.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:2 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 3 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Cloth,
+                        Size: small(1*0.25=0.25 squares),
+                        Description: Organic vertical drape, matte navy blue fabric, symmetrical folds and hanging curvature, likely decorative or functional for shading.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-19, 82]  
+                        **Y Range**: [min_y, max_y] = [-63, 38]
+
+                        # RGB Captions
+                        Front = canal, narrow, water; bridge, white, arched; tree, yellow, leaves; buildings, beige, red roofs; bridge spans canal  
+                        Left = building, beige, multiple windows; roof, orange, tiled; chimneys, two, on roof; building occupies foreground  
+                        Right = canal, calm, water; bridge, white, arched; buildings, beige, red roofs; fog in background; bridge spans canal  
+                        Down = canal, calm, water; streetlight, green, metal; shadow on ground; building, beige, multiple windows; streetlight casts shadow  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 35, 30]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [6, 12, 46]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [35, 34, 55]]
+
+                        DownDepth:
+                        [[21, 20, 19], [15, 15, 20], [10, 15, 21]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(31.81, -12.61, -10.0), -134.9],
+    [(28.28, -16.15, -10.0), -134.9],
+    [(24.74, -12.62, -10.0), -134.9],
+    [(28.28, -16.15, -10.0), -134.9],
+    [(28.28, -16.15, -10.0), -134.9],
+    [(28.28, -16.15, -10.0), -134.9],
+    [(28.28, -16.15, -10.0), -134.9],
+    [(28.28, -16.15, -10.0), -134.9],
+    [(28.28, -16.15, -10.0), -134.9],
+    [(28.28, -16.15, -10.0), -134.9],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 3
+                        DistanceTraveled = 15.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Cloth**, described as:  Organic vertical drape, matte navy blue fabric, symmetrical folds and hanging curvature, likely decorative or functional for shading.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:3 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 4 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Cloth,
+                        Size: small(1*0.25=0.25 squares),
+                        Description: Organic vertical drape, matte navy blue fabric, symmetrical folds and hanging curvature, likely decorative or functional for shading.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-19, 82]  
+                        **Y Range**: [min_y, max_y] = [-63, 38]
+
+                        # RGB Captions
+                        Front = yellow tree, large; tree is in the foreground; buildings with orange roofs  
+                        Left = orange tree, medium-sized; tree is on the right; buildings with orange roofs  
+                        Right = white building, tall; building is in the foreground; canal in front of the building  
+                        Down = canal, narrow; canal is in the foreground; lamp post near the canal  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 35, 32]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [13, 20, 46]]
+
+                        RightDepth:
+                        [[100, 100, 100], [16, 100, 100], [18, 36, 60]]
+
+                        DownDepth:
+                        [[24, 20, 18], [16, 15, 20], [14, 16, 24]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(31.81, -12.61, -10.0), -134.9],
+    [(28.28, -16.15, -10.0), -134.9],
+    [(24.74, -12.62, -10.0), -134.9],
+    [(28.28, -16.15, -10.0), -134.9],
+    [(24.76, -19.69, -10.0), -134.9],
+    [(24.76, -19.69, -10.0), -134.9],
+    [(24.76, -19.69, -10.0), -134.9],
+    [(24.76, -19.69, -10.0), -134.9],
+    [(24.76, -19.69, -10.0), -134.9],
+    [(24.76, -19.69, -10.0), -134.9],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 4
+                        DistanceTraveled = 20.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Cloth**, described as:  Organic vertical drape, matte navy blue fabric, symmetrical folds and hanging curvature, likely decorative or functional for shading.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:4 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 5 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Cloth,
+                        Size: small(1*0.25=0.25 squares),
+                        Description: Organic vertical drape, matte navy blue fabric, symmetrical folds and hanging curvature, likely decorative or functional for shading.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-19, 82]  
+                        **Y Range**: [min_y, max_y] = [-63, 38]
+
+                        # RGB Captions
+                        Front = multi-story buildings, beige and brown facades; yellow tree to the left; buildings in the foreground and background  
+                        Left = row of buildings, beige facade; orange roof tiles; buildings extend into the distance; street lamp on the right  
+                        Right = building with green shutters, beige facade; building stands in the foreground; bridge in the distant background  
+                        Down = canal, calm water; bridge spans canal; buildings on either side; bridge in the foreground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [49, 32, 20]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [16, 27, 49]]
+
+                        RightDepth:
+                        [[100, 100, 100], [12, 100, 100], [15, 35, 57]]
+
+                        DownDepth:
+                        [[24, 18, 16], [18, 15, 18], [16, 18, 23]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(31.81, -12.61, -10.0), -134.9],
+    [(28.28, -16.15, -10.0), -134.9],
+    [(24.74, -12.62, -10.0), -134.9],
+    [(28.28, -16.15, -10.0), -134.9],
+    [(24.76, -19.69, -10.0), -134.9],
+    [(28.3, -23.22, -10.0), -134.9],
+    [(28.3, -23.22, -10.0), -134.9],
+    [(28.3, -23.22, -10.0), -134.9],
+    [(28.3, -23.22, -10.0), -134.9],
+    [(28.3, -23.22, -10.0), -134.9],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 5
+                        DistanceTraveled = 25.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Cloth**, described as:  Organic vertical drape, matte navy blue fabric, symmetrical folds and hanging curvature, likely decorative or functional for shading.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:5 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 6 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Cloth,
+                        Size: small(1*0.25=0.25 squares),
+                        Description: Organic vertical drape, matte navy blue fabric, symmetrical folds and hanging curvature, likely decorative or functional for shading.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-19, 82]  
+                        **Y Range**: [min_y, max_y] = [-63, 38]
+
+                        # RGB Captions
+                        Front = brick building, orange roof, green shutters; tree with yellow leaves to the left; building in the foreground  
+                        Left = stone bridge, red railing; canal under the bridge; buildings on both sides of the canal; bridge in the foreground  
+                        Right = white building, striped awnings; multiple windows with balconies; building occupies the left side; other buildings in the background  
+                        Down = canal, calm water; two bridges crossing the canal; buildings on both sides; view is from above  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [43, 24, 26]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [20, 32, 43]]
+
+                        RightDepth:
+                        [[10, 100, 100], [24, 100, 100], [10, 29, 49]]
+
+                        DownDepth:
+                        [[24, 16, 17], [20, 15, 15], [18, 20, 24]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(31.81, -12.61, -10.0), -134.9],
+    [(28.28, -16.15, -10.0), -134.9],
+    [(24.74, -12.62, -10.0), -134.9],
+    [(28.28, -16.15, -10.0), -134.9],
+    [(24.76, -19.69, -10.0), -134.9],
+    [(28.3, -23.22, -10.0), -134.9],
+    [(24.77, -26.76, -10.0), -134.9],
+    [(24.77, -26.76, -10.0), -134.9],
+    [(24.77, -26.76, -10.0), -134.9],
+    [(24.77, -26.76, -10.0), -134.9],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 6
+                        DistanceTraveled = 30.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Cloth**, described as:  Organic vertical drape, matte navy blue fabric, symmetrical folds and hanging curvature, likely decorative or functional for shading.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:6 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 7 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Cloth,
+                        Size: small(1*0.25=0.25 squares),
+                        Description: Organic vertical drape, matte navy blue fabric, symmetrical folds and hanging curvature, likely decorative or functional for shading.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-19, 82]  
+                        **Y Range**: [min_y, max_y] = [-63, 38]
+
+                        # RGB Captions
+                        Front = building, white facade, arched windows; building stands in the foreground; tree with yellow leaves to the left  
+                        Left = canal, calm water, reflective surface; canal runs through the center; bridge over the canal on the right  
+                        Right = building, white facade, green shutters; building is in the foreground; striped awning extended on the lower window  
+                        Down = canal, calm water, reflective surface; canal runs horizontally; buildings on both sides of the canal  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 5], [100, 100, 4], [45, 11, 5]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [23, 36, 46]]
+
+                        RightDepth:
+                        [[5, 10, 100], [4, 8, 100], [5, 10, 44]]
+
+                        DownDepth:
+                        [[22, 14, 8], [20, 15, 14], [18, 20, 21]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(31.81, -12.61, -10.0), -134.9],
+    [(28.28, -16.15, -10.0), -134.9],
+    [(24.74, -12.62, -10.0), -134.9],
+    [(28.28, -16.15, -10.0), -134.9],
+    [(24.76, -19.69, -10.0), -134.9],
+    [(28.3, -23.22, -10.0), -134.9],
+    [(24.77, -26.76, -10.0), -134.9],
+    [(28.31, -30.29, -10.0), -134.9],
+    [(28.31, -30.29, -10.0), -134.9],
+    [(28.31, -30.29, -10.0), -134.9],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 7
+                        DistanceTraveled = 35.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Cloth**, described as:  Organic vertical drape, matte navy blue fabric, symmetrical folds and hanging curvature, likely decorative or functional for shading.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:7 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

@@ -1,0 +1,35 @@
+{
+  "episode_id": "20",
+  "start_pose": {
+    "start_position": [
+      40.122385041010816,
+      153.66509578455572,
+      -6.600000023841858
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9363010266424006,
+      -0.3511985015748027
+    ]
+  },
+  "info": {
+    "geodesic_distance": 84,
+    "euclidean_distance": 48.279
+  },
+  "map_name": "UrbanJapan_test",
+  "true_name": "Table",
+  "object_name": "SM_prop_dining_table_a_46",
+  "pose": [
+    [
+      34.29999923706055,
+      106.0,
+      1.399999976158142
+    ]
+  ],
+  "size": "small(1.0*1.0=1.00 squares)",
+  "description": "Geometric flat-topped structure, bright red smooth surface with curved legs, minimalistic design with central support branching to four feet, intended for general surface use.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

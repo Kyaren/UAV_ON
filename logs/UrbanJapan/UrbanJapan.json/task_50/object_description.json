@@ -1,0 +1,35 @@
+{
+  "episode_id": "50",
+  "start_pose": {
+    "start_position": [
+      33.82218828055602,
+      24.85454537665515,
+      -6.600000023841858
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.5812644834810811,
+      0.8137146921639501
+    ]
+  },
+  "info": {
+    "geodesic_distance": 142,
+    "euclidean_distance": 53.9397
+  },
+  "map_name": "UrbanJapan_test",
+  "true_name": "Chair",
+  "object_name": "SM_CafeChair04_97",
+  "pose": [
+    [
+      -14.399999618530273,
+      48.5,
+      1.399999976158142
+    ]
+  ],
+  "size": "small(1.0*0.75=0.75 squares)",
+  "description": "Simple, plastic chair with a curved backrest and slatted design, light grey exterior, common for outdoor or patio use.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

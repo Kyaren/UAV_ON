@@ -1,0 +1,35 @@
+{
+  "episode_id": "18",
+  "start_pose": {
+    "start_position": [
+      97.36955802941661,
+      -20.12386357930163,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.7907634808587216,
+      0.6121218157688861
+    ]
+  },
+  "info": {
+    "geodesic_distance": 74,
+    "euclidean_distance": 48.4055
+  },
+  "map_name": "Venice_test",
+  "true_name": " Tank",
+  "object_name": "WaterTank_01_A_137",
+  "pose": [
+    [
+      121.09770202636719,
+      21.317001342773438,
+      0.9200018048286438
+    ]
+  ],
+  "size": " small(1.5*1.5=2.25 squares)",
+  "description": " Geometric cuboid structure, translucent white plastic encased in a black metal grid, top inlet valve and bottom outlet spigot visible, designed for fluid containment and transport.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

@@ -1,0 +1,35 @@
+{
+  "episode_id": "5",
+  "start_pose": {
+    "start_position": [
+      -207.77632399802658,
+      -279.4906426683242,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9978682962757853,
+      0.06525996696031645
+    ]
+  },
+  "info": {
+    "geodesic_distance": 33,
+    "euclidean_distance": 20.798
+  },
+  "map_name": "ModularNeighborhood_test",
+  "true_name": "Blanket",
+  "object_name": "SM_PicnicCloth",
+  "pose": [
+    [
+      -221.69183349609375,
+      -292.7161865234375,
+      1.0
+    ]
+  ],
+  "size": "small(1.5*1=1.5 squares)",
+  "description": "Geometric rectangular form with natural folds, red and white checkered textile surface, soft fabric texture with slight wrinkling, likely used for seating or covering on ground surfaces.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

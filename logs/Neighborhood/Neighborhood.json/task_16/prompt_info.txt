@@ -1,0 +1,1134 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Scrap,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Organic clustered form, rusted brown metallic barrels and debris with sharp edges and irregular contents, corroded texture indicating discarded or abandoned materials, associated with waste or recycling function.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-229, -128]  
+                        **Y Range**: [min_y, max_y] = [-49, 52]
+
+                        # RGB Captions
+                        Front = telephone pole, wooden; pole is on the left side of the road; house with a brown roof in the background  
+                        Left = white barn, small; barn is on the left side; car parked near the barn; horse standing next to the barn  
+                        Right = playground equipment, colorful; playground is in the center; buildings surrounding the playground  
+                        Down = car, black; car is parked on the right side of the road; tree on the left side  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 36, 44]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 36, 47]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [42, 31, 34]]
+
+                        DownDepth:
+                        [[18, 16, 18], [16, 12, 15], [18, 16, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-178.34, 1.95, -10.0), 154.81],
+    [(-178.34, 1.95, -10.0), 154.81],
+    [(-178.34, 1.95, -10.0), 154.81],
+    [(-178.34, 1.95, -10.0), 154.81],
+    [(-178.34, 1.95, -10.0), 154.81],
+    [(-178.34, 1.95, -10.0), 154.81],
+    [(-178.34, 1.95, -10.0), 154.81],
+    [(-178.34, 1.95, -10.0), 154.81],
+    [(-178.34, 1.95, -10.0), 154.81],
+    [(-178.34, 1.95, -10.0), 154.81],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Scrap**, described as: Organic clustered form, rusted brown metallic barrels and debris with sharp edges and irregular contents, corroded texture indicating discarded or abandoned materials, associated with waste or recycling function.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 1 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Scrap,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Organic clustered form, rusted brown metallic barrels and debris with sharp edges and irregular contents, corroded texture indicating discarded or abandoned materials, associated with waste or recycling function.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-229, -128]  
+                        **Y Range**: [min_y, max_y] = [-49, 52]
+
+                        # RGB Captions
+                        Front = wooden house, brown; white picket fence; green trees in the background; power lines overhead  
+                        Left = white barn, small; tractor parked; green field; trees in the background; power lines overhead  
+                        Right = playground, grassy area; swing set; slide; sandbox; wooden houses surrounding; trees in the background  
+                        Down = black car, parked; driveway; sidewalk; road; green bushes; aerial view  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 36, 45]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [40, 36, 47]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 31, 33]]
+
+                        DownDepth:
+                        [[18, 16, 18], [16, 12, 15], [18, 16, 17]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-178.34, 1.95, -10.0), 154.81],
+    [(-176.22, 6.48, -10.0), 154.81],
+    [(-176.22, 6.48, -10.0), 154.81],
+    [(-176.22, 6.48, -10.0), 154.81],
+    [(-176.22, 6.48, -10.0), 154.81],
+    [(-176.22, 6.48, -10.0), 154.81],
+    [(-176.22, 6.48, -10.0), 154.81],
+    [(-176.22, 6.48, -10.0), 154.81],
+    [(-176.22, 6.48, -10.0), 154.81],
+    [(-176.22, 6.48, -10.0), 154.81],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 1
+                        DistanceTraveled = 4.999999999999999
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Scrap**, described as: Organic clustered form, rusted brown metallic barrels and debris with sharp edges and irregular contents, corroded texture indicating discarded or abandoned materials, associated with waste or recycling function.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:1 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 2 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Scrap,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Organic clustered form, rusted brown metallic barrels and debris with sharp edges and irregular contents, corroded texture indicating discarded or abandoned materials, associated with waste or recycling function.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-229, -128]  
+                        **Y Range**: [min_y, max_y] = [-49, 52]
+
+                        # RGB Captions
+                        Front = wooden house, mossy roof; house is in the foreground; trees surrounding  
+                        Left = tractor, old model; tractor is in the center; field with hay bales  
+                        Right = street, paved; street is in the foreground; buildings on either side  
+                        Down = car, parked; car is in the foreground; driveway next to sidewalk  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 36, 46]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [35, 36, 47]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 33, 40]]
+
+                        DownDepth:
+                        [[18, 15, 18], [15, 12, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-178.34, 1.95, -10.0), 154.81],
+    [(-176.22, 6.48, -10.0), 154.81],
+    [(-180.74, 8.61, -10.0), 154.81],
+    [(-180.74, 8.61, -10.0), 154.81],
+    [(-180.74, 8.61, -10.0), 154.81],
+    [(-180.74, 8.61, -10.0), 154.81],
+    [(-180.74, 8.61, -10.0), 154.81],
+    [(-180.74, 8.61, -10.0), 154.81],
+    [(-180.74, 8.61, -10.0), 154.81],
+    [(-180.74, 8.61, -10.0), 154.81],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 2
+                        DistanceTraveled = 10.000000000000007
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Scrap**, described as: Organic clustered form, rusted brown metallic barrels and debris with sharp edges and irregular contents, corroded texture indicating discarded or abandoned materials, associated with waste or recycling function.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:2 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 3 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Scrap,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Organic clustered form, rusted brown metallic barrels and debris with sharp edges and irregular contents, corroded texture indicating discarded or abandoned materials, associated with waste or recycling function.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-229, -128]  
+                        **Y Range**: [min_y, max_y] = [-49, 52]
+
+                        # RGB Captions
+                        Front = wooden house, brown roof; sign on the roof; patio with umbrella and chairs; trees in the background  
+                        Left = horse carriage, brown horses; people standing around; trees surrounding the area; open field  
+                        Right = police car, parked; buildings with brown roofs; trees and bushes around; power lines above  
+                        Down = tree, tall; shadow on the ground; sidewalk next to the tree; road adjacent to the sidewalk  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [25, 36, 46]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [38, 36, 44]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 33, 37]]
+
+                        DownDepth:
+                        [[18, 15, 18], [15, 12, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-178.34, 1.95, -10.0), 154.81],
+    [(-176.22, 6.48, -10.0), 154.81],
+    [(-180.74, 8.61, -10.0), 154.81],
+    [(-185.26, 10.74, -10.0), 154.81],
+    [(-185.26, 10.74, -10.0), 154.81],
+    [(-185.26, 10.74, -10.0), 154.81],
+    [(-185.26, 10.74, -10.0), 154.81],
+    [(-185.26, 10.74, -10.0), 154.81],
+    [(-185.26, 10.74, -10.0), 154.81],
+    [(-185.26, 10.74, -10.0), 154.81],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 3
+                        DistanceTraveled = 15.000000000000016
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Scrap**, described as: Organic clustered form, rusted brown metallic barrels and debris with sharp edges and irregular contents, corroded texture indicating discarded or abandoned materials, associated with waste or recycling function.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:3 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 4 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Scrap,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Organic clustered form, rusted brown metallic barrels and debris with sharp edges and irregular contents, corroded texture indicating discarded or abandoned materials, associated with waste or recycling function.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-229, -128]  
+                        **Y Range**: [min_y, max_y] = [-49, 52]
+
+                        # RGB Captions
+                        Front = wooden house, brown shingles; signboard on the roof; blue awning in front; trees and grass around; house is in the foreground  
+                        Left = excavator, rusty metal; white fence behind; trees in the background; excavator is in the center  
+                        Right = barn building, dark wood; gravel road in front; trees on both sides; barn is in the middle distance  
+                        Down = hedge rows, green plants; grassy area between; shadows cast on the ground; hedges form a cross shape  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [21, 36, 45]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [38, 36, 39]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 34, 40]]
+
+                        DownDepth:
+                        [[17, 15, 18], [15, 12, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-178.34, 1.95, -10.0), 154.81],
+    [(-176.22, 6.48, -10.0), 154.81],
+    [(-180.74, 8.61, -10.0), 154.81],
+    [(-185.26, 10.74, -10.0), 154.81],
+    [(-189.79, 12.86, -10.0), 154.81],
+    [(-189.79, 12.86, -10.0), 154.81],
+    [(-189.79, 12.86, -10.0), 154.81],
+    [(-189.79, 12.86, -10.0), 154.81],
+    [(-189.79, 12.86, -10.0), 154.81],
+    [(-189.79, 12.86, -10.0), 154.81],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 4
+                        DistanceTraveled = 20.000000000000025
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Scrap**, described as: Organic clustered form, rusted brown metallic barrels and debris with sharp edges and irregular contents, corroded texture indicating discarded or abandoned materials, associated with waste or recycling function.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:4 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 5 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Scrap,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Organic clustered form, rusted brown metallic barrels and debris with sharp edges and irregular contents, corroded texture indicating discarded or abandoned materials, associated with waste or recycling function.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-229, -128]  
+                        **Y Range**: [min_y, max_y] = [-49, 52]
+
+                        # RGB Captions
+                        Front = building, gray roof; trees, tall and green; red car parked on the street; building in the foreground  
+                        Left = train, rusted and old; trees, tall and green; white fence alongside the train; train in the middle of the image  
+                        Right = street, curved and paved; trees, tall and green; red car parked on the street; building in the background  
+                        Down = house, brown siding; lawn, well-maintained; tree line along the road; shadows cast by the house and trees  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [17, 36, 47]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [42, 35, 15]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 34, 40]]
+
+                        DownDepth:
+                        [[16, 15, 18], [15, 12, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-178.34, 1.95, -10.0), 154.81],
+    [(-176.22, 6.48, -10.0), 154.81],
+    [(-180.74, 8.61, -10.0), 154.81],
+    [(-185.26, 10.74, -10.0), 154.81],
+    [(-189.79, 12.86, -10.0), 154.81],
+    [(-194.31, 14.99, -10.0), 154.81],
+    [(-194.31, 14.99, -10.0), 154.81],
+    [(-194.31, 14.99, -10.0), 154.81],
+    [(-194.31, 14.99, -10.0), 154.81],
+    [(-194.31, 14.99, -10.0), 154.81],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 5
+                        DistanceTraveled = 25.000000000000036
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Scrap**, described as: Organic clustered form, rusted brown metallic barrels and debris with sharp edges and irregular contents, corroded texture indicating discarded or abandoned materials, associated with waste or recycling function.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:5 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 6 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Scrap,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Organic clustered form, rusted brown metallic barrels and debris with sharp edges and irregular contents, corroded texture indicating discarded or abandoned materials, associated with waste or recycling function.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-229, -128]  
+                        **Y Range**: [min_y, max_y] = [-49, 52]
+
+                        # RGB Captions
+                        Front = Inka's sign, brown and yellow; sign is in the foreground; trees surrounding the area  
+                        Left = excavator, rusty; excavator is in the foreground; trees in the background  
+                        Right = street, paved; street is in the foreground; houses on both sides of the street  
+                        Down = hedge, green; hedge is in the foreground; grassy area surrounding the hedge  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [40, 18, 46]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [43, 35, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 35, 41]]
+
+                        DownDepth:
+                        [[16, 15, 18], [15, 12, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-178.34, 1.95, -10.0), 154.81],
+    [(-176.22, 6.48, -10.0), 154.81],
+    [(-180.74, 8.61, -10.0), 154.81],
+    [(-185.26, 10.74, -10.0), 154.81],
+    [(-189.79, 12.86, -10.0), 154.81],
+    [(-194.31, 14.99, -10.0), 154.81],
+    [(-192.19, 19.52, -10.0), 154.81],
+    [(-192.19, 19.52, -10.0), 154.81],
+    [(-192.19, 19.52, -10.0), 154.81],
+    [(-192.19, 19.52, -10.0), 154.81],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 6
+                        DistanceTraveled = 30.000000000000036
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Scrap**, described as: Organic clustered form, rusted brown metallic barrels and debris with sharp edges and irregular contents, corroded texture indicating discarded or abandoned materials, associated with waste or recycling function.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:6 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 7 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Scrap,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Organic clustered form, rusted brown metallic barrels and debris with sharp edges and irregular contents, corroded texture indicating discarded or abandoned materials, associated with waste or recycling function.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-229, -128]  
+                        **Y Range**: [min_y, max_y] = [-49, 52]
+
+                        # RGB Captions
+                        Front = house, gray roof, wooden; house is in the foreground; trees surrounding the house  
+                        Left = tractor, brown, parked; tractor is in the foreground; trees in the background  
+                        Right = street, paved, curving; street is in the foreground; houses and trees on both sides  
+                        Down = ladder, metal, leaning; ladder is in the foreground; grass and bushes around  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [17, 35, 46]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [41, 35, 15]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 34, 40]]
+
+                        DownDepth:
+                        [[16, 15, 18], [15, 12, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-178.34, 1.95, -10.0), 154.81],
+    [(-176.22, 6.48, -10.0), 154.81],
+    [(-180.74, 8.61, -10.0), 154.81],
+    [(-185.26, 10.74, -10.0), 154.81],
+    [(-189.79, 12.86, -10.0), 154.81],
+    [(-194.31, 14.99, -10.0), 154.81],
+    [(-192.19, 19.52, -10.0), 154.81],
+    [(-194.31, 14.99, -10.0), 154.81],
+    [(-194.31, 14.99, -10.0), 154.81],
+    [(-194.31, 14.99, -10.0), 154.81],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 7
+                        DistanceTraveled = 35.000000000000036
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Scrap**, described as: Organic clustered form, rusted brown metallic barrels and debris with sharp edges and irregular contents, corroded texture indicating discarded or abandoned materials, associated with waste or recycling function.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:7 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 8 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Scrap,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Organic clustered form, rusted brown metallic barrels and debris with sharp edges and irregular contents, corroded texture indicating discarded or abandoned materials, associated with waste or recycling function.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-229, -128]  
+                        **Y Range**: [min_y, max_y] = [-49, 52]
+
+                        # RGB Captions
+                        Front = house, gray roof, white walls; house is in the foreground; trees surrounding the house; road adjacent to the house  
+                        Left = building, wooden structure, signboard; building is in the foreground; excavator on the grass; trees behind the building  
+                        Right = house, gray roof, white walls; house is in the foreground; trees surrounding the house; road adjacent to the house  
+                        Down = trees, green leaves, lined up; trees are in the foreground; road adjacent to the trees; grassy area beside the road  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [22, 35, 46]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [42, 35, 21]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 33, 40]]
+
+                        DownDepth:
+                        [[18, 15, 18], [15, 12, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-178.34, 1.95, -10.0), 154.81],
+    [(-176.22, 6.48, -10.0), 154.81],
+    [(-180.74, 8.61, -10.0), 154.81],
+    [(-185.26, 10.74, -10.0), 154.81],
+    [(-189.79, 12.86, -10.0), 154.81],
+    [(-194.31, 14.99, -10.0), 154.81],
+    [(-192.19, 19.52, -10.0), 154.81],
+    [(-194.31, 14.99, -10.0), 154.81],
+    [(-196.44, 10.47, -10.0), 154.81],
+    [(-196.44, 10.47, -10.0), 154.81],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 8
+                        DistanceTraveled = 40.000000000000036
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Scrap**, described as: Organic clustered form, rusted brown metallic barrels and debris with sharp edges and irregular contents, corroded texture indicating discarded or abandoned materials, associated with waste or recycling function.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:8 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 9 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Scrap,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Organic clustered form, rusted brown metallic barrels and debris with sharp edges and irregular contents, corroded texture indicating discarded or abandoned materials, associated with waste or recycling function.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-229, -128]  
+                        **Y Range**: [min_y, max_y] = [-49, 52]
+
+                        # RGB Captions
+                        Front = wooden house, gray roof; house is in the foreground; red car parked near; trees surrounding  
+                        Left = wooden building, gray roof; sign on the roof; excavator on the grass; trees surrounding  
+                        Right = wooden house, gray roof; house is in the foreground; playground equipment; trees surrounding  
+                        Down = blue umbrella, open; umbrella is in the foreground; person sitting at a table; brick patio  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 35, 46]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 35, 18]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 34, 40]]
+
+                        DownDepth:
+                        [[16, 15, 18], [15, 11, 15], [17, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-178.34, 1.95, -10.0), 154.81],
+    [(-176.22, 6.48, -10.0), 154.81],
+    [(-180.74, 8.61, -10.0), 154.81],
+    [(-185.26, 10.74, -10.0), 154.81],
+    [(-189.79, 12.86, -10.0), 154.81],
+    [(-194.31, 14.99, -10.0), 154.81],
+    [(-192.19, 19.52, -10.0), 154.81],
+    [(-194.31, 14.99, -10.0), 154.81],
+    [(-196.44, 10.47, -10.0), 154.81],
+    [(-200.97, 12.6, -10.0), 154.81],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 9
+                        DistanceTraveled = 45.00000000000004
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Scrap**, described as: Organic clustered form, rusted brown metallic barrels and debris with sharp edges and irregular contents, corroded texture indicating discarded or abandoned materials, associated with waste or recycling function.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:9 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 10 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Scrap,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Organic clustered form, rusted brown metallic barrels and debris with sharp edges and irregular contents, corroded texture indicating discarded or abandoned materials, associated with waste or recycling function.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-229, -128]  
+                        **Y Range**: [min_y, max_y] = [-49, 52]
+
+                        # RGB Captions
+                        Front = red car, parked; brown truck, parked; cardboard boxes, scattered; red car is near the house; brown truck is in the driveway  
+                        Left = wooden house, gray roof; hexagonal sign, brown and white; sign is on the roof; trees surrounding the house  
+                        Right = street, empty; houses, wooden; trees, green; houses are on both sides of the street; trees behind the houses  
+                        Down = blue umbrella, open; multicolored umbrella, closed; umbrellas are on the patio; patio is next to the house  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [41, 35, 46]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 17, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 35, 40]]
+
+                        DownDepth:
+                        [[14, 15, 17], [15, 11, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-176.22, 6.48, -10.0), 154.81],
+    [(-180.74, 8.61, -10.0), 154.81],
+    [(-185.26, 10.74, -10.0), 154.81],
+    [(-189.79, 12.86, -10.0), 154.81],
+    [(-194.31, 14.99, -10.0), 154.81],
+    [(-192.19, 19.52, -10.0), 154.81],
+    [(-194.31, 14.99, -10.0), 154.81],
+    [(-196.44, 10.47, -10.0), 154.81],
+    [(-200.97, 12.6, -10.0), 154.81],
+    [(-205.49, 14.72, -10.0), 154.81],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 10
+                        DistanceTraveled = 50.00000000000005
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Scrap**, described as: Organic clustered form, rusted brown metallic barrels and debris with sharp edges and irregular contents, corroded texture indicating discarded or abandoned materials, associated with waste or recycling function.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:10 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 11 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Scrap,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Organic clustered form, rusted brown metallic barrels and debris with sharp edges and irregular contents, corroded texture indicating discarded or abandoned materials, associated with waste or recycling function.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-229, -128]  
+                        **Y Range**: [min_y, max_y] = [-49, 52]
+
+                        # RGB Captions
+                        Front = red car, parked; brown pickup truck, parked; house with glass garage doors; driveway in the foreground; trees surrounding the area  
+                        Left = wooden building, sign on roof; red and yellow signboard; green hedge, surrounds building; trees in the background; parking lot with vehicles  
+                        Right = two wooden buildings, parallel; road in the foreground; trees in the background; power lines crossing the top  
+                        Down = blue and yellow umbrella, open; blue tablecloth, on table; brick patio, under umbrella; shadows cast by objects; sidewalk adjacent  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 35, 45]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 24, 46]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 34, 38]]
+
+                        DownDepth:
+                        [[17, 15, 18], [15, 11, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-180.74, 8.61, -10.0), 154.81],
+    [(-185.26, 10.74, -10.0), 154.81],
+    [(-189.79, 12.86, -10.0), 154.81],
+    [(-194.31, 14.99, -10.0), 154.81],
+    [(-192.19, 19.52, -10.0), 154.81],
+    [(-194.31, 14.99, -10.0), 154.81],
+    [(-196.44, 10.47, -10.0), 154.81],
+    [(-200.97, 12.6, -10.0), 154.81],
+    [(-205.49, 14.72, -10.0), 154.81],
+    [(-207.62, 10.2, -10.0), 154.81],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 11
+                        DistanceTraveled = 55.00000000000005
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Scrap**, described as: Organic clustered form, rusted brown metallic barrels and debris with sharp edges and irregular contents, corroded texture indicating discarded or abandoned materials, associated with waste or recycling function.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:11 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 12 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Scrap,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Organic clustered form, rusted brown metallic barrels and debris with sharp edges and irregular contents, corroded texture indicating discarded or abandoned materials, associated with waste or recycling function.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-229, -128]  
+                        **Y Range**: [min_y, max_y] = [-49, 52]
+
+                        # RGB Captions
+                        Front = telephone pole, tall, wooden; power lines, black, hanging; pole is in the foreground; trees, green, dense; trees are in the background  
+                        Left = house, white, with porch; gazebo, central, with bench; trees, green, surrounding; gazebo is in the center of the yard  
+                        Right = houses, brown, with shingled roofs; houses are in a row; trees, green, behind; houses are in the foreground  
+                        Down = umbrella, blue and yellow, open; people, several, standing; umbrella is on the sidewalk; people are near the umbrella  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 35, 45]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 31, 46]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 34, 40]]
+
+                        DownDepth:
+                        [[18, 15, 18], [15, 11, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-185.26, 10.74, -10.0), 154.81],
+    [(-189.79, 12.86, -10.0), 154.81],
+    [(-194.31, 14.99, -10.0), 154.81],
+    [(-192.19, 19.52, -10.0), 154.81],
+    [(-194.31, 14.99, -10.0), 154.81],
+    [(-196.44, 10.47, -10.0), 154.81],
+    [(-200.97, 12.6, -10.0), 154.81],
+    [(-205.49, 14.72, -10.0), 154.81],
+    [(-207.62, 10.2, -10.0), 154.81],
+    [(-209.75, 5.68, -10.0), 154.81],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 12
+                        DistanceTraveled = 60.00000000000005
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Scrap**, described as: Organic clustered form, rusted brown metallic barrels and debris with sharp edges and irregular contents, corroded texture indicating discarded or abandoned materials, associated with waste or recycling function.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:12 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 13 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Scrap,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Organic clustered form, rusted brown metallic barrels and debris with sharp edges and irregular contents, corroded texture indicating discarded or abandoned materials, associated with waste or recycling function.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-229, -128]  
+                        **Y Range**: [min_y, max_y] = [-49, 52]
+
+                        # RGB Captions
+                        Front = wooden telephone pole, tall; power lines stretching across; yellow pickup truck parked; red car in the background; construction crane visible in the distance  
+                        Left = small wooden house, mossy roof; blue umbrella near the entrance; smoke rising from a barrel; trees surrounding the house; power lines overhead  
+                        Right = row of houses, brown roofs; white car parked on the street; trees lining the road; power lines running above; sunny weather  
+                        Down = pavement with cobblestone pattern; green hedge along the sidewalk; multicolored umbrella open; tree casting shadow; power lines and wooden poles present  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 35, 45]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 25, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 33, 38]]
+
+                        DownDepth:
+                        [[18, 15, 18], [15, 11, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-189.79, 12.86, -10.0), 154.81],
+    [(-194.31, 14.99, -10.0), 154.81],
+    [(-192.19, 19.52, -10.0), 154.81],
+    [(-194.31, 14.99, -10.0), 154.81],
+    [(-196.44, 10.47, -10.0), 154.81],
+    [(-200.97, 12.6, -10.0), 154.81],
+    [(-205.49, 14.72, -10.0), 154.81],
+    [(-207.62, 10.2, -10.0), 154.81],
+    [(-209.75, 5.68, -10.0), 154.81],
+    [(-214.27, 7.8, -10.0), 154.81],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 13
+                        DistanceTraveled = 65.00000000000006
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Scrap**, described as: Organic clustered form, rusted brown metallic barrels and debris with sharp edges and irregular contents, corroded texture indicating discarded or abandoned materials, associated with waste or recycling function.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:13 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 14 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Scrap,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Organic clustered form, rusted brown metallic barrels and debris with sharp edges and irregular contents, corroded texture indicating discarded or abandoned materials, associated with waste or recycling function.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-229, -128]  
+                        **Y Range**: [min_y, max_y] = [-49, 52]
+
+                        # RGB Captions
+                        Front = yellow truck, parked; red car, parked; garage building, white doors; driveway in the foreground; trees in the background  
+                        Left = building, wooden structure; sign on roof; hedge around the building; trees in the background  
+                        Right = telephone pole, tall; power lines, horizontal; houses with dark roofs; street in the foreground; trees in the background  
+                        Down = umbrella, blue and yellow; people sitting; brick patio; tree near the sidewalk; road adjacent to the patio  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 35, 45]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 18, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 33, 40]]
+
+                        DownDepth:
+                        [[18, 15, 18], [15, 11, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-194.31, 14.99, -10.0), 154.81],
+    [(-192.19, 19.52, -10.0), 154.81],
+    [(-194.31, 14.99, -10.0), 154.81],
+    [(-196.44, 10.47, -10.0), 154.81],
+    [(-200.97, 12.6, -10.0), 154.81],
+    [(-205.49, 14.72, -10.0), 154.81],
+    [(-207.62, 10.2, -10.0), 154.81],
+    [(-209.75, 5.68, -10.0), 154.81],
+    [(-214.27, 7.8, -10.0), 154.81],
+    [(-212.14, 12.33, -10.0), 154.81],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 14
+                        DistanceTraveled = 70.00000000000006
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Scrap**, described as: Organic clustered form, rusted brown metallic barrels and debris with sharp edges and irregular contents, corroded texture indicating discarded or abandoned materials, associated with waste or recycling function.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:14 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 15 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Scrap,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Organic clustered form, rusted brown metallic barrels and debris with sharp edges and irregular contents, corroded texture indicating discarded or abandoned materials, associated with waste or recycling function.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-229, -128]  
+                        **Y Range**: [min_y, max_y] = [-49, 52]
+
+                        # RGB Captions
+                        Front = red car, parked; car is in the driveway; house with gray roof; trees surrounding the house  
+                        Left = building with gray roof; sign on the roof; trees in the background; building in the foreground  
+                        Right = street with houses; houses have gray roofs; trees beside the houses; power lines above the street  
+                        Down = tree, green leaves; tree is in the foreground; person standing near cardboard boxes; blue and white umbrella  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 35, 45]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [33, 35, 44]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 33, 38]]
+
+                        DownDepth:
+                        [[18, 15, 18], [15, 11, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-192.19, 19.52, -10.0), 154.81],
+    [(-194.31, 14.99, -10.0), 154.81],
+    [(-196.44, 10.47, -10.0), 154.81],
+    [(-200.97, 12.6, -10.0), 154.81],
+    [(-205.49, 14.72, -10.0), 154.81],
+    [(-207.62, 10.2, -10.0), 154.81],
+    [(-209.75, 5.68, -10.0), 154.81],
+    [(-214.27, 7.8, -10.0), 154.81],
+    [(-212.14, 12.33, -10.0), 154.81],
+    [(-216.67, 14.46, -10.0), 154.81],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 15
+                        DistanceTraveled = 75.00000000000007
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Scrap**, described as: Organic clustered form, rusted brown metallic barrels and debris with sharp edges and irregular contents, corroded texture indicating discarded or abandoned materials, associated with waste or recycling function.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:15 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 16 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Scrap,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Organic clustered form, rusted brown metallic barrels and debris with sharp edges and irregular contents, corroded texture indicating discarded or abandoned materials, associated with waste or recycling function.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-229, -128]  
+                        **Y Range**: [min_y, max_y] = [-49, 52]
+
+                        # RGB Captions
+                        Front = red car, parked; house with white railing; driveway in front of the house; trees surrounding the house  
+                        Left = house with gray roof; chimney on the roof; porch with white railing; trees behind the house  
+                        Right = black car, parked; houses with gray roofs; street in front of the houses; trees beside the street  
+                        Down = telephone pole, casting shadow; paved road; green bush near the sidewalk; boxes on the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 34, 45]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 34, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 33, 37]]
+
+                        DownDepth:
+                        [[17, 15, 18], [15, 11, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-194.31, 14.99, -10.0), 154.81],
+    [(-196.44, 10.47, -10.0), 154.81],
+    [(-200.97, 12.6, -10.0), 154.81],
+    [(-205.49, 14.72, -10.0), 154.81],
+    [(-207.62, 10.2, -10.0), 154.81],
+    [(-209.75, 5.68, -10.0), 154.81],
+    [(-214.27, 7.8, -10.0), 154.81],
+    [(-212.14, 12.33, -10.0), 154.81],
+    [(-216.67, 14.46, -10.0), 154.81],
+    [(-218.8, 9.93, -10.0), 154.81],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 16
+                        DistanceTraveled = 80.00000000000007
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Scrap**, described as: Organic clustered form, rusted brown metallic barrels and debris with sharp edges and irregular contents, corroded texture indicating discarded or abandoned materials, associated with waste or recycling function.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:16 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 17 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Scrap,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Organic clustered form, rusted brown metallic barrels and debris with sharp edges and irregular contents, corroded texture indicating discarded or abandoned materials, associated with waste or recycling function.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-229, -128]  
+                        **Y Range**: [min_y, max_y] = [-49, 52]
+
+                        # RGB Captions
+                        Front = red car, parked; driveway in front of house; house with white railing; trees surrounding  
+                        Left = yellow school bus, parked; gravel road; wooden building with chimney; trees in background  
+                        Right = black car, parked on street; residential houses; green trees; power lines overhead  
+                        Down = gray dumpster, stationary; cardboard boxes; yellow truck; paved driveway  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 35, 44]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [33, 35, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 35, 35]]
+
+                        DownDepth:
+                        [[18, 15, 18], [15, 11, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-196.44, 10.47, -10.0), 154.81],
+    [(-200.97, 12.6, -10.0), 154.81],
+    [(-205.49, 14.72, -10.0), 154.81],
+    [(-207.62, 10.2, -10.0), 154.81],
+    [(-209.75, 5.68, -10.0), 154.81],
+    [(-214.27, 7.8, -10.0), 154.81],
+    [(-212.14, 12.33, -10.0), 154.81],
+    [(-216.67, 14.46, -10.0), 154.81],
+    [(-218.8, 9.93, -10.0), 154.81],
+    [(-223.32, 12.06, -10.0), 154.81],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 17
+                        DistanceTraveled = 85.00000000000009
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Scrap**, described as: Organic clustered form, rusted brown metallic barrels and debris with sharp edges and irregular contents, corroded texture indicating discarded or abandoned materials, associated with waste or recycling function.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:17 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

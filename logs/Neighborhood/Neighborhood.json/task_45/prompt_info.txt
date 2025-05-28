@@ -1,0 +1,2772 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:TomatoStack,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-248, -147]  
+                        **Y Range**: [min_y, max_y] = [14, 115]
+
+                        # RGB Captions
+                        Front = wooden houses, weathered; houses are on both sides of the road; power lines stretch across the scene  
+                        Left = excavator, yellow and black; excavator is in the foreground; house under construction in the background; trees surround the area  
+                        Right = telephone pole, tall and wooden; pole stands near the road; houses line the street; power lines run parallel to the road  
+                        Down = blue car, parked; red car, parked; cars are on a driveway; hedge separates the driveway from the grass  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 33, 31]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 35, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [31, 34, 43]]
+
+                        DownDepth:
+                        [[18, 15, 18], [15, 11, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-197.17, 64.05, -10.0), -118.41],
+    [(-197.17, 64.05, -10.0), -118.41],
+    [(-197.17, 64.05, -10.0), -118.41],
+    [(-197.17, 64.05, -10.0), -118.41],
+    [(-197.17, 64.05, -10.0), -118.41],
+    [(-197.17, 64.05, -10.0), -118.41],
+    [(-197.17, 64.05, -10.0), -118.41],
+    [(-197.17, 64.05, -10.0), -118.41],
+    [(-197.17, 64.05, -10.0), -118.41],
+    [(-197.17, 64.05, -10.0), -118.41],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **TomatoStack**, described as: Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 1 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:TomatoStack,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-248, -147]  
+                        **Y Range**: [min_y, max_y] = [14, 115]
+
+                        # RGB Captions
+                        Front = house, gray roof, wooden; house is in the foreground; trees in the background  
+                        Left = trees, tall, green; trees are in the background; hedge in the foreground  
+                        Right = excavator, orange, parked; excavator is in the foreground; car on the road  
+                        Down = building, gray roof, brick; building is in the background; grass in the foreground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [38, 35, 47]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 35, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 36, 45]]
+
+                        DownDepth:
+                        [[18, 15, 18], [15, 12, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-197.17, 64.05, -10.0), -118.41],
+    [(-199.55, 59.65, -10.0), -118.41],
+    [(-199.55, 59.65, -10.0), -118.41],
+    [(-199.55, 59.65, -10.0), -118.41],
+    [(-199.55, 59.65, -10.0), -118.41],
+    [(-199.55, 59.65, -10.0), -118.41],
+    [(-199.55, 59.65, -10.0), -118.41],
+    [(-199.55, 59.65, -10.0), -118.41],
+    [(-199.55, 59.65, -10.0), -118.41],
+    [(-199.55, 59.65, -10.0), -118.41],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 1
+                        DistanceTraveled = 5.0000000000000036
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **TomatoStack**, described as: Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:1 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 2 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:TomatoStack,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-248, -147]  
+                        **Y Range**: [min_y, max_y] = [14, 115]
+
+                        # RGB Captions
+                        Front = wooden buildings, brown roofs; buildings in the background; trees surrounding  
+                        Left = pine trees, green needles; trees spread out; grassy ground  
+                        Right = people gathered, sitting on the ground; people in the foreground; wooden building in the background  
+                        Down = hedge, long and narrow; hedge in the center; grass on both sides  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [48, 37, 49]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 35, 47]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [49, 37, 45]]
+
+                        DownDepth:
+                        [[18, 16, 19], [15, 12, 16], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-197.17, 64.05, -10.0), -118.41],
+    [(-199.55, 59.65, -10.0), -118.41],
+    [(-195.15, 57.27, -10.0), -118.41],
+    [(-195.15, 57.27, -10.0), -118.41],
+    [(-195.15, 57.27, -10.0), -118.41],
+    [(-195.15, 57.27, -10.0), -118.41],
+    [(-195.15, 57.27, -10.0), -118.41],
+    [(-195.15, 57.27, -10.0), -118.41],
+    [(-195.15, 57.27, -10.0), -118.41],
+    [(-195.15, 57.27, -10.0), -118.41],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 2
+                        DistanceTraveled = 9.999999999999995
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **TomatoStack**, described as: Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:2 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 3 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:TomatoStack,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-248, -147]  
+                        **Y Range**: [min_y, max_y] = [14, 115]
+
+                        # RGB Captions
+                        Front = wooden houses, brown roofs; houses are in the background; trees surrounding  
+                        Left = pine trees, green leaves; trees are in a cluster; grassy field  
+                        Right = construction site, excavators; workers around the machinery; buildings in the background  
+                        Down = hedge, green leaves; hedge is in the foreground; paved path crossing  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 33, 53]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [40, 34, 47]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [53, 39, 46]]
+
+                        DownDepth:
+                        [[18, 16, 19], [15, 12, 16], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-197.17, 64.05, -10.0), -118.41],
+    [(-199.55, 59.65, -10.0), -118.41],
+    [(-195.15, 57.27, -10.0), -118.41],
+    [(-190.76, 54.9, -10.0), -118.41],
+    [(-190.76, 54.9, -10.0), -118.41],
+    [(-190.76, 54.9, -10.0), -118.41],
+    [(-190.76, 54.9, -10.0), -118.41],
+    [(-190.76, 54.9, -10.0), -118.41],
+    [(-190.76, 54.9, -10.0), -118.41],
+    [(-190.76, 54.9, -10.0), -118.41],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 3
+                        DistanceTraveled = 14.999999999999986
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **TomatoStack**, described as: Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:3 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 4 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:TomatoStack,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-248, -147]  
+                        **Y Range**: [min_y, max_y] = [14, 115]
+
+                        # RGB Captions
+                        Front = houses, dark roofs, scattered; trees, green leaves, surrounding; houses in the foreground and background  
+                        Left = trees, tall, evergreen; grass, short, green; trees are spread out; grass covers the ground  
+                        Right = people, standing, grouped; vehicles, parked, near buildings; buildings, small, with sloped roofs; people and vehicles in the center  
+                        Down = hedge, green, neatly trimmed; grass, short, green; hedge forms a corner; grass surrounds the hedge  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [53, 34, 43]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 40, 51]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 32, 40]]
+
+                        DownDepth:
+                        [[19, 16, 18], [16, 12, 15], [18, 15, 17]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-197.17, 64.05, -10.0), -118.41],
+    [(-199.55, 59.65, -10.0), -118.41],
+    [(-195.15, 57.27, -10.0), -118.41],
+    [(-190.76, 54.9, -10.0), -118.41],
+    [(-193.14, 50.5, -10.0), -118.41],
+    [(-193.14, 50.5, -10.0), -118.41],
+    [(-193.14, 50.5, -10.0), -118.41],
+    [(-193.14, 50.5, -10.0), -118.41],
+    [(-193.14, 50.5, -10.0), -118.41],
+    [(-193.14, 50.5, -10.0), -118.41],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 4
+                        DistanceTraveled = 19.99999999999999
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **TomatoStack**, described as: Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:4 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 5 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:TomatoStack,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-248, -147]  
+                        **Y Range**: [min_y, max_y] = [14, 115]
+
+                        # RGB Captions
+                        Front = multiple buildings, brown roofs, scattered layout; buildings in the midground; trees surrounding buildings  
+                        Left = several trees, tall and coniferous; trees are spread out; grassy area with a path  
+                        Right = tractor, red body, parked on grass; tractor is in the foreground; barns in the background  
+                        Down = building corner, gray pavement, green grass; corner is in the foreground; railway tracks adjacent  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [51, 21, 18]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [48, 38, 47]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [43, 33, 39]]
+
+                        DownDepth:
+                        [[19, 16, 18], [16, 12, 15], [18, 15, 17]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-197.17, 64.05, -10.0), -118.41],
+    [(-199.55, 59.65, -10.0), -118.41],
+    [(-195.15, 57.27, -10.0), -118.41],
+    [(-190.76, 54.9, -10.0), -118.41],
+    [(-193.14, 50.5, -10.0), -118.41],
+    [(-195.52, 46.1, -10.0), -118.41],
+    [(-195.52, 46.1, -10.0), -118.41],
+    [(-195.52, 46.1, -10.0), -118.41],
+    [(-195.52, 46.1, -10.0), -118.41],
+    [(-195.52, 46.1, -10.0), -118.41],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 5
+                        DistanceTraveled = 24.999999999999993
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **TomatoStack**, described as: Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:5 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 6 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:TomatoStack,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-248, -147]  
+                        **Y Range**: [min_y, max_y] = [14, 115]
+
+                        # RGB Captions
+                        Front = house, gray roof, in the foreground; trees, green leaves, surrounding the house; red car parked near the house  
+                        Left = trees, tall and coniferous, in the background; grass, lush and green, in the foreground; pathway, made of stone, leading through the grass  
+                        Right = excavator, orange and large, in the foreground; tractor, yellow and parked, to the right of the excavator; buildings, old and gray, in the background  
+                        Down = grass, green and well-maintained, in the foreground; sidewalk, made of concrete, running through the grass; building corner, casting a shadow, in the top left  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [41, 19, 41]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [49, 35, 41]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 38, 54]]
+
+                        DownDepth:
+                        [[18, 15, 18], [15, 12, 16], [18, 16, 19]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-197.17, 64.05, -10.0), -118.41],
+    [(-199.55, 59.65, -10.0), -118.41],
+    [(-195.15, 57.27, -10.0), -118.41],
+    [(-190.76, 54.9, -10.0), -118.41],
+    [(-193.14, 50.5, -10.0), -118.41],
+    [(-195.52, 46.1, -10.0), -118.41],
+    [(-191.12, 43.72, -10.0), -118.41],
+    [(-191.12, 43.72, -10.0), -118.41],
+    [(-191.12, 43.72, -10.0), -118.41],
+    [(-191.12, 43.72, -10.0), -118.41],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 6
+                        DistanceTraveled = 29.999999999999986
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **TomatoStack**, described as: Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:6 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 7 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:TomatoStack,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-248, -147]  
+                        **Y Range**: [min_y, max_y] = [14, 115]
+
+                        # RGB Captions
+                        Front = house, gray roof, in the foreground; trees, green leaves, surrounding the house; house is in a residential area  
+                        Left = trees, tall and dense, with green foliage; grass, well-maintained, covering the ground; driveway, paved, leading to a building on the right  
+                        Right = excavator, parked, near the buildings; buildings, wooden structures, arranged in a village layout; trees, scattered, around the buildings  
+                        Down = roof, shingled, casting a shadow; grass, green, adjacent to the pavement; pavement, smooth, next to the grass  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [21, 36, 50]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [43, 32, 40]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [50, 39, 54]]
+
+                        DownDepth:
+                        [[18, 13, 19], [15, 12, 16], [18, 16, 19]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-197.17, 64.05, -10.0), -118.41],
+    [(-199.55, 59.65, -10.0), -118.41],
+    [(-195.15, 57.27, -10.0), -118.41],
+    [(-190.76, 54.9, -10.0), -118.41],
+    [(-193.14, 50.5, -10.0), -118.41],
+    [(-195.52, 46.1, -10.0), -118.41],
+    [(-191.12, 43.72, -10.0), -118.41],
+    [(-193.5, 39.32, -10.0), -118.41],
+    [(-193.5, 39.32, -10.0), -118.41],
+    [(-193.5, 39.32, -10.0), -118.41],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 7
+                        DistanceTraveled = 34.999999999999986
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **TomatoStack**, described as: Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:7 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 8 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:TomatoStack,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-248, -147]  
+                        **Y Range**: [min_y, max_y] = [14, 115]
+
+                        # RGB Captions
+                        Front = house, gray roof, wooden; house is in the foreground; trees surrounding the house  
+                        Left = trees, tall, green; trees are in the background; pathway leading through the trees  
+                        Right = excavator, orange, large; excavator is in the foreground; soldiers standing near the excavator; houses in the background  
+                        Down = building, gray roof, brick; building is in the foreground; lawn mower on the grass  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [21, 31, 40]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [55, 39, 41]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [39, 33, 49]]
+
+                        DownDepth:
+                        [[18, 15, 18], [16, 12, 15], [19, 16, 19]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-197.17, 64.05, -10.0), -118.41],
+    [(-199.55, 59.65, -10.0), -118.41],
+    [(-195.15, 57.27, -10.0), -118.41],
+    [(-190.76, 54.9, -10.0), -118.41],
+    [(-193.14, 50.5, -10.0), -118.41],
+    [(-195.52, 46.1, -10.0), -118.41],
+    [(-191.12, 43.72, -10.0), -118.41],
+    [(-193.5, 39.32, -10.0), -118.41],
+    [(-189.1, 36.94, -10.0), -118.41],
+    [(-189.1, 36.94, -10.0), -118.41],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 8
+                        DistanceTraveled = 39.99999999999998
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **TomatoStack**, described as: Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:8 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 9 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:TomatoStack,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-248, -147]  
+                        **Y Range**: [min_y, max_y] = [14, 115]
+
+                        # RGB Captions
+                        Front = house, gray roof, in the foreground; trees, green leaves, scattered around; house stands in the background  
+                        Left = trees, tall and coniferous, in the middle ground; grass, green, covering the ground; pathway, made of bricks, leading through the scene  
+                        Right = excavator, orange and black, on the grass; buildings, wooden with gray roofs, in the background; construction site, active with machinery  
+                        Down = roof, gray shingles, casting a shadow; driveway, paved, adjacent to the roof; grass, green, next to the driveway  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 33, 50]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [43, 33, 44]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [50, 38, 50]]
+
+                        DownDepth:
+                        [[18, 13, 19], [15, 12, 16], [18, 15, 19]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-197.17, 64.05, -10.0), -118.41],
+    [(-199.55, 59.65, -10.0), -118.41],
+    [(-195.15, 57.27, -10.0), -118.41],
+    [(-190.76, 54.9, -10.0), -118.41],
+    [(-193.14, 50.5, -10.0), -118.41],
+    [(-195.52, 46.1, -10.0), -118.41],
+    [(-191.12, 43.72, -10.0), -118.41],
+    [(-193.5, 39.32, -10.0), -118.41],
+    [(-189.1, 36.94, -10.0), -118.41],
+    [(-193.5, 39.32, -10.0), -118.41],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 9
+                        DistanceTraveled = 44.99999999999997
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **TomatoStack**, described as: Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:9 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 10 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:TomatoStack,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-248, -147]  
+                        **Y Range**: [min_y, max_y] = [14, 115]
+
+                        # RGB Captions
+                        Front = house, gray roof, wooden walls; house is in the foreground; trees in the background  
+                        Left = trees, green leaves, tall; trees are in the background; pathway in the foreground  
+                        Right = excavator, orange body, metal arm; excavator is in the foreground; car parked on the road  
+                        Down = shadow of a person, long and thin; shadow is on the grass; building with shingled roof  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [20, 39, 50]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [42, 35, 40]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [51, 37, 46]]
+
+                        DownDepth:
+                        [[16, 16, 19], [15, 12, 16], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-199.55, 59.65, -10.0), -118.41],
+    [(-195.15, 57.27, -10.0), -118.41],
+    [(-190.76, 54.9, -10.0), -118.41],
+    [(-193.14, 50.5, -10.0), -118.41],
+    [(-195.52, 46.1, -10.0), -118.41],
+    [(-191.12, 43.72, -10.0), -118.41],
+    [(-193.5, 39.32, -10.0), -118.41],
+    [(-189.1, 36.94, -10.0), -118.41],
+    [(-193.5, 39.32, -10.0), -118.41],
+    [(-189.1, 36.94, -10.0), -118.41],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 10
+                        DistanceTraveled = 49.999999999999964
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **TomatoStack**, described as: Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:10 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 11 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:TomatoStack,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-248, -147]  
+                        **Y Range**: [min_y, max_y] = [14, 115]
+
+                        # RGB Captions
+                        Front = black bench, stone pavement; bench in the foreground; trees and buildings in the background  
+                        Left = concrete pathway, wooden deck; pathway in the foreground; evergreen trees on the left  
+                        Right = tank, grassy field; tank in the foreground; houses and trees in the background  
+                        Down = tree, shadow on the ground; tree on the right; wooden roof in the foreground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [51, 39, 47]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [43, 37, 53]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 36, 39]]
+
+                        DownDepth:
+                        [[8, 13, 18], [15, 12, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-195.15, 57.27, -10.0), -118.41],
+    [(-190.76, 54.9, -10.0), -118.41],
+    [(-193.14, 50.5, -10.0), -118.41],
+    [(-195.52, 46.1, -10.0), -118.41],
+    [(-191.12, 43.72, -10.0), -118.41],
+    [(-193.5, 39.32, -10.0), -118.41],
+    [(-189.1, 36.94, -10.0), -118.41],
+    [(-193.5, 39.32, -10.0), -118.41],
+    [(-189.1, 36.94, -10.0), -118.41],
+    [(-191.48, 32.55, -10.0), -118.41],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 11
+                        DistanceTraveled = 54.99999999999997
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **TomatoStack**, described as: Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:11 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 12 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:TomatoStack,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-248, -147]  
+                        **Y Range**: [min_y, max_y] = [14, 115]
+
+                        # RGB Captions
+                        Front = house, gray roof; umbrella, blue shade; umbrella is in the foreground; house stands in the background  
+                        Left = trees, tall and green; trees are scattered throughout the scene; pathway runs through the center  
+                        Right = car, black body; car is in the middle of the street; houses with gray roofs surround the street  
+                        Down = shadow, long and dark; shadow stretches across the pavement; hedge lines the edge of the pavement  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [42, 33, 42]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [49, 35, 42]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [42, 36, 53]]
+
+                        DownDepth:
+                        [[8, 15, 18], [7, 12, 16], [18, 16, 19]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-190.76, 54.9, -10.0), -118.41],
+    [(-193.14, 50.5, -10.0), -118.41],
+    [(-195.52, 46.1, -10.0), -118.41],
+    [(-191.12, 43.72, -10.0), -118.41],
+    [(-193.5, 39.32, -10.0), -118.41],
+    [(-189.1, 36.94, -10.0), -118.41],
+    [(-193.5, 39.32, -10.0), -118.41],
+    [(-189.1, 36.94, -10.0), -118.41],
+    [(-191.48, 32.55, -10.0), -118.41],
+    [(-193.86, 28.15, -10.0), -118.41],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 12
+                        DistanceTraveled = 59.99999999999998
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **TomatoStack**, described as: Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:12 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 13 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:TomatoStack,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-248, -147]  
+                        **Y Range**: [min_y, max_y] = [14, 115]
+
+                        # RGB Captions
+                        Front = blue umbrella, open; umbrella is in the foreground; street with houses and trees  
+                        Left = black signboard, rectangular; signboard is in the foreground; red car parked near a building; trees in the background  
+                        Right = two cars, parked on the street; houses with wooden roofs; green grass and bushes; sunny weather  
+                        Down = brick patio, square; bush next to the patio; part of a house visible in the top left corner  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [41, 33, 40]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 34, 41]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [41, 37, 54]]
+
+                        DownDepth:
+                        [[16, 15, 18], [7, 12, 16], [6, 16, 19]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-193.14, 50.5, -10.0), -118.41],
+    [(-195.52, 46.1, -10.0), -118.41],
+    [(-191.12, 43.72, -10.0), -118.41],
+    [(-193.5, 39.32, -10.0), -118.41],
+    [(-189.1, 36.94, -10.0), -118.41],
+    [(-193.5, 39.32, -10.0), -118.41],
+    [(-189.1, 36.94, -10.0), -118.41],
+    [(-191.48, 32.55, -10.0), -118.41],
+    [(-193.86, 28.15, -10.0), -118.41],
+    [(-196.24, 23.75, -10.0), -118.41],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 13
+                        DistanceTraveled = 64.99999999999999
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **TomatoStack**, described as: Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:13 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 14 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:TomatoStack,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-248, -147]  
+                        **Y Range**: [min_y, max_y] = [14, 115]
+
+                        # RGB Captions
+                        Front = street, paved; umbrella stand, blue and yellow; streetlight, tall; trees, green; houses, brown; umbrella stand near the streetlight  
+                        Left = field, grassy; road, long; car, red; truck, brown; trees, evergreen; buildings, small; road cuts through the field  
+                        Right = street, paved; cars, black; houses, brown; trees, green; bushes, dense; street runs between houses  
+                        Down = house, brown roof; lawn, green; umbrella, purple; person, standing; bush, large; umbrella on the lawn near the house  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [49, 38, 44]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [41, 35, 49]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [40, 36, 41]]
+
+                        DownDepth:
+                        [[18, 16, 19], [13, 12, 15], [13, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-195.52, 46.1, -10.0), -118.41],
+    [(-191.12, 43.72, -10.0), -118.41],
+    [(-193.5, 39.32, -10.0), -118.41],
+    [(-189.1, 36.94, -10.0), -118.41],
+    [(-193.5, 39.32, -10.0), -118.41],
+    [(-189.1, 36.94, -10.0), -118.41],
+    [(-191.48, 32.55, -10.0), -118.41],
+    [(-193.86, 28.15, -10.0), -118.41],
+    [(-196.24, 23.75, -10.0), -118.41],
+    [(-198.62, 19.35, -10.0), -118.41],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 14
+                        DistanceTraveled = 70.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **TomatoStack**, described as: Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:14 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 15 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:TomatoStack,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-248, -147]  
+                        **Y Range**: [min_y, max_y] = [14, 115]
+
+                        # RGB Captions
+                        Front = street, asphalt; houses on both sides; trees lining the street; power lines overhead; car parked on the side  
+                        Left = house with gray roof; driveway with two cars; barn in the background; trees surrounding the area; person standing near the barn  
+                        Right = street with moving cars; houses with wooden exteriors; trees on both sides of the street; clear sky above  
+                        Down = blue umbrella, open; red chair; brick patio; green bush; person walking nearby  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [51, 38, 43]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [43, 36, 51]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [42, 34, 41]]
+
+                        DownDepth:
+                        [[19, 16, 19], [15, 12, 15], [15, 15, 17]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-191.12, 43.72, -10.0), -118.41],
+    [(-193.5, 39.32, -10.0), -118.41],
+    [(-189.1, 36.94, -10.0), -118.41],
+    [(-193.5, 39.32, -10.0), -118.41],
+    [(-189.1, 36.94, -10.0), -118.41],
+    [(-191.48, 32.55, -10.0), -118.41],
+    [(-193.86, 28.15, -10.0), -118.41],
+    [(-196.24, 23.75, -10.0), -118.41],
+    [(-198.62, 19.35, -10.0), -118.41],
+    [(-200.99, 14.96, -10.0), -118.41],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 15
+                        DistanceTraveled = 75.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **TomatoStack**, described as: Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:15 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 16 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:TomatoStack,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-248, -147]  
+                        **Y Range**: [min_y, max_y] = [14, 115]
+
+                        # RGB Captions
+                        Front = street, residential area; houses on both sides; trees lining the street; power lines overhead; umbrella on the sidewalk  
+                        Left = house with solar panels; construction materials on the ground; workers near the house; trees in the background; garage to the right  
+                        Right = street with parked cars; houses with pitched roofs; trees and bushes along the road; clear sky above  
+                        Down = blue umbrella, open; person walking nearby; brick patio; green grass; building in the background  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 35, 38]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [42, 35, 47]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [40, 35, 42]]
+
+                        DownDepth:
+                        [[18, 15, 18], [14, 12, 15], [16, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-193.5, 39.32, -10.0), -118.41],
+    [(-189.1, 36.94, -10.0), -118.41],
+    [(-193.5, 39.32, -10.0), -118.41],
+    [(-189.1, 36.94, -10.0), -118.41],
+    [(-191.48, 32.55, -10.0), -118.41],
+    [(-193.86, 28.15, -10.0), -118.41],
+    [(-196.24, 23.75, -10.0), -118.41],
+    [(-198.62, 19.35, -10.0), -118.41],
+    [(-200.99, 14.96, -10.0), -118.41],
+    [(-200.99, 14.96, -10.0), -133.41],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 16
+                        DistanceTraveled = 75.0
+                        AvgHeadingChange = 0.94
+
+                        # Reminder  
+                        - The target is **TomatoStack**, described as: Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:16 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 17 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:TomatoStack,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-248, -147]  
+                        **Y Range**: [min_y, max_y] = [14, 115]
+
+                        # RGB Captions
+                        Front = red car, parked; tree, large, green; tree is on the left; house, brown, roofed; house is in the background  
+                        Left = yellow truck, parked; tree, tall, evergreen; tree is in the center; house, gray, roofed; house is on the right  
+                        Right = car, black, parked; tree, medium-sized, green; tree is on the left; house, brown, roofed; house is in the background  
+                        Down = umbrella, purple, open; bench, wooden; umbrella is above the bench; grass, green; grass is around the bench  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 35, 39]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [42, 36, 47]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [39, 35, 44]]
+
+                        DownDepth:
+                        [[18, 15, 18], [11, 11, 15], [9, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-189.1, 36.94, -10.0), -118.41],
+    [(-193.5, 39.32, -10.0), -118.41],
+    [(-189.1, 36.94, -10.0), -118.41],
+    [(-191.48, 32.55, -10.0), -118.41],
+    [(-193.86, 28.15, -10.0), -118.41],
+    [(-196.24, 23.75, -10.0), -118.41],
+    [(-198.62, 19.35, -10.0), -118.41],
+    [(-200.99, 14.96, -10.0), -118.41],
+    [(-200.99, 14.96, -10.0), -133.41],
+    [(-204.63, 18.39, -10.0), -133.41],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 17
+                        DistanceTraveled = 80.0
+                        AvgHeadingChange = 0.88
+
+                        # Reminder  
+                        - The target is **TomatoStack**, described as: Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:17 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 18 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:TomatoStack,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-248, -147]  
+                        **Y Range**: [min_y, max_y] = [14, 115]
+
+                        # RGB Captions
+                        Front = telephone pole, tall, wooden; power lines, thin, black; pole is in the foreground; houses with green roofs; trees on both sides of the street  
+                        Left = yellow truck, old model, parked; red car, modern, parked; house with gray roof; driveway with bricks; trees surrounding the area  
+                        Right = car, white, moving; road, wide, paved; telephone poles, tall, wooden; houses with dark roofs; trees lining the street  
+                        Down = blue umbrella, open, large; yellow umbrella, open, large; umbrellas are on a brick patio; building with shingled roof; shadows indicate sunny day  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 35, 37]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 36, 47]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 35, 45]]
+
+                        DownDepth:
+                        [[18, 15, 18], [15, 11, 15], [12, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-193.5, 39.32, -10.0), -118.41],
+    [(-189.1, 36.94, -10.0), -118.41],
+    [(-191.48, 32.55, -10.0), -118.41],
+    [(-193.86, 28.15, -10.0), -118.41],
+    [(-196.24, 23.75, -10.0), -118.41],
+    [(-198.62, 19.35, -10.0), -118.41],
+    [(-200.99, 14.96, -10.0), -118.41],
+    [(-200.99, 14.96, -10.0), -133.41],
+    [(-204.63, 18.39, -10.0), -133.41],
+    [(-208.06, 14.76, -10.0), -133.41],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 18
+                        DistanceTraveled = 85.0
+                        AvgHeadingChange = 0.83
+
+                        # Reminder  
+                        - The target is **TomatoStack**, described as: Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:18 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 19 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:TomatoStack,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-248, -147]  
+                        **Y Range**: [min_y, max_y] = [14, 115]
+
+                        # RGB Captions
+                        Front = red car, parked; driveway on the left; house with brown roof; telephone pole in the foreground; street running horizontally  
+                        Left = yellow truck, parked; driveway on the right; house with brown roof; trees in the background; open field to the left  
+                        Right = black car, parked; driveway on the right; house with brown roof; street running horizontally; telephone pole in the foreground  
+                        Down = blue and yellow umbrella, open; red and blue tablecloth; outdoor seating area; building with sign; tree on the left  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 35, 43]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 35, 46]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [38, 34, 46]]
+
+                        DownDepth:
+                        [[18, 15, 18], [15, 11, 15], [15, 15, 17]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-189.1, 36.94, -10.0), -118.41],
+    [(-191.48, 32.55, -10.0), -118.41],
+    [(-193.86, 28.15, -10.0), -118.41],
+    [(-196.24, 23.75, -10.0), -118.41],
+    [(-198.62, 19.35, -10.0), -118.41],
+    [(-200.99, 14.96, -10.0), -118.41],
+    [(-200.99, 14.96, -10.0), -133.41],
+    [(-204.63, 18.39, -10.0), -133.41],
+    [(-208.06, 14.76, -10.0), -133.41],
+    [(-208.06, 14.76, -10.0), -148.41],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 19
+                        DistanceTraveled = 85.0
+                        AvgHeadingChange = 1.58
+
+                        # Reminder  
+                        - The target is **TomatoStack**, described as: Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:19 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 20 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:TomatoStack,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-248, -147]  
+                        **Y Range**: [min_y, max_y] = [14, 115]
+
+                        # RGB Captions
+                        Front = yellow truck, parked; red car, parked; telephone pole, tall; buildings with wooden roofs; trees in the background; scene is bright and sunny  
+                        Left = road, wide; trees, dense; grass, green; scene is bright and sunny  
+                        Right = buildings with wooden roofs; trees, scattered; road, empty; scene is bright and sunny  
+                        Down = blue umbrella, open; yellow umbrella, open; chairs, arranged; brick patio; building with wooden roof; scene is bright and sunny  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [42, 35, 40]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [17, 35, 44]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 33, 43]]
+
+                        DownDepth:
+                        [[18, 15, 18], [13, 11, 15], [15, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-191.48, 32.55, -10.0), -118.41],
+    [(-193.86, 28.15, -10.0), -118.41],
+    [(-196.24, 23.75, -10.0), -118.41],
+    [(-198.62, 19.35, -10.0), -118.41],
+    [(-200.99, 14.96, -10.0), -118.41],
+    [(-200.99, 14.96, -10.0), -133.41],
+    [(-204.63, 18.39, -10.0), -133.41],
+    [(-208.06, 14.76, -10.0), -133.41],
+    [(-208.06, 14.76, -10.0), -148.41],
+    [(-208.06, 14.76, -10.0), -163.41],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 20
+                        DistanceTraveled = 85.0
+                        AvgHeadingChange = 2.25
+
+                        # Reminder  
+                        - The target is **TomatoStack**, described as: Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:20 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 21 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:TomatoStack,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-248, -147]  
+                        **Y Range**: [min_y, max_y] = [14, 115]
+
+                        # RGB Captions
+                        Front = yellow pickup truck, vintage style; red car parked near garage; black car on the road; garage in the background; trees surrounding the area  
+                        Left = pine trees, tall and green; trees form a dense forest; pathway leading through the forest; barrels at the end of the path  
+                        Right = houses with dark roofs; street with a car parked; telephone pole on the left; trees behind the houses; bright sky above  
+                        Down = house with gray roof; brick patio with furniture; blue umbrella open; tree casting shadow; lawn with grass  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [38, 35, 40]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [42, 35, 41]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [43, 34, 45]]
+
+                        DownDepth:
+                        [[18, 15, 18], [8, 11, 15], [8, 12, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-193.86, 28.15, -10.0), -118.41],
+    [(-196.24, 23.75, -10.0), -118.41],
+    [(-198.62, 19.35, -10.0), -118.41],
+    [(-200.99, 14.96, -10.0), -118.41],
+    [(-200.99, 14.96, -10.0), -133.41],
+    [(-204.63, 18.39, -10.0), -133.41],
+    [(-208.06, 14.76, -10.0), -133.41],
+    [(-208.06, 14.76, -10.0), -148.41],
+    [(-208.06, 14.76, -10.0), -163.41],
+    [(-209.49, 19.55, -10.0), -163.41],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 21
+                        DistanceTraveled = 90.0
+                        AvgHeadingChange = 2.14
+
+                        # Reminder  
+                        - The target is **TomatoStack**, described as: Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:21 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 22 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:TomatoStack,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-248, -147]  
+                        **Y Range**: [min_y, max_y] = [14, 115]
+
+                        # RGB Captions
+                        Front = red car, parked; green dumpster, small; garage building, open doors; driveway in the foreground; trees in the background  
+                        Left = trees, tall, green; house, gray roof; paved path, straight; grassy area, well-maintained; trees surround the house  
+                        Right = houses, wooden, brown; street, empty; telephone pole, tall; houses in a row; trees behind the houses  
+                        Down = yellow truck, old model; cardboard boxes, stacked; two people, standing; tree, large; truck and people on the pavement  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 35, 39]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 35, 46]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [41, 33, 45]]
+
+                        DownDepth:
+                        [[18, 15, 18], [15, 11, 15], [15, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-196.24, 23.75, -10.0), -118.41],
+    [(-198.62, 19.35, -10.0), -118.41],
+    [(-200.99, 14.96, -10.0), -118.41],
+    [(-200.99, 14.96, -10.0), -133.41],
+    [(-204.63, 18.39, -10.0), -133.41],
+    [(-208.06, 14.76, -10.0), -133.41],
+    [(-208.06, 14.76, -10.0), -148.41],
+    [(-208.06, 14.76, -10.0), -163.41],
+    [(-209.49, 19.55, -10.0), -163.41],
+    [(-214.28, 18.12, -10.0), -163.41],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 22
+                        DistanceTraveled = 95.0
+                        AvgHeadingChange = 2.05
+
+                        # Reminder  
+                        - The target is **TomatoStack**, described as: Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:22 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 23 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:TomatoStack,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-248, -147]  
+                        **Y Range**: [min_y, max_y] = [14, 115]
+
+                        # RGB Captions
+                        Front = red car, parked; driveway in front of house; house with wooden roof; trees in the background  
+                        Left = three barrels, small; paved path; green grass on both sides; tall trees in the background  
+                        Right = telephone pole, tall; street in the foreground; houses with dark roofs; trees and bushes along the sidewalk  
+                        Down = yellow truck, parked; cardboard boxes on the ground; tree near the house; dumpster in the background  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 35, 40]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 35, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [37, 33, 45]]
+
+                        DownDepth:
+                        [[18, 15, 18], [15, 11, 15], [17, 15, 17]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-198.62, 19.35, -10.0), -118.41],
+    [(-200.99, 14.96, -10.0), -118.41],
+    [(-200.99, 14.96, -10.0), -133.41],
+    [(-204.63, 18.39, -10.0), -133.41],
+    [(-208.06, 14.76, -10.0), -133.41],
+    [(-208.06, 14.76, -10.0), -148.41],
+    [(-208.06, 14.76, -10.0), -163.41],
+    [(-209.49, 19.55, -10.0), -163.41],
+    [(-214.28, 18.12, -10.0), -163.41],
+    [(-219.07, 16.7, -10.0), -163.41],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 23
+                        DistanceTraveled = 100.0
+                        AvgHeadingChange = 1.96
+
+                        # Reminder  
+                        - The target is **TomatoStack**, described as: Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:23 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 24 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:TomatoStack,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-248, -147]  
+                        **Y Range**: [min_y, max_y] = [14, 115]
+
+                        # RGB Captions
+                        Front = red car, parked; garage with open door; driveway in front of the garage; house in the background  
+                        Left = three barrels, small; patio in the foreground; trees surrounding the patio; path leading into the forest  
+                        Right = street light, tall; road in the foreground; houses on both sides of the street; clear sky above  
+                        Down = yellow truck, parked; three people near the truck; picnic table with umbrella; shadow of a tree on the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 35, 43]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [42, 35, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [41, 34, 44]]
+
+                        DownDepth:
+                        [[18, 15, 18], [15, 11, 15], [18, 14, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-200.99, 14.96, -10.0), -118.41],
+    [(-200.99, 14.96, -10.0), -133.41],
+    [(-204.63, 18.39, -10.0), -133.41],
+    [(-208.06, 14.76, -10.0), -133.41],
+    [(-208.06, 14.76, -10.0), -148.41],
+    [(-208.06, 14.76, -10.0), -163.41],
+    [(-209.49, 19.55, -10.0), -163.41],
+    [(-214.28, 18.12, -10.0), -163.41],
+    [(-219.07, 16.7, -10.0), -163.41],
+    [(-220.5, 21.49, -10.0), -163.41],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 24
+                        DistanceTraveled = 105.0
+                        AvgHeadingChange = 1.88
+
+                        # Reminder  
+                        - The target is **TomatoStack**, described as: Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:24 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 25 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:TomatoStack,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-248, -147]  
+                        **Y Range**: [min_y, max_y] = [14, 115]
+
+                        # RGB Captions
+                        Front = red car, parked; garage with lattice roof; driveway in the foreground; trees and house in the background  
+                        Left = paved patio; two barrels; dense trees in the background; green hedge along the path  
+                        Right = street with houses; parked car; telephone pole; sunny sky  
+                        Down = yellow truck; three people; picnic setup on the ground; tree shadow on the pavement  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 35, 45]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [43, 35, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 34, 45]]
+
+                        DownDepth:
+                        [[18, 15, 17], [15, 11, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-200.99, 14.96, -10.0), -133.41],
+    [(-204.63, 18.39, -10.0), -133.41],
+    [(-208.06, 14.76, -10.0), -133.41],
+    [(-208.06, 14.76, -10.0), -148.41],
+    [(-208.06, 14.76, -10.0), -163.41],
+    [(-209.49, 19.55, -10.0), -163.41],
+    [(-214.28, 18.12, -10.0), -163.41],
+    [(-219.07, 16.7, -10.0), -163.41],
+    [(-220.5, 21.49, -10.0), -163.41],
+    [(-225.29, 20.06, -10.0), -163.41],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 25
+                        DistanceTraveled = 110.0
+                        AvgHeadingChange = 1.8
+
+                        # Reminder  
+                        - The target is **TomatoStack**, described as: Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:25 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 26 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:TomatoStack,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-248, -147]  
+                        **Y Range**: [min_y, max_y] = [14, 115]
+
+                        # RGB Captions
+                        Front = red car, parked; driveway in the foreground; house with mossy roof, white lattice fence; forested area in the background  
+                        Left = pine trees, dense cluster; gravel path in the foreground; smoke rising from the ground; barrels on the left  
+                        Right = house with dark roof, shadowed; street in the foreground; telephone pole on the right; sunny sky above  
+                        Down = yellow truck, parked; parking lot with grid pattern; green bush casting shadow; metal container near the bush  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 34, 45]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [43, 34, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 33, 45]]
+
+                        DownDepth:
+                        [[18, 15, 18], [15, 11, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-204.63, 18.39, -10.0), -133.41],
+    [(-208.06, 14.76, -10.0), -133.41],
+    [(-208.06, 14.76, -10.0), -148.41],
+    [(-208.06, 14.76, -10.0), -163.41],
+    [(-209.49, 19.55, -10.0), -163.41],
+    [(-214.28, 18.12, -10.0), -163.41],
+    [(-219.07, 16.7, -10.0), -163.41],
+    [(-220.5, 21.49, -10.0), -163.41],
+    [(-225.29, 20.06, -10.0), -163.41],
+    [(-230.09, 18.63, -10.0), -163.41],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 26
+                        DistanceTraveled = 115.0
+                        AvgHeadingChange = 1.73
+
+                        # Reminder  
+                        - The target is **TomatoStack**, described as: Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:26 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 27 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:TomatoStack,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-248, -147]  
+                        **Y Range**: [min_y, max_y] = [14, 115]
+
+                        # RGB Captions
+                        Front = house, brown roof, white fence; house is in the foreground; trees in the background  
+                        Left = trees, green leaves, tall; trees are in the background; pathway in the foreground  
+                        Right = car, parked on street; car is in the foreground; houses in the background  
+                        Down = car, red and blue; car is in the foreground; tree shadow on the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [25, 34, 45]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 35, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 33, 45]]
+
+                        DownDepth:
+                        [[18, 15, 18], [15, 11, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-208.06, 14.76, -10.0), -133.41],
+    [(-208.06, 14.76, -10.0), -148.41],
+    [(-208.06, 14.76, -10.0), -163.41],
+    [(-209.49, 19.55, -10.0), -163.41],
+    [(-214.28, 18.12, -10.0), -163.41],
+    [(-219.07, 16.7, -10.0), -163.41],
+    [(-220.5, 21.49, -10.0), -163.41],
+    [(-225.29, 20.06, -10.0), -163.41],
+    [(-230.09, 18.63, -10.0), -163.41],
+    [(-234.88, 17.21, -10.0), -163.41],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 27
+                        DistanceTraveled = 120.0
+                        AvgHeadingChange = 1.67
+
+                        # Reminder  
+                        - The target is **TomatoStack**, described as: Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:27 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 28 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:TomatoStack,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-248, -147]  
+                        **Y Range**: [min_y, max_y] = [14, 115]
+
+                        # RGB Captions
+                        Front = house, gray roof, wooden; tree, large, green leaves; telephone pole, tall, brown; house in the foreground; tree to the left of the house; telephone pole near the road  
+                        Left = tree, tall, green leaves; hedge, long, green; house, gray roof, wooden; tree in the background; hedge in front of the tree; house to the right of the hedge  
+                        Right = car, black, parked; house, gray roof, wooden; tree, medium-sized, green leaves; car on the road; house in the background; tree near the house  
+                        Down = car, red, parked; driveway, paved, light gray; bush, round, green; car in the center; driveway surrounding the car; bush near the driveway  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [31, 33, 45]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 34, 41]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 33, 45]]
+
+                        DownDepth:
+                        [[16, 15, 18], [15, 11, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-208.06, 14.76, -10.0), -148.41],
+    [(-208.06, 14.76, -10.0), -163.41],
+    [(-209.49, 19.55, -10.0), -163.41],
+    [(-214.28, 18.12, -10.0), -163.41],
+    [(-219.07, 16.7, -10.0), -163.41],
+    [(-220.5, 21.49, -10.0), -163.41],
+    [(-225.29, 20.06, -10.0), -163.41],
+    [(-230.09, 18.63, -10.0), -163.41],
+    [(-234.88, 17.21, -10.0), -163.41],
+    [(-239.67, 15.78, -10.0), -163.41],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 28
+                        DistanceTraveled = 125.0
+                        AvgHeadingChange = 1.61
+
+                        # Reminder  
+                        - The target is **TomatoStack**, described as: Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:28 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 29 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:TomatoStack,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-248, -147]  
+                        **Y Range**: [min_y, max_y] = [14, 115]
+
+                        # RGB Captions
+                        Front = wooden house, gray roof; house is in the foreground; trees in the background  
+                        Left = pine tree, tall; tree is in the center; green hedge on the left  
+                        Right = car, black; car is parked on the street; houses in the background  
+                        Down = car, red and blue; car is parked on the driveway; bush on the right  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 33, 43]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 34, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 34, 42]]
+
+                        DownDepth:
+                        [[16, 15, 18], [15, 11, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-208.06, 14.76, -10.0), -163.41],
+    [(-209.49, 19.55, -10.0), -163.41],
+    [(-214.28, 18.12, -10.0), -163.41],
+    [(-219.07, 16.7, -10.0), -163.41],
+    [(-220.5, 21.49, -10.0), -163.41],
+    [(-225.29, 20.06, -10.0), -163.41],
+    [(-230.09, 18.63, -10.0), -163.41],
+    [(-234.88, 17.21, -10.0), -163.41],
+    [(-239.67, 15.78, -10.0), -163.41],
+    [(-239.67, 15.78, -10.0), -178.41],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 29
+                        DistanceTraveled = 125.0
+                        AvgHeadingChange = 2.07
+
+                        # Reminder  
+                        - The target is **TomatoStack**, described as: Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:29 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 30 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:TomatoStack,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-248, -147]  
+                        **Y Range**: [min_y, max_y] = [14, 115]
+
+                        # RGB Captions
+                        Front = house, gray roof, weathered; house is in the foreground; trees surrounding the house  
+                        Left = trees, tall, green; trees are in the background; hedge dividing the area  
+                        Right = street, asphalt, clear; car parked on the side; houses along the street; tree branches hanging over  
+                        Down = car, red, parked; car is in the driveway; driveway made of cobblestone; house with gray roof  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [41, 33, 41]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 35, 41]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [41, 34, 43]]
+
+                        DownDepth:
+                        [[15, 15, 18], [15, 11, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-209.49, 19.55, -10.0), -163.41],
+    [(-214.28, 18.12, -10.0), -163.41],
+    [(-219.07, 16.7, -10.0), -163.41],
+    [(-220.5, 21.49, -10.0), -163.41],
+    [(-225.29, 20.06, -10.0), -163.41],
+    [(-230.09, 18.63, -10.0), -163.41],
+    [(-234.88, 17.21, -10.0), -163.41],
+    [(-239.67, 15.78, -10.0), -163.41],
+    [(-239.67, 15.78, -10.0), -178.41],
+    [(-244.67, 15.64, -10.0), -178.41],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 30
+                        DistanceTraveled = 130.0
+                        AvgHeadingChange = 2.0
+
+                        # Reminder  
+                        - The target is **TomatoStack**, described as: Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:30 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 31 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:TomatoStack,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-248, -147]  
+                        **Y Range**: [min_y, max_y] = [14, 115]
+
+                        # RGB Captions
+                        Front = house, gray roof, mossy; house is in the foreground; trees surrounding the house  
+                        Left = trees, tall, green; trees are in the background; grassy field in the foreground  
+                        Right = street, asphalt; houses on both sides; car parked on the street; telephone pole on the left  
+                        Down = car, red and blue; car is parked on a paved area; grassy area to the side  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [39, 29, 43]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 34, 39]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [42, 34, 44]]
+
+                        DownDepth:
+                        [[10, 15, 18], [15, 11, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-214.28, 18.12, -10.0), -163.41],
+    [(-219.07, 16.7, -10.0), -163.41],
+    [(-220.5, 21.49, -10.0), -163.41],
+    [(-225.29, 20.06, -10.0), -163.41],
+    [(-230.09, 18.63, -10.0), -163.41],
+    [(-234.88, 17.21, -10.0), -163.41],
+    [(-239.67, 15.78, -10.0), -163.41],
+    [(-239.67, 15.78, -10.0), -178.41],
+    [(-244.67, 15.64, -10.0), -178.41],
+    [(-244.81, 20.64, -10.0), -178.41],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 31
+                        DistanceTraveled = 135.0
+                        AvgHeadingChange = 1.94
+
+                        # Reminder  
+                        - The target is **TomatoStack**, described as: Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:31 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 32 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:TomatoStack,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-248, -147]  
+                        **Y Range**: [min_y, max_y] = [14, 115]
+
+                        # RGB Captions
+                        Front = house, gray roof, wooden; roof in the foreground; trees surrounding the house  
+                        Left = trees, tall, green; trees are in the background; grassy area in the foreground  
+                        Right = street, asphalt; street is in the foreground; houses on both sides of the street; trees behind the houses  
+                        Down = car, red, parked; car is in the foreground; driveway under the car; house roof in the background  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 34, 44]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 34, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [42, 34, 39]]
+
+                        DownDepth:
+                        [[15, 9, 18], [15, 11, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-219.07, 16.7, -10.0), -163.41],
+    [(-220.5, 21.49, -10.0), -163.41],
+    [(-225.29, 20.06, -10.0), -163.41],
+    [(-230.09, 18.63, -10.0), -163.41],
+    [(-234.88, 17.21, -10.0), -163.41],
+    [(-239.67, 15.78, -10.0), -163.41],
+    [(-239.67, 15.78, -10.0), -178.41],
+    [(-244.67, 15.64, -10.0), -178.41],
+    [(-244.81, 20.64, -10.0), -178.41],
+    [(-244.81, 20.64, -10.0), 166.59],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 32
+                        DistanceTraveled = 135.0
+                        AvgHeadingChange = 2.34
+
+                        # Reminder  
+                        - The target is **TomatoStack**, described as: Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:32 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 33 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:TomatoStack,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-248, -147]  
+                        **Y Range**: [min_y, max_y] = [14, 115]
+
+                        # RGB Captions
+                        Front = roof, gray shingles; roof is in the foreground; trees in the background  
+                        Left = trees, tall and green; trees are in the background; driveway in the foreground  
+                        Right = street, paved; street is in the foreground; houses on both sides; trees in the background  
+                        Down = car, red with blue top; car is parked on the driveway; driveway is paved  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 34, 26]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [40, 34, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [38, 34, 39]]
+
+                        DownDepth:
+                        [[18, 11, 16], [15, 11, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-220.5, 21.49, -10.0), -163.41],
+    [(-225.29, 20.06, -10.0), -163.41],
+    [(-230.09, 18.63, -10.0), -163.41],
+    [(-234.88, 17.21, -10.0), -163.41],
+    [(-239.67, 15.78, -10.0), -163.41],
+    [(-239.67, 15.78, -10.0), -178.41],
+    [(-244.67, 15.64, -10.0), -178.41],
+    [(-244.81, 20.64, -10.0), -178.41],
+    [(-244.81, 20.64, -10.0), 166.59],
+    [(-244.81, 20.64, -10.0), 151.59],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 33
+                        DistanceTraveled = 135.0
+                        AvgHeadingChange = 2.73
+
+                        # Reminder  
+                        - The target is **TomatoStack**, described as: Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:33 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 34 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:TomatoStack,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-248, -147]  
+                        **Y Range**: [min_y, max_y] = [14, 115]
+
+                        # RGB Captions
+                        Front = green trees, dense foliage; trees are in the background; gray roof in the foreground  
+                        Left = black building, small size; building is on the left; yellow truck parked; green trees in the background  
+                        Right = houses with gray roofs; houses are in the background; green trees on the left; road on the right  
+                        Down = red car, parked; car is in the center; concrete driveway; grass on the sides  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 34, 19]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [41, 34, 37]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [32, 34, 45]]
+
+                        DownDepth:
+                        [[18, 12, 15], [15, 11, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-225.29, 20.06, -10.0), -163.41],
+    [(-230.09, 18.63, -10.0), -163.41],
+    [(-234.88, 17.21, -10.0), -163.41],
+    [(-239.67, 15.78, -10.0), -163.41],
+    [(-239.67, 15.78, -10.0), -178.41],
+    [(-244.67, 15.64, -10.0), -178.41],
+    [(-244.81, 20.64, -10.0), -178.41],
+    [(-244.81, 20.64, -10.0), 166.59],
+    [(-244.81, 20.64, -10.0), 151.59],
+    [(-244.81, 20.64, -10.0), 136.59],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 34
+                        DistanceTraveled = 135.0
+                        AvgHeadingChange = 3.09
+
+                        # Reminder  
+                        - The target is **TomatoStack**, described as: Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:34 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 35 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:TomatoStack,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-248, -147]  
+                        **Y Range**: [min_y, max_y] = [14, 115]
+
+                        # RGB Captions
+                        Front = trees, green leaves; grassy field; trees in the background  
+                        Left = brick building; paved driveway; barrels near the building; trees in the background  
+                        Right = houses with shingled roofs; road; trees lining the road; houses in the background  
+                        Down = red car, parked; driveway; house with shingled roof; tree near the house  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 35, 38]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 35, 46]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [35, 34, 42]]
+
+                        DownDepth:
+                        [[18, 15, 12], [15, 11, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-230.09, 18.63, -10.0), -163.41],
+    [(-234.88, 17.21, -10.0), -163.41],
+    [(-239.67, 15.78, -10.0), -163.41],
+    [(-239.67, 15.78, -10.0), -178.41],
+    [(-244.67, 15.64, -10.0), -178.41],
+    [(-244.81, 20.64, -10.0), -178.41],
+    [(-244.81, 20.64, -10.0), 166.59],
+    [(-244.81, 20.64, -10.0), 151.59],
+    [(-244.81, 20.64, -10.0), 136.59],
+    [(-241.37, 24.27, -10.0), 136.59],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 35
+                        DistanceTraveled = 140.0
+                        AvgHeadingChange = 3.0
+
+                        # Reminder  
+                        - The target is **TomatoStack**, described as: Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:35 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 36 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:TomatoStack,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-248, -147]  
+                        **Y Range**: [min_y, max_y] = [14, 115]
+
+                        # RGB Captions
+                        Front = green trees, dense foliage; grassy field; hedge in the foreground; trees in the background  
+                        Left = small building, dark exterior; paved path; trees on both sides; bench near the building  
+                        Right = house roofs, shingled texture; trees around; street in the background; telephone poles along the street  
+                        Down = paved path, stone tiles; grass on the side; shadow of a person; red object near the person  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 35, 40]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [38, 35, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [22, 33, 44]]
+
+                        DownDepth:
+                        [[18, 15, 15], [15, 11, 12], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-234.88, 17.21, -10.0), -163.41],
+    [(-239.67, 15.78, -10.0), -163.41],
+    [(-239.67, 15.78, -10.0), -178.41],
+    [(-244.67, 15.64, -10.0), -178.41],
+    [(-244.81, 20.64, -10.0), -178.41],
+    [(-244.81, 20.64, -10.0), 166.59],
+    [(-244.81, 20.64, -10.0), 151.59],
+    [(-244.81, 20.64, -10.0), 136.59],
+    [(-241.37, 24.27, -10.0), 136.59],
+    [(-245.0, 27.71, -10.0), 136.59],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 36
+                        DistanceTraveled = 145.0
+                        AvgHeadingChange = 2.92
+
+                        # Reminder  
+                        - The target is **TomatoStack**, described as: Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:36 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 37 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:TomatoStack,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-248, -147]  
+                        **Y Range**: [min_y, max_y] = [14, 115]
+
+                        # RGB Captions
+                        Front = pine trees, tall, green; trees are in the foreground and background; grassy field  
+                        Left = house, small, brown; house is in the foreground; trees surrounding the house; driveway in front of the house  
+                        Right = roof, large, gray; roof is in the foreground; trees behind the roof; clear sky  
+                        Down = shadow, long, dark; shadow is on the ground; tree, small, green; tree is to the left of the shadow  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 35, 45]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 35, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 34, 45]]
+
+                        DownDepth:
+                        [[18, 15, 18], [15, 11, 9], [18, 15, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-239.67, 15.78, -10.0), -163.41],
+    [(-239.67, 15.78, -10.0), -178.41],
+    [(-244.67, 15.64, -10.0), -178.41],
+    [(-244.81, 20.64, -10.0), -178.41],
+    [(-244.81, 20.64, -10.0), 166.59],
+    [(-244.81, 20.64, -10.0), 151.59],
+    [(-244.81, 20.64, -10.0), 136.59],
+    [(-241.37, 24.27, -10.0), 136.59],
+    [(-245.0, 27.71, -10.0), 136.59],
+    [(-245.0, 27.71, -10.0), 121.59],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 37
+                        DistanceTraveled = 145.0
+                        AvgHeadingChange = 3.24
+
+                        # Reminder  
+                        - The target is **TomatoStack**, described as: Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:37 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 38 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:TomatoStack,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-248, -147]  
+                        **Y Range**: [min_y, max_y] = [14, 115]
+
+                        # RGB Captions
+                        Front = pine trees, tall, green; trees are in the foreground and background; grassy field  
+                        Left = house, small, wooden; house is in the foreground; tractor parked near the house; trees in the background  
+                        Right = roof, shingled, brown; roof is in the foreground; trees in the background  
+                        Down = tree, large, green; tree is in the background; red car parked on the pavement; pavement in the foreground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [33, 34, 44]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [41, 34, 41]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [37, 18, 42]]
+
+                        DownDepth:
+                        [[17, 15, 18], [15, 11, 12], [18, 15, 10]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-239.67, 15.78, -10.0), -178.41],
+    [(-244.67, 15.64, -10.0), -178.41],
+    [(-244.81, 20.64, -10.0), -178.41],
+    [(-244.81, 20.64, -10.0), 166.59],
+    [(-244.81, 20.64, -10.0), 151.59],
+    [(-244.81, 20.64, -10.0), 136.59],
+    [(-241.37, 24.27, -10.0), 136.59],
+    [(-245.0, 27.71, -10.0), 136.59],
+    [(-245.0, 27.71, -10.0), 121.59],
+    [(-245.0, 27.71, -10.0), 106.59],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 38
+                        DistanceTraveled = 145.0
+                        AvgHeadingChange = 3.55
+
+                        # Reminder  
+                        - The target is **TomatoStack**, described as: Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:38 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 39 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:TomatoStack,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-248, -147]  
+                        **Y Range**: [min_y, max_y] = [14, 115]
+
+                        # RGB Captions
+                        Front = pine trees, tall, green; many trees in the background; grassy field in the foreground  
+                        Left = house building, brown roof; house in the center; paved area in front of the house; trees surrounding the house  
+                        Right = trees, tall, green; trees in the background; wooden path in the foreground  
+                        Down = car, red; car parked on the pavement; bush near the car; shadows cast by the bush and car  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [41, 34, 45]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 34, 44]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 34, 34]]
+
+                        DownDepth:
+                        [[18, 15, 18], [15, 11, 14], [18, 15, 9]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-244.67, 15.64, -10.0), -178.41],
+    [(-244.81, 20.64, -10.0), -178.41],
+    [(-244.81, 20.64, -10.0), 166.59],
+    [(-244.81, 20.64, -10.0), 151.59],
+    [(-244.81, 20.64, -10.0), 136.59],
+    [(-241.37, 24.27, -10.0), 136.59],
+    [(-245.0, 27.71, -10.0), 136.59],
+    [(-245.0, 27.71, -10.0), 121.59],
+    [(-245.0, 27.71, -10.0), 106.59],
+    [(-245.0, 27.71, -10.0), 91.59],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 39
+                        DistanceTraveled = 145.0
+                        AvgHeadingChange = 3.85
+
+                        # Reminder  
+                        - The target is **TomatoStack**, described as: Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:39 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 40 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:TomatoStack,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-248, -147]  
+                        **Y Range**: [min_y, max_y] = [14, 115]
+
+                        # RGB Captions
+                        Front = pine trees, tall, green; trees are in the foreground and background; grassy field  
+                        Left = house building, brown roof; picnic table; benches; house is in the center; picnic area in front of the house  
+                        Right = pathway, paved, gray; trees on both sides; pathway extends from foreground to background  
+                        Down = hedge, dense, green; shadow on the ground; hedge is in the foreground; rooftop in the background  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [42, 34, 45]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 35, 40]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 33, 22]]
+
+                        DownDepth:
+                        [[18, 15, 18], [15, 11, 15], [18, 15, 15]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-244.81, 20.64, -10.0), -178.41],
+    [(-244.81, 20.64, -10.0), 166.59],
+    [(-244.81, 20.64, -10.0), 151.59],
+    [(-244.81, 20.64, -10.0), 136.59],
+    [(-241.37, 24.27, -10.0), 136.59],
+    [(-245.0, 27.71, -10.0), 136.59],
+    [(-245.0, 27.71, -10.0), 121.59],
+    [(-245.0, 27.71, -10.0), 106.59],
+    [(-245.0, 27.71, -10.0), 91.59],
+    [(-245.14, 32.71, -10.0), 91.59],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 40
+                        DistanceTraveled = 150.0
+                        AvgHeadingChange = 3.75
+
+                        # Reminder  
+                        - The target is **TomatoStack**, described as: Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:40 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 41 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:TomatoStack,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-248, -147]  
+                        **Y Range**: [min_y, max_y] = [14, 115]
+
+                        # RGB Captions
+                        Front = pine trees, tall, green; trees are in the foreground and background; grassy field  
+                        Left = house building, brown roof; wooden cart; tree in the background; house is in the center  
+                        Right = tree, large, green; hedge, long, green; tree is in the background; hedge is in the foreground  
+                        Down = hedge, long, green; building roof, gray shingles; hedge is in the foreground; roof is in the background  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [43, 33, 45]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 34, 40]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 35, 41]]
+
+                        DownDepth:
+                        [[18, 15, 18], [15, 11, 15], [18, 15, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-244.81, 20.64, -10.0), 166.59],
+    [(-244.81, 20.64, -10.0), 151.59],
+    [(-244.81, 20.64, -10.0), 136.59],
+    [(-241.37, 24.27, -10.0), 136.59],
+    [(-245.0, 27.71, -10.0), 136.59],
+    [(-245.0, 27.71, -10.0), 121.59],
+    [(-245.0, 27.71, -10.0), 106.59],
+    [(-245.0, 27.71, -10.0), 91.59],
+    [(-245.14, 32.71, -10.0), 91.59],
+    [(-240.14, 32.84, -10.0), 91.59],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 41
+                        DistanceTraveled = 155.0
+                        AvgHeadingChange = 3.66
+
+                        # Reminder  
+                        - The target is **TomatoStack**, described as: Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:41 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 42 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:TomatoStack,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-248, -147]  
+                        **Y Range**: [min_y, max_y] = [14, 115]
+
+                        # RGB Captions
+                        Front = pine trees, tall, green; trees are in the foreground and background; grassy field  
+                        Left = buildings, wooden, brown; buildings are in the middle ground; trees in the background; pathway in the foreground  
+                        Right = trees, large, green; trees are in the background; hedge in the foreground; building with a gray roof on the right  
+                        Down = hedge, long, green; hedge is in the foreground; grassy area surrounding the hedge  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 34, 45]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [42, 34, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 34, 34]]
+
+                        DownDepth:
+                        [[18, 15, 17], [15, 11, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-244.81, 20.64, -10.0), 151.59],
+    [(-244.81, 20.64, -10.0), 136.59],
+    [(-241.37, 24.27, -10.0), 136.59],
+    [(-245.0, 27.71, -10.0), 136.59],
+    [(-245.0, 27.71, -10.0), 121.59],
+    [(-245.0, 27.71, -10.0), 106.59],
+    [(-245.0, 27.71, -10.0), 91.59],
+    [(-245.14, 32.71, -10.0), 91.59],
+    [(-240.14, 32.84, -10.0), 91.59],
+    [(-240.28, 37.84, -10.0), 91.59],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 42
+                        DistanceTraveled = 160.0
+                        AvgHeadingChange = 3.57
+
+                        # Reminder  
+                        - The target is **TomatoStack**, described as: Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:42 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 43 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:TomatoStack,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-248, -147]  
+                        **Y Range**: [min_y, max_y] = [14, 115]
+
+                        # RGB Captions
+                        Front = pine trees, green, dense foliage; trees are in the foreground and background; grassy ground  
+                        Left = wooden house, brown, single-story; house is in the foreground; trees in the background; barrels near the house  
+                        Right = pine tree branches, green, needle-like leaves; branches are in the foreground; building in the background  
+                        Down = hedge, green, neatly trimmed; hedge is in the foreground; tree branches in the background  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [39, 34, 45]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 35, 44]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [43, 23, 36]]
+
+                        DownDepth:
+                        [[18, 15, 18], [15, 11, 13], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-244.81, 20.64, -10.0), 136.59],
+    [(-241.37, 24.27, -10.0), 136.59],
+    [(-245.0, 27.71, -10.0), 136.59],
+    [(-245.0, 27.71, -10.0), 121.59],
+    [(-245.0, 27.71, -10.0), 106.59],
+    [(-245.0, 27.71, -10.0), 91.59],
+    [(-245.14, 32.71, -10.0), 91.59],
+    [(-240.14, 32.84, -10.0), 91.59],
+    [(-240.28, 37.84, -10.0), 91.59],
+    [(-240.42, 42.84, -10.0), 91.59],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 43
+                        DistanceTraveled = 165.0
+                        AvgHeadingChange = 3.49
+
+                        # Reminder  
+                        - The target is **TomatoStack**, described as: Organic clustered shape, bright red smooth surface with spherical units, grouped in a compact pile suggestive of stacked fresh tomatoes likely intended for food use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:43 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

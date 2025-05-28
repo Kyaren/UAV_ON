@@ -1,0 +1,945 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Bicycle,
+                        Size:small(1.75*0.5=0.88 squares),
+                        Description:Classic two-wheeled bike, blue frame with curved handlebars and rear cargo rack, step-through design and single seat, intended for personal transport and leisure riding.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [57, 158]  
+                        **Y Range**: [min_y, max_y] = [202, 303]
+
+                        # RGB Captions
+                        Front = white van, parked; blue mailbox; van is on the left side of the street; mailbox near the sidewalk  
+                        Left = tall building, many windows; red newspaper box; building occupies the right side; newspaper box on the sidewalk  
+                        Right = fire escape, metal; window blinds closed; fire escape on the left; window in the center  
+                        Down = streetlight shadow, long; tiled pavement; shadow stretches across the pavement; streetlight not visible  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 32], [100, 100, 10], [32, 25, 12]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 30], [32, 25, 30]]
+
+                        RightDepth:
+                        [[5, 43, 13], [4, 33, 12], [5, 22, 14]]
+
+                        DownDepth:
+                        [[13, 11, 11], [11, 8, 10], [13, 11, 11]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(107.77, 252.78, -6.8), -173.6],
+    [(107.77, 252.78, -6.8), -173.6],
+    [(107.77, 252.78, -6.8), -173.6],
+    [(107.77, 252.78, -6.8), -173.6],
+    [(107.77, 252.78, -6.8), -173.6],
+    [(107.77, 252.78, -6.8), -173.6],
+    [(107.77, 252.78, -6.8), -173.6],
+    [(107.77, 252.78, -6.8), -173.6],
+    [(107.77, 252.78, -6.8), -173.6],
+    [(107.77, 252.78, -6.8), -173.6],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Bicycle**, described as: Classic two-wheeled bike, blue frame with curved handlebars and rear cargo rack, step-through design and single seat, intended for personal transport and leisure riding.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 1 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Bicycle,
+                        Size:small(1.75*0.5=0.88 squares),
+                        Description:Classic two-wheeled bike, blue frame with curved handlebars and rear cargo rack, step-through design and single seat, intended for personal transport and leisure riding.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [57, 158]  
+                        **Y Range**: [min_y, max_y] = [202, 303]
+
+                        # RGB Captions
+                        Front = tall buildings, brown and gray; green trees in the foreground; blue sky with clouds; buildings are in the background  
+                        Left = building, dark facade; tree branches in the foreground; building stands in the background  
+                        Right = tall buildings, brown and gray; green trees in the foreground; blue sky with clouds; buildings are in the background  
+                        Down = tree branches, green leaves; shadow on the wall; wall is in the background  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [32, 24, 31]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 29, 38], [31, 24, 32]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [30, 25, 24]]
+
+                        DownDepth:
+                        [[13, 11, 13], [26, 8, 11], [13, 11, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(107.77, 252.78, -6.8), -173.6],
+    [(102.8, 252.22, -6.8), -173.6],
+    [(102.8, 252.22, -6.8), -173.6],
+    [(102.8, 252.22, -6.8), -173.6],
+    [(102.8, 252.22, -6.8), -173.6],
+    [(102.8, 252.22, -6.8), -173.6],
+    [(102.8, 252.22, -6.8), -173.6],
+    [(102.8, 252.22, -6.8), -173.6],
+    [(102.8, 252.22, -6.8), -173.6],
+    [(102.8, 252.22, -6.8), -173.6],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 1
+                        DistanceTraveled = 4.999999999999996
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Bicycle**, described as: Classic two-wheeled bike, blue frame with curved handlebars and rear cargo rack, step-through design and single seat, intended for personal transport and leisure riding.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:1 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 2 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Bicycle,
+                        Size:small(1.75*0.5=0.88 squares),
+                        Description:Classic two-wheeled bike, blue frame with curved handlebars and rear cargo rack, step-through design and single seat, intended for personal transport and leisure riding.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [57, 158]  
+                        **Y Range**: [min_y, max_y] = [202, 303]
+
+                        # RGB Captions
+                        Front = tall buildings, brown and gray; tree in the foreground; buildings stand in the background  
+                        Left = buildings, dark gray; streetlight on the left; buildings stand in the background  
+                        Right = street, wide; tall buildings on both sides; car parked on the left; buildings extend into the distance  
+                        Down = shadow of a person, on the ground; shadow is to the left of the image  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [33, 24, 29]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 34, 100], [33, 24, 32]]
+
+                        RightDepth:
+                        [[100, 100, 100], [54, 100, 100], [28, 25, 26]]
+
+                        DownDepth:
+                        [[13, 11, 13], [11, 8, 11], [31, 11, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(107.77, 252.78, -6.8), -173.6],
+    [(102.8, 252.22, -6.8), -173.6],
+    [(97.83, 251.66, -6.8), -173.6],
+    [(97.83, 251.66, -6.8), -173.6],
+    [(97.83, 251.66, -6.8), -173.6],
+    [(97.83, 251.66, -6.8), -173.6],
+    [(97.83, 251.66, -6.8), -173.6],
+    [(97.83, 251.66, -6.8), -173.6],
+    [(97.83, 251.66, -6.8), -173.6],
+    [(97.83, 251.66, -6.8), -173.6],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 2
+                        DistanceTraveled = 9.999999999999991
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Bicycle**, described as: Classic two-wheeled bike, blue frame with curved handlebars and rear cargo rack, step-through design and single seat, intended for personal transport and leisure riding.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:2 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 3 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Bicycle,
+                        Size:small(1.75*0.5=0.88 squares),
+                        Description:Classic two-wheeled bike, blue frame with curved handlebars and rear cargo rack, step-through design and single seat, intended for personal transport and leisure riding.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [57, 158]  
+                        **Y Range**: [min_y, max_y] = [202, 303]
+
+                        # RGB Captions
+                        Front = tall buildings, brown and gray; tree with green leaves in the foreground; fountain in the courtyard; buildings surround the courtyard  
+                        Left = buildings, gray and brown; shadow of a tree on the ground; buildings form a block structure; clear sky above  
+                        Right = street with tall buildings on both sides; car parked on the street; trees with green leaves; street lamps along the sidewalk  
+                        Down = blue suitcase on the ground; shadow of a person; tiled floor; potted plants near the edge  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 73], [33, 24, 32]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [31, 100, 100], [31, 24, 33]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [29, 25, 29]]
+
+                        DownDepth:
+                        [[13, 11, 13], [22, 18, 22], [13, 11, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(107.77, 252.78, -6.8), -173.6],
+    [(102.8, 252.22, -6.8), -173.6],
+    [(97.83, 251.66, -6.8), -173.6],
+    [(92.86, 251.11, -6.8), -173.6],
+    [(92.86, 251.11, -6.8), -173.6],
+    [(92.86, 251.11, -6.8), -173.6],
+    [(92.86, 251.11, -6.8), -173.6],
+    [(92.86, 251.11, -6.8), -173.6],
+    [(92.86, 251.11, -6.8), -173.6],
+    [(92.86, 251.11, -6.8), -173.6],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 3
+                        DistanceTraveled = 14.999999999999986
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Bicycle**, described as: Classic two-wheeled bike, blue frame with curved handlebars and rear cargo rack, step-through design and single seat, intended for personal transport and leisure riding.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:3 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 4 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Bicycle,
+                        Size:small(1.75*0.5=0.88 squares),
+                        Description:Classic two-wheeled bike, blue frame with curved handlebars and rear cargo rack, step-through design and single seat, intended for personal transport and leisure riding.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [57, 158]  
+                        **Y Range**: [min_y, max_y] = [202, 303]
+
+                        # RGB Captions
+                        Front = multi-story building, beige facade; tree branches in the foreground; building stands in the background  
+                        Left = multi-story building, dark facade; tree branches in the foreground; building stands in the background  
+                        Right = multi-story buildings, various facades; tree in the foreground; buildings stand in the background  
+                        Down = tree branches, green leaves; branches are in the foreground; leaves cover most of the view  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 67, 67], [33, 21, 30]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [32, 100, 100], [31, 24, 32]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [32, 25, 32]]
+
+                        DownDepth:
+                        [[12, 11, 13], [11, 8, 11], [13, 11, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(107.77, 252.78, -6.8), -173.6],
+    [(102.8, 252.22, -6.8), -173.6],
+    [(97.83, 251.66, -6.8), -173.6],
+    [(92.86, 251.11, -6.8), -173.6],
+    [(87.9, 250.55, -6.8), -173.6],
+    [(87.9, 250.55, -6.8), -173.6],
+    [(87.9, 250.55, -6.8), -173.6],
+    [(87.9, 250.55, -6.8), -173.6],
+    [(87.9, 250.55, -6.8), -173.6],
+    [(87.9, 250.55, -6.8), -173.6],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 4
+                        DistanceTraveled = 19.999999999999982
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Bicycle**, described as: Classic two-wheeled bike, blue frame with curved handlebars and rear cargo rack, step-through design and single seat, intended for personal transport and leisure riding.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:4 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 5 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Bicycle,
+                        Size:small(1.75*0.5=0.88 squares),
+                        Description:Classic two-wheeled bike, blue frame with curved handlebars and rear cargo rack, step-through design and single seat, intended for personal transport and leisure riding.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [57, 158]  
+                        **Y Range**: [min_y, max_y] = [202, 303]
+
+                        # RGB Captions
+                        Front = building, tall, brown; building stands in the center; newsstand in the foreground  
+                        Left = newspaper stand, colorful; stand is in the foreground; buildings in the background  
+                        Right = tree, large, green leaves; tree is in the foreground; buildings in the background  
+                        Down = shadow, complex pattern; shadow is on the ground; tree in the foreground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 31, 100], [100, 31, 44], [33, 11, 30]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [33, 100, 100], [62, 24, 33]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [29, 24, 32]]
+
+                        DownDepth:
+                        [[13, 11, 13], [11, 8, 11], [13, 11, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(107.77, 252.78, -6.8), -173.6],
+    [(102.8, 252.22, -6.8), -173.6],
+    [(97.83, 251.66, -6.8), -173.6],
+    [(92.86, 251.11, -6.8), -173.6],
+    [(87.9, 250.55, -6.8), -173.6],
+    [(82.93, 249.99, -6.8), -173.6],
+    [(82.93, 249.99, -6.8), -173.6],
+    [(82.93, 249.99, -6.8), -173.6],
+    [(82.93, 249.99, -6.8), -173.6],
+    [(82.93, 249.99, -6.8), -173.6],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 5
+                        DistanceTraveled = 24.99999999999998
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Bicycle**, described as: Classic two-wheeled bike, blue frame with curved handlebars and rear cargo rack, step-through design and single seat, intended for personal transport and leisure riding.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:5 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 6 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Bicycle,
+                        Size:small(1.75*0.5=0.88 squares),
+                        Description:Classic two-wheeled bike, blue frame with curved handlebars and rear cargo rack, step-through design and single seat, intended for personal transport and leisure riding.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [57, 158]  
+                        **Y Range**: [min_y, max_y] = [202, 303]
+
+                        # RGB Captions
+                        Front = building, tall, brown; building stands in the foreground; newsstand in front of the building; sidewalk in front of the building  
+                        Left = buildings, multiple, gray; buildings stand in the background; street between buildings; sky clear and blue  
+                        Right = courtyard, paved, square; fountain in the center; benches around the fountain; trees on the sides; buildings surrounding the courtyard  
+                        Down = streetlight, green, metal; streetlight casts shadow on the ground; sidewalk below the streetlight; tree near the streetlight  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 43], [100, 100, 36], [33, 25, 29]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [31, 100, 100], [52, 23, 33]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [31, 51, 32]]
+
+                        DownDepth:
+                        [[13, 11, 13], [11, 8, 11], [13, 11, 12]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(107.77, 252.78, -6.8), -173.6],
+    [(102.8, 252.22, -6.8), -173.6],
+    [(97.83, 251.66, -6.8), -173.6],
+    [(92.86, 251.11, -6.8), -173.6],
+    [(87.9, 250.55, -6.8), -173.6],
+    [(82.93, 249.99, -6.8), -173.6],
+    [(82.37, 254.96, -6.8), -173.6],
+    [(82.37, 254.96, -6.8), -173.6],
+    [(82.37, 254.96, -6.8), -173.6],
+    [(82.37, 254.96, -6.8), -173.6],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 6
+                        DistanceTraveled = 29.999999999999986
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Bicycle**, described as: Classic two-wheeled bike, blue frame with curved handlebars and rear cargo rack, step-through design and single seat, intended for personal transport and leisure riding.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:6 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 7 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Bicycle,
+                        Size:small(1.75*0.5=0.88 squares),
+                        Description:Classic two-wheeled bike, blue frame with curved handlebars and rear cargo rack, step-through design and single seat, intended for personal transport and leisure riding.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [57, 158]  
+                        **Y Range**: [min_y, max_y] = [202, 303]
+
+                        # RGB Captions
+                        Front = tall building, beige facade; newsstand in the foreground; building stands in the background  
+                        Left = newspaper stand, colorful design; buildings in the background; stand is in the foreground  
+                        Right = building, dark facade; tree in the foreground; building stands in the background  
+                        Down = tree shadow on pavement; tree in the foreground; shadow stretches across the pavement  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 14, 100], [100, 10, 45], [33, 12, 30]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [33, 100, 100], [61, 24, 33]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [30, 24, 32]]
+
+                        DownDepth:
+                        [[13, 11, 24], [11, 8, 11], [13, 11, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(107.77, 252.78, -6.8), -173.6],
+    [(102.8, 252.22, -6.8), -173.6],
+    [(97.83, 251.66, -6.8), -173.6],
+    [(92.86, 251.11, -6.8), -173.6],
+    [(87.9, 250.55, -6.8), -173.6],
+    [(82.93, 249.99, -6.8), -173.6],
+    [(82.37, 254.96, -6.8), -173.6],
+    [(82.93, 249.99, -6.8), -173.6],
+    [(82.93, 249.99, -6.8), -173.6],
+    [(82.93, 249.99, -6.8), -173.6],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 7
+                        DistanceTraveled = 34.99999999999999
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Bicycle**, described as: Classic two-wheeled bike, blue frame with curved handlebars and rear cargo rack, step-through design and single seat, intended for personal transport and leisure riding.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:7 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 8 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Bicycle,
+                        Size:small(1.75*0.5=0.88 squares),
+                        Description:Classic two-wheeled bike, blue frame with curved handlebars and rear cargo rack, step-through design and single seat, intended for personal transport and leisure riding.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [57, 158]  
+                        **Y Range**: [min_y, max_y] = [202, 303]
+
+                        # RGB Captions
+                        Front = building facade, beige stone, multiple windows; windows arranged in a grid pattern; facade fills the entire image  
+                        Left = newspaper stand, green dome, colorful base; stand is in the foreground; buildings in the background  
+                        Right = fountain, circular basin, water jets; fountain is in the center of the courtyard; chairs arranged around it; buildings surround the courtyard  
+                        Down = billboard, rectangular shape, blue and white colors; billboard is on the top left corner; shadow of a person on the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 6, 34], [27, 5, 29], [6, 6, 29]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [37, 100, 100], [69, 25, 32]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [28, 24, 30]]
+
+                        DownDepth:
+                        [[12, 7, 13], [11, 19, 11], [13, 11, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(107.77, 252.78, -6.8), -173.6],
+    [(102.8, 252.22, -6.8), -173.6],
+    [(97.83, 251.66, -6.8), -173.6],
+    [(92.86, 251.11, -6.8), -173.6],
+    [(87.9, 250.55, -6.8), -173.6],
+    [(82.93, 249.99, -6.8), -173.6],
+    [(82.37, 254.96, -6.8), -173.6],
+    [(82.93, 249.99, -6.8), -173.6],
+    [(77.96, 249.43, -6.8), -173.6],
+    [(77.96, 249.43, -6.8), -173.6],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 8
+                        DistanceTraveled = 39.999999999999986
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Bicycle**, described as: Classic two-wheeled bike, blue frame with curved handlebars and rear cargo rack, step-through design and single seat, intended for personal transport and leisure riding.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:8 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 9 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Bicycle,
+                        Size:small(1.75*0.5=0.88 squares),
+                        Description:Classic two-wheeled bike, blue frame with curved handlebars and rear cargo rack, step-through design and single seat, intended for personal transport and leisure riding.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [57, 158]  
+                        **Y Range**: [min_y, max_y] = [202, 303]
+
+                        # RGB Captions
+                        Front = building, tall, brown; building stands on the left side; street lamp in the foreground; tree in the distance  
+                        Left = buildings, multiple, gray; buildings are arranged in a row; fire escape on the building; street light on the sidewalk  
+                        Right = courtyard, open, paved; courtyard is surrounded by buildings; fountain in the center; benches around the courtyard  
+                        Down = lamp post, green, metal; lamp post casts a shadow on the ground; shadow is to the right of the lamp post; building in the background  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 7], [100, 100, 6], [32, 24, 7]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [30, 100, 100], [27, 24, 32]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [26, 24, 33]]
+
+                        DownDepth:
+                        [[13, 11, 8], [11, 8, 11], [13, 11, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(107.77, 252.78, -6.8), -173.6],
+    [(102.8, 252.22, -6.8), -173.6],
+    [(97.83, 251.66, -6.8), -173.6],
+    [(92.86, 251.11, -6.8), -173.6],
+    [(87.9, 250.55, -6.8), -173.6],
+    [(82.93, 249.99, -6.8), -173.6],
+    [(82.37, 254.96, -6.8), -173.6],
+    [(82.93, 249.99, -6.8), -173.6],
+    [(77.96, 249.43, -6.8), -173.6],
+    [(77.4, 254.4, -6.8), -173.6],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 9
+                        DistanceTraveled = 44.99999999999999
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Bicycle**, described as: Classic two-wheeled bike, blue frame with curved handlebars and rear cargo rack, step-through design and single seat, intended for personal transport and leisure riding.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:9 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 10 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Bicycle,
+                        Size:small(1.75*0.5=0.88 squares),
+                        Description:Classic two-wheeled bike, blue frame with curved handlebars and rear cargo rack, step-through design and single seat, intended for personal transport and leisure riding.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [57, 158]  
+                        **Y Range**: [min_y, max_y] = [202, 303]
+
+                        # RGB Captions
+                        Front = building facade, beige and brown; multiple windows in a grid pattern  
+                        Left = newspaper stand, colorful; green dome on top; stand is in the foreground; buildings in the background  
+                        Right = fountain, stone; circular pool; located in the courtyard; chairs arranged around it  
+                        Down = shadow on ground, large; cast by an object above; shadow stretches across the pavement  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[7, 6, 34], [16, 5, 29], [11, 6, 29]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [37, 100, 100], [69, 25, 32]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [27, 24, 31]]
+
+                        DownDepth:
+                        [[12, 7, 13], [11, 8, 11], [13, 11, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(102.8, 252.22, -6.8), -173.6],
+    [(97.83, 251.66, -6.8), -173.6],
+    [(92.86, 251.11, -6.8), -173.6],
+    [(87.9, 250.55, -6.8), -173.6],
+    [(82.93, 249.99, -6.8), -173.6],
+    [(82.37, 254.96, -6.8), -173.6],
+    [(82.93, 249.99, -6.8), -173.6],
+    [(77.96, 249.43, -6.8), -173.6],
+    [(77.4, 254.4, -6.8), -173.6],
+    [(77.96, 249.43, -6.8), -173.6],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 10
+                        DistanceTraveled = 50.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Bicycle**, described as: Classic two-wheeled bike, blue frame with curved handlebars and rear cargo rack, step-through design and single seat, intended for personal transport and leisure riding.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:10 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 11 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Bicycle,
+                        Size:small(1.75*0.5=0.88 squares),
+                        Description:Classic two-wheeled bike, blue frame with curved handlebars and rear cargo rack, step-through design and single seat, intended for personal transport and leisure riding.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [57, 158]  
+                        **Y Range**: [min_y, max_y] = [202, 303]
+
+                        # RGB Captions
+                        Front = multi-story buildings, brown and gray facades; buildings are on both sides of the street; street is empty  
+                        Left = apartment buildings, brick facades; fire escape on one building; street with parked cars; buildings in a row  
+                        Right = courtyard, surrounded by buildings; fountain in the center; benches around the courtyard; tree near the entrance  
+                        Down = streetlight, green glass shade; shadow cast on the ground; light post near a building corner  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 7], [100, 100, 6], [32, 24, 7]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [30, 100, 100], [27, 24, 32]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [26, 24, 33]]
+
+                        DownDepth:
+                        [[13, 11, 8], [11, 8, 11], [13, 11, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(97.83, 251.66, -6.8), -173.6],
+    [(92.86, 251.11, -6.8), -173.6],
+    [(87.9, 250.55, -6.8), -173.6],
+    [(82.93, 249.99, -6.8), -173.6],
+    [(82.37, 254.96, -6.8), -173.6],
+    [(82.93, 249.99, -6.8), -173.6],
+    [(77.96, 249.43, -6.8), -173.6],
+    [(77.4, 254.4, -6.8), -173.6],
+    [(77.96, 249.43, -6.8), -173.6],
+    [(77.4, 254.4, -6.8), -173.6],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 11
+                        DistanceTraveled = 55.00000000000001
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Bicycle**, described as: Classic two-wheeled bike, blue frame with curved handlebars and rear cargo rack, step-through design and single seat, intended for personal transport and leisure riding.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:11 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 12 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Bicycle,
+                        Size:small(1.75*0.5=0.88 squares),
+                        Description:Classic two-wheeled bike, blue frame with curved handlebars and rear cargo rack, step-through design and single seat, intended for personal transport and leisure riding.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [57, 158]  
+                        **Y Range**: [min_y, max_y] = [202, 303]
+
+                        # RGB Captions
+                        Front = building facade, brown windows, white frames; facade fills the entire image  
+                        Left = cityscape, multiple buildings; buildings in the background; green newsstand in the foreground  
+                        Right = fountain, circular basin; fountain is in the foreground; courtyard with tables and chairs; buildings surrounding the courtyard  
+                        Down = shadow on ground, distorted shape; shadow is in the foreground; signboard above  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[7, 100, 34], [5, 5, 29], [7, 6, 29]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [37, 100, 100], [32, 25, 32]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [27, 24, 31]]
+
+                        DownDepth:
+                        [[12, 7, 13], [11, 8, 11], [13, 11, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(92.86, 251.11, -6.8), -173.6],
+    [(87.9, 250.55, -6.8), -173.6],
+    [(82.93, 249.99, -6.8), -173.6],
+    [(82.37, 254.96, -6.8), -173.6],
+    [(82.93, 249.99, -6.8), -173.6],
+    [(77.96, 249.43, -6.8), -173.6],
+    [(77.4, 254.4, -6.8), -173.6],
+    [(77.96, 249.43, -6.8), -173.6],
+    [(77.4, 254.4, -6.8), -173.6],
+    [(77.96, 249.43, -6.8), -173.6],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 12
+                        DistanceTraveled = 60.000000000000014
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Bicycle**, described as: Classic two-wheeled bike, blue frame with curved handlebars and rear cargo rack, step-through design and single seat, intended for personal transport and leisure riding.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:12 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 13 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Bicycle,
+                        Size:small(1.75*0.5=0.88 squares),
+                        Description:Classic two-wheeled bike, blue frame with curved handlebars and rear cargo rack, step-through design and single seat, intended for personal transport and leisure riding.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [57, 158]  
+                        **Y Range**: [min_y, max_y] = [202, 303]
+
+                        # RGB Captions
+                        Front = building, tall, gray; fire escape, black, metal; fire escape on the side of the building; courtyard in the foreground with a fountain  
+                        Left = buildings, multiple, gray; street scene; newsstand, colorful, in the foreground; buildings in the background  
+                        Right = building, tall, gray; courtyard, open, in the foreground; chairs and tables arranged in the courtyard; building in the background  
+                        Down = ground, blue, textured; corner of a building, white, peeling paint; shadow on the ground; partial view of a round object  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [6, 100, 42], [22, 24, 27]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [33, 25, 26]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 35, 100], [29, 24, 32]]
+
+                        DownDepth:
+                        [[9, 11, 12], [11, 8, 11], [13, 11, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(87.9, 250.55, -6.8), -173.6],
+    [(82.93, 249.99, -6.8), -173.6],
+    [(82.37, 254.96, -6.8), -173.6],
+    [(82.93, 249.99, -6.8), -173.6],
+    [(77.96, 249.43, -6.8), -173.6],
+    [(77.4, 254.4, -6.8), -173.6],
+    [(77.96, 249.43, -6.8), -173.6],
+    [(77.4, 254.4, -6.8), -173.6],
+    [(77.96, 249.43, -6.8), -173.6],
+    [(78.52, 244.46, -6.8), -173.6],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 13
+                        DistanceTraveled = 65.00000000000003
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Bicycle**, described as: Classic two-wheeled bike, blue frame with curved handlebars and rear cargo rack, step-through design and single seat, intended for personal transport and leisure riding.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:13 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 14 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Bicycle,
+                        Size:small(1.75*0.5=0.88 squares),
+                        Description:Classic two-wheeled bike, blue frame with curved handlebars and rear cargo rack, step-through design and single seat, intended for personal transport and leisure riding.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [57, 158]  
+                        **Y Range**: [min_y, max_y] = [202, 303]
+
+                        # RGB Captions
+                        Front = fire escape, metal, black; fire escape is on the left side; building facade, gray, stone; courtyard in the foreground  
+                        Left = trash can, colorful, plastic; trash can is in the foreground; building facade, beige, textured; street in the background  
+                        Right = fountain, stone, circular; fountain is in the center; courtyard, paved, square; buildings surrounding the courtyard  
+                        Down = fire escape, metal, black; fire escape is on the left side; fountain, stone, circular; fountain is in the bottom right  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[5, 100, 100], [4, 48, 49], [5, 24, 27]]
+
+                        LeftDepth:
+                        [[100, 100, 1], [100, 100, 0], [33, 25, 0]]
+
+                        RightDepth:
+                        [[100, 100, 73], [100, 35, 56], [26, 24, 33]]
+
+                        DownDepth:
+                        [[4, 11, 13], [8, 8, 11], [13, 11, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(82.93, 249.99, -6.8), -173.6],
+    [(82.37, 254.96, -6.8), -173.6],
+    [(82.93, 249.99, -6.8), -173.6],
+    [(77.96, 249.43, -6.8), -173.6],
+    [(77.4, 254.4, -6.8), -173.6],
+    [(77.96, 249.43, -6.8), -173.6],
+    [(77.4, 254.4, -6.8), -173.6],
+    [(77.96, 249.43, -6.8), -173.6],
+    [(78.52, 244.46, -6.8), -173.6],
+    [(73.55, 243.91, -6.8), -173.6],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 14
+                        DistanceTraveled = 70.00000000000003
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Bicycle**, described as: Classic two-wheeled bike, blue frame with curved handlebars and rear cargo rack, step-through design and single seat, intended for personal transport and leisure riding.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:14 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

@@ -1,0 +1,2898 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: MilkContainer,
+                        Size: small(1*1=1 squares),
+                        Description: Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [86, 187]
+
+                        # RGB Captions
+                        Front = building, damaged, multiple windows; tree with white leaves; snow-covered ground; shadows on the building  
+                        Left = trees, covered in snow; bushes with no leaves; snow-covered ground; shadows from the trees  
+                        Right = buildings, residential, multiple stories; balconies; trees with green and white leaves; snow-covered ground  
+                        Down = shadow on the ground, complex pattern; colorful object partially visible; textured ground surface  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [85, 76, 87]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [86, 73, 74]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [82, 67, 70]]
+
+                        DownDepth:
+                        [[36, 31, 36], [31, 24, 29], [29, 25, 25]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-47.26, 136.55, -10.0), 63.66],
+    [(-47.26, 136.55, -10.0), 63.66],
+    [(-47.26, 136.55, -10.0), 63.66],
+    [(-47.26, 136.55, -10.0), 63.66],
+    [(-47.26, 136.55, -10.0), 63.66],
+    [(-47.26, 136.55, -10.0), 63.66],
+    [(-47.26, 136.55, -10.0), 63.66],
+    [(-47.26, 136.55, -10.0), 63.66],
+    [(-47.26, 136.55, -10.0), 63.66],
+    [(-47.26, 136.55, -10.0), 63.66],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** MilkContainer**, described as:  Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 1 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: MilkContainer,
+                        Size: small(1*1=1 squares),
+                        Description: Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [86, 187]
+
+                        # RGB Captions
+                        Front = building, damaged, brick; windows broken; tree with white flowers to the left  
+                        Left = snow-covered trees, bare branches; snowy ground; shadows from trees  
+                        Right = building, multi-story, brick; green balcony; trees with white flowers; snowy ground  
+                        Down = textured surface, beige; shadow of a tree; colorful object at the top  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [73, 70, 88]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [93, 65, 62]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [94, 71, 84]]
+
+                        DownDepth:
+                        [[32, 31, 36], [31, 24, 31], [33, 30, 33]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-47.26, 136.55, -10.0), 63.66],
+    [(-45.04, 141.03, -10.0), 63.66],
+    [(-45.04, 141.03, -10.0), 63.66],
+    [(-45.04, 141.03, -10.0), 63.66],
+    [(-45.04, 141.03, -10.0), 63.66],
+    [(-45.04, 141.03, -10.0), 63.66],
+    [(-45.04, 141.03, -10.0), 63.66],
+    [(-45.04, 141.03, -10.0), 63.66],
+    [(-45.04, 141.03, -10.0), 63.66],
+    [(-45.04, 141.03, -10.0), 63.66],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 1
+                        DistanceTraveled = 5.000000000000002
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** MilkContainer**, described as:  Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:1 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 2 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: MilkContainer,
+                        Size: small(1*1=1 squares),
+                        Description: Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [86, 187]
+
+                        # RGB Captions
+                        Front = building, brick, damaged; building is in the foreground; air conditioning units on the wall  
+                        Left = building, wooden, multi-story; building is in the background; trees covered in snow  
+                        Right = buildings, brick, multi-story; buildings are in the foreground; trees and snow on the ground  
+                        Down = building, brick, old; building is in the background; rugs on the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [60, 64, 86]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [94, 35, 58]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [81, 71, 79]]
+
+                        DownDepth:
+                        [[37, 31, 36], [27, 24, 31], [30, 31, 37]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-47.26, 136.55, -10.0), 63.66],
+    [(-45.04, 141.03, -10.0), 63.66],
+    [(-42.82, 145.51, -10.0), 63.66],
+    [(-42.82, 145.51, -10.0), 63.66],
+    [(-42.82, 145.51, -10.0), 63.66],
+    [(-42.82, 145.51, -10.0), 63.66],
+    [(-42.82, 145.51, -10.0), 63.66],
+    [(-42.82, 145.51, -10.0), 63.66],
+    [(-42.82, 145.51, -10.0), 63.66],
+    [(-42.82, 145.51, -10.0), 63.66],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 2
+                        DistanceTraveled = 10.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** MilkContainer**, described as:  Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:2 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 3 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: MilkContainer,
+                        Size: small(1*1=1 squares),
+                        Description: Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [86, 187]
+
+                        # RGB Captions
+                        Front = windows, damaged, snow-covered ground; windows are hanging in the air; trees in the background  
+                        Left = building, brick wall, snow-covered ground; building is in the foreground; trees in the background  
+                        Right = buildings, stone walls, snow-covered ground; buildings are adjacent to each other; trees in the background  
+                        Down = ceiling, wooden planks, debris; ceiling is above; debris scattered below  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 49, 69]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 100, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [76, 71, 78]]
+
+                        DownDepth:
+                        [[27, 31, 37], [23, 24, 31], [22, 25, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-47.26, 136.55, -10.0), 63.66],
+    [(-45.04, 141.03, -10.0), 63.66],
+    [(-42.82, 145.51, -10.0), 63.66],
+    [(-40.6, 149.99, -10.0), 63.66],
+    [(-40.6, 149.99, -10.0), 63.66],
+    [(-40.6, 149.99, -10.0), 63.66],
+    [(-40.6, 149.99, -10.0), 63.66],
+    [(-40.6, 149.99, -10.0), 63.66],
+    [(-40.6, 149.99, -10.0), 63.66],
+    [(-40.6, 149.99, -10.0), 63.66],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 3
+                        DistanceTraveled = 15.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** MilkContainer**, described as:  Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:3 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 4 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: MilkContainer,
+                        Size: small(1*1=1 squares),
+                        Description: Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [86, 187]
+
+                        # RGB Captions
+                        Front = ruined building, broken windows, snow-covered ground; building is in the center; trees with white flowers in the background  
+                        Left = stone wall, window frame, snow-covered ground; wall is in the foreground; window frame is to the left  
+                        Right = buildings, stone walls, snow-covered ground; buildings are in the background; trees with white flowers on the right  
+                        Down = wooden ceiling, shadow of a person, snow-covered ground; ceiling is in the foreground; shadow is on the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 49, 69]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 100, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [76, 71, 78]]
+
+                        DownDepth:
+                        [[27, 31, 37], [23, 24, 31], [22, 25, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-47.26, 136.55, -10.0), 63.66],
+    [(-45.04, 141.03, -10.0), 63.66],
+    [(-42.82, 145.51, -10.0), 63.66],
+    [(-40.6, 149.99, -10.0), 63.66],
+    [(-38.38, 154.47, -10.0), 63.66],
+    [(-38.38, 154.47, -10.0), 63.66],
+    [(-38.38, 154.47, -10.0), 63.66],
+    [(-38.38, 154.47, -10.0), 63.66],
+    [(-38.38, 154.47, -10.0), 63.66],
+    [(-38.38, 154.47, -10.0), 63.66],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 4
+                        DistanceTraveled = 20.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** MilkContainer**, described as:  Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:4 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 5 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: MilkContainer,
+                        Size: small(1*1=1 squares),
+                        Description: Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [86, 187]
+
+                        # RGB Captions
+                        Front = window frames, old, rusty; window frames are attached to a wall; buildings in the background  
+                        Left = windows, broken, hanging; windows are scattered on the ground; snow-covered trees in the background  
+                        Right = buildings, multi-story, brick; buildings are in the background; trees and benches in the foreground  
+                        Down = wall, old, brick; shadow of a tree on the wall; view is from above  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 49, 69]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 100, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [76, 71, 78]]
+
+                        DownDepth:
+                        [[27, 31, 37], [23, 24, 31], [22, 25, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-47.26, 136.55, -10.0), 63.66],
+    [(-45.04, 141.03, -10.0), 63.66],
+    [(-42.82, 145.51, -10.0), 63.66],
+    [(-40.6, 149.99, -10.0), 63.66],
+    [(-38.38, 154.47, -10.0), 63.66],
+    [(-36.16, 158.95, -10.0), 63.66],
+    [(-36.16, 158.95, -10.0), 63.66],
+    [(-36.16, 158.95, -10.0), 63.66],
+    [(-36.16, 158.95, -10.0), 63.66],
+    [(-36.16, 158.95, -10.0), 63.66],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 5
+                        DistanceTraveled = 25.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** MilkContainer**, described as:  Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:5 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 6 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: MilkContainer,
+                        Size: small(1*1=1 squares),
+                        Description: Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [86, 187]
+
+                        # RGB Captions
+                        Front = building, brick exterior, windows; building is in the foreground; trees with white flowers in the background  
+                        Left = abandoned building, broken windows, tree with white flowers; building is in the foreground; tree is to the right  
+                        Right = apartment buildings, snow-covered ground, benches; buildings are in the background; benches are in the foreground  
+                        Down = stone wall, shadows of branches, hanging fabric; wall is in the foreground; shadows are cast on the wall  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 49, 69]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 100, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [76, 71, 78]]
+
+                        DownDepth:
+                        [[27, 31, 37], [23, 24, 31], [22, 25, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-47.26, 136.55, -10.0), 63.66],
+    [(-45.04, 141.03, -10.0), 63.66],
+    [(-42.82, 145.51, -10.0), 63.66],
+    [(-40.6, 149.99, -10.0), 63.66],
+    [(-38.38, 154.47, -10.0), 63.66],
+    [(-36.16, 158.95, -10.0), 63.66],
+    [(-40.65, 161.17, -10.0), 63.66],
+    [(-40.65, 161.17, -10.0), 63.66],
+    [(-40.65, 161.17, -10.0), 63.66],
+    [(-40.65, 161.17, -10.0), 63.66],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 6
+                        DistanceTraveled = 30.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** MilkContainer**, described as:  Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:6 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 7 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: MilkContainer,
+                        Size: small(1*1=1 squares),
+                        Description: Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [86, 187]
+
+                        # RGB Captions
+                        Front = building, stone, old; building is in the foreground; trees with white flowers in the background  
+                        Left = windows, broken, scattered; windows are on the ground; snow-covered ground  
+                        Right = buildings, brick, multiple; buildings are in the background; trees and snow in the foreground  
+                        Down = wall, weathered, wooden; wall is in the foreground; clothes hanging on a line  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 49, 69]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 100, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [76, 71, 78]]
+
+                        DownDepth:
+                        [[27, 31, 37], [23, 24, 31], [22, 25, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-47.26, 136.55, -10.0), 63.66],
+    [(-45.04, 141.03, -10.0), 63.66],
+    [(-42.82, 145.51, -10.0), 63.66],
+    [(-40.6, 149.99, -10.0), 63.66],
+    [(-38.38, 154.47, -10.0), 63.66],
+    [(-36.16, 158.95, -10.0), 63.66],
+    [(-40.65, 161.17, -10.0), 63.66],
+    [(-38.43, 165.65, -10.0), 63.66],
+    [(-38.43, 165.65, -10.0), 63.66],
+    [(-38.43, 165.65, -10.0), 63.66],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 7
+                        DistanceTraveled = 35.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** MilkContainer**, described as:  Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:7 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 8 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: MilkContainer,
+                        Size: small(1*1=1 squares),
+                        Description: Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [86, 187]
+
+                        # RGB Captions
+                        Front = stone wall, brown, weathered; wall is in the foreground; building with balconies in the background  
+                        Left = windows, broken, scattered on the ground; windows are in the foreground; trees with white flowers in the background  
+                        Right = buildings, brick, snow-covered ground; buildings are in the background; trees with white flowers in the foreground  
+                        Down = wall, stone, damaged; window with broken glass; shadows of trees on the wall  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 49, 69]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 100, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [76, 71, 78]]
+
+                        DownDepth:
+                        [[27, 31, 37], [23, 24, 31], [22, 25, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-47.26, 136.55, -10.0), 63.66],
+    [(-45.04, 141.03, -10.0), 63.66],
+    [(-42.82, 145.51, -10.0), 63.66],
+    [(-40.6, 149.99, -10.0), 63.66],
+    [(-38.38, 154.47, -10.0), 63.66],
+    [(-36.16, 158.95, -10.0), 63.66],
+    [(-40.65, 161.17, -10.0), 63.66],
+    [(-38.43, 165.65, -10.0), 63.66],
+    [(-36.21, 170.13, -10.0), 63.66],
+    [(-36.21, 170.13, -10.0), 63.66],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 8
+                        DistanceTraveled = 40.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** MilkContainer**, described as:  Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:8 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 9 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: MilkContainer,
+                        Size: small(1*1=1 squares),
+                        Description: Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [86, 187]
+
+                        # RGB Captions
+                        Front = stone wall, textured, brown; building in the background; trees with white flowers behind the building  
+                        Left = windows, old, broken; scattered on the ground; trees with white flowers in the background  
+                        Right = buildings, brick, multi-story; trees with white flowers; snow-covered ground  
+                        Down = window, open, wooden frame; clothes hanging outside; shadow of a tree on the wall  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 49, 69]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 100, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [76, 71, 78]]
+
+                        DownDepth:
+                        [[27, 31, 37], [23, 24, 31], [22, 25, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-47.26, 136.55, -10.0), 63.66],
+    [(-45.04, 141.03, -10.0), 63.66],
+    [(-42.82, 145.51, -10.0), 63.66],
+    [(-40.6, 149.99, -10.0), 63.66],
+    [(-38.38, 154.47, -10.0), 63.66],
+    [(-36.16, 158.95, -10.0), 63.66],
+    [(-40.65, 161.17, -10.0), 63.66],
+    [(-38.43, 165.65, -10.0), 63.66],
+    [(-36.21, 170.13, -10.0), 63.66],
+    [(-40.69, 172.35, -10.0), 63.66],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 9
+                        DistanceTraveled = 45.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** MilkContainer**, described as:  Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:9 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 10 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: MilkContainer,
+                        Size: small(1*1=1 squares),
+                        Description: Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [86, 187]
+
+                        # RGB Captions
+                        Front = buildings, made of stone; snow-covered ground; trees with white and yellow leaves; buildings are close together  
+                        Left = windows, broken; silo; snow-covered ground; objects are scattered  
+                        Right = person walking; snow-covered ground; trees and buildings; person is in the foreground  
+                        Down = building, stone wall; shadows on the wall; clothes hanging outside; window on the building  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 49, 69]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 100, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [76, 71, 78]]
+
+                        DownDepth:
+                        [[27, 31, 37], [23, 24, 31], [22, 25, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-45.04, 141.03, -10.0), 63.66],
+    [(-42.82, 145.51, -10.0), 63.66],
+    [(-40.6, 149.99, -10.0), 63.66],
+    [(-38.38, 154.47, -10.0), 63.66],
+    [(-36.16, 158.95, -10.0), 63.66],
+    [(-40.65, 161.17, -10.0), 63.66],
+    [(-38.43, 165.65, -10.0), 63.66],
+    [(-36.21, 170.13, -10.0), 63.66],
+    [(-40.69, 172.35, -10.0), 63.66],
+    [(-38.47, 176.83, -10.0), 63.66],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 10
+                        DistanceTraveled = 50.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** MilkContainer**, described as:  Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:10 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 11 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: MilkContainer,
+                        Size: small(1*1=1 squares),
+                        Description: Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [86, 187]
+
+                        # RGB Captions
+                        Front = stone wall, weathered texture, building with balconies; stone wall is in the foreground; building is in the background  
+                        Left = abandoned building, broken windows, snow-covered ground; building is in the center; trees with white flowers around  
+                        Right = apartment buildings, snow-covered ground, people walking; buildings are in the background; people are in the foreground  
+                        Down = stone wall, window with rainbow reflection, shadow of a tree; stone wall is in the foreground; window is above  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 49, 69]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 100, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [76, 71, 78]]
+
+                        DownDepth:
+                        [[27, 31, 37], [23, 24, 31], [22, 25, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-42.82, 145.51, -10.0), 63.66],
+    [(-40.6, 149.99, -10.0), 63.66],
+    [(-38.38, 154.47, -10.0), 63.66],
+    [(-36.16, 158.95, -10.0), 63.66],
+    [(-40.65, 161.17, -10.0), 63.66],
+    [(-38.43, 165.65, -10.0), 63.66],
+    [(-36.21, 170.13, -10.0), 63.66],
+    [(-40.69, 172.35, -10.0), 63.66],
+    [(-38.47, 176.83, -10.0), 63.66],
+    [(-33.99, 174.61, -10.0), 63.66],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 11
+                        DistanceTraveled = 55.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** MilkContainer**, described as:  Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:11 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 12 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: MilkContainer,
+                        Size: small(1*1=1 squares),
+                        Description: Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [86, 187]
+
+                        # RGB Captions
+                        Front = wall, stone, textured; wall is in the foreground; building with windows in the background  
+                        Left = room, open ceiling, broken windows; trees with white flowers in the center; snow on the ground  
+                        Right = buildings, brick, multiple stories; trees with white flowers; benches and tables in the courtyard  
+                        Down = building, stone, old; window with shutters; shadow of a tree on the wall  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 49, 69]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 100, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [76, 71, 78]]
+
+                        DownDepth:
+                        [[27, 31, 37], [23, 24, 31], [22, 25, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-40.6, 149.99, -10.0), 63.66],
+    [(-38.38, 154.47, -10.0), 63.66],
+    [(-36.16, 158.95, -10.0), 63.66],
+    [(-40.65, 161.17, -10.0), 63.66],
+    [(-38.43, 165.65, -10.0), 63.66],
+    [(-36.21, 170.13, -10.0), 63.66],
+    [(-40.69, 172.35, -10.0), 63.66],
+    [(-38.47, 176.83, -10.0), 63.66],
+    [(-33.99, 174.61, -10.0), 63.66],
+    [(-29.51, 172.39, -10.0), 63.66],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 12
+                        DistanceTraveled = 60.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** MilkContainer**, described as:  Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:12 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 13 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: MilkContainer,
+                        Size: small(1*1=1 squares),
+                        Description: Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [86, 187]
+
+                        # RGB Captions
+                        Front = wall, stone, textured; wall is in the foreground; building in the background  
+                        Left = windows, old, rusted frames; windows are scattered on the ground; trees with white flowers in the background  
+                        Right = buildings, brick, multiple stories; buildings are in the background; trees with white flowers in the foreground  
+                        Down = wall, stone, textured; window with clothes hanging; shadow of tree on the wall  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 49, 69]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 100, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [76, 71, 78]]
+
+                        DownDepth:
+                        [[27, 31, 37], [23, 24, 31], [22, 25, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-38.38, 154.47, -10.0), 63.66],
+    [(-36.16, 158.95, -10.0), 63.66],
+    [(-40.65, 161.17, -10.0), 63.66],
+    [(-38.43, 165.65, -10.0), 63.66],
+    [(-36.21, 170.13, -10.0), 63.66],
+    [(-40.69, 172.35, -10.0), 63.66],
+    [(-38.47, 176.83, -10.0), 63.66],
+    [(-33.99, 174.61, -10.0), 63.66],
+    [(-29.51, 172.39, -10.0), 63.66],
+    [(-27.29, 176.87, -10.0), 63.66],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 13
+                        DistanceTraveled = 65.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** MilkContainer**, described as:  Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:13 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 14 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: MilkContainer,
+                        Size: small(1*1=1 squares),
+                        Description: Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [86, 187]
+
+                        # RGB Captions
+                        Front = stone wall, textured surface, building in the background; stone wall is in the foreground  
+                        Left = windows, broken glass, snow-covered ground; windows are scattered on the ground  
+                        Right = buildings, brick walls, snow-covered ground; buildings are in the background  
+                        Down = wall, textured surface, shadow of tree branches; wall is in the foreground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 49, 69]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 100, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [76, 71, 78]]
+
+                        DownDepth:
+                        [[27, 31, 37], [23, 24, 31], [22, 25, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-36.16, 158.95, -10.0), 63.66],
+    [(-40.65, 161.17, -10.0), 63.66],
+    [(-38.43, 165.65, -10.0), 63.66],
+    [(-36.21, 170.13, -10.0), 63.66],
+    [(-40.69, 172.35, -10.0), 63.66],
+    [(-38.47, 176.83, -10.0), 63.66],
+    [(-33.99, 174.61, -10.0), 63.66],
+    [(-29.51, 172.39, -10.0), 63.66],
+    [(-27.29, 176.87, -10.0), 63.66],
+    [(-25.07, 181.36, -10.0), 63.66],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 14
+                        DistanceTraveled = 70.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** MilkContainer**, described as:  Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:14 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 15 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: MilkContainer,
+                        Size: small(1*1=1 squares),
+                        Description: Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [86, 187]
+
+                        # RGB Captions
+                        Front = stone wall, weathered texture, wooden structure above; wall is in the foreground; trees with white flowers in the background  
+                        Left = abandoned building, broken windows, snow-covered ground; building is in the foreground; trees with white flowers in the background  
+                        Right = buildings, brick texture, snow-covered ground; buildings are in the background; trees with white flowers in the foreground  
+                        Down = stone wall, weathered texture, shadow of a tree on the wall; wall is in the foreground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 49, 69]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 100, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [76, 71, 78]]
+
+                        DownDepth:
+                        [[27, 31, 37], [23, 24, 31], [22, 25, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-40.65, 161.17, -10.0), 63.66],
+    [(-38.43, 165.65, -10.0), 63.66],
+    [(-36.21, 170.13, -10.0), 63.66],
+    [(-40.69, 172.35, -10.0), 63.66],
+    [(-38.47, 176.83, -10.0), 63.66],
+    [(-33.99, 174.61, -10.0), 63.66],
+    [(-29.51, 172.39, -10.0), 63.66],
+    [(-27.29, 176.87, -10.0), 63.66],
+    [(-25.07, 181.36, -10.0), 63.66],
+    [(-22.85, 185.84, -10.0), 63.66],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 15
+                        DistanceTraveled = 75.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** MilkContainer**, described as:  Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:15 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 16 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: MilkContainer,
+                        Size: small(1*1=1 squares),
+                        Description: Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [86, 187]
+
+                        # RGB Captions
+                        Front = room, wooden walls, damaged windows; room is enclosed; trees with white flowers outside  
+                        Left = landscape, snowy, sunset; sun in the sky; trees and buildings in the distance  
+                        Right = house, cylindrical, brick; house is in the center; damaged windows floating around  
+                        Down = wall, stone, weathered; wall is in the foreground; shadows on the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 49, 69]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 100, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [76, 71, 78]]
+
+                        DownDepth:
+                        [[27, 31, 37], [23, 24, 31], [22, 25, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-38.43, 165.65, -10.0), 63.66],
+    [(-36.21, 170.13, -10.0), 63.66],
+    [(-40.69, 172.35, -10.0), 63.66],
+    [(-38.47, 176.83, -10.0), 63.66],
+    [(-33.99, 174.61, -10.0), 63.66],
+    [(-29.51, 172.39, -10.0), 63.66],
+    [(-27.29, 176.87, -10.0), 63.66],
+    [(-25.07, 181.36, -10.0), 63.66],
+    [(-22.85, 185.84, -10.0), 63.66],
+    [(-22.85, 185.84, -10.0), 18.66],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 16
+                        DistanceTraveled = 75.0
+                        AvgHeadingChange = 2.81
+
+                        # Reminder  
+                        - The target is ** MilkContainer**, described as:  Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:16 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 17 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: MilkContainer,
+                        Size: small(1*1=1 squares),
+                        Description: Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [86, 187]
+
+                        # RGB Captions
+                        Front = building, stone, old; building is in the foreground; trees in the background  
+                        Left = buildings, residential, multi-story; buildings are in the background; trees and benches in the foreground  
+                        Right = windows, broken, scattered; windows are hanging in the air; trees and a dome structure in the background  
+                        Down = wall, stone, textured; wall is in the foreground; window and shadows on the wall  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 49, 69]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 100, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [76, 71, 78]]
+
+                        DownDepth:
+                        [[27, 31, 37], [23, 24, 31], [22, 25, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-36.21, 170.13, -10.0), 63.66],
+    [(-40.69, 172.35, -10.0), 63.66],
+    [(-38.47, 176.83, -10.0), 63.66],
+    [(-33.99, 174.61, -10.0), 63.66],
+    [(-29.51, 172.39, -10.0), 63.66],
+    [(-27.29, 176.87, -10.0), 63.66],
+    [(-25.07, 181.36, -10.0), 63.66],
+    [(-22.85, 185.84, -10.0), 63.66],
+    [(-22.85, 185.84, -10.0), 18.66],
+    [(-22.85, 185.84, -10.0), -26.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 17
+                        DistanceTraveled = 75.0
+                        AvgHeadingChange = 5.29
+
+                        # Reminder  
+                        - The target is ** MilkContainer**, described as:  Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:17 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 18 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: MilkContainer,
+                        Size: small(1*1=1 squares),
+                        Description: Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [86, 187]
+
+                        # RGB Captions
+                        Front = building, stone, weathered; window with broken glass; building is in the foreground; snow on the ground  
+                        Left = bench, wooden, snow-covered; bench is in the foreground; snow-covered trees in the background  
+                        Right = windows, old, rusted; windows are scattered on the ground; barrel in the center; brick wall in the background  
+                        Down = building, stone, textured; window with open shutters; building is in the foreground; shadow on the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 49, 69]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 100, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [76, 71, 78]]
+
+                        DownDepth:
+                        [[27, 31, 37], [23, 24, 31], [22, 25, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-40.69, 172.35, -10.0), 63.66],
+    [(-38.47, 176.83, -10.0), 63.66],
+    [(-33.99, 174.61, -10.0), 63.66],
+    [(-29.51, 172.39, -10.0), 63.66],
+    [(-27.29, 176.87, -10.0), 63.66],
+    [(-25.07, 181.36, -10.0), 63.66],
+    [(-22.85, 185.84, -10.0), 63.66],
+    [(-22.85, 185.84, -10.0), 18.66],
+    [(-22.85, 185.84, -10.0), -26.34],
+    [(-18.37, 183.62, -10.0), -26.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 18
+                        DistanceTraveled = 80.0
+                        AvgHeadingChange = 5.0
+
+                        # Reminder  
+                        - The target is ** MilkContainer**, described as:  Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:18 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 19 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: MilkContainer,
+                        Size: small(1*1=1 squares),
+                        Description: Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [86, 187]
+
+                        # RGB Captions
+                        Front = wall, stone, textured; window frame, metal, rusted; wall is in the foreground; trees in the background  
+                        Left = bench, wooden, snow-covered; bench is in the foreground; trees and buildings in the background  
+                        Right = windows, old, rusted; windows are scattered on the ground; cylindrical structure with a black roof in the center  
+                        Down = wall, stone, textured; window, broken, glass missing; wall is in the foreground; shadow of a tree on the wall  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 49, 69]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 100, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [76, 71, 78]]
+
+                        DownDepth:
+                        [[27, 31, 37], [23, 24, 31], [22, 25, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-38.47, 176.83, -10.0), 63.66],
+    [(-33.99, 174.61, -10.0), 63.66],
+    [(-29.51, 172.39, -10.0), 63.66],
+    [(-27.29, 176.87, -10.0), 63.66],
+    [(-25.07, 181.36, -10.0), 63.66],
+    [(-22.85, 185.84, -10.0), 63.66],
+    [(-22.85, 185.84, -10.0), 18.66],
+    [(-22.85, 185.84, -10.0), -26.34],
+    [(-18.37, 183.62, -10.0), -26.34],
+    [(-20.59, 179.14, -10.0), -26.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 19
+                        DistanceTraveled = 85.0
+                        AvgHeadingChange = 4.74
+
+                        # Reminder  
+                        - The target is ** MilkContainer**, described as:  Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:19 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 20 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: MilkContainer,
+                        Size: small(1*1=1 squares),
+                        Description: Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [86, 187]
+
+                        # RGB Captions
+                        Front = window, old, wooden frame; window is open; stone wall is in the background  
+                        Left = bench, wooden, on snow; bench is in the foreground; trees and buildings in the background  
+                        Right = silos, old, rusted; silos are in the background; windows and debris scattered around  
+                        Down = wall, stone, with window; shadow of tree on the wall; view is from below  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 49, 69]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 100, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [76, 71, 78]]
+
+                        DownDepth:
+                        [[27, 31, 37], [23, 24, 31], [22, 25, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-33.99, 174.61, -10.0), 63.66],
+    [(-29.51, 172.39, -10.0), 63.66],
+    [(-27.29, 176.87, -10.0), 63.66],
+    [(-25.07, 181.36, -10.0), 63.66],
+    [(-22.85, 185.84, -10.0), 63.66],
+    [(-22.85, 185.84, -10.0), 18.66],
+    [(-22.85, 185.84, -10.0), -26.34],
+    [(-18.37, 183.62, -10.0), -26.34],
+    [(-20.59, 179.14, -10.0), -26.34],
+    [(-18.37, 183.62, -10.0), -26.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 20
+                        DistanceTraveled = 90.0
+                        AvgHeadingChange = 4.5
+
+                        # Reminder  
+                        - The target is ** MilkContainer**, described as:  Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:20 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 21 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: MilkContainer,
+                        Size: small(1*1=1 squares),
+                        Description: Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [86, 187]
+
+                        # RGB Captions
+                        Front = sun, bright, in sky; trees, snow-covered, with shadows; bench and logs in the background  
+                        Left = buildings, brick, multiple stories; trees, snow-covered; street clear of snow  
+                        Right = room, damaged walls, broken windows; tree, white flowers, inside room; ceiling partially collapsed  
+                        Down = wall, textured, with shadows; window, old, with broken panes; plant pot on the ledge  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 49, 69]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 100, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [76, 71, 78]]
+
+                        DownDepth:
+                        [[27, 31, 37], [23, 24, 31], [22, 25, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-29.51, 172.39, -10.0), 63.66],
+    [(-27.29, 176.87, -10.0), 63.66],
+    [(-25.07, 181.36, -10.0), 63.66],
+    [(-22.85, 185.84, -10.0), 63.66],
+    [(-22.85, 185.84, -10.0), 18.66],
+    [(-22.85, 185.84, -10.0), -26.34],
+    [(-18.37, 183.62, -10.0), -26.34],
+    [(-20.59, 179.14, -10.0), -26.34],
+    [(-18.37, 183.62, -10.0), -26.34],
+    [(-18.37, 183.62, -10.0), -71.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 21
+                        DistanceTraveled = 90.0
+                        AvgHeadingChange = 6.43
+
+                        # Reminder  
+                        - The target is ** MilkContainer**, described as:  Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:21 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 22 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: MilkContainer,
+                        Size: small(1*1=1 squares),
+                        Description: Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [86, 187]
+
+                        # RGB Captions
+                        Front = sun, bright, in sky; snow-covered trees; building with red and white pattern on the right  
+                        Left = buildings, brick, multi-story; buildings are in the background; trees with white flowers in the foreground  
+                        Right = windows, broken, on walls; trees with white flowers; walls are in the foreground  
+                        Down = wall, textured, brown; shadow of tree on wall; window frames visible  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 49, 69]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 100, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [76, 71, 78]]
+
+                        DownDepth:
+                        [[27, 31, 37], [23, 24, 31], [22, 25, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-27.29, 176.87, -10.0), 63.66],
+    [(-25.07, 181.36, -10.0), 63.66],
+    [(-22.85, 185.84, -10.0), 63.66],
+    [(-22.85, 185.84, -10.0), 18.66],
+    [(-22.85, 185.84, -10.0), -26.34],
+    [(-18.37, 183.62, -10.0), -26.34],
+    [(-20.59, 179.14, -10.0), -26.34],
+    [(-18.37, 183.62, -10.0), -26.34],
+    [(-18.37, 183.62, -10.0), -71.34],
+    [(-16.77, 178.88, -10.0), -71.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 22
+                        DistanceTraveled = 95.00000000000001
+                        AvgHeadingChange = 6.14
+
+                        # Reminder  
+                        - The target is ** MilkContainer**, described as:  Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:22 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 23 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: MilkContainer,
+                        Size: small(1*1=1 squares),
+                        Description: Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [86, 187]
+
+                        # RGB Captions
+                        Front = window, red frame; window is attached to a building; snowy trees in the background  
+                        Left = buildings, multiple stories; buildings are in the background; statue in the center of the square  
+                        Right = frames, scattered on the ground; frames are in the foreground; brick ceiling above  
+                        Down = wall, stone texture; wall is in the foreground; shadow of tree branches  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 49, 69]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 100, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [76, 71, 78]]
+
+                        DownDepth:
+                        [[27, 31, 37], [23, 24, 31], [22, 25, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-25.07, 181.36, -10.0), 63.66],
+    [(-22.85, 185.84, -10.0), 63.66],
+    [(-22.85, 185.84, -10.0), 18.66],
+    [(-22.85, 185.84, -10.0), -26.34],
+    [(-18.37, 183.62, -10.0), -26.34],
+    [(-20.59, 179.14, -10.0), -26.34],
+    [(-18.37, 183.62, -10.0), -26.34],
+    [(-18.37, 183.62, -10.0), -71.34],
+    [(-16.77, 178.88, -10.0), -71.34],
+    [(-21.51, 177.28, -10.0), -71.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 23
+                        DistanceTraveled = 100.00000000000001
+                        AvgHeadingChange = 5.87
+
+                        # Reminder  
+                        - The target is ** MilkContainer**, described as:  Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:23 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 24 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: MilkContainer,
+                        Size: small(1*1=1 squares),
+                        Description: Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [86, 187]
+
+                        # RGB Captions
+                        Front = building, brick, damaged; building is in the foreground; trees in the background  
+                        Left = trees, snow-covered, scattered; trees are in the foreground; buildings in the background  
+                        Right = windows, old, broken; windows are in the foreground; trees and a cylindrical structure in the background  
+                        Down = wall, stone, textured; wall is in the foreground; shadow of a tree on the wall  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 49, 69]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 100, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [76, 71, 78]]
+
+                        DownDepth:
+                        [[27, 31, 37], [23, 24, 31], [22, 25, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-22.85, 185.84, -10.0), 63.66],
+    [(-22.85, 185.84, -10.0), 18.66],
+    [(-22.85, 185.84, -10.0), -26.34],
+    [(-18.37, 183.62, -10.0), -26.34],
+    [(-20.59, 179.14, -10.0), -26.34],
+    [(-18.37, 183.62, -10.0), -26.34],
+    [(-18.37, 183.62, -10.0), -71.34],
+    [(-16.77, 178.88, -10.0), -71.34],
+    [(-21.51, 177.28, -10.0), -71.34],
+    [(-26.25, 175.68, -10.0), -71.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 24
+                        DistanceTraveled = 105.00000000000001
+                        AvgHeadingChange = 5.62
+
+                        # Reminder  
+                        - The target is ** MilkContainer**, described as:  Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:24 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 25 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: MilkContainer,
+                        Size: small(1*1=1 squares),
+                        Description: Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [86, 187]
+
+                        # RGB Captions
+                        Front = wall, stone, textured; wall is in the foreground; window with bars in the background  
+                        Left = trees, snow-covered, scattered; trees are in the background; sun in the sky  
+                        Right = silos, wooden, cylindrical; silos are in the center; windows with broken glass around  
+                        Down = wall, stone, weathered; wall is in the foreground; window with shutters in the background  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 49, 69]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 100, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [76, 71, 78]]
+
+                        DownDepth:
+                        [[27, 31, 37], [23, 24, 31], [22, 25, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-22.85, 185.84, -10.0), 18.66],
+    [(-22.85, 185.84, -10.0), -26.34],
+    [(-18.37, 183.62, -10.0), -26.34],
+    [(-20.59, 179.14, -10.0), -26.34],
+    [(-18.37, 183.62, -10.0), -26.34],
+    [(-18.37, 183.62, -10.0), -71.34],
+    [(-16.77, 178.88, -10.0), -71.34],
+    [(-21.51, 177.28, -10.0), -71.34],
+    [(-26.25, 175.68, -10.0), -71.34],
+    [(-21.51, 177.28, -10.0), -71.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 25
+                        DistanceTraveled = 110.00000000000001
+                        AvgHeadingChange = 5.4
+
+                        # Reminder  
+                        - The target is ** MilkContainer**, described as:  Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:25 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 26 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: MilkContainer,
+                        Size: small(1*1=1 squares),
+                        Description: Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [86, 187]
+
+                        # RGB Captions
+                        Front = windows, rusted frames; windows are in the foreground; brick ceiling above  
+                        Left = tree, white and yellow flowers; tree is in the foreground; red structure with a pattern on the right  
+                        Right = silos, wooden; silos are in the background; windows with rusted frames around  
+                        Down = wall, weathered stone; wall is in the foreground; window with broken glass  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 49, 69]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 100, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [76, 71, 78]]
+
+                        DownDepth:
+                        [[27, 31, 37], [23, 24, 31], [22, 25, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-22.85, 185.84, -10.0), -26.34],
+    [(-18.37, 183.62, -10.0), -26.34],
+    [(-20.59, 179.14, -10.0), -26.34],
+    [(-18.37, 183.62, -10.0), -26.34],
+    [(-18.37, 183.62, -10.0), -71.34],
+    [(-16.77, 178.88, -10.0), -71.34],
+    [(-21.51, 177.28, -10.0), -71.34],
+    [(-26.25, 175.68, -10.0), -71.34],
+    [(-21.51, 177.28, -10.0), -71.34],
+    [(-16.77, 178.88, -10.0), -71.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 26
+                        DistanceTraveled = 115.00000000000001
+                        AvgHeadingChange = 5.19
+
+                        # Reminder  
+                        - The target is ** MilkContainer**, described as:  Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:26 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 27 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: MilkContainer,
+                        Size: small(1*1=1 squares),
+                        Description: Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [86, 187]
+
+                        # RGB Captions
+                        Front = room with multiple windows, broken glass, trees growing inside; room is enclosed by walls with open windows  
+                        Left = building corner, rusted metal box, snow-covered ground; corner is in the foreground; trees in the background  
+                        Right = stone wall, textured surface, building in the background; wall is in the foreground  
+                        Down = ceiling with hanging objects, stone wall, shadows on the ground; ceiling is above; objects are hanging from the ceiling  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 49, 69]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 100, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [76, 71, 78]]
+
+                        DownDepth:
+                        [[27, 31, 37], [23, 24, 31], [22, 25, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-18.37, 183.62, -10.0), -26.34],
+    [(-20.59, 179.14, -10.0), -26.34],
+    [(-18.37, 183.62, -10.0), -26.34],
+    [(-18.37, 183.62, -10.0), -71.34],
+    [(-16.77, 178.88, -10.0), -71.34],
+    [(-21.51, 177.28, -10.0), -71.34],
+    [(-26.25, 175.68, -10.0), -71.34],
+    [(-21.51, 177.28, -10.0), -71.34],
+    [(-16.77, 178.88, -10.0), -71.34],
+    [(-12.04, 180.48, -10.0), -71.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 27
+                        DistanceTraveled = 120.00000000000001
+                        AvgHeadingChange = 5.0
+
+                        # Reminder  
+                        - The target is ** MilkContainer**, described as:  Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:27 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 28 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: MilkContainer,
+                        Size: small(1*1=1 squares),
+                        Description: Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [86, 187]
+
+                        # RGB Captions
+                        Front = windows, broken and rusted; windows are scattered on the ground; snow on the ground; trees with white and yellow flowers in the background  
+                        Left = building, old and damaged; building is in the foreground; snow on the ground; trees with white and yellow flowers in the background  
+                        Right = building, made of stone; building is in the foreground; trees with white and yellow flowers in the background  
+                        Down = ceiling, wooden; ceiling is in the foreground; shadows of branches on the wall  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 49, 69]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 100, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [76, 71, 78]]
+
+                        DownDepth:
+                        [[27, 31, 37], [23, 24, 31], [22, 25, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-20.59, 179.14, -10.0), -26.34],
+    [(-18.37, 183.62, -10.0), -26.34],
+    [(-18.37, 183.62, -10.0), -71.34],
+    [(-16.77, 178.88, -10.0), -71.34],
+    [(-21.51, 177.28, -10.0), -71.34],
+    [(-26.25, 175.68, -10.0), -71.34],
+    [(-21.51, 177.28, -10.0), -71.34],
+    [(-16.77, 178.88, -10.0), -71.34],
+    [(-12.04, 180.48, -10.0), -71.34],
+    [(-16.77, 178.88, -10.0), -71.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 28
+                        DistanceTraveled = 125.00000000000001
+                        AvgHeadingChange = 4.82
+
+                        # Reminder  
+                        - The target is ** MilkContainer**, described as:  Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:28 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 29 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: MilkContainer,
+                        Size: small(1*1=1 squares),
+                        Description: Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [86, 187]
+
+                        # RGB Captions
+                        Front = windows, old, rusted; windows are scattered on the ground; barrel and tree in the background  
+                        Left = building, old, brick; building is in the foreground; window frame hanging off the side  
+                        Right = buildings, stone, narrow alley; buildings are on either side of the alley; tree with white flowers in the background  
+                        Down = ceiling, wooden, damaged; ceiling is above; shadows on the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 49, 69]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 100, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [76, 71, 78]]
+
+                        DownDepth:
+                        [[27, 31, 37], [23, 24, 31], [22, 25, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-18.37, 183.62, -10.0), -26.34],
+    [(-18.37, 183.62, -10.0), -71.34],
+    [(-16.77, 178.88, -10.0), -71.34],
+    [(-21.51, 177.28, -10.0), -71.34],
+    [(-26.25, 175.68, -10.0), -71.34],
+    [(-21.51, 177.28, -10.0), -71.34],
+    [(-16.77, 178.88, -10.0), -71.34],
+    [(-12.04, 180.48, -10.0), -71.34],
+    [(-16.77, 178.88, -10.0), -71.34],
+    [(-15.17, 174.14, -10.0), -71.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 29
+                        DistanceTraveled = 130.00000000000003
+                        AvgHeadingChange = 4.66
+
+                        # Reminder  
+                        - The target is ** MilkContainer**, described as:  Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:29 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 30 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: MilkContainer,
+                        Size: small(1*1=1 squares),
+                        Description: Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [86, 187]
+
+                        # RGB Captions
+                        Front = windows, old, broken; windows are scattered on the ground; hut in the background  
+                        Left = building, damaged, stone walls; building is in the foreground; trees covered in snow in the background  
+                        Right = buildings, stone, multiple stories; buildings are in the foreground and background; trees with white flowers in the background  
+                        Down = ceiling, wooden, damaged; ceiling is above; shadows on the wall  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 49, 69]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 100, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [76, 71, 78]]
+
+                        DownDepth:
+                        [[27, 31, 37], [23, 24, 31], [22, 25, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-18.37, 183.62, -10.0), -71.34],
+    [(-16.77, 178.88, -10.0), -71.34],
+    [(-21.51, 177.28, -10.0), -71.34],
+    [(-26.25, 175.68, -10.0), -71.34],
+    [(-21.51, 177.28, -10.0), -71.34],
+    [(-16.77, 178.88, -10.0), -71.34],
+    [(-12.04, 180.48, -10.0), -71.34],
+    [(-16.77, 178.88, -10.0), -71.34],
+    [(-15.17, 174.14, -10.0), -71.34],
+    [(-13.57, 169.41, -10.0), -71.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 30
+                        DistanceTraveled = 135.00000000000003
+                        AvgHeadingChange = 4.5
+
+                        # Reminder  
+                        - The target is ** MilkContainer**, described as:  Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:30 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 31 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: MilkContainer,
+                        Size: small(1*1=1 squares),
+                        Description: Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [86, 187]
+
+                        # RGB Captions
+                        Front = windows, damaged, snow-covered ground; windows are scattered; hut in the background  
+                        Left = building, old, snow-covered ground; window is open; trees in the background  
+                        Right = buildings, stone walls, narrow alley; buildings are on both sides; trees at the end  
+                        Down = ceiling, wooden, broken pieces; broken pieces are hanging from the ceiling  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 49, 69]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 100, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [76, 71, 78]]
+
+                        DownDepth:
+                        [[27, 31, 37], [23, 24, 31], [22, 25, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-16.77, 178.88, -10.0), -71.34],
+    [(-21.51, 177.28, -10.0), -71.34],
+    [(-26.25, 175.68, -10.0), -71.34],
+    [(-21.51, 177.28, -10.0), -71.34],
+    [(-16.77, 178.88, -10.0), -71.34],
+    [(-12.04, 180.48, -10.0), -71.34],
+    [(-16.77, 178.88, -10.0), -71.34],
+    [(-15.17, 174.14, -10.0), -71.34],
+    [(-13.57, 169.41, -10.0), -71.34],
+    [(-11.97, 164.67, -10.0), -71.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 31
+                        DistanceTraveled = 140.00000000000003
+                        AvgHeadingChange = 4.35
+
+                        # Reminder  
+                        - The target is ** MilkContainer**, described as:  Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:31 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 32 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: MilkContainer,
+                        Size: small(1*1=1 squares),
+                        Description: Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [86, 187]
+
+                        # RGB Captions
+                        Front = windows, old, rusted; windows are scattered in the foreground; snow-covered ground  
+                        Left = building, damaged, brick walls; building is in the foreground; trees with snow in the background  
+                        Right = building, stone walls, aged; building is in the foreground; trees with white flowers in the background  
+                        Down = ceiling, wooden, damaged; ceiling is in the foreground; shadows on the wall  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 49, 69]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 100, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [76, 71, 78]]
+
+                        DownDepth:
+                        [[27, 31, 37], [23, 24, 31], [22, 25, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-21.51, 177.28, -10.0), -71.34],
+    [(-26.25, 175.68, -10.0), -71.34],
+    [(-21.51, 177.28, -10.0), -71.34],
+    [(-16.77, 178.88, -10.0), -71.34],
+    [(-12.04, 180.48, -10.0), -71.34],
+    [(-16.77, 178.88, -10.0), -71.34],
+    [(-15.17, 174.14, -10.0), -71.34],
+    [(-13.57, 169.41, -10.0), -71.34],
+    [(-11.97, 164.67, -10.0), -71.34],
+    [(-10.37, 159.93, -10.0), -71.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 32
+                        DistanceTraveled = 145.00000000000003
+                        AvgHeadingChange = 4.22
+
+                        # Reminder  
+                        - The target is ** MilkContainer**, described as:  Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:32 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 33 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: MilkContainer,
+                        Size: small(1*1=1 squares),
+                        Description: Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [86, 187]
+
+                        # RGB Captions
+                        Front = windows, rusted frames; windows are scattered on the ground; snow-covered ground and trees  
+                        Left = building, stone walls; building is in the foreground; snow-covered ground and trees  
+                        Right = buildings, stone walls; buildings are in the background; trees with white and yellow flowers  
+                        Down = ceiling, wooden planks; ceiling is in the foreground; shadows on the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 49, 69]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 100, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [76, 71, 78]]
+
+                        DownDepth:
+                        [[27, 31, 37], [23, 24, 31], [22, 25, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-26.25, 175.68, -10.0), -71.34],
+    [(-21.51, 177.28, -10.0), -71.34],
+    [(-16.77, 178.88, -10.0), -71.34],
+    [(-12.04, 180.48, -10.0), -71.34],
+    [(-16.77, 178.88, -10.0), -71.34],
+    [(-15.17, 174.14, -10.0), -71.34],
+    [(-13.57, 169.41, -10.0), -71.34],
+    [(-11.97, 164.67, -10.0), -71.34],
+    [(-10.37, 159.93, -10.0), -71.34],
+    [(-8.77, 155.19, -10.0), -71.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 33
+                        DistanceTraveled = 150.00000000000003
+                        AvgHeadingChange = 4.09
+
+                        # Reminder  
+                        - The target is ** MilkContainer**, described as:  Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:33 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 34 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: MilkContainer,
+                        Size: small(1*1=1 squares),
+                        Description: Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [86, 187]
+
+                        # RGB Captions
+                        Front = windows, old, rusted; windows are hanging in the air; snowy ground  
+                        Left = building, old, brick; building is in the foreground; snowy ground and trees  
+                        Right = buildings, stone, multi-story; buildings are in the foreground and background; trees with white flowers  
+                        Down = ceiling, wooden, damaged; ceiling is above; shadows on the wall  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 49, 69]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 100, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [76, 71, 78]]
+
+                        DownDepth:
+                        [[27, 31, 37], [23, 24, 31], [22, 25, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-21.51, 177.28, -10.0), -71.34],
+    [(-16.77, 178.88, -10.0), -71.34],
+    [(-12.04, 180.48, -10.0), -71.34],
+    [(-16.77, 178.88, -10.0), -71.34],
+    [(-15.17, 174.14, -10.0), -71.34],
+    [(-13.57, 169.41, -10.0), -71.34],
+    [(-11.97, 164.67, -10.0), -71.34],
+    [(-10.37, 159.93, -10.0), -71.34],
+    [(-8.77, 155.19, -10.0), -71.34],
+    [(-7.17, 150.46, -10.0), -71.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 34
+                        DistanceTraveled = 155.00000000000003
+                        AvgHeadingChange = 3.97
+
+                        # Reminder  
+                        - The target is ** MilkContainer**, described as:  Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:34 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 35 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: MilkContainer,
+                        Size: small(1*1=1 squares),
+                        Description: Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [86, 187]
+
+                        # RGB Captions
+                        Front = windows, rusted frames, snow-covered ground; windows are scattered around  
+                        Left = building, rusted metal, snow-covered ground; building is in the foreground  
+                        Right = building, stone wall, snow-covered ground; building is in the foreground  
+                        Down = ceiling, wooden planks, shadows on the ground; ceiling is above  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 49, 69]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 100, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [76, 71, 78]]
+
+                        DownDepth:
+                        [[27, 31, 37], [23, 24, 31], [22, 25, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-16.77, 178.88, -10.0), -71.34],
+    [(-12.04, 180.48, -10.0), -71.34],
+    [(-16.77, 178.88, -10.0), -71.34],
+    [(-15.17, 174.14, -10.0), -71.34],
+    [(-13.57, 169.41, -10.0), -71.34],
+    [(-11.97, 164.67, -10.0), -71.34],
+    [(-10.37, 159.93, -10.0), -71.34],
+    [(-8.77, 155.19, -10.0), -71.34],
+    [(-7.17, 150.46, -10.0), -71.34],
+    [(-2.44, 152.06, -10.0), -71.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 35
+                        DistanceTraveled = 160.00000000000003
+                        AvgHeadingChange = 3.86
+
+                        # Reminder  
+                        - The target is ** MilkContainer**, described as:  Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:35 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 36 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: MilkContainer,
+                        Size: small(1*1=1 squares),
+                        Description: Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [86, 187]
+
+                        # RGB Captions
+                        Front = windows, old, rusted; windows are hanging in the air; tree with white flowers in the background  
+                        Left = building, old, brick; building is in the foreground; trees with white flowers in the background  
+                        Right = building, stone, multi-story; building is in the foreground; trees with white flowers in the background  
+                        Down = ceiling, wooden, damaged; ceiling is above; shadows on the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 49, 69]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 100, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [76, 71, 78]]
+
+                        DownDepth:
+                        [[27, 31, 37], [23, 24, 31], [22, 25, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-12.04, 180.48, -10.0), -71.34],
+    [(-16.77, 178.88, -10.0), -71.34],
+    [(-15.17, 174.14, -10.0), -71.34],
+    [(-13.57, 169.41, -10.0), -71.34],
+    [(-11.97, 164.67, -10.0), -71.34],
+    [(-10.37, 159.93, -10.0), -71.34],
+    [(-8.77, 155.19, -10.0), -71.34],
+    [(-7.17, 150.46, -10.0), -71.34],
+    [(-2.44, 152.06, -10.0), -71.34],
+    [(-0.84, 147.32, -10.0), -71.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 36
+                        DistanceTraveled = 165.00000000000003
+                        AvgHeadingChange = 3.75
+
+                        # Reminder  
+                        - The target is ** MilkContainer**, described as:  Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:36 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 37 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: MilkContainer,
+                        Size: small(1*1=1 squares),
+                        Description: Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [86, 187]
+
+                        # RGB Captions
+                        Front = windows, floating, snowy environment; windows are scattered; stone ceiling above  
+                        Left = building, old, snow-covered; building is to the right; trees with white flowers in the background  
+                        Right = stone wall, textured, building with balconies; wall is in the foreground; building is in the background  
+                        Down = ceiling, wooden, hanging objects; ceiling is above; objects are hanging from the ceiling  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 49, 69]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 100, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [76, 71, 78]]
+
+                        DownDepth:
+                        [[27, 31, 37], [23, 24, 31], [22, 25, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-16.77, 178.88, -10.0), -71.34],
+    [(-15.17, 174.14, -10.0), -71.34],
+    [(-13.57, 169.41, -10.0), -71.34],
+    [(-11.97, 164.67, -10.0), -71.34],
+    [(-10.37, 159.93, -10.0), -71.34],
+    [(-8.77, 155.19, -10.0), -71.34],
+    [(-7.17, 150.46, -10.0), -71.34],
+    [(-2.44, 152.06, -10.0), -71.34],
+    [(-0.84, 147.32, -10.0), -71.34],
+    [(0.76, 142.58, -10.0), -71.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 37
+                        DistanceTraveled = 170.00000000000003
+                        AvgHeadingChange = 3.65
+
+                        # Reminder  
+                        - The target is ** MilkContainer**, described as:  Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:37 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 38 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: MilkContainer,
+                        Size: small(1*1=1 squares),
+                        Description: Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [86, 187]
+
+                        # RGB Captions
+                        Front = windows, broken and rusted; windows are in the background; trees with white and yellow flowers  
+                        Left = building, brick wall; building is in the foreground; window with red pattern  
+                        Right = wall, stone texture; wall is in the foreground; metal beam  
+                        Down = ceiling, wooden planks; ceiling is in the foreground; shadows on the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 49, 69]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 100, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [76, 71, 78]]
+
+                        DownDepth:
+                        [[27, 31, 37], [23, 24, 31], [22, 25, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-15.17, 174.14, -10.0), -71.34],
+    [(-13.57, 169.41, -10.0), -71.34],
+    [(-11.97, 164.67, -10.0), -71.34],
+    [(-10.37, 159.93, -10.0), -71.34],
+    [(-8.77, 155.19, -10.0), -71.34],
+    [(-7.17, 150.46, -10.0), -71.34],
+    [(-2.44, 152.06, -10.0), -71.34],
+    [(-0.84, 147.32, -10.0), -71.34],
+    [(0.76, 142.58, -10.0), -71.34],
+    [(2.36, 137.85, -10.0), -71.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 38
+                        DistanceTraveled = 175.00000000000003
+                        AvgHeadingChange = 3.55
+
+                        # Reminder  
+                        - The target is ** MilkContainer**, described as:  Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:38 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 39 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: MilkContainer,
+                        Size: small(1*1=1 squares),
+                        Description: Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [86, 187]
+
+                        # RGB Captions
+                        Front = buildings, multiple stories, light brown; buildings are in the background; trees with white flowers and snow on the ground  
+                        Left = stone wall, old, with rusted metal; wall is in the foreground; building in the background  
+                        Right = elevator, old, wooden; elevator is attached to the building; snow on the ground  
+                        Down = roof, damaged, with debris; roof is in the foreground; shadows of trees on the wall  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 49, 69]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 100, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [76, 71, 78]]
+
+                        DownDepth:
+                        [[27, 31, 37], [23, 24, 31], [22, 25, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-13.57, 169.41, -10.0), -71.34],
+    [(-11.97, 164.67, -10.0), -71.34],
+    [(-10.37, 159.93, -10.0), -71.34],
+    [(-8.77, 155.19, -10.0), -71.34],
+    [(-7.17, 150.46, -10.0), -71.34],
+    [(-2.44, 152.06, -10.0), -71.34],
+    [(-0.84, 147.32, -10.0), -71.34],
+    [(0.76, 142.58, -10.0), -71.34],
+    [(2.36, 137.85, -10.0), -71.34],
+    [(2.36, 137.85, -10.0), -116.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 39
+                        DistanceTraveled = 175.00000000000003
+                        AvgHeadingChange = 4.62
+
+                        # Reminder  
+                        - The target is ** MilkContainer**, described as:  Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:39 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 40 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: MilkContainer,
+                        Size: small(1*1=1 squares),
+                        Description: Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [86, 187]
+
+                        # RGB Captions
+                        Front = buildings, residential, multiple stories; buildings are in the background; trees with white flowers and snow on the ground  
+                        Left = brick wall, weathered, tan color; wall is in the foreground; part of a building visible  
+                        Right = balcony, wooden, rusted; balcony is in the foreground; snow on the ground below  
+                        Down = building, old, broken windows; building is in the foreground; shadows on the walls  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 49, 69]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 100, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [76, 71, 78]]
+
+                        DownDepth:
+                        [[27, 31, 37], [23, 24, 31], [22, 25, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-11.97, 164.67, -10.0), -71.34],
+    [(-10.37, 159.93, -10.0), -71.34],
+    [(-8.77, 155.19, -10.0), -71.34],
+    [(-7.17, 150.46, -10.0), -71.34],
+    [(-2.44, 152.06, -10.0), -71.34],
+    [(-0.84, 147.32, -10.0), -71.34],
+    [(0.76, 142.58, -10.0), -71.34],
+    [(2.36, 137.85, -10.0), -71.34],
+    [(2.36, 137.85, -10.0), -116.34],
+    [(0.14, 133.36, -10.0), -116.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 40
+                        DistanceTraveled = 180.00000000000003
+                        AvgHeadingChange = 4.5
+
+                        # Reminder  
+                        - The target is ** MilkContainer**, described as:  Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:40 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 41 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: MilkContainer,
+                        Size: small(1*1=1 squares),
+                        Description: Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [86, 187]
+
+                        # RGB Captions
+                        Front = buildings, brick, multi-story; buildings are in the background; trees with white flowers in the foreground  
+                        Left = wall, brick, weathered; wall fills the frame  
+                        Right = carpet, red, patterned; carpet is in the foreground; snowy landscape in the background  
+                        Down = window, old, broken; window is in the foreground; shadow on the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 49, 69]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 100, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [76, 71, 78]]
+
+                        DownDepth:
+                        [[27, 31, 37], [23, 24, 31], [22, 25, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-10.37, 159.93, -10.0), -71.34],
+    [(-8.77, 155.19, -10.0), -71.34],
+    [(-7.17, 150.46, -10.0), -71.34],
+    [(-2.44, 152.06, -10.0), -71.34],
+    [(-0.84, 147.32, -10.0), -71.34],
+    [(0.76, 142.58, -10.0), -71.34],
+    [(2.36, 137.85, -10.0), -71.34],
+    [(2.36, 137.85, -10.0), -116.34],
+    [(0.14, 133.36, -10.0), -116.34],
+    [(-2.07, 128.88, -10.0), -116.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 41
+                        DistanceTraveled = 185.00000000000003
+                        AvgHeadingChange = 4.39
+
+                        # Reminder  
+                        - The target is ** MilkContainer**, described as:  Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:41 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 42 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: MilkContainer,
+                        Size: small(1*1=1 squares),
+                        Description: Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [86, 187]
+
+                        # RGB Captions
+                        Front = apartment buildings, multiple stories; snow-covered ground; buildings are in the background; benches and tables in the courtyard  
+                        Left = stone wall, brown with dark mortar; wall fills the entire frame  
+                        Right = red curtain, partially open; snowy landscape with trees and buildings in the background; curtain is in the foreground  
+                        Down = broken window, wooden frame; stone wall; window is in the foreground; shadows on the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 49, 69]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 100, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [76, 71, 78]]
+
+                        DownDepth:
+                        [[27, 31, 37], [23, 24, 31], [22, 25, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-8.77, 155.19, -10.0), -71.34],
+    [(-7.17, 150.46, -10.0), -71.34],
+    [(-2.44, 152.06, -10.0), -71.34],
+    [(-0.84, 147.32, -10.0), -71.34],
+    [(0.76, 142.58, -10.0), -71.34],
+    [(2.36, 137.85, -10.0), -71.34],
+    [(2.36, 137.85, -10.0), -116.34],
+    [(0.14, 133.36, -10.0), -116.34],
+    [(-2.07, 128.88, -10.0), -116.34],
+    [(-4.29, 124.4, -10.0), -116.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 42
+                        DistanceTraveled = 190.00000000000003
+                        AvgHeadingChange = 4.29
+
+                        # Reminder  
+                        - The target is ** MilkContainer**, described as:  Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:42 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 43 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: MilkContainer,
+                        Size: small(1*1=1 squares),
+                        Description: Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [86, 187]
+
+                        # RGB Captions
+                        Front = buildings, stone, multiple stories; buildings are in the background; trees with white flowers in the foreground  
+                        Left = wall, stone, weathered; wall fills the image  
+                        Right = tree, snow-covered, small; tree is in the background; barrel and crate on the ground  
+                        Down = window, broken, old; window is on the building; shadows on the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 49, 69]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 100, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [76, 71, 78]]
+
+                        DownDepth:
+                        [[27, 31, 37], [23, 24, 31], [22, 25, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-7.17, 150.46, -10.0), -71.34],
+    [(-2.44, 152.06, -10.0), -71.34],
+    [(-0.84, 147.32, -10.0), -71.34],
+    [(0.76, 142.58, -10.0), -71.34],
+    [(2.36, 137.85, -10.0), -71.34],
+    [(2.36, 137.85, -10.0), -116.34],
+    [(0.14, 133.36, -10.0), -116.34],
+    [(-2.07, 128.88, -10.0), -116.34],
+    [(-4.29, 124.4, -10.0), -116.34],
+    [(-6.51, 119.92, -10.0), -116.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 43
+                        DistanceTraveled = 195.00000000000003
+                        AvgHeadingChange = 4.19
+
+                        # Reminder  
+                        - The target is ** MilkContainer**, described as:  Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:43 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 44 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: MilkContainer,
+                        Size: small(1*1=1 squares),
+                        Description: Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [86, 187]
+
+                        # RGB Captions
+                        Front = buildings, multi-story, brick; buildings are in the background; trees with white flowers in the foreground  
+                        Left = wall, stone, brown; wall fills the entire image; stones are irregularly shaped  
+                        Right = tree, snow-covered, small; tree is in the background; window box with red decorations in the foreground  
+                        Down = window, broken, old; window is in the foreground; shadow of a tree on the wall  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 49, 69]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 100, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [76, 71, 78]]
+
+                        DownDepth:
+                        [[27, 31, 37], [23, 24, 31], [22, 25, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-2.44, 152.06, -10.0), -71.34],
+    [(-0.84, 147.32, -10.0), -71.34],
+    [(0.76, 142.58, -10.0), -71.34],
+    [(2.36, 137.85, -10.0), -71.34],
+    [(2.36, 137.85, -10.0), -116.34],
+    [(0.14, 133.36, -10.0), -116.34],
+    [(-2.07, 128.88, -10.0), -116.34],
+    [(-4.29, 124.4, -10.0), -116.34],
+    [(-6.51, 119.92, -10.0), -116.34],
+    [(-2.03, 117.7, -10.0), -116.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 44
+                        DistanceTraveled = 200.00000000000003
+                        AvgHeadingChange = 4.09
+
+                        # Reminder  
+                        - The target is ** MilkContainer**, described as:  Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:44 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 45 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: MilkContainer,
+                        Size: small(1*1=1 squares),
+                        Description: Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [86, 187]
+
+                        # RGB Captions
+                        Front = buildings, brick, multiple stories; buildings are in the background; snow-covered ground in the foreground  
+                        Left = wall, stone, brown; wall fills the entire image  
+                        Right = bench, wooden, snow-covered; bench is in the foreground; trees with white flowers in the background  
+                        Down = window, broken, in old building; window is in the foreground; shadow of tree on the wall  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 49, 69]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 100, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [76, 71, 78]]
+
+                        DownDepth:
+                        [[27, 31, 37], [23, 24, 31], [22, 25, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-0.84, 147.32, -10.0), -71.34],
+    [(0.76, 142.58, -10.0), -71.34],
+    [(2.36, 137.85, -10.0), -71.34],
+    [(2.36, 137.85, -10.0), -116.34],
+    [(0.14, 133.36, -10.0), -116.34],
+    [(-2.07, 128.88, -10.0), -116.34],
+    [(-4.29, 124.4, -10.0), -116.34],
+    [(-6.51, 119.92, -10.0), -116.34],
+    [(-2.03, 117.7, -10.0), -116.34],
+    [(-4.25, 113.22, -10.0), -116.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 45
+                        DistanceTraveled = 205.00000000000003
+                        AvgHeadingChange = 4.0
+
+                        # Reminder  
+                        - The target is ** MilkContainer**, described as:  Cylindrical shapes in clustered arrangement, blue metallic texture with domed tops and reinforced seams, likely used for storing or transporting dairy liquids.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:45 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

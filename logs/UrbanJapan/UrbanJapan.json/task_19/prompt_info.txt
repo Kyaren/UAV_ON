@@ -1,0 +1,504 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:TicketMachine,
+                        Size:small(1.25*1.75=2.19 squares),
+                        Description:Rectangular geometric form, light gray body with yellow top section, ticket slot and screen interface on front panel, used for purchasing transit tickets.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-51, 50]  
+                        **Y Range**: [min_y, max_y] = [-49, 52]
+
+                        # RGB Captions
+                        Front = metal scaffolding, green netting; scaffolding is on the left; buildings with illuminated signs in the background  
+                        Left = store building, gray facade; store sign lit up; building stands in the foreground  
+                        Right = tall buildings, illuminated signs; buildings are in the background; street in the foreground  
+                        Down = white van, parked; van is in the foreground; road markings and Chinese characters on the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[29, 100, 100], [22, 72, 100], [22, 26, 35]]
+
+                        LeftDepth:
+                        [[100, 93, 29], [47, 61, 24], [35, 26, 25]]
+
+                        RightDepth:
+                        [[100, 100, 26], [100, 80, 32], [35, 26, 31]]
+
+                        DownDepth:
+                        [[14, 11, 14], [11, 9, 11], [14, 11, 14]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-0.42, 1.69, -6.6), 58.06],
+    [(-0.42, 1.69, -6.6), 58.06],
+    [(-0.42, 1.69, -6.6), 58.06],
+    [(-0.42, 1.69, -6.6), 58.06],
+    [(-0.42, 1.69, -6.6), 58.06],
+    [(-0.42, 1.69, -6.6), 58.06],
+    [(-0.42, 1.69, -6.6), 58.06],
+    [(-0.42, 1.69, -6.6), 58.06],
+    [(-0.42, 1.69, -6.6), 58.06],
+    [(-0.42, 1.69, -6.6), 58.06],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **TicketMachine**, described as: Rectangular geometric form, light gray body with yellow top section, ticket slot and screen interface on front panel, used for purchasing transit tickets.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 1 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:TicketMachine,
+                        Size:small(1.25*1.75=2.19 squares),
+                        Description:Rectangular geometric form, light gray body with yellow top section, ticket slot and screen interface on front panel, used for purchasing transit tickets.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-51, 50]  
+                        **Y Range**: [min_y, max_y] = [-49, 52]
+
+                        # RGB Captions
+                        Front = multi-story buildings, illuminated signs; buildings in the background; road with orange lines  
+                        Left = store building, neon sign; scaffolding on the left; red traffic light in the background  
+                        Right = high-rise buildings, illuminated windows; buildings in the background; road with white markings  
+                        Down = road surface, orange lines; Chinese characters painted; truck partially visible on the left  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[40, 100, 100], [33, 100, 100], [28, 29, 38]]
+
+                        LeftDepth:
+                        [[100, 100, 42], [69, 58, 35], [34, 26, 28]]
+
+                        RightDepth:
+                        [[100, 100, 23], [100, 77, 53], [38, 27, 34]]
+
+                        DownDepth:
+                        [[14, 12, 14], [11, 9, 12], [14, 11, 14]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-0.42, 1.69, -6.6), 58.06],
+    [(2.23, 5.93, -6.6), 58.06],
+    [(2.23, 5.93, -6.6), 58.06],
+    [(2.23, 5.93, -6.6), 58.06],
+    [(2.23, 5.93, -6.6), 58.06],
+    [(2.23, 5.93, -6.6), 58.06],
+    [(2.23, 5.93, -6.6), 58.06],
+    [(2.23, 5.93, -6.6), 58.06],
+    [(2.23, 5.93, -6.6), 58.06],
+    [(2.23, 5.93, -6.6), 58.06],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 1
+                        DistanceTraveled = 5.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **TicketMachine**, described as: Rectangular geometric form, light gray body with yellow top section, ticket slot and screen interface on front panel, used for purchasing transit tickets.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:1 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 2 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:TicketMachine,
+                        Size:small(1.25*1.75=2.19 squares),
+                        Description:Rectangular geometric form, light gray body with yellow top section, ticket slot and screen interface on front panel, used for purchasing transit tickets.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-51, 50]  
+                        **Y Range**: [min_y, max_y] = [-49, 52]
+
+                        # RGB Captions
+                        Front = multi-story buildings, illuminated signs; buildings in the background; street with speed limit sign  
+                        Left = store building, scaffolding; store sign lit; scaffolding in the foreground  
+                        Right = parked cars, multi-story buildings; buildings in the background; car on the street  
+                        Down = asphalt road, orange lines; Chinese characters painted; coin on the road  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[33, 100, 100], [30, 100, 100], [28, 27, 35]]
+
+                        LeftDepth:
+                        [[100, 41, 22], [71, 31, 16], [36, 27, 17]]
+
+                        RightDepth:
+                        [[100, 100, 27], [100, 100, 33], [35, 26, 32]]
+
+                        DownDepth:
+                        [[14, 12, 14], [12, 9, 11], [13, 12, 14]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-0.42, 1.69, -6.6), 58.06],
+    [(2.23, 5.93, -6.6), 58.06],
+    [(4.87, 10.18, -6.6), 58.06],
+    [(4.87, 10.18, -6.6), 58.06],
+    [(4.87, 10.18, -6.6), 58.06],
+    [(4.87, 10.18, -6.6), 58.06],
+    [(4.87, 10.18, -6.6), 58.06],
+    [(4.87, 10.18, -6.6), 58.06],
+    [(4.87, 10.18, -6.6), 58.06],
+    [(4.87, 10.18, -6.6), 58.06],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 2
+                        DistanceTraveled = 10.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **TicketMachine**, described as: Rectangular geometric form, light gray body with yellow top section, ticket slot and screen interface on front panel, used for purchasing transit tickets.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:2 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 3 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:TicketMachine,
+                        Size:small(1.25*1.75=2.19 squares),
+                        Description:Rectangular geometric form, light gray body with yellow top section, ticket slot and screen interface on front panel, used for purchasing transit tickets.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-51, 50]  
+                        **Y Range**: [min_y, max_y] = [-49, 52]
+
+                        # RGB Captions
+                        Front = hotel building, illuminated sign; street in the foreground; car driving away  
+                        Left = scaffolding structure, metal frame; store sign lit up; scaffolding in the foreground  
+                        Right = cityscape, multiple buildings; traffic lights and signs; van parked on the side of the road  
+                        Down = asphalt road, wet surface; double yellow lines; manhole cover near the edge  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[28, 100, 100], [25, 58, 100], [25, 28, 36]]
+
+                        LeftDepth:
+                        [[100, 28, 17], [58, 21, 13], [35, 20, 15]]
+
+                        RightDepth:
+                        [[100, 100, 31], [100, 100, 35], [36, 27, 30]]
+
+                        DownDepth:
+                        [[14, 12, 14], [12, 9, 12], [14, 11, 14]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-0.42, 1.69, -6.6), 58.06],
+    [(2.23, 5.93, -6.6), 58.06],
+    [(4.87, 10.18, -6.6), 58.06],
+    [(7.52, 14.42, -6.6), 58.06],
+    [(7.52, 14.42, -6.6), 58.06],
+    [(7.52, 14.42, -6.6), 58.06],
+    [(7.52, 14.42, -6.6), 58.06],
+    [(7.52, 14.42, -6.6), 58.06],
+    [(7.52, 14.42, -6.6), 58.06],
+    [(7.52, 14.42, -6.6), 58.06],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 3
+                        DistanceTraveled = 15.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **TicketMachine**, described as: Rectangular geometric form, light gray body with yellow top section, ticket slot and screen interface on front panel, used for purchasing transit tickets.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:3 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 4 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:TicketMachine,
+                        Size:small(1.25*1.75=2.19 squares),
+                        Description:Rectangular geometric form, light gray body with yellow top section, ticket slot and screen interface on front panel, used for purchasing transit tickets.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-51, 50]  
+                        **Y Range**: [min_y, max_y] = [-49, 52]
+
+                        # RGB Captions
+                        Front = hotel building, illuminated sign; street in the foreground; evening setting  
+                        Left = scaffolding structure, metal frame; digital clock on the side; nighttime setting  
+                        Right = cityscape, multiple buildings; traffic lights and signs; evening setting  
+                        Down = wet pavement, reflective surface; orange lines painted; light source above  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[20, 100, 100], [23, 53, 100], [24, 27, 35]]
+
+                        LeftDepth:
+                        [[100, 22, 14], [58, 16, 11], [36, 17, 13]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 66], [35, 26, 33]]
+
+                        DownDepth:
+                        [[14, 12, 14], [12, 9, 11], [14, 12, 14]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-0.42, 1.69, -6.6), 58.06],
+    [(2.23, 5.93, -6.6), 58.06],
+    [(4.87, 10.18, -6.6), 58.06],
+    [(7.52, 14.42, -6.6), 58.06],
+    [(10.16, 18.66, -6.6), 58.06],
+    [(10.16, 18.66, -6.6), 58.06],
+    [(10.16, 18.66, -6.6), 58.06],
+    [(10.16, 18.66, -6.6), 58.06],
+    [(10.16, 18.66, -6.6), 58.06],
+    [(10.16, 18.66, -6.6), 58.06],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 4
+                        DistanceTraveled = 20.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **TicketMachine**, described as: Rectangular geometric form, light gray body with yellow top section, ticket slot and screen interface on front panel, used for purchasing transit tickets.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:4 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 5 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:TicketMachine,
+                        Size:small(1.25*1.75=2.19 squares),
+                        Description:Rectangular geometric form, light gray body with yellow top section, ticket slot and screen interface on front panel, used for purchasing transit tickets.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-51, 50]  
+                        **Y Range**: [min_y, max_y] = [-49, 52]
+
+                        # RGB Captions
+                        Front = hotel sign, illuminated, white; sign is on the building; building in the foreground; street next to the building  
+                        Left = construction scaffolding, metal, green; scaffolding covers the building; building in the background  
+                        Right = cityscape, nighttime, urban; buildings with lights; intersection with traffic lights; view from above  
+                        Down = wet pavement, reflective, dark; puddle of water; number 30 on the pavement; light reflecting on the wet surface  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[18, 44, 100], [20, 48, 100], [20, 27, 38]]
+
+                        LeftDepth:
+                        [[70, 16, 15], [60, 13, 15], [33, 14, 16]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 72], [38, 28, 35]]
+
+                        DownDepth:
+                        [[13, 12, 14], [11, 9, 12], [14, 12, 14]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-0.42, 1.69, -6.6), 58.06],
+    [(2.23, 5.93, -6.6), 58.06],
+    [(4.87, 10.18, -6.6), 58.06],
+    [(7.52, 14.42, -6.6), 58.06],
+    [(10.16, 18.66, -6.6), 58.06],
+    [(12.81, 22.91, -6.6), 58.06],
+    [(12.81, 22.91, -6.6), 58.06],
+    [(12.81, 22.91, -6.6), 58.06],
+    [(12.81, 22.91, -6.6), 58.06],
+    [(12.81, 22.91, -6.6), 58.06],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 5
+                        DistanceTraveled = 25.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **TicketMachine**, described as: Rectangular geometric form, light gray body with yellow top section, ticket slot and screen interface on front panel, used for purchasing transit tickets.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:5 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 6 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:TicketMachine,
+                        Size:small(1.25*1.75=2.19 squares),
+                        Description:Rectangular geometric form, light gray body with yellow top section, ticket slot and screen interface on front panel, used for purchasing transit tickets.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-51, 50]  
+                        **Y Range**: [min_y, max_y] = [-49, 52]
+
+                        # RGB Captions
+                        Front = neon sign, illuminated; sign is on the building; car on the road  
+                        Left = pipes, metallic; pipes are in the foreground; wall in the background  
+                        Right = buildings, lit up; street with markings; traffic lights above the street  
+                        Down = tiles, square; floor is wet; trash can near the edge  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[13, 24, 100], [15, 20, 100], [16, 20, 34]]
+
+                        LeftDepth:
+                        [[26, 13, 12], [22, 14, 12], [21, 15, 14]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 80], [34, 26, 33]]
+
+                        DownDepth:
+                        [[14, 11, 14], [11, 9, 11], [14, 12, 14]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-0.42, 1.69, -6.6), 58.06],
+    [(2.23, 5.93, -6.6), 58.06],
+    [(4.87, 10.18, -6.6), 58.06],
+    [(7.52, 14.42, -6.6), 58.06],
+    [(10.16, 18.66, -6.6), 58.06],
+    [(12.81, 22.91, -6.6), 58.06],
+    [(15.45, 27.15, -6.6), 58.06],
+    [(15.45, 27.15, -6.6), 58.06],
+    [(15.45, 27.15, -6.6), 58.06],
+    [(15.45, 27.15, -6.6), 58.06],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 6
+                        DistanceTraveled = 30.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **TicketMachine**, described as: Rectangular geometric form, light gray body with yellow top section, ticket slot and screen interface on front panel, used for purchasing transit tickets.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:6 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 7 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:TicketMachine,
+                        Size:small(1.25*1.75=2.19 squares),
+                        Description:Rectangular geometric form, light gray body with yellow top section, ticket slot and screen interface on front panel, used for purchasing transit tickets.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-51, 50]  
+                        **Y Range**: [min_y, max_y] = [-49, 52]
+
+                        # RGB Captions
+                        Front = tall buildings, illuminated; street in the foreground; traffic lights glowing green; buildings stand in the background  
+                        Left = building corner, dark; window with light; building occupies the left side of the image  
+                        Right = cityscape, evening; multiple buildings lit up; streets with vehicles; buildings surround the area  
+                        Down = fuel pumps, idle; green indicator lights; pumps aligned in a row; canopy overhead  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[15, 13, 100], [13, 14, 100], [14, 16, 36]]
+
+                        LeftDepth:
+                        [[13, 12, 10], [15, 15, 10], [16, 16, 12]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 82], [36, 27, 33]]
+
+                        DownDepth:
+                        [[13, 11, 14], [11, 9, 12], [13, 11, 14]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-0.42, 1.69, -6.6), 58.06],
+    [(2.23, 5.93, -6.6), 58.06],
+    [(4.87, 10.18, -6.6), 58.06],
+    [(7.52, 14.42, -6.6), 58.06],
+    [(10.16, 18.66, -6.6), 58.06],
+    [(12.81, 22.91, -6.6), 58.06],
+    [(15.45, 27.15, -6.6), 58.06],
+    [(18.1, 31.39, -6.6), 58.06],
+    [(18.1, 31.39, -6.6), 58.06],
+    [(18.1, 31.39, -6.6), 58.06],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 7
+                        DistanceTraveled = 35.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **TicketMachine**, described as: Rectangular geometric form, light gray body with yellow top section, ticket slot and screen interface on front panel, used for purchasing transit tickets.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:7 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

@@ -1,0 +1,504 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Motorcycle,
+                        Size:small(2.25*0.75=1.69 squares),
+                        Description:Slim, two-wheeled form with a retro design, olive green exterior with black detailing, high handlebars and exposed engine components, classic cruiser style.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-40, 61]  
+                        **Y Range**: [min_y, max_y] = [60, 161]
+
+                        # RGB Captions
+                        Front = concrete pillars, large; pillars in the foreground; bridge structure above  
+                        Left = skyscrapers, tall; buildings lit up; view from below through a gap  
+                        Right = crosswalk, white stripes; street signs; nighttime urban scene  
+                        Down = staircase, metal steps; staircase in the foreground; dark background  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 57, 70], [78, 76, 50], [39, 26, 12]]
+
+                        LeftDepth:
+                        [[8, 9, 14], [100, 73, 37], [100, 87, 37]]
+
+                        RightDepth:
+                        [[100, 100, 80], [24, 41, 58], [10, 10, 16]]
+
+                        DownDepth:
+                        [[24, 12, 8], [41, 13, 8], [85, 22, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(10.94, 110.09, -6.6), -166.44],
+    [(10.94, 110.09, -6.6), -166.44],
+    [(10.94, 110.09, -6.6), -166.44],
+    [(10.94, 110.09, -6.6), -166.44],
+    [(10.94, 110.09, -6.6), -166.44],
+    [(10.94, 110.09, -6.6), -166.44],
+    [(10.94, 110.09, -6.6), -166.44],
+    [(10.94, 110.09, -6.6), -166.44],
+    [(10.94, 110.09, -6.6), -166.44],
+    [(10.94, 110.09, -6.6), -166.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Motorcycle**, described as: Slim, two-wheeled form with a retro design, olive green exterior with black detailing, high handlebars and exposed engine components, classic cruiser style.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 1 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Motorcycle,
+                        Size:small(2.25*0.75=1.69 squares),
+                        Description:Slim, two-wheeled form with a retro design, olive green exterior with black detailing, high handlebars and exposed engine components, classic cruiser style.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-40, 61]  
+                        **Y Range**: [min_y, max_y] = [60, 161]
+
+                        # RGB Captions
+                        Front = train station platform, dimly lit; platform in the foreground; train tracks above  
+                        Left = city buildings, illuminated signs; buildings in the background; car on the road  
+                        Right = street intersection, traffic lights red; intersection in the foreground; buildings in the background  
+                        Down = crosswalk, shadowed figure; crosswalk in the foreground; green light glowing  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 22], [100, 67, 82], [26, 25, 33]]
+
+                        LeftDepth:
+                        [[100, 100, 22], [100, 62, 30], [33, 25, 26]]
+
+                        RightDepth:
+                        [[21, 16, 21], [100, 100, 80], [33, 25, 33]]
+
+                        DownDepth:
+                        [[13, 11, 13], [11, 8, 11], [13, 11, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(10.94, 110.09, -6.6), -166.44],
+    [(9.77, 114.95, -6.6), -166.44],
+    [(9.77, 114.95, -6.6), -166.44],
+    [(9.77, 114.95, -6.6), -166.44],
+    [(9.77, 114.95, -6.6), -166.44],
+    [(9.77, 114.95, -6.6), -166.44],
+    [(9.77, 114.95, -6.6), -166.44],
+    [(9.77, 114.95, -6.6), -166.44],
+    [(9.77, 114.95, -6.6), -166.44],
+    [(9.77, 114.95, -6.6), -166.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 1
+                        DistanceTraveled = 5.000000000000004
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Motorcycle**, described as: Slim, two-wheeled form with a retro design, olive green exterior with black detailing, high handlebars and exposed engine components, classic cruiser style.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:1 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 2 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Motorcycle,
+                        Size:small(2.25*0.75=1.69 squares),
+                        Description:Slim, two-wheeled form with a retro design, olive green exterior with black detailing, high handlebars and exposed engine components, classic cruiser style.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-40, 61]  
+                        **Y Range**: [min_y, max_y] = [60, 161]
+
+                        # RGB Captions
+                        Front = shop building, neon sign; sign in the foreground; crane in the background  
+                        Left = cityscape, tall buildings; buildings lit up; cars on the road; road in the foreground  
+                        Right = street intersection, traffic lights; lights glowing green; buildings in the background; intersection in the foreground  
+                        Down = asphalt road, orange lines; lines painted on the road; road surface wet  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[30, 100, 100], [76, 81, 100], [26, 23, 28]]
+
+                        LeftDepth:
+                        [[100, 100, 38], [100, 100, 36], [41, 29, 27]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 95, 100], [28, 23, 33]]
+
+                        DownDepth:
+                        [[13, 11, 12], [11, 8, 11], [14, 11, 12]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(10.94, 110.09, -6.6), -166.44],
+    [(9.77, 114.95, -6.6), -166.44],
+    [(4.9, 113.78, -6.6), -166.44],
+    [(4.9, 113.78, -6.6), -166.44],
+    [(4.9, 113.78, -6.6), -166.44],
+    [(4.9, 113.78, -6.6), -166.44],
+    [(4.9, 113.78, -6.6), -166.44],
+    [(4.9, 113.78, -6.6), -166.44],
+    [(4.9, 113.78, -6.6), -166.44],
+    [(4.9, 113.78, -6.6), -166.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 2
+                        DistanceTraveled = 10.000000000000004
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Motorcycle**, described as: Slim, two-wheeled form with a retro design, olive green exterior with black detailing, high handlebars and exposed engine components, classic cruiser style.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:2 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 3 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Motorcycle,
+                        Size:small(2.25*0.75=1.69 squares),
+                        Description:Slim, two-wheeled form with a retro design, olive green exterior with black detailing, high handlebars and exposed engine components, classic cruiser style.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-40, 61]  
+                        **Y Range**: [min_y, max_y] = [60, 161]
+
+                        # RGB Captions
+                        Front = neon sign, illuminated, pink; sign is on the building; building in the background; crane in the distance  
+                        Left = car, white, parked; car is on the road; buildings with lit signs in the background  
+                        Right = traffic light, green, glowing; traffic light is above the road; elevated train tracks in the background  
+                        Down = road marking, orange, wet; marking is on the pavement; pavement in the foreground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[78, 100, 100], [43, 73, 96], [28, 25, 33]]
+
+                        LeftDepth:
+                        [[100, 100, 29], [100, 88, 31], [32, 25, 30]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [33, 25, 32]]
+
+                        DownDepth:
+                        [[13, 11, 13], [11, 8, 11], [13, 11, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(10.94, 110.09, -6.6), -166.44],
+    [(9.77, 114.95, -6.6), -166.44],
+    [(4.9, 113.78, -6.6), -166.44],
+    [(0.04, 112.61, -6.6), -166.44],
+    [(0.04, 112.61, -6.6), -166.44],
+    [(0.04, 112.61, -6.6), -166.44],
+    [(0.04, 112.61, -6.6), -166.44],
+    [(0.04, 112.61, -6.6), -166.44],
+    [(0.04, 112.61, -6.6), -166.44],
+    [(0.04, 112.61, -6.6), -166.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 3
+                        DistanceTraveled = 15.000000000000004
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Motorcycle**, described as: Slim, two-wheeled form with a retro design, olive green exterior with black detailing, high handlebars and exposed engine components, classic cruiser style.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:3 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 4 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Motorcycle,
+                        Size:small(2.25*0.75=1.69 squares),
+                        Description:Slim, two-wheeled form with a retro design, olive green exterior with black detailing, high handlebars and exposed engine components, classic cruiser style.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-40, 61]  
+                        **Y Range**: [min_y, max_y] = [60, 161]
+
+                        # RGB Captions
+                        Front = neon sign, pink; sign is on the building; traffic light in the background  
+                        Left = buildings, tall; buildings are in the background; car on the road  
+                        Right = bridge, metal; bridge is above the road; traffic lights at the intersection  
+                        Down = car, parked; car is on the side of the road; double yellow lines on the road  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[21, 31, 100], [31, 80, 100], [31, 24, 32]]
+
+                        LeftDepth:
+                        [[100, 100, 28], [100, 84, 22], [33, 25, 22]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [32, 24, 32]]
+
+                        DownDepth:
+                        [[13, 11, 13], [11, 8, 11], [13, 11, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(10.94, 110.09, -6.6), -166.44],
+    [(9.77, 114.95, -6.6), -166.44],
+    [(4.9, 113.78, -6.6), -166.44],
+    [(0.04, 112.61, -6.6), -166.44],
+    [(-1.13, 117.47, -6.6), -166.44],
+    [(-1.13, 117.47, -6.6), -166.44],
+    [(-1.13, 117.47, -6.6), -166.44],
+    [(-1.13, 117.47, -6.6), -166.44],
+    [(-1.13, 117.47, -6.6), -166.44],
+    [(-1.13, 117.47, -6.6), -166.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 4
+                        DistanceTraveled = 20.000000000000007
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Motorcycle**, described as: Slim, two-wheeled form with a retro design, olive green exterior with black detailing, high handlebars and exposed engine components, classic cruiser style.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:4 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 5 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Motorcycle,
+                        Size:small(2.25*0.75=1.69 squares),
+                        Description:Slim, two-wheeled form with a retro design, olive green exterior with black detailing, high handlebars and exposed engine components, classic cruiser style.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-40, 61]  
+                        **Y Range**: [min_y, max_y] = [60, 161]
+
+                        # RGB Captions
+                        Front = neon sign, illuminated, pink; sign is in the foreground; building with stairs in the background  
+                        Left = cityscape, nighttime, dark; buildings lit up; streetlights on  
+                        Right = traffic light, green signal; elevated train tracks; city buildings in the background  
+                        Down = shadow, diagonal line; floor with double yellow lines  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[14, 20, 100], [21, 78, 99], [22, 24, 33]]
+
+                        LeftDepth:
+                        [[100, 100, 19], [100, 82, 25], [32, 24, 25]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [33, 25, 32]]
+
+                        DownDepth:
+                        [[13, 11, 13], [11, 8, 11], [13, 11, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(10.94, 110.09, -6.6), -166.44],
+    [(9.77, 114.95, -6.6), -166.44],
+    [(4.9, 113.78, -6.6), -166.44],
+    [(0.04, 112.61, -6.6), -166.44],
+    [(-1.13, 117.47, -6.6), -166.44],
+    [(-5.99, 116.29, -6.6), -166.44],
+    [(-5.99, 116.29, -6.6), -166.44],
+    [(-5.99, 116.29, -6.6), -166.44],
+    [(-5.99, 116.29, -6.6), -166.44],
+    [(-5.99, 116.29, -6.6), -166.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 5
+                        DistanceTraveled = 25.000000000000007
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Motorcycle**, described as: Slim, two-wheeled form with a retro design, olive green exterior with black detailing, high handlebars and exposed engine components, classic cruiser style.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:5 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 6 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Motorcycle,
+                        Size:small(2.25*0.75=1.69 squares),
+                        Description:Slim, two-wheeled form with a retro design, olive green exterior with black detailing, high handlebars and exposed engine components, classic cruiser style.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-40, 61]  
+                        **Y Range**: [min_y, max_y] = [60, 161]
+
+                        # RGB Captions
+                        Front = green traffic light, illuminated; traffic light is in the foreground; green signal active  
+                        Left = neon sign, illuminated; sign is on a building; text reads 'INFINITY'  
+                        Right = overpass bridge, metal structure; bridge spans across the road; located above the street  
+                        Down = orange lights, glowing; lights are in the background; positioned low to the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[8, 11, 100], [16, 69, 78], [17, 23, 32]]
+
+                        LeftDepth:
+                        [[100, 31, 16], [100, 38, 20], [32, 24, 20]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [31, 25, 33]]
+
+                        DownDepth:
+                        [[11, 11, 11], [11, 8, 11], [13, 11, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(10.94, 110.09, -6.6), -166.44],
+    [(9.77, 114.95, -6.6), -166.44],
+    [(4.9, 113.78, -6.6), -166.44],
+    [(0.04, 112.61, -6.6), -166.44],
+    [(-1.13, 117.47, -6.6), -166.44],
+    [(-5.99, 116.29, -6.6), -166.44],
+    [(-10.85, 115.12, -6.6), -166.44],
+    [(-10.85, 115.12, -6.6), -166.44],
+    [(-10.85, 115.12, -6.6), -166.44],
+    [(-10.85, 115.12, -6.6), -166.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 6
+                        DistanceTraveled = 30.000000000000007
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Motorcycle**, described as: Slim, two-wheeled form with a retro design, olive green exterior with black detailing, high handlebars and exposed engine components, classic cruiser style.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:6 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 7 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Motorcycle,
+                        Size:small(2.25*0.75=1.69 squares),
+                        Description:Slim, two-wheeled form with a retro design, olive green exterior with black detailing, high handlebars and exposed engine components, classic cruiser style.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-40, 61]  
+                        **Y Range**: [min_y, max_y] = [60, 161]
+
+                        # RGB Captions
+                        Front = metal stairs, dark setting; stairs ascend diagonally from the bottom left to the top right  
+                        Left = cityscape, nighttime; buildings illuminated with lights; view partially obscured by a dark foreground object  
+                        Right = street intersection, evening; traffic lights showing green; elevated train tracks crossing above; buildings lit up in the background  
+                        Down = metal stairs, dark setting; stairs ascend diagonally from the bottom left to the top right  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[11, 12, 10], [11, 61, 10], [13, 23, 12]]
+
+                        LeftDepth:
+                        [[100, 13, 4], [100, 13, 3], [33, 11, 4]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [26, 25, 33]]
+
+                        DownDepth:
+                        [[12, 11, 12], [11, 8, 11], [13, 11, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(10.94, 110.09, -6.6), -166.44],
+    [(9.77, 114.95, -6.6), -166.44],
+    [(4.9, 113.78, -6.6), -166.44],
+    [(0.04, 112.61, -6.6), -166.44],
+    [(-1.13, 117.47, -6.6), -166.44],
+    [(-5.99, 116.29, -6.6), -166.44],
+    [(-10.85, 115.12, -6.6), -166.44],
+    [(-15.71, 113.95, -6.6), -166.44],
+    [(-15.71, 113.95, -6.6), -166.44],
+    [(-15.71, 113.95, -6.6), -166.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 7
+                        DistanceTraveled = 35.00000000000001
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Motorcycle**, described as: Slim, two-wheeled form with a retro design, olive green exterior with black detailing, high handlebars and exposed engine components, classic cruiser style.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:7 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

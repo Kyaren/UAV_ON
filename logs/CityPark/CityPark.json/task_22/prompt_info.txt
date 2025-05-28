@@ -1,0 +1,126 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:RustyCar,
+                        Size:mid(3.75*1.5=5.63 squares),
+                        Description:Rounded geometric shape, faded red paint with heavy rust and surface wear, classic design with chrome details and whitewall tires, appears to be an old or abandoned personal vehicle.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-548, -447]  
+                        **Y Range**: [min_y, max_y] = [164, 265]
+
+                        # RGB Captions
+                        Front = green trees, dense foliage; trees are in the foreground; lake in the background  
+                        Left = green trees, dense foliage; trees are in the foreground; road in the background  
+                        Right = green trees, dense foliage; trees are on both sides of the road; road stretches into the distance  
+                        Down = green tree, large canopy; tree is centered; pathway on the left  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        LeftDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        RightDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        DownDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-497.91, 214.57, -10.0), -65.56],
+    [(-497.91, 214.57, -10.0), -65.56],
+    [(-497.91, 214.57, -10.0), -65.56],
+    [(-497.91, 214.57, -10.0), -65.56],
+    [(-497.91, 214.57, -10.0), -65.56],
+    [(-497.91, 214.57, -10.0), -65.56],
+    [(-497.91, 214.57, -10.0), -65.56],
+    [(-497.91, 214.57, -10.0), -65.56],
+    [(-497.91, 214.57, -10.0), -65.56],
+    [(-497.91, 214.57, -10.0), -65.56],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **RustyCar**, described as: Rounded geometric shape, faded red paint with heavy rust and surface wear, classic design with chrome details and whitewall tires, appears to be an old or abandoned personal vehicle.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 1 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:RustyCar,
+                        Size:mid(3.75*1.5=5.63 squares),
+                        Description:Rounded geometric shape, faded red paint with heavy rust and surface wear, classic design with chrome details and whitewall tires, appears to be an old or abandoned personal vehicle.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-548, -447]  
+                        **Y Range**: [min_y, max_y] = [164, 265]
+
+                        # RGB Captions
+                        Front = trees, green leaves; trees are spread out; grassy ground  
+                        Left = tree, large with green leaves; tree is in the foreground; grassy field  
+                        Right = pathway, concrete; pathway runs through the middle; trees on both sides  
+                        Down = grass, patchy with some dirt; sidewalk at the bottom; shadows from trees  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        LeftDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        RightDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        DownDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-497.91, 214.57, -10.0), -65.56],
+    [(-495.85, 210.01, -10.0), -65.56],
+    [(-495.85, 210.01, -10.0), -65.56],
+    [(-495.85, 210.01, -10.0), -65.56],
+    [(-495.85, 210.01, -10.0), -65.56],
+    [(-495.85, 210.01, -10.0), -65.56],
+    [(-495.85, 210.01, -10.0), -65.56],
+    [(-495.85, 210.01, -10.0), -65.56],
+    [(-495.85, 210.01, -10.0), -65.56],
+    [(-495.85, 210.01, -10.0), -65.56],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 1
+                        DistanceTraveled = 5.000000000000003
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **RustyCar**, described as: Rounded geometric shape, faded red paint with heavy rust and surface wear, classic design with chrome details and whitewall tires, appears to be an old or abandoned personal vehicle.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:1 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

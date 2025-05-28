@@ -1,0 +1,504 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:RoadBarrier,
+                        Size:small(2.5*1.25=3.13 squares),
+                        Description:Geometric rectangular form, bright red plastic body with molded edges and dual slots, flat top and angled sides, used to block or direct vehicle and pedestrian traffic.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-74, 27]  
+                        **Y Range**: [min_y, max_y] = [137, 238]
+
+                        # RGB Captions
+                        Front = dark image, mostly black; a faint horizontal line of light in the upper right corner  
+                        Left = dark image, completely black  
+                        Right = cityscape at night, dimly lit; buildings and street visible through a dark foreground structure; orange truck parked on the right side of the street  
+                        Down = dark image, completely black  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[20, 18, 27], [15, 25, 37], [16, 20, 31]]
+
+                        LeftDepth:
+                        [[4, 6, 12], [4, 5, 11], [4, 6, 12]]
+
+                        RightDepth:
+                        [[25, 25, 21], [49, 100, 68], [29, 26, 34]]
+
+                        DownDepth:
+                        [[13, 11, 13], [9, 8, 11], [9, 11, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-23.43, 187.48, -6.4), -152.79],
+    [(-23.43, 187.48, -6.4), -152.79],
+    [(-23.43, 187.48, -6.4), -152.79],
+    [(-23.43, 187.48, -6.4), -152.79],
+    [(-23.43, 187.48, -6.4), -152.79],
+    [(-23.43, 187.48, -6.4), -152.79],
+    [(-23.43, 187.48, -6.4), -152.79],
+    [(-23.43, 187.48, -6.4), -152.79],
+    [(-23.43, 187.48, -6.4), -152.79],
+    [(-23.43, 187.48, -6.4), -152.79],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **RoadBarrier**, described as: Geometric rectangular form, bright red plastic body with molded edges and dual slots, flat top and angled sides, used to block or direct vehicle and pedestrian traffic.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 1 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:RoadBarrier,
+                        Size:small(2.5*1.25=3.13 squares),
+                        Description:Geometric rectangular form, bright red plastic body with molded edges and dual slots, flat top and angled sides, used to block or direct vehicle and pedestrian traffic.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-74, 27]  
+                        **Y Range**: [min_y, max_y] = [137, 238]
+
+                        # RGB Captions
+                        Front = brick wall, dark; wall is in the foreground; streetlight on the right  
+                        Left = brick wall, dark; wall is in the foreground; streetlight on the right  
+                        Right = street, illuminated; buildings on both sides; streetlight on the left  
+                        Down = brick wall, dark; wall is in the foreground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[21, 29, 28], [21, 29, 35], [18, 24, 28]]
+
+                        LeftDepth:
+                        [[10, 12, 16], [8, 11, 18], [10, 13, 20]]
+
+                        RightDepth:
+                        [[21, 100, 25], [45, 100, 64], [30, 25, 33]]
+
+                        DownDepth:
+                        [[13, 11, 13], [11, 8, 11], [12, 11, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-23.43, 187.48, -6.4), -152.79],
+    [(-21.14, 183.03, -6.4), -152.79],
+    [(-21.14, 183.03, -6.4), -152.79],
+    [(-21.14, 183.03, -6.4), -152.79],
+    [(-21.14, 183.03, -6.4), -152.79],
+    [(-21.14, 183.03, -6.4), -152.79],
+    [(-21.14, 183.03, -6.4), -152.79],
+    [(-21.14, 183.03, -6.4), -152.79],
+    [(-21.14, 183.03, -6.4), -152.79],
+    [(-21.14, 183.03, -6.4), -152.79],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 1
+                        DistanceTraveled = 5.000000000000008
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **RoadBarrier**, described as: Geometric rectangular form, bright red plastic body with molded edges and dual slots, flat top and angled sides, used to block or direct vehicle and pedestrian traffic.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:1 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 2 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:RoadBarrier,
+                        Size:small(2.5*1.25=3.13 squares),
+                        Description:Geometric rectangular form, bright red plastic body with molded edges and dual slots, flat top and angled sides, used to block or direct vehicle and pedestrian traffic.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-74, 27]  
+                        **Y Range**: [min_y, max_y] = [137, 238]
+
+                        # RGB Captions
+                        Front = building, illuminated windows; building in the background; lights on  
+                        Left = dark scene, no visible objects  
+                        Right = cityscape, dimly lit; buildings with lights on; view through a gap  
+                        Down = pavement, square tiles; pavement in the foreground; dark surroundings  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[16, 35, 24], [24, 33, 33], [21, 25, 27]]
+
+                        LeftDepth:
+                        [[13, 17, 18], [13, 18, 25], [15, 18, 23]]
+
+                        RightDepth:
+                        [[22, 100, 2], [40, 100, 2], [28, 25, 3]]
+
+                        DownDepth:
+                        [[13, 11, 13], [11, 8, 11], [12, 11, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-23.43, 187.48, -6.4), -152.79],
+    [(-21.14, 183.03, -6.4), -152.79],
+    [(-18.86, 178.58, -6.4), -152.79],
+    [(-18.86, 178.58, -6.4), -152.79],
+    [(-18.86, 178.58, -6.4), -152.79],
+    [(-18.86, 178.58, -6.4), -152.79],
+    [(-18.86, 178.58, -6.4), -152.79],
+    [(-18.86, 178.58, -6.4), -152.79],
+    [(-18.86, 178.58, -6.4), -152.79],
+    [(-18.86, 178.58, -6.4), -152.79],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 2
+                        DistanceTraveled = 10.000000000000016
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **RoadBarrier**, described as: Geometric rectangular form, bright red plastic body with molded edges and dual slots, flat top and angled sides, used to block or direct vehicle and pedestrian traffic.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:2 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 3 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:RoadBarrier,
+                        Size:small(2.5*1.25=3.13 squares),
+                        Description:Geometric rectangular form, bright red plastic body with molded edges and dual slots, flat top and angled sides, used to block or direct vehicle and pedestrian traffic.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-74, 27]  
+                        **Y Range**: [min_y, max_y] = [137, 238]
+
+                        # RGB Captions
+                        Front = building, tall, illuminated; building is in the background; lights on  
+                        Left = dark scene, no visible objects  
+                        Right = cityscape, nighttime, illuminated; buildings with lit windows; street with vehicles; view from a low angle  
+                        Down = pavement, patterned tiles, illuminated; pavement is in the foreground; dark surroundings  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[20, 36, 24], [15, 28, 28], [16, 21, 27]]
+
+                        LeftDepth:
+                        [[16, 16, 21], [15, 21, 22], [16, 20, 20]]
+
+                        RightDepth:
+                        [[16, 100, 100], [38, 100, 71], [27, 25, 34]]
+
+                        DownDepth:
+                        [[13, 11, 13], [11, 8, 11], [13, 11, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-23.43, 187.48, -6.4), -152.79],
+    [(-21.14, 183.03, -6.4), -152.79],
+    [(-18.86, 178.58, -6.4), -152.79],
+    [(-23.31, 176.3, -6.4), -152.79],
+    [(-23.31, 176.3, -6.4), -152.79],
+    [(-23.31, 176.3, -6.4), -152.79],
+    [(-23.31, 176.3, -6.4), -152.79],
+    [(-23.31, 176.3, -6.4), -152.79],
+    [(-23.31, 176.3, -6.4), -152.79],
+    [(-23.31, 176.3, -6.4), -152.79],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 3
+                        DistanceTraveled = 15.000000000000016
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **RoadBarrier**, described as: Geometric rectangular form, bright red plastic body with molded edges and dual slots, flat top and angled sides, used to block or direct vehicle and pedestrian traffic.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:3 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 4 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:RoadBarrier,
+                        Size:small(2.5*1.25=3.13 squares),
+                        Description:Geometric rectangular form, bright red plastic body with molded edges and dual slots, flat top and angled sides, used to block or direct vehicle and pedestrian traffic.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-74, 27]  
+                        **Y Range**: [min_y, max_y] = [137, 238]
+
+                        # RGB Captions
+                        Front = lights, blurred, yellow; lights are in the background  
+                        Left = text, white, blurry; text is in the foreground  
+                        Right = buildings, tall, dark; street, narrow, wet; buildings are on both sides of the street  
+                        Down = pavement, square tiles, light brown; pavement is in the foreground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[37, 38, 15], [29, 29, 25], [18, 21, 25]]
+
+                        LeftDepth:
+                        [[18, 17, 17], [20, 27, 27], [21, 25, 24]]
+
+                        RightDepth:
+                        [[13, 100, 100], [26, 100, 81], [27, 25, 33]]
+
+                        DownDepth:
+                        [[13, 11, 13], [11, 8, 11], [13, 11, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-23.43, 187.48, -6.4), -152.79],
+    [(-21.14, 183.03, -6.4), -152.79],
+    [(-18.86, 178.58, -6.4), -152.79],
+    [(-23.31, 176.3, -6.4), -152.79],
+    [(-21.02, 171.85, -6.4), -152.79],
+    [(-21.02, 171.85, -6.4), -152.79],
+    [(-21.02, 171.85, -6.4), -152.79],
+    [(-21.02, 171.85, -6.4), -152.79],
+    [(-21.02, 171.85, -6.4), -152.79],
+    [(-21.02, 171.85, -6.4), -152.79],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 4
+                        DistanceTraveled = 20.000000000000025
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **RoadBarrier**, described as: Geometric rectangular form, bright red plastic body with molded edges and dual slots, flat top and angled sides, used to block or direct vehicle and pedestrian traffic.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:4 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 5 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:RoadBarrier,
+                        Size:small(2.5*1.25=3.13 squares),
+                        Description:Geometric rectangular form, bright red plastic body with molded edges and dual slots, flat top and angled sides, used to block or direct vehicle and pedestrian traffic.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-74, 27]  
+                        **Y Range**: [min_y, max_y] = [137, 238]
+
+                        # RGB Captions
+                        Front = lights, small, glowing; lights are scattered in the foreground  
+                        Left = darkness, pervasive, enveloping; darkness covers the entire image  
+                        Right = buildings, tall, illuminated; buildings stand in the background; cars on the road in the foreground  
+                        Down = pavement, tiled, illuminated; pavement is in the foreground; darkness surrounds the pavement  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[30, 31, 12], [13, 16, 22], [15, 17, 22]]
+
+                        LeftDepth:
+                        [[20, 17, 31], [23, 25, 18], [23, 24, 18]]
+
+                        RightDepth:
+                        [[11, 11, 100], [31, 31, 72], [23, 24, 34]]
+
+                        DownDepth:
+                        [[13, 11, 13], [11, 8, 11], [13, 11, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-23.43, 187.48, -6.4), -152.79],
+    [(-21.14, 183.03, -6.4), -152.79],
+    [(-18.86, 178.58, -6.4), -152.79],
+    [(-23.31, 176.3, -6.4), -152.79],
+    [(-21.02, 171.85, -6.4), -152.79],
+    [(-25.47, 169.56, -6.4), -152.79],
+    [(-25.47, 169.56, -6.4), -152.79],
+    [(-25.47, 169.56, -6.4), -152.79],
+    [(-25.47, 169.56, -6.4), -152.79],
+    [(-25.47, 169.56, -6.4), -152.79],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 5
+                        DistanceTraveled = 25.000000000000025
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **RoadBarrier**, described as: Geometric rectangular form, bright red plastic body with molded edges and dual slots, flat top and angled sides, used to block or direct vehicle and pedestrian traffic.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:5 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 6 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:RoadBarrier,
+                        Size:small(2.5*1.25=3.13 squares),
+                        Description:Geometric rectangular form, bright red plastic body with molded edges and dual slots, flat top and angled sides, used to block or direct vehicle and pedestrian traffic.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-74, 27]  
+                        **Y Range**: [min_y, max_y] = [137, 238]
+
+                        # RGB Captions
+                        Front = single candle, lit flame, dark background; candle is in the foreground  
+                        Left = wooden floor, diagonal planks, dark room; floor occupies the lower left corner  
+                        Right = brick wall, dimly lit, dark environment; wall is in the center  
+                        Down = brick surface, textured pattern, dark surroundings; surface is in the bottom left  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[24, 24, 11], [8, 11, 16], [10, 13, 17]]
+
+                        LeftDepth:
+                        [[20, 49, 71], [25, 25, 11], [25, 25, 13]]
+
+                        RightDepth:
+                        [[8, 11, 13], [13, 100, 100], [15, 24, 24]]
+
+                        DownDepth:
+                        [[11, 11, 11], [11, 8, 11], [13, 11, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-23.43, 187.48, -6.4), -152.79],
+    [(-21.14, 183.03, -6.4), -152.79],
+    [(-18.86, 178.58, -6.4), -152.79],
+    [(-23.31, 176.3, -6.4), -152.79],
+    [(-21.02, 171.85, -6.4), -152.79],
+    [(-25.47, 169.56, -6.4), -152.79],
+    [(-29.91, 167.28, -6.4), -152.79],
+    [(-29.91, 167.28, -6.4), -152.79],
+    [(-29.91, 167.28, -6.4), -152.79],
+    [(-29.91, 167.28, -6.4), -152.79],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 6
+                        DistanceTraveled = 30.00000000000003
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **RoadBarrier**, described as: Geometric rectangular form, bright red plastic body with molded edges and dual slots, flat top and angled sides, used to block or direct vehicle and pedestrian traffic.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:6 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 7 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:RoadBarrier,
+                        Size:small(2.5*1.25=3.13 squares),
+                        Description:Geometric rectangular form, bright red plastic body with molded edges and dual slots, flat top and angled sides, used to block or direct vehicle and pedestrian traffic.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-74, 27]  
+                        **Y Range**: [min_y, max_y] = [137, 238]
+
+                        # RGB Captions
+                        Front = no visible objects  
+                        Left = no visible objects  
+                        Right = no visible objects  
+                        Down = no visible objects  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[4, 5, 12], [3, 4, 11], [4, 5, 9]]
+
+                        LeftDepth:
+                        [[38, 53, 6], [27, 24, 5], [28, 24, 6]]
+
+                        RightDepth:
+                        [[11, 7, 15], [11, 100, 100], [13, 23, 28]]
+
+                        DownDepth:
+                        [[8, 9, 13], [11, 8, 11], [13, 11, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-23.43, 187.48, -6.4), -152.79],
+    [(-21.14, 183.03, -6.4), -152.79],
+    [(-18.86, 178.58, -6.4), -152.79],
+    [(-23.31, 176.3, -6.4), -152.79],
+    [(-21.02, 171.85, -6.4), -152.79],
+    [(-25.47, 169.56, -6.4), -152.79],
+    [(-29.91, 167.28, -6.4), -152.79],
+    [(-34.36, 164.99, -6.4), -152.79],
+    [(-34.36, 164.99, -6.4), -152.79],
+    [(-34.36, 164.99, -6.4), -152.79],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 7
+                        DistanceTraveled = 35.00000000000003
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **RoadBarrier**, described as: Geometric rectangular form, bright red plastic body with molded edges and dual slots, flat top and angled sides, used to block or direct vehicle and pedestrian traffic.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:7 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

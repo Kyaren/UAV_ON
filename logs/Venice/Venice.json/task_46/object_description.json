@@ -1,0 +1,35 @@
+{
+  "episode_id": "46",
+  "start_pose": {
+    "start_position": [
+      -3.4754627953997783,
+      21.501928415948996,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.7440535389404146,
+      0.6681199975979202
+    ]
+  },
+  "info": {
+    "geodesic_distance": 88,
+    "euclidean_distance": 56.5813
+  },
+  "map_name": "Venice_test",
+  "true_name": " Statue",
+  "object_name": "Monument_01_126",
+  "pose": [
+    [
+      40.09770584106445,
+      56.71699905395508,
+      0.9200018048286438
+    ]
+  ],
+  "size": " mid(2.75*2.25=6.187 squares)",
+  "description": " Geometric rectangular base with organic animal form, reddish-brown brick pedestal with bronze deer figure on top, engraved metal plaque, used as a commemorative monument.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

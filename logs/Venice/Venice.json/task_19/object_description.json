@@ -1,0 +1,35 @@
+{
+  "episode_id": "19",
+  "start_pose": {
+    "start_position": [
+      91.96955207718216,
+      -8.326038490406066,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.6422816260851226,
+      0.7664687291686796
+    ]
+  },
+  "info": {
+    "geodesic_distance": 81,
+    "euclidean_distance": 45.6895
+  },
+  "map_name": "Venice_test",
+  "true_name": " Desk",
+  "object_name": "SM_Building_Int_Writing_Desk_141",
+  "pose": [
+    [
+      132.5977020263672,
+      11.01700210571289,
+      0.9200018048286438
+    ]
+  ],
+  "size": " small(1.5*0.75=1.13 squares)",
+  "description": " Geometric rectangular structure, reddish-brown wooden surface with beveled edges, mounted on small wheels, functional design suited for writing or computing tasks.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

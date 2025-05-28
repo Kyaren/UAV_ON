@@ -1,0 +1,35 @@
+{
+  "episode_id": "37",
+  "start_pose": {
+    "start_position": [
+      59.585682926329454,
+      194.9887257905608,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.30441254505559934,
+      0.9525402891283773
+    ]
+  },
+  "info": {
+    "geodesic_distance": 60,
+    "euclidean_distance": 41.3056
+  },
+  "map_name": "Venice_test",
+  "true_name": " Church",
+  "object_name": "SM_StoneChurch_colorful_2",
+  "pose": [
+    [
+      23.397705078125,
+      176.7169952392578,
+      0.9200018048286438
+    ]
+  ],
+  "size": " big(7.75*5.75=44.56 squares)",
+  "description": " Geometric rectangular and polygonal forms, beige stucco and stone exterior with red gabled tiled roofs, multiple arched stained-glass windows and buttressed corners, religious structure designed for congregational worship.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

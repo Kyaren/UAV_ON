@@ -1,0 +1,35 @@
+{
+  "episode_id": "47",
+  "start_pose": {
+    "start_position": [
+      21.218929931682524,
+      87.5230361523167,
+      -6.600000023841858
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.7371530847649352,
+      -0.6757257799000569
+    ]
+  },
+  "info": {
+    "geodesic_distance": 84,
+    "euclidean_distance": 57.2919
+  },
+  "map_name": "UrbanJapan_test",
+  "true_name": "TrashCan",
+  "object_name": "SM_Dustbin_03_130",
+  "pose": [
+    [
+      -17.399999618530273,
+      45.5,
+      1.399999976158142
+    ]
+  ],
+  "size": "small(0.5*0.5=0.25 squares)",
+  "description": "Cylindrical metal container with a ribbed texture and open top, dark grey exterior, typical of an outdoor waste bin.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

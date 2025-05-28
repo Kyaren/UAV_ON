@@ -1,0 +1,35 @@
+{
+  "episode_id": "50",
+  "start_pose": {
+    "start_position": [
+      -170.00303466132846,
+      -24.005288400299115,
+      -12.699999809265137
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.1300609694395221,
+      -0.9915059980799167
+    ]
+  },
+  "info": {
+    "geodesic_distance": 50,
+    "euclidean_distance": 33.7185
+  },
+  "map_name": "CabinLake_test",
+  "true_name": "Flag",
+  "object_name": "SM_USFlag_453",
+  "pose": [
+    [
+      -189.0,
+      3.3999998569488525,
+      -4.699999809265137
+    ]
+  ],
+  "size": "small(0.25*0.25=0.06 squares)",
+  "description": "Geometric vertical pole with draped fabric, red white and blue textile with star pattern, mounted at an angle from the pole, serves as a decorative or symbolic banner.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

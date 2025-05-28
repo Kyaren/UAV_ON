@@ -1,0 +1,35 @@
+{
+  "episode_id": "23",
+  "start_pose": {
+    "start_position": [
+      -217.15414126317296,
+      55.5310801129814,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.938168578359726,
+      -0.34617873790643283
+    ]
+  },
+  "info": {
+    "geodesic_distance": 45,
+    "euclidean_distance": 34.0961
+  },
+  "map_name": "ModularNeighborhood_test",
+  "true_name": "PickupTruck",
+  "object_name": "SK_NYC_PickUptruck_2",
+  "pose": [
+    [
+      -223.5,
+      23.0,
+      1.0
+    ]
+  ],
+  "size": "mid(3.75*1.5=5.63 squares)",
+  "description": "Geometric rectangular form, matte mustard yellow metal body, open rear cargo bed and classic rounded fenders, vintage utility design typical of mid-20th century transport trucks.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

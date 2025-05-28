@@ -1,0 +1,693 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:TableCloth,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Organic rectangular form, red fabric with subtle checkered pattern, soft and slightly wrinkled texture, intended to cover and decorate tabletop surfaces.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-46, 55]  
+                        **Y Range**: [min_y, max_y] = [-25, 76]
+
+                        # RGB Captions
+                        Front = street, dark; buildings on both sides; traffic lights glowing red; road markings visible; nighttime setting  
+                        Left = building, tall; windows illuminated; scaffolding on the side; street below with car tail lights; nighttime setting  
+                        Right = hotel sign, illuminated; building facade with circular lights; storefront signs; night scene; urban environment  
+                        Down = road, wet; double yellow lines; manhole cover; shadow of a vehicle; reflective surface  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 44], [100, 100, 34], [38, 30, 30]]
+
+                        LeftDepth:
+                        [[100, 100, 40], [65, 55, 87], [40, 30, 35]]
+
+                        RightDepth:
+                        [[33, 32, 40], [25, 29, 50], [26, 28, 36]]
+
+                        DownDepth:
+                        [[14, 13, 15], [13, 10, 13], [16, 13, 15]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(4.25, 25.65, -7.6), -76.4],
+    [(4.25, 25.65, -7.6), -76.4],
+    [(4.25, 25.65, -7.6), -76.4],
+    [(4.25, 25.65, -7.6), -76.4],
+    [(4.25, 25.65, -7.6), -76.4],
+    [(4.25, 25.65, -7.6), -76.4],
+    [(4.25, 25.65, -7.6), -76.4],
+    [(4.25, 25.65, -7.6), -76.4],
+    [(4.25, 25.65, -7.6), -76.4],
+    [(4.25, 25.65, -7.6), -76.4],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **TableCloth**, described as: Organic rectangular form, red fabric with subtle checkered pattern, soft and slightly wrinkled texture, intended to cover and decorate tabletop surfaces.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 1 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:TableCloth,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Organic rectangular form, red fabric with subtle checkered pattern, soft and slightly wrinkled texture, intended to cover and decorate tabletop surfaces.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-46, 55]  
+                        **Y Range**: [min_y, max_y] = [-25, 76]
+
+                        # RGB Captions
+                        Front = tall buildings, illuminated signs; buildings in the background; signs on the right  
+                        Left = high-rise building, dark windows; building in the background; streetlight on the left  
+                        Right = hotel sign, illuminated; sign on the right; scaffolding on the left  
+                        Down = wet road, double yellow lines; road in the foreground; shadow on the right  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 39], [100, 100, 29], [37, 30, 29]]
+
+                        LeftDepth:
+                        [[100, 32, 100], [70, 83, 84], [38, 29, 38]]
+
+                        RightDepth:
+                        [[21, 31, 33], [17, 27, 31], [19, 27, 31]]
+
+                        DownDepth:
+                        [[15, 13, 15], [13, 10, 13], [15, 13, 15]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(4.25, 25.65, -7.6), -76.4],
+    [(5.43, 20.79, -7.6), -76.4],
+    [(5.43, 20.79, -7.6), -76.4],
+    [(5.43, 20.79, -7.6), -76.4],
+    [(5.43, 20.79, -7.6), -76.4],
+    [(5.43, 20.79, -7.6), -76.4],
+    [(5.43, 20.79, -7.6), -76.4],
+    [(5.43, 20.79, -7.6), -76.4],
+    [(5.43, 20.79, -7.6), -76.4],
+    [(5.43, 20.79, -7.6), -76.4],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 1
+                        DistanceTraveled = 5.000000000000001
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **TableCloth**, described as: Organic rectangular form, red fabric with subtle checkered pattern, soft and slightly wrinkled texture, intended to cover and decorate tabletop surfaces.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:1 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 2 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:TableCloth,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Organic rectangular form, red fabric with subtle checkered pattern, soft and slightly wrinkled texture, intended to cover and decorate tabletop surfaces.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-46, 55]  
+                        **Y Range**: [min_y, max_y] = [-25, 76]
+
+                        # RGB Captions
+                        Front = city street, dark; buildings with illuminated signs; traffic lights in the foreground; truck parked on the side  
+                        Left = building, dark; illuminated windows; structure in the background; no visible activity  
+                        Right = hotel sign, illuminated; building with multiple lights; scaffolding in the foreground; night scene  
+                        Down = truck, white; parked on the road; double yellow lines; view from above  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 67], [36, 30, 31]]
+
+                        LeftDepth:
+                        [[100, 23, 34], [40, 32, 82], [37, 29, 37]]
+
+                        RightDepth:
+                        [[29, 38, 46], [24, 32, 51], [25, 29, 38]]
+
+                        DownDepth:
+                        [[15, 13, 15], [13, 10, 13], [15, 13, 15]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(4.25, 25.65, -7.6), -76.4],
+    [(5.43, 20.79, -7.6), -76.4],
+    [(0.57, 19.61, -7.6), -76.4],
+    [(0.57, 19.61, -7.6), -76.4],
+    [(0.57, 19.61, -7.6), -76.4],
+    [(0.57, 19.61, -7.6), -76.4],
+    [(0.57, 19.61, -7.6), -76.4],
+    [(0.57, 19.61, -7.6), -76.4],
+    [(0.57, 19.61, -7.6), -76.4],
+    [(0.57, 19.61, -7.6), -76.4],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 2
+                        DistanceTraveled = 10.000000000000002
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **TableCloth**, described as: Organic rectangular form, red fabric with subtle checkered pattern, soft and slightly wrinkled texture, intended to cover and decorate tabletop surfaces.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:2 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 3 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:TableCloth,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Organic rectangular form, red fabric with subtle checkered pattern, soft and slightly wrinkled texture, intended to cover and decorate tabletop surfaces.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-46, 55]  
+                        **Y Range**: [min_y, max_y] = [-25, 76]
+
+                        # RGB Captions
+                        Front = white truck, parked on the street; truck is in the foreground; store sign with red characters on the building to the right; traffic lights visible in the background  
+                        Left = building with illuminated windows; building occupies most of the frame; some windows have X marks; dark environment with limited lighting  
+                        Right = hotel sign with white characters; sign is on the right side; metal scaffolding structure on the left; various lit windows in the background  
+                        Down = white truck, parked on the street; truck is in the foreground; orange double lines on the road; Chinese characters painted on the road  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 63], [38, 29, 31]]
+
+                        LeftDepth:
+                        [[100, 26, 100], [39, 68, 48], [38, 29, 38]]
+
+                        RightDepth:
+                        [[29, 38, 42], [25, 31, 38], [25, 29, 36]]
+
+                        DownDepth:
+                        [[15, 13, 15], [13, 10, 13], [15, 13, 15]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(4.25, 25.65, -7.6), -76.4],
+    [(5.43, 20.79, -7.6), -76.4],
+    [(0.57, 19.61, -7.6), -76.4],
+    [(1.75, 14.75, -7.6), -76.4],
+    [(1.75, 14.75, -7.6), -76.4],
+    [(1.75, 14.75, -7.6), -76.4],
+    [(1.75, 14.75, -7.6), -76.4],
+    [(1.75, 14.75, -7.6), -76.4],
+    [(1.75, 14.75, -7.6), -76.4],
+    [(1.75, 14.75, -7.6), -76.4],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 3
+                        DistanceTraveled = 15.000000000000004
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **TableCloth**, described as: Organic rectangular form, red fabric with subtle checkered pattern, soft and slightly wrinkled texture, intended to cover and decorate tabletop surfaces.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:3 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 4 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:TableCloth,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Organic rectangular form, red fabric with subtle checkered pattern, soft and slightly wrinkled texture, intended to cover and decorate tabletop surfaces.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-46, 55]  
+                        **Y Range**: [min_y, max_y] = [-25, 76]
+
+                        # RGB Captions
+                        Front = bench, wooden, in the foreground; road with double yellow lines; building with illuminated signs in the background  
+                        Left = building with grid-like facade; multiple windows; some lights on; building occupies most of the frame  
+                        Right = gate, metal, with diagonal bars; green steps behind the gate; illuminated sign to the right  
+                        Down = road with Chinese characters painted on it; double yellow lines; suitcase in the bottom left corner  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 59], [35, 29, 31]]
+
+                        LeftDepth:
+                        [[24, 27, 100], [42, 90, 50], [38, 28, 37]]
+
+                        RightDepth:
+                        [[29, 36, 42], [27, 29, 41], [24, 29, 33]]
+
+                        DownDepth:
+                        [[15, 13, 15], [13, 10, 13], [15, 13, 15]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(4.25, 25.65, -7.6), -76.4],
+    [(5.43, 20.79, -7.6), -76.4],
+    [(0.57, 19.61, -7.6), -76.4],
+    [(1.75, 14.75, -7.6), -76.4],
+    [(2.92, 9.89, -7.6), -76.4],
+    [(2.92, 9.89, -7.6), -76.4],
+    [(2.92, 9.89, -7.6), -76.4],
+    [(2.92, 9.89, -7.6), -76.4],
+    [(2.92, 9.89, -7.6), -76.4],
+    [(2.92, 9.89, -7.6), -76.4],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 4
+                        DistanceTraveled = 20.000000000000004
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **TableCloth**, described as: Organic rectangular form, red fabric with subtle checkered pattern, soft and slightly wrinkled texture, intended to cover and decorate tabletop surfaces.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:4 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 5 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:TableCloth,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Organic rectangular form, red fabric with subtle checkered pattern, soft and slightly wrinkled texture, intended to cover and decorate tabletop surfaces.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-46, 55]  
+                        **Y Range**: [min_y, max_y] = [-25, 76]
+
+                        # RGB Captions
+                        Front = store building, illuminated sign; store sign in the foreground; road with speed limit marking  
+                        Left = building with lit windows, dark exterior; building stands in the background; street in the foreground  
+                        Right = cross-braced structure, metallic; structure is in the foreground; building with lit windows in the background  
+                        Down = road surface, wet; orange lane markings; writing on the road in the foreground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 55], [38, 29, 29]]
+
+                        LeftDepth:
+                        [[100, 35, 100], [67, 93, 58], [38, 29, 36]]
+
+                        RightDepth:
+                        [[22, 20, 38], [18, 16, 38], [20, 17, 38]]
+
+                        DownDepth:
+                        [[15, 13, 15], [13, 10, 13], [14, 13, 15]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(4.25, 25.65, -7.6), -76.4],
+    [(5.43, 20.79, -7.6), -76.4],
+    [(0.57, 19.61, -7.6), -76.4],
+    [(1.75, 14.75, -7.6), -76.4],
+    [(2.92, 9.89, -7.6), -76.4],
+    [(7.78, 11.07, -7.6), -76.4],
+    [(7.78, 11.07, -7.6), -76.4],
+    [(7.78, 11.07, -7.6), -76.4],
+    [(7.78, 11.07, -7.6), -76.4],
+    [(7.78, 11.07, -7.6), -76.4],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 5
+                        DistanceTraveled = 25.000000000000004
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **TableCloth**, described as: Organic rectangular form, red fabric with subtle checkered pattern, soft and slightly wrinkled texture, intended to cover and decorate tabletop surfaces.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:5 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 6 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:TableCloth,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Organic rectangular form, red fabric with subtle checkered pattern, soft and slightly wrinkled texture, intended to cover and decorate tabletop surfaces.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-46, 55]  
+                        **Y Range**: [min_y, max_y] = [-25, 76]
+
+                        # RGB Captions
+                        Front = street, dark; buildings with illuminated signs; traffic lights glowing red; road markings in orange  
+                        Left = building, dark; windows with illuminated crosses; building facade lit by external light sources  
+                        Right = gate, metal; grid pattern; street sign with Japanese characters; neon sign on building  
+                        Down = road, wet; Chinese characters painted on surface; double yellow lines; vehicle partially visible  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 59], [36, 30, 31]]
+
+                        LeftDepth:
+                        [[24, 27, 100], [40, 88, 50], [37, 28, 38]]
+
+                        RightDepth:
+                        [[32, 28, 42], [24, 21, 42], [24, 22, 33]]
+
+                        DownDepth:
+                        [[15, 13, 15], [13, 10, 13], [15, 13, 15]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(4.25, 25.65, -7.6), -76.4],
+    [(5.43, 20.79, -7.6), -76.4],
+    [(0.57, 19.61, -7.6), -76.4],
+    [(1.75, 14.75, -7.6), -76.4],
+    [(2.92, 9.89, -7.6), -76.4],
+    [(7.78, 11.07, -7.6), -76.4],
+    [(2.92, 9.89, -7.6), -76.4],
+    [(2.92, 9.89, -7.6), -76.4],
+    [(2.92, 9.89, -7.6), -76.4],
+    [(2.92, 9.89, -7.6), -76.4],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 6
+                        DistanceTraveled = 30.000000000000004
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **TableCloth**, described as: Organic rectangular form, red fabric with subtle checkered pattern, soft and slightly wrinkled texture, intended to cover and decorate tabletop surfaces.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:6 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 7 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:TableCloth,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Organic rectangular form, red fabric with subtle checkered pattern, soft and slightly wrinkled texture, intended to cover and decorate tabletop surfaces.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-46, 55]  
+                        **Y Range**: [min_y, max_y] = [-25, 76]
+
+                        # RGB Captions
+                        Front = city street, nighttime, wet pavement; buildings with lit signs in the background; red traffic lights visible  
+                        Left = building interior, dimly lit, multiple floors; staircases and elevators; illuminated signs on walls  
+                        Right = storefront, closed metal gate, neon sign; hotel sign to the right; nighttime urban setting  
+                        Down = road markings, white and orange lines; Chinese characters painted on road; vehicle partially visible  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 63], [41, 30, 32]]
+
+                        LeftDepth:
+                        [[18, 20, 50], [33, 80, 30], [33, 53, 30]]
+
+                        RightDepth:
+                        [[39, 42, 49], [31, 35, 45], [27, 25, 34]]
+
+                        DownDepth:
+                        [[16, 13, 14], [13, 10, 12], [16, 13, 15]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(4.25, 25.65, -7.6), -76.4],
+    [(5.43, 20.79, -7.6), -76.4],
+    [(0.57, 19.61, -7.6), -76.4],
+    [(1.75, 14.75, -7.6), -76.4],
+    [(2.92, 9.89, -7.6), -76.4],
+    [(7.78, 11.07, -7.6), -76.4],
+    [(2.92, 9.89, -7.6), -76.4],
+    [(-1.94, 8.72, -7.6), -76.4],
+    [(-1.94, 8.72, -7.6), -76.4],
+    [(-1.94, 8.72, -7.6), -76.4],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 7
+                        DistanceTraveled = 35.00000000000001
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **TableCloth**, described as: Organic rectangular form, red fabric with subtle checkered pattern, soft and slightly wrinkled texture, intended to cover and decorate tabletop surfaces.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:7 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 8 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:TableCloth,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Organic rectangular form, red fabric with subtle checkered pattern, soft and slightly wrinkled texture, intended to cover and decorate tabletop surfaces.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-46, 55]  
+                        **Y Range**: [min_y, max_y] = [-25, 76]
+
+                        # RGB Captions
+                        Front = tall buildings, illuminated signs; street with speed limit marking; night scene; buildings in the background  
+                        Left = dark interior, fluorescent lights; lights on the ceiling; dark environment  
+                        Right = multi-story building, illuminated store sign; white delivery truck; truck parked on the street; hotel sign in the background  
+                        Down = asphalt road, painted characters; shadow cast over the road; nighttime setting  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [93, 100, 72], [34, 29, 37]]
+
+                        LeftDepth:
+                        [[10, 11, 17], [26, 77, 25], [25, 26, 25]]
+
+                        RightDepth:
+                        [[53, 100, 100], [40, 40, 65], [36, 28, 38]]
+
+                        DownDepth:
+                        [[15, 13, 15], [12, 9, 13], [14, 13, 14]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(4.25, 25.65, -7.6), -76.4],
+    [(5.43, 20.79, -7.6), -76.4],
+    [(0.57, 19.61, -7.6), -76.4],
+    [(1.75, 14.75, -7.6), -76.4],
+    [(2.92, 9.89, -7.6), -76.4],
+    [(7.78, 11.07, -7.6), -76.4],
+    [(2.92, 9.89, -7.6), -76.4],
+    [(-1.94, 8.72, -7.6), -76.4],
+    [(-6.8, 7.54, -7.6), -76.4],
+    [(-6.8, 7.54, -7.6), -76.4],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 8
+                        DistanceTraveled = 40.00000000000001
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **TableCloth**, described as: Organic rectangular form, red fabric with subtle checkered pattern, soft and slightly wrinkled texture, intended to cover and decorate tabletop surfaces.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:8 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 9 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:TableCloth,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Organic rectangular form, red fabric with subtle checkered pattern, soft and slightly wrinkled texture, intended to cover and decorate tabletop surfaces.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-46, 55]  
+                        **Y Range**: [min_y, max_y] = [-25, 76]
+
+                        # RGB Captions
+                        Front = tall buildings, illuminated signs; traffic lights, red and green; car headlights on; buildings in the background  
+                        Left = dark image, no visible objects  
+                        Right = tall buildings, illuminated signs; truck parked; road markings visible; buildings in the background  
+                        Down = dark image, no visible objects  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [63, 100, 78], [30, 29, 38]]
+
+                        LeftDepth:
+                        [[13, 11, 11], [26, 69, 18], [15, 46, 18]]
+
+                        RightDepth:
+                        [[89, 100, 100], [72, 56, 76], [38, 29, 38]]
+
+                        DownDepth:
+                        [[13, 13, 15], [12, 9, 13], [14, 13, 15]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(4.25, 25.65, -7.6), -76.4],
+    [(5.43, 20.79, -7.6), -76.4],
+    [(0.57, 19.61, -7.6), -76.4],
+    [(1.75, 14.75, -7.6), -76.4],
+    [(2.92, 9.89, -7.6), -76.4],
+    [(7.78, 11.07, -7.6), -76.4],
+    [(2.92, 9.89, -7.6), -76.4],
+    [(-1.94, 8.72, -7.6), -76.4],
+    [(-6.8, 7.54, -7.6), -76.4],
+    [(-11.66, 6.37, -7.6), -76.4],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 9
+                        DistanceTraveled = 45.00000000000001
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **TableCloth**, described as: Organic rectangular form, red fabric with subtle checkered pattern, soft and slightly wrinkled texture, intended to cover and decorate tabletop surfaces.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:9 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 10 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:TableCloth,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Organic rectangular form, red fabric with subtle checkered pattern, soft and slightly wrinkled texture, intended to cover and decorate tabletop surfaces.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-46, 55]  
+                        **Y Range**: [min_y, max_y] = [-25, 76]
+
+                        # RGB Captions
+                        Front = car, headlights on; car is in the foreground; traffic lights, red and green; buildings with illuminated signs in the background  
+                        Left = staircase, dark environment; staircase is in the foreground; dimly lit area in the background  
+                        Right = building, multiple stories; building is in the background; white van parked on the street; street has markings and signs  
+                        Down = road, marked with dashed lines; road occupies the right side of the image; dark environment  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [61, 100, 73], [32, 29, 38]]
+
+                        LeftDepth:
+                        [[15, 6, 11], [20, 19, 19], [20, 18, 20]]
+
+                        RightDepth:
+                        [[88, 100, 100], [70, 96, 72], [38, 29, 38]]
+
+                        DownDepth:
+                        [[14, 13, 15], [12, 9, 13], [14, 13, 15]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(5.43, 20.79, -7.6), -76.4],
+    [(0.57, 19.61, -7.6), -76.4],
+    [(1.75, 14.75, -7.6), -76.4],
+    [(2.92, 9.89, -7.6), -76.4],
+    [(7.78, 11.07, -7.6), -76.4],
+    [(2.92, 9.89, -7.6), -76.4],
+    [(-1.94, 8.72, -7.6), -76.4],
+    [(-6.8, 7.54, -7.6), -76.4],
+    [(-11.66, 6.37, -7.6), -76.4],
+    [(-10.48, 1.51, -7.6), -76.4],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 10
+                        DistanceTraveled = 50.00000000000001
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **TableCloth**, described as: Organic rectangular form, red fabric with subtle checkered pattern, soft and slightly wrinkled texture, intended to cover and decorate tabletop surfaces.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:10 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

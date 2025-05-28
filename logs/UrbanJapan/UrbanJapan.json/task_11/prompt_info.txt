@@ -1,0 +1,63 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Dog,
+                        Size:small(1.25*0.5=0.63 squares),
+                        Description:Organic quadrupedal form, black fur with lighter patches on paws and chest, sitting posture with raised head, appears to be at rest or attentive.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-36, 65]  
+                        **Y Range**: [min_y, max_y] = [28, 129]
+
+                        # RGB Captions
+                        Front = dark environment, low visibility; no key objects discernible  
+                        Left = city street, evening setting; buildings illuminated; cars on road; traffic lights visible; street signs present  
+                        Right = industrial setting, dim lighting; metal structures; machinery parts; background obscured by darkness  
+                        Down = urban setting, nighttime; wet pavement reflecting light; shadows prominent; street markings visible; partial view of vehicle  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[20, 37, 21], [16, 39, 56], [18, 26, 30]]
+
+                        LeftDepth:
+                        [[100, 100, 33], [96, 100, 35], [35, 27, 29]]
+
+                        RightDepth:
+                        [[21, 15, 16], [40, 100, 0], [29, 25, 1]]
+
+                        DownDepth:
+                        [[13, 11, 13], [11, 9, 11], [14, 11, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(14.69, 78.41, -6.6), -3.41],
+    [(14.69, 78.41, -6.6), -3.41],
+    [(14.69, 78.41, -6.6), -3.41],
+    [(14.69, 78.41, -6.6), -3.41],
+    [(14.69, 78.41, -6.6), -3.41],
+    [(14.69, 78.41, -6.6), -3.41],
+    [(14.69, 78.41, -6.6), -3.41],
+    [(14.69, 78.41, -6.6), -3.41],
+    [(14.69, 78.41, -6.6), -3.41],
+    [(14.69, 78.41, -6.6), -3.41],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Dog**, described as: Organic quadrupedal form, black fur with lighter patches on paws and chest, sitting posture with raised head, appears to be at rest or attentive.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

@@ -1,0 +1,35 @@
+{
+  "episode_id": "9",
+  "start_pose": {
+    "start_position": [
+      -12.6248606737098,
+      92.40661034802727,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.39285114627917556,
+      -0.9196020752842708
+    ]
+  },
+  "info": {
+    "geodesic_distance": 93,
+    "euclidean_distance": 50.9111
+  },
+  "map_name": "Venice_test",
+  "true_name": " Nightstand",
+  "object_name": "SM_Building_Int_Small_Drawer_62",
+  "pose": [
+    [
+      20.09770393371582,
+      54.21699905395508,
+      0.9200018048286438
+    ]
+  ],
+  "size": " small(1*1=1 squares)",
+  "description": " Geometric cuboid shape, medium brown wood finish, smooth surface with single drawer and tapered legs, designed for bedside storage use.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

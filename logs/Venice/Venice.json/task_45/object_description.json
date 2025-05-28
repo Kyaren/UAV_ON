@@ -1,0 +1,35 @@
+{
+  "episode_id": "45",
+  "start_pose": {
+    "start_position": [
+      -40.79598946047259,
+      192.07441117088177,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.5449692303157917,
+      0.8384560441722712
+    ]
+  },
+  "info": {
+    "geodesic_distance": 21,
+    "euclidean_distance": 13.7737
+  },
+  "map_name": "Venice_test",
+  "true_name": " Oar",
+  "object_name": "SM_Oar_01b_32",
+  "pose": [
+    [
+      -37.602294921875,
+      181.4169921875,
+      1.1200017929077148
+    ]
+  ],
+  "size": " small(0.25*0.25=0.0625 squares)",
+  "description": " Geometric elongated form, dark wood or composite texture with widened blade and narrow handle, used for manual propulsion of small watercraft.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

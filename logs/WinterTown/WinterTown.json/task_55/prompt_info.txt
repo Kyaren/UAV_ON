@@ -1,0 +1,756 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: StrawMat,
+                        Size: small(1.25*0.75=0.94 squares),
+                        Description: Rolled cylindrical shape, dry yellow-brown straw texture with fibrous bands, compact and uniform bundling, likely used as bedding or floor covering.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-94, 7]  
+                        **Y Range**: [min_y, max_y] = [85, 186]
+
+                        # RGB Captions
+                        Front = multi-story building, brick facade; snow-covered ground; trees with white leaves; building in the center  
+                        Left = multi-story building, brick facade; snow-covered ground; trees with white leaves; building in the center  
+                        Right = deer, brown fur; standing on a brick platform; hay bales nearby; snowy ground; trees in the background  
+                        Down = shadow patterns on sand; tree shadows cast across the surface  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [29, 17, 27]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 17], [97, 25, 18]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [27, 19, 78]]
+
+                        DownDepth:
+                        [[11, 9, 10], [9, 7, 8], [11, 8, 10]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-43.47, 135.05, -10.0), 153.46],
+    [(-43.47, 135.05, -10.0), 153.46],
+    [(-43.47, 135.05, -10.0), 153.46],
+    [(-43.47, 135.05, -10.0), 153.46],
+    [(-43.47, 135.05, -10.0), 153.46],
+    [(-43.47, 135.05, -10.0), 153.46],
+    [(-43.47, 135.05, -10.0), 153.46],
+    [(-43.47, 135.05, -10.0), 153.46],
+    [(-43.47, 135.05, -10.0), 153.46],
+    [(-43.47, 135.05, -10.0), 153.46],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** StrawMat**, described as:  Rolled cylindrical shape, dry yellow-brown straw texture with fibrous bands, compact and uniform bundling, likely used as bedding or floor covering.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 1 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: StrawMat,
+                        Size: small(1.25*0.75=0.94 squares),
+                        Description: Rolled cylindrical shape, dry yellow-brown straw texture with fibrous bands, compact and uniform bundling, likely used as bedding or floor covering.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-94, 7]  
+                        **Y Range**: [min_y, max_y] = [85, 186]
+
+                        # RGB Captions
+                        Front = multi-story building, beige facade; two buildings side by side; trees with white leaves in the foreground; snow-covered ground  
+                        Left = single multi-story building, beige facade; tree with white leaves to the left; snow-covered ground; bench and person walking in front of the building  
+                        Right = hay bales, wooden barrels, and trash cans on the snow; forested area in the background; clear sky  
+                        Down = bronze deer statue, standing on a glass platform; shadows cast on the textured floor  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [22, 19, 26]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [91, 21, 26]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [27, 42, 77]]
+
+                        DownDepth:
+                        [[11, 9, 10], [9, 6, 8], [10, 8, 10]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-43.47, 135.05, -10.0), 153.46],
+    [(-45.71, 130.58, -10.0), 153.46],
+    [(-45.71, 130.58, -10.0), 153.46],
+    [(-45.71, 130.58, -10.0), 153.46],
+    [(-45.71, 130.58, -10.0), 153.46],
+    [(-45.71, 130.58, -10.0), 153.46],
+    [(-45.71, 130.58, -10.0), 153.46],
+    [(-45.71, 130.58, -10.0), 153.46],
+    [(-45.71, 130.58, -10.0), 153.46],
+    [(-45.71, 130.58, -10.0), 153.46],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 1
+                        DistanceTraveled = 5.0000000000000115
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** StrawMat**, described as:  Rolled cylindrical shape, dry yellow-brown straw texture with fibrous bands, compact and uniform bundling, likely used as bedding or floor covering.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:1 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 2 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: StrawMat,
+                        Size: small(1.25*0.75=0.94 squares),
+                        Description: Rolled cylindrical shape, dry yellow-brown straw texture with fibrous bands, compact and uniform bundling, likely used as bedding or floor covering.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-94, 7]  
+                        **Y Range**: [min_y, max_y] = [85, 186]
+
+                        # RGB Captions
+                        Front = stone buildings, multiple stories, brown; trees with white leaves; benches in the foreground; buildings stand in the background  
+                        Left = stone building, multiple stories, brown; trees with white leaves; building stands in the background; snow covers the ground  
+                        Right = trees, tall, green and brown; barrels, rusty, cylindrical; logs, wooden, cylindrical; trees are in the background; barrels and logs are in the foreground  
+                        Down = bottle, brown, lying down; piece of wood, rectangular; shadows on the ground; objects are on the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [22, 21, 28]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [95, 25, 22]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [30, 69, 78]]
+
+                        DownDepth:
+                        [[10, 8, 10], [8, 6, 8], [10, 8, 10]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-43.47, 135.05, -10.0), 153.46],
+    [(-45.71, 130.58, -10.0), 153.46],
+    [(-47.94, 126.11, -10.0), 153.46],
+    [(-47.94, 126.11, -10.0), 153.46],
+    [(-47.94, 126.11, -10.0), 153.46],
+    [(-47.94, 126.11, -10.0), 153.46],
+    [(-47.94, 126.11, -10.0), 153.46],
+    [(-47.94, 126.11, -10.0), 153.46],
+    [(-47.94, 126.11, -10.0), 153.46],
+    [(-47.94, 126.11, -10.0), 153.46],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 2
+                        DistanceTraveled = 10.00000000000001
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** StrawMat**, described as:  Rolled cylindrical shape, dry yellow-brown straw texture with fibrous bands, compact and uniform bundling, likely used as bedding or floor covering.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:2 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 3 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: StrawMat,
+                        Size: small(1.25*0.75=0.94 squares),
+                        Description: Rolled cylindrical shape, dry yellow-brown straw texture with fibrous bands, compact and uniform bundling, likely used as bedding or floor covering.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-94, 7]  
+                        **Y Range**: [min_y, max_y] = [85, 186]
+
+                        # RGB Captions
+                        Front = multi-story building, brick facade; two benches, wooden; deer standing near benches; snow-covered ground; trees with white leaves in the background  
+                        Left = deer standing on a box; multi-story building, brick facade; snow-covered ground; trees with white leaves in the background  
+                        Right = pine tree, green needles; snow-covered ground; trees with white leaves in the background; distant buildings  
+                        Down = barrels, rusty; crates, wooden; snow-covered ground; shadows cast by objects  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [22, 21, 29]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [92, 21, 23]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [32, 72, 82]]
+
+                        DownDepth:
+                        [[10, 8, 9], [8, 6, 9], [10, 8, 11]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-43.47, 135.05, -10.0), 153.46],
+    [(-45.71, 130.58, -10.0), 153.46],
+    [(-47.94, 126.11, -10.0), 153.46],
+    [(-50.18, 121.63, -10.0), 153.46],
+    [(-50.18, 121.63, -10.0), 153.46],
+    [(-50.18, 121.63, -10.0), 153.46],
+    [(-50.18, 121.63, -10.0), 153.46],
+    [(-50.18, 121.63, -10.0), 153.46],
+    [(-50.18, 121.63, -10.0), 153.46],
+    [(-50.18, 121.63, -10.0), 153.46],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 3
+                        DistanceTraveled = 15.00000000000001
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** StrawMat**, described as:  Rolled cylindrical shape, dry yellow-brown straw texture with fibrous bands, compact and uniform bundling, likely used as bedding or floor covering.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:3 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 4 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: StrawMat,
+                        Size: small(1.25*0.75=0.94 squares),
+                        Description: Rolled cylindrical shape, dry yellow-brown straw texture with fibrous bands, compact and uniform bundling, likely used as bedding or floor covering.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-94, 7]  
+                        **Y Range**: [min_y, max_y] = [85, 186]
+
+                        # RGB Captions
+                        Front = brick buildings, multiple stories, snow-covered; wooden scaffolding in the foreground; scaffolding is incomplete  
+                        Left = deer statue, brown, on a pedestal; apartment building, brick, snow-covered; building stands in the background  
+                        Right = pine trees, snow-covered, varying sizes; trees are scattered; green pine tree in the foreground  
+                        Down = wooden benches, arranged in a row; firewood stacks, logs; shadows cast by objects  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [22, 19, 29]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [25, 21, 22]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [28, 71, 85]]
+
+                        DownDepth:
+                        [[10, 9, 11], [8, 6, 8], [10, 8, 10]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-43.47, 135.05, -10.0), 153.46],
+    [(-45.71, 130.58, -10.0), 153.46],
+    [(-47.94, 126.11, -10.0), 153.46],
+    [(-50.18, 121.63, -10.0), 153.46],
+    [(-54.65, 123.87, -10.0), 153.46],
+    [(-54.65, 123.87, -10.0), 153.46],
+    [(-54.65, 123.87, -10.0), 153.46],
+    [(-54.65, 123.87, -10.0), 153.46],
+    [(-54.65, 123.87, -10.0), 153.46],
+    [(-54.65, 123.87, -10.0), 153.46],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 4
+                        DistanceTraveled = 20.000000000000007
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** StrawMat**, described as:  Rolled cylindrical shape, dry yellow-brown straw texture with fibrous bands, compact and uniform bundling, likely used as bedding or floor covering.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:4 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 5 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: StrawMat,
+                        Size: small(1.25*0.75=0.94 squares),
+                        Description: Rolled cylindrical shape, dry yellow-brown straw texture with fibrous bands, compact and uniform bundling, likely used as bedding or floor covering.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-94, 7]  
+                        **Y Range**: [min_y, max_y] = [85, 186]
+
+                        # RGB Captions
+                        Front = brick building, multiple windows, snow-covered; building stands in the background; wooden fence in the foreground  
+                        Left = brick building, multiple windows, snow-covered; building stands in the background; deer statue on a pedestal in the foreground  
+                        Right = pine trees, snow-covered; trees stand in the background; clear sky above  
+                        Down = logs, scattered on the ground; fire pit with logs; objects are on the snowy ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 64, 100], [22, 19, 66]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [25, 20, 21]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [76, 73, 84]]
+
+                        DownDepth:
+                        [[10, 9, 11], [8, 6, 10], [10, 9, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-43.47, 135.05, -10.0), 153.46],
+    [(-45.71, 130.58, -10.0), 153.46],
+    [(-47.94, 126.11, -10.0), 153.46],
+    [(-50.18, 121.63, -10.0), 153.46],
+    [(-54.65, 123.87, -10.0), 153.46],
+    [(-56.88, 119.4, -10.0), 153.46],
+    [(-56.88, 119.4, -10.0), 153.46],
+    [(-56.88, 119.4, -10.0), 153.46],
+    [(-56.88, 119.4, -10.0), 153.46],
+    [(-56.88, 119.4, -10.0), 153.46],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 5
+                        DistanceTraveled = 25.000000000000007
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** StrawMat**, described as:  Rolled cylindrical shape, dry yellow-brown straw texture with fibrous bands, compact and uniform bundling, likely used as bedding or floor covering.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:5 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 6 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: StrawMat,
+                        Size: small(1.25*0.75=0.94 squares),
+                        Description: Rolled cylindrical shape, dry yellow-brown straw texture with fibrous bands, compact and uniform bundling, likely used as bedding or floor covering.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-94, 7]  
+                        **Y Range**: [min_y, max_y] = [85, 186]
+
+                        # RGB Captions
+                        Front = abandoned building, brick facade, multiple windows; building stands in the center; snow covers the ground  
+                        Left = wooden bridge, partially constructed; bridge spans across the foreground; buildings in the background  
+                        Right = pine trees, covered in snow; trees are in the foreground; buildings in the distant background  
+                        Down = ladder, wooden steps; ladder is in the foreground; snow-covered ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 13, 100], [21, 14, 62]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [25, 21, 22]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [72, 71, 86]]
+
+                        DownDepth:
+                        [[11, 9, 11], [9, 7, 10], [10, 8, 11]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-43.47, 135.05, -10.0), 153.46],
+    [(-45.71, 130.58, -10.0), 153.46],
+    [(-47.94, 126.11, -10.0), 153.46],
+    [(-50.18, 121.63, -10.0), 153.46],
+    [(-54.65, 123.87, -10.0), 153.46],
+    [(-56.88, 119.4, -10.0), 153.46],
+    [(-61.36, 121.63, -10.0), 153.46],
+    [(-61.36, 121.63, -10.0), 153.46],
+    [(-61.36, 121.63, -10.0), 153.46],
+    [(-61.36, 121.63, -10.0), 153.46],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 6
+                        DistanceTraveled = 30.000000000000004
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** StrawMat**, described as:  Rolled cylindrical shape, dry yellow-brown straw texture with fibrous bands, compact and uniform bundling, likely used as bedding or floor covering.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:6 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 7 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: StrawMat,
+                        Size: small(1.25*0.75=0.94 squares),
+                        Description: Rolled cylindrical shape, dry yellow-brown straw texture with fibrous bands, compact and uniform bundling, likely used as bedding or floor covering.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-94, 7]  
+                        **Y Range**: [min_y, max_y] = [85, 186]
+
+                        # RGB Captions
+                        Front = multi-story building, brick exterior; snow-covered ground; tree with white leaves; building in the foreground  
+                        Left = multi-story building, brick exterior; snow-covered ground; wooden stairs; tree with white leaves; building in the background  
+                        Right = building corner, brick exterior; snow-covered ground; pine trees; sunset sky; building on the left  
+                        Down = wooden framework, snow-covered ground; framework in the foreground; shadows cast by framework  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 11], [21, 17, 16]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 23], [25, 21, 19]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [26, 27, 87]]
+
+                        DownDepth:
+                        [[10, 9, 11], [8, 7, 9], [10, 8, 10]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-43.47, 135.05, -10.0), 153.46],
+    [(-45.71, 130.58, -10.0), 153.46],
+    [(-47.94, 126.11, -10.0), 153.46],
+    [(-50.18, 121.63, -10.0), 153.46],
+    [(-54.65, 123.87, -10.0), 153.46],
+    [(-56.88, 119.4, -10.0), 153.46],
+    [(-61.36, 121.63, -10.0), 153.46],
+    [(-59.12, 126.1, -10.0), 153.46],
+    [(-59.12, 126.1, -10.0), 153.46],
+    [(-59.12, 126.1, -10.0), 153.46],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 7
+                        DistanceTraveled = 35.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** StrawMat**, described as:  Rolled cylindrical shape, dry yellow-brown straw texture with fibrous bands, compact and uniform bundling, likely used as bedding or floor covering.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:7 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 8 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: StrawMat,
+                        Size: small(1.25*0.75=0.94 squares),
+                        Description: Rolled cylindrical shape, dry yellow-brown straw texture with fibrous bands, compact and uniform bundling, likely used as bedding or floor covering.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-94, 7]  
+                        **Y Range**: [min_y, max_y] = [85, 186]
+
+                        # RGB Captions
+                        Front = building, brown facade; snow-covered ground; building stands in the foreground; trees with bare branches to the left  
+                        Left = apartment buildings, brick facade; snow-covered ground; multiple buildings in a row; wooden structure in the foreground  
+                        Right = building, brown facade; snow-covered ground; tree with green needles on the right; building stands in the foreground  
+                        Down = shadow of a swing set on the snow; snow-covered ground; shadow stretches diagonally across the image  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 9], [100, 9, 7], [21, 11, 9]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 18], [27, 21, 17]]
+
+                        RightDepth:
+                        [[100, 100, 100], [9, 100, 100], [11, 25, 91]]
+
+                        DownDepth:
+                        [[9, 9, 10], [8, 7, 9], [10, 8, 10]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-43.47, 135.05, -10.0), 153.46],
+    [(-45.71, 130.58, -10.0), 153.46],
+    [(-47.94, 126.11, -10.0), 153.46],
+    [(-50.18, 121.63, -10.0), 153.46],
+    [(-54.65, 123.87, -10.0), 153.46],
+    [(-56.88, 119.4, -10.0), 153.46],
+    [(-61.36, 121.63, -10.0), 153.46],
+    [(-59.12, 126.1, -10.0), 153.46],
+    [(-63.6, 128.34, -10.0), 153.46],
+    [(-63.6, 128.34, -10.0), 153.46],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 8
+                        DistanceTraveled = 39.99999999999999
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** StrawMat**, described as:  Rolled cylindrical shape, dry yellow-brown straw texture with fibrous bands, compact and uniform bundling, likely used as bedding or floor covering.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:8 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 9 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: StrawMat,
+                        Size: small(1.25*0.75=0.94 squares),
+                        Description: Rolled cylindrical shape, dry yellow-brown straw texture with fibrous bands, compact and uniform bundling, likely used as bedding or floor covering.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-94, 7]  
+                        **Y Range**: [min_y, max_y] = [85, 186]
+
+                        # RGB Captions
+                        Front = multi-story building, brick facade; two trees, leafless; snow-covered ground; buildings stand close together  
+                        Left = apartment building, multiple stories; snow-covered ground; tree with white leaves; building in the background  
+                        Right = building, damaged facade; snow-covered ground; pine tree; bench in the foreground  
+                        Down = wooden ladder, leaning; shadow on the ground; ladder in the foreground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 9], [18, 20, 19]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 14], [27, 21, 14]]
+
+                        RightDepth:
+                        [[100, 100, 100], [20, 100, 100], [14, 25, 84]]
+
+                        DownDepth:
+                        [[9, 7, 11], [8, 7, 9], [10, 8, 10]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-43.47, 135.05, -10.0), 153.46],
+    [(-45.71, 130.58, -10.0), 153.46],
+    [(-47.94, 126.11, -10.0), 153.46],
+    [(-50.18, 121.63, -10.0), 153.46],
+    [(-54.65, 123.87, -10.0), 153.46],
+    [(-56.88, 119.4, -10.0), 153.46],
+    [(-61.36, 121.63, -10.0), 153.46],
+    [(-59.12, 126.1, -10.0), 153.46],
+    [(-63.6, 128.34, -10.0), 153.46],
+    [(-61.36, 132.81, -10.0), 153.46],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 9
+                        DistanceTraveled = 45.00000000000001
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** StrawMat**, described as:  Rolled cylindrical shape, dry yellow-brown straw texture with fibrous bands, compact and uniform bundling, likely used as bedding or floor covering.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:9 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 10 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: StrawMat,
+                        Size: small(1.25*0.75=0.94 squares),
+                        Description: Rolled cylindrical shape, dry yellow-brown straw texture with fibrous bands, compact and uniform bundling, likely used as bedding or floor covering.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-94, 7]  
+                        **Y Range**: [min_y, max_y] = [85, 186]
+
+                        # RGB Captions
+                        Front = building, brick exterior, multiple windows; snow-covered ground; tree with bare branches to the left  
+                        Left = multiple buildings, brick exteriors, balconies; snow-covered ground; trees with bare branches in the background  
+                        Right = building, brick exterior, multiple windows; snow-covered ground; pine tree to the right  
+                        Down = shadow of a building on the snow-covered ground; two poles casting shadows  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 65], [100, 9, 56], [20, 11, 9]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [27, 20, 16]]
+
+                        RightDepth:
+                        [[100, 100, 100], [9, 100, 100], [11, 25, 91]]
+
+                        DownDepth:
+                        [[9, 9, 10], [8, 7, 9], [10, 8, 10]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-45.71, 130.58, -10.0), 153.46],
+    [(-47.94, 126.11, -10.0), 153.46],
+    [(-50.18, 121.63, -10.0), 153.46],
+    [(-54.65, 123.87, -10.0), 153.46],
+    [(-56.88, 119.4, -10.0), 153.46],
+    [(-61.36, 121.63, -10.0), 153.46],
+    [(-59.12, 126.1, -10.0), 153.46],
+    [(-63.6, 128.34, -10.0), 153.46],
+    [(-61.36, 132.81, -10.0), 153.46],
+    [(-63.6, 128.34, -10.0), 153.46],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 10
+                        DistanceTraveled = 50.00000000000002
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** StrawMat**, described as:  Rolled cylindrical shape, dry yellow-brown straw texture with fibrous bands, compact and uniform bundling, likely used as bedding or floor covering.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:10 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 11 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: StrawMat,
+                        Size: small(1.25*0.75=0.94 squares),
+                        Description: Rolled cylindrical shape, dry yellow-brown straw texture with fibrous bands, compact and uniform bundling, likely used as bedding or floor covering.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-94, 7]  
+                        **Y Range**: [min_y, max_y] = [85, 186]
+
+                        # RGB Captions
+                        Front = brick building, brown and beige; green railing on the left; window with dark glass on the right; railing in the foreground  
+                        Left = apartment building, light brown; snow-covered ground; bare trees in front; building stands in the background  
+                        Right = brick building, brown and beige; window with dark glass; tree on the right; building stands in the foreground  
+                        Down = snow-covered ground; brick building, brown and beige; window with dark glass; shadow of a structure on the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[5, 3, 2], [63, 2, 2], [22, 4, 2]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [27, 16, 21]]
+
+                        RightDepth:
+                        [[13, 100, 100], [3, 100, 100], [4, 25, 93]]
+
+                        DownDepth:
+                        [[8, 7, 5], [7, 7, 9], [10, 9, 10]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-47.94, 126.11, -10.0), 153.46],
+    [(-50.18, 121.63, -10.0), 153.46],
+    [(-54.65, 123.87, -10.0), 153.46],
+    [(-56.88, 119.4, -10.0), 153.46],
+    [(-61.36, 121.63, -10.0), 153.46],
+    [(-59.12, 126.1, -10.0), 153.46],
+    [(-63.6, 128.34, -10.0), 153.46],
+    [(-61.36, 132.81, -10.0), 153.46],
+    [(-63.6, 128.34, -10.0), 153.46],
+    [(-68.07, 130.57, -10.0), 153.46],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 11
+                        DistanceTraveled = 55.000000000000014
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** StrawMat**, described as:  Rolled cylindrical shape, dry yellow-brown straw texture with fibrous bands, compact and uniform bundling, likely used as bedding or floor covering.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:11 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

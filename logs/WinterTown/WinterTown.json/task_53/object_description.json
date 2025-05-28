@@ -1,0 +1,35 @@
+{
+  "episode_id": "53",
+  "start_pose": {
+    "start_position": [
+      -71.48855614696637,
+      142.80612387866682,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9732923723212012,
+      0.229569070175771
+    ]
+  },
+  "info": {
+    "geodesic_distance": 29,
+    "euclidean_distance": 31.1355
+  },
+  "map_name": "WinterTown_test",
+  "true_name": " StrawMat",
+  "object_name": "SM_HayBayle_Round_103",
+  "pose": [
+    [
+      -51.99274444580078,
+      118.7072525024414,
+      -4.071274280548096
+    ]
+  ],
+  "size": " small(1.25*0.75=0.94 squares)",
+  "description": " Rolled cylindrical shape, dry yellow-brown straw texture with fibrous bands, compact and uniform bundling, likely used as bedding or floor covering.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

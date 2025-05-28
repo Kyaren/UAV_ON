@@ -1,0 +1,35 @@
+{
+  "episode_id": "34",
+  "start_pose": {
+    "start_position": [
+      246.18355513575065,
+      -162.1419453250942,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.8004564644447612,
+      -0.599390897936057
+    ]
+  },
+  "info": {
+    "geodesic_distance": 79,
+    "euclidean_distance": 48.8441
+  },
+  "map_name": "WinterTown_test",
+  "true_name": " SupplyBox",
+  "object_name": "SM_Wooden_Box_Large_Set1_69",
+  "pose": [
+    [
+      209.70726013183594,
+      -188.89273071289062,
+      11.428725242614746
+    ]
+  ],
+  "size": " mid(3.0*2.75=8.25 squares)",
+  "description": " Geometric rectangular stack, light wood with blue metal corner reinforcements, tied together with ropes, used for storage or transport of goods.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

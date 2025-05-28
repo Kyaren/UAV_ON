@@ -1,0 +1,2205 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PoleNet,
+                        Size: small(0.25*0.25=0.0625 squares),
+                        Description: Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-51, 50]  
+                        **Y Range**: [min_y, max_y] = [118, 219]
+
+                        # RGB Captions
+                        Front = church building, beige walls, red tiled roof; bell tower with clock; statue in the foreground  
+                        Left = building complex, white walls, red tiled roofs; multiple windows; buildings arranged in a courtyard  
+                        Right = house, beige walls, red tiled roof; tree with yellow leaves; bench in the foreground  
+                        Down = square, cobblestone ground, shadows cast by buildings; white cube, brown crate; view from above  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 34, 25]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [19, 24, 43]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [13, 44, 58]]
+
+                        DownDepth:
+                        [[18, 15, 18], [16, 12, 15], [16, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-0.15, 168.42, -10.0), 22.66],
+    [(-0.15, 168.42, -10.0), 22.66],
+    [(-0.15, 168.42, -10.0), 22.66],
+    [(-0.15, 168.42, -10.0), 22.66],
+    [(-0.15, 168.42, -10.0), 22.66],
+    [(-0.15, 168.42, -10.0), 22.66],
+    [(-0.15, 168.42, -10.0), 22.66],
+    [(-0.15, 168.42, -10.0), 22.66],
+    [(-0.15, 168.42, -10.0), 22.66],
+    [(-0.15, 168.42, -10.0), 22.66],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** PoleNet**, described as:  Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 1 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PoleNet,
+                        Size: small(0.25*0.25=0.0625 squares),
+                        Description: Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-51, 50]  
+                        **Y Range**: [min_y, max_y] = [118, 219]
+
+                        # RGB Captions
+                        Front = church building, beige walls, red tiled roof; steeple with cross on top; steeple in the background center  
+                        Left = row of buildings, white and beige facades, red tiled roofs; buildings arranged in a row; courtyard in the foreground  
+                        Right = building, beige walls, red tiled roof; tree with orange leaves to the right; tree is distant  
+                        Down = statue, bronze color, arms raised; statue in the center of the courtyard; buildings surrounding the courtyard  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 16], [26, 29, 18]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [22, 26, 46]]
+
+                        RightDepth:
+                        [[100, 100, 100], [11, 100, 100], [8, 13, 61]]
+
+                        DownDepth:
+                        [[18, 15, 16], [15, 12, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-0.15, 168.42, -10.0), 22.66],
+    [(4.46, 170.35, -10.0), 22.66],
+    [(4.46, 170.35, -10.0), 22.66],
+    [(4.46, 170.35, -10.0), 22.66],
+    [(4.46, 170.35, -10.0), 22.66],
+    [(4.46, 170.35, -10.0), 22.66],
+    [(4.46, 170.35, -10.0), 22.66],
+    [(4.46, 170.35, -10.0), 22.66],
+    [(4.46, 170.35, -10.0), 22.66],
+    [(4.46, 170.35, -10.0), 22.66],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 1
+                        DistanceTraveled = 5.0000000000000036
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** PoleNet**, described as:  Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:1 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 2 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PoleNet,
+                        Size: small(0.25*0.25=0.0625 squares),
+                        Description: Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-51, 50]  
+                        **Y Range**: [min_y, max_y] = [118, 219]
+
+                        # RGB Captions
+                        Front = church building, beige walls, red tiled roof; steeple with cross on top; steeple in the background  
+                        Left = square courtyard, paved ground, white and beige buildings; buildings surrounding courtyard; courtyard in the foreground  
+                        Right = roof section, red tiles, wooden beams; roof in the foreground; clear sky in the background  
+                        Down = bird, mid-sized, brown feathers; bird flying in the courtyard; courtyard with shadows in the background  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 9], [21, 16, 8]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [24, 32, 34]]
+
+                        RightDepth:
+                        [[100, 100, 100], [9, 13, 100], [5, 7, 48]]
+
+                        DownDepth:
+                        [[16, 15, 13], [15, 12, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-0.15, 168.42, -10.0), 22.66],
+    [(4.46, 170.35, -10.0), 22.66],
+    [(9.08, 172.27, -10.0), 22.66],
+    [(9.08, 172.27, -10.0), 22.66],
+    [(9.08, 172.27, -10.0), 22.66],
+    [(9.08, 172.27, -10.0), 22.66],
+    [(9.08, 172.27, -10.0), 22.66],
+    [(9.08, 172.27, -10.0), 22.66],
+    [(9.08, 172.27, -10.0), 22.66],
+    [(9.08, 172.27, -10.0), 22.66],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 2
+                        DistanceTraveled = 10.000000000000007
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** PoleNet**, described as:  Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:2 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 3 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PoleNet,
+                        Size: small(0.25*0.25=0.0625 squares),
+                        Description: Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-51, 50]  
+                        **Y Range**: [min_y, max_y] = [118, 219]
+
+                        # RGB Captions
+                        Front = red tiled roof, weathered; tower in the background  
+                        Left = white building, multiple windows; red tiled roof; buildings clustered together  
+                        Right = red brick wall, textured; sky in the background  
+                        Down = red tiled roof, rusted; gutter attached to the roof  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [8, 8, 2], [17, 2, 0]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [26, 26, 15]]
+
+                        RightDepth:
+                        [[10, 100, 100], [0, 9, 100], [0, 0, 7]]
+
+                        DownDepth:
+                        [[9, 1, 0], [15, 1, 0], [18, 15, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-0.15, 168.42, -10.0), 22.66],
+    [(4.46, 170.35, -10.0), 22.66],
+    [(9.08, 172.27, -10.0), 22.66],
+    [(13.69, 174.2, -10.0), 22.66],
+    [(13.69, 174.2, -10.0), 22.66],
+    [(13.69, 174.2, -10.0), 22.66],
+    [(13.69, 174.2, -10.0), 22.66],
+    [(13.69, 174.2, -10.0), 22.66],
+    [(13.69, 174.2, -10.0), 22.66],
+    [(13.69, 174.2, -10.0), 22.66],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 3
+                        DistanceTraveled = 15.00000000000001
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** PoleNet**, described as:  Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:3 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 4 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PoleNet,
+                        Size: small(0.25*0.25=0.0625 squares),
+                        Description: Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-51, 50]  
+                        **Y Range**: [min_y, max_y] = [118, 219]
+
+                        # RGB Captions
+                        Front = black metal beams, forming triangular patterns; beams intersect at various angles; view is from above looking down  
+                        Left = wooden ceiling, light brown; black metal beam; beam intersects the ceiling; view is from below looking up  
+                        Right = black metal beams, forming triangular patterns; beams intersect at various angles; view is from above looking down; wooden walls with arched windows  
+                        Down = black metal bars, forming a grid pattern; bars are in the foreground; view is from above looking down; blue and yellow floor tiles  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [31, 27, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 35], [28, 17, 28]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 35, 40]]
+
+                        DownDepth:
+                        [[16, 15, 18], [15, 12, 15], [18, 14, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-0.15, 168.42, -10.0), 22.66],
+    [(4.46, 170.35, -10.0), 22.66],
+    [(9.08, 172.27, -10.0), 22.66],
+    [(13.69, 174.2, -10.0), 22.66],
+    [(18.31, 176.12, -10.0), 22.66],
+    [(18.31, 176.12, -10.0), 22.66],
+    [(18.31, 176.12, -10.0), 22.66],
+    [(18.31, 176.12, -10.0), 22.66],
+    [(18.31, 176.12, -10.0), 22.66],
+    [(18.31, 176.12, -10.0), 22.66],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 4
+                        DistanceTraveled = 20.000000000000014
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** PoleNet**, described as:  Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:4 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 5 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PoleNet,
+                        Size: small(0.25*0.25=0.0625 squares),
+                        Description: Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-51, 50]  
+                        **Y Range**: [min_y, max_y] = [118, 219]
+
+                        # RGB Captions
+                        Front = wooden beams, dark brown; beams form triangular patterns; beams are in the foreground; light coming through windows  
+                        Left = wooden beams, dark brown; beams form triangular patterns; beams are in the foreground; light coming through windows  
+                        Right = wooden beams, dark brown; beams form triangular patterns; beams are in the foreground; light coming through windows  
+                        Down = wooden frame, dark brown; frame is square-shaped; frame is in the foreground; carpet below  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [35, 35, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [28, 27, 36]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 28]]
+
+                        DownDepth:
+                        [[16, 15, 17], [15, 12, 15], [17, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-0.15, 168.42, -10.0), 22.66],
+    [(4.46, 170.35, -10.0), 22.66],
+    [(9.08, 172.27, -10.0), 22.66],
+    [(13.69, 174.2, -10.0), 22.66],
+    [(18.31, 176.12, -10.0), 22.66],
+    [(22.92, 178.05, -10.0), 22.66],
+    [(22.92, 178.05, -10.0), 22.66],
+    [(22.92, 178.05, -10.0), 22.66],
+    [(22.92, 178.05, -10.0), 22.66],
+    [(22.92, 178.05, -10.0), 22.66],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 5
+                        DistanceTraveled = 25.00000000000002
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** PoleNet**, described as:  Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:5 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 6 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PoleNet,
+                        Size: small(0.25*0.25=0.0625 squares),
+                        Description: Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-51, 50]  
+                        **Y Range**: [min_y, max_y] = [118, 219]
+
+                        # RGB Captions
+                        Front = wooden beams, dark brown; beams form a triangular structure; structure is in the foreground; windows with arched tops in the background  
+                        Left = wooden beams, dark brown; beams form a grid pattern; pattern is in the foreground; wooden ceiling panels above  
+                        Right = wooden beams, dark brown; beams form a grid pattern; pattern is in the foreground; two windows with arched tops in the background  
+                        Down = wooden beams, dark brown; beams form a grid pattern; pattern is in the foreground; blue carpet on the floor below  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[15, 16, 100], [100, 100, 100], [30, 22, 32]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [33, 32, 17]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [29, 32, 46]]
+
+                        DownDepth:
+                        [[16, 15, 15], [15, 11, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-0.15, 168.42, -10.0), 22.66],
+    [(4.46, 170.35, -10.0), 22.66],
+    [(9.08, 172.27, -10.0), 22.66],
+    [(13.69, 174.2, -10.0), 22.66],
+    [(18.31, 176.12, -10.0), 22.66],
+    [(22.92, 178.05, -10.0), 22.66],
+    [(27.53, 179.98, -10.0), 22.66],
+    [(27.53, 179.98, -10.0), 22.66],
+    [(27.53, 179.98, -10.0), 22.66],
+    [(27.53, 179.98, -10.0), 22.66],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 6
+                        DistanceTraveled = 30.00000000000003
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** PoleNet**, described as:  Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:6 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 7 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PoleNet,
+                        Size: small(0.25*0.25=0.0625 squares),
+                        Description: Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-51, 50]  
+                        **Y Range**: [min_y, max_y] = [118, 219]
+
+                        # RGB Captions
+                        Front = wooden beams, dark brown; arched windows, small panes; ceiling in the background  
+                        Left = wooden beams, dark brown; arched window, small panes; ceiling in the background  
+                        Right = wooden beams, dark brown; arched window, small panes; ceiling in the background  
+                        Down = wooden beams, dark brown; carpeted floor, blue; bird flying near the floor  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [23, 15, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 67], [27, 34, 27]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 28, 37]]
+
+                        DownDepth:
+                        [[16, 15, 16], [13, 11, 15], [18, 15, 17]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-0.15, 168.42, -10.0), 22.66],
+    [(4.46, 170.35, -10.0), 22.66],
+    [(9.08, 172.27, -10.0), 22.66],
+    [(13.69, 174.2, -10.0), 22.66],
+    [(18.31, 176.12, -10.0), 22.66],
+    [(22.92, 178.05, -10.0), 22.66],
+    [(27.53, 179.98, -10.0), 22.66],
+    [(32.15, 181.9, -10.0), 22.66],
+    [(32.15, 181.9, -10.0), 22.66],
+    [(32.15, 181.9, -10.0), 22.66],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 7
+                        DistanceTraveled = 35.000000000000036
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** PoleNet**, described as:  Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:7 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 8 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PoleNet,
+                        Size: small(0.25*0.25=0.0625 squares),
+                        Description: Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-51, 50]  
+                        **Y Range**: [min_y, max_y] = [118, 219]
+
+                        # RGB Captions
+                        Front = brown wall, smooth texture; black beams, intersecting; light source in the top right corner  
+                        Left = arch window, grid pattern; brown wall, smooth texture; white cube in the foreground; black beams, intersecting  
+                        Right = brown wall, smooth texture; black beams, intersecting; light reflection on the wall  
+                        Down = blue floor, textured; brown wall, smooth texture; black door, closed; white crosses on the walls; black beams, intersecting  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 4], [6, 100, 36], [7, 36, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [45, 56, 100], [42, 34, 11]]
+
+                        RightDepth:
+                        [[3, 3, 4], [2, 7, 100], [100, 100, 19]]
+
+                        DownDepth:
+                        [[13, 12, 12], [15, 11, 12], [16, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-0.15, 168.42, -10.0), 22.66],
+    [(4.46, 170.35, -10.0), 22.66],
+    [(9.08, 172.27, -10.0), 22.66],
+    [(13.69, 174.2, -10.0), 22.66],
+    [(18.31, 176.12, -10.0), 22.66],
+    [(22.92, 178.05, -10.0), 22.66],
+    [(27.53, 179.98, -10.0), 22.66],
+    [(32.15, 181.9, -10.0), 22.66],
+    [(36.76, 183.83, -10.0), 22.66],
+    [(36.76, 183.83, -10.0), 22.66],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 8
+                        DistanceTraveled = 40.00000000000004
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** PoleNet**, described as:  Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:8 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 9 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PoleNet,
+                        Size: small(0.25*0.25=0.0625 squares),
+                        Description: Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-51, 50]  
+                        **Y Range**: [min_y, max_y] = [118, 219]
+
+                        # RGB Captions
+                        Front = building, yellow facade, multiple windows; building in the background; tree to the left of the building; waterway in front of the building  
+                        Left = wall, beige color, textured surface; window on the upper left corner; black beams on the wall; view is from below  
+                        Right = house, yellow exterior, red roof; house in the foreground; sky in the background; railing on the right side of the house  
+                        Down = courtyard, square shape, gray pavement; walls surrounding the courtyard; view is from above  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [0, 44, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 2], [100, 100, 2], [45, 11, 2]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 100]]
+
+                        DownDepth:
+                        [[2, 5, 24], [13, 11, 20], [18, 15, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-0.15, 168.42, -10.0), 22.66],
+    [(4.46, 170.35, -10.0), 22.66],
+    [(9.08, 172.27, -10.0), 22.66],
+    [(13.69, 174.2, -10.0), 22.66],
+    [(18.31, 176.12, -10.0), 22.66],
+    [(22.92, 178.05, -10.0), 22.66],
+    [(27.53, 179.98, -10.0), 22.66],
+    [(32.15, 181.9, -10.0), 22.66],
+    [(36.76, 183.83, -10.0), 22.66],
+    [(41.38, 185.76, -10.0), 22.66],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 9
+                        DistanceTraveled = 45.00000000000005
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** PoleNet**, described as:  Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:9 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 10 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PoleNet,
+                        Size: small(0.25*0.25=0.0625 squares),
+                        Description: Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-51, 50]  
+                        **Y Range**: [min_y, max_y] = [118, 219]
+
+                        # RGB Captions
+                        Front = buildings, multiple, with red-tiled roofs; buildings are on both sides of the canal; tree in the foreground  
+                        Left = windmill, wooden, stationary; windmill is in the foreground; buildings in the background  
+                        Right = water, calm, occupies the entire frame; water stretches to the horizon  
+                        Down = building, single, with a red-tiled roof; building is in the foreground; bridge adjacent to the building  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 43, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [38, 35, 38]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 100]]
+
+                        DownDepth:
+                        [[18, 20, 23], [15, 11, 20], [16, 14, 22]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(4.46, 170.35, -10.0), 22.66],
+    [(9.08, 172.27, -10.0), 22.66],
+    [(13.69, 174.2, -10.0), 22.66],
+    [(18.31, 176.12, -10.0), 22.66],
+    [(22.92, 178.05, -10.0), 22.66],
+    [(27.53, 179.98, -10.0), 22.66],
+    [(32.15, 181.9, -10.0), 22.66],
+    [(36.76, 183.83, -10.0), 22.66],
+    [(41.38, 185.76, -10.0), 22.66],
+    [(45.99, 187.68, -10.0), 22.66],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 10
+                        DistanceTraveled = 50.00000000000006
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** PoleNet**, described as:  Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:10 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 11 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PoleNet,
+                        Size: small(0.25*0.25=0.0625 squares),
+                        Description: Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-51, 50]  
+                        **Y Range**: [min_y, max_y] = [118, 219]
+
+                        # RGB Captions
+                        Front = buildings, beige and yellow facades; red-tiled roofs; trees with green leaves; buildings are in the foreground and background; canal running through the middle  
+                        Left = buildings, beige and yellow facades; red-tiled roofs; windmill on the right; buildings are in the foreground and background; cobblestone square in the center  
+                        Right = building, yellow facade; red-tiled roof; building is in the foreground; sky is clear with some clouds; horizon line visible in the background  
+                        Down = building, yellow facade; red-tiled roof; staircase on the left; chain fence on the right; snow patches on the ground; building is in the foreground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [58, 44, 36]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [35, 35, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 100]]
+
+                        DownDepth:
+                        [[18, 15, 23], [15, 11, 20], [15, 15, 23]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(9.08, 172.27, -10.0), 22.66],
+    [(13.69, 174.2, -10.0), 22.66],
+    [(18.31, 176.12, -10.0), 22.66],
+    [(22.92, 178.05, -10.0), 22.66],
+    [(27.53, 179.98, -10.0), 22.66],
+    [(32.15, 181.9, -10.0), 22.66],
+    [(36.76, 183.83, -10.0), 22.66],
+    [(41.38, 185.76, -10.0), 22.66],
+    [(45.99, 187.68, -10.0), 22.66],
+    [(45.99, 187.68, -10.0), 7.66],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 11
+                        DistanceTraveled = 50.00000000000006
+                        AvgHeadingChange = 1.36
+
+                        # Reminder  
+                        - The target is ** PoleNet**, described as:  Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:11 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 12 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PoleNet,
+                        Size: small(0.25*0.25=0.0625 squares),
+                        Description: Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-51, 50]  
+                        **Y Range**: [min_y, max_y] = [118, 219]
+
+                        # RGB Captions
+                        Front = building, beige walls, red-tiled roof; building is in the foreground; windmill to the left; trees with yellow leaves; canal on the right  
+                        Left = buildings, beige walls, red-tiled roofs; buildings are in the foreground and background; clear sky above  
+                        Right = building, beige walls, red-tiled roof; building is in the foreground; water surrounding the building; clear sky above  
+                        Down = building, beige walls, red-tiled roof; building is in the foreground; bridge on the right; shadows on the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 35, 48]]
+
+                        LeftDepth:
+                        [[10, 100, 100], [6, 100, 100], [8, 34, 25]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 100]]
+
+                        DownDepth:
+                        [[18, 15, 23], [15, 11, 20], [8, 15, 23]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(13.69, 174.2, -10.0), 22.66],
+    [(18.31, 176.12, -10.0), 22.66],
+    [(22.92, 178.05, -10.0), 22.66],
+    [(27.53, 179.98, -10.0), 22.66],
+    [(32.15, 181.9, -10.0), 22.66],
+    [(36.76, 183.83, -10.0), 22.66],
+    [(41.38, 185.76, -10.0), 22.66],
+    [(45.99, 187.68, -10.0), 22.66],
+    [(45.99, 187.68, -10.0), 7.66],
+    [(45.99, 187.68, -10.0), -7.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 12
+                        DistanceTraveled = 50.00000000000006
+                        AvgHeadingChange = 2.5
+
+                        # Reminder  
+                        - The target is ** PoleNet**, described as:  Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:12 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 13 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PoleNet,
+                        Size: small(0.25*0.25=0.0625 squares),
+                        Description: Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-51, 50]  
+                        **Y Range**: [min_y, max_y] = [118, 219]
+
+                        # RGB Captions
+                        Front = windmill, old, wooden; windmill is in the foreground; buildings with red-tiled roofs in the background  
+                        Left = buildings, beige and white walls; buildings are in the background; cobblestone street in the foreground  
+                        Right = building, yellow facade, red-tiled roof; building is on the water's edge; water in the foreground  
+                        Down = table, wooden surface; table is in the foreground; metal grate and orange corrugated object on the table  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [39, 35, 50]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [6, 34, 27]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 100]]
+
+                        DownDepth:
+                        [[18, 15, 18], [15, 11, 15], [6, 7, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(18.31, 176.12, -10.0), 22.66],
+    [(22.92, 178.05, -10.0), 22.66],
+    [(27.53, 179.98, -10.0), 22.66],
+    [(32.15, 181.9, -10.0), 22.66],
+    [(36.76, 183.83, -10.0), 22.66],
+    [(41.38, 185.76, -10.0), 22.66],
+    [(45.99, 187.68, -10.0), 22.66],
+    [(45.99, 187.68, -10.0), 7.66],
+    [(45.99, 187.68, -10.0), -7.34],
+    [(45.35, 182.72, -10.0), -7.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 13
+                        DistanceTraveled = 55.000000000000064
+                        AvgHeadingChange = 2.31
+
+                        # Reminder  
+                        - The target is ** PoleNet**, described as:  Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:13 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 14 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PoleNet,
+                        Size: small(0.25*0.25=0.0625 squares),
+                        Description: Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-51, 50]  
+                        **Y Range**: [min_y, max_y] = [118, 219]
+
+                        # RGB Captions
+                        Front = windmill, old, metal; windmill is in the foreground; buildings with red-tiled roofs  
+                        Left = square, paved, cobblestone; square is in the center; buildings surrounding the square  
+                        Right = building, yellow, large; building is in the foreground; water in the background  
+                        Down = shadow, long, on ground; shadow is in the foreground; crane structure casting the shadow  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [35, 35, 50]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [42, 30, 27]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 100]]
+
+                        DownDepth:
+                        [[16, 15, 18], [15, 11, 15], [18, 12, 9]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(22.92, 178.05, -10.0), 22.66],
+    [(27.53, 179.98, -10.0), 22.66],
+    [(32.15, 181.9, -10.0), 22.66],
+    [(36.76, 183.83, -10.0), 22.66],
+    [(41.38, 185.76, -10.0), 22.66],
+    [(45.99, 187.68, -10.0), 22.66],
+    [(45.99, 187.68, -10.0), 7.66],
+    [(45.99, 187.68, -10.0), -7.34],
+    [(45.35, 182.72, -10.0), -7.34],
+    [(44.71, 177.76, -10.0), -7.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 14
+                        DistanceTraveled = 60.00000000000007
+                        AvgHeadingChange = 2.14
+
+                        # Reminder  
+                        - The target is ** PoleNet**, described as:  Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:14 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 15 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PoleNet,
+                        Size: small(0.25*0.25=0.0625 squares),
+                        Description: Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-51, 50]  
+                        **Y Range**: [min_y, max_y] = [118, 219]
+
+                        # RGB Captions
+                        Front = buildings, beige and brown facades; buildings are in the foreground and background; trees with yellow leaves  
+                        Left = buildings, beige and brown facades; buildings are in the foreground and background  
+                        Right = buildings, beige and brown facades; building is in the background; water in the foreground  
+                        Down = building, beige facade; crane shadow on the ground; crane is above the building  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [37, 43, 52]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 30, 24]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [43, 100, 100]]
+
+                        DownDepth:
+                        [[16, 15, 18], [15, 11, 15], [18, 15, 17]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(27.53, 179.98, -10.0), 22.66],
+    [(32.15, 181.9, -10.0), 22.66],
+    [(36.76, 183.83, -10.0), 22.66],
+    [(41.38, 185.76, -10.0), 22.66],
+    [(45.99, 187.68, -10.0), 22.66],
+    [(45.99, 187.68, -10.0), 7.66],
+    [(45.99, 187.68, -10.0), -7.34],
+    [(45.35, 182.72, -10.0), -7.34],
+    [(44.71, 177.76, -10.0), -7.34],
+    [(49.67, 177.13, -10.0), -7.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 15
+                        DistanceTraveled = 65.00000000000007
+                        AvgHeadingChange = 2.0
+
+                        # Reminder  
+                        - The target is ** PoleNet**, described as:  Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:15 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 16 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PoleNet,
+                        Size: small(0.25*0.25=0.0625 squares),
+                        Description: Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-51, 50]  
+                        **Y Range**: [min_y, max_y] = [118, 219]
+
+                        # RGB Captions
+                        Front = buildings, orange rooftops, multiple; trees, yellow leaves; buildings in the foreground and background; trees between buildings  
+                        Left = buildings, orange rooftops, multiple; statue, stone material; buildings surround the courtyard; statue in the foreground  
+                        Right = building, large, waterfront; tree, green leaves; water, calm surface; building stands near the water; tree beside the building  
+                        Down = shadow, long, on the ground; sunlight, bright; shadow extends from the corner; buildings, corners visible; ground with patches  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [16, 44, 43]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [38, 35, 27]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [51, 100, 100]]
+
+                        DownDepth:
+                        [[15, 15, 18], [15, 11, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(32.15, 181.9, -10.0), 22.66],
+    [(36.76, 183.83, -10.0), 22.66],
+    [(41.38, 185.76, -10.0), 22.66],
+    [(45.99, 187.68, -10.0), 22.66],
+    [(45.99, 187.68, -10.0), 7.66],
+    [(45.99, 187.68, -10.0), -7.34],
+    [(45.35, 182.72, -10.0), -7.34],
+    [(44.71, 177.76, -10.0), -7.34],
+    [(49.67, 177.13, -10.0), -7.34],
+    [(49.67, 177.13, -10.0), -22.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 16
+                        DistanceTraveled = 65.00000000000007
+                        AvgHeadingChange = 2.81
+
+                        # Reminder  
+                        - The target is ** PoleNet**, described as:  Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:16 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 17 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PoleNet,
+                        Size: small(0.25*0.25=0.0625 squares),
+                        Description: Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-51, 50]  
+                        **Y Range**: [min_y, max_y] = [118, 219]
+
+                        # RGB Captions
+                        Front = buildings, beige and brown facades; red-tiled roofs; trees with yellow leaves; buildings are in the foreground and background  
+                        Left = square with cobblestone pavement; statue of a figure with raised arms; buildings surrounding the square; statue is in the center  
+                        Right = building floating above ground level; tree with yellow leaves; signpost in the foreground; building is in the background  
+                        Down = shadow of a crane on the ground; crane structure visible at the top; buildings around the edges; shadow is in the center  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [16, 34, 45]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 35, 29]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [35, 42, 100]]
+
+                        DownDepth:
+                        [[16, 15, 17], [15, 11, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(36.76, 183.83, -10.0), 22.66],
+    [(41.38, 185.76, -10.0), 22.66],
+    [(45.99, 187.68, -10.0), 22.66],
+    [(45.99, 187.68, -10.0), 7.66],
+    [(45.99, 187.68, -10.0), -7.34],
+    [(45.35, 182.72, -10.0), -7.34],
+    [(44.71, 177.76, -10.0), -7.34],
+    [(49.67, 177.13, -10.0), -7.34],
+    [(49.67, 177.13, -10.0), -22.34],
+    [(49.67, 177.13, -10.0), -37.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 17
+                        DistanceTraveled = 65.00000000000007
+                        AvgHeadingChange = 3.53
+
+                        # Reminder  
+                        - The target is ** PoleNet**, described as:  Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:17 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 18 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PoleNet,
+                        Size: small(0.25*0.25=0.0625 squares),
+                        Description: Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-51, 50]  
+                        **Y Range**: [min_y, max_y] = [118, 219]
+
+                        # RGB Captions
+                        Front = building, orange roof, beige walls; building stands in the foreground; tree with yellow leaves to the right; buildings in the background  
+                        Left = statue, bronze color, angel figure; statue is in the foreground; buildings surrounding the square; clear sky above  
+                        Right = tree, green leaves, medium-sized; tree is in the foreground; buildings in the background; foggy atmosphere  
+                        Down = shadow on ground, dark shape; shadow is in the foreground; cobblestone ground; corner of a building in the bottom left  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [27, 17, 48]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 34, 34]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 42, 100]]
+
+                        DownDepth:
+                        [[18, 15, 18], [15, 11, 15], [16, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(41.38, 185.76, -10.0), 22.66],
+    [(45.99, 187.68, -10.0), 22.66],
+    [(45.99, 187.68, -10.0), 7.66],
+    [(45.99, 187.68, -10.0), -7.34],
+    [(45.35, 182.72, -10.0), -7.34],
+    [(44.71, 177.76, -10.0), -7.34],
+    [(49.67, 177.13, -10.0), -7.34],
+    [(49.67, 177.13, -10.0), -22.34],
+    [(49.67, 177.13, -10.0), -37.34],
+    [(49.67, 177.13, -10.0), -52.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 18
+                        DistanceTraveled = 65.00000000000007
+                        AvgHeadingChange = 4.17
+
+                        # Reminder  
+                        - The target is ** PoleNet**, described as:  Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:18 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 19 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PoleNet,
+                        Size: small(0.25*0.25=0.0625 squares),
+                        Description: Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-51, 50]  
+                        **Y Range**: [min_y, max_y] = [118, 219]
+
+                        # RGB Captions
+                        Front = building, orange roof, beige walls; building is in the foreground; trees with yellow leaves to the right  
+                        Left = statue of a figure, bronze color, standing on a pedestal; statue is in the foreground; church building with red roof and white walls in the background  
+                        Right = building, orange roof, beige walls; building is in the foreground; two trees with yellow leaves on either side  
+                        Down = shadow of a crane, cast on the ground; crane shadow is in the foreground; buildings with shadows around  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [29, 15, 51]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [8, 35, 38]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 42, 42]]
+
+                        DownDepth:
+                        [[18, 15, 18], [15, 11, 15], [16, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(45.99, 187.68, -10.0), 22.66],
+    [(45.99, 187.68, -10.0), 7.66],
+    [(45.99, 187.68, -10.0), -7.34],
+    [(45.35, 182.72, -10.0), -7.34],
+    [(44.71, 177.76, -10.0), -7.34],
+    [(49.67, 177.13, -10.0), -7.34],
+    [(49.67, 177.13, -10.0), -22.34],
+    [(49.67, 177.13, -10.0), -37.34],
+    [(49.67, 177.13, -10.0), -52.34],
+    [(49.67, 177.13, -10.0), -67.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 19
+                        DistanceTraveled = 65.00000000000007
+                        AvgHeadingChange = 4.74
+
+                        # Reminder  
+                        - The target is ** PoleNet**, described as:  Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:19 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 20 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PoleNet,
+                        Size: small(0.25*0.25=0.0625 squares),
+                        Description: Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-51, 50]  
+                        **Y Range**: [min_y, max_y] = [118, 219]
+
+                        # RGB Captions
+                        Front = buildings, orange and beige facades; buildings are in the foreground and background; cobblestone street in front  
+                        Left = building with red roof, beige walls; building is in the foreground; cobblestone street below  
+                        Right = windmill, metal structure; windmill is in the foreground; trees with yellow leaves behind  
+                        Down = shadow of a person on the ground; shadow is in the foreground; cobblestone street around  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [27, 25, 18]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [30, 34, 35]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [51, 34, 45]]
+
+                        DownDepth:
+                        [[18, 15, 18], [15, 11, 15], [15, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(45.99, 187.68, -10.0), 7.66],
+    [(45.99, 187.68, -10.0), -7.34],
+    [(45.35, 182.72, -10.0), -7.34],
+    [(44.71, 177.76, -10.0), -7.34],
+    [(49.67, 177.13, -10.0), -7.34],
+    [(49.67, 177.13, -10.0), -22.34],
+    [(49.67, 177.13, -10.0), -37.34],
+    [(49.67, 177.13, -10.0), -52.34],
+    [(49.67, 177.13, -10.0), -67.34],
+    [(45.06, 175.2, -10.0), -67.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 20
+                        DistanceTraveled = 70.00000000000007
+                        AvgHeadingChange = 4.5
+
+                        # Reminder  
+                        - The target is ** PoleNet**, described as:  Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:20 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 21 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PoleNet,
+                        Size: small(0.25*0.25=0.0625 squares),
+                        Description: Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-51, 50]  
+                        **Y Range**: [min_y, max_y] = [118, 219]
+
+                        # RGB Captions
+                        Front = buildings, orange roofs, beige walls; buildings are in the foreground and background; trees with yellow leaves on the right  
+                        Left = statue, bronze color, standing; statue is in the foreground; buildings with orange roofs in the background  
+                        Right = building, orange roof, beige walls; building is in the foreground; trees with yellow leaves on the left and right  
+                        Down = shadow of a crane, cast on the ground; shadow is in the foreground; corner of a building on the left  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [29, 22, 51]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [19, 35, 38]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 41, 42]]
+
+                        DownDepth:
+                        [[18, 15, 18], [15, 11, 15], [17, 15, 17]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(45.99, 187.68, -10.0), -7.34],
+    [(45.35, 182.72, -10.0), -7.34],
+    [(44.71, 177.76, -10.0), -7.34],
+    [(49.67, 177.13, -10.0), -7.34],
+    [(49.67, 177.13, -10.0), -22.34],
+    [(49.67, 177.13, -10.0), -37.34],
+    [(49.67, 177.13, -10.0), -52.34],
+    [(49.67, 177.13, -10.0), -67.34],
+    [(45.06, 175.2, -10.0), -67.34],
+    [(49.67, 177.13, -10.0), -67.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 21
+                        DistanceTraveled = 75.00000000000007
+                        AvgHeadingChange = 4.29
+
+                        # Reminder  
+                        - The target is ** PoleNet**, described as:  Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:21 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 22 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PoleNet,
+                        Size: small(0.25*0.25=0.0625 squares),
+                        Description: Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-51, 50]  
+                        **Y Range**: [min_y, max_y] = [118, 219]
+
+                        # RGB Captions
+                        Front = multi-story buildings, pastel colors, red-tiled roofs; buildings are in the foreground and background; clear sky above  
+                        Left = church building, beige walls, red-tiled roof; statue in the courtyard; courtyard in the foreground; church in the background  
+                        Right = square building, peach facade, red-tiled roof; trees with yellow leaves; trees to the left of the building; clear sky above  
+                        Down = shadow on the ground, elongated shape; shadow is in the foreground; buildings surrounding the area  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [38, 27, 26]]
+
+                        LeftDepth:
+                        [[12, 100, 100], [9, 100, 100], [16, 33, 40]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [53, 44, 45]]
+
+                        DownDepth:
+                        [[18, 15, 17], [15, 11, 15], [16, 15, 17]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(45.35, 182.72, -10.0), -7.34],
+    [(44.71, 177.76, -10.0), -7.34],
+    [(49.67, 177.13, -10.0), -7.34],
+    [(49.67, 177.13, -10.0), -22.34],
+    [(49.67, 177.13, -10.0), -37.34],
+    [(49.67, 177.13, -10.0), -52.34],
+    [(49.67, 177.13, -10.0), -67.34],
+    [(45.06, 175.2, -10.0), -67.34],
+    [(49.67, 177.13, -10.0), -67.34],
+    [(49.67, 177.13, -10.0), -82.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 22
+                        DistanceTraveled = 75.00000000000007
+                        AvgHeadingChange = 4.77
+
+                        # Reminder  
+                        - The target is ** PoleNet**, described as:  Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:22 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 23 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PoleNet,
+                        Size: small(0.25*0.25=0.0625 squares),
+                        Description: Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-51, 50]  
+                        **Y Range**: [min_y, max_y] = [118, 219]
+
+                        # RGB Captions
+                        Front = multi-story buildings, beige and brown facades; buildings surround a courtyard; courtyard is in the foreground  
+                        Left = building corner, red tiled roof; clock on the wall; shadow of the clock on the wall; corner is in the foreground  
+                        Right = windmill, metal structure; windmill is in the foreground; trees with yellow leaves; buildings in the background  
+                        Down = statue, stone material; statue is in the courtyard; clock tower shadow on the ground; clock tower in the background  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [35, 27, 16]]
+
+                        LeftDepth:
+                        [[5, 100, 100], [4, 100, 100], [4, 28, 40]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [37, 34, 45]]
+
+                        DownDepth:
+                        [[18, 15, 17], [15, 11, 15], [4, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(44.71, 177.76, -10.0), -7.34],
+    [(49.67, 177.13, -10.0), -7.34],
+    [(49.67, 177.13, -10.0), -22.34],
+    [(49.67, 177.13, -10.0), -37.34],
+    [(49.67, 177.13, -10.0), -52.34],
+    [(49.67, 177.13, -10.0), -67.34],
+    [(45.06, 175.2, -10.0), -67.34],
+    [(49.67, 177.13, -10.0), -67.34],
+    [(49.67, 177.13, -10.0), -82.34],
+    [(44.72, 176.46, -10.0), -82.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 23
+                        DistanceTraveled = 80.00000000000007
+                        AvgHeadingChange = 4.57
+
+                        # Reminder  
+                        - The target is ** PoleNet**, described as:  Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:23 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 24 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PoleNet,
+                        Size: small(0.25*0.25=0.0625 squares),
+                        Description: Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-51, 50]  
+                        **Y Range**: [min_y, max_y] = [118, 219]
+
+                        # RGB Captions
+                        Front = multi-story buildings, pastel-colored facades; buildings are closely packed; cobblestone square in the foreground  
+                        Left = church building, beige walls; statue in the courtyard; courtyard is in the foreground; church stands in the background  
+                        Right = single building, beige facade; building is in the center; yellow trees on either side; cobblestone ground  
+                        Down = construction crane, metal structure; crane shadow on the ground; ground has patches of dirt and concrete  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [39, 28, 21]]
+
+                        LeftDepth:
+                        [[11, 100, 100], [9, 100, 100], [17, 32, 40]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [54, 43, 45]]
+
+                        DownDepth:
+                        [[18, 15, 17], [15, 11, 15], [16, 15, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(49.67, 177.13, -10.0), -7.34],
+    [(49.67, 177.13, -10.0), -22.34],
+    [(49.67, 177.13, -10.0), -37.34],
+    [(49.67, 177.13, -10.0), -52.34],
+    [(49.67, 177.13, -10.0), -67.34],
+    [(45.06, 175.2, -10.0), -67.34],
+    [(49.67, 177.13, -10.0), -67.34],
+    [(49.67, 177.13, -10.0), -82.34],
+    [(44.72, 176.46, -10.0), -82.34],
+    [(49.67, 177.13, -10.0), -82.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 24
+                        DistanceTraveled = 85.00000000000007
+                        AvgHeadingChange = 4.37
+
+                        # Reminder  
+                        - The target is ** PoleNet**, described as:  Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:24 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 25 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PoleNet,
+                        Size: small(0.25*0.25=0.0625 squares),
+                        Description: Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-51, 50]  
+                        **Y Range**: [min_y, max_y] = [118, 219]
+
+                        # RGB Captions
+                        Front = multi-story buildings, beige and brown facades; buildings surround a courtyard; clear sky  
+                        Left = building with red tiled roof; building has a cross symbol; window shutters closed; building in the foreground  
+                        Right = windmill, dark metal structure; windmill is in the foreground; trees with yellow leaves; buildings in the background  
+                        Down = statue on a pedestal; statue is in the foreground; shadow of a windmill on the ground; corner of a building with a clock  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 27, 20]]
+
+                        LeftDepth:
+                        [[6, 100, 100], [4, 100, 100], [4, 28, 40]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [37, 34, 45]]
+
+                        DownDepth:
+                        [[18, 15, 17], [15, 11, 15], [4, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(49.67, 177.13, -10.0), -22.34],
+    [(49.67, 177.13, -10.0), -37.34],
+    [(49.67, 177.13, -10.0), -52.34],
+    [(49.67, 177.13, -10.0), -67.34],
+    [(45.06, 175.2, -10.0), -67.34],
+    [(49.67, 177.13, -10.0), -67.34],
+    [(49.67, 177.13, -10.0), -82.34],
+    [(44.72, 176.46, -10.0), -82.34],
+    [(49.67, 177.13, -10.0), -82.34],
+    [(44.72, 176.46, -10.0), -82.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 25
+                        DistanceTraveled = 90.00000000000007
+                        AvgHeadingChange = 4.2
+
+                        # Reminder  
+                        - The target is ** PoleNet**, described as:  Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:25 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 26 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PoleNet,
+                        Size: small(0.25*0.25=0.0625 squares),
+                        Description: Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-51, 50]  
+                        **Y Range**: [min_y, max_y] = [118, 219]
+
+                        # RGB Captions
+                        Front = square, paved; buildings surrounding; clear sky  
+                        Left = building, yellow facade; red tiled roof; shadow on the wall  
+                        Right = windmill, wooden blades; trees in the background; foggy atmosphere  
+                        Down = angel statue, stone; shield and sword on the ground; shadows on the wall  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [34, 27, 27]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [7, 100, 100], [6, 18, 34]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [35, 34, 35]]
+
+                        DownDepth:
+                        [[18, 15, 17], [15, 11, 15], [6, 4, 4]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(49.67, 177.13, -10.0), -37.34],
+    [(49.67, 177.13, -10.0), -52.34],
+    [(49.67, 177.13, -10.0), -67.34],
+    [(45.06, 175.2, -10.0), -67.34],
+    [(49.67, 177.13, -10.0), -67.34],
+    [(49.67, 177.13, -10.0), -82.34],
+    [(44.72, 176.46, -10.0), -82.34],
+    [(49.67, 177.13, -10.0), -82.34],
+    [(44.72, 176.46, -10.0), -82.34],
+    [(39.76, 175.79, -10.0), -82.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 26
+                        DistanceTraveled = 95.00000000000007
+                        AvgHeadingChange = 4.04
+
+                        # Reminder  
+                        - The target is ** PoleNet**, described as:  Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:26 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 27 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PoleNet,
+                        Size: small(0.25*0.25=0.0625 squares),
+                        Description: Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-51, 50]  
+                        **Y Range**: [min_y, max_y] = [118, 219]
+
+                        # RGB Captions
+                        Front = square, paved; buildings surrounding; buildings have orange roofs and multiple windows  
+                        Left = wall, beige; diagonal shadow on the wall; roof with orange tiles in the background  
+                        Right = street, cobblestone; buildings on both sides; trees in the distance; building on the right has a balcony  
+                        Down = statue, bronze; attached to the wall; shadow of the statue on the wall; window and drain cover nearby  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [34, 26, 28]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [1, 100, 100], [1, 1, 7]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [27, 34, 7]]
+
+                        DownDepth:
+                        [[16, 15, 18], [11, 11, 15], [6, 7, 7]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(49.67, 177.13, -10.0), -52.34],
+    [(49.67, 177.13, -10.0), -67.34],
+    [(45.06, 175.2, -10.0), -67.34],
+    [(49.67, 177.13, -10.0), -67.34],
+    [(49.67, 177.13, -10.0), -82.34],
+    [(44.72, 176.46, -10.0), -82.34],
+    [(49.67, 177.13, -10.0), -82.34],
+    [(44.72, 176.46, -10.0), -82.34],
+    [(39.76, 175.79, -10.0), -82.34],
+    [(34.8, 175.13, -10.0), -82.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 27
+                        DistanceTraveled = 100.00000000000007
+                        AvgHeadingChange = 3.89
+
+                        # Reminder  
+                        - The target is ** PoleNet**, described as:  Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:27 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 28 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PoleNet,
+                        Size: small(0.25*0.25=0.0625 squares),
+                        Description: Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-51, 50]  
+                        **Y Range**: [min_y, max_y] = [118, 219]
+
+                        # RGB Captions
+                        Front = buildings, beige and peach; buildings arranged in a courtyard; courtyard is paved with cobblestones  
+                        Left = building, yellow facade; building has red tiled roof; shadow of another building on the roof  
+                        Right = windmill, metal structure; windmill stands near buildings; buildings have red tiled roofs  
+                        Down = bird, brown feathers; bird flying between buildings; shadow of the bird on the wall  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [29, 22, 24]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [14, 100, 100], [9, 18, 31]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [20, 33, 50]]
+
+                        DownDepth:
+                        [[18, 15, 18], [13, 11, 15], [16, 13, 17]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(49.67, 177.13, -10.0), -67.34],
+    [(45.06, 175.2, -10.0), -67.34],
+    [(49.67, 177.13, -10.0), -67.34],
+    [(49.67, 177.13, -10.0), -82.34],
+    [(44.72, 176.46, -10.0), -82.34],
+    [(49.67, 177.13, -10.0), -82.34],
+    [(44.72, 176.46, -10.0), -82.34],
+    [(39.76, 175.79, -10.0), -82.34],
+    [(34.8, 175.13, -10.0), -82.34],
+    [(35.47, 170.17, -10.0), -82.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 28
+                        DistanceTraveled = 105.00000000000007
+                        AvgHeadingChange = 3.75
+
+                        # Reminder  
+                        - The target is ** PoleNet**, described as:  Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:28 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 29 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PoleNet,
+                        Size: small(0.25*0.25=0.0625 squares),
+                        Description: Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-51, 50]  
+                        **Y Range**: [min_y, max_y] = [118, 219]
+
+                        # RGB Captions
+                        Front = square, paved; buildings surrounding; clear sky above  
+                        Left = building, yellow facade; red tiled roof; cross symbol on wall  
+                        Right = windmill, metal structure; trees with yellow leaves; buildings in background  
+                        Down = statue, stone material; square base; shadow cast on ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [30, 22, 23]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [22, 24, 37]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [15, 33, 50]]
+
+                        DownDepth:
+                        [[18, 15, 16], [15, 11, 15], [15, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(45.06, 175.2, -10.0), -67.34],
+    [(49.67, 177.13, -10.0), -67.34],
+    [(49.67, 177.13, -10.0), -82.34],
+    [(44.72, 176.46, -10.0), -82.34],
+    [(49.67, 177.13, -10.0), -82.34],
+    [(44.72, 176.46, -10.0), -82.34],
+    [(39.76, 175.79, -10.0), -82.34],
+    [(34.8, 175.13, -10.0), -82.34],
+    [(35.47, 170.17, -10.0), -82.34],
+    [(40.43, 170.84, -10.0), -82.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 29
+                        DistanceTraveled = 110.00000000000007
+                        AvgHeadingChange = 3.62
+
+                        # Reminder  
+                        - The target is ** PoleNet**, described as:  Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:29 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 30 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PoleNet,
+                        Size: small(0.25*0.25=0.0625 squares),
+                        Description: Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-51, 50]  
+                        **Y Range**: [min_y, max_y] = [118, 219]
+
+                        # RGB Captions
+                        Front = multi-story buildings, beige and orange; buildings are in the foreground and background; buildings have red-tiled roofs  
+                        Left = church building, yellow facade; church is on the left; bench in front of the church; cobblestone street in the foreground  
+                        Right = trees, golden leaves; trees are in the background; buildings with red-tiled roofs in the foreground  
+                        Down = street lamp, metal; lamp is in the foreground; shadows cast on the ground; buildings with balconies in the background  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [28, 22, 11]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [29, 32, 37]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [17, 34, 50]]
+
+                        DownDepth:
+                        [[18, 15, 15], [15, 11, 15], [15, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(49.67, 177.13, -10.0), -67.34],
+    [(49.67, 177.13, -10.0), -82.34],
+    [(44.72, 176.46, -10.0), -82.34],
+    [(49.67, 177.13, -10.0), -82.34],
+    [(44.72, 176.46, -10.0), -82.34],
+    [(39.76, 175.79, -10.0), -82.34],
+    [(34.8, 175.13, -10.0), -82.34],
+    [(35.47, 170.17, -10.0), -82.34],
+    [(40.43, 170.84, -10.0), -82.34],
+    [(45.38, 171.5, -10.0), -82.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 30
+                        DistanceTraveled = 115.00000000000007
+                        AvgHeadingChange = 3.5
+
+                        # Reminder  
+                        - The target is ** PoleNet**, described as:  Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:30 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 31 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PoleNet,
+                        Size: small(0.25*0.25=0.0625 squares),
+                        Description: Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-51, 50]  
+                        **Y Range**: [min_y, max_y] = [118, 219]
+
+                        # RGB Captions
+                        Front = buildings, orange and yellow facades; buildings are in the foreground and background; clear sky above  
+                        Left = square with cobblestone pavement; buildings with red tiled roofs; buildings surround the square; clear sky above  
+                        Right = trees with yellow leaves; buildings with red tiled roofs; trees are in the foreground; buildings in the background  
+                        Down = building with orange facade; window shutters closed; shadow of a street lamp on the wall; ground is paved  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [29, 100, 100], [21, 18, 16]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [38, 34, 35]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [7, 33, 49]]
+
+                        DownDepth:
+                        [[18, 15, 9], [15, 11, 12], [17, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(49.67, 177.13, -10.0), -82.34],
+    [(44.72, 176.46, -10.0), -82.34],
+    [(49.67, 177.13, -10.0), -82.34],
+    [(44.72, 176.46, -10.0), -82.34],
+    [(39.76, 175.79, -10.0), -82.34],
+    [(34.8, 175.13, -10.0), -82.34],
+    [(35.47, 170.17, -10.0), -82.34],
+    [(40.43, 170.84, -10.0), -82.34],
+    [(45.38, 171.5, -10.0), -82.34],
+    [(46.05, 166.55, -10.0), -82.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 31
+                        DistanceTraveled = 120.00000000000007
+                        AvgHeadingChange = 3.39
+
+                        # Reminder  
+                        - The target is ** PoleNet**, described as:  Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:31 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 32 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PoleNet,
+                        Size: small(0.25*0.25=0.0625 squares),
+                        Description: Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-51, 50]  
+                        **Y Range**: [min_y, max_y] = [118, 219]
+
+                        # RGB Captions
+                        Front = multi-story buildings, beige and orange; buildings are in the foreground and background; buildings have red-tiled roofs  
+                        Left = church building, yellow; church is in the foreground; church has a cross on the wall and red-tiled roof  
+                        Right = trees, yellow leaves; trees are in the background; buildings with red-tiled roofs in the foreground  
+                        Down = building, orange; building is in the foreground; street lamp on the left; cobblestone ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [29, 19, 17]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [35, 34, 38]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [9, 8, 36]]
+
+                        DownDepth:
+                        [[18, 15, 15], [15, 11, 11], [16, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(44.72, 176.46, -10.0), -82.34],
+    [(49.67, 177.13, -10.0), -82.34],
+    [(44.72, 176.46, -10.0), -82.34],
+    [(39.76, 175.79, -10.0), -82.34],
+    [(34.8, 175.13, -10.0), -82.34],
+    [(35.47, 170.17, -10.0), -82.34],
+    [(40.43, 170.84, -10.0), -82.34],
+    [(45.38, 171.5, -10.0), -82.34],
+    [(46.05, 166.55, -10.0), -82.34],
+    [(46.05, 166.55, -10.0), -97.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 32
+                        DistanceTraveled = 120.00000000000007
+                        AvgHeadingChange = 3.75
+
+                        # Reminder  
+                        - The target is ** PoleNet**, described as:  Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:32 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 33 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PoleNet,
+                        Size: small(0.25*0.25=0.0625 squares),
+                        Description: Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-51, 50]  
+                        **Y Range**: [min_y, max_y] = [118, 219]
+
+                        # RGB Captions
+                        Front = building, orange facade, multiple windows; building stands in the foreground; clear sky above  
+                        Left = cobblestone street, narrow alleyway; buildings on either side; bench near the building on the left  
+                        Right = red-tiled roof, prominent in the foreground; yellow trees behind; buildings in the background  
+                        Down = building, brown facade, arched windows; shadow of the building cast on the cobblestone ground; striped awning above a window  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [20, 15, 13]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [39, 34, 36]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [9, 7, 7]]
+
+                        DownDepth:
+                        [[18, 15, 14], [15, 11, 13], [18, 15, 9]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(49.67, 177.13, -10.0), -82.34],
+    [(44.72, 176.46, -10.0), -82.34],
+    [(39.76, 175.79, -10.0), -82.34],
+    [(34.8, 175.13, -10.0), -82.34],
+    [(35.47, 170.17, -10.0), -82.34],
+    [(40.43, 170.84, -10.0), -82.34],
+    [(45.38, 171.5, -10.0), -82.34],
+    [(46.05, 166.55, -10.0), -82.34],
+    [(46.05, 166.55, -10.0), -97.34],
+    [(45.41, 161.59, -10.0), -97.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 33
+                        DistanceTraveled = 125.00000000000007
+                        AvgHeadingChange = 3.64
+
+                        # Reminder  
+                        - The target is ** PoleNet**, described as:  Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:33 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 34 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PoleNet,
+                        Size: small(0.25*0.25=0.0625 squares),
+                        Description: Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-51, 50]  
+                        **Y Range**: [min_y, max_y] = [118, 219]
+
+                        # RGB Captions
+                        Front = building, orange facade, green shutters; building stands in the foreground; windows closed  
+                        Left = buildings, beige and orange facades; cobblestone street in the foreground; bench on the left side  
+                        Right = rooftops, red tiles; trees with yellow leaves in the background; buildings in the distant background  
+                        Down = courtyard, paved ground; buildings with green shutters surrounding; striped awning on the right side  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[15, 100, 100], [12, 100, 100], [8, 6, 5]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 34, 34]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [7, 7, 8]]
+
+                        DownDepth:
+                        [[16, 12, 11], [15, 11, 13], [18, 15, 11]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(44.72, 176.46, -10.0), -82.34],
+    [(39.76, 175.79, -10.0), -82.34],
+    [(34.8, 175.13, -10.0), -82.34],
+    [(35.47, 170.17, -10.0), -82.34],
+    [(40.43, 170.84, -10.0), -82.34],
+    [(45.38, 171.5, -10.0), -82.34],
+    [(46.05, 166.55, -10.0), -82.34],
+    [(46.05, 166.55, -10.0), -97.34],
+    [(45.41, 161.59, -10.0), -97.34],
+    [(44.77, 156.63, -10.0), -97.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 34
+                        DistanceTraveled = 130.00000000000009
+                        AvgHeadingChange = 3.53
+
+                        # Reminder  
+                        - The target is ** PoleNet**, described as:  Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:34 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

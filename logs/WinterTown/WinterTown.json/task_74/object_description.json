@@ -1,0 +1,35 @@
+{
+  "episode_id": "74",
+  "start_pose": {
+    "start_position": [
+      -25.66499499553528,
+      -20.460078091397747,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.753039064019182,
+      0.6579758111519863
+    ]
+  },
+  "info": {
+    "geodesic_distance": 110,
+    "euclidean_distance": 69.2496
+  },
+  "map_name": "WinterTown_test",
+  "true_name": " ParkBench",
+  "object_name": "SM_Bench5_9",
+  "pose": [
+    [
+      -72.49274444580078,
+      -67.99274444580078,
+      11.528725624084473
+    ]
+  ],
+  "size": " small(1.5*0.5=0.75 squares)",
+  "description": " Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

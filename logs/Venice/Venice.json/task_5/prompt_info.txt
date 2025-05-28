@@ -1,0 +1,63 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: WoodenBox,
+                        Size: small(1.5*1=1.5 squares),
+                        Description: Geometric rectangular prism, brown wooden surface with visible plank seams, metallic edge reinforcements and rope handles, used for storage or cargo containment.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-76, 25]  
+                        **Y Range**: [min_y, max_y] = [172, 273]
+
+                        # RGB Captions
+                        Front = white building, red roof; building is in the background; orange tree in the foreground  
+                        Left = foggy sky; water surface; boat floating on the water; boat is in the foreground  
+                        Right = church building, stone construction; church is in the foreground; bridge leading to the church; orange tree on the left  
+                        Down = water surface; orange tree hanging over the water; tree is in the foreground; boat reflection on the water  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 40, 32]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 39, 47]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 100, 100]]
+
+                        DownDepth:
+                        [[22, 18, 21], [18, 15, 21], [100, 100, 100]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-25.48, 222.67, -10.0), -44.49],
+    [(-25.48, 222.67, -10.0), -44.49],
+    [(-25.48, 222.67, -10.0), -44.49],
+    [(-25.48, 222.67, -10.0), -44.49],
+    [(-25.48, 222.67, -10.0), -44.49],
+    [(-25.48, 222.67, -10.0), -44.49],
+    [(-25.48, 222.67, -10.0), -44.49],
+    [(-25.48, 222.67, -10.0), -44.49],
+    [(-25.48, 222.67, -10.0), -44.49],
+    [(-25.48, 222.67, -10.0), -44.49],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** WoodenBox**, described as:  Geometric rectangular prism, brown wooden surface with visible plank seams, metallic edge reinforcements and rope handles, used for storage or cargo containment.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

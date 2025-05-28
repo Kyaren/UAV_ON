@@ -1,0 +1,35 @@
+{
+  "episode_id": "27",
+  "start_pose": {
+    "start_position": [
+      38.06019063493204,
+      50.0787830284895,
+      -6.600000023841858
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9789141407122649,
+      0.2042721349415237
+    ]
+  },
+  "info": {
+    "geodesic_distance": 122,
+    "euclidean_distance": 25.5411
+  },
+  "map_name": "UrbanJapan_test",
+  "true_name": "TicketBarrier",
+  "object_name": "SM_TicketBarrier3",
+  "pose": [
+    [
+      21.600000381469727,
+      31.19999885559082,
+      1.399999976158142
+    ]
+  ],
+  "size": "small(2.5*0.5=1.25 squares)",
+  "description": "Rectangular geometric form, dark metallic structure with a light blue central stripe, integrated green circular light on end panel, used to control pedestrian access in transit areas.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

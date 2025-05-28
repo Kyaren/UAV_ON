@@ -1,0 +1,35 @@
+{
+  "episode_id": "42",
+  "start_pose": {
+    "start_position": [
+      -221.4471880549384,
+      23.458188806782175,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.3448954076111905,
+      0.9386411230117242
+    ]
+  },
+  "info": {
+    "geodesic_distance": 86,
+    "euclidean_distance": 57.5757
+  },
+  "map_name": "ModularNeighborhood_test",
+  "true_name": "Bicycle",
+  "object_name": "SM_Bicycle_Leaning_109",
+  "pose": [
+    [
+      -267.1000061035156,
+      -10.699999809265137,
+      1.0
+    ]
+  ],
+  "size": "small(2.5*0.75=1.875 squares)",
+  "description": "Geometric elongated form, metallic blue frame with black tires and silver spokes, brown leather saddle and upright handlebars, designed for personal ground transportation.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

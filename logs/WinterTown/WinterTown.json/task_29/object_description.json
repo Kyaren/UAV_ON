@@ -1,0 +1,35 @@
+{
+  "episode_id": "29",
+  "start_pose": {
+    "start_position": [
+      -1.980316035120378,
+      -56.08806659990576,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.8347556361925987,
+      -0.5506205842907526
+    ]
+  },
+  "info": {
+    "geodesic_distance": 84,
+    "euclidean_distance": 52.4172
+  },
+  "map_name": "WinterTown_test",
+  "true_name": " Hat",
+  "object_name": "SM_Hat_63",
+  "pose": [
+    [
+      18.807254791259766,
+      -97.89273834228516,
+      16.828725814819336
+    ]
+  ],
+  "size": " small(0.5*0.5=0.25 squares)",
+  "description": " Rounded symmetrical shape, light brown leather or felt texture with wide brim and raised crown, typical structure consistent with wearable headgear.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

@@ -1,0 +1,35 @@
+{
+  "episode_id": "16",
+  "start_pose": {
+    "start_position": [
+      104.18653160001129,
+      21.60119967706722,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.230902393837389,
+      0.9729769188013472
+    ]
+  },
+  "info": {
+    "geodesic_distance": 57,
+    "euclidean_distance": 38.0758
+  },
+  "map_name": "Venice_test",
+  "true_name": " Cloth",
+  "object_name": "cloth_01_130",
+  "pose": [
+    [
+      124.09770202636719,
+      53.617000579833984,
+      -1.6799981594085693
+    ]
+  ],
+  "size": " small(1.5*0.25=0.38 squares)",
+  "description": " Organic irregular shape, beige fabric with soft texture, subtle folds and droop, likely functioning as a hanging drape or curtain.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

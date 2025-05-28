@@ -1,0 +1,63 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:PosterPillar,
+                        Size:big(3.5*3.5=12.25 squares),
+                        Description:Cylindrical structure, multicolored posters on a metallic surface with a green conical top, segmented display panels, used for public advertisement or event promotion.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [1, 102]  
+                        **Y Range**: [min_y, max_y] = [217, 318]
+
+                        # RGB Captions
+                        Front = tree branches, dark, intertwined; branches in the foreground; sunlight filtering through  
+                        Left = red leaves, vibrant, scattered; leaves in the foreground; blue sky in the background  
+                        Right = lake, calm, reflective; lake in the background; tree branches in the foreground  
+                        Down = mossy ground, green, textured; ground in the foreground; tree branches above  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [29, 28, 38]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [34, 28, 31]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [39, 29, 33]]
+
+                        DownDepth:
+                        [[15, 12, 15], [12, 9, 13], [14, 12, 15]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(51.57, 267.0, -6.8), -47.26],
+    [(51.57, 267.0, -6.8), -47.26],
+    [(51.57, 267.0, -6.8), -47.26],
+    [(51.57, 267.0, -6.8), -47.26],
+    [(51.57, 267.0, -6.8), -47.26],
+    [(51.57, 267.0, -6.8), -47.26],
+    [(51.57, 267.0, -6.8), -47.26],
+    [(51.57, 267.0, -6.8), -47.26],
+    [(51.57, 267.0, -6.8), -47.26],
+    [(51.57, 267.0, -6.8), -47.26],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **PosterPillar**, described as: Cylindrical structure, multicolored posters on a metallic surface with a green conical top, segmented display panels, used for public advertisement or event promotion.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

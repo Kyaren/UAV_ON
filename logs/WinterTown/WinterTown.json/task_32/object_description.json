@@ -1,0 +1,35 @@
+{
+  "episode_id": "32",
+  "start_pose": {
+    "start_position": [
+      205.27487887997455,
+      -181.54949056307805,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.8941130279573586,
+      0.4478413706179051
+    ]
+  },
+  "info": {
+    "geodesic_distance": 35,
+    "euclidean_distance": 19.5179
+  },
+  "map_name": "WinterTown_test",
+  "true_name": " FoldedTent",
+  "object_name": "SM_Folded_Tent_Set2_66",
+  "pose": [
+    [
+      209.6072540283203,
+      -185.89273071289062,
+      11.528725624084473
+    ]
+  ],
+  "size": " small(1.25*1.25=1.56 squares)",
+  "description": " Clustered cylindrical shape, brown fabric texture with rope or strap bindings, resembles compacted outdoor shelter, consistent with transportable tent in storage configuration.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

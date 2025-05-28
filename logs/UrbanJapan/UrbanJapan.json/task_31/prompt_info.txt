@@ -1,0 +1,189 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:BuffetStand,
+                        Size:big(4.75*6.5=30.88 squares),
+                        Description:Rectangular, corrugated metal structure with open serving counter, grey exterior with weathered signs for newspapers and drinks, crates and boxes stacked in front, typical of a portable food and beverage stand.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [6, 107]  
+                        **Y Range**: [min_y, max_y] = [99, 200]
+
+                        # RGB Captions
+                        Front = dark environment, low visibility; no discernible objects  
+                        Left = cityscape at night, illuminated buildings; streetlights on; buildings in the background  
+                        Right = alleyway between buildings, dimly lit; buildings on both sides; alley extends forward  
+                        Down = dark surface, textured; corner of a structure; surface in the foreground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[10, 9, 10], [9, 7, 8], [10, 8, 9]]
+
+                        LeftDepth:
+                        [[100, 100, 49], [100, 100, 78], [58, 44, 31]]
+
+                        RightDepth:
+                        [[21, 100, 100], [16, 100, 100], [20, 45, 58]]
+
+                        DownDepth:
+                        [[17, 16, 20], [20, 15, 20], [23, 20, 23]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(56.77, 149.01, -6.6), -4.43],
+    [(56.77, 149.01, -6.6), -4.43],
+    [(56.77, 149.01, -6.6), -4.43],
+    [(56.77, 149.01, -6.6), -4.43],
+    [(56.77, 149.01, -6.6), -4.43],
+    [(56.77, 149.01, -6.6), -4.43],
+    [(56.77, 149.01, -6.6), -4.43],
+    [(56.77, 149.01, -6.6), -4.43],
+    [(56.77, 149.01, -6.6), -4.43],
+    [(56.77, 149.01, -6.6), -4.43],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **BuffetStand**, described as: Rectangular, corrugated metal structure with open serving counter, grey exterior with weathered signs for newspapers and drinks, crates and boxes stacked in front, typical of a portable food and beverage stand.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 1 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:BuffetStand,
+                        Size:big(4.75*6.5=30.88 squares),
+                        Description:Rectangular, corrugated metal structure with open serving counter, grey exterior with weathered signs for newspapers and drinks, crates and boxes stacked in front, typical of a portable food and beverage stand.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [6, 107]  
+                        **Y Range**: [min_y, max_y] = [99, 200]
+
+                        # RGB Captions
+                        Front = dark scene, low light; some illuminated windows in the background  
+                        Left = cityscape at dusk; multiple buildings; traffic lights glowing red and green; signs with Japanese text  
+                        Right = alleyway between buildings; concrete walls; dimly lit; shadows cast on the ground  
+                        Down = dark interior; textured floor; partial view of a wall or structure  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[11, 9, 9], [9, 6, 8], [10, 8, 9]]
+
+                        LeftDepth:
+                        [[100, 100, 53], [100, 100, 83], [60, 44, 27]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 45, 60]]
+
+                        DownDepth:
+                        [[20, 16, 20], [20, 15, 20], [24, 20, 24]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(56.77, 149.01, -6.6), -4.43],
+    [(57.16, 154.0, -6.6), -4.43],
+    [(57.16, 154.0, -6.6), -4.43],
+    [(57.16, 154.0, -6.6), -4.43],
+    [(57.16, 154.0, -6.6), -4.43],
+    [(57.16, 154.0, -6.6), -4.43],
+    [(57.16, 154.0, -6.6), -4.43],
+    [(57.16, 154.0, -6.6), -4.43],
+    [(57.16, 154.0, -6.6), -4.43],
+    [(57.16, 154.0, -6.6), -4.43],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 1
+                        DistanceTraveled = 5.000000000000005
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **BuffetStand**, described as: Rectangular, corrugated metal structure with open serving counter, grey exterior with weathered signs for newspapers and drinks, crates and boxes stacked in front, typical of a portable food and beverage stand.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:1 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 2 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:BuffetStand,
+                        Size:big(4.75*6.5=30.88 squares),
+                        Description:Rectangular, corrugated metal structure with open serving counter, grey exterior with weathered signs for newspapers and drinks, crates and boxes stacked in front, typical of a portable food and beverage stand.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [6, 107]  
+                        **Y Range**: [min_y, max_y] = [99, 200]
+
+                        # RGB Captions
+                        Front = metal fence, dark; fence is in the foreground; horizontal bars  
+                        Left = city buildings, tall; buildings are in the background; illuminated signs on buildings  
+                        Right = concrete pillars, large; pillars are in the foreground; sky visible between pillars  
+                        Down = carpet floor, textured; floor is in the foreground; partial view of furniture  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[10, 8, 8], [8, 6, 6], [10, 8, 8]]
+
+                        LeftDepth:
+                        [[100, 100, 58], [100, 100, 58], [60, 45, 28]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [51, 45, 59]]
+
+                        DownDepth:
+                        [[20, 15, 21], [20, 15, 20], [24, 20, 23]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(56.77, 149.01, -6.6), -4.43],
+    [(57.16, 154.0, -6.6), -4.43],
+    [(57.55, 158.98, -6.6), -4.43],
+    [(57.55, 158.98, -6.6), -4.43],
+    [(57.55, 158.98, -6.6), -4.43],
+    [(57.55, 158.98, -6.6), -4.43],
+    [(57.55, 158.98, -6.6), -4.43],
+    [(57.55, 158.98, -6.6), -4.43],
+    [(57.55, 158.98, -6.6), -4.43],
+    [(57.55, 158.98, -6.6), -4.43],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 2
+                        DistanceTraveled = 10.00000000000001
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **BuffetStand**, described as: Rectangular, corrugated metal structure with open serving counter, grey exterior with weathered signs for newspapers and drinks, crates and boxes stacked in front, typical of a portable food and beverage stand.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:2 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

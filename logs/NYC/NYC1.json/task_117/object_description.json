@@ -1,0 +1,35 @@
+{
+  "episode_id": "117",
+  "start_pose": {
+    "start_position": [
+      150.64062335513162,
+      38.404064702996166,
+      -6.600000023841858
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9997172660060087,
+      -0.023777889928904488
+    ]
+  },
+  "info": {
+    "geodesic_distance": 86,
+    "euclidean_distance": 58.3139
+  },
+  "map_name": "NYC_test",
+  "true_name": "Car",
+  "object_name": "SK_NYC_Car8",
+  "pose": [
+    [
+      191.5,
+      -2.8999998569488525,
+      1.399999976158142
+    ]
+  ],
+  "size": "mid(2.0*4.15=8.3 squares)",
+  "description": "Classic convertible car, beige exterior with rounded fenders and wire-spoke wheels, two-seater with rear-mounted spare tire, designed for casual and recreational driving.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

@@ -1,0 +1,35 @@
+{
+  "episode_id": "0",
+  "start_pose": {
+    "start_position": [
+      -2.4570492721282733,
+      1.8867723059400525,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.3974821248666913,
+      0.9176099173458513
+    ]
+  },
+  "info": {
+    "geodesic_distance": 50,
+    "euclidean_distance": 32.768
+  },
+  "map_name": "Venice_test",
+  "true_name": " Cloth",
+  "object_name": "Cloth_04_14",
+  "pose": [
+    [
+      -25.502294540405273,
+      24.417001724243164,
+      -1.0799981355667114
+    ]
+  ],
+  "size": " small(1.25*0.25=0.31 squares)",
+  "description": " Organic draped form, muted red textile with subtle wrinkling, soft texture, likely decorative or for shading use.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

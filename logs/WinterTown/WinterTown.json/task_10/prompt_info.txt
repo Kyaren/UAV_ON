@@ -1,0 +1,189 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: SupplyBox,
+                        Size: mid(2.0*2.0=4.0 squares),
+                        Description: Geometric stacked forms, rough wood texture, reinforced edges with stenciled markings, likely used for storage or transport.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-130, -29]  
+                        **Y Range**: [min_y, max_y] = [38, 139]
+
+                        # RGB Captions
+                        Front = three trees, tall, white leaves; trees are in the foreground; snow-covered ground  
+                        Left = road, cleared of snow; snow-covered ground on both sides; buildings in the distance  
+                        Right = buildings, multi-story, brown; trees with green foliage; snow-covered ground; sun in the sky  
+                        Down = dried plants, small, brown; shadows cast on the snow; snow-covered ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [85, 76, 87]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [86, 73, 74]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [82, 67, 70]]
+
+                        DownDepth:
+                        [[36, 31, 36], [31, 24, 29], [29, 25, 25]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-79.95, 88.17, -10.0), 167.59],
+    [(-79.95, 88.17, -10.0), 167.59],
+    [(-79.95, 88.17, -10.0), 167.59],
+    [(-79.95, 88.17, -10.0), 167.59],
+    [(-79.95, 88.17, -10.0), 167.59],
+    [(-79.95, 88.17, -10.0), 167.59],
+    [(-79.95, 88.17, -10.0), 167.59],
+    [(-79.95, 88.17, -10.0), 167.59],
+    [(-79.95, 88.17, -10.0), 167.59],
+    [(-79.95, 88.17, -10.0), 167.59],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** SupplyBox**, described as:  Geometric stacked forms, rough wood texture, reinforced edges with stenciled markings, likely used for storage or transport.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 1 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: SupplyBox,
+                        Size: mid(2.0*2.0=4.0 squares),
+                        Description: Geometric stacked forms, rough wood texture, reinforced edges with stenciled markings, likely used for storage or transport.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-130, -29]  
+                        **Y Range**: [min_y, max_y] = [38, 139]
+
+                        # RGB Captions
+                        Front = tall trees, snow-covered, white; trees are in the foreground; snowy ground  
+                        Left = road, cleared of snow; snow-covered trees on both sides; building in the background  
+                        Right = buildings, multi-story, brick; trees with green foliage; sun in the sky; buildings in the background  
+                        Down = snowy ground; small bushes, brown; shadows from trees  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [73, 70, 88]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [93, 65, 62]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [94, 71, 84]]
+
+                        DownDepth:
+                        [[32, 31, 36], [31, 24, 31], [33, 30, 33]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-79.95, 88.17, -10.0), 167.59],
+    [(-84.83, 89.25, -10.0), 167.59],
+    [(-84.83, 89.25, -10.0), 167.59],
+    [(-84.83, 89.25, -10.0), 167.59],
+    [(-84.83, 89.25, -10.0), 167.59],
+    [(-84.83, 89.25, -10.0), 167.59],
+    [(-84.83, 89.25, -10.0), 167.59],
+    [(-84.83, 89.25, -10.0), 167.59],
+    [(-84.83, 89.25, -10.0), 167.59],
+    [(-84.83, 89.25, -10.0), 167.59],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 1
+                        DistanceTraveled = 4.999999999999999
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** SupplyBox**, described as:  Geometric stacked forms, rough wood texture, reinforced edges with stenciled markings, likely used for storage or transport.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:1 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 2 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: SupplyBox,
+                        Size: mid(2.0*2.0=4.0 squares),
+                        Description: Geometric stacked forms, rough wood texture, reinforced edges with stenciled markings, likely used for storage or transport.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-130, -29]  
+                        **Y Range**: [min_y, max_y] = [38, 139]
+
+                        # RGB Captions
+                        Front = trees, snow-covered, white; trees are in the foreground; snow on the ground  
+                        Left = building, brown, multi-story; building is in the background; tree near the building  
+                        Right = sun, bright, yellow; sun is in the sky; trees and buildings covered in snow  
+                        Down = tree, small, green; tree is in the foreground; snow on the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [60, 64, 86]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [94, 35, 58]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [81, 71, 79]]
+
+                        DownDepth:
+                        [[37, 31, 36], [27, 24, 31], [30, 31, 37]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-79.95, 88.17, -10.0), 167.59],
+    [(-84.83, 89.25, -10.0), 167.59],
+    [(-83.76, 94.13, -10.0), 167.59],
+    [(-83.76, 94.13, -10.0), 167.59],
+    [(-83.76, 94.13, -10.0), 167.59],
+    [(-83.76, 94.13, -10.0), 167.59],
+    [(-83.76, 94.13, -10.0), 167.59],
+    [(-83.76, 94.13, -10.0), 167.59],
+    [(-83.76, 94.13, -10.0), 167.59],
+    [(-83.76, 94.13, -10.0), 167.59],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 2
+                        DistanceTraveled = 9.999999999999998
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** SupplyBox**, described as:  Geometric stacked forms, rough wood texture, reinforced edges with stenciled markings, likely used for storage or transport.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:2 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

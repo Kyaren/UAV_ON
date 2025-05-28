@@ -1,0 +1,630 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Flag,
+                        Size:small(3.25*0.5=1.625 squares),
+                        Description:Geometric vertical form, tricolor fabric (red, white, blue) with central emblem, mounted on a slanted dark metal pole, fluttering structure used for identification or symbolism.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [64, 165]  
+                        **Y Range**: [min_y, max_y] = [27, 128]
+
+                        # RGB Captions
+                        Front = basketball court, green and brown surface; court is in the foreground; fence surrounding the court  
+                        Left = building, beige facade; building is on the left side; basketball court behind the building  
+                        Right = building, orange roof; building is in the foreground; another building in the background  
+                        Down = basketball court, green and brown surface; court is in the center; shadows of a railing on the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [51, 50, 67]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [10, 100, 100], [14, 36, 50]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [66, 20, 18]]
+
+                        DownDepth:
+                        [[19, 16, 19], [15, 12, 16], [16, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(114.88, 77.27, -10.0), -20.56],
+    [(114.88, 77.27, -10.0), -20.56],
+    [(114.88, 77.27, -10.0), -20.56],
+    [(114.88, 77.27, -10.0), -20.56],
+    [(114.88, 77.27, -10.0), -20.56],
+    [(114.88, 77.27, -10.0), -20.56],
+    [(114.88, 77.27, -10.0), -20.56],
+    [(114.88, 77.27, -10.0), -20.56],
+    [(114.88, 77.27, -10.0), -20.56],
+    [(114.88, 77.27, -10.0), -20.56],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Flag**, described as: Geometric vertical form, tricolor fabric (red, white, blue) with central emblem, mounted on a slanted dark metal pole, fluttering structure used for identification or symbolism.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 1 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Flag,
+                        Size:small(3.25*0.5=1.625 squares),
+                        Description:Geometric vertical form, tricolor fabric (red, white, blue) with central emblem, mounted on a slanted dark metal pole, fluttering structure used for identification or symbolism.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [64, 165]  
+                        **Y Range**: [min_y, max_y] = [27, 128]
+
+                        # RGB Captions
+                        Front = basketball court, green and brown surface; person standing near the center; fence surrounding the court; foggy atmosphere  
+                        Left = multi-story building, orange facade; basketball court, green and brown surface; fence between the building and the court; clear sky  
+                        Right = building, orange facade, multiple windows; roof, red tiles; another building in the background; foggy atmosphere  
+                        Down = basketball court, green and brown surface; white lines; shadows of a fence on the court; view from above  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 44, 58]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [18, 100, 100], [18, 35, 44]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [58, 22, 19]]
+
+                        DownDepth:
+                        [[18, 15, 18], [15, 12, 15], [16, 16, 19]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(114.88, 77.27, -10.0), -20.56],
+    [(119.56, 75.52, -10.0), -20.56],
+    [(119.56, 75.52, -10.0), -20.56],
+    [(119.56, 75.52, -10.0), -20.56],
+    [(119.56, 75.52, -10.0), -20.56],
+    [(119.56, 75.52, -10.0), -20.56],
+    [(119.56, 75.52, -10.0), -20.56],
+    [(119.56, 75.52, -10.0), -20.56],
+    [(119.56, 75.52, -10.0), -20.56],
+    [(119.56, 75.52, -10.0), -20.56],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 1
+                        DistanceTraveled = 4.999999999999996
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Flag**, described as: Geometric vertical form, tricolor fabric (red, white, blue) with central emblem, mounted on a slanted dark metal pole, fluttering structure used for identification or symbolism.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:1 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 2 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Flag,
+                        Size:small(3.25*0.5=1.625 squares),
+                        Description:Geometric vertical form, tricolor fabric (red, white, blue) with central emblem, mounted on a slanted dark metal pole, fluttering structure used for identification or symbolism.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [64, 165]  
+                        **Y Range**: [min_y, max_y] = [27, 128]
+
+                        # RGB Captions
+                        Front = basketball court, green surface; court is in the foreground; fog in the background  
+                        Left = building, orange facade; basketball court, green surface; court is in the foreground; building stands in the background  
+                        Right = building, orange roof; building is in the foreground; fog in the background  
+                        Down = basketball court, green surface; court is in the foreground; shadows on the court  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [56, 44, 58]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [25, 35, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [58, 45, 21]]
+
+                        DownDepth:
+                        [[18, 15, 18], [15, 12, 15], [18, 16, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(114.88, 77.27, -10.0), -20.56],
+    [(119.56, 75.52, -10.0), -20.56],
+    [(124.25, 73.76, -10.0), -20.56],
+    [(124.25, 73.76, -10.0), -20.56],
+    [(124.25, 73.76, -10.0), -20.56],
+    [(124.25, 73.76, -10.0), -20.56],
+    [(124.25, 73.76, -10.0), -20.56],
+    [(124.25, 73.76, -10.0), -20.56],
+    [(124.25, 73.76, -10.0), -20.56],
+    [(124.25, 73.76, -10.0), -20.56],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 2
+                        DistanceTraveled = 9.999999999999991
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Flag**, described as: Geometric vertical form, tricolor fabric (red, white, blue) with central emblem, mounted on a slanted dark metal pole, fluttering structure used for identification or symbolism.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:2 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 3 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Flag,
+                        Size:small(3.25*0.5=1.625 squares),
+                        Description:Geometric vertical form, tricolor fabric (red, white, blue) with central emblem, mounted on a slanted dark metal pole, fluttering structure used for identification or symbolism.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [64, 165]  
+                        **Y Range**: [min_y, max_y] = [27, 128]
+
+                        # RGB Captions
+                        Front = chain-link fence, long; fence runs horizontally across the foreground; fog covers the background  
+                        Left = basketball court, green and red; court is in the middle ground; buildings surround the court; playground equipment on the side  
+                        Right = building, beige with orange roof; building stands in the middle ground; chain-link fence in the foreground; fog in the background  
+                        Down = basketball court, green and red; one person standing near the center; shadows cast by the sun; court lines clearly visible  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [56, 44, 59]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [31, 34, 56]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [59, 46, 25]]
+
+                        DownDepth:
+                        [[18, 15, 18], [15, 12, 15], [18, 16, 19]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(114.88, 77.27, -10.0), -20.56],
+    [(119.56, 75.52, -10.0), -20.56],
+    [(124.25, 73.76, -10.0), -20.56],
+    [(128.93, 72.0, -10.0), -20.56],
+    [(128.93, 72.0, -10.0), -20.56],
+    [(128.93, 72.0, -10.0), -20.56],
+    [(128.93, 72.0, -10.0), -20.56],
+    [(128.93, 72.0, -10.0), -20.56],
+    [(128.93, 72.0, -10.0), -20.56],
+    [(128.93, 72.0, -10.0), -20.56],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 3
+                        DistanceTraveled = 14.999999999999986
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Flag**, described as: Geometric vertical form, tricolor fabric (red, white, blue) with central emblem, mounted on a slanted dark metal pole, fluttering structure used for identification or symbolism.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:3 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 4 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Flag,
+                        Size:small(3.25*0.5=1.625 squares),
+                        Description:Geometric vertical form, tricolor fabric (red, white, blue) with central emblem, mounted on a slanted dark metal pole, fluttering structure used for identification or symbolism.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [64, 165]  
+                        **Y Range**: [min_y, max_y] = [27, 128]
+
+                        # RGB Captions
+                        Front = metal fence, low height; fence is in the foreground; fog covering the background  
+                        Left = basketball court, green surface; court is in the center; buildings surrounding the court  
+                        Right = building, orange roof; building is in the foreground; fog in the background  
+                        Down = basketball court, green and red surface; person standing near the hoop; court is illuminated by lights  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [58, 46, 62]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [35, 35, 58]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [62, 47, 24]]
+
+                        DownDepth:
+                        [[18, 20, 24], [15, 12, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(114.88, 77.27, -10.0), -20.56],
+    [(119.56, 75.52, -10.0), -20.56],
+    [(124.25, 73.76, -10.0), -20.56],
+    [(128.93, 72.0, -10.0), -20.56],
+    [(133.61, 70.25, -10.0), -20.56],
+    [(133.61, 70.25, -10.0), -20.56],
+    [(133.61, 70.25, -10.0), -20.56],
+    [(133.61, 70.25, -10.0), -20.56],
+    [(133.61, 70.25, -10.0), -20.56],
+    [(133.61, 70.25, -10.0), -20.56],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 4
+                        DistanceTraveled = 19.999999999999993
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Flag**, described as: Geometric vertical form, tricolor fabric (red, white, blue) with central emblem, mounted on a slanted dark metal pole, fluttering structure used for identification or symbolism.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:4 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 5 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Flag,
+                        Size:small(3.25*0.5=1.625 squares),
+                        Description:Geometric vertical form, tricolor fabric (red, white, blue) with central emblem, mounted on a slanted dark metal pole, fluttering structure used for identification or symbolism.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [64, 165]  
+                        **Y Range**: [min_y, max_y] = [27, 128]
+
+                        # RGB Captions
+                        Front = sky, clear; blue and white hues; sky occupies the upper half of the image  
+                        Left = basketball court, green surface; located in the center; surrounded by buildings  
+                        Right = buildings, multiple; with orange roofs; situated on the right side; near the water  
+                        Down = person, standing; on the basketball court; near the hoop; court is enclosed  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [56, 44, 60]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [38, 35, 56]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [60, 47, 38]]
+
+                        DownDepth:
+                        [[23, 20, 24], [15, 12, 20], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(114.88, 77.27, -10.0), -20.56],
+    [(119.56, 75.52, -10.0), -20.56],
+    [(124.25, 73.76, -10.0), -20.56],
+    [(128.93, 72.0, -10.0), -20.56],
+    [(133.61, 70.25, -10.0), -20.56],
+    [(138.29, 68.49, -10.0), -20.56],
+    [(138.29, 68.49, -10.0), -20.56],
+    [(138.29, 68.49, -10.0), -20.56],
+    [(138.29, 68.49, -10.0), -20.56],
+    [(138.29, 68.49, -10.0), -20.56],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 5
+                        DistanceTraveled = 25.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Flag**, described as: Geometric vertical form, tricolor fabric (red, white, blue) with central emblem, mounted on a slanted dark metal pole, fluttering structure used for identification or symbolism.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:5 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 6 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Flag,
+                        Size:small(3.25*0.5=1.625 squares),
+                        Description:Geometric vertical form, tricolor fabric (red, white, blue) with central emblem, mounted on a slanted dark metal pole, fluttering structure used for identification or symbolism.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [64, 165]  
+                        **Y Range**: [min_y, max_y] = [27, 128]
+
+                        # RGB Captions
+                        Front = sky, clear; fog in the foreground; sky occupies most of the image  
+                        Left = basketball court, green and brown; buildings with red roofs; trees near the buildings; court is in the foreground; buildings in the background  
+                        Right = buildings, orange and white; water in the foreground; buildings on the right side; fog in the background  
+                        Down = basketball court, green and brown; fireworks in the sky; court is in the foreground; fireworks to the top right  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [61, 47, 62]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [40, 35, 61]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [62, 47, 46]]
+
+                        DownDepth:
+                        [[24, 20, 24], [19, 15, 20], [18, 15, 20]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(114.88, 77.27, -10.0), -20.56],
+    [(119.56, 75.52, -10.0), -20.56],
+    [(124.25, 73.76, -10.0), -20.56],
+    [(128.93, 72.0, -10.0), -20.56],
+    [(133.61, 70.25, -10.0), -20.56],
+    [(138.29, 68.49, -10.0), -20.56],
+    [(142.97, 66.74, -10.0), -20.56],
+    [(142.97, 66.74, -10.0), -20.56],
+    [(142.97, 66.74, -10.0), -20.56],
+    [(142.97, 66.74, -10.0), -20.56],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 6
+                        DistanceTraveled = 30.000000000000007
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Flag**, described as: Geometric vertical form, tricolor fabric (red, white, blue) with central emblem, mounted on a slanted dark metal pole, fluttering structure used for identification or symbolism.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:6 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 7 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Flag,
+                        Size:small(3.25*0.5=1.625 squares),
+                        Description:Geometric vertical form, tricolor fabric (red, white, blue) with central emblem, mounted on a slanted dark metal pole, fluttering structure used for identification or symbolism.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [64, 165]  
+                        **Y Range**: [min_y, max_y] = [27, 128]
+
+                        # RGB Captions
+                        Front = blue sky, clear; white clouds, scattered; fog in the foreground  
+                        Left = basketball court, green and red; buildings, orange roofs; trees, green leaves; fog in the background  
+                        Right = buildings, orange roofs; fog in the foreground; water, calm surface  
+                        Down = basketball court, green and red; water, calm surface; fireworks, yellow sparks  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [57, 45, 61]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [43, 34, 57]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [62, 47, 40]]
+
+                        DownDepth:
+                        [[23, 20, 24], [15, 15, 20], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(114.88, 77.27, -10.0), -20.56],
+    [(119.56, 75.52, -10.0), -20.56],
+    [(124.25, 73.76, -10.0), -20.56],
+    [(128.93, 72.0, -10.0), -20.56],
+    [(133.61, 70.25, -10.0), -20.56],
+    [(138.29, 68.49, -10.0), -20.56],
+    [(142.97, 66.74, -10.0), -20.56],
+    [(141.22, 62.06, -10.0), -20.56],
+    [(141.22, 62.06, -10.0), -20.56],
+    [(141.22, 62.06, -10.0), -20.56],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 7
+                        DistanceTraveled = 35.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Flag**, described as: Geometric vertical form, tricolor fabric (red, white, blue) with central emblem, mounted on a slanted dark metal pole, fluttering structure used for identification or symbolism.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:7 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 8 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Flag,
+                        Size:small(3.25*0.5=1.625 squares),
+                        Description:Geometric vertical form, tricolor fabric (red, white, blue) with central emblem, mounted on a slanted dark metal pole, fluttering structure used for identification or symbolism.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [64, 165]  
+                        **Y Range**: [min_y, max_y] = [27, 128]
+
+                        # RGB Captions
+                        Front = blue sky, clear; white clouds, sparse; sky occupies upper half of image  
+                        Left = basketball court, green and brown; fence around court; buildings in background; fog covering lower part  
+                        Right = water, calm; buildings along waterfront; fog obscuring view; buildings have orange roofs  
+                        Down = fireworks, small cluster; fireworks in top right corner; sports court in bottom left corner  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [60, 47, 62]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [42, 45, 60]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [62, 46, 47]]
+
+                        DownDepth:
+                        [[24, 20, 24], [20, 15, 20], [18, 15, 21]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(114.88, 77.27, -10.0), -20.56],
+    [(119.56, 75.52, -10.0), -20.56],
+    [(124.25, 73.76, -10.0), -20.56],
+    [(128.93, 72.0, -10.0), -20.56],
+    [(133.61, 70.25, -10.0), -20.56],
+    [(138.29, 68.49, -10.0), -20.56],
+    [(142.97, 66.74, -10.0), -20.56],
+    [(141.22, 62.06, -10.0), -20.56],
+    [(145.9, 60.3, -10.0), -20.56],
+    [(145.9, 60.3, -10.0), -20.56],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 8
+                        DistanceTraveled = 40.00000000000001
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Flag**, described as: Geometric vertical form, tricolor fabric (red, white, blue) with central emblem, mounted on a slanted dark metal pole, fluttering structure used for identification or symbolism.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:8 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 9 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Flag,
+                        Size:small(3.25*0.5=1.625 squares),
+                        Description:Geometric vertical form, tricolor fabric (red, white, blue) with central emblem, mounted on a slanted dark metal pole, fluttering structure used for identification or symbolism.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [64, 165]  
+                        **Y Range**: [min_y, max_y] = [27, 128]
+
+                        # RGB Captions
+                        Front = water, calm surface; fog covering the scene; water in the foreground  
+                        Left = buildings, white and red facades; basketball court, green surface; fence along the court; trees near the buildings; buildings in the background  
+                        Right = buildings, beige facades; water, calm surface; fog covering the scene; buildings on the right side  
+                        Down = ceiling, plain design; wall, dark color; lights, small and bright; lights in the upper right corner  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [58, 45, 61]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 44, 58]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [61, 46, 51]]
+
+                        DownDepth:
+                        [[23, 20, 24], [20, 15, 20], [20, 18, 24]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(114.88, 77.27, -10.0), -20.56],
+    [(119.56, 75.52, -10.0), -20.56],
+    [(124.25, 73.76, -10.0), -20.56],
+    [(128.93, 72.0, -10.0), -20.56],
+    [(133.61, 70.25, -10.0), -20.56],
+    [(138.29, 68.49, -10.0), -20.56],
+    [(142.97, 66.74, -10.0), -20.56],
+    [(141.22, 62.06, -10.0), -20.56],
+    [(145.9, 60.3, -10.0), -20.56],
+    [(150.58, 58.54, -10.0), -20.56],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 9
+                        DistanceTraveled = 45.000000000000014
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Flag**, described as: Geometric vertical form, tricolor fabric (red, white, blue) with central emblem, mounted on a slanted dark metal pole, fluttering structure used for identification or symbolism.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:9 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

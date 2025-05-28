@@ -1,0 +1,1638 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Turntable,
+                        Size:small(2*2=4 squares),
+                        Description:Geometric circular form, blue metal platform with yellow railings in radial configuration, slight wear on surface with central rotating axis, designed for manual spinning in playground environments.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-262, -161]  
+                        **Y Range**: [min_y, max_y] = [-112, -11]
+
+                        # RGB Captions
+                        Front = tree, large, leafy; tree is in the foreground; houses in the background  
+                        Left = tree, large, leafy; tree is in the foreground; house in the background  
+                        Right = tree, large, leafy; tree is in the foreground; houses in the background  
+                        Down = fence, wooden, zigzag; fence is in the foreground; grassy field in the background  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [41, 31, 34]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [39, 31, 42]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [33, 27, 47]]
+
+                        DownDepth:
+                        [[16, 14, 16], [13, 10, 14], [16, 13, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-211.24, -61.27, -10.0), 32.97],
+    [(-211.24, -61.27, -10.0), 32.97],
+    [(-211.24, -61.27, -10.0), 32.97],
+    [(-211.24, -61.27, -10.0), 32.97],
+    [(-211.24, -61.27, -10.0), 32.97],
+    [(-211.24, -61.27, -10.0), 32.97],
+    [(-211.24, -61.27, -10.0), 32.97],
+    [(-211.24, -61.27, -10.0), 32.97],
+    [(-211.24, -61.27, -10.0), 32.97],
+    [(-211.24, -61.27, -10.0), 32.97],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Turntable**, described as: Geometric circular form, blue metal platform with yellow railings in radial configuration, slight wear on surface with central rotating axis, designed for manual spinning in playground environments.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 1 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Turntable,
+                        Size:small(2*2=4 squares),
+                        Description:Geometric circular form, blue metal platform with yellow railings in radial configuration, slight wear on surface with central rotating axis, designed for manual spinning in playground environments.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-262, -161]  
+                        **Y Range**: [min_y, max_y] = [-112, -11]
+
+                        # RGB Captions
+                        Front = wooden fence, long; green grass, short; fence in the foreground; grass covering the ground  
+                        Left = tree branches, leafy; branches in the foreground; sunlight filtering through leaves  
+                        Right = house building, wooden; house in the background; trees surrounding the house  
+                        Down = pole, tall; shadow on the grass; pole casting a shadow; grass in the background  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [39, 31, 42]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [42, 31, 40]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [42, 32, 18]]
+
+                        DownDepth:
+                        [[16, 13, 16], [13, 10, 14], [16, 14, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-211.24, -61.27, -10.0), 32.97],
+    [(-207.05, -58.55, -10.0), 32.97],
+    [(-207.05, -58.55, -10.0), 32.97],
+    [(-207.05, -58.55, -10.0), 32.97],
+    [(-207.05, -58.55, -10.0), 32.97],
+    [(-207.05, -58.55, -10.0), 32.97],
+    [(-207.05, -58.55, -10.0), 32.97],
+    [(-207.05, -58.55, -10.0), 32.97],
+    [(-207.05, -58.55, -10.0), 32.97],
+    [(-207.05, -58.55, -10.0), 32.97],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 1
+                        DistanceTraveled = 5.000000000000011
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Turntable**, described as: Geometric circular form, blue metal platform with yellow railings in radial configuration, slight wear on surface with central rotating axis, designed for manual spinning in playground environments.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:1 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 2 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Turntable,
+                        Size:small(2*2=4 squares),
+                        Description:Geometric circular form, blue metal platform with yellow railings in radial configuration, slight wear on surface with central rotating axis, designed for manual spinning in playground environments.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-262, -161]  
+                        **Y Range**: [min_y, max_y] = [-112, -11]
+
+                        # RGB Captions
+                        Front = large tree, green leaves; tree is in the foreground; fountain in the center of the grassy area  
+                        Left = pool, rectangular; pool is on the right side; house with a shingled roof in the background  
+                        Right = house, wooden; house is in the center; trees surrounding the house  
+                        Down = ladder, metal; ladder is diagonally placed; shadows of trees on the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [37, 31, 42]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [43, 28, 38]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [42, 32, 24]]
+
+                        DownDepth:
+                        [[16, 13, 16], [13, 10, 13], [16, 13, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-211.24, -61.27, -10.0), 32.97],
+    [(-207.05, -58.55, -10.0), 32.97],
+    [(-202.85, -55.83, -10.0), 32.97],
+    [(-202.85, -55.83, -10.0), 32.97],
+    [(-202.85, -55.83, -10.0), 32.97],
+    [(-202.85, -55.83, -10.0), 32.97],
+    [(-202.85, -55.83, -10.0), 32.97],
+    [(-202.85, -55.83, -10.0), 32.97],
+    [(-202.85, -55.83, -10.0), 32.97],
+    [(-202.85, -55.83, -10.0), 32.97],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 2
+                        DistanceTraveled = 10.000000000000021
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Turntable**, described as: Geometric circular form, blue metal platform with yellow railings in radial configuration, slight wear on surface with central rotating axis, designed for manual spinning in playground environments.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:2 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 3 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Turntable,
+                        Size:small(2*2=4 squares),
+                        Description:Geometric circular form, blue metal platform with yellow railings in radial configuration, slight wear on surface with central rotating axis, designed for manual spinning in playground environments.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-262, -161]  
+                        **Y Range**: [min_y, max_y] = [-112, -11]
+
+                        # RGB Captions
+                        Front = fountain, stone; playground equipment, colorful; houses, wooden; fountain in the foreground; playground to the right  
+                        Left = swimming pool, blue water; trees, green leaves; house, wooden; pool in the center; house in the background  
+                        Right = houses, wooden; trees, green leaves; grass, lush; houses in the background; trees surrounding  
+                        Down = shadow, tree; ground, grassy; shadow in the foreground; diagonal lines  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [35, 31, 42]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [40, 37, 36]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [41, 32, 31]]
+
+                        DownDepth:
+                        [[15, 13, 16], [13, 10, 13], [16, 13, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-211.24, -61.27, -10.0), 32.97],
+    [(-207.05, -58.55, -10.0), 32.97],
+    [(-202.85, -55.83, -10.0), 32.97],
+    [(-198.66, -53.11, -10.0), 32.97],
+    [(-198.66, -53.11, -10.0), 32.97],
+    [(-198.66, -53.11, -10.0), 32.97],
+    [(-198.66, -53.11, -10.0), 32.97],
+    [(-198.66, -53.11, -10.0), 32.97],
+    [(-198.66, -53.11, -10.0), 32.97],
+    [(-198.66, -53.11, -10.0), 32.97],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 3
+                        DistanceTraveled = 15.000000000000032
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Turntable**, described as: Geometric circular form, blue metal platform with yellow railings in radial configuration, slight wear on surface with central rotating axis, designed for manual spinning in playground environments.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:3 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 4 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Turntable,
+                        Size:small(2*2=4 squares),
+                        Description:Geometric circular form, blue metal platform with yellow railings in radial configuration, slight wear on surface with central rotating axis, designed for manual spinning in playground environments.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-262, -161]  
+                        **Y Range**: [min_y, max_y] = [-112, -11]
+
+                        # RGB Captions
+                        Front = black fountain, ornate design; fountain is in the foreground; houses with brown roofs in the background  
+                        Left = two pine trees, tall and green; sun shining through the branches; pool visible between the trees  
+                        Right = yellow playground equipment, colorful; playground is in the foreground; house with brown roof in the background  
+                        Down = tree shadow on grass, long and dark; shadow of a tree branch; tire partially visible in the top left corner  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [40, 31, 44]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [40, 37, 25]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 33, 35]]
+
+                        DownDepth:
+                        [[16, 13, 16], [13, 10, 13], [16, 13, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-211.24, -61.27, -10.0), 32.97],
+    [(-207.05, -58.55, -10.0), 32.97],
+    [(-202.85, -55.83, -10.0), 32.97],
+    [(-198.66, -53.11, -10.0), 32.97],
+    [(-194.46, -50.39, -10.0), 32.97],
+    [(-194.46, -50.39, -10.0), 32.97],
+    [(-194.46, -50.39, -10.0), 32.97],
+    [(-194.46, -50.39, -10.0), 32.97],
+    [(-194.46, -50.39, -10.0), 32.97],
+    [(-194.46, -50.39, -10.0), 32.97],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 4
+                        DistanceTraveled = 20.000000000000043
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Turntable**, described as: Geometric circular form, blue metal platform with yellow railings in radial configuration, slight wear on surface with central rotating axis, designed for manual spinning in playground environments.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:4 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 5 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Turntable,
+                        Size:small(2*2=4 squares),
+                        Description:Geometric circular form, blue metal platform with yellow railings in radial configuration, slight wear on surface with central rotating axis, designed for manual spinning in playground environments.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-262, -161]  
+                        **Y Range**: [min_y, max_y] = [-112, -11]
+
+                        # RGB Captions
+                        Front = black fountain, water flowing; yellow playground equipment, colorful; houses in the background, wooden  
+                        Left = trees, tall and dense; sun shining brightly, high in the sky; buildings partially visible, behind trees  
+                        Right = houses, wooden structures; trees, green foliage; road in the foreground, curving  
+                        Down = shadow of a tree, cast on the ground; rope lying diagonally across the shadow; grassy surface, patterned  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [32, 31, 45]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [40, 37, 38]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 29, 30]]
+
+                        DownDepth:
+                        [[15, 13, 16], [13, 10, 13], [16, 13, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-211.24, -61.27, -10.0), 32.97],
+    [(-207.05, -58.55, -10.0), 32.97],
+    [(-202.85, -55.83, -10.0), 32.97],
+    [(-198.66, -53.11, -10.0), 32.97],
+    [(-194.46, -50.39, -10.0), 32.97],
+    [(-197.18, -46.19, -10.0), 32.97],
+    [(-197.18, -46.19, -10.0), 32.97],
+    [(-197.18, -46.19, -10.0), 32.97],
+    [(-197.18, -46.19, -10.0), 32.97],
+    [(-197.18, -46.19, -10.0), 32.97],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 5
+                        DistanceTraveled = 25.000000000000046
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Turntable**, described as: Geometric circular form, blue metal platform with yellow railings in radial configuration, slight wear on surface with central rotating axis, designed for manual spinning in playground environments.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:5 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 6 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Turntable,
+                        Size:small(2*2=4 squares),
+                        Description:Geometric circular form, blue metal platform with yellow railings in radial configuration, slight wear on surface with central rotating axis, designed for manual spinning in playground environments.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-262, -161]  
+                        **Y Range**: [min_y, max_y] = [-112, -11]
+
+                        # RGB Captions
+                        Front = multiple houses, brown roofs, wooden; houses are scattered; green grass in the foreground; trees in the background  
+                        Left = tall pine trees, green foliage; trees are in the foreground; house in the distant background  
+                        Right = yellow slide, medium-sized, plastic; slide is on the left; houses with brown roofs in the background; green grass and bushes in the foreground  
+                        Down = rope, long, white; rope lies diagonally across the ground; red toy car near the rope; tree shadow on the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [33, 31, 46]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [40, 37, 34]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [43, 33, 36]]
+
+                        DownDepth:
+                        [[15, 13, 15], [13, 10, 13], [16, 13, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-211.24, -61.27, -10.0), 32.97],
+    [(-207.05, -58.55, -10.0), 32.97],
+    [(-202.85, -55.83, -10.0), 32.97],
+    [(-198.66, -53.11, -10.0), 32.97],
+    [(-194.46, -50.39, -10.0), 32.97],
+    [(-197.18, -46.19, -10.0), 32.97],
+    [(-192.99, -43.47, -10.0), 32.97],
+    [(-192.99, -43.47, -10.0), 32.97],
+    [(-192.99, -43.47, -10.0), 32.97],
+    [(-192.99, -43.47, -10.0), 32.97],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 6
+                        DistanceTraveled = 30.000000000000057
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Turntable**, described as: Geometric circular form, blue metal platform with yellow railings in radial configuration, slight wear on surface with central rotating axis, designed for manual spinning in playground environments.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:6 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 7 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Turntable,
+                        Size:small(2*2=4 squares),
+                        Description:Geometric circular form, blue metal platform with yellow railings in radial configuration, slight wear on surface with central rotating axis, designed for manual spinning in playground environments.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-262, -161]  
+                        **Y Range**: [min_y, max_y] = [-112, -11]
+
+                        # RGB Captions
+                        Front = playground equipment, yellow and blue; houses in the background; playground is in the foreground  
+                        Left = fountain, black basin; trees surrounding; fountain is in the foreground  
+                        Right = house, brown roof; trees on the sides; house is in the foreground  
+                        Down = toys, red and black; grassy area; toys are in the center  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 30, 46]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [40, 30, 33]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 35, 36]]
+
+                        DownDepth:
+                        [[16, 13, 16], [13, 10, 14], [16, 13, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-211.24, -61.27, -10.0), 32.97],
+    [(-207.05, -58.55, -10.0), 32.97],
+    [(-202.85, -55.83, -10.0), 32.97],
+    [(-198.66, -53.11, -10.0), 32.97],
+    [(-194.46, -50.39, -10.0), 32.97],
+    [(-197.18, -46.19, -10.0), 32.97],
+    [(-192.99, -43.47, -10.0), 32.97],
+    [(-195.71, -39.28, -10.0), 32.97],
+    [(-195.71, -39.28, -10.0), 32.97],
+    [(-195.71, -39.28, -10.0), 32.97],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 7
+                        DistanceTraveled = 35.00000000000006
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Turntable**, described as: Geometric circular form, blue metal platform with yellow railings in radial configuration, slight wear on surface with central rotating axis, designed for manual spinning in playground environments.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:7 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 8 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Turntable,
+                        Size:small(2*2=4 squares),
+                        Description:Geometric circular form, blue metal platform with yellow railings in radial configuration, slight wear on surface with central rotating axis, designed for manual spinning in playground environments.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-262, -161]  
+                        **Y Range**: [min_y, max_y] = [-112, -11]
+
+                        # RGB Captions
+                        Front = house, brown roof, white walls; house is in the foreground; swing set on the lawn  
+                        Left = fountain, stone base, water spout; fountain is in the center; trees surrounding  
+                        Right = school bus, yellow color, parked; bus is in the foreground; houses in the background  
+                        Down = playground, green grass, wooden bridge; playground equipment scattered  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [37, 30, 46]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 30, 31]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 34, 29]]
+
+                        DownDepth:
+                        [[16, 13, 15], [13, 10, 13], [16, 13, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-211.24, -61.27, -10.0), 32.97],
+    [(-207.05, -58.55, -10.0), 32.97],
+    [(-202.85, -55.83, -10.0), 32.97],
+    [(-198.66, -53.11, -10.0), 32.97],
+    [(-194.46, -50.39, -10.0), 32.97],
+    [(-197.18, -46.19, -10.0), 32.97],
+    [(-192.99, -43.47, -10.0), 32.97],
+    [(-195.71, -39.28, -10.0), 32.97],
+    [(-191.51, -36.56, -10.0), 32.97],
+    [(-191.51, -36.56, -10.0), 32.97],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 8
+                        DistanceTraveled = 40.00000000000007
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Turntable**, described as: Geometric circular form, blue metal platform with yellow railings in radial configuration, slight wear on surface with central rotating axis, designed for manual spinning in playground environments.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:8 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 9 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Turntable,
+                        Size:small(2*2=4 squares),
+                        Description:Geometric circular form, blue metal platform with yellow railings in radial configuration, slight wear on surface with central rotating axis, designed for manual spinning in playground environments.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-262, -161]  
+                        **Y Range**: [min_y, max_y] = [-112, -11]
+
+                        # RGB Captions
+                        Front = houses, brown roofs, wooden; houses are in the foreground; trees in the background  
+                        Left = fountain, black basin, metal; fountain is in the foreground; houses in the background  
+                        Right = house, brown siding, shingled roof; house is in the foreground; cars on the street  
+                        Down = playground equipment, blue and yellow merry-go-round, red seesaw; equipment is in the foreground; grassy area  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [28, 30, 46]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [38, 29, 38]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 35, 27]]
+
+                        DownDepth:
+                        [[16, 13, 16], [13, 10, 13], [16, 13, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-211.24, -61.27, -10.0), 32.97],
+    [(-207.05, -58.55, -10.0), 32.97],
+    [(-202.85, -55.83, -10.0), 32.97],
+    [(-198.66, -53.11, -10.0), 32.97],
+    [(-194.46, -50.39, -10.0), 32.97],
+    [(-197.18, -46.19, -10.0), 32.97],
+    [(-192.99, -43.47, -10.0), 32.97],
+    [(-195.71, -39.28, -10.0), 32.97],
+    [(-191.51, -36.56, -10.0), 32.97],
+    [(-187.32, -33.84, -10.0), 32.97],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 9
+                        DistanceTraveled = 45.000000000000085
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Turntable**, described as: Geometric circular form, blue metal platform with yellow railings in radial configuration, slight wear on surface with central rotating axis, designed for manual spinning in playground environments.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:9 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 10 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Turntable,
+                        Size:small(2*2=4 squares),
+                        Description:Geometric circular form, blue metal platform with yellow railings in radial configuration, slight wear on surface with central rotating axis, designed for manual spinning in playground environments.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-262, -161]  
+                        **Y Range**: [min_y, max_y] = [-112, -11]
+
+                        # RGB Captions
+                        Front = houses, brown roofs, wooden; houses are in the foreground and background; trees behind the houses  
+                        Left = fountain, stone base, water jets; fountain is in the foreground; houses in the background  
+                        Right = mailbox, yellow and red, plastic; mailbox is in the foreground; houses and trees in the background  
+                        Down = playground equipment, blue and yellow, metal; equipment is on the grass; slide and seesaw present  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [28, 30, 46]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [38, 29, 38]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 35, 27]]
+
+                        DownDepth:
+                        [[16, 13, 16], [13, 10, 13], [16, 13, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-207.05, -58.55, -10.0), 32.97],
+    [(-202.85, -55.83, -10.0), 32.97],
+    [(-198.66, -53.11, -10.0), 32.97],
+    [(-194.46, -50.39, -10.0), 32.97],
+    [(-197.18, -46.19, -10.0), 32.97],
+    [(-192.99, -43.47, -10.0), 32.97],
+    [(-195.71, -39.28, -10.0), 32.97],
+    [(-191.51, -36.56, -10.0), 32.97],
+    [(-187.32, -33.84, -10.0), 32.97],
+    [(-187.32, -33.84, -10.0), 32.97],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 10
+                        DistanceTraveled = 45.000000000000085
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Turntable**, described as: Geometric circular form, blue metal platform with yellow railings in radial configuration, slight wear on surface with central rotating axis, designed for manual spinning in playground environments.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:10 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 11 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Turntable,
+                        Size:small(2*2=4 squares),
+                        Description:Geometric circular form, blue metal platform with yellow railings in radial configuration, slight wear on surface with central rotating axis, designed for manual spinning in playground environments.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-262, -161]  
+                        **Y Range**: [min_y, max_y] = [-112, -11]
+
+                        # RGB Captions
+                        Front = houses, brown shingles; houses are in the foreground; trees in the background  
+                        Left = water fountain, stone base; fountain is in the foreground; houses in the background  
+                        Right = train crossing gate, yellow and black; gate is in the foreground; houses in the background  
+                        Down = playground equipment, blue and yellow; equipment is in the foreground; grassy area  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [28, 30, 46]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [38, 29, 38]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 35, 27]]
+
+                        DownDepth:
+                        [[16, 13, 16], [13, 10, 13], [16, 13, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-202.85, -55.83, -10.0), 32.97],
+    [(-198.66, -53.11, -10.0), 32.97],
+    [(-194.46, -50.39, -10.0), 32.97],
+    [(-197.18, -46.19, -10.0), 32.97],
+    [(-192.99, -43.47, -10.0), 32.97],
+    [(-195.71, -39.28, -10.0), 32.97],
+    [(-191.51, -36.56, -10.0), 32.97],
+    [(-187.32, -33.84, -10.0), 32.97],
+    [(-187.32, -33.84, -10.0), 32.97],
+    [(-187.32, -33.84, -10.0), 32.97],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 11
+                        DistanceTraveled = 45.000000000000085
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Turntable**, described as: Geometric circular form, blue metal platform with yellow railings in radial configuration, slight wear on surface with central rotating axis, designed for manual spinning in playground environments.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:11 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 12 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Turntable,
+                        Size:small(2*2=4 squares),
+                        Description:Geometric circular form, blue metal platform with yellow railings in radial configuration, slight wear on surface with central rotating axis, designed for manual spinning in playground environments.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-262, -161]  
+                        **Y Range**: [min_y, max_y] = [-112, -11]
+
+                        # RGB Captions
+                        Front = houses, brown roofs, wooden; houses are in the foreground; trees behind the houses  
+                        Left = water fountain, stone base, metal top; fountain is in the foreground; houses in the background  
+                        Right = playground equipment, yellow and red; equipment is in the foreground; houses in the background  
+                        Down = swing set, blue and yellow; swing set is in the foreground; grassy area surrounding  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [28, 30, 46]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [38, 29, 38]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 35, 27]]
+
+                        DownDepth:
+                        [[16, 13, 16], [13, 10, 13], [16, 13, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-198.66, -53.11, -10.0), 32.97],
+    [(-194.46, -50.39, -10.0), 32.97],
+    [(-197.18, -46.19, -10.0), 32.97],
+    [(-192.99, -43.47, -10.0), 32.97],
+    [(-195.71, -39.28, -10.0), 32.97],
+    [(-191.51, -36.56, -10.0), 32.97],
+    [(-187.32, -33.84, -10.0), 32.97],
+    [(-187.32, -33.84, -10.0), 32.97],
+    [(-187.32, -33.84, -10.0), 32.97],
+    [(-187.32, -33.84, -10.0), 32.97],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 12
+                        DistanceTraveled = 45.000000000000085
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Turntable**, described as: Geometric circular form, blue metal platform with yellow railings in radial configuration, slight wear on surface with central rotating axis, designed for manual spinning in playground environments.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:12 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 13 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Turntable,
+                        Size:small(2*2=4 squares),
+                        Description:Geometric circular form, blue metal platform with yellow railings in radial configuration, slight wear on surface with central rotating axis, designed for manual spinning in playground environments.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-262, -161]  
+                        **Y Range**: [min_y, max_y] = [-112, -11]
+
+                        # RGB Captions
+                        Front = houses, gray roofs, wooden; swing set in the foreground; road with cars to the right; houses are spread out  
+                        Left = round fountain, stone; fountain is in the center; buildings with shingled roofs surround the fountain; trees in the background  
+                        Right = gas station building, metal canopy; two fuel pumps; pump nozzles hanging idle; canopy in the background  
+                        Down = yellow slide, medium-sized, plastic; blue merry-go-round; playground equipment on grass; slide and merry-go-round close together  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [31, 32, 45]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [35, 30, 33]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 35, 29]]
+
+                        DownDepth:
+                        [[16, 13, 16], [13, 10, 13], [16, 13, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-194.46, -50.39, -10.0), 32.97],
+    [(-197.18, -46.19, -10.0), 32.97],
+    [(-192.99, -43.47, -10.0), 32.97],
+    [(-195.71, -39.28, -10.0), 32.97],
+    [(-191.51, -36.56, -10.0), 32.97],
+    [(-187.32, -33.84, -10.0), 32.97],
+    [(-187.32, -33.84, -10.0), 32.97],
+    [(-187.32, -33.84, -10.0), 32.97],
+    [(-187.32, -33.84, -10.0), 32.97],
+    [(-190.04, -29.64, -10.0), 32.97],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 13
+                        DistanceTraveled = 50.000000000000085
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Turntable**, described as: Geometric circular form, blue metal platform with yellow railings in radial configuration, slight wear on surface with central rotating axis, designed for manual spinning in playground environments.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:13 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 14 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Turntable,
+                        Size:small(2*2=4 squares),
+                        Description:Geometric circular form, blue metal platform with yellow railings in radial configuration, slight wear on surface with central rotating axis, designed for manual spinning in playground environments.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-262, -161]  
+                        **Y Range**: [min_y, max_y] = [-112, -11]
+
+                        # RGB Captions
+                        Front = house, brown siding; swing set in the yard; house is in the foreground; road with cars to the right  
+                        Left = fountain, stone basin; water spraying up; fountain is in the center; buildings in the background  
+                        Right = house, wooden siding; green roof; house is in the foreground; road with cars and trees in the background  
+                        Down = playground equipment, yellow slide; blue merry-go-round; equipment is in the foreground; grassy field  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [31, 32, 46]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [35, 30, 33]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 35, 29]]
+
+                        DownDepth:
+                        [[16, 13, 16], [13, 10, 13], [16, 13, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-197.18, -46.19, -10.0), 32.97],
+    [(-192.99, -43.47, -10.0), 32.97],
+    [(-195.71, -39.28, -10.0), 32.97],
+    [(-191.51, -36.56, -10.0), 32.97],
+    [(-187.32, -33.84, -10.0), 32.97],
+    [(-187.32, -33.84, -10.0), 32.97],
+    [(-187.32, -33.84, -10.0), 32.97],
+    [(-187.32, -33.84, -10.0), 32.97],
+    [(-190.04, -29.64, -10.0), 32.97],
+    [(-190.04, -29.64, -10.0), 32.97],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 14
+                        DistanceTraveled = 50.000000000000085
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Turntable**, described as: Geometric circular form, blue metal platform with yellow railings in radial configuration, slight wear on surface with central rotating axis, designed for manual spinning in playground environments.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:14 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 15 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Turntable,
+                        Size:small(2*2=4 squares),
+                        Description:Geometric circular form, blue metal platform with yellow railings in radial configuration, slight wear on surface with central rotating axis, designed for manual spinning in playground environments.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-262, -161]  
+                        **Y Range**: [min_y, max_y] = [-112, -11]
+
+                        # RGB Captions
+                        Front = house, brown roof; swing set in the foreground; road with cars to the right  
+                        Left = fountain in the center; circular pool; trees surrounding the area  
+                        Right = house, brown siding; garage door open; road with parked car on the left  
+                        Down = yellow slide, medium-sized, plastic; blue merry-go-round; train tracks in the foreground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [31, 32, 45]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [35, 30, 33]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 35, 29]]
+
+                        DownDepth:
+                        [[16, 13, 16], [13, 10, 13], [16, 13, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-192.99, -43.47, -10.0), 32.97],
+    [(-195.71, -39.28, -10.0), 32.97],
+    [(-191.51, -36.56, -10.0), 32.97],
+    [(-187.32, -33.84, -10.0), 32.97],
+    [(-187.32, -33.84, -10.0), 32.97],
+    [(-187.32, -33.84, -10.0), 32.97],
+    [(-187.32, -33.84, -10.0), 32.97],
+    [(-190.04, -29.64, -10.0), 32.97],
+    [(-190.04, -29.64, -10.0), 32.97],
+    [(-190.04, -29.64, -10.0), 32.97],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 15
+                        DistanceTraveled = 50.000000000000085
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Turntable**, described as: Geometric circular form, blue metal platform with yellow railings in radial configuration, slight wear on surface with central rotating axis, designed for manual spinning in playground environments.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:15 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 16 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Turntable,
+                        Size:small(2*2=4 squares),
+                        Description:Geometric circular form, blue metal platform with yellow railings in radial configuration, slight wear on surface with central rotating axis, designed for manual spinning in playground environments.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-262, -161]  
+                        **Y Range**: [min_y, max_y] = [-112, -11]
+
+                        # RGB Captions
+                        Front = house, brown roof, white walls; house is in the foreground; red car parked on the street; street in the background  
+                        Left = fountain, circular basin, metal structure; fountain is in the center; trees surrounding the courtyard; building with a wooden roof in the background  
+                        Right = street, asphalt road, green grass; street is in the foreground; gas station building, metal canopy; two fuel pumps; pump nozzles hanging idle; canopy in the background  
+                        Down = playground equipment, yellow slide, blue hoop; playground equipment is in the foreground; grassy area surrounding the equipment  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [18, 35, 46]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [39, 30, 31]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 35, 36]]
+
+                        DownDepth:
+                        [[15, 13, 16], [13, 10, 13], [16, 13, 15]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-195.71, -39.28, -10.0), 32.97],
+    [(-191.51, -36.56, -10.0), 32.97],
+    [(-187.32, -33.84, -10.0), 32.97],
+    [(-187.32, -33.84, -10.0), 32.97],
+    [(-187.32, -33.84, -10.0), 32.97],
+    [(-187.32, -33.84, -10.0), 32.97],
+    [(-190.04, -29.64, -10.0), 32.97],
+    [(-190.04, -29.64, -10.0), 32.97],
+    [(-190.04, -29.64, -10.0), 32.97],
+    [(-185.85, -26.92, -10.0), 32.97],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 16
+                        DistanceTraveled = 55.0000000000001
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Turntable**, described as: Geometric circular form, blue metal platform with yellow railings in radial configuration, slight wear on surface with central rotating axis, designed for manual spinning in playground environments.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:16 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 17 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Turntable,
+                        Size:small(2*2=4 squares),
+                        Description:Geometric circular form, blue metal platform with yellow railings in radial configuration, slight wear on surface with central rotating axis, designed for manual spinning in playground environments.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-262, -161]  
+                        **Y Range**: [min_y, max_y] = [-112, -11]
+
+                        # RGB Captions
+                        Front = house, brown roof, white walls; house is in the foreground; red car parked on the street; trees in the background  
+                        Left = fountain, circular basin, water jets; fountain is in the center; building with wooden shingles; trees surrounding the area  
+                        Right = street, asphalt road, green grass; two cars parked on the side; gas station building, metal canopy; trees lining the street  
+                        Down = playground, yellow slide, blue trampoline; playground equipment on the grass; slide is in the foreground; trampoline to the left of the slide  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [18, 35, 46]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [39, 30, 31]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 35, 36]]
+
+                        DownDepth:
+                        [[15, 13, 16], [13, 10, 13], [16, 13, 15]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-191.51, -36.56, -10.0), 32.97],
+    [(-187.32, -33.84, -10.0), 32.97],
+    [(-187.32, -33.84, -10.0), 32.97],
+    [(-187.32, -33.84, -10.0), 32.97],
+    [(-187.32, -33.84, -10.0), 32.97],
+    [(-190.04, -29.64, -10.0), 32.97],
+    [(-190.04, -29.64, -10.0), 32.97],
+    [(-190.04, -29.64, -10.0), 32.97],
+    [(-185.85, -26.92, -10.0), 32.97],
+    [(-185.85, -26.92, -10.0), 32.97],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 17
+                        DistanceTraveled = 55.0000000000001
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Turntable**, described as: Geometric circular form, blue metal platform with yellow railings in radial configuration, slight wear on surface with central rotating axis, designed for manual spinning in playground environments.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:17 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 18 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Turntable,
+                        Size:small(2*2=4 squares),
+                        Description:Geometric circular form, blue metal platform with yellow railings in radial configuration, slight wear on surface with central rotating axis, designed for manual spinning in playground environments.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-262, -161]  
+                        **Y Range**: [min_y, max_y] = [-112, -11]
+
+                        # RGB Captions
+                        Front = house, brown roof, white walls; house is in the foreground; red car parked on the street; black car parked on the street; trees in the background  
+                        Left = fountain, circular basin, water spraying; fountain is in the foreground; building with wooden shingles; trees in the background  
+                        Right = street, gray pavement, green grass; street is in the foreground; houses with brown roofs; trees in the background  
+                        Down = playground, yellow slide, blue trampoline; playground is in the foreground; lawn chair; sandbox  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [18, 35, 46]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [39, 30, 31]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 35, 36]]
+
+                        DownDepth:
+                        [[15, 13, 16], [13, 10, 13], [16, 13, 15]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-187.32, -33.84, -10.0), 32.97],
+    [(-187.32, -33.84, -10.0), 32.97],
+    [(-187.32, -33.84, -10.0), 32.97],
+    [(-187.32, -33.84, -10.0), 32.97],
+    [(-190.04, -29.64, -10.0), 32.97],
+    [(-190.04, -29.64, -10.0), 32.97],
+    [(-190.04, -29.64, -10.0), 32.97],
+    [(-185.85, -26.92, -10.0), 32.97],
+    [(-185.85, -26.92, -10.0), 32.97],
+    [(-185.85, -26.92, -10.0), 32.97],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 18
+                        DistanceTraveled = 55.0000000000001
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Turntable**, described as: Geometric circular form, blue metal platform with yellow railings in radial configuration, slight wear on surface with central rotating axis, designed for manual spinning in playground environments.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:18 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 19 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Turntable,
+                        Size:small(2*2=4 squares),
+                        Description:Geometric circular form, blue metal platform with yellow railings in radial configuration, slight wear on surface with central rotating axis, designed for manual spinning in playground environments.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-262, -161]  
+                        **Y Range**: [min_y, max_y] = [-112, -11]
+
+                        # RGB Captions
+                        Front = house, white; swing set, red frame; house in the foreground; swing set on the right  
+                        Left = fountain, circular; house, brown roof; fountain in the foreground; house in the background  
+                        Right = car, black; house, brown; car parked on the street; house on the right  
+                        Down = ball, blue; slide, yellow; ball on the grass; slide on the right  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [15, 25, 40]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [33, 26, 27]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [40, 30, 32]]
+
+                        DownDepth:
+                        [[13, 11, 14], [11, 8, 11], [13, 11, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-187.32, -33.84, -10.0), 32.97],
+    [(-187.32, -33.84, -10.0), 32.97],
+    [(-187.32, -33.84, -10.0), 32.97],
+    [(-190.04, -29.64, -10.0), 32.97],
+    [(-190.04, -29.64, -10.0), 32.97],
+    [(-190.04, -29.64, -10.0), 32.97],
+    [(-185.85, -26.92, -10.0), 32.97],
+    [(-185.85, -26.92, -10.0), 32.97],
+    [(-185.85, -26.92, -10.0), 32.97],
+    [(-185.85, -26.92, -8.0), 32.97],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 19
+                        DistanceTraveled = 57.0000000000001
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Turntable**, described as: Geometric circular form, blue metal platform with yellow railings in radial configuration, slight wear on surface with central rotating axis, designed for manual spinning in playground environments.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:19 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 20 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Turntable,
+                        Size:small(2*2=4 squares),
+                        Description:Geometric circular form, blue metal platform with yellow railings in radial configuration, slight wear on surface with central rotating axis, designed for manual spinning in playground environments.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-262, -161]  
+                        **Y Range**: [min_y, max_y] = [-112, -11]
+
+                        # RGB Captions
+                        Front = house, brown roof, white walls; house is in the foreground; trees in the background  
+                        Left = house, gray roof, wooden walls; fountain on the left; trees in the background  
+                        Right = playground equipment, yellow and red; swing set on the left; slide on the right; houses in the background  
+                        Down = trampoline, blue mat, yellow frame; trampoline is in the foreground; grassy area  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [24, 25, 40]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [31, 25, 29]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [40, 30, 29]]
+
+                        DownDepth:
+                        [[12, 11, 13], [11, 9, 11], [13, 11, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-187.32, -33.84, -10.0), 32.97],
+    [(-187.32, -33.84, -10.0), 32.97],
+    [(-190.04, -29.64, -10.0), 32.97],
+    [(-190.04, -29.64, -10.0), 32.97],
+    [(-190.04, -29.64, -10.0), 32.97],
+    [(-185.85, -26.92, -10.0), 32.97],
+    [(-185.85, -26.92, -10.0), 32.97],
+    [(-185.85, -26.92, -10.0), 32.97],
+    [(-185.85, -26.92, -8.0), 32.97],
+    [(-183.13, -31.11, -8.0), 32.97],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 20
+                        DistanceTraveled = 62.0000000000001
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Turntable**, described as: Geometric circular form, blue metal platform with yellow railings in radial configuration, slight wear on surface with central rotating axis, designed for manual spinning in playground environments.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:20 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 21 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Turntable,
+                        Size:small(2*2=4 squares),
+                        Description:Geometric circular form, blue metal platform with yellow railings in radial configuration, slight wear on surface with central rotating axis, designed for manual spinning in playground environments.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-262, -161]  
+                        **Y Range**: [min_y, max_y] = [-112, -11]
+
+                        # RGB Captions
+                        Front = red swing set, metal frame; swing set is in the foreground; house with shingled roof in the background  
+                        Left = fountain, circular basin; fountain is in the center of the courtyard; house with shingled roof in the background  
+                        Right = car, parked on the street; car is in the foreground; house with wooden fence in the background  
+                        Down = blue ball, plastic; yellow toy truck; toys are scattered on the grass  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [15, 25, 40]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [33, 25, 27]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [40, 30, 32]]
+
+                        DownDepth:
+                        [[12, 11, 14], [11, 8, 11], [13, 11, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-187.32, -33.84, -10.0), 32.97],
+    [(-190.04, -29.64, -10.0), 32.97],
+    [(-190.04, -29.64, -10.0), 32.97],
+    [(-190.04, -29.64, -10.0), 32.97],
+    [(-185.85, -26.92, -10.0), 32.97],
+    [(-185.85, -26.92, -10.0), 32.97],
+    [(-185.85, -26.92, -10.0), 32.97],
+    [(-185.85, -26.92, -8.0), 32.97],
+    [(-183.13, -31.11, -8.0), 32.97],
+    [(-185.85, -26.92, -8.0), 32.97],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 21
+                        DistanceTraveled = 67.0000000000001
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Turntable**, described as: Geometric circular form, blue metal platform with yellow railings in radial configuration, slight wear on surface with central rotating axis, designed for manual spinning in playground environments.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:21 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 22 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Turntable,
+                        Size:small(2*2=4 squares),
+                        Description:Geometric circular form, blue metal platform with yellow railings in radial configuration, slight wear on surface with central rotating axis, designed for manual spinning in playground environments.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-262, -161]  
+                        **Y Range**: [min_y, max_y] = [-112, -11]
+
+                        # RGB Captions
+                        Front = house, gray roof, white walls; house is in the foreground; red car on the road to the right  
+                        Left = house, gray roof, white walls; house is in the foreground; fountain in the garden to the left  
+                        Right = gas station building, metal canopy; two fuel pumps; pump nozzles hanging idle; canopy in the background  
+                        Down = swing set, red and blue; swing set is in the foreground; house shadow on the grass  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [16, 30, 39]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [33, 25, 8]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [39, 30, 36]]
+
+                        DownDepth:
+                        [[11, 11, 14], [11, 9, 11], [13, 11, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-190.04, -29.64, -10.0), 32.97],
+    [(-190.04, -29.64, -10.0), 32.97],
+    [(-190.04, -29.64, -10.0), 32.97],
+    [(-185.85, -26.92, -10.0), 32.97],
+    [(-185.85, -26.92, -10.0), 32.97],
+    [(-185.85, -26.92, -10.0), 32.97],
+    [(-185.85, -26.92, -8.0), 32.97],
+    [(-183.13, -31.11, -8.0), 32.97],
+    [(-185.85, -26.92, -8.0), 32.97],
+    [(-181.65, -24.2, -8.0), 32.97],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 22
+                        DistanceTraveled = 72.00000000000011
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Turntable**, described as: Geometric circular form, blue metal platform with yellow railings in radial configuration, slight wear on surface with central rotating axis, designed for manual spinning in playground environments.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:22 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 23 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Turntable,
+                        Size:small(2*2=4 squares),
+                        Description:Geometric circular form, blue metal platform with yellow railings in radial configuration, slight wear on surface with central rotating axis, designed for manual spinning in playground environments.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-262, -161]  
+                        **Y Range**: [min_y, max_y] = [-112, -11]
+
+                        # RGB Captions
+                        Front = house, white siding; red car parked on the street; house in the foreground; trees in the background  
+                        Left = roof, brown shingles; roof in the foreground; trees in the background  
+                        Right = street, paved; cars parked; houses in the background; trees on both sides  
+                        Down = rooftop, dark shingles; brooms leaning against the wall; grassy area in the foreground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [37, 16, 36]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [33, 7, 37]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [40, 30, 37]]
+
+                        DownDepth:
+                        [[12, 11, 13], [9, 8, 12], [13, 11, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-190.04, -29.64, -10.0), 32.97],
+    [(-190.04, -29.64, -10.0), 32.97],
+    [(-185.85, -26.92, -10.0), 32.97],
+    [(-185.85, -26.92, -10.0), 32.97],
+    [(-185.85, -26.92, -10.0), 32.97],
+    [(-185.85, -26.92, -8.0), 32.97],
+    [(-183.13, -31.11, -8.0), 32.97],
+    [(-185.85, -26.92, -8.0), 32.97],
+    [(-181.65, -24.2, -8.0), 32.97],
+    [(-177.46, -21.48, -8.0), 32.97],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 23
+                        DistanceTraveled = 77.00000000000013
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Turntable**, described as: Geometric circular form, blue metal platform with yellow railings in radial configuration, slight wear on surface with central rotating axis, designed for manual spinning in playground environments.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:23 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 24 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Turntable,
+                        Size:small(2*2=4 squares),
+                        Description:Geometric circular form, blue metal platform with yellow railings in radial configuration, slight wear on surface with central rotating axis, designed for manual spinning in playground environments.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-262, -161]  
+                        **Y Range**: [min_y, max_y] = [-112, -11]
+
+                        # RGB Captions
+                        Front = shed, wooden, dark; shed is in the foreground; red car parked on the street  
+                        Left = roof, brown tiles; roof is in the foreground; sunlight shining down  
+                        Right = street, paved; cars driving; buildings and trees in the background  
+                        Down = house, gray siding; window visible; lawn with grass  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [16, 13, 34]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [7, 23, 36]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [40, 30, 38]]
+
+                        DownDepth:
+                        [[5, 9, 13], [9, 8, 12], [11, 11, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-190.04, -29.64, -10.0), 32.97],
+    [(-185.85, -26.92, -10.0), 32.97],
+    [(-185.85, -26.92, -10.0), 32.97],
+    [(-185.85, -26.92, -10.0), 32.97],
+    [(-185.85, -26.92, -8.0), 32.97],
+    [(-183.13, -31.11, -8.0), 32.97],
+    [(-185.85, -26.92, -8.0), 32.97],
+    [(-181.65, -24.2, -8.0), 32.97],
+    [(-177.46, -21.48, -8.0), 32.97],
+    [(-173.26, -18.76, -8.0), 32.97],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 24
+                        DistanceTraveled = 82.00000000000014
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Turntable**, described as: Geometric circular form, blue metal platform with yellow railings in radial configuration, slight wear on surface with central rotating axis, designed for manual spinning in playground environments.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:24 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 25 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Turntable,
+                        Size:small(2*2=4 squares),
+                        Description:Geometric circular form, blue metal platform with yellow railings in radial configuration, slight wear on surface with central rotating axis, designed for manual spinning in playground environments.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-262, -161]  
+                        **Y Range**: [min_y, max_y] = [-112, -11]
+
+                        # RGB Captions
+                        Front = red car, parked; car is in the background; wooden building in the foreground  
+                        Left = wooden roof, brown shingles; sun shining from above; roof occupies most of the frame  
+                        Right = street, asphalt road; multiple cars; houses and trees; scene is outdoors  
+                        Down = wooden steps, dark color; steps are in the foreground; shadow cast on the steps  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[2, 100, 100], [2, 2, 100], [2, 3, 31]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 2], [9, 24, 3]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [35, 30, 38]]
+
+                        DownDepth:
+                        [[4, 6, 15], [5, 4, 11], [6, 11, 14]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-185.85, -26.92, -10.0), 32.97],
+    [(-185.85, -26.92, -10.0), 32.97],
+    [(-185.85, -26.92, -10.0), 32.97],
+    [(-185.85, -26.92, -8.0), 32.97],
+    [(-183.13, -31.11, -8.0), 32.97],
+    [(-185.85, -26.92, -8.0), 32.97],
+    [(-181.65, -24.2, -8.0), 32.97],
+    [(-177.46, -21.48, -8.0), 32.97],
+    [(-173.26, -18.76, -8.0), 32.97],
+    [(-169.07, -16.04, -8.0), 32.97],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 25
+                        DistanceTraveled = 87.00000000000016
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Turntable**, described as: Geometric circular form, blue metal platform with yellow railings in radial configuration, slight wear on surface with central rotating axis, designed for manual spinning in playground environments.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:25 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

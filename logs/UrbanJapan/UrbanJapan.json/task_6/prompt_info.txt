@@ -1,0 +1,315 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Manhole,
+                        Size:small(1.0*1.0=1.0 squares),
+                        Description:Geometric circular form, rusted brown metal surface with slight dome curvature, flush with ground plane, serves as access cover for underground utilities.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-50, 51]  
+                        **Y Range**: [min_y, max_y] = [105, 206]
+
+                        # RGB Captions
+                        Front = tall building, dark facade; orange car, parked; red barrier, on the sidewalk; building in the background, slightly left of center  
+                        Left = tall building, illuminated windows; street, with double yellow lines; car, moving away; building stands in the distant background, slightly right of center  
+                        Right = construction site, with workers; cement mixer truck, large; traffic cone, on the ground; crane, in the background, slightly to the right  
+                        Down = wet road, with double yellow lines; water puddle, reflective; road markings, white; puddle in the foreground, slightly to the left  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 44, 26], [100, 35, 26], [33, 25, 24]]
+
+                        LeftDepth:
+                        [[33, 100, 100], [32, 100, 100], [30, 25, 33]]
+
+                        RightDepth:
+                        [[100, 100, 100], [65, 100, 100], [27, 27, 35]]
+
+                        DownDepth:
+                        [[13, 11, 13], [11, 9, 11], [13, 11, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(0.89, 155.12, -6.4), -26.66],
+    [(0.89, 155.12, -6.4), -26.66],
+    [(0.89, 155.12, -6.4), -26.66],
+    [(0.89, 155.12, -6.4), -26.66],
+    [(0.89, 155.12, -6.4), -26.66],
+    [(0.89, 155.12, -6.4), -26.66],
+    [(0.89, 155.12, -6.4), -26.66],
+    [(0.89, 155.12, -6.4), -26.66],
+    [(0.89, 155.12, -6.4), -26.66],
+    [(0.89, 155.12, -6.4), -26.66],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Manhole**, described as: Geometric circular form, rusted brown metal surface with slight dome curvature, flush with ground plane, serves as access cover for underground utilities.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 1 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Manhole,
+                        Size:small(1.0*1.0=1.0 squares),
+                        Description:Geometric circular form, rusted brown metal surface with slight dome curvature, flush with ground plane, serves as access cover for underground utilities.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-50, 51]  
+                        **Y Range**: [min_y, max_y] = [105, 206]
+
+                        # RGB Captions
+                        Front = multi-story building, dark facade; street in the foreground; traffic lights visible  
+                        Left = cityscape at dusk; illuminated buildings; cars on the road; traffic lights  
+                        Right = construction site, nighttime; concrete mixer truck; workers present; tall buildings in background  
+                        Down = asphalt road, wet surface; orange double line; debris scattered  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 25, 20], [94, 25, 22], [33, 23, 22]]
+
+                        LeftDepth:
+                        [[43, 100, 100], [35, 100, 100], [27, 25, 33]]
+
+                        RightDepth:
+                        [[27, 100, 100], [27, 100, 100], [25, 26, 35]]
+
+                        DownDepth:
+                        [[13, 11, 12], [11, 9, 11], [13, 11, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(0.89, 155.12, -6.4), -26.66],
+    [(5.36, 152.88, -6.4), -26.66],
+    [(5.36, 152.88, -6.4), -26.66],
+    [(5.36, 152.88, -6.4), -26.66],
+    [(5.36, 152.88, -6.4), -26.66],
+    [(5.36, 152.88, -6.4), -26.66],
+    [(5.36, 152.88, -6.4), -26.66],
+    [(5.36, 152.88, -6.4), -26.66],
+    [(5.36, 152.88, -6.4), -26.66],
+    [(5.36, 152.88, -6.4), -26.66],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 1
+                        DistanceTraveled = 5.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Manhole**, described as: Geometric circular form, rusted brown metal surface with slight dome curvature, flush with ground plane, serves as access cover for underground utilities.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:1 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 2 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Manhole,
+                        Size:small(1.0*1.0=1.0 squares),
+                        Description:Geometric circular form, rusted brown metal surface with slight dome curvature, flush with ground plane, serves as access cover for underground utilities.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-50, 51]  
+                        **Y Range**: [min_y, max_y] = [105, 206]
+
+                        # RGB Captions
+                        Front = building, tall, concrete; streetlight, glowing, near building; sidewalk, tiled, in foreground  
+                        Left = red car, parked, on road; buildings, illuminated, along road; traffic lights, green, above road  
+                        Right = construction site, active, with workers; cement mixer, large, on road; crane, tall, in background  
+                        Down = tools, scattered, on ground; orange vehicle, small, near tools; ground, concrete, with markings  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 18, 15], [87, 20, 17], [33, 36, 18]]
+
+                        LeftDepth:
+                        [[51, 100, 100], [38, 100, 100], [31, 26, 33]]
+
+                        RightDepth:
+                        [[18, 100, 100], [18, 100, 100], [19, 25, 33]]
+
+                        DownDepth:
+                        [[13, 11, 13], [11, 8, 11], [13, 11, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(0.89, 155.12, -6.4), -26.66],
+    [(5.36, 152.88, -6.4), -26.66],
+    [(9.83, 150.64, -6.4), -26.66],
+    [(9.83, 150.64, -6.4), -26.66],
+    [(9.83, 150.64, -6.4), -26.66],
+    [(9.83, 150.64, -6.4), -26.66],
+    [(9.83, 150.64, -6.4), -26.66],
+    [(9.83, 150.64, -6.4), -26.66],
+    [(9.83, 150.64, -6.4), -26.66],
+    [(9.83, 150.64, -6.4), -26.66],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 2
+                        DistanceTraveled = 10.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Manhole**, described as: Geometric circular form, rusted brown metal surface with slight dome curvature, flush with ground plane, serves as access cover for underground utilities.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:2 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 3 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Manhole,
+                        Size:small(1.0*1.0=1.0 squares),
+                        Description:Geometric circular form, rusted brown metal surface with slight dome curvature, flush with ground plane, serves as access cover for underground utilities.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-50, 51]  
+                        **Y Range**: [min_y, max_y] = [105, 206]
+
+                        # RGB Captions
+                        Front = metal beam, large, dark; beam is in the foreground; light source above  
+                        Left = red car, parked; car is on the street; buildings illuminated with neon lights in the background  
+                        Right = construction equipment, orange; equipment is on the ground; building facade in the background  
+                        Down = grate, square, metal; grate is on the ground; pole casts shadow on the pavement  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[34, 13, 11], [30, 15, 12], [30, 26, 22]]
+
+                        LeftDepth:
+                        [[60, 100, 100], [55, 100, 100], [33, 26, 33]]
+
+                        RightDepth:
+                        [[13, 100, 100], [16, 100, 100], [17, 25, 33]]
+
+                        DownDepth:
+                        [[13, 11, 13], [11, 8, 11], [13, 11, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(0.89, 155.12, -6.4), -26.66],
+    [(5.36, 152.88, -6.4), -26.66],
+    [(9.83, 150.64, -6.4), -26.66],
+    [(14.3, 148.39, -6.4), -26.66],
+    [(14.3, 148.39, -6.4), -26.66],
+    [(14.3, 148.39, -6.4), -26.66],
+    [(14.3, 148.39, -6.4), -26.66],
+    [(14.3, 148.39, -6.4), -26.66],
+    [(14.3, 148.39, -6.4), -26.66],
+    [(14.3, 148.39, -6.4), -26.66],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 3
+                        DistanceTraveled = 15.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Manhole**, described as: Geometric circular form, rusted brown metal surface with slight dome curvature, flush with ground plane, serves as access cover for underground utilities.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:3 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 4 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Manhole,
+                        Size:small(1.0*1.0=1.0 squares),
+                        Description:Geometric circular form, rusted brown metal surface with slight dome curvature, flush with ground plane, serves as access cover for underground utilities.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-50, 51]  
+                        **Y Range**: [min_y, max_y] = [105, 206]
+
+                        # RGB Captions
+                        Front = metal structure, dark; bolts visible; structure in the foreground  
+                        Left = red car, parked; street with multiple lanes; buildings illuminated; traffic lights green; scene at dusk  
+                        Right = tall building, dark facade; construction crane on top; building in the background; street with a red car  
+                        Down = pavement, tiled; metal grate; shadow of railing; image taken at night  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[9, 9, 8], [9, 9, 7], [6, 1, 1]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [32, 25, 27]]
+
+                        RightDepth:
+                        [[8, 11, 100], [8, 14, 100], [7, 15, 31]]
+
+                        DownDepth:
+                        [[11, 8, 16], [11, 8, 11], [13, 11, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(0.89, 155.12, -6.4), -26.66],
+    [(5.36, 152.88, -6.4), -26.66],
+    [(9.83, 150.64, -6.4), -26.66],
+    [(14.3, 148.39, -6.4), -26.66],
+    [(18.76, 146.15, -6.4), -26.66],
+    [(18.76, 146.15, -6.4), -26.66],
+    [(18.76, 146.15, -6.4), -26.66],
+    [(18.76, 146.15, -6.4), -26.66],
+    [(18.76, 146.15, -6.4), -26.66],
+    [(18.76, 146.15, -6.4), -26.66],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 4
+                        DistanceTraveled = 20.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Manhole**, described as: Geometric circular form, rusted brown metal surface with slight dome curvature, flush with ground plane, serves as access cover for underground utilities.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:4 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

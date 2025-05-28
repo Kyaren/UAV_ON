@@ -1,0 +1,35 @@
+{
+  "episode_id": "36",
+  "start_pose": {
+    "start_position": [
+      251.8140642293073,
+      -183.30271516383317,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.8579993967268537,
+      -0.5136506937757948
+    ]
+  },
+  "info": {
+    "geodesic_distance": 40,
+    "euclidean_distance": 46.2502
+  },
+  "map_name": "WinterTown_test",
+  "true_name": " FoodCan",
+  "object_name": "SM_Food_Can_Set4_72",
+  "pose": [
+    [
+      209.00726318359375,
+      -188.792724609375,
+      9.628725051879883
+    ]
+  ],
+  "size": " small(0.75*0.5=0.38 squares)",
+  "description": " Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

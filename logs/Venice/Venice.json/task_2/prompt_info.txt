@@ -1,0 +1,1449 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Cart,
+                        Size: mid(1.75*1=1.75 squares),
+                        Description: Geometric box shape, weathered gray metal surface with visible dents and rust, mounted on small caster wheels, likely used for storage or transport of tools or materials.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-58, 43]  
+                        **Y Range**: [min_y, max_y] = [-4, 97]
+
+                        # RGB Captions
+                        Front = brick building, red; black shutters; orange tree in the foreground; building occupies the right side  
+                        Left = white buildings, multiple stories; yellow and green trees; bridge over canal in the foreground; buildings surround the canal  
+                        Right = brick wall, red; two doors, arched; white frame around doors; wall is in the foreground; yellow building in the background  
+                        Down = canal, narrow; stairs leading down; striped awning; leaves on the ground; view is from above  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 6], [45, 27, 7]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [28, 34, 40]]
+
+                        RightDepth:
+                        [[3, 4, 100], [3, 3, 15], [3, 4, 18]]
+
+                        DownDepth:
+                        [[24, 15, 8], [19, 12, 12], [22, 20, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-7.11, 46.37, -10.0), -79.16],
+    [(-7.11, 46.37, -10.0), -79.16],
+    [(-7.11, 46.37, -10.0), -79.16],
+    [(-7.11, 46.37, -10.0), -79.16],
+    [(-7.11, 46.37, -10.0), -79.16],
+    [(-7.11, 46.37, -10.0), -79.16],
+    [(-7.11, 46.37, -10.0), -79.16],
+    [(-7.11, 46.37, -10.0), -79.16],
+    [(-7.11, 46.37, -10.0), -79.16],
+    [(-7.11, 46.37, -10.0), -79.16],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Cart**, described as:  Geometric box shape, weathered gray metal surface with visible dents and rust, mounted on small caster wheels, likely used for storage or transport of tools or materials.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 1 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Cart,
+                        Size: mid(1.75*1=1.75 squares),
+                        Description: Geometric box shape, weathered gray metal surface with visible dents and rust, mounted on small caster wheels, likely used for storage or transport of tools or materials.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-58, 43]  
+                        **Y Range**: [min_y, max_y] = [-4, 97]
+
+                        # RGB Captions
+                        Front = green tree, large; orange tree, medium-sized; trees in the foreground; buildings in the background  
+                        Left = building, beige facade; green shutters; building stands in the center; orange tree to the right  
+                        Right = building, brick facade; black shutters; building occupies most of the frame; orange tree in the foreground  
+                        Down = canal, narrow; water is calm; canal runs horizontally; orange tree and green tree on either side  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 46, 17]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [38, 18, 42]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 58, 16], [13, 14, 16]]
+
+                        DownDepth:
+                        [[22, 20, 16], [16, 15, 15], [19, 20, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-7.11, 46.37, -10.0), -79.16],
+    [(-6.17, 41.45, -10.0), -79.16],
+    [(-6.17, 41.45, -10.0), -79.16],
+    [(-6.17, 41.45, -10.0), -79.16],
+    [(-6.17, 41.45, -10.0), -79.16],
+    [(-6.17, 41.45, -10.0), -79.16],
+    [(-6.17, 41.45, -10.0), -79.16],
+    [(-6.17, 41.45, -10.0), -79.16],
+    [(-6.17, 41.45, -10.0), -79.16],
+    [(-6.17, 41.45, -10.0), -79.16],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 1
+                        DistanceTraveled = 4.999999999999997
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Cart**, described as:  Geometric box shape, weathered gray metal surface with visible dents and rust, mounted on small caster wheels, likely used for storage or transport of tools or materials.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:1 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 2 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Cart,
+                        Size: mid(1.75*1=1.75 squares),
+                        Description: Geometric box shape, weathered gray metal surface with visible dents and rust, mounted on small caster wheels, likely used for storage or transport of tools or materials.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-58, 43]  
+                        **Y Range**: [min_y, max_y] = [-4, 97]
+
+                        # RGB Captions
+                        Front = trees, green and orange leaves; buildings in the background; canal running through the center  
+                        Left = building, yellow facade, red roof; tree with orange leaves on the right; clear sky above  
+                        Right = tree, bright green leaves; brick building with shutters in the background; blue sky visible through branches  
+                        Down = canal, calm water; tree branches with green leaves hanging over; bridge railing on the left  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 46, 15]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [37, 31, 38]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 16], [11, 11, 18]]
+
+                        DownDepth:
+                        [[18, 17, 15], [16, 15, 15], [21, 20, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-7.11, 46.37, -10.0), -79.16],
+    [(-6.17, 41.45, -10.0), -79.16],
+    [(-5.23, 36.54, -10.0), -79.16],
+    [(-5.23, 36.54, -10.0), -79.16],
+    [(-5.23, 36.54, -10.0), -79.16],
+    [(-5.23, 36.54, -10.0), -79.16],
+    [(-5.23, 36.54, -10.0), -79.16],
+    [(-5.23, 36.54, -10.0), -79.16],
+    [(-5.23, 36.54, -10.0), -79.16],
+    [(-5.23, 36.54, -10.0), -79.16],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 2
+                        DistanceTraveled = 9.999999999999995
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Cart**, described as:  Geometric box shape, weathered gray metal surface with visible dents and rust, mounted on small caster wheels, likely used for storage or transport of tools or materials.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:2 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 3 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Cart,
+                        Size: mid(1.75*1=1.75 squares),
+                        Description: Geometric box shape, weathered gray metal surface with visible dents and rust, mounted on small caster wheels, likely used for storage or transport of tools or materials.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-58, 43]  
+                        **Y Range**: [min_y, max_y] = [-4, 97]
+
+                        # RGB Captions
+                        Front = canal, narrow, water; canal is in the foreground; buildings with red roofs on both sides; green and yellow leaves on trees  
+                        Left = building, beige facade, green shutters; building is in the foreground; orange tree to the right of the building; clear blue sky above  
+                        Right = leaves, bright green, maple; leaves are in the foreground; view is from below looking up; roof tiles visible through gaps  
+                        Down = leaves, green and orange, maple; leaves are in the foreground; staircase in the background; view is from below looking up  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 46, 12]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [20, 35, 34]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 14], [11, 8, 14]]
+
+                        DownDepth:
+                        [[22, 20, 13], [16, 15, 12], [19, 20, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-7.11, 46.37, -10.0), -79.16],
+    [(-6.17, 41.45, -10.0), -79.16],
+    [(-5.23, 36.54, -10.0), -79.16],
+    [(-4.29, 31.63, -10.0), -79.16],
+    [(-4.29, 31.63, -10.0), -79.16],
+    [(-4.29, 31.63, -10.0), -79.16],
+    [(-4.29, 31.63, -10.0), -79.16],
+    [(-4.29, 31.63, -10.0), -79.16],
+    [(-4.29, 31.63, -10.0), -79.16],
+    [(-4.29, 31.63, -10.0), -79.16],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 3
+                        DistanceTraveled = 14.999999999999996
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Cart**, described as:  Geometric box shape, weathered gray metal surface with visible dents and rust, mounted on small caster wheels, likely used for storage or transport of tools or materials.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:3 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 4 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Cart,
+                        Size: mid(1.75*1=1.75 squares),
+                        Description: Geometric box shape, weathered gray metal surface with visible dents and rust, mounted on small caster wheels, likely used for storage or transport of tools or materials.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-58, 43]  
+                        **Y Range**: [min_y, max_y] = [-4, 97]
+
+                        # RGB Captions
+                        Front = canal, narrow, water; canal runs through the center; buildings on both sides; trees with orange leaves on the left  
+                        Left = building, beige facade, red roof; building is in the foreground; tree with orange leaves on the right  
+                        Right = tree, large, yellow leaves; tree is in the foreground; building with red roof in the background  
+                        Down = bridge, stone, arched; bridge spans the canal; trees with orange and yellow leaves on either side  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [31, 45, 22]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [14, 44, 33]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [14, 14, 23]]
+
+                        DownDepth:
+                        [[20, 20, 16], [15, 15, 15], [17, 20, 21]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-7.11, 46.37, -10.0), -79.16],
+    [(-6.17, 41.45, -10.0), -79.16],
+    [(-5.23, 36.54, -10.0), -79.16],
+    [(-4.29, 31.63, -10.0), -79.16],
+    [(-9.2, 30.69, -10.0), -79.16],
+    [(-9.2, 30.69, -10.0), -79.16],
+    [(-9.2, 30.69, -10.0), -79.16],
+    [(-9.2, 30.69, -10.0), -79.16],
+    [(-9.2, 30.69, -10.0), -79.16],
+    [(-9.2, 30.69, -10.0), -79.16],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 4
+                        DistanceTraveled = 19.999999999999996
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Cart**, described as:  Geometric box shape, weathered gray metal surface with visible dents and rust, mounted on small caster wheels, likely used for storage or transport of tools or materials.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:4 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 5 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Cart,
+                        Size: mid(1.75*1=1.75 squares),
+                        Description: Geometric box shape, weathered gray metal surface with visible dents and rust, mounted on small caster wheels, likely used for storage or transport of tools or materials.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-58, 43]  
+                        **Y Range**: [min_y, max_y] = [-4, 97]
+
+                        # RGB Captions
+                        Front = tree, orange leaves, in the foreground; tree branches spread out  
+                        Left = buildings, beige walls, red tiled roofs; buildings stand side by side; tree with orange leaves on the right  
+                        Right = tree, yellow leaves, in the foreground; tree is near the buildings; buildings have red tiled roofs  
+                        Down = tree, orange leaves, hanging over the bridge; bridge spans the canal; water in the canal  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [35, 100, 100], [24, 25, 24]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [10, 44, 27]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [20, 18, 30]]
+
+                        DownDepth:
+                        [[16, 20, 20], [15, 15, 18], [17, 20, 23]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-7.11, 46.37, -10.0), -79.16],
+    [(-6.17, 41.45, -10.0), -79.16],
+    [(-5.23, 36.54, -10.0), -79.16],
+    [(-4.29, 31.63, -10.0), -79.16],
+    [(-9.2, 30.69, -10.0), -79.16],
+    [(-14.11, 29.75, -10.0), -79.16],
+    [(-14.11, 29.75, -10.0), -79.16],
+    [(-14.11, 29.75, -10.0), -79.16],
+    [(-14.11, 29.75, -10.0), -79.16],
+    [(-14.11, 29.75, -10.0), -79.16],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 5
+                        DistanceTraveled = 24.999999999999996
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Cart**, described as:  Geometric box shape, weathered gray metal surface with visible dents and rust, mounted on small caster wheels, likely used for storage or transport of tools or materials.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:5 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 6 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Cart,
+                        Size: mid(1.75*1=1.75 squares),
+                        Description: Geometric box shape, weathered gray metal surface with visible dents and rust, mounted on small caster wheels, likely used for storage or transport of tools or materials.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-58, 43]  
+                        **Y Range**: [min_y, max_y] = [-4, 97]
+
+                        # RGB Captions
+                        Front = orange tree, autumn leaves; tree is in the foreground; buildings with orange roofs in the background  
+                        Left = buildings with orange roofs; green shutters on windows; buildings stand close together; clear sky above  
+                        Right = orange tree, autumn leaves; yellow tree, summer leaves; trees are in the foreground; building with orange roof in the background  
+                        Down = orange tree, autumn leaves; tree hangs over the canal; building with orange roof and shutters below  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [30, 26, 33]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 45, 23]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [24, 24, 36]]
+
+                        DownDepth:
+                        [[18, 15, 22], [15, 12, 20], [15, 15, 24]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-7.11, 46.37, -10.0), -79.16],
+    [(-6.17, 41.45, -10.0), -79.16],
+    [(-5.23, 36.54, -10.0), -79.16],
+    [(-4.29, 31.63, -10.0), -79.16],
+    [(-9.2, 30.69, -10.0), -79.16],
+    [(-14.11, 29.75, -10.0), -79.16],
+    [(-19.02, 28.81, -10.0), -79.16],
+    [(-19.02, 28.81, -10.0), -79.16],
+    [(-19.02, 28.81, -10.0), -79.16],
+    [(-19.02, 28.81, -10.0), -79.16],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 6
+                        DistanceTraveled = 29.999999999999996
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Cart**, described as:  Geometric box shape, weathered gray metal surface with visible dents and rust, mounted on small caster wheels, likely used for storage or transport of tools or materials.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:6 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 7 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Cart,
+                        Size: mid(1.75*1=1.75 squares),
+                        Description: Geometric box shape, weathered gray metal surface with visible dents and rust, mounted on small caster wheels, likely used for storage or transport of tools or materials.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-58, 43]  
+                        **Y Range**: [min_y, max_y] = [-4, 97]
+
+                        # RGB Captions
+                        Front = building, beige facade, orange roof; building stands in the background; yellow tree in the foreground  
+                        Left = buildings, beige facades, orange roofs; buildings are in the background; table and chair in the foreground  
+                        Right = tree branches, orange leaves; branches spread across the image; leaves cover most of the view  
+                        Down = tree branches, orange leaves; branches are in the foreground; car parked in the background  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [25, 35, 38]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [56, 46, 24]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [28, 23, 35]]
+
+                        DownDepth:
+                        [[18, 15, 21], [15, 12, 19], [17, 13, 22]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-7.11, 46.37, -10.0), -79.16],
+    [(-6.17, 41.45, -10.0), -79.16],
+    [(-5.23, 36.54, -10.0), -79.16],
+    [(-4.29, 31.63, -10.0), -79.16],
+    [(-9.2, 30.69, -10.0), -79.16],
+    [(-14.11, 29.75, -10.0), -79.16],
+    [(-19.02, 28.81, -10.0), -79.16],
+    [(-18.08, 23.9, -10.0), -79.16],
+    [(-18.08, 23.9, -10.0), -79.16],
+    [(-18.08, 23.9, -10.0), -79.16],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 7
+                        DistanceTraveled = 35.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Cart**, described as:  Geometric box shape, weathered gray metal surface with visible dents and rust, mounted on small caster wheels, likely used for storage or transport of tools or materials.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:7 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 8 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Cart,
+                        Size: mid(1.75*1=1.75 squares),
+                        Description: Geometric box shape, weathered gray metal surface with visible dents and rust, mounted on small caster wheels, likely used for storage or transport of tools or materials.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-58, 43]  
+                        **Y Range**: [min_y, max_y] = [-4, 97]
+
+                        # RGB Captions
+                        Front = building, beige facade, orange roof; building stands in the background; tree with yellow leaves in the foreground  
+                        Left = building, beige facade, orange roof; green shutters on windows; clothes drying on a line outside  
+                        Right = tree, orange leaves, in the foreground; canal in the middle ground; buildings with orange roofs in the background  
+                        Down = tree, orange leaves, in the foreground; canal with stairs leading down; round table on a tiled patio  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [12, 31, 34]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [60, 18, 21]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [29, 22, 34]]
+
+                        DownDepth:
+                        [[16, 15, 22], [15, 12, 20], [18, 15, 14]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-7.11, 46.37, -10.0), -79.16],
+    [(-6.17, 41.45, -10.0), -79.16],
+    [(-5.23, 36.54, -10.0), -79.16],
+    [(-4.29, 31.63, -10.0), -79.16],
+    [(-9.2, 30.69, -10.0), -79.16],
+    [(-14.11, 29.75, -10.0), -79.16],
+    [(-19.02, 28.81, -10.0), -79.16],
+    [(-18.08, 23.9, -10.0), -79.16],
+    [(-17.14, 18.99, -10.0), -79.16],
+    [(-17.14, 18.99, -10.0), -79.16],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 8
+                        DistanceTraveled = 40.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Cart**, described as:  Geometric box shape, weathered gray metal surface with visible dents and rust, mounted on small caster wheels, likely used for storage or transport of tools or materials.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:8 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 9 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Cart,
+                        Size: mid(1.75*1=1.75 squares),
+                        Description: Geometric box shape, weathered gray metal surface with visible dents and rust, mounted on small caster wheels, likely used for storage or transport of tools or materials.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-58, 43]  
+                        **Y Range**: [min_y, max_y] = [-4, 97]
+
+                        # RGB Captions
+                        Front = building, orange facade, white trim; building stands in the foreground; yellow leaves on tree branches in the foreground  
+                        Left = buildings, beige and brown facades; buildings stand side by side; clear sky above  
+                        Right = trees, yellow leaves; trees are in the foreground; buildings in the background  
+                        Down = tree, yellow leaves; tree is in the foreground; building with red roof in the background  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [11, 37, 35]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [20, 18, 10]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [5, 21, 31]]
+
+                        DownDepth:
+                        [[11, 11, 9], [15, 11, 19], [18, 17, 24]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-7.11, 46.37, -10.0), -79.16],
+    [(-6.17, 41.45, -10.0), -79.16],
+    [(-5.23, 36.54, -10.0), -79.16],
+    [(-4.29, 31.63, -10.0), -79.16],
+    [(-9.2, 30.69, -10.0), -79.16],
+    [(-14.11, 29.75, -10.0), -79.16],
+    [(-19.02, 28.81, -10.0), -79.16],
+    [(-18.08, 23.9, -10.0), -79.16],
+    [(-17.14, 18.99, -10.0), -79.16],
+    [(-16.2, 14.08, -10.0), -79.16],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 9
+                        DistanceTraveled = 45.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Cart**, described as:  Geometric box shape, weathered gray metal surface with visible dents and rust, mounted on small caster wheels, likely used for storage or transport of tools or materials.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:9 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 10 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Cart,
+                        Size: mid(1.75*1=1.75 squares),
+                        Description: Geometric box shape, weathered gray metal surface with visible dents and rust, mounted on small caster wheels, likely used for storage or transport of tools or materials.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-58, 43]  
+                        **Y Range**: [min_y, max_y] = [-4, 97]
+
+                        # RGB Captions
+                        Front = canal, narrow, water; bridge, white, arched; buildings, orange roofs, multiple; trees, yellow leaves, foreground  
+                        Left = building, beige walls, orange roof; tree, yellow leaves, foreground; sky, clear, blue  
+                        Right = buildings, orange roofs, multiple; trees, green and orange leaves, foreground; sky, clear, blue  
+                        Down = canal, narrow, water; tree, yellow leaves, foreground; bridge, white railing, background  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [35, 42, 26]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [59, 23, 12]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [19, 16, 20]]
+
+                        DownDepth:
+                        [[15, 20, 19], [15, 15, 16], [18, 20, 21]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-6.17, 41.45, -10.0), -79.16],
+    [(-5.23, 36.54, -10.0), -79.16],
+    [(-4.29, 31.63, -10.0), -79.16],
+    [(-9.2, 30.69, -10.0), -79.16],
+    [(-14.11, 29.75, -10.0), -79.16],
+    [(-19.02, 28.81, -10.0), -79.16],
+    [(-18.08, 23.9, -10.0), -79.16],
+    [(-17.14, 18.99, -10.0), -79.16],
+    [(-16.2, 14.08, -10.0), -79.16],
+    [(-11.29, 15.02, -10.0), -79.16],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 10
+                        DistanceTraveled = 50.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Cart**, described as:  Geometric box shape, weathered gray metal surface with visible dents and rust, mounted on small caster wheels, likely used for storage or transport of tools or materials.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:10 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 11 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Cart,
+                        Size: mid(1.75*1=1.75 squares),
+                        Description: Geometric box shape, weathered gray metal surface with visible dents and rust, mounted on small caster wheels, likely used for storage or transport of tools or materials.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-58, 43]  
+                        **Y Range**: [min_y, max_y] = [-4, 97]
+
+                        # RGB Captions
+                        Front = stone bridge, white railing; bridge spans canal; buildings on both sides of canal  
+                        Left = building, beige facade; green door; yellow leaves in foreground  
+                        Right = tree, bright yellow leaves; tree is in the foreground; buildings in the background  
+                        Down = tree, bright yellow leaves; tree is in the foreground; canal and buildings below  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 42, 33]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [25, 21, 13]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [23, 18, 22]]
+
+                        DownDepth:
+                        [[17, 20, 18], [12, 15, 16], [16, 20, 21]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-5.23, 36.54, -10.0), -79.16],
+    [(-4.29, 31.63, -10.0), -79.16],
+    [(-9.2, 30.69, -10.0), -79.16],
+    [(-14.11, 29.75, -10.0), -79.16],
+    [(-19.02, 28.81, -10.0), -79.16],
+    [(-18.08, 23.9, -10.0), -79.16],
+    [(-17.14, 18.99, -10.0), -79.16],
+    [(-16.2, 14.08, -10.0), -79.16],
+    [(-11.29, 15.02, -10.0), -79.16],
+    [(-10.34, 10.11, -10.0), -79.16],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 11
+                        DistanceTraveled = 55.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Cart**, described as:  Geometric box shape, weathered gray metal surface with visible dents and rust, mounted on small caster wheels, likely used for storage or transport of tools or materials.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:11 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 12 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Cart,
+                        Size: mid(1.75*1=1.75 squares),
+                        Description: Geometric box shape, weathered gray metal surface with visible dents and rust, mounted on small caster wheels, likely used for storage or transport of tools or materials.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-58, 43]  
+                        **Y Range**: [min_y, max_y] = [-4, 97]
+
+                        # RGB Captions
+                        Front = stone bridge, white railing; bridge spans canal; buildings with orange roofs in background  
+                        Left = building, beige facade; building has arched windows; balcony with white railing in foreground  
+                        Right = building, beige facade; building has shuttered windows; trees with yellow and orange leaves in foreground  
+                        Down = canal, calm water; gondola on canal; person standing on dock; buildings with orange roofs on both sides  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [35, 38, 31]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [26, 9, 15]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [20, 20, 18]]
+
+                        DownDepth:
+                        [[20, 20, 18], [13, 15, 16], [16, 20, 21]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-4.29, 31.63, -10.0), -79.16],
+    [(-9.2, 30.69, -10.0), -79.16],
+    [(-14.11, 29.75, -10.0), -79.16],
+    [(-19.02, 28.81, -10.0), -79.16],
+    [(-18.08, 23.9, -10.0), -79.16],
+    [(-17.14, 18.99, -10.0), -79.16],
+    [(-16.2, 14.08, -10.0), -79.16],
+    [(-11.29, 15.02, -10.0), -79.16],
+    [(-10.34, 10.11, -10.0), -79.16],
+    [(-9.4, 5.2, -10.0), -79.16],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 12
+                        DistanceTraveled = 60.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Cart**, described as:  Geometric box shape, weathered gray metal surface with visible dents and rust, mounted on small caster wheels, likely used for storage or transport of tools or materials.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:12 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 13 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Cart,
+                        Size: mid(1.75*1=1.75 squares),
+                        Description: Geometric box shape, weathered gray metal surface with visible dents and rust, mounted on small caster wheels, likely used for storage or transport of tools or materials.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-58, 43]  
+                        **Y Range**: [min_y, max_y] = [-4, 97]
+
+                        # RGB Captions
+                        Front = stone bridge, white railing; bridge spans canal; yellow tree to the left; orange tree to the right; buildings on both sides  
+                        Left = building, beige facade; green shutters; balcony with white railing; building in the foreground; clear sky above  
+                        Right = buildings, beige facades; red-tiled roofs; orange tree in the foreground; buildings extend into the background; clear sky above  
+                        Down = canal, calm water; gondola docked; bridge with arches; orange tree near the canal; buildings on both sides  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [38, 35, 40]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [11, 11, 34]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [19, 19, 22]]
+
+                        DownDepth:
+                        [[18, 18, 17], [15, 15, 15], [16, 20, 20]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-9.2, 30.69, -10.0), -79.16],
+    [(-14.11, 29.75, -10.0), -79.16],
+    [(-19.02, 28.81, -10.0), -79.16],
+    [(-18.08, 23.9, -10.0), -79.16],
+    [(-17.14, 18.99, -10.0), -79.16],
+    [(-16.2, 14.08, -10.0), -79.16],
+    [(-11.29, 15.02, -10.0), -79.16],
+    [(-10.34, 10.11, -10.0), -79.16],
+    [(-9.4, 5.2, -10.0), -79.16],
+    [(-8.46, 0.29, -10.0), -79.16],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 13
+                        DistanceTraveled = 65.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Cart**, described as:  Geometric box shape, weathered gray metal surface with visible dents and rust, mounted on small caster wheels, likely used for storage or transport of tools or materials.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:13 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 14 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Cart,
+                        Size: mid(1.75*1=1.75 squares),
+                        Description: Geometric box shape, weathered gray metal surface with visible dents and rust, mounted on small caster wheels, likely used for storage or transport of tools or materials.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-58, 43]  
+                        **Y Range**: [min_y, max_y] = [-4, 97]
+
+                        # RGB Captions
+                        Front = stone bridge, white railing; bridge spans canal; buildings with orange roofs in background; tree with yellow leaves to the right  
+                        Left = building, orange facade; building has arched windows; green shutters closed; balcony with white railing in foreground  
+                        Right = buildings, orange and yellow facades; buildings have red-tiled roofs; tree with orange leaves in foreground; sky is clear and blue  
+                        Down = canal, calm water; canal runs between buildings; gondola docked on the side; bridge crosses canal; tree with orange leaves in bottom right  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [34, 35, 44]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 24], [45, 10, 24]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 19, 22]]
+
+                        DownDepth:
+                        [[16, 18, 18], [14, 15, 15], [20, 20, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-14.11, 29.75, -10.0), -79.16],
+    [(-19.02, 28.81, -10.0), -79.16],
+    [(-18.08, 23.9, -10.0), -79.16],
+    [(-17.14, 18.99, -10.0), -79.16],
+    [(-16.2, 14.08, -10.0), -79.16],
+    [(-11.29, 15.02, -10.0), -79.16],
+    [(-10.34, 10.11, -10.0), -79.16],
+    [(-9.4, 5.2, -10.0), -79.16],
+    [(-8.46, 0.29, -10.0), -79.16],
+    [(-8.46, 0.29, -10.0), -94.16],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 14
+                        DistanceTraveled = 65.0
+                        AvgHeadingChange = 1.07
+
+                        # Reminder  
+                        - The target is ** Cart**, described as:  Geometric box shape, weathered gray metal surface with visible dents and rust, mounted on small caster wheels, likely used for storage or transport of tools or materials.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:14 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 15 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Cart,
+                        Size: mid(1.75*1=1.75 squares),
+                        Description: Geometric box shape, weathered gray metal surface with visible dents and rust, mounted on small caster wheels, likely used for storage or transport of tools or materials.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-58, 43]  
+                        **Y Range**: [min_y, max_y] = [-4, 97]
+
+                        # RGB Captions
+                        Front = multi-story buildings, orange rooftops; buildings in the foreground and background; trees with yellow leaves on the left  
+                        Left = building facade, beige walls; balcony with white railing; tree with yellow leaves on the left  
+                        Right = cluster of buildings, orange rooftops; buildings in the foreground and background; trees with orange leaves on the sides  
+                        Down = canal, calm water; bridge spanning the canal; building facades on both sides; tree with orange leaves on the right  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [13, 35, 40]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [27, 11, 10]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [42, 19, 19]]
+
+                        DownDepth:
+                        [[15, 18, 18], [15, 15, 16], [22, 20, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-19.02, 28.81, -10.0), -79.16],
+    [(-18.08, 23.9, -10.0), -79.16],
+    [(-17.14, 18.99, -10.0), -79.16],
+    [(-16.2, 14.08, -10.0), -79.16],
+    [(-11.29, 15.02, -10.0), -79.16],
+    [(-10.34, 10.11, -10.0), -79.16],
+    [(-9.4, 5.2, -10.0), -79.16],
+    [(-8.46, 0.29, -10.0), -79.16],
+    [(-8.46, 0.29, -10.0), -94.16],
+    [(-8.46, 0.29, -10.0), -109.16],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 15
+                        DistanceTraveled = 65.0
+                        AvgHeadingChange = 2.0
+
+                        # Reminder  
+                        - The target is ** Cart**, described as:  Geometric box shape, weathered gray metal surface with visible dents and rust, mounted on small caster wheels, likely used for storage or transport of tools or materials.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:15 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 16 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Cart,
+                        Size: mid(1.75*1=1.75 squares),
+                        Description: Geometric box shape, weathered gray metal surface with visible dents and rust, mounted on small caster wheels, likely used for storage or transport of tools or materials.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-58, 43]  
+                        **Y Range**: [min_y, max_y] = [-4, 97]
+
+                        # RGB Captions
+                        Front = building, peach-colored, multiple windows; building stands in the foreground; trees with yellow leaves; canal in the background  
+                        Left = building, beige, multiple windows; balcony with white railing; tree with yellow leaves to the left; clear sky above  
+                        Right = buildings, beige and orange, tiled roofs; buildings stand side by side; clear sky in the background  
+                        Down = canal, curved, water surface; boat on the canal; bridge over the canal; tree with orange leaves in the foreground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [33, 35, 38]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [42, 21, 17]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [40, 15, 15]]
+
+                        DownDepth:
+                        [[18, 18, 18], [18, 15, 15], [24, 17, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-18.08, 23.9, -10.0), -79.16],
+    [(-17.14, 18.99, -10.0), -79.16],
+    [(-16.2, 14.08, -10.0), -79.16],
+    [(-11.29, 15.02, -10.0), -79.16],
+    [(-10.34, 10.11, -10.0), -79.16],
+    [(-9.4, 5.2, -10.0), -79.16],
+    [(-8.46, 0.29, -10.0), -79.16],
+    [(-8.46, 0.29, -10.0), -94.16],
+    [(-8.46, 0.29, -10.0), -109.16],
+    [(-3.74, -1.35, -10.0), -109.16],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 16
+                        DistanceTraveled = 70.0
+                        AvgHeadingChange = 1.88
+
+                        # Reminder  
+                        - The target is ** Cart**, described as:  Geometric box shape, weathered gray metal surface with visible dents and rust, mounted on small caster wheels, likely used for storage or transport of tools or materials.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:16 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 17 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Cart,
+                        Size: mid(1.75*1=1.75 squares),
+                        Description: Geometric box shape, weathered gray metal surface with visible dents and rust, mounted on small caster wheels, likely used for storage or transport of tools or materials.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-58, 43]  
+                        **Y Range**: [min_y, max_y] = [-4, 97]
+
+                        # RGB Captions
+                        Front = multi-story buildings, peach-colored walls, red-tiled roofs; buildings form a courtyard; trees with yellow leaves in the foreground; courtyard has a water canal and a bridge  
+                        Left = building with balconies, orange walls, red-tiled roof; building is on the left side; yellow-leaved tree to the right of the building; canal runs alongside the building  
+                        Right = buildings with red-tiled roofs, beige walls; buildings are in the background; orange-leaved tree in the foreground; sky is clear and blue  
+                        Down = canal with a gondola, water is calm; gondola is in the center of the canal; orange-leaved tree in the foreground; buildings with red-tiled roofs surround the canal  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [30, 34, 42]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [60, 28, 18]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [38, 13, 15]]
+
+                        DownDepth:
+                        [[20, 18, 22], [20, 15, 15], [23, 15, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-17.14, 18.99, -10.0), -79.16],
+    [(-16.2, 14.08, -10.0), -79.16],
+    [(-11.29, 15.02, -10.0), -79.16],
+    [(-10.34, 10.11, -10.0), -79.16],
+    [(-9.4, 5.2, -10.0), -79.16],
+    [(-8.46, 0.29, -10.0), -79.16],
+    [(-8.46, 0.29, -10.0), -94.16],
+    [(-8.46, 0.29, -10.0), -109.16],
+    [(-3.74, -1.35, -10.0), -109.16],
+    [(-3.74, -1.35, -10.0), -124.16],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 17
+                        DistanceTraveled = 70.0
+                        AvgHeadingChange = 2.65
+
+                        # Reminder  
+                        - The target is ** Cart**, described as:  Geometric box shape, weathered gray metal surface with visible dents and rust, mounted on small caster wheels, likely used for storage or transport of tools or materials.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:17 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 18 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Cart,
+                        Size: mid(1.75*1=1.75 squares),
+                        Description: Geometric box shape, weathered gray metal surface with visible dents and rust, mounted on small caster wheels, likely used for storage or transport of tools or materials.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-58, 43]  
+                        **Y Range**: [min_y, max_y] = [-4, 97]
+
+                        # RGB Captions
+                        Front = multi-story buildings, beige and orange; buildings form a courtyard; trees with green leaves in the center  
+                        Left = canal with calm water; bridge over the canal; building with orange roof on the right; trees with yellow leaves on the left  
+                        Right = building with orange roof, multiple stories; tree with yellow leaves in the foreground; other buildings in the background  
+                        Down = gondola on the canal; canal has calm water; bridge with white railing; tree with yellow leaves in the foreground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [17, 34, 38]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 34, 19]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [40, 32, 12]]
+
+                        DownDepth:
+                        [[17, 18, 23], [20, 15, 15], [21, 15, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-16.2, 14.08, -10.0), -79.16],
+    [(-11.29, 15.02, -10.0), -79.16],
+    [(-10.34, 10.11, -10.0), -79.16],
+    [(-9.4, 5.2, -10.0), -79.16],
+    [(-8.46, 0.29, -10.0), -79.16],
+    [(-8.46, 0.29, -10.0), -94.16],
+    [(-8.46, 0.29, -10.0), -109.16],
+    [(-3.74, -1.35, -10.0), -109.16],
+    [(-3.74, -1.35, -10.0), -124.16],
+    [(-3.74, -1.35, -10.0), -139.16],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 18
+                        DistanceTraveled = 70.0
+                        AvgHeadingChange = 3.33
+
+                        # Reminder  
+                        - The target is ** Cart**, described as:  Geometric box shape, weathered gray metal surface with visible dents and rust, mounted on small caster wheels, likely used for storage or transport of tools or materials.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:18 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 19 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Cart,
+                        Size: mid(1.75*1=1.75 squares),
+                        Description: Geometric box shape, weathered gray metal surface with visible dents and rust, mounted on small caster wheels, likely used for storage or transport of tools or materials.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-58, 43]  
+                        **Y Range**: [min_y, max_y] = [-4, 97]
+
+                        # RGB Captions
+                        Front = building, beige facade, arched windows; building stands in the foreground; tree with yellow leaves to the right  
+                        Left = canal, waterway, calm surface; canal runs through the center; bridge over the canal; trees with yellow leaves on both sides  
+                        Right = tree, yellow leaves, medium-sized; tree is in the foreground; buildings with orange roofs in the background  
+                        Down = boat, long, wooden; boat is in the canal; tree with orange leaves in the foreground; bridge spans the canal  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [18, 32, 39]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [40, 43, 24]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [37, 35, 11]]
+
+                        DownDepth:
+                        [[18, 18, 18], [20, 15, 16], [20, 15, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-11.29, 15.02, -10.0), -79.16],
+    [(-10.34, 10.11, -10.0), -79.16],
+    [(-9.4, 5.2, -10.0), -79.16],
+    [(-8.46, 0.29, -10.0), -79.16],
+    [(-8.46, 0.29, -10.0), -94.16],
+    [(-8.46, 0.29, -10.0), -109.16],
+    [(-3.74, -1.35, -10.0), -109.16],
+    [(-3.74, -1.35, -10.0), -124.16],
+    [(-3.74, -1.35, -10.0), -139.16],
+    [(-3.74, -1.35, -10.0), -154.16],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 19
+                        DistanceTraveled = 70.0
+                        AvgHeadingChange = 3.95
+
+                        # Reminder  
+                        - The target is ** Cart**, described as:  Geometric box shape, weathered gray metal surface with visible dents and rust, mounted on small caster wheels, likely used for storage or transport of tools or materials.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:19 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 20 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Cart,
+                        Size: mid(1.75*1=1.75 squares),
+                        Description: Geometric box shape, weathered gray metal surface with visible dents and rust, mounted on small caster wheels, likely used for storage or transport of tools or materials.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-58, 43]  
+                        **Y Range**: [min_y, max_y] = [-4, 97]
+
+                        # RGB Captions
+                        Front = building, beige facade, arched windows; building in the foreground; clear sky above  
+                        Left = canal, calm water, reflective surface; bridge over canal; trees with yellow leaves on both sides; buildings in the background  
+                        Right = tree, yellow leaves, medium-sized; tree is in the foreground; buildings surrounding the canal; clear sky above  
+                        Down = boat, long shape, brown color; boat is on the canal; orange tree near the canal; buildings alongside the canal  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [15, 18, 41]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 37, 34]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [42, 34, 17]]
+
+                        DownDepth:
+                        [[17, 16, 22], [19, 15, 19], [20, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-10.34, 10.11, -10.0), -79.16],
+    [(-9.4, 5.2, -10.0), -79.16],
+    [(-8.46, 0.29, -10.0), -79.16],
+    [(-8.46, 0.29, -10.0), -94.16],
+    [(-8.46, 0.29, -10.0), -109.16],
+    [(-3.74, -1.35, -10.0), -109.16],
+    [(-3.74, -1.35, -10.0), -124.16],
+    [(-3.74, -1.35, -10.0), -139.16],
+    [(-3.74, -1.35, -10.0), -154.16],
+    [(-5.92, 3.15, -10.0), -154.16],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 20
+                        DistanceTraveled = 75.0
+                        AvgHeadingChange = 3.75
+
+                        # Reminder  
+                        - The target is ** Cart**, described as:  Geometric box shape, weathered gray metal surface with visible dents and rust, mounted on small caster wheels, likely used for storage or transport of tools or materials.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:20 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 21 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Cart,
+                        Size: mid(1.75*1=1.75 squares),
+                        Description: Geometric box shape, weathered gray metal surface with visible dents and rust, mounted on small caster wheels, likely used for storage or transport of tools or materials.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-58, 43]  
+                        **Y Range**: [min_y, max_y] = [-4, 97]
+
+                        # RGB Captions
+                        Front = building, orange facade, white balcony; building is in the foreground; balcony railing visible  
+                        Left = tree, yellow leaves, medium-sized; tree is in the foreground; canal running beside the tree  
+                        Right = canal, calm water, reflective surface; canal runs through the center; buildings on both sides  
+                        Down = bridge, stone structure, narrow pathway; bridge spans the canal; buildings adjacent to the bridge  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [8, 11, 31]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [40, 33, 11]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [38, 35, 42]]
+
+                        DownDepth:
+                        [[13, 13, 18], [19, 15, 19], [22, 16, 17]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-9.4, 5.2, -10.0), -79.16],
+    [(-8.46, 0.29, -10.0), -79.16],
+    [(-8.46, 0.29, -10.0), -94.16],
+    [(-8.46, 0.29, -10.0), -109.16],
+    [(-3.74, -1.35, -10.0), -109.16],
+    [(-3.74, -1.35, -10.0), -124.16],
+    [(-3.74, -1.35, -10.0), -139.16],
+    [(-3.74, -1.35, -10.0), -154.16],
+    [(-5.92, 3.15, -10.0), -154.16],
+    [(-10.42, 0.97, -10.0), -154.16],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 21
+                        DistanceTraveled = 80.0
+                        AvgHeadingChange = 3.57
+
+                        # Reminder  
+                        - The target is ** Cart**, described as:  Geometric box shape, weathered gray metal surface with visible dents and rust, mounted on small caster wheels, likely used for storage or transport of tools or materials.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:21 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 22 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Cart,
+                        Size: mid(1.75*1=1.75 squares),
+                        Description: Geometric box shape, weathered gray metal surface with visible dents and rust, mounted on small caster wheels, likely used for storage or transport of tools or materials.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-58, 43]  
+                        **Y Range**: [min_y, max_y] = [-4, 97]
+
+                        # RGB Captions
+                        Front = building, orange facade, arched door; door is in the foreground; balcony to the right  
+                        Left = tree, yellow leaves, near building; building has orange roof; tree is on the left  
+                        Right = canal, waterway, between buildings; foggy atmosphere; trees with yellow leaves on both sides  
+                        Down = canal, waterway, bridge over; aerial view; shadows of railing on tiled floor  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [3, 17, 100], [4, 5, 29]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 11, 6]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [35, 36, 52]]
+
+                        DownDepth:
+                        [[5, 4, 15], [15, 15, 19], [23, 19, 20]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-8.46, 0.29, -10.0), -79.16],
+    [(-8.46, 0.29, -10.0), -94.16],
+    [(-8.46, 0.29, -10.0), -109.16],
+    [(-3.74, -1.35, -10.0), -109.16],
+    [(-3.74, -1.35, -10.0), -124.16],
+    [(-3.74, -1.35, -10.0), -139.16],
+    [(-3.74, -1.35, -10.0), -154.16],
+    [(-5.92, 3.15, -10.0), -154.16],
+    [(-10.42, 0.97, -10.0), -154.16],
+    [(-14.92, -1.21, -10.0), -154.16],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 22
+                        DistanceTraveled = 85.0
+                        AvgHeadingChange = 3.41
+
+                        # Reminder  
+                        - The target is ** Cart**, described as:  Geometric box shape, weathered gray metal surface with visible dents and rust, mounted on small caster wheels, likely used for storage or transport of tools or materials.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:22 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

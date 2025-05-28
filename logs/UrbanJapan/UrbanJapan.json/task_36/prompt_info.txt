@@ -1,0 +1,189 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Flowerpot,
+                        Size:small(0.75*0.75=0.56 squares),
+                        Description:Short, cylindrical concrete pot with a grey exterior, filled with green leafy plants, suitable for outdoor or patio decor.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-13, 88]  
+                        **Y Range**: [min_y, max_y] = [47, 148]
+
+                        # RGB Captions
+                        Front = building, tall, illuminated; construction crane, large, metal; crane is in the background; car on the street, small, parked; person walking, distant, near the building  
+                        Left = building, dark, with lights; sign on the building, bright, rectangular; alleyway, narrow, between buildings; sidewalk, brick, adjacent to the building  
+                        Right = overpass, dark, with lights; building, tall, illuminated; overpass is in the foreground; street below, visible, with markings  
+                        Down = umbrella, open, colorful; crate, small, wooden; umbrella is above the crate; pavement, wet, tiled  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[23, 100, 100], [19, 100, 71], [20, 27, 35]]
+
+                        LeftDepth:
+                        [[100, 18, 9], [87, 20, 7], [34, 20, 9]]
+
+                        RightDepth:
+                        [[100, 100, 31], [100, 100, 100], [35, 26, 28]]
+
+                        DownDepth:
+                        [[12, 11, 13], [11, 9, 11], [14, 11, 14]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(37.02, 97.28, -6.6), 127.68],
+    [(37.02, 97.28, -6.6), 127.68],
+    [(37.02, 97.28, -6.6), 127.68],
+    [(37.02, 97.28, -6.6), 127.68],
+    [(37.02, 97.28, -6.6), 127.68],
+    [(37.02, 97.28, -6.6), 127.68],
+    [(37.02, 97.28, -6.6), 127.68],
+    [(37.02, 97.28, -6.6), 127.68],
+    [(37.02, 97.28, -6.6), 127.68],
+    [(37.02, 97.28, -6.6), 127.68],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Flowerpot**, described as: Short, cylindrical concrete pot with a grey exterior, filled with green leafy plants, suitable for outdoor or patio decor.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 1 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Flowerpot,
+                        Size:small(0.75*0.75=0.56 squares),
+                        Description:Short, cylindrical concrete pot with a grey exterior, filled with green leafy plants, suitable for outdoor or patio decor.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-13, 88]  
+                        **Y Range**: [min_y, max_y] = [47, 148]
+
+                        # RGB Captions
+                        Front = building, dark facade; sign with colorful lights; building in the background; umbrella on the ground  
+                        Left = wall, dark surface; illuminated sign reading LOVE; sign attached to the wall; sidewalk in the foreground  
+                        Right = bridge, dark structure; red light on top of a building; building in the background; bridge spanning across  
+                        Down = ground, wet surface; shopping bag with text; bag on the ground; light reflecting on the wet surface  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[4, 100, 100], [3, 100, 82], [4, 25, 33]]
+
+                        LeftDepth:
+                        [[100, 6, 2], [88, 5, 2], [36, 5, 2]]
+
+                        RightDepth:
+                        [[100, 100, 35], [100, 100, 35], [33, 26, 30]]
+
+                        DownDepth:
+                        [[4, 11, 13], [10, 9, 11], [14, 12, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(37.02, 97.28, -6.6), 127.68],
+    [(40.98, 100.33, -6.6), 127.68],
+    [(40.98, 100.33, -6.6), 127.68],
+    [(40.98, 100.33, -6.6), 127.68],
+    [(40.98, 100.33, -6.6), 127.68],
+    [(40.98, 100.33, -6.6), 127.68],
+    [(40.98, 100.33, -6.6), 127.68],
+    [(40.98, 100.33, -6.6), 127.68],
+    [(40.98, 100.33, -6.6), 127.68],
+    [(40.98, 100.33, -6.6), 127.68],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 1
+                        DistanceTraveled = 4.999999999999998
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Flowerpot**, described as: Short, cylindrical concrete pot with a grey exterior, filled with green leafy plants, suitable for outdoor or patio decor.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:1 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 2 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Flowerpot,
+                        Size:small(0.75*0.75=0.56 squares),
+                        Description:Short, cylindrical concrete pot with a grey exterior, filled with green leafy plants, suitable for outdoor or patio decor.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-13, 88]  
+                        **Y Range**: [min_y, max_y] = [47, 148]
+
+                        # RGB Captions
+                        Front = building, tall, illuminated; building is in the background; streetlight on the right  
+                        Left = building, dark, multiple stories; building is in the foreground; lights on in some windows  
+                        Right = train, black, moving; train is in the middle ground; bridge above the street  
+                        Down = umbrella, blue and yellow; umbrella is in the foreground; person standing under  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[1, 100, 100], [1, 100, 77], [1, 26, 35]]
+
+                        LeftDepth:
+                        [[45, 75, 81], [100, 100, 100], [35, 46, 64]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [35, 26, 32]]
+
+                        DownDepth:
+                        [[1, 11, 13], [2, 9, 11], [3, 11, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(37.02, 97.28, -6.6), 127.68],
+    [(40.98, 100.33, -6.6), 127.68],
+    [(37.92, 104.29, -6.6), 127.68],
+    [(37.92, 104.29, -6.6), 127.68],
+    [(37.92, 104.29, -6.6), 127.68],
+    [(37.92, 104.29, -6.6), 127.68],
+    [(37.92, 104.29, -6.6), 127.68],
+    [(37.92, 104.29, -6.6), 127.68],
+    [(37.92, 104.29, -6.6), 127.68],
+    [(37.92, 104.29, -6.6), 127.68],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 2
+                        DistanceTraveled = 10.000000000000004
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Flowerpot**, described as: Short, cylindrical concrete pot with a grey exterior, filled with green leafy plants, suitable for outdoor or patio decor.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:2 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

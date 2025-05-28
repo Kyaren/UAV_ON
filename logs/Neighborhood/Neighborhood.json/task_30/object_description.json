@@ -1,0 +1,35 @@
+{
+  "episode_id": "30",
+  "start_pose": {
+    "start_position": [
+      -181.7638777932712,
+      49.646398140893524,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.8670772842569426,
+      0.4981736475623787
+    ]
+  },
+  "info": {
+    "geodesic_distance": 65,
+    "euclidean_distance": 42.8316
+  },
+  "map_name": "ModularNeighborhood_test",
+  "true_name": "Table",
+  "object_name": "SM_prop_dining_table_a_42",
+  "pose": [
+    [
+      -204.89999389648438,
+      14.5,
+      1.0
+    ]
+  ],
+  "size": "small(1*1=1 squares)",
+  "description": "Geometric square form, bright red flat top surface with curved supporting legs, glossy finish indicating metal or coated plastic, used for placing items or dining.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

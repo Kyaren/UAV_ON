@@ -1,0 +1,2331 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:ParkBench,
+                        Size:small(1.5*0.5=0.75 squares),
+                        Description:Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-117, -16]  
+                        **Y Range**: [min_y, max_y] = [-42, 59]
+
+                        # RGB Captions
+                        Front = apartment buildings, tall, brown; snow-covered ground, white; bare branches in the foreground; sun low in the sky  
+                        Left = tree, large, with white flowers; building in the background, brown; branches in the foreground, bare  
+                        Right = snow-covered ground, white; trees, tall, with white foliage; fence along the path, wooden; sky clear, orange hue  
+                        Down = tree, bare branches, dark; snow on the ground, white; shadow of the tree on the snow  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [73, 56, 95]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [93, 71, 75]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [95, 67, 47]]
+
+                        DownDepth:
+                        [[36, 31, 37], [31, 24, 31], [36, 31, 32]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-66.64, 8.8, -10.0), -108.37],
+    [(-66.64, 8.8, -10.0), -108.37],
+    [(-66.64, 8.8, -10.0), -108.37],
+    [(-66.64, 8.8, -10.0), -108.37],
+    [(-66.64, 8.8, -10.0), -108.37],
+    [(-66.64, 8.8, -10.0), -108.37],
+    [(-66.64, 8.8, -10.0), -108.37],
+    [(-66.64, 8.8, -10.0), -108.37],
+    [(-66.64, 8.8, -10.0), -108.37],
+    [(-66.64, 8.8, -10.0), -108.37],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **ParkBench**, described as: Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 1 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:ParkBench,
+                        Size:small(1.5*0.5=0.75 squares),
+                        Description:Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-117, -16]  
+                        **Y Range**: [min_y, max_y] = [-42, 59]
+
+                        # RGB Captions
+                        Front = multiple apartment buildings, brown and beige; snow-covered roofs; buildings are in the foreground; sun low on the horizon  
+                        Left = flowering tree, white blossoms; tree is in the foreground; apartment buildings in the background; red car parked on the street  
+                        Right = snow-covered landscape, white and beige; trees with white foliage; road cleared of snow; road extends into the distance  
+                        Down = dry bush, dark branches; bush is in the foreground; snow-covered ground; shadow cast by an unseen object  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [73, 52, 93]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [94, 71, 69]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [94, 70, 50]]
+
+                        DownDepth:
+                        [[36, 31, 36], [31, 24, 31], [37, 31, 31]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-66.64, 8.8, -10.0), -108.37],
+    [(-68.21, 4.05, -10.0), -108.37],
+    [(-68.21, 4.05, -10.0), -108.37],
+    [(-68.21, 4.05, -10.0), -108.37],
+    [(-68.21, 4.05, -10.0), -108.37],
+    [(-68.21, 4.05, -10.0), -108.37],
+    [(-68.21, 4.05, -10.0), -108.37],
+    [(-68.21, 4.05, -10.0), -108.37],
+    [(-68.21, 4.05, -10.0), -108.37],
+    [(-68.21, 4.05, -10.0), -108.37],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 1
+                        DistanceTraveled = 5.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **ParkBench**, described as: Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:1 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 2 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:ParkBench,
+                        Size:small(1.5*0.5=0.75 squares),
+                        Description:Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-117, -16]  
+                        **Y Range**: [min_y, max_y] = [-42, 59]
+
+                        # RGB Captions
+                        Front = multi-story buildings, brown; buildings in the foreground; snow-covered ground; sun low in the sky  
+                        Left = birch trees, white bark; trees in the foreground; apartment buildings, brown; buildings in the background; snow-covered ground  
+                        Right = pine trees, green needles; trees scattered; snow-covered ground; road cleared of snow; road in the foreground  
+                        Down = bare tree branches, dark; tree in the foreground; snow-covered ground; street lamp, off; lamp post in the background  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [73, 47, 93]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [94, 73, 67]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [93, 70, 55]]
+
+                        DownDepth:
+                        [[34, 31, 36], [31, 24, 31], [37, 31, 32]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-66.64, 8.8, -10.0), -108.37],
+    [(-68.21, 4.05, -10.0), -108.37],
+    [(-69.79, -0.69, -10.0), -108.37],
+    [(-69.79, -0.69, -10.0), -108.37],
+    [(-69.79, -0.69, -10.0), -108.37],
+    [(-69.79, -0.69, -10.0), -108.37],
+    [(-69.79, -0.69, -10.0), -108.37],
+    [(-69.79, -0.69, -10.0), -108.37],
+    [(-69.79, -0.69, -10.0), -108.37],
+    [(-69.79, -0.69, -10.0), -108.37],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 2
+                        DistanceTraveled = 10.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **ParkBench**, described as: Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:2 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 3 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:ParkBench,
+                        Size:small(1.5*0.5=0.75 squares),
+                        Description:Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-117, -16]  
+                        **Y Range**: [min_y, max_y] = [-42, 59]
+
+                        # RGB Captions
+                        Front = tall buildings, brown; snow-covered roofs; buildings in the foreground; sun low on the horizon  
+                        Left = trees, white and green leaves; trees in the foreground; building with lit window; snow on the ground  
+                        Right = snowy landscape, clear sky; wooden fence; path cleared of snow; evergreen trees covered in snow  
+                        Down = street, snow-covered; shadows from buildings; bare tree branches; streetlight casting shadow  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [71, 71, 93]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [88, 71, 63]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [93, 71, 57]]
+
+                        DownDepth:
+                        [[35, 31, 37], [31, 24, 31], [37, 31, 33]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-66.64, 8.8, -10.0), -108.37],
+    [(-68.21, 4.05, -10.0), -108.37],
+    [(-69.79, -0.69, -10.0), -108.37],
+    [(-74.53, 0.88, -10.0), -108.37],
+    [(-74.53, 0.88, -10.0), -108.37],
+    [(-74.53, 0.88, -10.0), -108.37],
+    [(-74.53, 0.88, -10.0), -108.37],
+    [(-74.53, 0.88, -10.0), -108.37],
+    [(-74.53, 0.88, -10.0), -108.37],
+    [(-74.53, 0.88, -10.0), -108.37],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 3
+                        DistanceTraveled = 14.999999999999993
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **ParkBench**, described as: Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:3 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 4 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:ParkBench,
+                        Size:small(1.5*0.5=0.75 squares),
+                        Description:Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-117, -16]  
+                        **Y Range**: [min_y, max_y] = [-42, 59]
+
+                        # RGB Captions
+                        Front = multi-story buildings, brown; buildings in the foreground and background; snow-covered roofs  
+                        Left = birch trees, snow-covered branches; trees in the foreground; apartment building in the background  
+                        Right = snow-covered road, cleared path; road in the foreground; pine trees on both sides  
+                        Down = red car, parked; car on the left side of the road; street lamps hanging above  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [58, 72, 96]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [86, 70, 58]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [96, 71, 53]]
+
+                        DownDepth:
+                        [[38, 31, 37], [31, 24, 31], [37, 31, 34]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-66.64, 8.8, -10.0), -108.37],
+    [(-68.21, 4.05, -10.0), -108.37],
+    [(-69.79, -0.69, -10.0), -108.37],
+    [(-74.53, 0.88, -10.0), -108.37],
+    [(-79.28, 2.46, -10.0), -108.37],
+    [(-79.28, 2.46, -10.0), -108.37],
+    [(-79.28, 2.46, -10.0), -108.37],
+    [(-79.28, 2.46, -10.0), -108.37],
+    [(-79.28, 2.46, -10.0), -108.37],
+    [(-79.28, 2.46, -10.0), -108.37],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 4
+                        DistanceTraveled = 19.999999999999986
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **ParkBench**, described as: Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:4 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 5 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:ParkBench,
+                        Size:small(1.5*0.5=0.75 squares),
+                        Description:Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-117, -16]  
+                        **Y Range**: [min_y, max_y] = [-42, 59]
+
+                        # RGB Captions
+                        Front = multi-story buildings, brown; buildings in the foreground; snow-covered roofs; sun low on the horizon  
+                        Left = birch trees, white bark; trees in the foreground; apartment building, brick; building in the background; snow-covered ground  
+                        Right = snowy road, cleared path; road in the foreground; pine trees, green; trees on both sides; sunset sky  
+                        Down = street lamps, off; lamps above the road; red car, parked; car on the left side of the road; snow-covered ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [55, 70, 92]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [84, 70, 56]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [92, 71, 60]]
+
+                        DownDepth:
+                        [[34, 31, 36], [31, 24, 31], [37, 31, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-66.64, 8.8, -10.0), -108.37],
+    [(-68.21, 4.05, -10.0), -108.37],
+    [(-69.79, -0.69, -10.0), -108.37],
+    [(-74.53, 0.88, -10.0), -108.37],
+    [(-79.28, 2.46, -10.0), -108.37],
+    [(-80.86, -2.29, -10.0), -108.37],
+    [(-80.86, -2.29, -10.0), -108.37],
+    [(-80.86, -2.29, -10.0), -108.37],
+    [(-80.86, -2.29, -10.0), -108.37],
+    [(-80.86, -2.29, -10.0), -108.37],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 5
+                        DistanceTraveled = 24.999999999999986
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **ParkBench**, described as: Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:5 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 6 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:ParkBench,
+                        Size:small(1.5*0.5=0.75 squares),
+                        Description:Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-117, -16]  
+                        **Y Range**: [min_y, max_y] = [-42, 59]
+
+                        # RGB Captions
+                        Front = multi-story buildings, brown; buildings in the foreground; snow-covered roofs; sun low on the horizon  
+                        Left = trees with white flowers; trees in the foreground; multi-story building; snow-covered ground; sun low on the horizon  
+                        Right = snow-covered road; road in the foreground; multi-story buildings; snow-covered trees; sun low on the horizon  
+                        Down = red car; car on the road; multi-story buildings; snow-covered ground; street lamps  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [52, 69, 67]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [81, 68, 81]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [90, 71, 58]]
+
+                        DownDepth:
+                        [[37, 31, 34], [31, 24, 31], [38, 31, 37]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-66.64, 8.8, -10.0), -108.37],
+    [(-68.21, 4.05, -10.0), -108.37],
+    [(-69.79, -0.69, -10.0), -108.37],
+    [(-74.53, 0.88, -10.0), -108.37],
+    [(-79.28, 2.46, -10.0), -108.37],
+    [(-80.86, -2.29, -10.0), -108.37],
+    [(-85.6, -0.71, -10.0), -108.37],
+    [(-85.6, -0.71, -10.0), -108.37],
+    [(-85.6, -0.71, -10.0), -108.37],
+    [(-85.6, -0.71, -10.0), -108.37],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 6
+                        DistanceTraveled = 29.99999999999998
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **ParkBench**, described as: Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:6 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 7 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:ParkBench,
+                        Size:small(1.5*0.5=0.75 squares),
+                        Description:Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-117, -16]  
+                        **Y Range**: [min_y, max_y] = [-42, 59]
+
+                        # RGB Captions
+                        Front = high-rise buildings, brown; snow-covered roofs; buildings in the foreground; moon in the sky  
+                        Left = trees, snow-covered; buildings, brown; trees in the foreground; buildings in the background  
+                        Right = road, cleared of snow; snow-covered landscape; buildings on the left; trees on the right  
+                        Down = buildings, brown; snow-covered roofs; road with a car; streetlights along the road  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [62, 69, 76]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [87, 68, 81]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [84, 68, 65]]
+
+                        DownDepth:
+                        [[37, 31, 32], [31, 24, 31], [38, 31, 37]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-66.64, 8.8, -10.0), -108.37],
+    [(-68.21, 4.05, -10.0), -108.37],
+    [(-69.79, -0.69, -10.0), -108.37],
+    [(-74.53, 0.88, -10.0), -108.37],
+    [(-79.28, 2.46, -10.0), -108.37],
+    [(-80.86, -2.29, -10.0), -108.37],
+    [(-85.6, -0.71, -10.0), -108.37],
+    [(-87.18, -5.46, -10.0), -108.37],
+    [(-87.18, -5.46, -10.0), -108.37],
+    [(-87.18, -5.46, -10.0), -108.37],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 7
+                        DistanceTraveled = 34.99999999999998
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **ParkBench**, described as: Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:7 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 8 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:ParkBench,
+                        Size:small(1.5*0.5=0.75 squares),
+                        Description:Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-117, -16]  
+                        **Y Range**: [min_y, max_y] = [-42, 59]
+
+                        # RGB Captions
+                        Front = tall buildings, brown; buildings in the foreground; snow on the ground  
+                        Left = trees, covered in snow; trees in the background; tall buildings, brown; buildings to the right  
+                        Right = snow-covered road, long; road in the foreground; trees, covered in snow; trees on both sides of the road  
+                        Down = red car, small; car on the road; buildings, brown; buildings on both sides of the road  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [40, 69, 79]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [87, 69, 76]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [79, 71, 67]]
+
+                        DownDepth:
+                        [[33, 31, 32], [31, 24, 31], [37, 31, 37]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-66.64, 8.8, -10.0), -108.37],
+    [(-68.21, 4.05, -10.0), -108.37],
+    [(-69.79, -0.69, -10.0), -108.37],
+    [(-74.53, 0.88, -10.0), -108.37],
+    [(-79.28, 2.46, -10.0), -108.37],
+    [(-80.86, -2.29, -10.0), -108.37],
+    [(-85.6, -0.71, -10.0), -108.37],
+    [(-87.18, -5.46, -10.0), -108.37],
+    [(-88.75, -10.2, -10.0), -108.37],
+    [(-88.75, -10.2, -10.0), -108.37],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 8
+                        DistanceTraveled = 39.99999999999998
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **ParkBench**, described as: Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:8 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 9 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:ParkBench,
+                        Size:small(1.5*0.5=0.75 squares),
+                        Description:Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-117, -16]  
+                        **Y Range**: [min_y, max_y] = [-42, 59]
+
+                        # RGB Captions
+                        Front = tall buildings, brown facade; buildings in the foreground; snow-covered ground  
+                        Left = trees, covered in snow; trees on the left; apartment building on the right  
+                        Right = snowy road, long and straight; road in the center; small house on the left  
+                        Down = buildings, brown facade; buildings in the background; snowy street below  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [73, 73, 75]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [88, 71, 76]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [83, 71, 65]]
+
+                        DownDepth:
+                        [[32, 31, 23], [31, 24, 31], [36, 31, 37]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-66.64, 8.8, -10.0), -108.37],
+    [(-68.21, 4.05, -10.0), -108.37],
+    [(-69.79, -0.69, -10.0), -108.37],
+    [(-74.53, 0.88, -10.0), -108.37],
+    [(-79.28, 2.46, -10.0), -108.37],
+    [(-80.86, -2.29, -10.0), -108.37],
+    [(-85.6, -0.71, -10.0), -108.37],
+    [(-87.18, -5.46, -10.0), -108.37],
+    [(-88.75, -10.2, -10.0), -108.37],
+    [(-84.01, -11.78, -10.0), -108.37],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 9
+                        DistanceTraveled = 44.99999999999997
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **ParkBench**, described as: Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:9 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 10 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:ParkBench,
+                        Size:small(1.5*0.5=0.75 squares),
+                        Description:Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-117, -16]  
+                        **Y Range**: [min_y, max_y] = [-42, 59]
+
+                        # RGB Captions
+                        Front = tall buildings, brown; buildings in the foreground; snow-covered ground; sun low on the horizon  
+                        Left = trees, snow-covered; trees in the background; tall buildings, brown; buildings to the right; snow-covered ground  
+                        Right = road, long and straight; road in the foreground; snow-covered ground; small building, brown; building to the left; trees, snow-covered; trees in the distance  
+                        Down = buildings, brown; buildings in the background; road, narrow and straight; road in the foreground; snow-covered ground; streetlights, off  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [39, 69, 79]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [88, 68, 75]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [80, 72, 67]]
+
+                        DownDepth:
+                        [[32, 31, 32], [31, 24, 31], [37, 31, 37]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-68.21, 4.05, -10.0), -108.37],
+    [(-69.79, -0.69, -10.0), -108.37],
+    [(-74.53, 0.88, -10.0), -108.37],
+    [(-79.28, 2.46, -10.0), -108.37],
+    [(-80.86, -2.29, -10.0), -108.37],
+    [(-85.6, -0.71, -10.0), -108.37],
+    [(-87.18, -5.46, -10.0), -108.37],
+    [(-88.75, -10.2, -10.0), -108.37],
+    [(-84.01, -11.78, -10.0), -108.37],
+    [(-88.75, -10.2, -10.0), -108.37],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 10
+                        DistanceTraveled = 49.999999999999964
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **ParkBench**, described as: Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:10 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 11 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:ParkBench,
+                        Size:small(1.5*0.5=0.75 squares),
+                        Description:Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-117, -16]  
+                        **Y Range**: [min_y, max_y] = [-42, 59]
+
+                        # RGB Captions
+                        Front = multi-story buildings, brown facade; buildings in the foreground and background; snow-covered ground  
+                        Left = trees, covered in snow; trees are in the background; multi-story building to the right  
+                        Right = snow-covered road, long and straight; road stretches from the foreground into the distance; buildings on the left side  
+                        Down = person wearing orange clothing, standing on the street; person is in the foreground; buildings with snow-covered roofs  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [42, 67, 86]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [85, 71, 79]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [71, 68, 67]]
+
+                        DownDepth:
+                        [[37, 12, 35], [31, 23, 31], [37, 31, 37]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-69.79, -0.69, -10.0), -108.37],
+    [(-74.53, 0.88, -10.0), -108.37],
+    [(-79.28, 2.46, -10.0), -108.37],
+    [(-80.86, -2.29, -10.0), -108.37],
+    [(-85.6, -0.71, -10.0), -108.37],
+    [(-87.18, -5.46, -10.0), -108.37],
+    [(-88.75, -10.2, -10.0), -108.37],
+    [(-84.01, -11.78, -10.0), -108.37],
+    [(-88.75, -10.2, -10.0), -108.37],
+    [(-93.5, -8.62, -10.0), -108.37],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 11
+                        DistanceTraveled = 54.99999999999996
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **ParkBench**, described as: Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:11 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 12 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:ParkBench,
+                        Size:small(1.5*0.5=0.75 squares),
+                        Description:Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-117, -16]  
+                        **Y Range**: [min_y, max_y] = [-42, 59]
+
+                        # RGB Captions
+                        Front = multi-story buildings, brown facade; buildings in the foreground; snow-covered ground  
+                        Left = trees, covered in snow; trees in the background; building with solar panels on the roof  
+                        Right = road, cleared of snow; road in the foreground; snow-covered buildings and trees  
+                        Down = streetlight, turned off; streetlight hanging over the road; snow-covered buildings  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [39, 51, 92]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [80, 69, 79]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [48, 67, 66]]
+
+                        DownDepth:
+                        [[37, 31, 15], [30, 24, 31], [37, 31, 37]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-74.53, 0.88, -10.0), -108.37],
+    [(-79.28, 2.46, -10.0), -108.37],
+    [(-80.86, -2.29, -10.0), -108.37],
+    [(-85.6, -0.71, -10.0), -108.37],
+    [(-87.18, -5.46, -10.0), -108.37],
+    [(-88.75, -10.2, -10.0), -108.37],
+    [(-84.01, -11.78, -10.0), -108.37],
+    [(-88.75, -10.2, -10.0), -108.37],
+    [(-93.5, -8.62, -10.0), -108.37],
+    [(-98.24, -7.05, -10.0), -108.37],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 12
+                        DistanceTraveled = 59.99999999999995
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **ParkBench**, described as: Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:12 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 13 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:ParkBench,
+                        Size:small(1.5*0.5=0.75 squares),
+                        Description:Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-117, -16]  
+                        **Y Range**: [min_y, max_y] = [-42, 59]
+
+                        # RGB Captions
+                        Front = tall buildings, brown facade; buildings in the foreground; streetlight on the right  
+                        Left = trees, snow-covered branches; trees in the foreground; building with snow-covered roof; building in the background  
+                        Right = snow-covered road; road in the foreground; buildings with snow-covered roofs; buildings on both sides of the road  
+                        Down = alleyway between buildings; person wearing orange clothing; person standing in the alleyway  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [29, 100, 100], [33, 41, 91]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [80, 71, 75]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [91, 66, 65]]
+
+                        DownDepth:
+                        [[36, 31, 16], [28, 24, 12], [36, 31, 37]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-79.28, 2.46, -10.0), -108.37],
+    [(-80.86, -2.29, -10.0), -108.37],
+    [(-85.6, -0.71, -10.0), -108.37],
+    [(-87.18, -5.46, -10.0), -108.37],
+    [(-88.75, -10.2, -10.0), -108.37],
+    [(-84.01, -11.78, -10.0), -108.37],
+    [(-88.75, -10.2, -10.0), -108.37],
+    [(-93.5, -8.62, -10.0), -108.37],
+    [(-98.24, -7.05, -10.0), -108.37],
+    [(-99.82, -11.79, -10.0), -108.37],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 13
+                        DistanceTraveled = 64.99999999999994
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **ParkBench**, described as: Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:13 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 14 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:ParkBench,
+                        Size:small(1.5*0.5=0.75 squares),
+                        Description:Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-117, -16]  
+                        **Y Range**: [min_y, max_y] = [-42, 59]
+
+                        # RGB Captions
+                        Front = multiple high-rise buildings, brown exterior, dark windows; buildings stand close together; clear sky in the background  
+                        Left = several pine trees, snow-covered branches, green needles; trees are in the foreground; building with balconies on the right side  
+                        Right = small brick buildings, snow-covered roofs, multiple windows; buildings are in the foreground; snowy road in front of buildings; forested hill in the distant background  
+                        Down = tall buildings, brown exterior, dark windows; buildings surround a courtyard; car parked in the courtyard  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [27, 25, 100], [33, 31, 38]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [76, 68, 78]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [87, 68, 72]]
+
+                        DownDepth:
+                        [[35, 31, 32], [24, 24, 24], [31, 31, 37]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-80.86, -2.29, -10.0), -108.37],
+    [(-85.6, -0.71, -10.0), -108.37],
+    [(-87.18, -5.46, -10.0), -108.37],
+    [(-88.75, -10.2, -10.0), -108.37],
+    [(-84.01, -11.78, -10.0), -108.37],
+    [(-88.75, -10.2, -10.0), -108.37],
+    [(-93.5, -8.62, -10.0), -108.37],
+    [(-98.24, -7.05, -10.0), -108.37],
+    [(-99.82, -11.79, -10.0), -108.37],
+    [(-104.56, -10.22, -10.0), -108.37],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 14
+                        DistanceTraveled = 69.99999999999994
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **ParkBench**, described as: Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:14 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 15 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:ParkBench,
+                        Size:small(1.5*0.5=0.75 squares),
+                        Description:Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-117, -16]  
+                        **Y Range**: [min_y, max_y] = [-42, 59]
+
+                        # RGB Captions
+                        Front = high-rise buildings, dark facade; buildings in the foreground; windows illuminated  
+                        Left = trees, snow-covered branches; trees in the foreground; building partially visible on the right  
+                        Right = snow-covered roofs, brown buildings; buildings in the foreground; trees and hills in the background  
+                        Down = building rooftops, weathered appearance; rooftop in the foreground; car parked on the street  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [24, 25, 34], [31, 32, 39]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [71, 66, 80]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [80, 69, 75]]
+
+                        DownDepth:
+                        [[35, 31, 36], [13, 24, 27], [36, 31, 37]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-85.6, -0.71, -10.0), -108.37],
+    [(-87.18, -5.46, -10.0), -108.37],
+    [(-88.75, -10.2, -10.0), -108.37],
+    [(-84.01, -11.78, -10.0), -108.37],
+    [(-88.75, -10.2, -10.0), -108.37],
+    [(-93.5, -8.62, -10.0), -108.37],
+    [(-98.24, -7.05, -10.0), -108.37],
+    [(-99.82, -11.79, -10.0), -108.37],
+    [(-104.56, -10.22, -10.0), -108.37],
+    [(-109.31, -8.64, -10.0), -108.37],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 15
+                        DistanceTraveled = 74.99999999999994
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **ParkBench**, described as: Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:15 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 16 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:ParkBench,
+                        Size:small(1.5*0.5=0.75 squares),
+                        Description:Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-117, -16]  
+                        **Y Range**: [min_y, max_y] = [-42, 59]
+
+                        # RGB Captions
+                        Front = apartment buildings, tall, brown; buildings in the foreground; moon in the background  
+                        Left = trees, snow-covered, white and green; trees in the foreground; snowy ground  
+                        Right = buildings, snow-covered, brown; buildings in the foreground; trees in the background  
+                        Down = roof, weathered, gray; roof in the foreground; buildings surrounding  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 35], [71, 41, 40]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [65, 64, 80]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [76, 70, 79]]
+
+                        DownDepth:
+                        [[37, 31, 36], [31, 10, 30], [36, 13, 37]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-87.18, -5.46, -10.0), -108.37],
+    [(-88.75, -10.2, -10.0), -108.37],
+    [(-84.01, -11.78, -10.0), -108.37],
+    [(-88.75, -10.2, -10.0), -108.37],
+    [(-93.5, -8.62, -10.0), -108.37],
+    [(-98.24, -7.05, -10.0), -108.37],
+    [(-99.82, -11.79, -10.0), -108.37],
+    [(-104.56, -10.22, -10.0), -108.37],
+    [(-109.31, -8.64, -10.0), -108.37],
+    [(-114.05, -7.07, -10.0), -108.37],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 16
+                        DistanceTraveled = 79.99999999999994
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **ParkBench**, described as: Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:16 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 17 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:ParkBench,
+                        Size:small(1.5*0.5=0.75 squares),
+                        Description:Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-117, -16]  
+                        **Y Range**: [min_y, max_y] = [-42, 59]
+
+                        # RGB Captions
+                        Front = high-rise buildings, brown facade; buildings in the foreground; trees in the background  
+                        Left = trees with white flowers, tall trunks; trees are clustered; sandy ground  
+                        Right = high-rise buildings, brown facade; buildings in the foreground; snow-covered roofs; sun low on the horizon  
+                        Down = graffiti on the wall, faded colors; graffiti in the foreground; building walls in the background  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 25], [78, 31, 31]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [82, 56, 78]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [43, 69, 76]]
+
+                        DownDepth:
+                        [[37, 30, 35], [31, 10, 31], [36, 13, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-88.75, -10.2, -10.0), -108.37],
+    [(-84.01, -11.78, -10.0), -108.37],
+    [(-88.75, -10.2, -10.0), -108.37],
+    [(-93.5, -8.62, -10.0), -108.37],
+    [(-98.24, -7.05, -10.0), -108.37],
+    [(-99.82, -11.79, -10.0), -108.37],
+    [(-104.56, -10.22, -10.0), -108.37],
+    [(-109.31, -8.64, -10.0), -108.37],
+    [(-114.05, -7.07, -10.0), -108.37],
+    [(-114.05, -7.07, -10.0), -123.37],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 17
+                        DistanceTraveled = 79.99999999999994
+                        AvgHeadingChange = 0.88
+
+                        # Reminder  
+                        - The target is **ParkBench**, described as: Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:17 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 18 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:ParkBench,
+                        Size:small(1.5*0.5=0.75 squares),
+                        Description:Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-117, -16]  
+                        **Y Range**: [min_y, max_y] = [-42, 59]
+
+                        # RGB Captions
+                        Front = high-rise buildings, brown facade; trees with white flowers; buildings in the foreground; trees to the left  
+                        Left = cluster of trees, white flowers; bench on the ground; trees surround the bench; bench in the foreground  
+                        Right = high-rise buildings, brown facade; snow-covered roofs; sun low in the sky; buildings in the foreground  
+                        Down = building rooftop, snow patches; rectangular structure; rooftop in the foreground; surrounding buildings  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 22], [71, 69, 28]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [91, 62, 66]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [40, 67, 87]]
+
+                        DownDepth:
+                        [[37, 31, 33], [31, 10, 31], [37, 31, 34]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-84.01, -11.78, -10.0), -108.37],
+    [(-88.75, -10.2, -10.0), -108.37],
+    [(-93.5, -8.62, -10.0), -108.37],
+    [(-98.24, -7.05, -10.0), -108.37],
+    [(-99.82, -11.79, -10.0), -108.37],
+    [(-104.56, -10.22, -10.0), -108.37],
+    [(-109.31, -8.64, -10.0), -108.37],
+    [(-114.05, -7.07, -10.0), -108.37],
+    [(-114.05, -7.07, -10.0), -123.37],
+    [(-114.05, -7.07, -10.0), -138.37],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 18
+                        DistanceTraveled = 79.99999999999994
+                        AvgHeadingChange = 1.67
+
+                        # Reminder  
+                        - The target is **ParkBench**, described as: Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:18 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 19 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:ParkBench,
+                        Size:small(1.5*0.5=0.75 squares),
+                        Description:Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-117, -16]  
+                        **Y Range**: [min_y, max_y] = [-42, 59]
+
+                        # RGB Captions
+                        Front = tall tree, brown trunk, white flowers; tree is in the foreground; building with many windows, brown exterior; building stands in the background  
+                        Left = cluster of trees, white flowers, brown trunks; trees are in the foreground; snow-covered ground  
+                        Right = row of buildings, many windows, brown exteriors; buildings stand in the foreground; sun low in the sky, slightly left of center  
+                        Down = rectangular rooftop, weathered surface, two rectangular patches; rooftop is in the foreground; surrounding buildings, brown exteriors  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 22], [64, 68, 27]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [82, 71, 60]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [79, 70, 70]]
+
+                        DownDepth:
+                        [[36, 31, 33], [31, 24, 31], [37, 30, 31]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-88.75, -10.2, -10.0), -108.37],
+    [(-93.5, -8.62, -10.0), -108.37],
+    [(-98.24, -7.05, -10.0), -108.37],
+    [(-99.82, -11.79, -10.0), -108.37],
+    [(-104.56, -10.22, -10.0), -108.37],
+    [(-109.31, -8.64, -10.0), -108.37],
+    [(-114.05, -7.07, -10.0), -108.37],
+    [(-114.05, -7.07, -10.0), -123.37],
+    [(-114.05, -7.07, -10.0), -138.37],
+    [(-114.05, -7.07, -10.0), -153.37],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 19
+                        DistanceTraveled = 79.99999999999994
+                        AvgHeadingChange = 2.37
+
+                        # Reminder  
+                        - The target is **ParkBench**, described as: Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:19 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 20 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:ParkBench,
+                        Size:small(1.5*0.5=0.75 squares),
+                        Description:Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-117, -16]  
+                        **Y Range**: [min_y, max_y] = [-42, 59]
+
+                        # RGB Captions
+                        Front = tall tree, white flowers; tree is in the foreground; building with balconies, brown facade; building stands to the right  
+                        Left = cluster of trees, white flowers; trees are in the foreground; snow-covered ground; shadows cast by trees  
+                        Right = row of buildings, multiple stories; buildings stand side by side; sun setting behind the buildings; snow on rooftops  
+                        Down = square courtyard, snow-covered; courtyard is in the center; surrounding buildings, brown facades; light source from below  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [58, 71, 71]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [89, 71, 60]]
+
+                        RightDepth:
+                        [[100, 100, 100], [22, 100, 100], [27, 40, 80]]
+
+                        DownDepth:
+                        [[37, 31, 31], [31, 10, 31], [36, 31, 33]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-93.5, -8.62, -10.0), -108.37],
+    [(-98.24, -7.05, -10.0), -108.37],
+    [(-99.82, -11.79, -10.0), -108.37],
+    [(-104.56, -10.22, -10.0), -108.37],
+    [(-109.31, -8.64, -10.0), -108.37],
+    [(-114.05, -7.07, -10.0), -108.37],
+    [(-114.05, -7.07, -10.0), -123.37],
+    [(-114.05, -7.07, -10.0), -138.37],
+    [(-114.05, -7.07, -10.0), -153.37],
+    [(-114.05, -7.07, -10.0), -168.37],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 20
+                        DistanceTraveled = 79.99999999999994
+                        AvgHeadingChange = 3.0
+
+                        # Reminder  
+                        - The target is **ParkBench**, described as: Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:20 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 21 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:ParkBench,
+                        Size:small(1.5*0.5=0.75 squares),
+                        Description:Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-117, -16]  
+                        **Y Range**: [min_y, max_y] = [-42, 59]
+
+                        # RGB Captions
+                        Front = tall trees, snow-covered; building with balconies; trees in the foreground; building stands in the background  
+                        Left = snow-covered trees, tall; trees are in the foreground; sunlight casting shadows on the ground  
+                        Right = high-rise buildings, brown; sun setting behind the buildings; buildings stand close together  
+                        Down = square courtyard, snow-covered; courtyard is in the center; buildings surrounding the courtyard  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [60, 64, 75]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [92, 69, 69]]
+
+                        RightDepth:
+                        [[100, 100, 100], [22, 26, 100], [28, 33, 45]]
+
+                        DownDepth:
+                        [[37, 31, 34], [30, 10, 31], [36, 30, 37]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-98.24, -7.05, -10.0), -108.37],
+    [(-99.82, -11.79, -10.0), -108.37],
+    [(-104.56, -10.22, -10.0), -108.37],
+    [(-109.31, -8.64, -10.0), -108.37],
+    [(-114.05, -7.07, -10.0), -108.37],
+    [(-114.05, -7.07, -10.0), -123.37],
+    [(-114.05, -7.07, -10.0), -138.37],
+    [(-114.05, -7.07, -10.0), -153.37],
+    [(-114.05, -7.07, -10.0), -168.37],
+    [(-114.05, -7.07, -10.0), 176.63],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 21
+                        DistanceTraveled = 79.99999999999994
+                        AvgHeadingChange = 3.57
+
+                        # Reminder  
+                        - The target is **ParkBench**, described as: Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:21 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 22 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:ParkBench,
+                        Size:small(1.5*0.5=0.75 squares),
+                        Description:Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-117, -16]  
+                        **Y Range**: [min_y, max_y] = [-42, 59]
+
+                        # RGB Captions
+                        Front = pine trees, snow-covered; trees are in the foreground; snowy ground  
+                        Left = pine trees, snow-covered; trees are in the foreground; snowy ground  
+                        Right = high-rise building, brown facade; building stands in the background; multiple windows  
+                        Down = building roof, weathered surface; roof is in the foreground; chimney on the left  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [69, 60, 84]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [80, 71, 76]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 22, 35], [77, 29, 40]]
+
+                        DownDepth:
+                        [[36, 31, 37], [13, 10, 30], [37, 28, 37]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-99.82, -11.79, -10.0), -108.37],
+    [(-104.56, -10.22, -10.0), -108.37],
+    [(-109.31, -8.64, -10.0), -108.37],
+    [(-114.05, -7.07, -10.0), -108.37],
+    [(-114.05, -7.07, -10.0), -123.37],
+    [(-114.05, -7.07, -10.0), -138.37],
+    [(-114.05, -7.07, -10.0), -153.37],
+    [(-114.05, -7.07, -10.0), -168.37],
+    [(-114.05, -7.07, -10.0), 176.63],
+    [(-114.05, -7.07, -10.0), 161.63],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 22
+                        DistanceTraveled = 79.99999999999994
+                        AvgHeadingChange = 4.09
+
+                        # Reminder  
+                        - The target is **ParkBench**, described as: Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:22 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 23 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:ParkBench,
+                        Size:small(1.5*0.5=0.75 squares),
+                        Description:Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-117, -16]  
+                        **Y Range**: [min_y, max_y] = [-42, 59]
+
+                        # RGB Captions
+                        Front = pine trees, snow-covered; trees are in the foreground; snow on the ground  
+                        Left = pine trees, snow-covered; trees are in the foreground; snow on the ground  
+                        Right = apartment buildings, high-rise, brick; buildings are in the foreground; clear sky in the background  
+                        Down = building roof, weathered, gray; roof is in the foreground; chimney on the side  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [70, 56, 84]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [80, 70, 76]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [85, 33, 44]]
+
+                        DownDepth:
+                        [[37, 31, 37], [31, 9, 13], [36, 30, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-104.56, -10.22, -10.0), -108.37],
+    [(-109.31, -8.64, -10.0), -108.37],
+    [(-114.05, -7.07, -10.0), -108.37],
+    [(-114.05, -7.07, -10.0), -123.37],
+    [(-114.05, -7.07, -10.0), -138.37],
+    [(-114.05, -7.07, -10.0), -153.37],
+    [(-114.05, -7.07, -10.0), -168.37],
+    [(-114.05, -7.07, -10.0), 176.63],
+    [(-114.05, -7.07, -10.0), 161.63],
+    [(-112.48, -2.32, -10.0), 161.63],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 23
+                        DistanceTraveled = 84.99999999999994
+                        AvgHeadingChange = 3.91
+
+                        # Reminder  
+                        - The target is **ParkBench**, described as: Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:23 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 24 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:ParkBench,
+                        Size:small(1.5*0.5=0.75 squares),
+                        Description:Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-117, -16]  
+                        **Y Range**: [min_y, max_y] = [-42, 59]
+
+                        # RGB Captions
+                        Front = trees, tall, snow-covered; trees are in the foreground and background; snow on the ground  
+                        Left = trees, tall, snow-covered; trees are in the foreground and background; snow on the ground  
+                        Right = buildings, high-rise, brown; buildings are in a row; snow on the ground  
+                        Down = street, narrow, dark; car parked on the side; building with snow on the roof; streetlight on the left  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [69, 59, 80]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [81, 70, 74]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [84, 40, 48]]
+
+                        DownDepth:
+                        [[36, 31, 37], [31, 23, 12], [36, 30, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-109.31, -8.64, -10.0), -108.37],
+    [(-114.05, -7.07, -10.0), -108.37],
+    [(-114.05, -7.07, -10.0), -123.37],
+    [(-114.05, -7.07, -10.0), -138.37],
+    [(-114.05, -7.07, -10.0), -153.37],
+    [(-114.05, -7.07, -10.0), -168.37],
+    [(-114.05, -7.07, -10.0), 176.63],
+    [(-114.05, -7.07, -10.0), 161.63],
+    [(-112.48, -2.32, -10.0), 161.63],
+    [(-110.9, 2.42, -10.0), 161.63],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 24
+                        DistanceTraveled = 89.99999999999994
+                        AvgHeadingChange = 3.75
+
+                        # Reminder  
+                        - The target is **ParkBench**, described as: Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:24 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 25 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:ParkBench,
+                        Size:small(1.5*0.5=0.75 squares),
+                        Description:Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-117, -16]  
+                        **Y Range**: [min_y, max_y] = [-42, 59]
+
+                        # RGB Captions
+                        Front = pine trees, tall, brown and green; trees are in the foreground and background; snow-covered ground  
+                        Left = pine trees, tall, brown and green; trees are in the foreground and background; snow-covered ground  
+                        Right = apartment buildings, high-rise, brown; buildings are in the background; tree branches in the foreground  
+                        Down = street, narrow, dark; streetlight on the left; building rooftops in the foreground and background  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [64, 56, 82]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [84, 71, 73]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [81, 72, 49]]
+
+                        DownDepth:
+                        [[37, 31, 37], [31, 24, 31], [36, 30, 15]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-114.05, -7.07, -10.0), -108.37],
+    [(-114.05, -7.07, -10.0), -123.37],
+    [(-114.05, -7.07, -10.0), -138.37],
+    [(-114.05, -7.07, -10.0), -153.37],
+    [(-114.05, -7.07, -10.0), -168.37],
+    [(-114.05, -7.07, -10.0), 176.63],
+    [(-114.05, -7.07, -10.0), 161.63],
+    [(-112.48, -2.32, -10.0), 161.63],
+    [(-110.9, 2.42, -10.0), 161.63],
+    [(-115.65, 4.0, -10.0), 161.63],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 25
+                        DistanceTraveled = 94.99999999999994
+                        AvgHeadingChange = 3.6
+
+                        # Reminder  
+                        - The target is **ParkBench**, described as: Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:25 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 26 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:ParkBench,
+                        Size:small(1.5*0.5=0.75 squares),
+                        Description:Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-117, -16]  
+                        **Y Range**: [min_y, max_y] = [-42, 59]
+
+                        # RGB Captions
+                        Front = trees, yellow and brown leaves; trees are in the foreground; snow-covered ground  
+                        Left = trees, yellow and brown leaves; trees are in the foreground; snow-covered ground  
+                        Right = buildings, tall and brown; buildings are in the background; tree with yellow and brown leaves in the foreground  
+                        Down = street, narrow and dark; street is in the foreground; car on the street; building with snow patches in the background  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [78, 52, 66]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [76, 71, 80]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [73, 70, 40]]
+
+                        DownDepth:
+                        [[37, 31, 37], [31, 24, 31], [36, 30, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-114.05, -7.07, -10.0), -123.37],
+    [(-114.05, -7.07, -10.0), -138.37],
+    [(-114.05, -7.07, -10.0), -153.37],
+    [(-114.05, -7.07, -10.0), -168.37],
+    [(-114.05, -7.07, -10.0), 176.63],
+    [(-114.05, -7.07, -10.0), 161.63],
+    [(-112.48, -2.32, -10.0), 161.63],
+    [(-110.9, 2.42, -10.0), 161.63],
+    [(-115.65, 4.0, -10.0), 161.63],
+    [(-115.65, 4.0, -10.0), 146.63],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 26
+                        DistanceTraveled = 94.99999999999994
+                        AvgHeadingChange = 4.04
+
+                        # Reminder  
+                        - The target is **ParkBench**, described as: Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:26 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 27 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:ParkBench,
+                        Size:small(1.5*0.5=0.75 squares),
+                        Description:Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-117, -16]  
+                        **Y Range**: [min_y, max_y] = [-42, 59]
+
+                        # RGB Captions
+                        Front = trees, white flowers, brown trunks; trees are in the foreground; snow-covered ground  
+                        Left = trees, white flowers, brown trunks; trees are in the foreground; snow-covered ground  
+                        Right = apartment buildings, brown facade, multiple windows; buildings are in the background; tree with white flowers in the foreground  
+                        Down = street, dark asphalt, yellow lines; street is in the foreground; tree with green leaves in the background  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [92, 61, 58]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [81, 70, 89]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 31], [66, 69, 36]]
+
+                        DownDepth:
+                        [[37, 31, 36], [31, 24, 31], [36, 12, 32]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-114.05, -7.07, -10.0), -138.37],
+    [(-114.05, -7.07, -10.0), -153.37],
+    [(-114.05, -7.07, -10.0), -168.37],
+    [(-114.05, -7.07, -10.0), 176.63],
+    [(-114.05, -7.07, -10.0), 161.63],
+    [(-112.48, -2.32, -10.0), 161.63],
+    [(-110.9, 2.42, -10.0), 161.63],
+    [(-115.65, 4.0, -10.0), 161.63],
+    [(-115.65, 4.0, -10.0), 146.63],
+    [(-115.65, 4.0, -10.0), 131.63],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 27
+                        DistanceTraveled = 94.99999999999994
+                        AvgHeadingChange = 4.44
+
+                        # Reminder  
+                        - The target is **ParkBench**, described as: Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:27 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 28 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:ParkBench,
+                        Size:small(1.5*0.5=0.75 squares),
+                        Description:Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-117, -16]  
+                        **Y Range**: [min_y, max_y] = [-42, 59]
+
+                        # RGB Captions
+                        Front = trees, snow-covered; trees are in the foreground; snow on the ground  
+                        Left = road, black asphalt; trees, snow-covered; road is in the foreground; snow on the ground  
+                        Right = buildings, multi-story; trees, snow-covered; buildings are in the background; snow on the ground  
+                        Down = roof, gray shingles; tree, partially visible; roof is in the foreground; shadow on the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 91], [91, 67, 53]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [91, 71, 71]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [58, 71, 76]]
+
+                        DownDepth:
+                        [[37, 31, 36], [30, 24, 31], [36, 22, 35]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-114.05, -7.07, -10.0), -153.37],
+    [(-114.05, -7.07, -10.0), -168.37],
+    [(-114.05, -7.07, -10.0), 176.63],
+    [(-114.05, -7.07, -10.0), 161.63],
+    [(-112.48, -2.32, -10.0), 161.63],
+    [(-110.9, 2.42, -10.0), 161.63],
+    [(-115.65, 4.0, -10.0), 161.63],
+    [(-115.65, 4.0, -10.0), 146.63],
+    [(-115.65, 4.0, -10.0), 131.63],
+    [(-115.65, 4.0, -10.0), 116.63],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 28
+                        DistanceTraveled = 94.99999999999994
+                        AvgHeadingChange = 4.82
+
+                        # Reminder  
+                        - The target is **ParkBench**, described as: Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:28 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 29 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:ParkBench,
+                        Size:small(1.5*0.5=0.75 squares),
+                        Description:Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-117, -16]  
+                        **Y Range**: [min_y, max_y] = [-42, 59]
+
+                        # RGB Captions
+                        Front = trees, snow-covered; trees in the foreground; snowy ground  
+                        Left = trees, snow-covered; trees in the foreground; snowy ground  
+                        Right = trees, snow-covered; buildings, multi-story; buildings in the background; snowy ground  
+                        Down = street, snow-covered; car, parked; building, corner; lamp post near the building  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 93], [75, 67, 55]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [91, 69, 71]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [61, 73, 76]]
+
+                        DownDepth:
+                        [[36, 30, 36], [31, 23, 31], [36, 31, 32]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-114.05, -7.07, -10.0), -168.37],
+    [(-114.05, -7.07, -10.0), 176.63],
+    [(-114.05, -7.07, -10.0), 161.63],
+    [(-112.48, -2.32, -10.0), 161.63],
+    [(-110.9, 2.42, -10.0), 161.63],
+    [(-115.65, 4.0, -10.0), 161.63],
+    [(-115.65, 4.0, -10.0), 146.63],
+    [(-115.65, 4.0, -10.0), 131.63],
+    [(-115.65, 4.0, -10.0), 116.63],
+    [(-111.18, 6.24, -10.0), 116.63],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 29
+                        DistanceTraveled = 99.99999999999994
+                        AvgHeadingChange = 4.66
+
+                        # Reminder  
+                        - The target is **ParkBench**, described as: Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:29 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 30 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:ParkBench,
+                        Size:small(1.5*0.5=0.75 squares),
+                        Description:Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-117, -16]  
+                        **Y Range**: [min_y, max_y] = [-42, 59]
+
+                        # RGB Captions
+                        Front = trees, snow-covered, tall; trees are in the foreground and background; snow on the ground  
+                        Left = trees, snow-covered, tall; trees are in the foreground and background; snow on the ground  
+                        Right = trees, snow-covered, tall; buildings, multi-story, brick; trees are in the foreground; buildings in the background  
+                        Down = road, cleared of snow, long; car, small, red; building, multi-story, brick; road is in the foreground; building to the right  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 86], [89, 68, 51]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [93, 72, 75]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [56, 69, 77]]
+
+                        DownDepth:
+                        [[37, 31, 35], [31, 24, 31], [36, 31, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-114.05, -7.07, -10.0), 176.63],
+    [(-114.05, -7.07, -10.0), 161.63],
+    [(-112.48, -2.32, -10.0), 161.63],
+    [(-110.9, 2.42, -10.0), 161.63],
+    [(-115.65, 4.0, -10.0), 161.63],
+    [(-115.65, 4.0, -10.0), 146.63],
+    [(-115.65, 4.0, -10.0), 131.63],
+    [(-115.65, 4.0, -10.0), 116.63],
+    [(-111.18, 6.24, -10.0), 116.63],
+    [(-113.42, 10.71, -10.0), 116.63],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 30
+                        DistanceTraveled = 104.99999999999994
+                        AvgHeadingChange = 4.5
+
+                        # Reminder  
+                        - The target is **ParkBench**, described as: Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:30 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 31 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:ParkBench,
+                        Size:small(1.5*0.5=0.75 squares),
+                        Description:Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-117, -16]  
+                        **Y Range**: [min_y, max_y] = [-42, 59]
+
+                        # RGB Captions
+                        Front = pine trees, snow-covered; trees are in the foreground and background; snow on the ground  
+                        Left = pine trees, snow-covered; trees are in the foreground and background; snow on the ground  
+                        Right = pine trees, snow-covered; trees are in the foreground and background; snow on the ground; building structure to the right  
+                        Down = building with solar panels, dark-colored; solar panels on the roof; shadows cast by nearby trees  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 85], [87, 65, 48]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [89, 67, 82]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [54, 67, 87]]
+
+                        DownDepth:
+                        [[36, 30, 35], [30, 24, 31], [36, 31, 37]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-114.05, -7.07, -10.0), 161.63],
+    [(-112.48, -2.32, -10.0), 161.63],
+    [(-110.9, 2.42, -10.0), 161.63],
+    [(-115.65, 4.0, -10.0), 161.63],
+    [(-115.65, 4.0, -10.0), 146.63],
+    [(-115.65, 4.0, -10.0), 131.63],
+    [(-115.65, 4.0, -10.0), 116.63],
+    [(-111.18, 6.24, -10.0), 116.63],
+    [(-113.42, 10.71, -10.0), 116.63],
+    [(-115.66, 15.18, -10.0), 116.63],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 31
+                        DistanceTraveled = 109.99999999999994
+                        AvgHeadingChange = 4.35
+
+                        # Reminder  
+                        - The target is **ParkBench**, described as: Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:31 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 32 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:ParkBench,
+                        Size:small(1.5*0.5=0.75 squares),
+                        Description:Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-117, -16]  
+                        **Y Range**: [min_y, max_y] = [-42, 59]
+
+                        # RGB Captions
+                        Front = trees, snow-covered; trees in the foreground; shadows cast on the ground  
+                        Left = trees, snow-covered; building partially visible; shadows cast on the ground  
+                        Right = trees, snow-covered; trees in the foreground; shadows cast on the ground  
+                        Down = road, covered with snow; car parked; shadows cast on the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [73, 70, 53]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [91, 71, 74]]
+
+                        RightDepth:
+                        [[100, 100, 100], [91, 100, 100], [47, 62, 93]]
+
+                        DownDepth:
+                        [[36, 31, 35], [30, 23, 31], [36, 30, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-112.48, -2.32, -10.0), 161.63],
+    [(-110.9, 2.42, -10.0), 161.63],
+    [(-115.65, 4.0, -10.0), 161.63],
+    [(-115.65, 4.0, -10.0), 146.63],
+    [(-115.65, 4.0, -10.0), 131.63],
+    [(-115.65, 4.0, -10.0), 116.63],
+    [(-111.18, 6.24, -10.0), 116.63],
+    [(-113.42, 10.71, -10.0), 116.63],
+    [(-115.66, 15.18, -10.0), 116.63],
+    [(-115.66, 15.18, -10.0), 101.63],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 32
+                        DistanceTraveled = 109.99999999999994
+                        AvgHeadingChange = 4.69
+
+                        # Reminder  
+                        - The target is **ParkBench**, described as: Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:32 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 33 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:ParkBench,
+                        Size:small(1.5*0.5=0.75 squares),
+                        Description:Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-117, -16]  
+                        **Y Range**: [min_y, max_y] = [-42, 59]
+
+                        # RGB Captions
+                        Front = trees, snow-covered branches; trees in the foreground; snow on the ground  
+                        Left = buildings, snow-covered roofs; trees with bare branches; buildings in the background  
+                        Right = trees, snow-covered branches; trees scattered across the scene; snow on the ground  
+                        Down = road, snow-covered surface; road in the foreground; shadows of trees on the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [72, 67, 62]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [78, 70, 91]]
+
+                        RightDepth:
+                        [[100, 100, 100], [91, 100, 100], [51, 58, 85]]
+
+                        DownDepth:
+                        [[36, 31, 36], [30, 23, 31], [36, 31, 35]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-110.9, 2.42, -10.0), 161.63],
+    [(-115.65, 4.0, -10.0), 161.63],
+    [(-115.65, 4.0, -10.0), 146.63],
+    [(-115.65, 4.0, -10.0), 131.63],
+    [(-115.65, 4.0, -10.0), 116.63],
+    [(-111.18, 6.24, -10.0), 116.63],
+    [(-113.42, 10.71, -10.0), 116.63],
+    [(-115.66, 15.18, -10.0), 116.63],
+    [(-115.66, 15.18, -10.0), 101.63],
+    [(-115.66, 15.18, -10.0), 86.63],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 33
+                        DistanceTraveled = 109.99999999999994
+                        AvgHeadingChange = 5.0
+
+                        # Reminder  
+                        - The target is **ParkBench**, described as: Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:33 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 34 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:ParkBench,
+                        Size:small(1.5*0.5=0.75 squares),
+                        Description:Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-117, -16]  
+                        **Y Range**: [min_y, max_y] = [-42, 59]
+
+                        # RGB Captions
+                        Front = trees, snow-covered branches; trees in the foreground and background; snow on the ground  
+                        Left = buildings, distant structures; trees with bare branches in the foreground; snow-covered ground  
+                        Right = snow-covered ground, scattered trees; trees with sparse foliage; shadows cast by trees  
+                        Down = branch shadows on the snow; solar panel on the ground; tree branches hanging above  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [71, 69, 61]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [82, 70, 88]]
+
+                        RightDepth:
+                        [[100, 100, 100], [90, 100, 100], [49, 55, 77]]
+
+                        DownDepth:
+                        [[36, 31, 35], [30, 23, 31], [36, 31, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-115.65, 4.0, -10.0), 161.63],
+    [(-115.65, 4.0, -10.0), 146.63],
+    [(-115.65, 4.0, -10.0), 131.63],
+    [(-115.65, 4.0, -10.0), 116.63],
+    [(-111.18, 6.24, -10.0), 116.63],
+    [(-113.42, 10.71, -10.0), 116.63],
+    [(-115.66, 15.18, -10.0), 116.63],
+    [(-115.66, 15.18, -10.0), 101.63],
+    [(-115.66, 15.18, -10.0), 86.63],
+    [(-115.37, 20.17, -10.0), 86.63],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 34
+                        DistanceTraveled = 114.99999999999994
+                        AvgHeadingChange = 4.85
+
+                        # Reminder  
+                        - The target is **ParkBench**, described as: Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:34 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 35 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:ParkBench,
+                        Size:small(1.5*0.5=0.75 squares),
+                        Description:Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-117, -16]  
+                        **Y Range**: [min_y, max_y] = [-42, 59]
+
+                        # RGB Captions
+                        Front = trees, tall, leafy; trees are in the foreground and background; shadows cast on the ground  
+                        Left = tree branches, bare, brown; branches are in the foreground; shadows cast on the ground  
+                        Right = pine trees, tall, green; trees are scattered across the landscape; snow covers the ground  
+                        Down = solar panel, rectangular, dark; panel is on the ground; tree branches in the foreground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [71, 67, 59]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [84, 70, 78]]
+
+                        RightDepth:
+                        [[100, 100, 100], [89, 100, 100], [48, 52, 83]]
+
+                        DownDepth:
+                        [[36, 31, 35], [31, 23, 31], [36, 31, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-115.65, 4.0, -10.0), 146.63],
+    [(-115.65, 4.0, -10.0), 131.63],
+    [(-115.65, 4.0, -10.0), 116.63],
+    [(-111.18, 6.24, -10.0), 116.63],
+    [(-113.42, 10.71, -10.0), 116.63],
+    [(-115.66, 15.18, -10.0), 116.63],
+    [(-115.66, 15.18, -10.0), 101.63],
+    [(-115.66, 15.18, -10.0), 86.63],
+    [(-115.37, 20.17, -10.0), 86.63],
+    [(-115.07, 25.16, -10.0), 86.63],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 35
+                        DistanceTraveled = 119.99999999999994
+                        AvgHeadingChange = 4.71
+
+                        # Reminder  
+                        - The target is **ParkBench**, described as: Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:35 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 36 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:ParkBench,
+                        Size:small(1.5*0.5=0.75 squares),
+                        Description:Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-117, -16]  
+                        **Y Range**: [min_y, max_y] = [-42, 59]
+
+                        # RGB Captions
+                        Front = trees, snow-covered branches; trees in the foreground; shadows cast on the ground  
+                        Left = trees, snow-covered branches; tree trunks and branches in the foreground; sunset sky in the background  
+                        Right = trees, snow-covered branches; trees scattered across the landscape; green trees in the distance  
+                        Down = tree branches, snow-covered; shadow of a person on the ground; bench in the foreground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [73, 67, 57]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [79, 69, 69]]
+
+                        RightDepth:
+                        [[100, 100, 100], [89, 100, 100], [47, 49, 83]]
+
+                        DownDepth:
+                        [[36, 31, 35], [31, 23, 30], [36, 31, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-115.65, 4.0, -10.0), 131.63],
+    [(-115.65, 4.0, -10.0), 116.63],
+    [(-111.18, 6.24, -10.0), 116.63],
+    [(-113.42, 10.71, -10.0), 116.63],
+    [(-115.66, 15.18, -10.0), 116.63],
+    [(-115.66, 15.18, -10.0), 101.63],
+    [(-115.66, 15.18, -10.0), 86.63],
+    [(-115.37, 20.17, -10.0), 86.63],
+    [(-115.07, 25.16, -10.0), 86.63],
+    [(-114.78, 30.15, -10.0), 86.63],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 36
+                        DistanceTraveled = 124.99999999999994
+                        AvgHeadingChange = 4.58
+
+                        # Reminder  
+                        - The target is **ParkBench**, described as: Rectangular seating structure with backrest, dark wood slats and curved metal legs, designed for outdoor public use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:36 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

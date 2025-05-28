@@ -1,0 +1,35 @@
+{
+  "episode_id": "60",
+  "start_pose": {
+    "start_position": [
+      -43.81961566157643,
+      160.34964395784627,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.26892891239519756,
+      -0.9631600282808336
+    ]
+  },
+  "info": {
+    "geodesic_distance": 35,
+    "euclidean_distance": 27.2311
+  },
+  "map_name": "WinterTown_test",
+  "true_name": " WoodTower",
+  "object_name": "SM_Wood_Structure_112",
+  "pose": [
+    [
+      -40.592742919921875,
+      187.20726013183594,
+      -3.87127423286438
+    ]
+  ],
+  "size": " big(8.5*8.5=72.25 squares)",
+  "description": " Geometric elevated structure, dark wood planks and support braces, vertical stilts with cross-bracing, used for surveillance or lookout purposes.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

@@ -1,0 +1,1827 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:StreetClock,
+                        Size:small(1*1=1 square),
+                        Description:Geometric vertical structure, black metallic post with a round analog clock face, mounted on a square red-brick base, ornate decorative top indicating traditional public timekeeping function.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-360, -259]  
+                        **Y Range**: [min_y, max_y] = [-199, -98]
+
+                        # RGB Captions
+                        Front = green trees, dense foliage; trees are in the background; sunlight casting shadows on grass  
+                        Left = green trees, dense foliage; trees are in the foreground and background; green bushes along a path  
+                        Right = church building, tall steeple; church is in the foreground; wooden buildings nearby; trees in the background  
+                        Down = tree shadow, long and distinct; shadow is on the grass; tree with green leaves; bush with green leaves  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [50, 38, 18]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [43, 37, 50]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [39, 36, 36]]
+
+                        DownDepth:
+                        [[19, 16, 18], [16, 12, 16], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-309.62, -148.6, -10.0), -71.56],
+    [(-309.62, -148.6, -10.0), -71.56],
+    [(-309.62, -148.6, -10.0), -71.56],
+    [(-309.62, -148.6, -10.0), -71.56],
+    [(-309.62, -148.6, -10.0), -71.56],
+    [(-309.62, -148.6, -10.0), -71.56],
+    [(-309.62, -148.6, -10.0), -71.56],
+    [(-309.62, -148.6, -10.0), -71.56],
+    [(-309.62, -148.6, -10.0), -71.56],
+    [(-309.62, -148.6, -10.0), -71.56],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **StreetClock**, described as: Geometric vertical structure, black metallic post with a round analog clock face, mounted on a square red-brick base, ornate decorative top indicating traditional public timekeeping function.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 1 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:StreetClock,
+                        Size:small(1*1=1 square),
+                        Description:Geometric vertical structure, black metallic post with a round analog clock face, mounted on a square red-brick base, ornate decorative top indicating traditional public timekeeping function.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-360, -259]  
+                        **Y Range**: [min_y, max_y] = [-199, -98]
+
+                        # RGB Captions
+                        Front = trees, green leaves; grassy field; trees in the background; sunlight shining from above  
+                        Left = trees, dense foliage; grassy path; trees on both sides of the path; sunlight filtering through leaves  
+                        Right = church building, dark steeple; wooden house; buildings surrounded by trees and grass; sunlight in the background  
+                        Down = dirt path; green bushes; shadow of a building; view from above  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [49, 37, 40]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 38, 47]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 35, 33]]
+
+                        DownDepth:
+                        [[19, 16, 17], [16, 12, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-309.62, -148.6, -10.0), -71.56],
+    [(-314.36, -150.18, -10.0), -71.56],
+    [(-314.36, -150.18, -10.0), -71.56],
+    [(-314.36, -150.18, -10.0), -71.56],
+    [(-314.36, -150.18, -10.0), -71.56],
+    [(-314.36, -150.18, -10.0), -71.56],
+    [(-314.36, -150.18, -10.0), -71.56],
+    [(-314.36, -150.18, -10.0), -71.56],
+    [(-314.36, -150.18, -10.0), -71.56],
+    [(-314.36, -150.18, -10.0), -71.56],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 1
+                        DistanceTraveled = 5.000000000000009
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **StreetClock**, described as: Geometric vertical structure, black metallic post with a round analog clock face, mounted on a square red-brick base, ornate decorative top indicating traditional public timekeeping function.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:1 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 2 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:StreetClock,
+                        Size:small(1*1=1 square),
+                        Description:Geometric vertical structure, black metallic post with a round analog clock face, mounted on a square red-brick base, ornate decorative top indicating traditional public timekeeping function.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-360, -259]  
+                        **Y Range**: [min_y, max_y] = [-199, -98]
+
+                        # RGB Captions
+                        Front = trees, green leaves; grassy field; trees in the background; sunlight shining through  
+                        Left = trees, dense foliage; grassy area; trees surrounding the area; sunlight filtering through  
+                        Right = church building, pointed steeple; wooden houses; buildings in a village setting; church in the foreground  
+                        Down = pathway, gravel surface; grass on both sides; hedge along the path; pathway curving to the right  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 34, 40]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 37, 44]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [29, 36, 38]]
+
+                        DownDepth:
+                        [[18, 15, 16], [16, 12, 16], [19, 16, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-309.62, -148.6, -10.0), -71.56],
+    [(-314.36, -150.18, -10.0), -71.56],
+    [(-312.78, -154.93, -10.0), -71.56],
+    [(-312.78, -154.93, -10.0), -71.56],
+    [(-312.78, -154.93, -10.0), -71.56],
+    [(-312.78, -154.93, -10.0), -71.56],
+    [(-312.78, -154.93, -10.0), -71.56],
+    [(-312.78, -154.93, -10.0), -71.56],
+    [(-312.78, -154.93, -10.0), -71.56],
+    [(-312.78, -154.93, -10.0), -71.56],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 2
+                        DistanceTraveled = 10.000000000000009
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **StreetClock**, described as: Geometric vertical structure, black metallic post with a round analog clock face, mounted on a square red-brick base, ornate decorative top indicating traditional public timekeeping function.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:2 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 3 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:StreetClock,
+                        Size:small(1*1=1 square),
+                        Description:Geometric vertical structure, black metallic post with a round analog clock face, mounted on a square red-brick base, ornate decorative top indicating traditional public timekeeping function.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-360, -259]  
+                        **Y Range**: [min_y, max_y] = [-199, -98]
+
+                        # RGB Captions
+                        Front = trees, green leaves; multiple trees; trees are spread out in the foreground and background  
+                        Left = trees, green leaves; multiple trees; trees are spread out in the foreground and background  
+                        Right = church building, pointed steeple; church is in the foreground; trees in the background  
+                        Down = grass, green color; dirt path; bush in the foreground; shadow of a tree on the grass  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 33, 44]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [51, 37, 44]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 36, 41]]
+
+                        DownDepth:
+                        [[18, 15, 18], [16, 12, 16], [19, 16, 19]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-309.62, -148.6, -10.0), -71.56],
+    [(-314.36, -150.18, -10.0), -71.56],
+    [(-312.78, -154.93, -10.0), -71.56],
+    [(-311.2, -159.67, -10.0), -71.56],
+    [(-311.2, -159.67, -10.0), -71.56],
+    [(-311.2, -159.67, -10.0), -71.56],
+    [(-311.2, -159.67, -10.0), -71.56],
+    [(-311.2, -159.67, -10.0), -71.56],
+    [(-311.2, -159.67, -10.0), -71.56],
+    [(-311.2, -159.67, -10.0), -71.56],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 3
+                        DistanceTraveled = 15.000000000000009
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **StreetClock**, described as: Geometric vertical structure, black metallic post with a round analog clock face, mounted on a square red-brick base, ornate decorative top indicating traditional public timekeeping function.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:3 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 4 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:StreetClock,
+                        Size:small(1*1=1 square),
+                        Description:Geometric vertical structure, black metallic post with a round analog clock face, mounted on a square red-brick base, ornate decorative top indicating traditional public timekeeping function.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-360, -259]  
+                        **Y Range**: [min_y, max_y] = [-199, -98]
+
+                        # RGB Captions
+                        Front = trees, green leaves; grassy field; trees in the background  
+                        Left = large tree, dense foliage; grassy area; bushes in the foreground  
+                        Right = church building, pointed steeple; trees surrounding; church in the center  
+                        Down = tree shadow, on grass; tree branches above; shadow in the foreground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [42, 35, 49]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 34, 44]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [49, 22, 51]]
+
+                        DownDepth:
+                        [[18, 15, 17], [15, 12, 16], [18, 16, 19]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-309.62, -148.6, -10.0), -71.56],
+    [(-314.36, -150.18, -10.0), -71.56],
+    [(-312.78, -154.93, -10.0), -71.56],
+    [(-311.2, -159.67, -10.0), -71.56],
+    [(-309.62, -164.41, -10.0), -71.56],
+    [(-309.62, -164.41, -10.0), -71.56],
+    [(-309.62, -164.41, -10.0), -71.56],
+    [(-309.62, -164.41, -10.0), -71.56],
+    [(-309.62, -164.41, -10.0), -71.56],
+    [(-309.62, -164.41, -10.0), -71.56],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 4
+                        DistanceTraveled = 20.000000000000007
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **StreetClock**, described as: Geometric vertical structure, black metallic post with a round analog clock face, mounted on a square red-brick base, ornate decorative top indicating traditional public timekeeping function.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:4 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 5 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:StreetClock,
+                        Size:small(1*1=1 square),
+                        Description:Geometric vertical structure, black metallic post with a round analog clock face, mounted on a square red-brick base, ornate decorative top indicating traditional public timekeeping function.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-360, -259]  
+                        **Y Range**: [min_y, max_y] = [-199, -98]
+
+                        # RGB Captions
+                        Front = green trees, tall, leafy; trees are in the foreground and background; shadows cast on grass  
+                        Left = green trees, dense, leafy; trees are in the background; green bushes in the foreground  
+                        Right = church building, stone, with steeple; church is in the background; trees to the left of the church  
+                        Down = tree shadow, large, on grass; shadow is in the foreground; corner of a building in the bottom right  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [42, 35, 49]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 34, 41]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [50, 38, 19]]
+
+                        DownDepth:
+                        [[18, 16, 19], [15, 12, 16], [18, 16, 17]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-309.62, -148.6, -10.0), -71.56],
+    [(-314.36, -150.18, -10.0), -71.56],
+    [(-312.78, -154.93, -10.0), -71.56],
+    [(-311.2, -159.67, -10.0), -71.56],
+    [(-309.62, -164.41, -10.0), -71.56],
+    [(-308.03, -169.16, -10.0), -71.56],
+    [(-308.03, -169.16, -10.0), -71.56],
+    [(-308.03, -169.16, -10.0), -71.56],
+    [(-308.03, -169.16, -10.0), -71.56],
+    [(-308.03, -169.16, -10.0), -71.56],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 5
+                        DistanceTraveled = 25.000000000000007
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **StreetClock**, described as: Geometric vertical structure, black metallic post with a round analog clock face, mounted on a square red-brick base, ornate decorative top indicating traditional public timekeeping function.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:5 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 6 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:StreetClock,
+                        Size:small(1*1=1 square),
+                        Description:Geometric vertical structure, black metallic post with a round analog clock face, mounted on a square red-brick base, ornate decorative top indicating traditional public timekeeping function.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-360, -259]  
+                        **Y Range**: [min_y, max_y] = [-199, -98]
+
+                        # RGB Captions
+                        Front = trees, green leaves; grassy field, well-maintained; trees in the foreground and background  
+                        Left = large tree, dense foliage; grassy field, well-maintained; tree centrally located with smaller trees around  
+                        Right = church building, stone structure; church tower, pointed roof; trees on the left; buildings in the distant background  
+                        Down = tree shadow, cast on grass; sunlight filtering through; shadow occupies the right side of the image  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [43, 35, 49]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 34, 43]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 38, 24]]
+
+                        DownDepth:
+                        [[18, 16, 19], [15, 12, 16], [18, 16, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-309.62, -148.6, -10.0), -71.56],
+    [(-314.36, -150.18, -10.0), -71.56],
+    [(-312.78, -154.93, -10.0), -71.56],
+    [(-311.2, -159.67, -10.0), -71.56],
+    [(-309.62, -164.41, -10.0), -71.56],
+    [(-308.03, -169.16, -10.0), -71.56],
+    [(-306.45, -173.9, -10.0), -71.56],
+    [(-306.45, -173.9, -10.0), -71.56],
+    [(-306.45, -173.9, -10.0), -71.56],
+    [(-306.45, -173.9, -10.0), -71.56],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 6
+                        DistanceTraveled = 30.000000000000007
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **StreetClock**, described as: Geometric vertical structure, black metallic post with a round analog clock face, mounted on a square red-brick base, ornate decorative top indicating traditional public timekeeping function.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:6 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 7 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:StreetClock,
+                        Size:small(1*1=1 square),
+                        Description:Geometric vertical structure, black metallic post with a round analog clock face, mounted on a square red-brick base, ornate decorative top indicating traditional public timekeeping function.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-360, -259]  
+                        **Y Range**: [min_y, max_y] = [-199, -98]
+
+                        # RGB Captions
+                        Front = house, small, stone; house is in the background; trees, green, leafy; trees are on both sides of the house; grass, lush, green; grass is in the foreground  
+                        Left = trees, large, leafy; trees are scattered throughout the scene; grass, lush, green; grass covers the ground; sunlight filtering through the trees  
+                        Right = church building, old, stone; church is in the background; steeple, tall, pointed; steeple is on top of the church; trees, green, leafy; trees are on the left side of the image; grass, lush, green; grass is in the foreground  
+                        Down = tree shadows, dark, elongated; shadows are on the grass; grass, lush, green; grass covers the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 35, 30]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 34, 42]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [42, 38, 26]]
+
+                        DownDepth:
+                        [[18, 16, 19], [15, 12, 16], [18, 16, 19]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-309.62, -148.6, -10.0), -71.56],
+    [(-314.36, -150.18, -10.0), -71.56],
+    [(-312.78, -154.93, -10.0), -71.56],
+    [(-311.2, -159.67, -10.0), -71.56],
+    [(-309.62, -164.41, -10.0), -71.56],
+    [(-308.03, -169.16, -10.0), -71.56],
+    [(-306.45, -173.9, -10.0), -71.56],
+    [(-304.87, -178.64, -10.0), -71.56],
+    [(-304.87, -178.64, -10.0), -71.56],
+    [(-304.87, -178.64, -10.0), -71.56],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 7
+                        DistanceTraveled = 35.00000000000001
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **StreetClock**, described as: Geometric vertical structure, black metallic post with a round analog clock face, mounted on a square red-brick base, ornate decorative top indicating traditional public timekeeping function.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:7 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 8 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:StreetClock,
+                        Size:small(1*1=1 square),
+                        Description:Geometric vertical structure, black metallic post with a round analog clock face, mounted on a square red-brick base, ornate decorative top indicating traditional public timekeeping function.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-360, -259]  
+                        **Y Range**: [min_y, max_y] = [-199, -98]
+
+                        # RGB Captions
+                        Front = house, gray roof; house is in the background; trees surrounding the house  
+                        Left = trees, green leaves; sun shining through the branches; grassy ground  
+                        Right = church, stone building; church tower with cross; trees and bushes around the church  
+                        Down = tree shadows on grass; hedge along the edge; sunlight filtering through  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [40, 35, 25]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 34, 42]]
+
+                        RightDepth:
+                        [[100, 100, 100], [49, 100, 100], [40, 39, 41]]
+
+                        DownDepth:
+                        [[18, 15, 19], [15, 12, 16], [18, 16, 19]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-309.62, -148.6, -10.0), -71.56],
+    [(-314.36, -150.18, -10.0), -71.56],
+    [(-312.78, -154.93, -10.0), -71.56],
+    [(-311.2, -159.67, -10.0), -71.56],
+    [(-309.62, -164.41, -10.0), -71.56],
+    [(-308.03, -169.16, -10.0), -71.56],
+    [(-306.45, -173.9, -10.0), -71.56],
+    [(-304.87, -178.64, -10.0), -71.56],
+    [(-303.29, -183.39, -10.0), -71.56],
+    [(-303.29, -183.39, -10.0), -71.56],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 8
+                        DistanceTraveled = 40.00000000000001
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **StreetClock**, described as: Geometric vertical structure, black metallic post with a round analog clock face, mounted on a square red-brick base, ornate decorative top indicating traditional public timekeeping function.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:8 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 9 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:StreetClock,
+                        Size:small(1*1=1 square),
+                        Description:Geometric vertical structure, black metallic post with a round analog clock face, mounted on a square red-brick base, ornate decorative top indicating traditional public timekeeping function.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-360, -259]  
+                        **Y Range**: [min_y, max_y] = [-199, -98]
+
+                        # RGB Captions
+                        Front = stone buildings, weathered; three buildings in a cluster; trees surrounding the buildings; buildings in the center  
+                        Left = grass lawn, well-maintained; multiple trees, leafy; trees scattered around the lawn; sunlight filtering through leaves  
+                        Right = large tree, dense foliage; tree occupies most of the frame; stone building partially visible; tree in the foreground  
+                        Down = hedge row, lush green; diagonal across the image; shadows cast on the grass; hedge in the foreground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [41, 35, 51]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 34, 38]]
+
+                        RightDepth:
+                        [[100, 100, 100], [64, 55, 100], [38, 35, 44]]
+
+                        DownDepth:
+                        [[18, 16, 18], [15, 12, 16], [18, 16, 19]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-309.62, -148.6, -10.0), -71.56],
+    [(-314.36, -150.18, -10.0), -71.56],
+    [(-312.78, -154.93, -10.0), -71.56],
+    [(-311.2, -159.67, -10.0), -71.56],
+    [(-309.62, -164.41, -10.0), -71.56],
+    [(-308.03, -169.16, -10.0), -71.56],
+    [(-306.45, -173.9, -10.0), -71.56],
+    [(-304.87, -178.64, -10.0), -71.56],
+    [(-303.29, -183.39, -10.0), -71.56],
+    [(-301.71, -188.13, -10.0), -71.56],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 9
+                        DistanceTraveled = 45.00000000000001
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **StreetClock**, described as: Geometric vertical structure, black metallic post with a round analog clock face, mounted on a square red-brick base, ornate decorative top indicating traditional public timekeeping function.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:9 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 10 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:StreetClock,
+                        Size:small(1*1=1 square),
+                        Description:Geometric vertical structure, black metallic post with a round analog clock face, mounted on a square red-brick base, ornate decorative top indicating traditional public timekeeping function.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-360, -259]  
+                        **Y Range**: [min_y, max_y] = [-199, -98]
+
+                        # RGB Captions
+                        Front = house, gray shingles; house is in the foreground; trees surrounding the house  
+                        Left = tree, green leaves; tree is in the foreground; grassy field in the background  
+                        Right = tree, dense foliage; tree is in the foreground; roof of a building visible below  
+                        Down = hedge, neatly trimmed; hedge runs horizontally across the image; shadow of a structure on the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 35, 22]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 35, 44]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [49, 38, 41]]
+
+                        DownDepth:
+                        [[18, 16, 17], [15, 12, 16], [18, 16, 19]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-314.36, -150.18, -10.0), -71.56],
+    [(-312.78, -154.93, -10.0), -71.56],
+    [(-311.2, -159.67, -10.0), -71.56],
+    [(-309.62, -164.41, -10.0), -71.56],
+    [(-308.03, -169.16, -10.0), -71.56],
+    [(-306.45, -173.9, -10.0), -71.56],
+    [(-304.87, -178.64, -10.0), -71.56],
+    [(-303.29, -183.39, -10.0), -71.56],
+    [(-301.71, -188.13, -10.0), -71.56],
+    [(-300.13, -192.87, -10.0), -71.56],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 10
+                        DistanceTraveled = 50.00000000000001
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **StreetClock**, described as: Geometric vertical structure, black metallic post with a round analog clock face, mounted on a square red-brick base, ornate decorative top indicating traditional public timekeeping function.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:10 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 11 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:StreetClock,
+                        Size:small(1*1=1 square),
+                        Description:Geometric vertical structure, black metallic post with a round analog clock face, mounted on a square red-brick base, ornate decorative top indicating traditional public timekeeping function.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-360, -259]  
+                        **Y Range**: [min_y, max_y] = [-199, -98]
+
+                        # RGB Captions
+                        Front = house, gray roof, brick walls; house is in the foreground; trees surrounding the house  
+                        Left = trees, green leaves, tall trunks; grassy field in the background; path leading through the trees  
+                        Right = house, gray roof, brick walls; house is in the foreground; large tree to the right of the house  
+                        Down = grass, green blades, dense coverage; shadow of a building on the grass; hedge bordering the grass  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 34, 19]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 35, 44]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [38, 39, 45]]
+
+                        DownDepth:
+                        [[18, 16, 16], [16, 12, 16], [19, 16, 20]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-312.78, -154.93, -10.0), -71.56],
+    [(-311.2, -159.67, -10.0), -71.56],
+    [(-309.62, -164.41, -10.0), -71.56],
+    [(-308.03, -169.16, -10.0), -71.56],
+    [(-306.45, -173.9, -10.0), -71.56],
+    [(-304.87, -178.64, -10.0), -71.56],
+    [(-303.29, -183.39, -10.0), -71.56],
+    [(-301.71, -188.13, -10.0), -71.56],
+    [(-300.13, -192.87, -10.0), -71.56],
+    [(-298.55, -197.62, -10.0), -71.56],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 11
+                        DistanceTraveled = 55.00000000000001
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **StreetClock**, described as: Geometric vertical structure, black metallic post with a round analog clock face, mounted on a square red-brick base, ornate decorative top indicating traditional public timekeeping function.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:11 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 12 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:StreetClock,
+                        Size:small(1*1=1 square),
+                        Description:Geometric vertical structure, black metallic post with a round analog clock face, mounted on a square red-brick base, ornate decorative top indicating traditional public timekeeping function.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-360, -259]  
+                        **Y Range**: [min_y, max_y] = [-199, -98]
+
+                        # RGB Captions
+                        Front = trees, green leaves; grassy field, well-maintained; trees in the background; sunlight filtering through  
+                        Left = tree, tall, leafy branches; grassy area, open space; tree in the foreground; sunlight casting shadows  
+                        Right = buildings, wooden structure; trees, green foliage; buildings in the foreground; trees in the background  
+                        Down = grass, short, green; shadow, dark shape; hedge, dense, green; hedge at the bottom of the image  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [43, 36, 40]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [48, 36, 48]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [18, 16, 45]]
+
+                        DownDepth:
+                        [[19, 16, 18], [16, 12, 15], [19, 16, 19]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-311.2, -159.67, -10.0), -71.56],
+    [(-309.62, -164.41, -10.0), -71.56],
+    [(-308.03, -169.16, -10.0), -71.56],
+    [(-306.45, -173.9, -10.0), -71.56],
+    [(-304.87, -178.64, -10.0), -71.56],
+    [(-303.29, -183.39, -10.0), -71.56],
+    [(-301.71, -188.13, -10.0), -71.56],
+    [(-300.13, -192.87, -10.0), -71.56],
+    [(-298.55, -197.62, -10.0), -71.56],
+    [(-298.55, -197.62, -10.0), -86.56],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 12
+                        DistanceTraveled = 55.00000000000001
+                        AvgHeadingChange = 1.25
+
+                        # Reminder  
+                        - The target is **StreetClock**, described as: Geometric vertical structure, black metallic post with a round analog clock face, mounted on a square red-brick base, ornate decorative top indicating traditional public timekeeping function.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:12 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 13 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:StreetClock,
+                        Size:small(1*1=1 square),
+                        Description:Geometric vertical structure, black metallic post with a round analog clock face, mounted on a square red-brick base, ornate decorative top indicating traditional public timekeeping function.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-360, -259]  
+                        **Y Range**: [min_y, max_y] = [-199, -98]
+
+                        # RGB Captions
+                        Front = large tree, lush green leaves; tree is in the foreground; building with gray roof in the background  
+                        Left = tree, tall and leafy; tree is in the center; hedge surrounds the tree; grassy field in the background  
+                        Right = house, gray roof; house is in the foreground; large tree behind the house; clear sky above  
+                        Down = building shadow on the grass; bush in the foreground; building corner on the right  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [48, 36, 41]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 36, 48]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 15, 44]]
+
+                        DownDepth:
+                        [[19, 16, 19], [16, 12, 16], [19, 16, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-309.62, -164.41, -10.0), -71.56],
+    [(-308.03, -169.16, -10.0), -71.56],
+    [(-306.45, -173.9, -10.0), -71.56],
+    [(-304.87, -178.64, -10.0), -71.56],
+    [(-303.29, -183.39, -10.0), -71.56],
+    [(-301.71, -188.13, -10.0), -71.56],
+    [(-300.13, -192.87, -10.0), -71.56],
+    [(-298.55, -197.62, -10.0), -71.56],
+    [(-298.55, -197.62, -10.0), -86.56],
+    [(-298.55, -197.62, -10.0), -101.56],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 13
+                        DistanceTraveled = 55.00000000000001
+                        AvgHeadingChange = 2.31
+
+                        # Reminder  
+                        - The target is **StreetClock**, described as: Geometric vertical structure, black metallic post with a round analog clock face, mounted on a square red-brick base, ornate decorative top indicating traditional public timekeeping function.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:13 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 14 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:StreetClock,
+                        Size:small(1*1=1 square),
+                        Description:Geometric vertical structure, black metallic post with a round analog clock face, mounted on a square red-brick base, ornate decorative top indicating traditional public timekeeping function.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-360, -259]  
+                        **Y Range**: [min_y, max_y] = [-199, -98]
+
+                        # RGB Captions
+                        Front = green grass, well-maintained; trees with dense foliage; bushes forming a hedge; sunlight casting shadows on the ground  
+                        Left = tree with thin trunk and sparse leaves; green grass surrounding the tree; bushes forming a circular pattern around the tree; sunlight creating lens flare  
+                        Right = house with gray roof, weathered exterior; large tree behind the house; bushes along the house perimeter; sunlight causing lens flare  
+                        Down = grass with patches of dirt; shadow of a building cast on the grass; bushes at the edge of the frame; sunlight creating a glare  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [48, 36, 48]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [48, 36, 48]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 18, 48]]
+
+                        DownDepth:
+                        [[19, 16, 19], [16, 12, 16], [19, 16, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-308.03, -169.16, -10.0), -71.56],
+    [(-306.45, -173.9, -10.0), -71.56],
+    [(-304.87, -178.64, -10.0), -71.56],
+    [(-303.29, -183.39, -10.0), -71.56],
+    [(-301.71, -188.13, -10.0), -71.56],
+    [(-300.13, -192.87, -10.0), -71.56],
+    [(-298.55, -197.62, -10.0), -71.56],
+    [(-298.55, -197.62, -10.0), -86.56],
+    [(-298.55, -197.62, -10.0), -101.56],
+    [(-298.55, -197.62, -10.0), -116.56],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 14
+                        DistanceTraveled = 55.00000000000001
+                        AvgHeadingChange = 3.21
+
+                        # Reminder  
+                        - The target is **StreetClock**, described as: Geometric vertical structure, black metallic post with a round analog clock face, mounted on a square red-brick base, ornate decorative top indicating traditional public timekeeping function.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:14 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 15 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:StreetClock,
+                        Size:small(1*1=1 square),
+                        Description:Geometric vertical structure, black metallic post with a round analog clock face, mounted on a square red-brick base, ornate decorative top indicating traditional public timekeeping function.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-360, -259]  
+                        **Y Range**: [min_y, max_y] = [-199, -98]
+
+                        # RGB Captions
+                        Front = green trees, dense foliage; trees are in the foreground and background; sunlight filtering through branches  
+                        Left = stone building, small structure; building is to the left; green trees surrounding  
+                        Right = houses, wooden structures; houses are in the foreground; trees in the background  
+                        Down = grass, green texture; grass covers the ground; shadow of a structure on the right  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [48, 36, 48]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [41, 36, 48]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [48, 36, 48]]
+
+                        DownDepth:
+                        [[19, 16, 19], [16, 12, 16], [19, 16, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-306.45, -173.9, -10.0), -71.56],
+    [(-304.87, -178.64, -10.0), -71.56],
+    [(-303.29, -183.39, -10.0), -71.56],
+    [(-301.71, -188.13, -10.0), -71.56],
+    [(-300.13, -192.87, -10.0), -71.56],
+    [(-298.55, -197.62, -10.0), -71.56],
+    [(-298.55, -197.62, -10.0), -86.56],
+    [(-298.55, -197.62, -10.0), -101.56],
+    [(-298.55, -197.62, -10.0), -116.56],
+    [(-298.55, -197.62, -10.0), -131.56],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 15
+                        DistanceTraveled = 55.00000000000001
+                        AvgHeadingChange = 4.0
+
+                        # Reminder  
+                        - The target is **StreetClock**, described as: Geometric vertical structure, black metallic post with a round analog clock face, mounted on a square red-brick base, ornate decorative top indicating traditional public timekeeping function.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:15 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 16 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:StreetClock,
+                        Size:small(1*1=1 square),
+                        Description:Geometric vertical structure, black metallic post with a round analog clock face, mounted on a square red-brick base, ornate decorative top indicating traditional public timekeeping function.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-360, -259]  
+                        **Y Range**: [min_y, max_y] = [-199, -98]
+
+                        # RGB Captions
+                        Front = green trees, dense foliage; grassy field, well-maintained; sunlight in the background  
+                        Left = stone building, old structure; green trees, dense foliage; pathway leading to the building; sunlight in the background  
+                        Right = house, brick exterior; green trees, dense foliage; grassy lawn, well-maintained; sunlight in the background  
+                        Down = grass, well-maintained; hedge, neatly trimmed; shadow of a building on the grass  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 36, 47]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 36, 44]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 36, 18]]
+
+                        DownDepth:
+                        [[19, 16, 19], [16, 12, 16], [19, 15, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-304.87, -178.64, -10.0), -71.56],
+    [(-303.29, -183.39, -10.0), -71.56],
+    [(-301.71, -188.13, -10.0), -71.56],
+    [(-300.13, -192.87, -10.0), -71.56],
+    [(-298.55, -197.62, -10.0), -71.56],
+    [(-298.55, -197.62, -10.0), -86.56],
+    [(-298.55, -197.62, -10.0), -101.56],
+    [(-298.55, -197.62, -10.0), -116.56],
+    [(-298.55, -197.62, -10.0), -131.56],
+    [(-298.55, -197.62, -10.0), -146.56],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 16
+                        DistanceTraveled = 55.00000000000001
+                        AvgHeadingChange = 4.69
+
+                        # Reminder  
+                        - The target is **StreetClock**, described as: Geometric vertical structure, black metallic post with a round analog clock face, mounted on a square red-brick base, ornate decorative top indicating traditional public timekeeping function.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:16 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 17 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:StreetClock,
+                        Size:small(1*1=1 square),
+                        Description:Geometric vertical structure, black metallic post with a round analog clock face, mounted on a square red-brick base, ornate decorative top indicating traditional public timekeeping function.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-360, -259]  
+                        **Y Range**: [min_y, max_y] = [-199, -98]
+
+                        # RGB Captions
+                        Front = trees, green leaves; grassy field; trees in the foreground and background  
+                        Left = house, gray roof; trees surrounding; house in the center; path leading to the house  
+                        Right = houses, gray roofs; trees in the background; houses in the foreground  
+                        Down = shadow on the ground; hedge, green leaves; shadow in the foreground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [48, 36, 46]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 36, 48]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [48, 36, 36]]
+
+                        DownDepth:
+                        [[18, 16, 19], [16, 12, 16], [19, 16, 17]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-303.29, -183.39, -10.0), -71.56],
+    [(-301.71, -188.13, -10.0), -71.56],
+    [(-300.13, -192.87, -10.0), -71.56],
+    [(-298.55, -197.62, -10.0), -71.56],
+    [(-298.55, -197.62, -10.0), -86.56],
+    [(-298.55, -197.62, -10.0), -101.56],
+    [(-298.55, -197.62, -10.0), -116.56],
+    [(-298.55, -197.62, -10.0), -131.56],
+    [(-298.55, -197.62, -10.0), -146.56],
+    [(-298.55, -197.62, -10.0), -161.56],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 17
+                        DistanceTraveled = 55.00000000000001
+                        AvgHeadingChange = 5.29
+
+                        # Reminder  
+                        - The target is **StreetClock**, described as: Geometric vertical structure, black metallic post with a round analog clock face, mounted on a square red-brick base, ornate decorative top indicating traditional public timekeeping function.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:17 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 18 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:StreetClock,
+                        Size:small(1*1=1 square),
+                        Description:Geometric vertical structure, black metallic post with a round analog clock face, mounted on a square red-brick base, ornate decorative top indicating traditional public timekeeping function.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-360, -259]  
+                        **Y Range**: [min_y, max_y] = [-199, -98]
+
+                        # RGB Captions
+                        Front = green trees, dense foliage; grassy ground; trees in the foreground and background  
+                        Left = house building, gray roof; green trees, dense foliage; house in the center; trees surrounding  
+                        Right = multiple houses, gray roofs; green trees, dense foliage; houses in the background; trees on the sides  
+                        Down = hedge, lush green; shadow of a structure; hedge on the left side; grassy area adjacent  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [48, 36, 48]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [49, 100, 100], [48, 36, 48]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 36, 41]]
+
+                        DownDepth:
+                        [[19, 16, 19], [16, 12, 16], [19, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-301.71, -188.13, -10.0), -71.56],
+    [(-300.13, -192.87, -10.0), -71.56],
+    [(-298.55, -197.62, -10.0), -71.56],
+    [(-298.55, -197.62, -10.0), -86.56],
+    [(-298.55, -197.62, -10.0), -101.56],
+    [(-298.55, -197.62, -10.0), -116.56],
+    [(-298.55, -197.62, -10.0), -131.56],
+    [(-298.55, -197.62, -10.0), -146.56],
+    [(-298.55, -197.62, -10.0), -161.56],
+    [(-298.55, -197.62, -10.0), -176.56],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 18
+                        DistanceTraveled = 55.00000000000001
+                        AvgHeadingChange = 5.83
+
+                        # Reminder  
+                        - The target is **StreetClock**, described as: Geometric vertical structure, black metallic post with a round analog clock face, mounted on a square red-brick base, ornate decorative top indicating traditional public timekeeping function.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:18 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 19 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:StreetClock,
+                        Size:small(1*1=1 square),
+                        Description:Geometric vertical structure, black metallic post with a round analog clock face, mounted on a square red-brick base, ornate decorative top indicating traditional public timekeeping function.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-360, -259]  
+                        **Y Range**: [min_y, max_y] = [-199, -98]
+
+                        # RGB Captions
+                        Front = trees, green leaves; grass, lush; trees surround the grassy area; sunlight filtering through  
+                        Left = house, stone walls; trees, green leaves; house in the center; pathway leading to the house  
+                        Right = tree, large; house, stone; tree to the left of the house; sunlight creating shadows  
+                        Down = grass, green; dirt patch; hedge, dense; hedge on the left side; shadow in the bottom right  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [48, 36, 48]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 36, 48]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [48, 36, 48]]
+
+                        DownDepth:
+                        [[18, 16, 19], [15, 12, 16], [18, 16, 19]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-300.13, -192.87, -10.0), -71.56],
+    [(-298.55, -197.62, -10.0), -71.56],
+    [(-298.55, -197.62, -10.0), -86.56],
+    [(-298.55, -197.62, -10.0), -101.56],
+    [(-298.55, -197.62, -10.0), -116.56],
+    [(-298.55, -197.62, -10.0), -131.56],
+    [(-298.55, -197.62, -10.0), -146.56],
+    [(-298.55, -197.62, -10.0), -161.56],
+    [(-298.55, -197.62, -10.0), -176.56],
+    [(-303.54, -197.92, -10.0), -176.56],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 19
+                        DistanceTraveled = 59.99999999999999
+                        AvgHeadingChange = 5.53
+
+                        # Reminder  
+                        - The target is **StreetClock**, described as: Geometric vertical structure, black metallic post with a round analog clock face, mounted on a square red-brick base, ornate decorative top indicating traditional public timekeeping function.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:19 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 20 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:StreetClock,
+                        Size:small(1*1=1 square),
+                        Description:Geometric vertical structure, black metallic post with a round analog clock face, mounted on a square red-brick base, ornate decorative top indicating traditional public timekeeping function.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-360, -259]  
+                        **Y Range**: [min_y, max_y] = [-199, -98]
+
+                        # RGB Captions
+                        Front = green trees, dense foliage; trees are in the foreground and background; green grass, well-maintained; grass is in the middle ground  
+                        Left = stone house, gray roof; house is in the background; green trees, dense foliage; trees are in the foreground  
+                        Right = green trees, dense foliage; trees are in the foreground and background; stone house, gray roof; house is in the background  
+                        Down = green grass, well-maintained; grass covers the entire image; tree trunk, brown bark; trunk is on the left side  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 36, 47]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 36, 46]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 36, 47]]
+
+                        DownDepth:
+                        [[18, 16, 19], [15, 12, 16], [18, 16, 19]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-298.55, -197.62, -10.0), -71.56],
+    [(-298.55, -197.62, -10.0), -86.56],
+    [(-298.55, -197.62, -10.0), -101.56],
+    [(-298.55, -197.62, -10.0), -116.56],
+    [(-298.55, -197.62, -10.0), -131.56],
+    [(-298.55, -197.62, -10.0), -146.56],
+    [(-298.55, -197.62, -10.0), -161.56],
+    [(-298.55, -197.62, -10.0), -176.56],
+    [(-303.54, -197.92, -10.0), -176.56],
+    [(-308.53, -198.22, -10.0), -176.56],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 20
+                        DistanceTraveled = 64.99999999999999
+                        AvgHeadingChange = 5.25
+
+                        # Reminder  
+                        - The target is **StreetClock**, described as: Geometric vertical structure, black metallic post with a round analog clock face, mounted on a square red-brick base, ornate decorative top indicating traditional public timekeeping function.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:20 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 21 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:StreetClock,
+                        Size:small(1*1=1 square),
+                        Description:Geometric vertical structure, black metallic post with a round analog clock face, mounted on a square red-brick base, ornate decorative top indicating traditional public timekeeping function.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-360, -259]  
+                        **Y Range**: [min_y, max_y] = [-199, -98]
+
+                        # RGB Captions
+                        Front = green trees, dense foliage; trees are in the foreground and background; sunlight filtering through leaves  
+                        Left = stone building, weathered facade; building is in the background; green trees surrounding the building  
+                        Right = house, wooden structure; house is in the background; large tree providing shade in the foreground  
+                        Down = grass patch, well-maintained; patch is in the center; shrubs forming a border around the grass  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [41, 36, 47]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 36, 47]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 36, 47]]
+
+                        DownDepth:
+                        [[18, 15, 18], [15, 12, 16], [18, 16, 19]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-298.55, -197.62, -10.0), -86.56],
+    [(-298.55, -197.62, -10.0), -101.56],
+    [(-298.55, -197.62, -10.0), -116.56],
+    [(-298.55, -197.62, -10.0), -131.56],
+    [(-298.55, -197.62, -10.0), -146.56],
+    [(-298.55, -197.62, -10.0), -161.56],
+    [(-298.55, -197.62, -10.0), -176.56],
+    [(-303.54, -197.92, -10.0), -176.56],
+    [(-308.53, -198.22, -10.0), -176.56],
+    [(-313.52, -198.51, -10.0), -176.56],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 21
+                        DistanceTraveled = 69.99999999999997
+                        AvgHeadingChange = 5.0
+
+                        # Reminder  
+                        - The target is **StreetClock**, described as: Geometric vertical structure, black metallic post with a round analog clock face, mounted on a square red-brick base, ornate decorative top indicating traditional public timekeeping function.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:21 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 22 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:StreetClock,
+                        Size:small(1*1=1 square),
+                        Description:Geometric vertical structure, black metallic post with a round analog clock face, mounted on a square red-brick base, ornate decorative top indicating traditional public timekeeping function.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-360, -259]  
+                        **Y Range**: [min_y, max_y] = [-199, -98]
+
+                        # RGB Captions
+                        Front = tall tree, green leaves; tree is in the foreground; grassy field surrounding  
+                        Left = tree branches, green leaves; branches are in the foreground; building visible through branches  
+                        Right = large tree, dense foliage; tree is in the center; grassy area around  
+                        Down = grass patch, light green; patch is in the center; trees casting shadows on the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 35, 40]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 36, 47]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 97, 100], [47, 36, 47]]
+
+                        DownDepth:
+                        [[19, 16, 19], [16, 12, 16], [19, 16, 19]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-298.55, -197.62, -10.0), -101.56],
+    [(-298.55, -197.62, -10.0), -116.56],
+    [(-298.55, -197.62, -10.0), -131.56],
+    [(-298.55, -197.62, -10.0), -146.56],
+    [(-298.55, -197.62, -10.0), -161.56],
+    [(-298.55, -197.62, -10.0), -176.56],
+    [(-303.54, -197.92, -10.0), -176.56],
+    [(-308.53, -198.22, -10.0), -176.56],
+    [(-313.52, -198.51, -10.0), -176.56],
+    [(-313.52, -198.51, -10.0), 168.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 22
+                        DistanceTraveled = 69.99999999999997
+                        AvgHeadingChange = 5.45
+
+                        # Reminder  
+                        - The target is **StreetClock**, described as: Geometric vertical structure, black metallic post with a round analog clock face, mounted on a square red-brick base, ornate decorative top indicating traditional public timekeeping function.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:22 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 23 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:StreetClock,
+                        Size:small(1*1=1 square),
+                        Description:Geometric vertical structure, black metallic post with a round analog clock face, mounted on a square red-brick base, ornate decorative top indicating traditional public timekeeping function.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-360, -259]  
+                        **Y Range**: [min_y, max_y] = [-199, -98]
+
+                        # RGB Captions
+                        Front = trees, green leaves; trees are in the foreground and background; grassy ground  
+                        Left = path, brown dirt; path is in the center; trees on both sides  
+                        Right = trees, dense foliage; trees are in the background; sunlight filtering through  
+                        Down = hedge, green bushes; hedge is in the foreground; shadows cast on the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [80, 100, 100], [47, 35, 42]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 36, 47]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 36, 47]]
+
+                        DownDepth:
+                        [[19, 16, 19], [16, 12, 16], [18, 16, 19]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-298.55, -197.62, -10.0), -116.56],
+    [(-298.55, -197.62, -10.0), -131.56],
+    [(-298.55, -197.62, -10.0), -146.56],
+    [(-298.55, -197.62, -10.0), -161.56],
+    [(-298.55, -197.62, -10.0), -176.56],
+    [(-303.54, -197.92, -10.0), -176.56],
+    [(-308.53, -198.22, -10.0), -176.56],
+    [(-313.52, -198.51, -10.0), -176.56],
+    [(-313.52, -198.51, -10.0), 168.44],
+    [(-318.42, -197.51, -10.0), 168.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 23
+                        DistanceTraveled = 74.99999999999997
+                        AvgHeadingChange = 5.22
+
+                        # Reminder  
+                        - The target is **StreetClock**, described as: Geometric vertical structure, black metallic post with a round analog clock face, mounted on a square red-brick base, ornate decorative top indicating traditional public timekeeping function.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:23 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 24 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:StreetClock,
+                        Size:small(1*1=1 square),
+                        Description:Geometric vertical structure, black metallic post with a round analog clock face, mounted on a square red-brick base, ornate decorative top indicating traditional public timekeeping function.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-360, -259]  
+                        **Y Range**: [min_y, max_y] = [-199, -98]
+
+                        # RGB Captions
+                        Front = green leaves, dense; branches extending outward; sunlight filtering through  
+                        Left = church building, dark facade; trees surrounding; sunlight in the background  
+                        Right = trees, green foliage; grassy ground; shadows cast on the ground  
+                        Down = tree trunk, brown; shadow on the ground; grass and bushes around  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 36, 47]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 36, 44]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 36, 47]]
+
+                        DownDepth:
+                        [[18, 16, 18], [16, 12, 16], [18, 16, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-298.55, -197.62, -10.0), -131.56],
+    [(-298.55, -197.62, -10.0), -146.56],
+    [(-298.55, -197.62, -10.0), -161.56],
+    [(-298.55, -197.62, -10.0), -176.56],
+    [(-303.54, -197.92, -10.0), -176.56],
+    [(-308.53, -198.22, -10.0), -176.56],
+    [(-313.52, -198.51, -10.0), -176.56],
+    [(-313.52, -198.51, -10.0), 168.44],
+    [(-318.42, -197.51, -10.0), 168.44],
+    [(-323.32, -196.51, -10.0), 168.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 24
+                        DistanceTraveled = 79.99999999999997
+                        AvgHeadingChange = 5.0
+
+                        # Reminder  
+                        - The target is **StreetClock**, described as: Geometric vertical structure, black metallic post with a round analog clock face, mounted on a square red-brick base, ornate decorative top indicating traditional public timekeeping function.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:24 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 25 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:StreetClock,
+                        Size:small(1*1=1 square),
+                        Description:Geometric vertical structure, black metallic post with a round analog clock face, mounted on a square red-brick base, ornate decorative top indicating traditional public timekeeping function.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-360, -259]  
+                        **Y Range**: [min_y, max_y] = [-199, -98]
+
+                        # RGB Captions
+                        Front = green trees, dense foliage; trees are in the foreground and background; sunlight filtering through branches  
+                        Left = stone building, old structure; building is in the background; trees framing the view  
+                        Right = green trees, evenly spaced; trees are in the background; sunlight creating shadows on grass  
+                        Down = tree shadow, cast on grass; shadow is in the foreground; tree trunk visible  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [88, 100, 100], [47, 36, 39]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 36, 47]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [41, 36, 47]]
+
+                        DownDepth:
+                        [[18, 16, 18], [16, 12, 16], [18, 16, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-298.55, -197.62, -10.0), -146.56],
+    [(-298.55, -197.62, -10.0), -161.56],
+    [(-298.55, -197.62, -10.0), -176.56],
+    [(-303.54, -197.92, -10.0), -176.56],
+    [(-308.53, -198.22, -10.0), -176.56],
+    [(-313.52, -198.51, -10.0), -176.56],
+    [(-313.52, -198.51, -10.0), 168.44],
+    [(-318.42, -197.51, -10.0), 168.44],
+    [(-323.32, -196.51, -10.0), 168.44],
+    [(-323.32, -196.51, -10.0), 153.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 25
+                        DistanceTraveled = 79.99999999999997
+                        AvgHeadingChange = 5.4
+
+                        # Reminder  
+                        - The target is **StreetClock**, described as: Geometric vertical structure, black metallic post with a round analog clock face, mounted on a square red-brick base, ornate decorative top indicating traditional public timekeeping function.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:25 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 26 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:StreetClock,
+                        Size:small(1*1=1 square),
+                        Description:Geometric vertical structure, black metallic post with a round analog clock face, mounted on a square red-brick base, ornate decorative top indicating traditional public timekeeping function.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-360, -259]  
+                        **Y Range**: [min_y, max_y] = [-199, -98]
+
+                        # RGB Captions
+                        Front = green leaves, dense; tree branches, brown; sunlight filtering through; leaves in the foreground  
+                        Left = tree trunk, thick; green leaves, dense; sunlight filtering through; leaves surrounding the trunk  
+                        Right = green leaves, dense; tree branches, brown; sunlight creating lens flare; leaves in the foreground  
+                        Down = glass panels, transparent; metal frame, black; green leaves, dense; leaves hanging from the frame  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[20, 100, 100], [16, 100, 100], [34, 36, 47]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 36, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [38, 36, 47]]
+
+                        DownDepth:
+                        [[17, 16, 18], [16, 12, 16], [18, 16, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-298.55, -197.62, -10.0), -161.56],
+    [(-298.55, -197.62, -10.0), -176.56],
+    [(-303.54, -197.92, -10.0), -176.56],
+    [(-308.53, -198.22, -10.0), -176.56],
+    [(-313.52, -198.51, -10.0), -176.56],
+    [(-313.52, -198.51, -10.0), 168.44],
+    [(-318.42, -197.51, -10.0), 168.44],
+    [(-323.32, -196.51, -10.0), 168.44],
+    [(-323.32, -196.51, -10.0), 153.44],
+    [(-327.79, -194.27, -10.0), 153.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 26
+                        DistanceTraveled = 84.99999999999999
+                        AvgHeadingChange = 5.19
+
+                        # Reminder  
+                        - The target is **StreetClock**, described as: Geometric vertical structure, black metallic post with a round analog clock face, mounted on a square red-brick base, ornate decorative top indicating traditional public timekeeping function.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:26 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 27 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:StreetClock,
+                        Size:small(1*1=1 square),
+                        Description:Geometric vertical structure, black metallic post with a round analog clock face, mounted on a square red-brick base, ornate decorative top indicating traditional public timekeeping function.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-360, -259]  
+                        **Y Range**: [min_y, max_y] = [-199, -98]
+
+                        # RGB Captions
+                        Front = green leaves, dense cluster; tree branches in the foreground; sunlight filtering through  
+                        Left = wooden fence, weathered planks; fence stretches across the middle ground; church steeple visible in the background  
+                        Right = tree canopy, lush green leaves; canopy fills the foreground and middle ground; sunlight shining from above  
+                        Down = tree branches, angled position; branches spread across the foreground; sunlight and shadows on leaves  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[16, 16, 100], [15, 11, 100], [34, 27, 47]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 36, 47]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 36, 46]]
+
+                        DownDepth:
+                        [[18, 15, 18], [15, 12, 16], [18, 16, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-298.55, -197.62, -10.0), -176.56],
+    [(-303.54, -197.92, -10.0), -176.56],
+    [(-308.53, -198.22, -10.0), -176.56],
+    [(-313.52, -198.51, -10.0), -176.56],
+    [(-313.52, -198.51, -10.0), 168.44],
+    [(-318.42, -197.51, -10.0), 168.44],
+    [(-323.32, -196.51, -10.0), 168.44],
+    [(-323.32, -196.51, -10.0), 153.44],
+    [(-327.79, -194.27, -10.0), 153.44],
+    [(-325.55, -189.8, -10.0), 153.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 27
+                        DistanceTraveled = 89.99999999999999
+                        AvgHeadingChange = 5.0
+
+                        # Reminder  
+                        - The target is **StreetClock**, described as: Geometric vertical structure, black metallic post with a round analog clock face, mounted on a square red-brick base, ornate decorative top indicating traditional public timekeeping function.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:27 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 28 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:StreetClock,
+                        Size:small(1*1=1 square),
+                        Description:Geometric vertical structure, black metallic post with a round analog clock face, mounted on a square red-brick base, ornate decorative top indicating traditional public timekeeping function.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-360, -259]  
+                        **Y Range**: [min_y, max_y] = [-199, -98]
+
+                        # RGB Captions
+                        Front = green leaves, dense cluster; leaves in the foreground; sunlight filtering through  
+                        Left = house building, brown exterior; tree branches in the foreground; house in the background  
+                        Right = pine trees, tall and green; trees scattered across the scene; sunlight casting shadows on the ground  
+                        Down = tree, large with green leaves; view from above; shadow of the tree on the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[9, 5, 100], [9, 7, 100], [36, 21, 46]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 98], [47, 36, 43]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 35, 45]]
+
+                        DownDepth:
+                        [[18, 12, 18], [15, 12, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-303.54, -197.92, -10.0), -176.56],
+    [(-308.53, -198.22, -10.0), -176.56],
+    [(-313.52, -198.51, -10.0), -176.56],
+    [(-313.52, -198.51, -10.0), 168.44],
+    [(-318.42, -197.51, -10.0), 168.44],
+    [(-323.32, -196.51, -10.0), 168.44],
+    [(-323.32, -196.51, -10.0), 153.44],
+    [(-327.79, -194.27, -10.0), 153.44],
+    [(-325.55, -189.8, -10.0), 153.44],
+    [(-330.03, -187.57, -10.0), 153.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 28
+                        DistanceTraveled = 95.0
+                        AvgHeadingChange = 4.82
+
+                        # Reminder  
+                        - The target is **StreetClock**, described as: Geometric vertical structure, black metallic post with a round analog clock face, mounted on a square red-brick base, ornate decorative top indicating traditional public timekeeping function.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:28 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

@@ -1,0 +1,35 @@
+{
+  "episode_id": "4",
+  "start_pose": {
+    "start_position": [
+      41.54985016151517,
+      161.13800113306587,
+      -6.400000095367432
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.8991295511352417,
+      0.43768259078393634
+    ]
+  },
+  "info": {
+    "geodesic_distance": 92,
+    "euclidean_distance": 31.9716
+  },
+  "map_name": "UrbanJapan_test",
+  "true_name": "RoadBarrier",
+  "object_name": "SM_Road_Barrier_03_143",
+  "pose": [
+    [
+      10.0,
+      159.8000030517578,
+      1.5999999046325684
+    ]
+  ],
+  "size": "small(3.0*0.5=1.5 squares)",
+  "description": "Geometric rectangular frame, orange-and-white striped panel with thin metal supports and two stabilizing legs, lightweight structure for temporary traffic or pedestrian control.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

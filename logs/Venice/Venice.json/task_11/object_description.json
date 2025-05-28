@@ -1,0 +1,35 @@
+{
+  "episode_id": "11",
+  "start_pose": {
+    "start_position": [
+      -19.86054681513639,
+      -13.832154225472411,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.8151050912864745,
+      0.5793131192704583
+    ]
+  },
+  "info": {
+    "geodesic_distance": 91,
+    "euclidean_distance": 56.9935
+  },
+  "map_name": "Venice_test",
+  "true_name": " Piano",
+  "object_name": "SM_Piano_69",
+  "pose": [
+    [
+      27.59770393371582,
+      16.71700096130371,
+      0.9200018048286438
+    ]
+  ],
+  "size": " mid(3*1.5=4.5 squares)",
+  "description": " Geometric rectangular form, dark brown wood with engraved ornamental detailing, visible keyboard and pedals, designed for musical performance.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

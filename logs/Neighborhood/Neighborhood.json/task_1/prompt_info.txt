@@ -1,0 +1,126 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Dog,
+                        Size:small(1.5*0.5=0.75 squares),
+                        Description:Organic quadrupedal form, smooth black fur with lean muscular build, erect ears and extended tail, posture indicates alertness and readiness for movement.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-32, 69]  
+                        **Y Range**: [min_y, max_y] = [23, 124]
+
+                        # RGB Captions
+                        Front = dark forest, dense foliage; glowing spots scattered throughout; glowing spots in the background  
+                        Left = tree branches, dark leaves; sunlight filtering through; ground illuminated by sunlight; tree branches in the foreground  
+                        Right = dark forest, dense foliage; glowing spots scattered throughout; glowing spots in the background  
+                        Down = shadow of leaves, on the ground; sunlight creating contrast; shadow of leaves in the foreground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[13, 9, 9], [51, 69, 8], [44, 26, 28]]
+
+                        LeftDepth:
+                        [[100, 100, 17], [68, 100, 100], [45, 29, 21]]
+
+                        RightDepth:
+                        [[8, 100, 100], [66, 100, 100], [29, 34, 37]]
+
+                        DownDepth:
+                        [[18, 16, 18], [16, 12, 16], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(18.77, 73.13, -10.0), 124.49],
+    [(18.77, 73.13, -10.0), 124.49],
+    [(18.77, 73.13, -10.0), 124.49],
+    [(18.77, 73.13, -10.0), 124.49],
+    [(18.77, 73.13, -10.0), 124.49],
+    [(18.77, 73.13, -10.0), 124.49],
+    [(18.77, 73.13, -10.0), 124.49],
+    [(18.77, 73.13, -10.0), 124.49],
+    [(18.77, 73.13, -10.0), 124.49],
+    [(18.77, 73.13, -10.0), 124.49],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Dog**, described as: Organic quadrupedal form, smooth black fur with lean muscular build, erect ears and extended tail, posture indicates alertness and readiness for movement.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 1 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Dog,
+                        Size:small(1.5*0.5=0.75 squares),
+                        Description:Organic quadrupedal form, smooth black fur with lean muscular build, erect ears and extended tail, posture indicates alertness and readiness for movement.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-32, 69]  
+                        **Y Range**: [min_y, max_y] = [23, 124]
+
+                        # RGB Captions
+                        Front = leaves, dark, scattered; small glowing spots, scattered; leaves cover the ground  
+                        Left = tree branches, dense, intertwining; glowing spots, scattered; branches form a canopy overhead  
+                        Right = leaves, dark, overlapping; glowing spots, sparse; leaves are in the foreground  
+                        Down = leaves, dark, clustered; glowing spots, sparse; leaves are in the foreground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[8, 7, 11], [56, 44, 49], [38, 36, 7]]
+
+                        LeftDepth:
+                        [[29, 8, 7], [89, 100, 100], [38, 31, 40]]
+
+                        RightDepth:
+                        [[5, 6, 13], [4, 6, 95], [16, 22, 20]]
+
+                        DownDepth:
+                        [[15, 16, 16], [3, 11, 15], [16, 15, 17]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(18.77, 73.13, -10.0), 124.49],
+    [(15.94, 77.26, -10.0), 124.49],
+    [(15.94, 77.26, -10.0), 124.49],
+    [(15.94, 77.26, -10.0), 124.49],
+    [(15.94, 77.26, -10.0), 124.49],
+    [(15.94, 77.26, -10.0), 124.49],
+    [(15.94, 77.26, -10.0), 124.49],
+    [(15.94, 77.26, -10.0), 124.49],
+    [(15.94, 77.26, -10.0), 124.49],
+    [(15.94, 77.26, -10.0), 124.49],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 1
+                        DistanceTraveled = 5.000000000000002
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Dog**, described as: Organic quadrupedal form, smooth black fur with lean muscular build, erect ears and extended tail, posture indicates alertness and readiness for movement.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:1 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

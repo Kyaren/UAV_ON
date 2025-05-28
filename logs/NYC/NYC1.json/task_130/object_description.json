@@ -1,0 +1,35 @@
+{
+  "episode_id": "130",
+  "start_pose": {
+    "start_position": [
+      147.63572052327717,
+      684.0784961919245,
+      -7.700000017881393
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.5863684201202127,
+      0.8100444900656542
+    ]
+  },
+  "info": {
+    "geodesic_distance": 59,
+    "euclidean_distance": 39.6664
+  },
+  "map_name": "NYC_test",
+  "true_name": "Table",
+  "object_name": "SM_CafeTable01_514",
+  "pose": [
+    [
+      171.89999389648438,
+      653.0999755859375,
+      0.29999998211860657
+    ]
+  ],
+  "size": "small(1*1=1 squares)",
+  "description": "Geometric square form, green metallic frame with a flat dark green top, curved support legs with open underside, used for placing items or casual outdoor use.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

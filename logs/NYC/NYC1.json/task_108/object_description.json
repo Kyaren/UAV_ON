@@ -1,0 +1,35 @@
+{
+  "episode_id": "108",
+  "start_pose": {
+    "start_position": [
+      408.71564401888344,
+      801.7042883424717,
+      -6.600000023841858
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9970574760306865,
+      0.07665761208984351
+    ]
+  },
+  "info": {
+    "geodesic_distance": 49,
+    "euclidean_distance": 33.3035
+  },
+  "map_name": "NYC_test",
+  "true_name": "Car",
+  "object_name": "SK_NYCCar03_Rigged2_8",
+  "pose": [
+    [
+      424.29998779296875,
+      772.7000122070312,
+      1.399999976158142
+    ]
+  ],
+  "size": "mid(2.0*4.5=9.0 squares)",
+  "description": "Classic sedan, rusty red exterior with rounded body and chrome accents, slightly worn and aged appearance, designed for passenger transport.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

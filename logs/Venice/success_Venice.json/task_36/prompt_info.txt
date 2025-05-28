@@ -1,0 +1,378 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Statue,
+                        Size: mid(2.75*2.5=6.785 squares),
+                        Description: Organic seated figure, oxidized bronze and dark stone, detailed clothing folds and facial expression, commemorative sculptural monument.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [76, 177]  
+                        **Y Range**: [min_y, max_y] = [-16, 85]
+
+                        # RGB Captions
+                        Front = buildings, yellow and pink facades; orange tiled roofs; buildings are in the background; trees with yellow leaves; benches arranged in rows; fence in the foreground  
+                        Left = building, white facade; orange tiled roof; building is in the background; tree with yellow leaves; tennis court with green surface; fence surrounding the court  
+                        Right = basketball court, green surface; brown key; white lines; fence surrounding the court; water body beyond the fence  
+                        Down = basketball court, green surface; brown key; white lines; basketball hoop; fence on one side  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [39, 44, 60]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [20, 34, 39]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [60, 45, 56]]
+
+                        DownDepth:
+                        [[18, 15, 18], [15, 12, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(126.02, 34.14, -10.0), -63.2],
+    [(126.02, 34.14, -10.0), -63.2],
+    [(126.02, 34.14, -10.0), -63.2],
+    [(126.02, 34.14, -10.0), -63.2],
+    [(126.02, 34.14, -10.0), -63.2],
+    [(126.02, 34.14, -10.0), -63.2],
+    [(126.02, 34.14, -10.0), -63.2],
+    [(126.02, 34.14, -10.0), -63.2],
+    [(126.02, 34.14, -10.0), -63.2],
+    [(126.02, 34.14, -10.0), -63.2],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Statue**, described as:  Organic seated figure, oxidized bronze and dark stone, detailed clothing folds and facial expression, commemorative sculptural monument.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 1 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Statue,
+                        Size: mid(2.75*2.5=6.785 squares),
+                        Description: Organic seated figure, oxidized bronze and dark stone, detailed clothing folds and facial expression, commemorative sculptural monument.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [76, 177]  
+                        **Y Range**: [min_y, max_y] = [-16, 85]
+
+                        # RGB Captions
+                        Front = yellow building, multiple windows; orange roof; tree with yellow leaves; tree is in the foreground; building stands in the background  
+                        Left = white building, multiple windows; orange roof; tree with yellow leaves; tree is in the foreground; building stands in the background  
+                        Right = fence along the edge; green and brown court; fence is in the foreground; water body in the distant background  
+                        Down = green and brown basketball court; white lines; basketball hoop; court is in the foreground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [35, 43, 60]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [22, 35, 36]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [60, 47, 63]]
+
+                        DownDepth:
+                        [[18, 15, 18], [15, 12, 16], [18, 16, 19]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(126.02, 34.14, -10.0), -63.2],
+    [(128.27, 29.68, -10.0), -63.2],
+    [(128.27, 29.68, -10.0), -63.2],
+    [(128.27, 29.68, -10.0), -63.2],
+    [(128.27, 29.68, -10.0), -63.2],
+    [(128.27, 29.68, -10.0), -63.2],
+    [(128.27, 29.68, -10.0), -63.2],
+    [(128.27, 29.68, -10.0), -63.2],
+    [(128.27, 29.68, -10.0), -63.2],
+    [(128.27, 29.68, -10.0), -63.2],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 1
+                        DistanceTraveled = 5.000000000000003
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Statue**, described as:  Organic seated figure, oxidized bronze and dark stone, detailed clothing folds and facial expression, commemorative sculptural monument.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:1 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 2 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Statue,
+                        Size: mid(2.75*2.5=6.785 squares),
+                        Description: Organic seated figure, oxidized bronze and dark stone, detailed clothing folds and facial expression, commemorative sculptural monument.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [76, 177]  
+                        **Y Range**: [min_y, max_y] = [-16, 85]
+
+                        # RGB Captions
+                        Front = building, beige facade, red roof; building stands in the background; tree with yellow leaves, medium-sized; tree is in the foreground; statue on a pedestal, small; statue is near the tree  
+                        Left = building, white facade, red roof; building stands in the background; two trees with yellow leaves, medium-sized; trees are in the foreground; hat on the ground, white; hat is near the trees  
+                        Right = fence, metal chain-link; fence runs horizontally across the image; water body, calm; water is in the background; sky, clear blue; sky covers the upper half of the image  
+                        Down = basketball court, green surface; court occupies the lower right corner; person walking, small; person is near the court; shadows cast by objects, long; shadows are on the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [30, 44, 62]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [37, 30, 33]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [62, 47, 63]]
+
+                        DownDepth:
+                        [[18, 15, 24], [15, 12, 16], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(126.02, 34.14, -10.0), -63.2],
+    [(128.27, 29.68, -10.0), -63.2],
+    [(130.52, 25.21, -10.0), -63.2],
+    [(130.52, 25.21, -10.0), -63.2],
+    [(130.52, 25.21, -10.0), -63.2],
+    [(130.52, 25.21, -10.0), -63.2],
+    [(130.52, 25.21, -10.0), -63.2],
+    [(130.52, 25.21, -10.0), -63.2],
+    [(130.52, 25.21, -10.0), -63.2],
+    [(130.52, 25.21, -10.0), -63.2],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 2
+                        DistanceTraveled = 10.000000000000005
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Statue**, described as:  Organic seated figure, oxidized bronze and dark stone, detailed clothing folds and facial expression, commemorative sculptural monument.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:2 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 3 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Statue,
+                        Size: mid(2.75*2.5=6.785 squares),
+                        Description: Organic seated figure, oxidized bronze and dark stone, detailed clothing folds and facial expression, commemorative sculptural monument.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [76, 177]  
+                        **Y Range**: [min_y, max_y] = [-16, 85]
+
+                        # RGB Captions
+                        Front = building, beige facade, red roof; tree, yellow leaves; building in the background, slightly left of center  
+                        Left = square, paved ground; trees, yellow leaves; benches, arranged around a central fountain; buildings surrounding the square  
+                        Right = tree, green leaves; fence, metal links; water body, calm surface; tree in the foreground, to the left  
+                        Down = basketball court, green and brown; lounge chairs, arranged in rows; tree, yellow leaves; tree in the top right corner  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [24, 100, 100], [25, 42, 58]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [37, 29, 31]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [58, 47, 63]]
+
+                        DownDepth:
+                        [[18, 15, 22], [15, 12, 20], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(126.02, 34.14, -10.0), -63.2],
+    [(128.27, 29.68, -10.0), -63.2],
+    [(130.52, 25.21, -10.0), -63.2],
+    [(132.78, 20.75, -10.0), -63.2],
+    [(132.78, 20.75, -10.0), -63.2],
+    [(132.78, 20.75, -10.0), -63.2],
+    [(132.78, 20.75, -10.0), -63.2],
+    [(132.78, 20.75, -10.0), -63.2],
+    [(132.78, 20.75, -10.0), -63.2],
+    [(132.78, 20.75, -10.0), -63.2],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 3
+                        DistanceTraveled = 15.000000000000007
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Statue**, described as:  Organic seated figure, oxidized bronze and dark stone, detailed clothing folds and facial expression, commemorative sculptural monument.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:3 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 4 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Statue,
+                        Size: mid(2.75*2.5=6.785 squares),
+                        Description: Organic seated figure, oxidized bronze and dark stone, detailed clothing folds and facial expression, commemorative sculptural monument.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [76, 177]  
+                        **Y Range**: [min_y, max_y] = [-16, 85]
+
+                        # RGB Captions
+                        Front = multi-story buildings, yellow and pink facades; buildings stand in the background; orange tree in the foreground  
+                        Left = white building, green shutters; two yellow trees in front; building is in the background  
+                        Right = green tree, large canopy; tree is on the left; tennis court in the background  
+                        Down = rows of green chairs, arranged neatly; chairs are in the foreground; tree shadow cast over chairs  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [23, 40, 59]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 21, 25], [38, 23, 26]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [59, 47, 58]]
+
+                        DownDepth:
+                        [[18, 15, 17], [15, 12, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(126.02, 34.14, -10.0), -63.2],
+    [(128.27, 29.68, -10.0), -63.2],
+    [(130.52, 25.21, -10.0), -63.2],
+    [(132.78, 20.75, -10.0), -63.2],
+    [(128.32, 18.49, -10.0), -63.2],
+    [(128.32, 18.49, -10.0), -63.2],
+    [(128.32, 18.49, -10.0), -63.2],
+    [(128.32, 18.49, -10.0), -63.2],
+    [(128.32, 18.49, -10.0), -63.2],
+    [(128.32, 18.49, -10.0), -63.2],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 4
+                        DistanceTraveled = 20.000000000000007
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Statue**, described as:  Organic seated figure, oxidized bronze and dark stone, detailed clothing folds and facial expression, commemorative sculptural monument.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:4 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 5 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Statue,
+                        Size: mid(2.75*2.5=6.785 squares),
+                        Description: Organic seated figure, oxidized bronze and dark stone, detailed clothing folds and facial expression, commemorative sculptural monument.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [76, 177]  
+                        **Y Range**: [min_y, max_y] = [-16, 85]
+
+                        # RGB Captions
+                        Front = building, beige facade, multiple windows; building stands in the background; tree with orange leaves in the foreground  
+                        Left = buildings, white and yellow facades, multiple windows; trees with yellow leaves in the courtyard; buildings form a corner structure  
+                        Right = tree, green leaves, large canopy; tree is in the foreground; fence to the right of the tree; sky is clear with some clouds  
+                        Down = statue, dark material, central position; rows of benches around the statue; tree with green leaves on the right; paved ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [20, 35, 60]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 24, 23], [53, 25, 24]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [60, 47, 63]]
+
+                        DownDepth:
+                        [[23, 15, 24], [15, 12, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(126.02, 34.14, -10.0), -63.2],
+    [(128.27, 29.68, -10.0), -63.2],
+    [(130.52, 25.21, -10.0), -63.2],
+    [(132.78, 20.75, -10.0), -63.2],
+    [(128.32, 18.49, -10.0), -63.2],
+    [(130.57, 14.03, -10.0), -63.2],
+    [(130.57, 14.03, -10.0), -63.2],
+    [(130.57, 14.03, -10.0), -63.2],
+    [(130.57, 14.03, -10.0), -63.2],
+    [(130.57, 14.03, -10.0), -63.2],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 5
+                        DistanceTraveled = 25.00000000000001
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Statue**, described as:  Organic seated figure, oxidized bronze and dark stone, detailed clothing folds and facial expression, commemorative sculptural monument.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:5 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

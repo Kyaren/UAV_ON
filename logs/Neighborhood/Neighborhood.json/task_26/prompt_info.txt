@@ -1,0 +1,1323 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Pallet,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Geometric rectangular form, light brown wood with slatted top surface, open base structure for forklift access, used for stacking and transporting goods.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-300, -199]  
+                        **Y Range**: [min_y, max_y] = [-9, 92]
+
+                        # RGB Captions
+                        Front = green trees, tall, evergreen; trees are in the foreground and background; grassy field surrounding  
+                        Left = green trees, dense, coniferous; trees form a cluster; grassy path through the center  
+                        Right = house building, brick exterior, shingled roof; house is in the foreground; trees in the background; road to the right  
+                        Down = tree shadow, long, on grass; shadow is in the foreground; hedge row along the side  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 36, 47]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 35, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 26, 46]]
+
+                        DownDepth:
+                        [[18, 16, 18], [16, 12, 16], [17, 16, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-249.46, 41.36, -10.0), 140.96],
+    [(-249.46, 41.36, -10.0), 140.96],
+    [(-249.46, 41.36, -10.0), 140.96],
+    [(-249.46, 41.36, -10.0), 140.96],
+    [(-249.46, 41.36, -10.0), 140.96],
+    [(-249.46, 41.36, -10.0), 140.96],
+    [(-249.46, 41.36, -10.0), 140.96],
+    [(-249.46, 41.36, -10.0), 140.96],
+    [(-249.46, 41.36, -10.0), 140.96],
+    [(-249.46, 41.36, -10.0), 140.96],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Pallet**, described as: Geometric rectangular form, light brown wood with slatted top surface, open base structure for forklift access, used for stacking and transporting goods.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 1 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Pallet,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Geometric rectangular form, light brown wood with slatted top surface, open base structure for forklift access, used for stacking and transporting goods.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-300, -199]  
+                        **Y Range**: [min_y, max_y] = [-9, 92]
+
+                        # RGB Captions
+                        Front = green trees, tall, coniferous; trees are in the foreground and background; grassy field surrounding  
+                        Left = green trees, dense, coniferous; trees are in the foreground and background; grassy field surrounding  
+                        Right = house building, brown roof, brick walls; house is in the foreground; green trees in the background; power lines above  
+                        Down = hedgerow, long, green; hedgerow runs vertically through the image; shadows cast on the grass  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 36, 45]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 36, 47]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 36, 23]]
+
+                        DownDepth:
+                        [[18, 16, 18], [16, 12, 16], [17, 16, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-249.46, 41.36, -10.0), 140.96],
+    [(-253.34, 44.51, -10.0), 140.96],
+    [(-253.34, 44.51, -10.0), 140.96],
+    [(-253.34, 44.51, -10.0), 140.96],
+    [(-253.34, 44.51, -10.0), 140.96],
+    [(-253.34, 44.51, -10.0), 140.96],
+    [(-253.34, 44.51, -10.0), 140.96],
+    [(-253.34, 44.51, -10.0), 140.96],
+    [(-253.34, 44.51, -10.0), 140.96],
+    [(-253.34, 44.51, -10.0), 140.96],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 1
+                        DistanceTraveled = 5.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Pallet**, described as: Geometric rectangular form, light brown wood with slatted top surface, open base structure for forklift access, used for stacking and transporting goods.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:1 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 2 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Pallet,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Geometric rectangular form, light brown wood with slatted top surface, open base structure for forklift access, used for stacking and transporting goods.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-300, -199]  
+                        **Y Range**: [min_y, max_y] = [-9, 92]
+
+                        # RGB Captions
+                        Front = tall trees, green leaves; trees are in the foreground and background; grassy field surrounding  
+                        Left = evergreen trees, dense foliage; trees are in the foreground and background; grassy field surrounding  
+                        Right = house building, brown roof; house is in the foreground; trees in the background; grassy field surrounding  
+                        Down = hedge row, green leaves; hedge is in the foreground; shadow cast on the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 36, 47]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [40, 36, 47]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 35, 27]]
+
+                        DownDepth:
+                        [[18, 15, 18], [15, 12, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-249.46, 41.36, -10.0), 140.96],
+    [(-253.34, 44.51, -10.0), 140.96],
+    [(-257.22, 47.66, -10.0), 140.96],
+    [(-257.22, 47.66, -10.0), 140.96],
+    [(-257.22, 47.66, -10.0), 140.96],
+    [(-257.22, 47.66, -10.0), 140.96],
+    [(-257.22, 47.66, -10.0), 140.96],
+    [(-257.22, 47.66, -10.0), 140.96],
+    [(-257.22, 47.66, -10.0), 140.96],
+    [(-257.22, 47.66, -10.0), 140.96],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 2
+                        DistanceTraveled = 9.999999999999979
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Pallet**, described as: Geometric rectangular form, light brown wood with slatted top surface, open base structure for forklift access, used for stacking and transporting goods.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:2 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 3 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Pallet,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Geometric rectangular form, light brown wood with slatted top surface, open base structure for forklift access, used for stacking and transporting goods.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-300, -199]  
+                        **Y Range**: [min_y, max_y] = [-9, 92]
+
+                        # RGB Captions
+                        Front = telephone pole, wooden; power lines, hanging; trees, green leaves; grassy field, expansive; pole in the foreground; trees in the background  
+                        Left = trees, tall and coniferous; grassy field, expansive; tree shadows, long; trees scattered across the field  
+                        Right = house, brown siding; trees, green leaves; grassy field, expansive; power lines, hanging; house in the foreground; trees in the background  
+                        Down = hedge, neatly trimmed; shadow, elongated; grassy field, expansive; hedge in the foreground; shadow stretching towards the background  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 36, 47]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 36, 47]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 35, 31]]
+
+                        DownDepth:
+                        [[18, 15, 18], [15, 12, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-249.46, 41.36, -10.0), 140.96],
+    [(-253.34, 44.51, -10.0), 140.96],
+    [(-257.22, 47.66, -10.0), 140.96],
+    [(-261.11, 50.81, -10.0), 140.96],
+    [(-261.11, 50.81, -10.0), 140.96],
+    [(-261.11, 50.81, -10.0), 140.96],
+    [(-261.11, 50.81, -10.0), 140.96],
+    [(-261.11, 50.81, -10.0), 140.96],
+    [(-261.11, 50.81, -10.0), 140.96],
+    [(-261.11, 50.81, -10.0), 140.96],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 3
+                        DistanceTraveled = 15.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Pallet**, described as: Geometric rectangular form, light brown wood with slatted top surface, open base structure for forklift access, used for stacking and transporting goods.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:3 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 4 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Pallet,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Geometric rectangular form, light brown wood with slatted top surface, open base structure for forklift access, used for stacking and transporting goods.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-300, -199]  
+                        **Y Range**: [min_y, max_y] = [-9, 92]
+
+                        # RGB Captions
+                        Front = green trees, dense foliage; trees are in the foreground and background; grassy field  
+                        Left = green trees, dense foliage; trees are in the foreground and background; grassy field with a small animal  
+                        Right = telephone pole, wooden; power lines; trees in the background; residential building on the right  
+                        Down = swing set, metal frame; swing set is in the foreground; tree shadow on the grass  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 36, 47]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [37, 36, 47]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 36, 37]]
+
+                        DownDepth:
+                        [[18, 15, 18], [15, 12, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-249.46, 41.36, -10.0), 140.96],
+    [(-253.34, 44.51, -10.0), 140.96],
+    [(-257.22, 47.66, -10.0), 140.96],
+    [(-261.11, 50.81, -10.0), 140.96],
+    [(-264.99, 53.95, -10.0), 140.96],
+    [(-264.99, 53.95, -10.0), 140.96],
+    [(-264.99, 53.95, -10.0), 140.96],
+    [(-264.99, 53.95, -10.0), 140.96],
+    [(-264.99, 53.95, -10.0), 140.96],
+    [(-264.99, 53.95, -10.0), 140.96],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 4
+                        DistanceTraveled = 20.00000000000002
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Pallet**, described as: Geometric rectangular form, light brown wood with slatted top surface, open base structure for forklift access, used for stacking and transporting goods.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:4 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 5 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Pallet,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Geometric rectangular form, light brown wood with slatted top surface, open base structure for forklift access, used for stacking and transporting goods.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-300, -199]  
+                        **Y Range**: [min_y, max_y] = [-9, 92]
+
+                        # RGB Captions
+                        Front = green trees, dense foliage; grassy field; trees in the foreground and background  
+                        Left = green trees, dense foliage; grassy field; trees scattered across the landscape  
+                        Right = green trees, dense foliage; grassy field; pathway dividing the scene  
+                        Down = telephone pole, casting shadow; grassy field with small flowers  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 36, 47]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [35, 36, 47]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 36, 38]]
+
+                        DownDepth:
+                        [[18, 15, 18], [15, 12, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-249.46, 41.36, -10.0), 140.96],
+    [(-253.34, 44.51, -10.0), 140.96],
+    [(-257.22, 47.66, -10.0), 140.96],
+    [(-261.11, 50.81, -10.0), 140.96],
+    [(-264.99, 53.95, -10.0), 140.96],
+    [(-268.88, 57.1, -10.0), 140.96],
+    [(-268.88, 57.1, -10.0), 140.96],
+    [(-268.88, 57.1, -10.0), 140.96],
+    [(-268.88, 57.1, -10.0), 140.96],
+    [(-268.88, 57.1, -10.0), 140.96],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 5
+                        DistanceTraveled = 25.000000000000043
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Pallet**, described as: Geometric rectangular form, light brown wood with slatted top surface, open base structure for forklift access, used for stacking and transporting goods.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:5 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 6 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Pallet,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Geometric rectangular form, light brown wood with slatted top surface, open base structure for forklift access, used for stacking and transporting goods.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-300, -199]  
+                        **Y Range**: [min_y, max_y] = [-9, 92]
+
+                        # RGB Captions
+                        Front = trees, green leaves; grassy ground; trees in the foreground and background  
+                        Left = trees, dense foliage; grassy field; two animals grazing; trees surrounding the field  
+                        Right = trees, lush canopies; trimmed hedges; grassy pathways; building structure in the distance  
+                        Down = telephone pole, casting shadow; power lines; grassy field; pole in the foreground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [43, 35, 47]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [39, 35, 44]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 35, 44]]
+
+                        DownDepth:
+                        [[18, 15, 18], [15, 12, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-249.46, 41.36, -10.0), 140.96],
+    [(-253.34, 44.51, -10.0), 140.96],
+    [(-257.22, 47.66, -10.0), 140.96],
+    [(-261.11, 50.81, -10.0), 140.96],
+    [(-264.99, 53.95, -10.0), 140.96],
+    [(-268.88, 57.1, -10.0), 140.96],
+    [(-272.76, 60.25, -10.0), 140.96],
+    [(-272.76, 60.25, -10.0), 140.96],
+    [(-272.76, 60.25, -10.0), 140.96],
+    [(-272.76, 60.25, -10.0), 140.96],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 6
+                        DistanceTraveled = 30.000000000000064
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Pallet**, described as: Geometric rectangular form, light brown wood with slatted top surface, open base structure for forklift access, used for stacking and transporting goods.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:6 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 7 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Pallet,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Geometric rectangular form, light brown wood with slatted top surface, open base structure for forklift access, used for stacking and transporting goods.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-300, -199]  
+                        **Y Range**: [min_y, max_y] = [-9, 92]
+
+                        # RGB Captions
+                        Front = large tree, dense foliage; tree is in the foreground; grassy ground  
+                        Left = small tree, sparse leaves; tree is in the foreground; grassy field  
+                        Right = tree, full foliage; tree is in the foreground; hedge row along the path  
+                        Down = telephone pole, multiple lines; pole is in the foreground; grassy field  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 27], [100, 100, 100], [45, 35, 46]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [42, 35, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 35, 46]]
+
+                        DownDepth:
+                        [[18, 15, 18], [15, 12, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-249.46, 41.36, -10.0), 140.96],
+    [(-253.34, 44.51, -10.0), 140.96],
+    [(-257.22, 47.66, -10.0), 140.96],
+    [(-261.11, 50.81, -10.0), 140.96],
+    [(-264.99, 53.95, -10.0), 140.96],
+    [(-268.88, 57.1, -10.0), 140.96],
+    [(-272.76, 60.25, -10.0), 140.96],
+    [(-276.64, 63.4, -10.0), 140.96],
+    [(-276.64, 63.4, -10.0), 140.96],
+    [(-276.64, 63.4, -10.0), 140.96],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 7
+                        DistanceTraveled = 35.000000000000085
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Pallet**, described as: Geometric rectangular form, light brown wood with slatted top surface, open base structure for forklift access, used for stacking and transporting goods.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:7 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 8 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Pallet,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Geometric rectangular form, light brown wood with slatted top surface, open base structure for forklift access, used for stacking and transporting goods.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-300, -199]  
+                        **Y Range**: [min_y, max_y] = [-9, 92]
+
+                        # RGB Captions
+                        Front = oak tree, green leaves; tree is in the foreground; grassy ground  
+                        Left = tree, medium-sized, green leaves; tree is in the center; grassy field surrounding  
+                        Right = trees, green leaves; trees are scattered; grassy field with hedge on the right  
+                        Down = telephone pole, black; pole is in the foreground; grassy field in the background  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 20], [64, 100, 100], [41, 35, 46]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 35, 42]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 35, 46]]
+
+                        DownDepth:
+                        [[18, 15, 18], [15, 12, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-249.46, 41.36, -10.0), 140.96],
+    [(-253.34, 44.51, -10.0), 140.96],
+    [(-257.22, 47.66, -10.0), 140.96],
+    [(-261.11, 50.81, -10.0), 140.96],
+    [(-264.99, 53.95, -10.0), 140.96],
+    [(-268.88, 57.1, -10.0), 140.96],
+    [(-272.76, 60.25, -10.0), 140.96],
+    [(-276.64, 63.4, -10.0), 140.96],
+    [(-280.53, 66.55, -10.0), 140.96],
+    [(-280.53, 66.55, -10.0), 140.96],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 8
+                        DistanceTraveled = 40.00000000000011
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Pallet**, described as: Geometric rectangular form, light brown wood with slatted top surface, open base structure for forklift access, used for stacking and transporting goods.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:8 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 9 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Pallet,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Geometric rectangular form, light brown wood with slatted top surface, open base structure for forklift access, used for stacking and transporting goods.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-300, -199]  
+                        **Y Range**: [min_y, max_y] = [-9, 92]
+
+                        # RGB Captions
+                        Front = dark leaves, dense cluster; leaves are in the foreground; branches extending from top left  
+                        Left = green trees, lush foliage; trees are on both sides; grassy field in the center; sunlight filtering through  
+                        Right = green leaves, hanging downward; leaves are in the foreground; shadows cast on the ground below  
+                        Down = tree shadow, elongated shape; shadow is in the bottom left; patterned surface in the background  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[57, 10, 24], [46, 100, 100], [34, 35, 39]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [43, 35, 36]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 35, 42]]
+
+                        DownDepth:
+                        [[18, 15, 18], [15, 11, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-249.46, 41.36, -10.0), 140.96],
+    [(-253.34, 44.51, -10.0), 140.96],
+    [(-257.22, 47.66, -10.0), 140.96],
+    [(-261.11, 50.81, -10.0), 140.96],
+    [(-264.99, 53.95, -10.0), 140.96],
+    [(-268.88, 57.1, -10.0), 140.96],
+    [(-272.76, 60.25, -10.0), 140.96],
+    [(-276.64, 63.4, -10.0), 140.96],
+    [(-280.53, 66.55, -10.0), 140.96],
+    [(-284.41, 69.7, -10.0), 140.96],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 9
+                        DistanceTraveled = 45.000000000000135
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Pallet**, described as: Geometric rectangular form, light brown wood with slatted top surface, open base structure for forklift access, used for stacking and transporting goods.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:9 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 10 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Pallet,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Geometric rectangular form, light brown wood with slatted top surface, open base structure for forklift access, used for stacking and transporting goods.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-300, -199]  
+                        **Y Range**: [min_y, max_y] = [-9, 92]
+
+                        # RGB Captions
+                        Front = dark leaves, dense cluster; leaves cover most of the image; small light spots scattered  
+                        Left = green trees, dense foliage; two horses grazing; grassy field in the background  
+                        Right = dark leaves, dense cluster; leaves cover most of the image; small light spots scattered  
+                        Down = tree branches, leaf shadows; shadows cast on a light surface; branches extend across the image  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 9], [29, 100, 0], [27, 33, 27]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 31], [46, 35, 24]]
+
+                        RightDepth:
+                        [[100, 16, 15], [100, 54, 100], [45, 34, 19]]
+
+                        DownDepth:
+                        [[16, 15, 18], [15, 11, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-253.34, 44.51, -10.0), 140.96],
+    [(-257.22, 47.66, -10.0), 140.96],
+    [(-261.11, 50.81, -10.0), 140.96],
+    [(-264.99, 53.95, -10.0), 140.96],
+    [(-268.88, 57.1, -10.0), 140.96],
+    [(-272.76, 60.25, -10.0), 140.96],
+    [(-276.64, 63.4, -10.0), 140.96],
+    [(-280.53, 66.55, -10.0), 140.96],
+    [(-284.41, 69.7, -10.0), 140.96],
+    [(-288.29, 72.85, -10.0), 140.96],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 10
+                        DistanceTraveled = 50.000000000000156
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Pallet**, described as: Geometric rectangular form, light brown wood with slatted top surface, open base structure for forklift access, used for stacking and transporting goods.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:10 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 11 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Pallet,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Geometric rectangular form, light brown wood with slatted top surface, open base structure for forklift access, used for stacking and transporting goods.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-300, -199]  
+                        **Y Range**: [min_y, max_y] = [-9, 92]
+
+                        # RGB Captions
+                        Front = large tree, dense foliage, dark green leaves; tree occupies the foreground; sunlight filtering through branches  
+                        Left = tree trunk, thick, dark bark; trunk is in the foreground; shadows cast on the ground  
+                        Right = pathway, narrow, gravel surface; pathway runs through the middle ground; trees on both sides  
+                        Down = small pond, calm water, reflective surface; pond is in the background; surrounded by dense foliage  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [46, 100, 100], [42, 35, 46]]
+
+                        LeftDepth:
+                        [[100, 16, 100], [100, 100, 6], [46, 21, 22]]
+
+                        RightDepth:
+                        [[11, 15, 20], [100, 100, 100], [46, 34, 46]]
+
+                        DownDepth:
+                        [[14, 15, 18], [15, 11, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-257.22, 47.66, -10.0), 140.96],
+    [(-261.11, 50.81, -10.0), 140.96],
+    [(-264.99, 53.95, -10.0), 140.96],
+    [(-268.88, 57.1, -10.0), 140.96],
+    [(-272.76, 60.25, -10.0), 140.96],
+    [(-276.64, 63.4, -10.0), 140.96],
+    [(-280.53, 66.55, -10.0), 140.96],
+    [(-284.41, 69.7, -10.0), 140.96],
+    [(-288.29, 72.85, -10.0), 140.96],
+    [(-292.18, 76.0, -10.0), 140.96],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 11
+                        DistanceTraveled = 55.00000000000017
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Pallet**, described as: Geometric rectangular form, light brown wood with slatted top surface, open base structure for forklift access, used for stacking and transporting goods.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:11 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 12 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Pallet,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Geometric rectangular form, light brown wood with slatted top surface, open base structure for forklift access, used for stacking and transporting goods.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-300, -199]  
+                        **Y Range**: [min_y, max_y] = [-9, 92]
+
+                        # RGB Captions
+                        Front = trees, dense foliage, green leaves; trees are in the foreground and background; sunlight filtering through  
+                        Left = tree, dense foliage, dark leaves; tree is in the foreground; sunlight partially obscured  
+                        Right = archway, dark structure, shadowy interior; trees, green leaves, in the background; sunlight on grass  
+                        Down = tree, thick trunk, broad canopy; tree is in the foreground; grassy ground below  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [37, 35, 46]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 56, 100], [46, 25, 43]]
+
+                        RightDepth:
+                        [[100, 100, 5], [100, 100, 100], [46, 35, 43]]
+
+                        DownDepth:
+                        [[18, 15, 18], [15, 11, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-261.11, 50.81, -10.0), 140.96],
+    [(-264.99, 53.95, -10.0), 140.96],
+    [(-268.88, 57.1, -10.0), 140.96],
+    [(-272.76, 60.25, -10.0), 140.96],
+    [(-276.64, 63.4, -10.0), 140.96],
+    [(-280.53, 66.55, -10.0), 140.96],
+    [(-284.41, 69.7, -10.0), 140.96],
+    [(-288.29, 72.85, -10.0), 140.96],
+    [(-292.18, 76.0, -10.0), 140.96],
+    [(-295.33, 72.12, -10.0), 140.96],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 12
+                        DistanceTraveled = 60.00000000000016
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Pallet**, described as: Geometric rectangular form, light brown wood with slatted top surface, open base structure for forklift access, used for stacking and transporting goods.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:12 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 13 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Pallet,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Geometric rectangular form, light brown wood with slatted top surface, open base structure for forklift access, used for stacking and transporting goods.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-300, -199]  
+                        **Y Range**: [min_y, max_y] = [-9, 92]
+
+                        # RGB Captions
+                        Front = trees, green leaves, scattered; grassy field, open space; trees in the foreground and background  
+                        Left = tree trunk, thick, dark; branches extending outward; sunlight filtering through leaves  
+                        Right = trees, green foliage, spread out; grassy area, expansive; trees casting shadows on the ground  
+                        Down = shadow of a tree, large, on the grass; sunlight creating contrast; tree partially visible at the edge  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [41, 35, 45]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [4, 82, 100], [34, 35, 42]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 35, 44]]
+
+                        DownDepth:
+                        [[18, 15, 18], [15, 11, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-264.99, 53.95, -10.0), 140.96],
+    [(-268.88, 57.1, -10.0), 140.96],
+    [(-272.76, 60.25, -10.0), 140.96],
+    [(-276.64, 63.4, -10.0), 140.96],
+    [(-280.53, 66.55, -10.0), 140.96],
+    [(-284.41, 69.7, -10.0), 140.96],
+    [(-288.29, 72.85, -10.0), 140.96],
+    [(-292.18, 76.0, -10.0), 140.96],
+    [(-295.33, 72.12, -10.0), 140.96],
+    [(-298.48, 68.23, -10.0), 140.96],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 13
+                        DistanceTraveled = 65.00000000000016
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Pallet**, described as: Geometric rectangular form, light brown wood with slatted top surface, open base structure for forklift access, used for stacking and transporting goods.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:13 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 14 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Pallet,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Geometric rectangular form, light brown wood with slatted top surface, open base structure for forklift access, used for stacking and transporting goods.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-300, -199]  
+                        **Y Range**: [min_y, max_y] = [-9, 92]
+
+                        # RGB Captions
+                        Front = tree, large, green leaves; tree is in the foreground; grassy field in the background  
+                        Left = tree trunk, thick, dark bark; trunk is in the foreground; grassy field in the background  
+                        Right = trees, multiple, green leaves; trees are scattered across the scene; grassy field covers the ground  
+                        Down = tree shadow, large, on grass; shadow is in the foreground; grassy field surrounds the shadow  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [43, 35, 45]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 61, 100], [45, 33, 41]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 35, 45]]
+
+                        DownDepth:
+                        [[18, 15, 18], [15, 11, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-268.88, 57.1, -10.0), 140.96],
+    [(-272.76, 60.25, -10.0), 140.96],
+    [(-276.64, 63.4, -10.0), 140.96],
+    [(-280.53, 66.55, -10.0), 140.96],
+    [(-284.41, 69.7, -10.0), 140.96],
+    [(-288.29, 72.85, -10.0), 140.96],
+    [(-292.18, 76.0, -10.0), 140.96],
+    [(-295.33, 72.12, -10.0), 140.96],
+    [(-298.48, 68.23, -10.0), 140.96],
+    [(-298.48, 68.23, -10.0), 125.96],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 14
+                        DistanceTraveled = 65.00000000000016
+                        AvgHeadingChange = 1.07
+
+                        # Reminder  
+                        - The target is **Pallet**, described as: Geometric rectangular form, light brown wood with slatted top surface, open base structure for forklift access, used for stacking and transporting goods.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:14 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 15 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Pallet,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Geometric rectangular form, light brown wood with slatted top surface, open base structure for forklift access, used for stacking and transporting goods.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-300, -199]  
+                        **Y Range**: [min_y, max_y] = [-9, 92]
+
+                        # RGB Captions
+                        Front = tall tree, dark trunk; tree is in the foreground; sunlight filtering through leaves  
+                        Left = large tree, thick trunk; tree is in the foreground; shadows cast on the grass  
+                        Right = open field, green grass; trees scattered around; bright sky above  
+                        Down = shadow of a person, on the grass; shadow is in the foreground; tree branches casting patterns  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[14, 100, 100], [100, 100, 100], [40, 35, 45]]
+
+                        LeftDepth:
+                        [[100, 100, 14], [100, 100, 73], [45, 35, 35]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 35, 44]]
+
+                        DownDepth:
+                        [[18, 15, 18], [15, 11, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-272.76, 60.25, -10.0), 140.96],
+    [(-276.64, 63.4, -10.0), 140.96],
+    [(-280.53, 66.55, -10.0), 140.96],
+    [(-284.41, 69.7, -10.0), 140.96],
+    [(-288.29, 72.85, -10.0), 140.96],
+    [(-292.18, 76.0, -10.0), 140.96],
+    [(-295.33, 72.12, -10.0), 140.96],
+    [(-298.48, 68.23, -10.0), 140.96],
+    [(-298.48, 68.23, -10.0), 125.96],
+    [(-298.48, 68.23, -10.0), 110.96],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 15
+                        DistanceTraveled = 65.00000000000016
+                        AvgHeadingChange = 2.0
+
+                        # Reminder  
+                        - The target is **Pallet**, described as: Geometric rectangular form, light brown wood with slatted top surface, open base structure for forklift access, used for stacking and transporting goods.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:15 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 16 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Pallet,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Geometric rectangular form, light brown wood with slatted top surface, open base structure for forklift access, used for stacking and transporting goods.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-300, -199]  
+                        **Y Range**: [min_y, max_y] = [-9, 92]
+
+                        # RGB Captions
+                        Front = trees, dense foliage, green leaves; trees are in the foreground and background; sunlight filtering through branches  
+                        Left = tree branch, thick trunk, large size; branch extends across the image; sunlight visible through gaps in leaves  
+                        Right = trees, scattered arrangement, green leaves; trees are in the midground and background; sunlight creates shadows on grass  
+                        Down = shadow of tree, cast on ground, distinct shape; shadow is in the foreground; tree branches visible above  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [33, 35, 45]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 60], [40, 35, 34]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 35, 45]]
+
+                        DownDepth:
+                        [[18, 15, 18], [15, 11, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-276.64, 63.4, -10.0), 140.96],
+    [(-280.53, 66.55, -10.0), 140.96],
+    [(-284.41, 69.7, -10.0), 140.96],
+    [(-288.29, 72.85, -10.0), 140.96],
+    [(-292.18, 76.0, -10.0), 140.96],
+    [(-295.33, 72.12, -10.0), 140.96],
+    [(-298.48, 68.23, -10.0), 140.96],
+    [(-298.48, 68.23, -10.0), 125.96],
+    [(-298.48, 68.23, -10.0), 110.96],
+    [(-298.48, 68.23, -10.0), 95.96],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 16
+                        DistanceTraveled = 65.00000000000016
+                        AvgHeadingChange = 2.81
+
+                        # Reminder  
+                        - The target is **Pallet**, described as: Geometric rectangular form, light brown wood with slatted top surface, open base structure for forklift access, used for stacking and transporting goods.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:16 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 17 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Pallet,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Geometric rectangular form, light brown wood with slatted top surface, open base structure for forklift access, used for stacking and transporting goods.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-300, -199]  
+                        **Y Range**: [min_y, max_y] = [-9, 92]
+
+                        # RGB Captions
+                        Front = trees, dense foliage, green leaves; trees are in the foreground and background; sunlight filtering through branches  
+                        Left = tree trunk, thick, dark bark; trunk is in the foreground; branches extending outward  
+                        Right = trees, scattered, green leaves; trees are in the midground and background; sunlight creating shadows on grass  
+                        Down = shadow of tree, cast on grass, intricate pattern; shadow is in the foreground; tree trunks partially visible  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [38, 35, 45]]
+
+                        LeftDepth:
+                        [[100, 14, 100], [100, 100, 100], [40, 35, 35]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 35, 45]]
+
+                        DownDepth:
+                        [[17, 15, 18], [15, 11, 15], [17, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-280.53, 66.55, -10.0), 140.96],
+    [(-284.41, 69.7, -10.0), 140.96],
+    [(-288.29, 72.85, -10.0), 140.96],
+    [(-292.18, 76.0, -10.0), 140.96],
+    [(-295.33, 72.12, -10.0), 140.96],
+    [(-298.48, 68.23, -10.0), 140.96],
+    [(-298.48, 68.23, -10.0), 125.96],
+    [(-298.48, 68.23, -10.0), 110.96],
+    [(-298.48, 68.23, -10.0), 95.96],
+    [(-298.99, 73.2, -10.0), 95.96],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 17
+                        DistanceTraveled = 70.00000000000016
+                        AvgHeadingChange = 2.65
+
+                        # Reminder  
+                        - The target is **Pallet**, described as: Geometric rectangular form, light brown wood with slatted top surface, open base structure for forklift access, used for stacking and transporting goods.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:17 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 18 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Pallet,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Geometric rectangular form, light brown wood with slatted top surface, open base structure for forklift access, used for stacking and transporting goods.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-300, -199]  
+                        **Y Range**: [min_y, max_y] = [-9, 92]
+
+                        # RGB Captions
+                        Front = trees, dense foliage, green leaves; trees are in the foreground and background; sunlight filtering through branches  
+                        Left = tree trunk, dark bark, thick; trunk is in the foreground; shadows cast on the grass  
+                        Right = trees, scattered, green leaves; trees are in the foreground and background; sunlight visible through branches  
+                        Down = shadow of a tree, leafy pattern, on grass; shadow is in the foreground; grass is in the background  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [99, 100, 100], [24, 34, 45]]
+
+                        LeftDepth:
+                        [[18, 100, 100], [100, 100, 100], [44, 35, 43]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 35, 45]]
+
+                        DownDepth:
+                        [[18, 15, 18], [15, 11, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-284.41, 69.7, -10.0), 140.96],
+    [(-288.29, 72.85, -10.0), 140.96],
+    [(-292.18, 76.0, -10.0), 140.96],
+    [(-295.33, 72.12, -10.0), 140.96],
+    [(-298.48, 68.23, -10.0), 140.96],
+    [(-298.48, 68.23, -10.0), 125.96],
+    [(-298.48, 68.23, -10.0), 110.96],
+    [(-298.48, 68.23, -10.0), 95.96],
+    [(-298.99, 73.2, -10.0), 95.96],
+    [(-298.99, 73.2, -10.0), 80.96],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 18
+                        DistanceTraveled = 70.00000000000016
+                        AvgHeadingChange = 3.33
+
+                        # Reminder  
+                        - The target is **Pallet**, described as: Geometric rectangular form, light brown wood with slatted top surface, open base structure for forklift access, used for stacking and transporting goods.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:18 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 19 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Pallet,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Geometric rectangular form, light brown wood with slatted top surface, open base structure for forklift access, used for stacking and transporting goods.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-300, -199]  
+                        **Y Range**: [min_y, max_y] = [-9, 92]
+
+                        # RGB Captions
+                        Front = trees, dense foliage, green leaves; trees are in the foreground and background; sunlight filtering through leaves  
+                        Left = tree branch, thick, dark brown; branch is in the foreground; sunlight filtering through leaves  
+                        Right = trees, sparse foliage, green leaves; trees are in the foreground and background; sunlight casting shadows on grass  
+                        Down = shadow of a tree, large, intricate pattern; shadow is on the ground; feet visible at the edge of the shadow  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [31, 30, 40]]
+
+                        LeftDepth:
+                        [[100, 16, 100], [100, 100, 100], [44, 36, 36]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [40, 35, 51]]
+
+                        DownDepth:
+                        [[17, 14, 17], [15, 11, 15], [19, 16, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-288.29, 72.85, -10.0), 140.96],
+    [(-292.18, 76.0, -10.0), 140.96],
+    [(-295.33, 72.12, -10.0), 140.96],
+    [(-298.48, 68.23, -10.0), 140.96],
+    [(-298.48, 68.23, -10.0), 125.96],
+    [(-298.48, 68.23, -10.0), 110.96],
+    [(-298.48, 68.23, -10.0), 95.96],
+    [(-298.99, 73.2, -10.0), 95.96],
+    [(-298.99, 73.2, -10.0), 80.96],
+    [(-298.21, 78.14, -10.0), 80.96],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 19
+                        DistanceTraveled = 75.00000000000014
+                        AvgHeadingChange = 3.16
+
+                        # Reminder  
+                        - The target is **Pallet**, described as: Geometric rectangular form, light brown wood with slatted top surface, open base structure for forklift access, used for stacking and transporting goods.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:19 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 20 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Pallet,
+                        Size:small(1*0.75=0.75 squares),
+                        Description:Geometric rectangular form, light brown wood with slatted top surface, open base structure for forklift access, used for stacking and transporting goods.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-300, -199]  
+                        **Y Range**: [min_y, max_y] = [-9, 92]
+
+                        # RGB Captions
+                        Front = trees, dense foliage, green leaves; sunlight filtering through; trees surround the area  
+                        Left = tree branches, dark shadows, sparse leaves; light source from above; branches spread across the frame  
+                        Right = trees, scattered arrangement, green leaves; sunlight in the background; trees cast shadows on the ground  
+                        Down = leaves, shadowed, green color; light source from above; leaves partially cover the view  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [33, 34, 31]]
+
+                        LeftDepth:
+                        [[100, 100, 5], [100, 100, 18], [47, 37, 6]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [34, 31, 43]]
+
+                        DownDepth:
+                        [[8, 15, 17], [16, 11, 14], [19, 15, 17]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-292.18, 76.0, -10.0), 140.96],
+    [(-295.33, 72.12, -10.0), 140.96],
+    [(-298.48, 68.23, -10.0), 140.96],
+    [(-298.48, 68.23, -10.0), 125.96],
+    [(-298.48, 68.23, -10.0), 110.96],
+    [(-298.48, 68.23, -10.0), 95.96],
+    [(-298.99, 73.2, -10.0), 95.96],
+    [(-298.99, 73.2, -10.0), 80.96],
+    [(-298.21, 78.14, -10.0), 80.96],
+    [(-297.42, 83.08, -10.0), 80.96],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 20
+                        DistanceTraveled = 80.00000000000013
+                        AvgHeadingChange = 3.0
+
+                        # Reminder  
+                        - The target is **Pallet**, described as: Geometric rectangular form, light brown wood with slatted top surface, open base structure for forklift access, used for stacking and transporting goods.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:20 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

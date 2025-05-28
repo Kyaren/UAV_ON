@@ -1,0 +1,35 @@
+{
+  "episode_id": "23",
+  "start_pose": {
+    "start_position": [
+      -15.082757321741802,
+      59.89696533669835,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.8584428162099021,
+      0.5129092817425047
+    ]
+  },
+  "info": {
+    "geodesic_distance": 63,
+    "euclidean_distance": 36.7438
+  },
+  "map_name": "Venice_test",
+  "true_name": " Grill",
+  "object_name": "Barbecue_19",
+  "pose": [
+    [
+      20.59770393371582,
+      56.117000579833984,
+      0.9200018048286438
+    ]
+  ],
+  "size": " small(1*1=1 square)",
+  "description": " Geometric cylindrical form, blackened metallic surface with vented lid, standing on four slender legs, used for outdoor cooking.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

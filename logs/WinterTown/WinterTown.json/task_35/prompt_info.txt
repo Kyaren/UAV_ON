@@ -1,0 +1,2142 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FoodCan,
+                        Size: small(0.75*0.5=0.38 squares),
+                        Description: Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [179, 280]  
+                        **Y Range**: [min_y, max_y] = [-243, -142]
+
+                        # RGB Captions
+                        Front = tall pine tree, snow-covered branches; tree is in the foreground; snowy ground  
+                        Left = orange car, moving on road; road stretches diagonally; trees and snowy landscape on both sides  
+                        Right = upside-down tree, white and yellow leaves; tree is in the foreground; snowy ground  
+                        Down = wooden sign, small size; sign is on the ground; upside-down tree with white and yellow leaves  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 79, 61]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 99, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [58, 52, 70]]
+
+                        DownDepth:
+                        [[36, 32, 35], [30, 25, 33], [35, 29, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(229.17, -192.93, -10.0), -118.19],
+    [(229.17, -192.93, -10.0), -118.19],
+    [(229.17, -192.93, -10.0), -118.19],
+    [(229.17, -192.93, -10.0), -118.19],
+    [(229.17, -192.93, -10.0), -118.19],
+    [(229.17, -192.93, -10.0), -118.19],
+    [(229.17, -192.93, -10.0), -118.19],
+    [(229.17, -192.93, -10.0), -118.19],
+    [(229.17, -192.93, -10.0), -118.19],
+    [(229.17, -192.93, -10.0), -118.19],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** FoodCan**, described as:  Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 1 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FoodCan,
+                        Size: small(0.75*0.5=0.38 squares),
+                        Description: Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [179, 280]  
+                        **Y Range**: [min_y, max_y] = [-243, -142]
+
+                        # RGB Captions
+                        Front = trees, snow-covered, white; trees are in the foreground and background; snowy landscape  
+                        Left = road, long, straight; road is in the foreground; car driving on the road; trees on both sides of the road  
+                        Right = trees, snow-covered, white; trees are in the foreground and background; reflection of trees in water  
+                        Down = tree branches, snow-covered, white; branches are in the foreground; cardboard box on the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 77, 59]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [56, 48, 69]]
+
+                        DownDepth:
+                        [[36, 34, 37], [31, 25, 33], [37, 31, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(229.17, -192.93, -10.0), -118.19],
+    [(224.77, -190.57, -10.0), -118.19],
+    [(224.77, -190.57, -10.0), -118.19],
+    [(224.77, -190.57, -10.0), -118.19],
+    [(224.77, -190.57, -10.0), -118.19],
+    [(224.77, -190.57, -10.0), -118.19],
+    [(224.77, -190.57, -10.0), -118.19],
+    [(224.77, -190.57, -10.0), -118.19],
+    [(224.77, -190.57, -10.0), -118.19],
+    [(224.77, -190.57, -10.0), -118.19],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 1
+                        DistanceTraveled = 4.999999999999993
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** FoodCan**, described as:  Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:1 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 2 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FoodCan,
+                        Size: small(0.75*0.5=0.38 squares),
+                        Description: Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [179, 280]  
+                        **Y Range**: [min_y, max_y] = [-243, -142]
+
+                        # RGB Captions
+                        Front = pine trees, snow-covered; branches in the foreground; snowy ground  
+                        Left = road, narrow, paved; car driving on the road; road stretches into the distance  
+                        Right = trees, reflected in water; reflection in the foreground; water surface calm  
+                        Down = tree branches, bare; branches in the foreground; road visible below  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [87, 75, 55]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [51, 46, 65]]
+
+                        DownDepth:
+                        [[37, 33, 35], [31, 25, 32], [37, 32, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(229.17, -192.93, -10.0), -118.19],
+    [(224.77, -190.57, -10.0), -118.19],
+    [(229.17, -192.93, -10.0), -118.19],
+    [(229.17, -192.93, -10.0), -118.19],
+    [(229.17, -192.93, -10.0), -118.19],
+    [(229.17, -192.93, -10.0), -118.19],
+    [(229.17, -192.93, -10.0), -118.19],
+    [(229.17, -192.93, -10.0), -118.19],
+    [(229.17, -192.93, -10.0), -118.19],
+    [(229.17, -192.93, -10.0), -118.19],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 2
+                        DistanceTraveled = 9.999999999999986
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** FoodCan**, described as:  Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:2 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 3 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FoodCan,
+                        Size: small(0.75*0.5=0.38 squares),
+                        Description: Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [179, 280]  
+                        **Y Range**: [min_y, max_y] = [-243, -142]
+
+                        # RGB Captions
+                        Front = pine trees, snow-covered; tree branches in the foreground; snowy landscape in the background  
+                        Left = fox, orange fur; fox is on the road; road stretches into the distance; snowy landscape surrounds the road  
+                        Right = tree trunks, intertwined; branches in the foreground; snowy landscape in the background  
+                        Down = tree branches, white and green leaves; branches are in the foreground; building wall in the background  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [80, 79, 55]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 99, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [52, 45, 65]]
+
+                        DownDepth:
+                        [[38, 33, 35], [31, 26, 32], [37, 31, 35]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(229.17, -192.93, -10.0), -118.19],
+    [(224.77, -190.57, -10.0), -118.19],
+    [(229.17, -192.93, -10.0), -118.19],
+    [(226.81, -197.34, -10.0), -118.19],
+    [(226.81, -197.34, -10.0), -118.19],
+    [(226.81, -197.34, -10.0), -118.19],
+    [(226.81, -197.34, -10.0), -118.19],
+    [(226.81, -197.34, -10.0), -118.19],
+    [(226.81, -197.34, -10.0), -118.19],
+    [(226.81, -197.34, -10.0), -118.19],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 3
+                        DistanceTraveled = 14.999999999999979
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** FoodCan**, described as:  Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:3 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 4 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FoodCan,
+                        Size: small(0.75*0.5=0.38 squares),
+                        Description: Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [179, 280]  
+                        **Y Range**: [min_y, max_y] = [-243, -142]
+
+                        # RGB Captions
+                        Front = trees, snow-covered branches; trees in the foreground; snowy ground  
+                        Left = wooden path, covered in snow; path in the middle; trees on both sides  
+                        Right = tree trunk, brown bark; trunk in the foreground; reflection of trees in water  
+                        Down = tree branches, covered in snow; branches in the foreground; wooden fence in the background  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 79, 52]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 97, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [51, 43, 54]]
+
+                        DownDepth:
+                        [[39, 32, 34], [31, 25, 31], [35, 31, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(229.17, -192.93, -10.0), -118.19],
+    [(224.77, -190.57, -10.0), -118.19],
+    [(229.17, -192.93, -10.0), -118.19],
+    [(226.81, -197.34, -10.0), -118.19],
+    [(224.45, -201.75, -10.0), -118.19],
+    [(224.45, -201.75, -10.0), -118.19],
+    [(224.45, -201.75, -10.0), -118.19],
+    [(224.45, -201.75, -10.0), -118.19],
+    [(224.45, -201.75, -10.0), -118.19],
+    [(224.45, -201.75, -10.0), -118.19],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 4
+                        DistanceTraveled = 19.99999999999997
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** FoodCan**, described as:  Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:4 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 5 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FoodCan,
+                        Size: small(0.75*0.5=0.38 squares),
+                        Description: Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [179, 280]  
+                        **Y Range**: [min_y, max_y] = [-243, -142]
+
+                        # RGB Captions
+                        Front = green pine trees, snow-covered; white deciduous trees; snowy hillside; pine trees in the background  
+                        Left = orange car, small; road, curved; snow-covered trees; car on the road; trees on both sides of the road  
+                        Right = green pine trees, snow-covered; white deciduous trees; snowy hillside; pine trees in the background  
+                        Down = dry branches, brown; white wall; branches in the foreground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 78, 50]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [48, 45, 62]]
+
+                        DownDepth:
+                        [[38, 32, 33], [31, 26, 31], [36, 31, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(229.17, -192.93, -10.0), -118.19],
+    [(224.77, -190.57, -10.0), -118.19],
+    [(229.17, -192.93, -10.0), -118.19],
+    [(226.81, -197.34, -10.0), -118.19],
+    [(224.45, -201.75, -10.0), -118.19],
+    [(222.09, -206.15, -10.0), -118.19],
+    [(222.09, -206.15, -10.0), -118.19],
+    [(222.09, -206.15, -10.0), -118.19],
+    [(222.09, -206.15, -10.0), -118.19],
+    [(222.09, -206.15, -10.0), -118.19],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 5
+                        DistanceTraveled = 24.999999999999964
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** FoodCan**, described as:  Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:5 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 6 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FoodCan,
+                        Size: small(0.75*0.5=0.38 squares),
+                        Description: Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [179, 280]  
+                        **Y Range**: [min_y, max_y] = [-243, -142]
+
+                        # RGB Captions
+                        Front = pine trees, snow-covered; trees are scattered across the landscape; snowy ground  
+                        Left = road, narrow, blacktop; road stretches from foreground to background; orange car on the road; trees on both sides of the road  
+                        Right = dry branches, brown, tangled; branches in the foreground; pine trees in the background  
+                        Down = umbrella, open, brown; umbrella is on the ground; tree branches in the foreground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 76, 55]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [51, 47, 62]]
+
+                        DownDepth:
+                        [[36, 32, 34], [31, 26, 31], [37, 31, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(229.17, -192.93, -10.0), -118.19],
+    [(224.77, -190.57, -10.0), -118.19],
+    [(229.17, -192.93, -10.0), -118.19],
+    [(226.81, -197.34, -10.0), -118.19],
+    [(224.45, -201.75, -10.0), -118.19],
+    [(222.09, -206.15, -10.0), -118.19],
+    [(217.68, -203.79, -10.0), -118.19],
+    [(217.68, -203.79, -10.0), -118.19],
+    [(217.68, -203.79, -10.0), -118.19],
+    [(217.68, -203.79, -10.0), -118.19],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 6
+                        DistanceTraveled = 29.999999999999957
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** FoodCan**, described as:  Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:6 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 7 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FoodCan,
+                        Size: small(0.75*0.5=0.38 squares),
+                        Description: Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [179, 280]  
+                        **Y Range**: [min_y, max_y] = [-243, -142]
+
+                        # RGB Captions
+                        Front = pine trees, snow-covered; several trees in the background; trees scattered across a snowy landscape  
+                        Left = orange car, small; car on a bridge; bridge stretches across a snowy area with trees on both sides  
+                        Right = tree branches, white flowers; branches in the foreground; green pine trees in the background  
+                        Down = tree branches, white flowers; branches at the top corners; brown object on the ground near the bottom  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 73, 56]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [54, 51, 71]]
+
+                        DownDepth:
+                        [[34, 32, 33], [32, 25, 32], [37, 31, 37]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(229.17, -192.93, -10.0), -118.19],
+    [(224.77, -190.57, -10.0), -118.19],
+    [(229.17, -192.93, -10.0), -118.19],
+    [(226.81, -197.34, -10.0), -118.19],
+    [(224.45, -201.75, -10.0), -118.19],
+    [(222.09, -206.15, -10.0), -118.19],
+    [(217.68, -203.79, -10.0), -118.19],
+    [(213.27, -201.43, -10.0), -118.19],
+    [(213.27, -201.43, -10.0), -118.19],
+    [(213.27, -201.43, -10.0), -118.19],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 7
+                        DistanceTraveled = 34.99999999999995
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** FoodCan**, described as:  Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:7 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 8 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FoodCan,
+                        Size: small(0.75*0.5=0.38 squares),
+                        Description: Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [179, 280]  
+                        **Y Range**: [min_y, max_y] = [-243, -142]
+
+                        # RGB Captions
+                        Front = pine trees, green; snow-covered ground; trees scattered across the landscape  
+                        Left = orange car, small; road, narrow; car driving on the road; snowy landscape  
+                        Right = pine trees, green; snow-covered ground; trees in the background; sunlight filtering through  
+                        Down = tree branches, white flowers; sand, light-colored; branches in the foreground; tree stump on the sand  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 73, 56]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 95, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [53, 52, 70]]
+
+                        DownDepth:
+                        [[34, 31, 33], [29, 25, 32], [36, 32, 39]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(229.17, -192.93, -10.0), -118.19],
+    [(224.77, -190.57, -10.0), -118.19],
+    [(229.17, -192.93, -10.0), -118.19],
+    [(226.81, -197.34, -10.0), -118.19],
+    [(224.45, -201.75, -10.0), -118.19],
+    [(222.09, -206.15, -10.0), -118.19],
+    [(217.68, -203.79, -10.0), -118.19],
+    [(213.27, -201.43, -10.0), -118.19],
+    [(210.91, -205.84, -10.0), -118.19],
+    [(210.91, -205.84, -10.0), -118.19],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 8
+                        DistanceTraveled = 39.99999999999994
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** FoodCan**, described as:  Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:8 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 9 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FoodCan,
+                        Size: small(0.75*0.5=0.38 squares),
+                        Description: Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [179, 280]  
+                        **Y Range**: [min_y, max_y] = [-243, -142]
+
+                        # RGB Captions
+                        Front = bare tree branches, snow-covered; branches in the foreground; snowy ground  
+                        Left = pine trees, green needles; trees in the background; road in the middle; wooden fence on the left  
+                        Right = pine trees, green needles; trees in the background; snowy ground; bare tree branches in the foreground  
+                        Down = tree branches, snow-covered; branches in the foreground; small house in the background; snowy ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 73, 57]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [53, 55, 73]]
+
+                        DownDepth:
+                        [[34, 31, 33], [31, 25, 32], [37, 31, 38]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(229.17, -192.93, -10.0), -118.19],
+    [(224.77, -190.57, -10.0), -118.19],
+    [(229.17, -192.93, -10.0), -118.19],
+    [(226.81, -197.34, -10.0), -118.19],
+    [(224.45, -201.75, -10.0), -118.19],
+    [(222.09, -206.15, -10.0), -118.19],
+    [(217.68, -203.79, -10.0), -118.19],
+    [(213.27, -201.43, -10.0), -118.19],
+    [(210.91, -205.84, -10.0), -118.19],
+    [(206.5, -203.48, -10.0), -118.19],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 9
+                        DistanceTraveled = 44.999999999999936
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** FoodCan**, described as:  Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:9 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 10 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FoodCan,
+                        Size: small(0.75*0.5=0.38 squares),
+                        Description: Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [179, 280]  
+                        **Y Range**: [min_y, max_y] = [-243, -142]
+
+                        # RGB Captions
+                        Front = trees, snow-covered branches; branches in the foreground; snowy landscape in the background  
+                        Left = trees, snow-covered branches; branches in the foreground; road with a car on the left side; snowy landscape in the background  
+                        Right = trees, snow-covered branches; branches in the foreground; road on the right side; snowy landscape in the background  
+                        Down = tree branches, brown and white; branches in the foreground; small house in the distant background  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 70, 57]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [55, 56, 77]]
+
+                        DownDepth:
+                        [[36, 31, 34], [32, 25, 33], [52, 31, 39]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(224.77, -190.57, -10.0), -118.19],
+    [(229.17, -192.93, -10.0), -118.19],
+    [(226.81, -197.34, -10.0), -118.19],
+    [(224.45, -201.75, -10.0), -118.19],
+    [(222.09, -206.15, -10.0), -118.19],
+    [(217.68, -203.79, -10.0), -118.19],
+    [(213.27, -201.43, -10.0), -118.19],
+    [(210.91, -205.84, -10.0), -118.19],
+    [(206.5, -203.48, -10.0), -118.19],
+    [(202.1, -201.11, -10.0), -118.19],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 10
+                        DistanceTraveled = 49.99999999999993
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** FoodCan**, described as:  Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:10 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 11 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FoodCan,
+                        Size: small(0.75*0.5=0.38 squares),
+                        Description: Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [179, 280]  
+                        **Y Range**: [min_y, max_y] = [-243, -142]
+
+                        # RGB Captions
+                        Front = pine trees, snow-covered; trees in the foreground; snowy landscape in the background  
+                        Left = road, narrow, paved; road stretches from the foreground to the background; orange car on the left side of the road; snowy landscape surrounding the road  
+                        Right = trees, upside-down reflection; reflection in the foreground; snowy landscape in the background  
+                        Down = tree branches, upside-down reflection; reflection in the foreground; light-colored background  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 69, 61]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [58, 60, 80]]
+
+                        DownDepth:
+                        [[36, 31, 36], [31, 25, 33], [51, 32, 38]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(229.17, -192.93, -10.0), -118.19],
+    [(226.81, -197.34, -10.0), -118.19],
+    [(224.45, -201.75, -10.0), -118.19],
+    [(222.09, -206.15, -10.0), -118.19],
+    [(217.68, -203.79, -10.0), -118.19],
+    [(213.27, -201.43, -10.0), -118.19],
+    [(210.91, -205.84, -10.0), -118.19],
+    [(206.5, -203.48, -10.0), -118.19],
+    [(202.1, -201.11, -10.0), -118.19],
+    [(197.69, -198.75, -10.0), -118.19],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 11
+                        DistanceTraveled = 54.99999999999992
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** FoodCan**, described as:  Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:11 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 12 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FoodCan,
+                        Size: small(0.75*0.5=0.38 squares),
+                        Description: Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [179, 280]  
+                        **Y Range**: [min_y, max_y] = [-243, -142]
+
+                        # RGB Captions
+                        Front = pine trees, snow-covered; trees are in the foreground and background; snowy landscape  
+                        Left = wooden bridge, narrow; bridge stretches from left to right; pine trees in the background; snowy landscape  
+                        Right = pine trees, green; trees are in the foreground and background; sun visible in the distance; snowy landscape  
+                        Down = tree branches, thin; branches are in the foreground; light-colored background  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 71, 65]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 95, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [62, 61, 81]]
+
+                        DownDepth:
+                        [[35, 31, 35], [31, 25, 33], [50, 31, 39]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(226.81, -197.34, -10.0), -118.19],
+    [(224.45, -201.75, -10.0), -118.19],
+    [(222.09, -206.15, -10.0), -118.19],
+    [(217.68, -203.79, -10.0), -118.19],
+    [(213.27, -201.43, -10.0), -118.19],
+    [(210.91, -205.84, -10.0), -118.19],
+    [(206.5, -203.48, -10.0), -118.19],
+    [(202.1, -201.11, -10.0), -118.19],
+    [(197.69, -198.75, -10.0), -118.19],
+    [(195.33, -203.16, -10.0), -118.19],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 12
+                        DistanceTraveled = 59.999999999999915
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** FoodCan**, described as:  Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:12 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 13 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FoodCan,
+                        Size: small(0.75*0.5=0.38 squares),
+                        Description: Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [179, 280]  
+                        **Y Range**: [min_y, max_y] = [-243, -142]
+
+                        # RGB Captions
+                        Front = tree branches, covered in snow; branches are in the foreground; snowy landscape in the background  
+                        Left = tree branches, with moss and snow; branches are in the foreground; clear sky in the background  
+                        Right = pine trees, green foliage; trees are scattered across the landscape; sun shining through the trees  
+                        Down = tree branches, with sparse leaves and snow; branches are in the foreground; clear sky in the background  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 74, 65]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 96, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [61, 60, 73]]
+
+                        DownDepth:
+                        [[33, 34, 34], [31, 25, 33], [36, 30, 39]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(224.45, -201.75, -10.0), -118.19],
+    [(222.09, -206.15, -10.0), -118.19],
+    [(217.68, -203.79, -10.0), -118.19],
+    [(213.27, -201.43, -10.0), -118.19],
+    [(210.91, -205.84, -10.0), -118.19],
+    [(206.5, -203.48, -10.0), -118.19],
+    [(202.1, -201.11, -10.0), -118.19],
+    [(197.69, -198.75, -10.0), -118.19],
+    [(195.33, -203.16, -10.0), -118.19],
+    [(192.97, -207.57, -10.0), -118.19],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 13
+                        DistanceTraveled = 64.99999999999991
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** FoodCan**, described as:  Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:13 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 14 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FoodCan,
+                        Size: small(0.75*0.5=0.38 squares),
+                        Description: Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [179, 280]  
+                        **Y Range**: [min_y, max_y] = [-243, -142]
+
+                        # RGB Captions
+                        Front = tree branches, white and yellow leaves; branches in the foreground; snow-covered ground  
+                        Left = dry tree trunk, brown bark; branches extending outward; sandy ground  
+                        Right = pine trees, green needles; trees scattered across landscape; snow-covered ground  
+                        Down = tree branches, white and yellow leaves; branches in the foreground; sandy ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 73, 67]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 95, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [59, 58, 76]]
+
+                        DownDepth:
+                        [[33, 34, 33], [31, 25, 31], [36, 31, 40]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(222.09, -206.15, -10.0), -118.19],
+    [(217.68, -203.79, -10.0), -118.19],
+    [(213.27, -201.43, -10.0), -118.19],
+    [(210.91, -205.84, -10.0), -118.19],
+    [(206.5, -203.48, -10.0), -118.19],
+    [(202.1, -201.11, -10.0), -118.19],
+    [(197.69, -198.75, -10.0), -118.19],
+    [(195.33, -203.16, -10.0), -118.19],
+    [(192.97, -207.57, -10.0), -118.19],
+    [(190.61, -211.97, -10.0), -118.19],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 14
+                        DistanceTraveled = 69.99999999999991
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** FoodCan**, described as:  Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:14 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 15 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FoodCan,
+                        Size: small(0.75*0.5=0.38 squares),
+                        Description: Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [179, 280]  
+                        **Y Range**: [min_y, max_y] = [-243, -142]
+
+                        # RGB Captions
+                        Front = snow-covered trees, white snow, green foliage; trees are scattered across the landscape; snowy terrain in the foreground  
+                        Left = tree branches, covered in snow, brown bark; branches extend from the center to the edges; snow on the ground  
+                        Right = pine trees, green needles, snow-covered branches; trees are spread out; snowy hills in the background  
+                        Down = tree branches, thin and bare, with patches of snow; branches are in the foreground; snowy ground below  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 73, 66]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 95, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [56, 56, 76]]
+
+                        DownDepth:
+                        [[34, 34, 31], [29, 25, 31], [35, 33, 40]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(217.68, -203.79, -10.0), -118.19],
+    [(213.27, -201.43, -10.0), -118.19],
+    [(210.91, -205.84, -10.0), -118.19],
+    [(206.5, -203.48, -10.0), -118.19],
+    [(202.1, -201.11, -10.0), -118.19],
+    [(197.69, -198.75, -10.0), -118.19],
+    [(195.33, -203.16, -10.0), -118.19],
+    [(192.97, -207.57, -10.0), -118.19],
+    [(190.61, -211.97, -10.0), -118.19],
+    [(188.24, -216.38, -10.0), -118.19],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 15
+                        DistanceTraveled = 74.99999999999991
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** FoodCan**, described as:  Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:15 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 16 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FoodCan,
+                        Size: small(0.75*0.5=0.38 squares),
+                        Description: Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [179, 280]  
+                        **Y Range**: [min_y, max_y] = [-243, -142]
+
+                        # RGB Captions
+                        Front = pine trees, snow-covered; trees are scattered across the landscape; snowy hills in the background  
+                        Left = tree branches, covered in snow; branches extend from a central trunk; sunlight filtering through  
+                        Right = pine trees, green and white; trees are spread out; snowy hills in the background  
+                        Down = tree branches, with sparse leaves; branches are in the foreground; sandy ground in the background  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 69, 65]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 93, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [53, 53, 74]]
+
+                        DownDepth:
+                        [[35, 34, 30], [30, 25, 29], [37, 34, 40]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(213.27, -201.43, -10.0), -118.19],
+    [(210.91, -205.84, -10.0), -118.19],
+    [(206.5, -203.48, -10.0), -118.19],
+    [(202.1, -201.11, -10.0), -118.19],
+    [(197.69, -198.75, -10.0), -118.19],
+    [(195.33, -203.16, -10.0), -118.19],
+    [(192.97, -207.57, -10.0), -118.19],
+    [(190.61, -211.97, -10.0), -118.19],
+    [(188.24, -216.38, -10.0), -118.19],
+    [(192.65, -218.74, -10.0), -118.19],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 16
+                        DistanceTraveled = 79.99999999999991
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** FoodCan**, described as:  Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:16 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 17 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FoodCan,
+                        Size: small(0.75*0.5=0.38 squares),
+                        Description: Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [179, 280]  
+                        **Y Range**: [min_y, max_y] = [-243, -142]
+
+                        # RGB Captions
+                        Front = pine trees, snow-covered; trees are scattered across the landscape; snowy hills in the background  
+                        Left = tree with white flowers, thin trunk; tree is in the foreground; sandy ground  
+                        Right = pine trees, green needles; trees are on the snowy hills; one tree with white flowers in the middle  
+                        Down = tree branches, snow-covered; branches are in the foreground; plain background  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 71, 61]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 94, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [51, 51, 74]]
+
+                        DownDepth:
+                        [[35, 33, 29], [28, 25, 28], [36, 34, 38]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(210.91, -205.84, -10.0), -118.19],
+    [(206.5, -203.48, -10.0), -118.19],
+    [(202.1, -201.11, -10.0), -118.19],
+    [(197.69, -198.75, -10.0), -118.19],
+    [(195.33, -203.16, -10.0), -118.19],
+    [(192.97, -207.57, -10.0), -118.19],
+    [(190.61, -211.97, -10.0), -118.19],
+    [(188.24, -216.38, -10.0), -118.19],
+    [(192.65, -218.74, -10.0), -118.19],
+    [(190.29, -223.15, -10.0), -118.19],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 17
+                        DistanceTraveled = 84.99999999999991
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** FoodCan**, described as:  Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:17 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 18 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FoodCan,
+                        Size: small(0.75*0.5=0.38 squares),
+                        Description: Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [179, 280]  
+                        **Y Range**: [min_y, max_y] = [-243, -142]
+
+                        # RGB Captions
+                        Front = pine trees, snow-covered; trees scattered across the landscape; snowy hills in the background  
+                        Left = tree with white flowers, leaning to the left; tree trunk visible; snowy ground in the foreground  
+                        Right = pine trees, green and dense; trees on rolling hills; sun low in the sky, creating long shadows  
+                        Down = wall, light beige; shadow of a plant on the wall; small plants at the bottom  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 72, 59]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 93, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [50, 51, 76]]
+
+                        DownDepth:
+                        [[34, 33, 28], [28, 25, 27], [36, 33, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(206.5, -203.48, -10.0), -118.19],
+    [(202.1, -201.11, -10.0), -118.19],
+    [(197.69, -198.75, -10.0), -118.19],
+    [(195.33, -203.16, -10.0), -118.19],
+    [(192.97, -207.57, -10.0), -118.19],
+    [(190.61, -211.97, -10.0), -118.19],
+    [(188.24, -216.38, -10.0), -118.19],
+    [(192.65, -218.74, -10.0), -118.19],
+    [(190.29, -223.15, -10.0), -118.19],
+    [(187.93, -227.56, -10.0), -118.19],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 18
+                        DistanceTraveled = 89.99999999999991
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** FoodCan**, described as:  Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:18 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 19 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FoodCan,
+                        Size: small(0.75*0.5=0.38 squares),
+                        Description: Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [179, 280]  
+                        **Y Range**: [min_y, max_y] = [-243, -142]
+
+                        # RGB Captions
+                        Front = pine trees, snow-covered; trees are scattered across the landscape; snowy hills in the background  
+                        Left = pine trees, snow-covered; trees are on the left side; building complex in the distant background  
+                        Right = pine trees, green and white; trees are spread out; hilly terrain covered in snow  
+                        Down = tree trunk, brown; trunk is at the bottom left; shadow of tree on the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 72, 56]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 94, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 46, 76]]
+
+                        DownDepth:
+                        [[33, 32, 28], [28, 25, 25], [35, 32, 35]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(202.1, -201.11, -10.0), -118.19],
+    [(197.69, -198.75, -10.0), -118.19],
+    [(195.33, -203.16, -10.0), -118.19],
+    [(192.97, -207.57, -10.0), -118.19],
+    [(190.61, -211.97, -10.0), -118.19],
+    [(188.24, -216.38, -10.0), -118.19],
+    [(192.65, -218.74, -10.0), -118.19],
+    [(190.29, -223.15, -10.0), -118.19],
+    [(187.93, -227.56, -10.0), -118.19],
+    [(185.57, -231.96, -10.0), -118.19],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 19
+                        DistanceTraveled = 94.99999999999991
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** FoodCan**, described as:  Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:19 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 20 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FoodCan,
+                        Size: small(0.75*0.5=0.38 squares),
+                        Description: Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [179, 280]  
+                        **Y Range**: [min_y, max_y] = [-243, -142]
+
+                        # RGB Captions
+                        Front = pine trees, snow-covered; trees are scattered across the landscape; snowy terrain  
+                        Left = pine trees, snow-covered; trees are on a hillside; shadows of trees on the snow  
+                        Right = pine trees, green; trees are on a snowy hill; sunlight illuminating the scene  
+                        Down = shadow on wall, light-colored; shadow is in the foreground; wall texture visible  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [96, 71, 53]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 97, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 45, 76]]
+
+                        DownDepth:
+                        [[32, 32, 29], [28, 25, 25], [34, 31, 33]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(197.69, -198.75, -10.0), -118.19],
+    [(195.33, -203.16, -10.0), -118.19],
+    [(192.97, -207.57, -10.0), -118.19],
+    [(190.61, -211.97, -10.0), -118.19],
+    [(188.24, -216.38, -10.0), -118.19],
+    [(192.65, -218.74, -10.0), -118.19],
+    [(190.29, -223.15, -10.0), -118.19],
+    [(187.93, -227.56, -10.0), -118.19],
+    [(185.57, -231.96, -10.0), -118.19],
+    [(183.2, -236.37, -10.0), -118.19],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 20
+                        DistanceTraveled = 99.99999999999991
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** FoodCan**, described as:  Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:20 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 21 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FoodCan,
+                        Size: small(0.75*0.5=0.38 squares),
+                        Description: Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [179, 280]  
+                        **Y Range**: [min_y, max_y] = [-243, -142]
+
+                        # RGB Captions
+                        Front = pine trees, snow-covered; trees scattered across the landscape; snowy terrain covering the ground  
+                        Left = building complex, distant background; trees in the foreground; snow-covered ground  
+                        Right = pine trees, green foliage; trees spread across the snowy landscape; snow on the ground  
+                        Down = paper, plain surface; light brown color; no visible objects  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [96, 74, 51]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [41, 42, 69]]
+
+                        DownDepth:
+                        [[100, 32, 27], [31, 25, 24], [34, 32, 32]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(195.33, -203.16, -10.0), -118.19],
+    [(192.97, -207.57, -10.0), -118.19],
+    [(190.61, -211.97, -10.0), -118.19],
+    [(188.24, -216.38, -10.0), -118.19],
+    [(192.65, -218.74, -10.0), -118.19],
+    [(190.29, -223.15, -10.0), -118.19],
+    [(187.93, -227.56, -10.0), -118.19],
+    [(185.57, -231.96, -10.0), -118.19],
+    [(183.2, -236.37, -10.0), -118.19],
+    [(187.61, -238.73, -10.0), -118.19],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 21
+                        DistanceTraveled = 104.99999999999991
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** FoodCan**, described as:  Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:21 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 22 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FoodCan,
+                        Size: small(0.75*0.5=0.38 squares),
+                        Description: Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [179, 280]  
+                        **Y Range**: [min_y, max_y] = [-243, -142]
+
+                        # RGB Captions
+                        Front = white tree, snowy branches; green pine tree; trees on snow-covered ground; white tree in the foreground  
+                        Left = white tree, snowy branches; green pine tree; trees on snow-covered ground; white tree to the left of the pine tree  
+                        Right = multiple green pine trees; trees on snow-covered hills; dense cluster of trees on the right; scattered trees on the left  
+                        Down = plain beige fabric; shadow on the fabric; shadow cast from the left side  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 75, 56]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 97, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [55, 40, 55]]
+
+                        DownDepth:
+                        [[33, 32, 31], [30, 25, 25], [100, 31, 29]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(192.97, -207.57, -10.0), -118.19],
+    [(190.61, -211.97, -10.0), -118.19],
+    [(188.24, -216.38, -10.0), -118.19],
+    [(192.65, -218.74, -10.0), -118.19],
+    [(190.29, -223.15, -10.0), -118.19],
+    [(187.93, -227.56, -10.0), -118.19],
+    [(185.57, -231.96, -10.0), -118.19],
+    [(183.2, -236.37, -10.0), -118.19],
+    [(187.61, -238.73, -10.0), -118.19],
+    [(187.61, -238.73, -10.0), -133.19],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 22
+                        DistanceTraveled = 104.99999999999991
+                        AvgHeadingChange = 0.68
+
+                        # Reminder  
+                        - The target is ** FoodCan**, described as:  Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:22 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 23 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FoodCan,
+                        Size: small(0.75*0.5=0.38 squares),
+                        Description: Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [179, 280]  
+                        **Y Range**: [min_y, max_y] = [-243, -142]
+
+                        # RGB Captions
+                        Front = two trees, one with white leaves, one with green leaves; trees are in the foreground; snow-covered ground  
+                        Left = one tree with white and yellow leaves; tree is in the foreground; snow-covered ground, buildings in the background  
+                        Right = multiple pine trees, green needles; trees are scattered across the landscape; snow-covered ground  
+                        Down = textured surface, light brown color; corner of a green leaf in the bottom right  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 72, 53]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 96, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [49, 36, 51]]
+
+                        DownDepth:
+                        [[35, 32, 29], [33, 23, 25], [37, 31, 30]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(190.61, -211.97, -10.0), -118.19],
+    [(188.24, -216.38, -10.0), -118.19],
+    [(192.65, -218.74, -10.0), -118.19],
+    [(190.29, -223.15, -10.0), -118.19],
+    [(187.93, -227.56, -10.0), -118.19],
+    [(185.57, -231.96, -10.0), -118.19],
+    [(183.2, -236.37, -10.0), -118.19],
+    [(187.61, -238.73, -10.0), -118.19],
+    [(187.61, -238.73, -10.0), -133.19],
+    [(191.26, -242.15, -10.0), -133.19],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 23
+                        DistanceTraveled = 109.99999999999993
+                        AvgHeadingChange = 0.65
+
+                        # Reminder  
+                        - The target is ** FoodCan**, described as:  Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:23 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 24 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FoodCan,
+                        Size: small(0.75*0.5=0.38 squares),
+                        Description: Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [179, 280]  
+                        **Y Range**: [min_y, max_y] = [-243, -142]
+
+                        # RGB Captions
+                        Front = trees, snow-covered, white; trees are scattered across the landscape; snowy ground  
+                        Left = trees, partially snow-covered, brown trunks; trees are in the foreground; snowy ground  
+                        Right = pine trees, green, dense; trees are on the hills; snowy ground  
+                        Down = tree branches, green, sparse; branches are in the bottom right corner; plain background  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 79, 81]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [98, 97, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [60, 36, 42]]
+
+                        DownDepth:
+                        [[35, 33, 30], [32, 24, 24], [39, 29, 28]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(188.24, -216.38, -10.0), -118.19],
+    [(192.65, -218.74, -10.0), -118.19],
+    [(190.29, -223.15, -10.0), -118.19],
+    [(187.93, -227.56, -10.0), -118.19],
+    [(185.57, -231.96, -10.0), -118.19],
+    [(183.2, -236.37, -10.0), -118.19],
+    [(187.61, -238.73, -10.0), -118.19],
+    [(187.61, -238.73, -10.0), -133.19],
+    [(191.26, -242.15, -10.0), -133.19],
+    [(191.26, -242.15, -10.0), -148.19],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 24
+                        DistanceTraveled = 109.99999999999993
+                        AvgHeadingChange = 1.25
+
+                        # Reminder  
+                        - The target is ** FoodCan**, described as:  Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:24 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 25 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FoodCan,
+                        Size: small(0.75*0.5=0.38 squares),
+                        Description: Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [179, 280]  
+                        **Y Range**: [min_y, max_y] = [-243, -142]
+
+                        # RGB Captions
+                        Front = trees, snow-covered, white; trees are in the foreground; snowy landscape  
+                        Left = trees, snow-covered, white; trees are in the foreground; snowy landscape  
+                        Right = pine trees, green, dense; trees are scattered across the landscape; snowy terrain  
+                        Down = tree branches, green, sparse; branches are in the foreground; plain background  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 97, 94]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [90, 96, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [69, 45, 38]]
+
+                        DownDepth:
+                        [[34, 33, 31], [31, 24, 25], [38, 26, 27]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(192.65, -218.74, -10.0), -118.19],
+    [(190.29, -223.15, -10.0), -118.19],
+    [(187.93, -227.56, -10.0), -118.19],
+    [(185.57, -231.96, -10.0), -118.19],
+    [(183.2, -236.37, -10.0), -118.19],
+    [(187.61, -238.73, -10.0), -118.19],
+    [(187.61, -238.73, -10.0), -133.19],
+    [(191.26, -242.15, -10.0), -133.19],
+    [(191.26, -242.15, -10.0), -148.19],
+    [(191.26, -242.15, -10.0), -163.19],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 25
+                        DistanceTraveled = 109.99999999999993
+                        AvgHeadingChange = 1.8
+
+                        # Reminder  
+                        - The target is ** FoodCan**, described as:  Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:25 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 26 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FoodCan,
+                        Size: small(0.75*0.5=0.38 squares),
+                        Description: Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [179, 280]  
+                        **Y Range**: [min_y, max_y] = [-243, -142]
+
+                        # RGB Captions
+                        Front = trees, snow-covered, white; trees are in the foreground; snowy landscape  
+                        Left = trees, snow-covered, white; trees are in the foreground; snowy landscape with path  
+                        Right = pine trees, green, snow-covered; trees are on the hills; snowy landscape  
+                        Down = tree top, green, partially visible; tree is in the bottom right corner; plain wall  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 97, 98]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [94, 96, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [98, 52, 38]]
+
+                        DownDepth:
+                        [[34, 33, 33], [30, 24, 26], [36, 25, 27]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(190.29, -223.15, -10.0), -118.19],
+    [(187.93, -227.56, -10.0), -118.19],
+    [(185.57, -231.96, -10.0), -118.19],
+    [(183.2, -236.37, -10.0), -118.19],
+    [(187.61, -238.73, -10.0), -118.19],
+    [(187.61, -238.73, -10.0), -133.19],
+    [(191.26, -242.15, -10.0), -133.19],
+    [(191.26, -242.15, -10.0), -148.19],
+    [(191.26, -242.15, -10.0), -163.19],
+    [(191.26, -242.15, -10.0), -178.19],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 26
+                        DistanceTraveled = 109.99999999999993
+                        AvgHeadingChange = 2.31
+
+                        # Reminder  
+                        - The target is ** FoodCan**, described as:  Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:26 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 27 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FoodCan,
+                        Size: small(0.75*0.5=0.38 squares),
+                        Description: Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [179, 280]  
+                        **Y Range**: [min_y, max_y] = [-243, -142]
+
+                        # RGB Captions
+                        Front = tree, snow-covered, in the foreground; snowy ground, extensive, white; distant trees, green, in the background  
+                        Left = tree, snow-covered, medium-sized; tree is in the center; snowy ground, extensive, white; distant trees, green, in the background  
+                        Right = pine trees, green, scattered; trees are on the snowy hills; snowy ground, extensive, white; sunlit sky, clear, above  
+                        Down = wall, plain, light-colored; shadow on the wall, vague, in the foreground; leaf, green, bottom right corner  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 98, 97]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [96, 96, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [98, 50, 40]]
+
+                        DownDepth:
+                        [[33, 32, 36], [31, 25, 25], [36, 25, 27]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(187.93, -227.56, -10.0), -118.19],
+    [(185.57, -231.96, -10.0), -118.19],
+    [(183.2, -236.37, -10.0), -118.19],
+    [(187.61, -238.73, -10.0), -118.19],
+    [(187.61, -238.73, -10.0), -133.19],
+    [(191.26, -242.15, -10.0), -133.19],
+    [(191.26, -242.15, -10.0), -148.19],
+    [(191.26, -242.15, -10.0), -163.19],
+    [(191.26, -242.15, -10.0), -178.19],
+    [(186.26, -242.31, -10.0), -178.19],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 27
+                        DistanceTraveled = 114.99999999999994
+                        AvgHeadingChange = 2.22
+
+                        # Reminder  
+                        - The target is ** FoodCan**, described as:  Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:27 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 28 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FoodCan,
+                        Size: small(0.75*0.5=0.38 squares),
+                        Description: Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [179, 280]  
+                        **Y Range**: [min_y, max_y] = [-243, -142]
+
+                        # RGB Captions
+                        Front = trees, snow-covered; trees in the foreground; snowy ground; buildings in the distant background  
+                        Left = tree, medium-sized, snow-covered; tree is in the center; snowy ground; path behind the tree  
+                        Right = pine trees, green, multiple; trees on the hills; sun in the sky; snowy ground  
+                        Down = textured wall, plain, light-colored; shadow on the wall  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 98, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [91, 98, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [99, 51, 43]]
+
+                        DownDepth:
+                        [[33, 31, 37], [31, 25, 26], [36, 27, 27]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(185.57, -231.96, -10.0), -118.19],
+    [(183.2, -236.37, -10.0), -118.19],
+    [(187.61, -238.73, -10.0), -118.19],
+    [(187.61, -238.73, -10.0), -133.19],
+    [(191.26, -242.15, -10.0), -133.19],
+    [(191.26, -242.15, -10.0), -148.19],
+    [(191.26, -242.15, -10.0), -163.19],
+    [(191.26, -242.15, -10.0), -178.19],
+    [(186.26, -242.31, -10.0), -178.19],
+    [(181.26, -242.47, -10.0), -178.19],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 28
+                        DistanceTraveled = 119.99999999999996
+                        AvgHeadingChange = 2.14
+
+                        # Reminder  
+                        - The target is ** FoodCan**, described as:  Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:28 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 29 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FoodCan,
+                        Size: small(0.75*0.5=0.38 squares),
+                        Description: Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [179, 280]  
+                        **Y Range**: [min_y, max_y] = [-243, -142]
+
+                        # RGB Captions
+                        Front = snow-covered ground, white; trees with snow on branches; trees in the background  
+                        Left = three trees, snow-covered branches; trees in the foreground; snowy ground  
+                        Right = snowy hills, white; green pine trees; sun in the sky; trees on the hills  
+                        Down = wall, textured surface; shadows of leaves; top right corner has a branch  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 97, 97]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [87, 96, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [81, 78, 48]]
+
+                        DownDepth:
+                        [[33, 29, 36], [30, 25, 29], [35, 25, 28]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(183.2, -236.37, -10.0), -118.19],
+    [(187.61, -238.73, -10.0), -118.19],
+    [(187.61, -238.73, -10.0), -133.19],
+    [(191.26, -242.15, -10.0), -133.19],
+    [(191.26, -242.15, -10.0), -148.19],
+    [(191.26, -242.15, -10.0), -163.19],
+    [(191.26, -242.15, -10.0), -178.19],
+    [(186.26, -242.31, -10.0), -178.19],
+    [(181.26, -242.47, -10.0), -178.19],
+    [(181.26, -242.47, -10.0), 166.81],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 29
+                        DistanceTraveled = 119.99999999999996
+                        AvgHeadingChange = 2.59
+
+                        # Reminder  
+                        - The target is ** FoodCan**, described as:  Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:29 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 30 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FoodCan,
+                        Size: small(0.75*0.5=0.38 squares),
+                        Description: Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [179, 280]  
+                        **Y Range**: [min_y, max_y] = [-243, -142]
+
+                        # RGB Captions
+                        Front = trees, snow-covered; trees in the background; snowy ground  
+                        Left = two trees, white and green leaves; trees near a lake; reflections in the water  
+                        Right = pine trees, snow-covered; trees on a hill; snowy landscape  
+                        Down = textured wall, light-colored; shadows on the wall  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 97, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [79, 76, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [93, 76, 52]]
+
+                        DownDepth:
+                        [[33, 29, 33], [31, 25, 32], [31, 24, 31]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(187.61, -238.73, -10.0), -118.19],
+    [(187.61, -238.73, -10.0), -133.19],
+    [(191.26, -242.15, -10.0), -133.19],
+    [(191.26, -242.15, -10.0), -148.19],
+    [(191.26, -242.15, -10.0), -163.19],
+    [(191.26, -242.15, -10.0), -178.19],
+    [(186.26, -242.31, -10.0), -178.19],
+    [(181.26, -242.47, -10.0), -178.19],
+    [(181.26, -242.47, -10.0), 166.81],
+    [(181.26, -242.47, -10.0), 151.81],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 30
+                        DistanceTraveled = 119.99999999999996
+                        AvgHeadingChange = 3.0
+
+                        # Reminder  
+                        - The target is ** FoodCan**, described as:  Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:30 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 31 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FoodCan,
+                        Size: small(0.75*0.5=0.38 squares),
+                        Description: Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [179, 280]  
+                        **Y Range**: [min_y, max_y] = [-243, -142]
+
+                        # RGB Captions
+                        Front = trees, snow-covered, white; trees are in the foreground and background; snow on the ground  
+                        Left = trees, snow-covered, white; bridge in the middle ground; trees on both sides of the bridge  
+                        Right = tree, snow-covered, white; tree is in the foreground; snowy landscape in the background  
+                        Down = wall, plain, light-colored; shadow on the wall; branch in the bottom right corner  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 97, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [68, 73, 93]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 76, 69]]
+
+                        DownDepth:
+                        [[34, 29, 31], [30, 25, 31], [29, 25, 29]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(187.61, -238.73, -10.0), -133.19],
+    [(191.26, -242.15, -10.0), -133.19],
+    [(191.26, -242.15, -10.0), -148.19],
+    [(191.26, -242.15, -10.0), -163.19],
+    [(191.26, -242.15, -10.0), -178.19],
+    [(186.26, -242.31, -10.0), -178.19],
+    [(181.26, -242.47, -10.0), -178.19],
+    [(181.26, -242.47, -10.0), 166.81],
+    [(181.26, -242.47, -10.0), 151.81],
+    [(181.26, -242.47, -10.0), 136.81],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 31
+                        DistanceTraveled = 119.99999999999996
+                        AvgHeadingChange = 3.39
+
+                        # Reminder  
+                        - The target is ** FoodCan**, described as:  Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:31 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 32 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FoodCan,
+                        Size: small(0.75*0.5=0.38 squares),
+                        Description: Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [179, 280]  
+                        **Y Range**: [min_y, max_y] = [-243, -142]
+
+                        # RGB Captions
+                        Front = tree, snow-covered, in the foreground; snowy ground, extensive, white; distant trees, sparse, green  
+                        Left = trees, snow-covered, scattered; bridge, wooden, in the background; snowy ground, extensive, white  
+                        Right = tree, snow-covered, in the foreground; snowy ground, extensive, white; distant trees, sparse, green  
+                        Down = wall, plain, light-colored; shadow, faint, diagonal  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 96, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [73, 75, 96]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 74, 58]]
+
+                        DownDepth:
+                        [[35, 29, 31], [31, 25, 31], [29, 25, 30]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(191.26, -242.15, -10.0), -133.19],
+    [(191.26, -242.15, -10.0), -148.19],
+    [(191.26, -242.15, -10.0), -163.19],
+    [(191.26, -242.15, -10.0), -178.19],
+    [(186.26, -242.31, -10.0), -178.19],
+    [(181.26, -242.47, -10.0), -178.19],
+    [(181.26, -242.47, -10.0), 166.81],
+    [(181.26, -242.47, -10.0), 151.81],
+    [(181.26, -242.47, -10.0), 136.81],
+    [(184.68, -238.83, -10.0), 136.81],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 32
+                        DistanceTraveled = 124.99999999999997
+                        AvgHeadingChange = 3.28
+
+                        # Reminder  
+                        - The target is ** FoodCan**, described as:  Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:32 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 33 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FoodCan,
+                        Size: small(0.75*0.5=0.38 squares),
+                        Description: Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [179, 280]  
+                        **Y Range**: [min_y, max_y] = [-243, -142]
+
+                        # RGB Captions
+                        Front = trees, snow-covered, white; trees are in the foreground and background; shadows cast on the snow  
+                        Left = trees, snow-covered, white; trees are in the foreground and background; shadows cast on the snow  
+                        Right = trees, snow-covered, white; trees are in the foreground and background; shadows cast on the snow  
+                        Down = wall, plain, light-colored; shadow of tree branches on the wall  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [65, 69, 93]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 79, 73]]
+
+                        DownDepth:
+                        [[33, 29, 32], [30, 25, 31], [28, 25, 28]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(191.26, -242.15, -10.0), -148.19],
+    [(191.26, -242.15, -10.0), -163.19],
+    [(191.26, -242.15, -10.0), -178.19],
+    [(186.26, -242.31, -10.0), -178.19],
+    [(181.26, -242.47, -10.0), -178.19],
+    [(181.26, -242.47, -10.0), 166.81],
+    [(181.26, -242.47, -10.0), 151.81],
+    [(181.26, -242.47, -10.0), 136.81],
+    [(184.68, -238.83, -10.0), 136.81],
+    [(181.26, -242.47, -10.0), 136.81],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 33
+                        DistanceTraveled = 129.99999999999997
+                        AvgHeadingChange = 3.18
+
+                        # Reminder  
+                        - The target is ** FoodCan**, described as:  Cylindrical shape, metallic texture with colorful label, smooth surface with sealed top, consistent with preserved food container.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:33 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

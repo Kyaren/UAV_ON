@@ -1,0 +1,35 @@
+{
+  "episode_id": "147",
+  "start_pose": {
+    "start_position": [
+      197.65031863117247,
+      518.3665261004446,
+      -6.884999990463257
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.6734405606305386,
+      0.7392413755314471
+    ]
+  },
+  "info": {
+    "geodesic_distance": 63,
+    "euclidean_distance": 43.0924
+  },
+  "map_name": "NYC_test",
+  "true_name": "StreetClock",
+  "object_name": "SM_Street_Clock_33",
+  "pose": [
+    [
+      168.13023376464844,
+      487.37432861328125,
+      1.1150000095367432
+    ]
+  ],
+  "size": "small(1*1=1 squares)",
+  "description": "Geometric vertical pole structure, black metal frame with round clock face and ornate crown, mounted on a square base, used for public timekeeping.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

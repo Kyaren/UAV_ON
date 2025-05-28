@@ -1,0 +1,315 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Cloth,
+                        Size: small(1.5*0.25=0.38 squares),
+                        Description: Organic irregular shape, beige fabric with soft texture, subtle folds and droop, likely functioning as a hanging drape or curtain.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [54, 155]  
+                        **Y Range**: [min_y, max_y] = [-29, 72]
+
+                        # RGB Captions
+                        Front = yellow tree, autumn leaves; tree is in the foreground; basketball court in the background  
+                        Left = building, beige facade; green shutters; building stands in the foreground; tree in the distant background  
+                        Right = buildings, orange rooftops; flags on poles; buildings stand in the background; rooftop in the foreground  
+                        Down = buildings, yellow facade; green shutters; striped awning; buildings surround the courtyard; courtyard in the center  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [58, 35, 43]]
+
+                        LeftDepth:
+                        [[7, 10, 100], [5, 8, 100], [7, 10, 59]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [12, 8, 39]]
+
+                        DownDepth:
+                        [[18, 15, 12], [13, 12, 13], [12, 15, 24]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(104.19, 21.6, -10.0), 26.7],
+    [(104.19, 21.6, -10.0), 26.7],
+    [(104.19, 21.6, -10.0), 26.7],
+    [(104.19, 21.6, -10.0), 26.7],
+    [(104.19, 21.6, -10.0), 26.7],
+    [(104.19, 21.6, -10.0), 26.7],
+    [(104.19, 21.6, -10.0), 26.7],
+    [(104.19, 21.6, -10.0), 26.7],
+    [(104.19, 21.6, -10.0), 26.7],
+    [(104.19, 21.6, -10.0), 26.7],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Cloth**, described as:  Organic irregular shape, beige fabric with soft texture, subtle folds and droop, likely functioning as a hanging drape or curtain.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 1 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Cloth,
+                        Size: small(1.5*0.25=0.38 squares),
+                        Description: Organic irregular shape, beige fabric with soft texture, subtle folds and droop, likely functioning as a hanging drape or curtain.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [54, 155]  
+                        **Y Range**: [min_y, max_y] = [-29, 72]
+
+                        # RGB Captions
+                        Front = yellow tree, medium-sized; tree is in the foreground; building with arched windows to the left  
+                        Left = green plant, small; plant is in the bottom right corner; beige wall in the background  
+                        Right = red-roofed building, large; building is in the foreground; canal in the background; multiple buildings in the distance  
+                        Down = building with green shutters, tall; building is in the foreground; narrow alley below; tree shadow on the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [53, 35, 45]]
+
+                        LeftDepth:
+                        [[1, 1, 2], [0, 1, 2], [1, 1, 2]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 16, 47]]
+
+                        DownDepth:
+                        [[16, 15, 18], [7, 12, 15], [3, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(104.19, 21.6, -10.0), 26.7],
+    [(106.43, 17.13, -10.0), 26.7],
+    [(106.43, 17.13, -10.0), 26.7],
+    [(106.43, 17.13, -10.0), 26.7],
+    [(106.43, 17.13, -10.0), 26.7],
+    [(106.43, 17.13, -10.0), 26.7],
+    [(106.43, 17.13, -10.0), 26.7],
+    [(106.43, 17.13, -10.0), 26.7],
+    [(106.43, 17.13, -10.0), 26.7],
+    [(106.43, 17.13, -10.0), 26.7],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 1
+                        DistanceTraveled = 5.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Cloth**, described as:  Organic irregular shape, beige fabric with soft texture, subtle folds and droop, likely functioning as a hanging drape or curtain.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:1 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 2 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Cloth,
+                        Size: small(1.5*0.25=0.38 squares),
+                        Description: Organic irregular shape, beige fabric with soft texture, subtle folds and droop, likely functioning as a hanging drape or curtain.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [54, 155]  
+                        **Y Range**: [min_y, max_y] = [-29, 72]
+
+                        # RGB Captions
+                        Front = yellow tree, autumn leaves; tree is in the foreground; sports court behind the fence  
+                        Left = building facade, beige plaster; six windows with green shutters; building occupies most of the frame  
+                        Right = red-tiled roof, curved shape; roof is in the foreground; buildings in the background  
+                        Down = narrow alley, cobblestone pavement; yellow building with green shutters; striped awning on one window  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [59, 36, 44]]
+
+                        LeftDepth:
+                        [[7, 10, 100], [52, 8, 100], [7, 10, 59]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [12, 8, 38]]
+
+                        DownDepth:
+                        [[18, 15, 11], [13, 12, 13], [16, 15, 24]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(104.19, 21.6, -10.0), 26.7],
+    [(106.43, 17.13, -10.0), 26.7],
+    [(104.19, 21.6, -10.0), 26.7],
+    [(104.19, 21.6, -10.0), 26.7],
+    [(104.19, 21.6, -10.0), 26.7],
+    [(104.19, 21.6, -10.0), 26.7],
+    [(104.19, 21.6, -10.0), 26.7],
+    [(104.19, 21.6, -10.0), 26.7],
+    [(104.19, 21.6, -10.0), 26.7],
+    [(104.19, 21.6, -10.0), 26.7],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 2
+                        DistanceTraveled = 10.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Cloth**, described as:  Organic irregular shape, beige fabric with soft texture, subtle folds and droop, likely functioning as a hanging drape or curtain.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:2 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 3 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Cloth,
+                        Size: small(1.5*0.25=0.38 squares),
+                        Description: Organic irregular shape, beige fabric with soft texture, subtle folds and droop, likely functioning as a hanging drape or curtain.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [54, 155]  
+                        **Y Range**: [min_y, max_y] = [-29, 72]
+
+                        # RGB Captions
+                        Front = yellow tree, autumn leaves; tree is in the foreground; basketball court in the background  
+                        Left = building, beige facade; green shutters; yellow tree, autumn leaves; tree is on the right side  
+                        Right = red-tiled roof, terracotta color; roof is in the foreground; buildings in the background  
+                        Down = orange tree, autumn leaves; tree is in the top left corner; basketball court in the bottom right corner  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [49, 47, 48]]
+
+                        LeftDepth:
+                        [[10, 100, 100], [8, 100, 100], [10, 34, 36]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [48, 9, 10]]
+
+                        DownDepth:
+                        [[17, 15, 18], [15, 12, 12], [15, 15, 17]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(104.19, 21.6, -10.0), 26.7],
+    [(106.43, 17.13, -10.0), 26.7],
+    [(104.19, 21.6, -10.0), 26.7],
+    [(108.65, 23.85, -10.0), 26.7],
+    [(108.65, 23.85, -10.0), 26.7],
+    [(108.65, 23.85, -10.0), 26.7],
+    [(108.65, 23.85, -10.0), 26.7],
+    [(108.65, 23.85, -10.0), 26.7],
+    [(108.65, 23.85, -10.0), 26.7],
+    [(108.65, 23.85, -10.0), 26.7],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 3
+                        DistanceTraveled = 14.999999999999998
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Cloth**, described as:  Organic irregular shape, beige fabric with soft texture, subtle folds and droop, likely functioning as a hanging drape or curtain.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:3 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 4 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Cloth,
+                        Size: small(1.5*0.25=0.38 squares),
+                        Description: Organic irregular shape, beige fabric with soft texture, subtle folds and droop, likely functioning as a hanging drape or curtain.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [54, 155]  
+                        **Y Range**: [min_y, max_y] = [-29, 72]
+
+                        # RGB Captions
+                        Front = tree, yellow leaves; tree is in the foreground; clear sky in the background  
+                        Left = building, beige wall; green door; building is in the foreground; courtyard with benches to the right  
+                        Right = buildings, orange rooftops; buildings are in the foreground; basketball court in the background  
+                        Down = tree, yellow leaves; tree is in the foreground; buildings with orange rooftops in the background  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [51, 33, 45]]
+
+                        LeftDepth:
+                        [[4, 100, 100], [3, 100, 100], [4, 31, 57]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 12, 45]]
+
+                        DownDepth:
+                        [[18, 15, 18], [15, 12, 15], [8, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(104.19, 21.6, -10.0), 26.7],
+    [(106.43, 17.13, -10.0), 26.7],
+    [(104.19, 21.6, -10.0), 26.7],
+    [(108.65, 23.85, -10.0), 26.7],
+    [(110.9, 19.38, -10.0), 26.7],
+    [(110.9, 19.38, -10.0), 26.7],
+    [(110.9, 19.38, -10.0), 26.7],
+    [(110.9, 19.38, -10.0), 26.7],
+    [(110.9, 19.38, -10.0), 26.7],
+    [(110.9, 19.38, -10.0), 26.7],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 4
+                        DistanceTraveled = 20.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Cloth**, described as:  Organic irregular shape, beige fabric with soft texture, subtle folds and droop, likely functioning as a hanging drape or curtain.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:4 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

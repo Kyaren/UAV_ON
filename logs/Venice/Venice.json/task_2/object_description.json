@@ -1,0 +1,35 @@
+{
+  "episode_id": "2",
+  "start_pose": {
+    "start_position": [
+      -7.107959397945123,
+      46.365258590109946,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.6371294460064134,
+      -0.7707568157542045
+    ]
+  },
+  "info": {
+    "geodesic_distance": 58,
+    "euclidean_distance": 39.3324
+  },
+  "map_name": "Venice_test",
+  "true_name": " Cart",
+  "object_name": "SmallCart_01_A_18",
+  "pose": [
+    [
+      -27.402294158935547,
+      13.6170015335083,
+      0.9200018048286438
+    ]
+  ],
+  "size": " mid(1.75*1=1.75 squares)",
+  "description": " Geometric box shape, weathered gray metal surface with visible dents and rust, mounted on small caster wheels, likely used for storage or transport of tools or materials.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

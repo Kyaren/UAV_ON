@@ -1,0 +1,35 @@
+{
+  "episode_id": "16",
+  "start_pose": {
+    "start_position": [
+      -295.7620520478092,
+      -342.02435798447993,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.05609105881335603,
+      0.9984256572831032
+    ]
+  },
+  "info": {
+    "geodesic_distance": 60,
+    "euclidean_distance": 44.2602
+  },
+  "map_name": "CityPark_test",
+  "true_name": "SwingSet",
+  "object_name": "PlayGround6_blue_swing",
+  "pose": [
+    [
+      -337.9595947265625,
+      -330.73553466796875,
+      0.13423308730125427
+    ]
+  ],
+  "size": "mid(4.25*1.5=6.38 squares)",
+  "description": "Geometric frame structure, metallic blue finish with suspended black swings on chains, arched support bars and evenly spaced seats, designed for children's playground activity.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

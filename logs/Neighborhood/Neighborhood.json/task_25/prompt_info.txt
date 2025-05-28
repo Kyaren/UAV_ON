@@ -1,0 +1,3150 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:PotatoBoxed,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-314, -213]  
+                        **Y Range**: [min_y, max_y] = [-1, 100]
+
+                        # RGB Captions
+                        Front = trees, green leaves; power lines, black wires; houses, brown roofs; trees in the foreground; power lines crossing the scene; houses in the background  
+                        Left = telephone pole, wooden structure; power lines, black wires; trees, green leaves; grass, green blades; telephone pole on the left; power lines stretching across; trees and grass surrounding  
+                        Right = houses, brown roofs; trees, green leaves; bushes, green foliage; driveway, gray surface; houses in the background; trees and bushes on both sides; driveway leading to the houses  
+                        Down = hedge, green foliage; grass, green blades; shadow, dark shape; hedge in the middle; grass surrounding; shadow cast on the grass  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 36, 28]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 36, 47]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [39, 36, 43]]
+
+                        DownDepth:
+                        [[18, 16, 18], [16, 12, 16], [18, 16, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-263.55, 49.03, -10.0), -109.91],
+    [(-263.55, 49.03, -10.0), -109.91],
+    [(-263.55, 49.03, -10.0), -109.91],
+    [(-263.55, 49.03, -10.0), -109.91],
+    [(-263.55, 49.03, -10.0), -109.91],
+    [(-263.55, 49.03, -10.0), -109.91],
+    [(-263.55, 49.03, -10.0), -109.91],
+    [(-263.55, 49.03, -10.0), -109.91],
+    [(-263.55, 49.03, -10.0), -109.91],
+    [(-263.55, 49.03, -10.0), -109.91],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **PotatoBoxed**, described as: Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 1 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:PotatoBoxed,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-314, -213]  
+                        **Y Range**: [min_y, max_y] = [-1, 100]
+
+                        # RGB Captions
+                        Front = house, brown; house is in the foreground; trees on the left side  
+                        Left = telephone pole, wooden; power lines running horizontally; trees in the background  
+                        Right = buildings, multiple; buildings are in the background; courtyard with people and vehicles  
+                        Down = hedge, green; hedge runs diagonally across the image; grass on both sides  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 27, 27]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [68, 42, 36]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [33, 39, 60]]
+
+                        DownDepth:
+                        [[17, 14, 16], [16, 13, 16], [21, 18, 21]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-263.55, 49.03, -10.0), -109.91],
+    [(-265.25, 44.33, -10.0), -109.91],
+    [(-265.25, 44.33, -10.0), -109.91],
+    [(-265.25, 44.33, -10.0), -109.91],
+    [(-265.25, 44.33, -10.0), -109.91],
+    [(-265.25, 44.33, -10.0), -109.91],
+    [(-265.25, 44.33, -10.0), -109.91],
+    [(-265.25, 44.33, -10.0), -109.91],
+    [(-265.25, 44.33, -10.0), -109.91],
+    [(-265.25, 44.33, -10.0), -109.91],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 1
+                        DistanceTraveled = 5.000000000000005
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **PotatoBoxed**, described as: Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:1 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 2 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:PotatoBoxed,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-314, -213]  
+                        **Y Range**: [min_y, max_y] = [-1, 100]
+
+                        # RGB Captions
+                        Front = house, yellow roof, brick walls; house is in the foreground; trees in the background  
+                        Left = telephone pole, rusty, metal; power lines hanging; trees in the background  
+                        Right = village, multiple houses, thatched roofs; houses are in the background; sun high in the sky  
+                        Down = hedge, green, well-maintained; hedge is in the foreground; grassy area in the background  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [29, 26, 48]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [49, 30, 29]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [49, 58, 100]]
+
+                        DownDepth:
+                        [[16, 15, 18], [15, 13, 19], [19, 19, 25]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-263.55, 49.03, -10.0), -109.91],
+    [(-265.25, 44.33, -10.0), -109.91],
+    [(-266.96, 39.63, -10.0), -109.91],
+    [(-266.96, 39.63, -10.0), -109.91],
+    [(-266.96, 39.63, -10.0), -109.91],
+    [(-266.96, 39.63, -10.0), -109.91],
+    [(-266.96, 39.63, -10.0), -109.91],
+    [(-266.96, 39.63, -10.0), -109.91],
+    [(-266.96, 39.63, -10.0), -109.91],
+    [(-266.96, 39.63, -10.0), -109.91],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 2
+                        DistanceTraveled = 10.00000000000001
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **PotatoBoxed**, described as: Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:2 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 3 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:PotatoBoxed,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-314, -213]  
+                        **Y Range**: [min_y, max_y] = [-1, 100]
+
+                        # RGB Captions
+                        Front = green trees, tall, dense; trees are in the foreground and background; small house with gray roof  
+                        Left = green trees, tall, scattered; trees are spread across the field; clear sky above  
+                        Right = houses with gray roofs, small, clustered; houses are in the middle ground; power lines running horizontally  
+                        Down = gray roof, textured, diagonal; roof is in the foreground; green grass below  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [60, 53, 81]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [35, 37, 60]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [71, 47, 42]]
+
+                        DownDepth:
+                        [[20, 18, 9], [16, 13, 16], [16, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-263.55, 49.03, -10.0), -109.91],
+    [(-265.25, 44.33, -10.0), -109.91],
+    [(-266.96, 39.63, -10.0), -109.91],
+    [(-268.66, 34.93, -10.0), -109.91],
+    [(-268.66, 34.93, -10.0), -109.91],
+    [(-268.66, 34.93, -10.0), -109.91],
+    [(-268.66, 34.93, -10.0), -109.91],
+    [(-268.66, 34.93, -10.0), -109.91],
+    [(-268.66, 34.93, -10.0), -109.91],
+    [(-268.66, 34.93, -10.0), -109.91],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 3
+                        DistanceTraveled = 15.000000000000016
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **PotatoBoxed**, described as: Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:3 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 4 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:PotatoBoxed,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-314, -213]  
+                        **Y Range**: [min_y, max_y] = [-1, 100]
+
+                        # RGB Captions
+                        Front = wooden shed, small, weathered; shed is in the foreground; green grass surrounding  
+                        Left = trees, tall, leafy; trees are in a row; grass covering the ground  
+                        Right = houses, small, wooden; houses are in a cluster; power lines crossing above  
+                        Down = roof, shingled, gray; roof occupies the upper right corner; shadow cast on the grass  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 35, 50]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [49, 36, 44]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [49, 39, 55]]
+
+                        DownDepth:
+                        [[18, 16, 8], [16, 13, 13], [19, 16, 20]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-263.55, 49.03, -10.0), -109.91],
+    [(-265.25, 44.33, -10.0), -109.91],
+    [(-266.96, 39.63, -10.0), -109.91],
+    [(-268.66, 34.93, -10.0), -109.91],
+    [(-270.36, 30.22, -10.0), -109.91],
+    [(-270.36, 30.22, -10.0), -109.91],
+    [(-270.36, 30.22, -10.0), -109.91],
+    [(-270.36, 30.22, -10.0), -109.91],
+    [(-270.36, 30.22, -10.0), -109.91],
+    [(-270.36, 30.22, -10.0), -109.91],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 4
+                        DistanceTraveled = 20.000000000000025
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **PotatoBoxed**, described as: Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:4 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 5 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:PotatoBoxed,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-314, -213]  
+                        **Y Range**: [min_y, max_y] = [-1, 100]
+
+                        # RGB Captions
+                        Front = house, small, wooden; house is in the foreground; trees, large, green; trees are in the background  
+                        Left = trees, tall, green; trees are in a row; grass, short, green; grass is in the foreground  
+                        Right = buildings, small, wooden; buildings are in the background; power lines, thin, metal; power lines are in the foreground  
+                        Down = roof, gray, textured; roof is in the foreground; shadow, long, dark; shadow is on the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 35, 47]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [51, 37, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 39, 53]]
+
+                        DownDepth:
+                        [[19, 16, 18], [16, 12, 8], [20, 16, 9]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-263.55, 49.03, -10.0), -109.91],
+    [(-265.25, 44.33, -10.0), -109.91],
+    [(-266.96, 39.63, -10.0), -109.91],
+    [(-268.66, 34.93, -10.0), -109.91],
+    [(-270.36, 30.22, -10.0), -109.91],
+    [(-272.06, 25.52, -10.0), -109.91],
+    [(-272.06, 25.52, -10.0), -109.91],
+    [(-272.06, 25.52, -10.0), -109.91],
+    [(-272.06, 25.52, -10.0), -109.91],
+    [(-272.06, 25.52, -10.0), -109.91],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 5
+                        DistanceTraveled = 25.000000000000032
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **PotatoBoxed**, described as: Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:5 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 6 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:PotatoBoxed,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-314, -213]  
+                        **Y Range**: [min_y, max_y] = [-1, 100]
+
+                        # RGB Captions
+                        Front = house, small, brown; house is in the foreground; trees behind the house  
+                        Left = trees, tall, green; trees are in the background; grass in the foreground  
+                        Right = street, wide, paved; street is in the foreground; buildings on both sides of the street  
+                        Down = umbrella, large, black; umbrella is in the foreground; grass in the background  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [50, 36, 46]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [52, 39, 42]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 35, 39]]
+
+                        DownDepth:
+                        [[18, 16, 18], [16, 12, 13], [20, 16, 8]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-263.55, 49.03, -10.0), -109.91],
+    [(-265.25, 44.33, -10.0), -109.91],
+    [(-266.96, 39.63, -10.0), -109.91],
+    [(-268.66, 34.93, -10.0), -109.91],
+    [(-270.36, 30.22, -10.0), -109.91],
+    [(-272.06, 25.52, -10.0), -109.91],
+    [(-273.77, 20.82, -10.0), -109.91],
+    [(-273.77, 20.82, -10.0), -109.91],
+    [(-273.77, 20.82, -10.0), -109.91],
+    [(-273.77, 20.82, -10.0), -109.91],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 6
+                        DistanceTraveled = 30.00000000000004
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **PotatoBoxed**, described as: Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:6 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 7 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:PotatoBoxed,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-314, -213]  
+                        **Y Range**: [min_y, max_y] = [-1, 100]
+
+                        # RGB Captions
+                        Front = house, gray roof, in the foreground; trees, lush green, to the left; power lines, black, crossing above  
+                        Left = trees, tall and dense, spread throughout; grass, well-maintained, covering the ground; telephone poles, wooden, scattered among the trees  
+                        Right = street, wide and clear, running through the center; houses, various designs, lining both sides; trees, providing shade, near the houses; power lines, overhead, spanning across  
+                        Down = hedge, neatly trimmed, forming a straight line; house, partially visible, at the bottom right; power line, thin and black, diagonally crossing the image  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [51, 38, 27]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 37, 51]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [42, 38, 47]]
+
+                        DownDepth:
+                        [[20, 16, 19], [16, 12, 16], [19, 16, 12]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-263.55, 49.03, -10.0), -109.91],
+    [(-265.25, 44.33, -10.0), -109.91],
+    [(-266.96, 39.63, -10.0), -109.91],
+    [(-268.66, 34.93, -10.0), -109.91],
+    [(-270.36, 30.22, -10.0), -109.91],
+    [(-272.06, 25.52, -10.0), -109.91],
+    [(-273.77, 20.82, -10.0), -109.91],
+    [(-275.47, 16.12, -10.0), -109.91],
+    [(-275.47, 16.12, -10.0), -109.91],
+    [(-275.47, 16.12, -10.0), -109.91],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 7
+                        DistanceTraveled = 35.00000000000005
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **PotatoBoxed**, described as: Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:7 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 8 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:PotatoBoxed,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-314, -213]  
+                        **Y Range**: [min_y, max_y] = [-1, 100]
+
+                        # RGB Captions
+                        Front = house, gray roof, in the foreground; trees, green leaves, scattered around; house is to the left of the trees  
+                        Left = telephone poles, brown wood, with wires; trees, green leaves, in the background; poles are in the foreground  
+                        Right = street, gray pavement, in the middle; houses, gray roofs, on both sides; sun shining from above  
+                        Down = hedge, green leaves, along the fence; shadow of the hedge on the grass; hedge runs horizontally across the image  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 36, 24]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [49, 36, 46]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [40, 38, 51]]
+
+                        DownDepth:
+                        [[19, 16, 17], [16, 12, 16], [19, 16, 20]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-263.55, 49.03, -10.0), -109.91],
+    [(-265.25, 44.33, -10.0), -109.91],
+    [(-266.96, 39.63, -10.0), -109.91],
+    [(-268.66, 34.93, -10.0), -109.91],
+    [(-270.36, 30.22, -10.0), -109.91],
+    [(-272.06, 25.52, -10.0), -109.91],
+    [(-273.77, 20.82, -10.0), -109.91],
+    [(-275.47, 16.12, -10.0), -109.91],
+    [(-277.17, 11.42, -10.0), -109.91],
+    [(-277.17, 11.42, -10.0), -109.91],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 8
+                        DistanceTraveled = 40.00000000000006
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **PotatoBoxed**, described as: Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:8 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 9 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:PotatoBoxed,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-314, -213]  
+                        **Y Range**: [min_y, max_y] = [-1, 100]
+
+                        # RGB Captions
+                        Front = trees, lush green; several trees; trees are in the foreground and background; grassy area  
+                        Left = telephone pole, wooden; power lines; pole is in the center; trees surround the pole; grassy field  
+                        Right = houses, residential; multiple houses; houses are in the background; street with parked cars; sunny sky  
+                        Down = house, shadowed; house is in the top right; grassy lawn; hedge in the foreground; diagonal view  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 36, 37]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [49, 36, 47]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [37, 37, 49]]
+
+                        DownDepth:
+                        [[19, 16, 13], [16, 12, 16], [19, 16, 19]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-263.55, 49.03, -10.0), -109.91],
+    [(-265.25, 44.33, -10.0), -109.91],
+    [(-266.96, 39.63, -10.0), -109.91],
+    [(-268.66, 34.93, -10.0), -109.91],
+    [(-270.36, 30.22, -10.0), -109.91],
+    [(-272.06, 25.52, -10.0), -109.91],
+    [(-273.77, 20.82, -10.0), -109.91],
+    [(-275.47, 16.12, -10.0), -109.91],
+    [(-277.17, 11.42, -10.0), -109.91],
+    [(-278.87, 6.72, -10.0), -109.91],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 9
+                        DistanceTraveled = 45.000000000000064
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **PotatoBoxed**, described as: Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:9 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 10 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:PotatoBoxed,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-314, -213]  
+                        **Y Range**: [min_y, max_y] = [-1, 100]
+
+                        # RGB Captions
+                        Front = trees, green leaves; trees are in the background; house roof in the foreground  
+                        Left = hedge, green and trimmed; hedge is in the foreground; cross in the center; trees in the background  
+                        Right = house roofs, gray shingles; houses are in the background; road in the center; trees on both sides  
+                        Down = shadow of a building; shadow is on the grass; building roof in the top right corner  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 36, 36]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [49, 37, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [22, 38, 50]]
+
+                        DownDepth:
+                        [[19, 16, 8], [16, 12, 13], [18, 16, 19]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-265.25, 44.33, -10.0), -109.91],
+    [(-266.96, 39.63, -10.0), -109.91],
+    [(-268.66, 34.93, -10.0), -109.91],
+    [(-270.36, 30.22, -10.0), -109.91],
+    [(-272.06, 25.52, -10.0), -109.91],
+    [(-273.77, 20.82, -10.0), -109.91],
+    [(-275.47, 16.12, -10.0), -109.91],
+    [(-277.17, 11.42, -10.0), -109.91],
+    [(-278.87, 6.72, -10.0), -109.91],
+    [(-280.58, 2.02, -10.0), -109.91],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 10
+                        DistanceTraveled = 50.00000000000007
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **PotatoBoxed**, described as: Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:10 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 11 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:PotatoBoxed,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-314, -213]  
+                        **Y Range**: [min_y, max_y] = [-1, 100]
+
+                        # RGB Captions
+                        Front = trees, green leaves; grassy field; buildings in the background  
+                        Left = hedge, neatly trimmed; trees, dense foliage; pole in the center  
+                        Right = buildings, residential style; road in the foreground; trees on both sides  
+                        Down = shadow, geometric shape; gravel path; grass surrounding  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [49, 37, 37]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [48, 37, 49]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 37, 48]]
+
+                        DownDepth:
+                        [[19, 16, 8], [16, 12, 13], [18, 16, 19]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-266.96, 39.63, -10.0), -109.91],
+    [(-268.66, 34.93, -10.0), -109.91],
+    [(-270.36, 30.22, -10.0), -109.91],
+    [(-272.06, 25.52, -10.0), -109.91],
+    [(-273.77, 20.82, -10.0), -109.91],
+    [(-275.47, 16.12, -10.0), -109.91],
+    [(-277.17, 11.42, -10.0), -109.91],
+    [(-278.87, 6.72, -10.0), -109.91],
+    [(-280.58, 2.02, -10.0), -109.91],
+    [(-280.58, 2.02, -10.0), -124.91],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 11
+                        DistanceTraveled = 50.00000000000007
+                        AvgHeadingChange = 1.36
+
+                        # Reminder  
+                        - The target is **PotatoBoxed**, described as: Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:11 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 12 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:PotatoBoxed,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-314, -213]  
+                        **Y Range**: [min_y, max_y] = [-1, 100]
+
+                        # RGB Captions
+                        Front = green trees, large; grassy lawn, well-maintained; house roof, shingled; trees in the background  
+                        Left = green trees, tall; wooden posts, thin; hedge, neatly trimmed; trees in the background  
+                        Right = houses, small; trees, medium-sized; road, straight; houses in the background  
+                        Down = grass, green; shadow, dark; roof, shingled; shadow on the grass  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [49, 38, 38]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [49, 39, 51]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [23, 35, 45]]
+
+                        DownDepth:
+                        [[19, 16, 17], [16, 12, 16], [19, 16, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-268.66, 34.93, -10.0), -109.91],
+    [(-270.36, 30.22, -10.0), -109.91],
+    [(-272.06, 25.52, -10.0), -109.91],
+    [(-273.77, 20.82, -10.0), -109.91],
+    [(-275.47, 16.12, -10.0), -109.91],
+    [(-277.17, 11.42, -10.0), -109.91],
+    [(-278.87, 6.72, -10.0), -109.91],
+    [(-280.58, 2.02, -10.0), -109.91],
+    [(-280.58, 2.02, -10.0), -124.91],
+    [(-284.68, 4.88, -10.0), -124.91],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 12
+                        DistanceTraveled = 55.00000000000008
+                        AvgHeadingChange = 1.25
+
+                        # Reminder  
+                        - The target is **PotatoBoxed**, described as: Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:12 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 13 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:PotatoBoxed,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-314, -213]  
+                        **Y Range**: [min_y, max_y] = [-1, 100]
+
+                        # RGB Captions
+                        Front = large trees, green leaves; grassy field; trees in the foreground and background  
+                        Left = trees, green leaves; hedge, low and trimmed; grassy field; hedge in the foreground; trees in the background  
+                        Right = buildings, thatched roofs; trees, green leaves; buildings in the foreground; trees in the background  
+                        Down = grass, short and green; roof, gray tiles; shadow on the grass; roof corner in the foreground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 35, 42]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 35, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 38, 51]]
+
+                        DownDepth:
+                        [[18, 16, 19], [16, 12, 13], [19, 16, 19]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-270.36, 30.22, -10.0), -109.91],
+    [(-272.06, 25.52, -10.0), -109.91],
+    [(-273.77, 20.82, -10.0), -109.91],
+    [(-275.47, 16.12, -10.0), -109.91],
+    [(-277.17, 11.42, -10.0), -109.91],
+    [(-278.87, 6.72, -10.0), -109.91],
+    [(-280.58, 2.02, -10.0), -109.91],
+    [(-280.58, 2.02, -10.0), -124.91],
+    [(-284.68, 4.88, -10.0), -124.91],
+    [(-287.54, 0.78, -10.0), -124.91],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 13
+                        DistanceTraveled = 60.00000000000007
+                        AvgHeadingChange = 1.15
+
+                        # Reminder  
+                        - The target is **PotatoBoxed**, described as: Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:13 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 14 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:PotatoBoxed,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-314, -213]  
+                        **Y Range**: [min_y, max_y] = [-1, 100]
+
+                        # RGB Captions
+                        Front = trees, green leaves; grassy path in the foreground; trees on both sides of the path  
+                        Left = trees, green leaves; grassy field; two wooden poles in the center; trees surrounding the field  
+                        Right = buildings, gray roofs; tree in the background; buildings arranged in a row; sun shining from above  
+                        Down = grass, green; shadow on the grass; roof corner in the foreground; sunlight creating contrast  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 37, 48]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 37, 42]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [48, 19, 48]]
+
+                        DownDepth:
+                        [[18, 16, 19], [16, 12, 16], [19, 16, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-272.06, 25.52, -10.0), -109.91],
+    [(-273.77, 20.82, -10.0), -109.91],
+    [(-275.47, 16.12, -10.0), -109.91],
+    [(-277.17, 11.42, -10.0), -109.91],
+    [(-278.87, 6.72, -10.0), -109.91],
+    [(-280.58, 2.02, -10.0), -109.91],
+    [(-280.58, 2.02, -10.0), -124.91],
+    [(-284.68, 4.88, -10.0), -124.91],
+    [(-287.54, 0.78, -10.0), -124.91],
+    [(-287.54, 0.78, -10.0), -139.91],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 14
+                        DistanceTraveled = 60.00000000000007
+                        AvgHeadingChange = 2.14
+
+                        # Reminder  
+                        - The target is **PotatoBoxed**, described as: Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:14 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 15 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:PotatoBoxed,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-314, -213]  
+                        **Y Range**: [min_y, max_y] = [-1, 100]
+
+                        # RGB Captions
+                        Front = trees, green leaves; grassy path, narrow; hedge, low; path in the foreground; trees on both sides  
+                        Left = trees, green leaves; grassy field, open; hedges, forming paths; telephone pole, central; clear sky, bright  
+                        Right = houses, brown roofs; trees, green leaves; shadows, long; houses in the background; tree to the left  
+                        Down = grass, green; roof, shingled; shadow, sharp; roof in the bottom right; grass covering most of the image  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [48, 37, 45]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [48, 37, 48]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 33, 48]]
+
+                        DownDepth:
+                        [[19, 16, 19], [16, 12, 16], [18, 16, 9]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-273.77, 20.82, -10.0), -109.91],
+    [(-275.47, 16.12, -10.0), -109.91],
+    [(-277.17, 11.42, -10.0), -109.91],
+    [(-278.87, 6.72, -10.0), -109.91],
+    [(-280.58, 2.02, -10.0), -109.91],
+    [(-280.58, 2.02, -10.0), -124.91],
+    [(-284.68, 4.88, -10.0), -124.91],
+    [(-287.54, 0.78, -10.0), -124.91],
+    [(-287.54, 0.78, -10.0), -139.91],
+    [(-287.54, 0.78, -10.0), -154.91],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 15
+                        DistanceTraveled = 60.00000000000007
+                        AvgHeadingChange = 3.0
+
+                        # Reminder  
+                        - The target is **PotatoBoxed**, described as: Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:15 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 16 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:PotatoBoxed,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-314, -213]  
+                        **Y Range**: [min_y, max_y] = [-1, 100]
+
+                        # RGB Captions
+                        Front = green trees, dense foliage; trees are in the foreground and background; green grass on the ground  
+                        Left = green trees, scattered arrangement; trees are in the background; green hedge forming a path; telephone pole on the right  
+                        Right = house with gray roof, wooden texture; house is in the foreground; green trees on the left; clear sky above  
+                        Down = gray roof, textured surface; roof is in the foreground; green grass on the ground; shadow of the roof on the grass  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [48, 36, 48]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [42, 36, 44]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 34, 21]]
+
+                        DownDepth:
+                        [[18, 16, 19], [16, 12, 16], [19, 16, 9]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-275.47, 16.12, -10.0), -109.91],
+    [(-277.17, 11.42, -10.0), -109.91],
+    [(-278.87, 6.72, -10.0), -109.91],
+    [(-280.58, 2.02, -10.0), -109.91],
+    [(-280.58, 2.02, -10.0), -124.91],
+    [(-284.68, 4.88, -10.0), -124.91],
+    [(-287.54, 0.78, -10.0), -124.91],
+    [(-287.54, 0.78, -10.0), -139.91],
+    [(-287.54, 0.78, -10.0), -154.91],
+    [(-287.54, 0.78, -10.0), -169.91],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 16
+                        DistanceTraveled = 60.00000000000007
+                        AvgHeadingChange = 3.75
+
+                        # Reminder  
+                        - The target is **PotatoBoxed**, described as: Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:16 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 17 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:PotatoBoxed,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-314, -213]  
+                        **Y Range**: [min_y, max_y] = [-1, 100]
+
+                        # RGB Captions
+                        Front = large tree, dense foliage; tree is in the foreground; grassy area surrounding  
+                        Left = multiple trees, green leaves; trees are scattered throughout; grassy field in the background  
+                        Right = house building, brown roof; house is in the foreground; tree to the left of the house  
+                        Down = shadow of a tree, dark shape; shadow is on the ground; grassy area surrounding  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 73, 100], [48, 36, 46]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 36, 48]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 36, 31]]
+
+                        DownDepth:
+                        [[19, 16, 19], [16, 12, 16], [19, 16, 17]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-277.17, 11.42, -10.0), -109.91],
+    [(-278.87, 6.72, -10.0), -109.91],
+    [(-280.58, 2.02, -10.0), -109.91],
+    [(-280.58, 2.02, -10.0), -124.91],
+    [(-284.68, 4.88, -10.0), -124.91],
+    [(-287.54, 0.78, -10.0), -124.91],
+    [(-287.54, 0.78, -10.0), -139.91],
+    [(-287.54, 0.78, -10.0), -154.91],
+    [(-287.54, 0.78, -10.0), -169.91],
+    [(-292.46, -0.1, -10.0), -169.91],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 17
+                        DistanceTraveled = 65.0000000000001
+                        AvgHeadingChange = 3.53
+
+                        # Reminder  
+                        - The target is **PotatoBoxed**, described as: Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:17 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 18 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:PotatoBoxed,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-314, -213]  
+                        **Y Range**: [min_y, max_y] = [-1, 100]
+
+                        # RGB Captions
+                        Front = large tree, dense foliage; tree is in the center; green grass surrounding  
+                        Left = house, brown roof; house is on the left; telephone pole nearby; trees in the background  
+                        Right = tree, large canopy; tree is in the foreground; house with gray roof in the background; lens flare present  
+                        Down = grass, light green; grass covers the ground; shadow of a structure in the foreground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 36, 100], [100, 67, 100], [48, 36, 45]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [39, 36, 48]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 36, 42]]
+
+                        DownDepth:
+                        [[19, 16, 18], [16, 12, 16], [19, 16, 19]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-278.87, 6.72, -10.0), -109.91],
+    [(-280.58, 2.02, -10.0), -109.91],
+    [(-280.58, 2.02, -10.0), -124.91],
+    [(-284.68, 4.88, -10.0), -124.91],
+    [(-287.54, 0.78, -10.0), -124.91],
+    [(-287.54, 0.78, -10.0), -139.91],
+    [(-287.54, 0.78, -10.0), -154.91],
+    [(-287.54, 0.78, -10.0), -169.91],
+    [(-292.46, -0.1, -10.0), -169.91],
+    [(-292.46, -0.1, -10.0), 175.09],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 18
+                        DistanceTraveled = 65.0000000000001
+                        AvgHeadingChange = 4.17
+
+                        # Reminder  
+                        - The target is **PotatoBoxed**, described as: Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:18 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 19 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:PotatoBoxed,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-314, -213]  
+                        **Y Range**: [min_y, max_y] = [-1, 100]
+
+                        # RGB Captions
+                        Front = large tree, dense foliage, green leaves; tree occupies the central and upper part of the image; grassy area surrounding the base  
+                        Left = wooden cabin, small structure, dark brown; cabin is in the bottom left corner; trees scattered around; telephone pole near the center  
+                        Right = tree, large canopy, green leaves; tree is in the foreground on the left; wooden cabin in the background on the right; lens flare present  
+                        Down = hedge, long and narrow, green; hedge runs diagonally across the image from top left to bottom right; shadow cast on the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 26, 100], [95, 46, 100], [47, 36, 44]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [43, 36, 46]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [42, 36, 48]]
+
+                        DownDepth:
+                        [[19, 16, 19], [16, 12, 16], [19, 16, 19]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-280.58, 2.02, -10.0), -109.91],
+    [(-280.58, 2.02, -10.0), -124.91],
+    [(-284.68, 4.88, -10.0), -124.91],
+    [(-287.54, 0.78, -10.0), -124.91],
+    [(-287.54, 0.78, -10.0), -139.91],
+    [(-287.54, 0.78, -10.0), -154.91],
+    [(-287.54, 0.78, -10.0), -169.91],
+    [(-292.46, -0.1, -10.0), -169.91],
+    [(-292.46, -0.1, -10.0), 175.09],
+    [(-297.44, 0.33, -10.0), 175.09],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 19
+                        DistanceTraveled = 70.00000000000013
+                        AvgHeadingChange = 3.95
+
+                        # Reminder  
+                        - The target is **PotatoBoxed**, described as: Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:19 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 20 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:PotatoBoxed,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-314, -213]  
+                        **Y Range**: [min_y, max_y] = [-1, 100]
+
+                        # RGB Captions
+                        Front = large tree, dense foliage; tree is in the center; sunlight filtering through leaves  
+                        Left = wooden pole, tall, brown; pole is in the foreground; trees in the background  
+                        Right = house building, small, wooden; house is in the background; large tree to the left  
+                        Down = hedge row, green, neatly trimmed; hedge is in the foreground; grassy field in the background  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 22], [100, 100, 87], [48, 36, 48]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 36, 48]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 36, 42]]
+
+                        DownDepth:
+                        [[19, 16, 19], [16, 12, 16], [19, 16, 19]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-280.58, 2.02, -10.0), -124.91],
+    [(-284.68, 4.88, -10.0), -124.91],
+    [(-287.54, 0.78, -10.0), -124.91],
+    [(-287.54, 0.78, -10.0), -139.91],
+    [(-287.54, 0.78, -10.0), -154.91],
+    [(-287.54, 0.78, -10.0), -169.91],
+    [(-292.46, -0.1, -10.0), -169.91],
+    [(-292.46, -0.1, -10.0), 175.09],
+    [(-297.44, 0.33, -10.0), 175.09],
+    [(-297.01, 5.31, -10.0), 175.09],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 20
+                        DistanceTraveled = 75.00000000000013
+                        AvgHeadingChange = 3.75
+
+                        # Reminder  
+                        - The target is **PotatoBoxed**, described as: Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:20 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 21 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:PotatoBoxed,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-314, -213]  
+                        **Y Range**: [min_y, max_y] = [-1, 100]
+
+                        # RGB Captions
+                        Front = green leaves, dense cluster; leaves cover the entire frame  
+                        Left = tree branches, green leaves; branches extend from left to right; grassy field in the background  
+                        Right = tree branches, green leaves; branches spread across the foreground; small building in the distant background  
+                        Down = tree branches, green leaves; branches hang over the grass; shadow of a person on the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[16, 10, 10], [100, 74, 14], [48, 35, 37]]
+
+                        LeftDepth:
+                        [[100, 100, 31], [100, 100, 100], [48, 36, 44]]
+
+                        RightDepth:
+                        [[100, 100, 100], [40, 100, 100], [38, 36, 45]]
+
+                        DownDepth:
+                        [[19, 16, 18], [16, 12, 16], [19, 16, 19]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-284.68, 4.88, -10.0), -124.91],
+    [(-287.54, 0.78, -10.0), -124.91],
+    [(-287.54, 0.78, -10.0), -139.91],
+    [(-287.54, 0.78, -10.0), -154.91],
+    [(-287.54, 0.78, -10.0), -169.91],
+    [(-292.46, -0.1, -10.0), -169.91],
+    [(-292.46, -0.1, -10.0), 175.09],
+    [(-297.44, 0.33, -10.0), 175.09],
+    [(-297.01, 5.31, -10.0), 175.09],
+    [(-302.0, 5.74, -10.0), 175.09],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 21
+                        DistanceTraveled = 80.00000000000016
+                        AvgHeadingChange = 3.57
+
+                        # Reminder  
+                        - The target is **PotatoBoxed**, described as: Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:21 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 22 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:PotatoBoxed,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-314, -213]  
+                        **Y Range**: [min_y, max_y] = [-1, 100]
+
+                        # RGB Captions
+                        Front = tree, large, dark; tree is in the foreground; background is dark  
+                        Left = leaves, green, dense; leaves are in the foreground; sunlight filtering through  
+                        Right = leaf, single, dark; leaf is in the foreground; background is dark  
+                        Down = leaves, fragmented, dark; leaves are scattered throughout the image  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[24, 11, 14], [100, 100, 59], [47, 36, 30]]
+
+                        LeftDepth:
+                        [[100, 100, 29], [100, 100, 100], [44, 35, 44]]
+
+                        RightDepth:
+                        [[9, 100, 100], [4, 7, 100], [0, 0, 44]]
+
+                        DownDepth:
+                        [[18, 16, 17], [16, 12, 16], [17, 14, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-287.54, 0.78, -10.0), -124.91],
+    [(-287.54, 0.78, -10.0), -139.91],
+    [(-287.54, 0.78, -10.0), -154.91],
+    [(-287.54, 0.78, -10.0), -169.91],
+    [(-292.46, -0.1, -10.0), -169.91],
+    [(-292.46, -0.1, -10.0), 175.09],
+    [(-297.44, 0.33, -10.0), 175.09],
+    [(-297.01, 5.31, -10.0), 175.09],
+    [(-302.0, 5.74, -10.0), 175.09],
+    [(-306.98, 6.17, -10.0), 175.09],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 22
+                        DistanceTraveled = 85.00000000000018
+                        AvgHeadingChange = 3.41
+
+                        # Reminder  
+                        - The target is **PotatoBoxed**, described as: Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:22 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 23 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:PotatoBoxed,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-314, -213]  
+                        **Y Range**: [min_y, max_y] = [-1, 100]
+
+                        # RGB Captions
+                        Front = large tree, dark trunk; tree occupies the center; branches extend outward  
+                        Left = tree canopy, dense leaves; canopy covers the top half; sunlight filtering through  
+                        Right = small plant, green leaves; plant is in the foreground; surrounded by darkness  
+                        Down = animal silhouette, indistinct shape; silhouette is in the center; surrounded by shadows  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[26, 11, 15], [100, 100, 100], [47, 36, 45]]
+
+                        LeftDepth:
+                        [[100, 24, 27], [100, 100, 100], [44, 36, 45]]
+
+                        RightDepth:
+                        [[17, 15, 100], [100, 100, 33], [31, 29, 30]]
+
+                        DownDepth:
+                        [[19, 13, 14], [16, 12, 15], [18, 16, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-287.54, 0.78, -10.0), -139.91],
+    [(-287.54, 0.78, -10.0), -154.91],
+    [(-287.54, 0.78, -10.0), -169.91],
+    [(-292.46, -0.1, -10.0), -169.91],
+    [(-292.46, -0.1, -10.0), 175.09],
+    [(-297.44, 0.33, -10.0), 175.09],
+    [(-297.01, 5.31, -10.0), 175.09],
+    [(-302.0, 5.74, -10.0), 175.09],
+    [(-306.98, 6.17, -10.0), 175.09],
+    [(-311.96, 6.6, -10.0), 175.09],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 23
+                        DistanceTraveled = 90.00000000000021
+                        AvgHeadingChange = 3.26
+
+                        # Reminder  
+                        - The target is **PotatoBoxed**, described as: Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:23 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 24 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:PotatoBoxed,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-314, -213]  
+                        **Y Range**: [min_y, max_y] = [-1, 100]
+
+                        # RGB Captions
+                        Front = tree trunk, large, moss-covered; trunk is in the foreground; leaves surrounding  
+                        Left = tree branches, dense, leafy; branches are in the foreground; sunlight filtering through  
+                        Right = bushes, dense, leafy; bushes are in the foreground; darkness surrounding  
+                        Down = leaves, scattered, shadowed; leaves are in the foreground; ground covered  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[24, 20, 24], [100, 100, 100], [45, 36, 45]]
+
+                        LeftDepth:
+                        [[100, 100, 29], [100, 100, 100], [45, 36, 47]]
+
+                        RightDepth:
+                        [[20, 10, 40], [100, 100, 100], [46, 31, 42]]
+
+                        DownDepth:
+                        [[19, 16, 13], [16, 12, 15], [18, 13, 14]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-287.54, 0.78, -10.0), -154.91],
+    [(-287.54, 0.78, -10.0), -169.91],
+    [(-292.46, -0.1, -10.0), -169.91],
+    [(-292.46, -0.1, -10.0), 175.09],
+    [(-297.44, 0.33, -10.0), 175.09],
+    [(-297.01, 5.31, -10.0), 175.09],
+    [(-302.0, 5.74, -10.0), 175.09],
+    [(-306.98, 6.17, -10.0), 175.09],
+    [(-311.96, 6.6, -10.0), 175.09],
+    [(-311.96, 6.6, -10.0), 160.09],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 24
+                        DistanceTraveled = 90.00000000000021
+                        AvgHeadingChange = 3.75
+
+                        # Reminder  
+                        - The target is **PotatoBoxed**, described as: Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:24 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 25 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:PotatoBoxed,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-314, -213]  
+                        **Y Range**: [min_y, max_y] = [-1, 100]
+
+                        # RGB Captions
+                        Front = trees, dense foliage, dark; sunlight filtering through; trees in the foreground and background  
+                        Left = tree branches, dense leaves, dark; sunlight shining through; branches in the foreground  
+                        Right = tree trunk, thick, dark; leaves, dense, dark; tree in the foreground  
+                        Down = leaves, scattered, dark; ground, shadowy, dark; leaves in the foreground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 15], [100, 100, 100], [47, 36, 8]]
+
+                        LeftDepth:
+                        [[100, 100, 28], [100, 100, 100], [42, 36, 47]]
+
+                        RightDepth:
+                        [[13, 11, 36], [100, 100, 100], [44, 30, 28]]
+
+                        DownDepth:
+                        [[19, 15, 13], [15, 12, 15], [17, 13, 15]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-287.54, 0.78, -10.0), -169.91],
+    [(-292.46, -0.1, -10.0), -169.91],
+    [(-292.46, -0.1, -10.0), 175.09],
+    [(-297.44, 0.33, -10.0), 175.09],
+    [(-297.01, 5.31, -10.0), 175.09],
+    [(-302.0, 5.74, -10.0), 175.09],
+    [(-306.98, 6.17, -10.0), 175.09],
+    [(-311.96, 6.6, -10.0), 175.09],
+    [(-311.96, 6.6, -10.0), 160.09],
+    [(-311.96, 6.6, -10.0), 145.09],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 25
+                        DistanceTraveled = 90.00000000000021
+                        AvgHeadingChange = 4.2
+
+                        # Reminder  
+                        - The target is **PotatoBoxed**, described as: Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:25 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 26 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:PotatoBoxed,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-314, -213]  
+                        **Y Range**: [min_y, max_y] = [-1, 100]
+
+                        # RGB Captions
+                        Front = trees, dense foliage, dark; sunlight filtering through; trees surround the area  
+                        Left = tree branches, dense leaves, dark; sunlight spots visible; branches spread across the image  
+                        Right = tree, dense leaves, dark; light patches on leaves; tree occupies most of the frame  
+                        Down = ground, shadowed, dark; light patches from above; shadows cast by leaves  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[36, 24, 16], [100, 100, 100], [47, 36, 42]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [35, 35, 47]]
+
+                        RightDepth:
+                        [[19, 11, 11], [100, 100, 75], [41, 36, 30]]
+
+                        DownDepth:
+                        [[19, 16, 13], [16, 12, 13], [16, 14, 15]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-292.46, -0.1, -10.0), -169.91],
+    [(-292.46, -0.1, -10.0), 175.09],
+    [(-297.44, 0.33, -10.0), 175.09],
+    [(-297.01, 5.31, -10.0), 175.09],
+    [(-302.0, 5.74, -10.0), 175.09],
+    [(-306.98, 6.17, -10.0), 175.09],
+    [(-311.96, 6.6, -10.0), 175.09],
+    [(-311.96, 6.6, -10.0), 160.09],
+    [(-311.96, 6.6, -10.0), 145.09],
+    [(-311.96, 6.6, -10.0), 130.09],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 26
+                        DistanceTraveled = 90.00000000000021
+                        AvgHeadingChange = 4.62
+
+                        # Reminder  
+                        - The target is **PotatoBoxed**, described as: Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:26 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 27 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:PotatoBoxed,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-314, -213]  
+                        **Y Range**: [min_y, max_y] = [-1, 100]
+
+                        # RGB Captions
+                        Front = tree branches, dense foliage, dark setting; branches in the foreground; sunlight filtering through  
+                        Left = tree branches, dense foliage, dark setting; branches in the foreground; sunlight filtering through  
+                        Right = tree branches, dense foliage, dark setting; branches in the foreground; sunlight filtering through  
+                        Down = monkey, hanging from branch, dense foliage, dark setting; monkey in the center; sunlight filtering through  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[36, 26, 100], [100, 100, 100], [45, 36, 42]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [2, 33, 40]]
+
+                        RightDepth:
+                        [[8, 13, 11], [100, 100, 84], [37, 36, 35]]
+
+                        DownDepth:
+                        [[18, 16, 16], [16, 12, 13], [14, 15, 15]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-292.46, -0.1, -10.0), 175.09],
+    [(-297.44, 0.33, -10.0), 175.09],
+    [(-297.01, 5.31, -10.0), 175.09],
+    [(-302.0, 5.74, -10.0), 175.09],
+    [(-306.98, 6.17, -10.0), 175.09],
+    [(-311.96, 6.6, -10.0), 175.09],
+    [(-311.96, 6.6, -10.0), 160.09],
+    [(-311.96, 6.6, -10.0), 145.09],
+    [(-311.96, 6.6, -10.0), 130.09],
+    [(-311.96, 6.6, -10.0), 115.09],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 27
+                        DistanceTraveled = 90.00000000000021
+                        AvgHeadingChange = 5.0
+
+                        # Reminder  
+                        - The target is **PotatoBoxed**, described as: Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:27 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 28 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:PotatoBoxed,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-314, -213]  
+                        **Y Range**: [min_y, max_y] = [-1, 100]
+
+                        # RGB Captions
+                        Front = trees, dense foliage, dark green; leaves in the foreground; sunlight filtering through  
+                        Left = person, partially visible, silhouette; standing among trees; person in the foreground; trees in the background  
+                        Right = trees, dense foliage, dark green; leaves in the foreground; sunlight filtering through  
+                        Down = bird, perched on a branch; branch in the foreground; tree in the background  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 29, 25], [100, 100, 100], [47, 36, 47]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [40, 33, 35]]
+
+                        RightDepth:
+                        [[14, 15, 10], [100, 100, 100], [47, 36, 40]]
+
+                        DownDepth:
+                        [[18, 16, 19], [15, 12, 13], [15, 15, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-297.44, 0.33, -10.0), 175.09],
+    [(-297.01, 5.31, -10.0), 175.09],
+    [(-302.0, 5.74, -10.0), 175.09],
+    [(-306.98, 6.17, -10.0), 175.09],
+    [(-311.96, 6.6, -10.0), 175.09],
+    [(-311.96, 6.6, -10.0), 160.09],
+    [(-311.96, 6.6, -10.0), 145.09],
+    [(-311.96, 6.6, -10.0), 130.09],
+    [(-311.96, 6.6, -10.0), 115.09],
+    [(-311.96, 6.6, -10.0), 100.09],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 28
+                        DistanceTraveled = 90.00000000000021
+                        AvgHeadingChange = 5.36
+
+                        # Reminder  
+                        - The target is **PotatoBoxed**, described as: Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:28 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 29 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:PotatoBoxed,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-314, -213]  
+                        **Y Range**: [min_y, max_y] = [-1, 100]
+
+                        # RGB Captions
+                        Front = large tree, dense foliage, dark green leaves; tree is in the foreground; sunlight filtering through branches  
+                        Left = house, brown exterior, partially obscured by trees; house is in the background; sunlight creating lens flare  
+                        Right = small opening, surrounded by dense foliage; opening is in the center; sunlight shining through leaves  
+                        Down = leaves, large, dark green; leaves are in the foreground; shadows cast on grass  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 36, 47]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [40, 36, 47]]
+
+                        RightDepth:
+                        [[100, 100, 7], [100, 100, 47], [47, 36, 8]]
+
+                        DownDepth:
+                        [[19, 16, 19], [16, 12, 15], [18, 15, 17]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-297.01, 5.31, -10.0), 175.09],
+    [(-302.0, 5.74, -10.0), 175.09],
+    [(-306.98, 6.17, -10.0), 175.09],
+    [(-311.96, 6.6, -10.0), 175.09],
+    [(-311.96, 6.6, -10.0), 160.09],
+    [(-311.96, 6.6, -10.0), 145.09],
+    [(-311.96, 6.6, -10.0), 130.09],
+    [(-311.96, 6.6, -10.0), 115.09],
+    [(-311.96, 6.6, -10.0), 100.09],
+    [(-312.84, 11.52, -10.0), 100.09],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 29
+                        DistanceTraveled = 95.00000000000021
+                        AvgHeadingChange = 5.17
+
+                        # Reminder  
+                        - The target is **PotatoBoxed**, described as: Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:29 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 30 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:PotatoBoxed,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-314, -213]  
+                        **Y Range**: [min_y, max_y] = [-1, 100]
+
+                        # RGB Captions
+                        Front = trees, green leaves, scattered; grassy field, open space; trees in the foreground and background  
+                        Left = tree branches, dense foliage, hanging; sunlight filtering through; grassy area in the background  
+                        Right = trees, dense foliage, surrounding; grassy field, open space; trees in the foreground and background  
+                        Down = leaves, dark green, clustered; shadows on the ground; leaves in the foreground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 36, 47]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 35, 44]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 36, 39]]
+
+                        DownDepth:
+                        [[18, 16, 18], [16, 12, 16], [18, 15, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-302.0, 5.74, -10.0), 175.09],
+    [(-306.98, 6.17, -10.0), 175.09],
+    [(-311.96, 6.6, -10.0), 175.09],
+    [(-311.96, 6.6, -10.0), 160.09],
+    [(-311.96, 6.6, -10.0), 145.09],
+    [(-311.96, 6.6, -10.0), 130.09],
+    [(-311.96, 6.6, -10.0), 115.09],
+    [(-311.96, 6.6, -10.0), 100.09],
+    [(-312.84, 11.52, -10.0), 100.09],
+    [(-312.84, 11.52, -10.0), 85.09],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 30
+                        DistanceTraveled = 95.00000000000021
+                        AvgHeadingChange = 5.5
+
+                        # Reminder  
+                        - The target is **PotatoBoxed**, described as: Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:30 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 31 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:PotatoBoxed,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-314, -213]  
+                        **Y Range**: [min_y, max_y] = [-1, 100]
+
+                        # RGB Captions
+                        Front = trees, green leaves; grassy field; trees in the foreground and background  
+                        Left = houses, wooden structure; telephone pole; bushes; houses in the background  
+                        Right = trees, dense foliage; grassy field; trees in the foreground and background  
+                        Down = shadow of tree on grass; shadow in the foreground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [48, 36, 45]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 36, 48]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 36, 47]]
+
+                        DownDepth:
+                        [[19, 16, 18], [16, 12, 16], [19, 16, 17]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-306.98, 6.17, -10.0), 175.09],
+    [(-311.96, 6.6, -10.0), 175.09],
+    [(-311.96, 6.6, -10.0), 160.09],
+    [(-311.96, 6.6, -10.0), 145.09],
+    [(-311.96, 6.6, -10.0), 130.09],
+    [(-311.96, 6.6, -10.0), 115.09],
+    [(-311.96, 6.6, -10.0), 100.09],
+    [(-312.84, 11.52, -10.0), 100.09],
+    [(-312.84, 11.52, -10.0), 85.09],
+    [(-312.41, 16.5, -10.0), 85.09],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 31
+                        DistanceTraveled = 100.00000000000021
+                        AvgHeadingChange = 5.32
+
+                        # Reminder  
+                        - The target is **PotatoBoxed**, described as: Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:31 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 32 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:PotatoBoxed,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-314, -213]  
+                        **Y Range**: [min_y, max_y] = [-1, 100]
+
+                        # RGB Captions
+                        Front = trees, green leaves; grassy field, well-maintained; trees in the foreground and background  
+                        Left = houses, wooden structures; grassy field, well-maintained; houses in the background; hedge in the foreground  
+                        Right = trees, dense foliage; grassy field, well-maintained; trees in the foreground and background  
+                        Down = telephone pole, metal structure; tree shadow on the ground; pole in the foreground; tree to the right  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 36, 45]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 36, 48]]
+
+                        RightDepth:
+                        [[100, 100, 100], [42, 100, 100], [37, 36, 47]]
+
+                        DownDepth:
+                        [[19, 16, 18], [16, 12, 16], [19, 16, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-311.96, 6.6, -10.0), 175.09],
+    [(-311.96, 6.6, -10.0), 160.09],
+    [(-311.96, 6.6, -10.0), 145.09],
+    [(-311.96, 6.6, -10.0), 130.09],
+    [(-311.96, 6.6, -10.0), 115.09],
+    [(-311.96, 6.6, -10.0), 100.09],
+    [(-312.84, 11.52, -10.0), 100.09],
+    [(-312.84, 11.52, -10.0), 85.09],
+    [(-312.41, 16.5, -10.0), 85.09],
+    [(-311.98, 21.48, -10.0), 85.09],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 32
+                        DistanceTraveled = 105.00000000000021
+                        AvgHeadingChange = 5.16
+
+                        # Reminder  
+                        - The target is **PotatoBoxed**, described as: Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:32 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 33 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:PotatoBoxed,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-314, -213]  
+                        **Y Range**: [min_y, max_y] = [-1, 100]
+
+                        # RGB Captions
+                        Front = tree, large, green leaves; tree is in the foreground; grassy field in the background  
+                        Left = houses, small, wooden; houses are in the background; trees and bushes in the foreground  
+                        Right = tree, dark, dense foliage; tree is in the foreground; grassy field in the background  
+                        Down = telephone pole, tall, metal; pole is in the foreground; tree shadow on the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 36, 46]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 36, 47]]
+
+                        RightDepth:
+                        [[16, 18, 100], [80, 100, 100], [45, 36, 47]]
+
+                        DownDepth:
+                        [[18, 16, 18], [16, 12, 16], [19, 16, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-311.96, 6.6, -10.0), 160.09],
+    [(-311.96, 6.6, -10.0), 145.09],
+    [(-311.96, 6.6, -10.0), 130.09],
+    [(-311.96, 6.6, -10.0), 115.09],
+    [(-311.96, 6.6, -10.0), 100.09],
+    [(-312.84, 11.52, -10.0), 100.09],
+    [(-312.84, 11.52, -10.0), 85.09],
+    [(-312.41, 16.5, -10.0), 85.09],
+    [(-311.98, 21.48, -10.0), 85.09],
+    [(-311.55, 26.46, -10.0), 85.09],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 33
+                        DistanceTraveled = 110.00000000000021
+                        AvgHeadingChange = 5.0
+
+                        # Reminder  
+                        - The target is **PotatoBoxed**, described as: Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:33 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 34 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:PotatoBoxed,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-314, -213]  
+                        **Y Range**: [min_y, max_y] = [-1, 100]
+
+                        # RGB Captions
+                        Front = tree branches, thick, brown; leaves, green, hanging; branches in the foreground; sunlight filtering through  
+                        Left = house, distant, small; tree branches, thick, brown; leaves, green, hanging; branches in the foreground; sunlight filtering through  
+                        Right = tree branches, thick, brown; leaves, green, hanging; branches in the foreground; little light filtering through  
+                        Down = leaves, green, hanging; branches, thin, brown; leaves in the foreground; grassy area in the background  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 36, 41]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [37, 35, 47]]
+
+                        RightDepth:
+                        [[100, 13, 13], [68, 100, 100], [48, 36, 44]]
+
+                        DownDepth:
+                        [[18, 16, 18], [15, 12, 16], [18, 16, 19]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-311.96, 6.6, -10.0), 145.09],
+    [(-311.96, 6.6, -10.0), 130.09],
+    [(-311.96, 6.6, -10.0), 115.09],
+    [(-311.96, 6.6, -10.0), 100.09],
+    [(-312.84, 11.52, -10.0), 100.09],
+    [(-312.84, 11.52, -10.0), 85.09],
+    [(-312.41, 16.5, -10.0), 85.09],
+    [(-311.98, 21.48, -10.0), 85.09],
+    [(-311.55, 26.46, -10.0), 85.09],
+    [(-311.12, 31.44, -10.0), 85.09],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 34
+                        DistanceTraveled = 115.00000000000021
+                        AvgHeadingChange = 4.85
+
+                        # Reminder  
+                        - The target is **PotatoBoxed**, described as: Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:34 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 35 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:PotatoBoxed,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-314, -213]  
+                        **Y Range**: [min_y, max_y] = [-1, 100]
+
+                        # RGB Captions
+                        Front = large leaves, dark green, maple; leaves are in the foreground; sunlight filtering through  
+                        Left = small house, brown, wooden; house is in the background; tree branches in the foreground  
+                        Right = leaves, dark, dense; leaves cover most of the image; light shining through  
+                        Down = tree trunk, thick, brown; trunk is in the foreground; grassy ground below  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 35, 47]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [27, 35, 45]]
+
+                        RightDepth:
+                        [[100, 100, 13], [100, 43, 100], [44, 36, 37]]
+
+                        DownDepth:
+                        [[17, 15, 18], [15, 12, 16], [18, 16, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-311.96, 6.6, -10.0), 130.09],
+    [(-311.96, 6.6, -10.0), 115.09],
+    [(-311.96, 6.6, -10.0), 100.09],
+    [(-312.84, 11.52, -10.0), 100.09],
+    [(-312.84, 11.52, -10.0), 85.09],
+    [(-312.41, 16.5, -10.0), 85.09],
+    [(-311.98, 21.48, -10.0), 85.09],
+    [(-311.55, 26.46, -10.0), 85.09],
+    [(-311.12, 31.44, -10.0), 85.09],
+    [(-310.7, 36.43, -10.0), 85.09],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 35
+                        DistanceTraveled = 120.00000000000021
+                        AvgHeadingChange = 4.71
+
+                        # Reminder  
+                        - The target is **PotatoBoxed**, described as: Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:35 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 36 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:PotatoBoxed,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-314, -213]  
+                        **Y Range**: [min_y, max_y] = [-1, 100]
+
+                        # RGB Captions
+                        Front = trees, green leaves, in the foreground; grassy field, sunlit, in the background  
+                        Left = tree branches, hanging down, in the foreground; house, small, in the distance  
+                        Right = leaves, large, in the foreground; sunlight, filtering through, creating shadows  
+                        Down = tree stump, weathered, in the foreground; leaves, casting shadows, on the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 38, 52]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [33, 31, 45]]
+
+                        RightDepth:
+                        [[100, 100, 12], [100, 100, 6], [49, 39, 33]]
+
+                        DownDepth:
+                        [[18, 16, 19], [15, 12, 16], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-311.96, 6.6, -10.0), 115.09],
+    [(-311.96, 6.6, -10.0), 100.09],
+    [(-312.84, 11.52, -10.0), 100.09],
+    [(-312.84, 11.52, -10.0), 85.09],
+    [(-312.41, 16.5, -10.0), 85.09],
+    [(-311.98, 21.48, -10.0), 85.09],
+    [(-311.55, 26.46, -10.0), 85.09],
+    [(-311.12, 31.44, -10.0), 85.09],
+    [(-310.7, 36.43, -10.0), 85.09],
+    [(-310.7, 36.43, -10.0), 70.09],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 36
+                        DistanceTraveled = 120.00000000000021
+                        AvgHeadingChange = 5.0
+
+                        # Reminder  
+                        - The target is **PotatoBoxed**, described as: Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:36 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 37 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:PotatoBoxed,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-314, -213]  
+                        **Y Range**: [min_y, max_y] = [-1, 100]
+
+                        # RGB Captions
+                        Front = green trees, scattered, grassy field; trees in the foreground and background; sunlight creating shadows  
+                        Left = small houses, stone walls, wooden roofs; houses in a cluster; green trees surrounding the houses  
+                        Right = trees, spread out, grassy terrain; sunlight causing lens flare; trees casting shadows on the ground  
+                        Down = tree shadow, cast on grass, detailed branches; shadow in the foreground; sunlight coming from above  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 86]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [33, 51, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [84, 38, 27]]
+
+                        DownDepth:
+                        [[25, 20, 22], [18, 13, 16], [16, 13, 15]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-311.96, 6.6, -10.0), 100.09],
+    [(-312.84, 11.52, -10.0), 100.09],
+    [(-312.84, 11.52, -10.0), 85.09],
+    [(-312.41, 16.5, -10.0), 85.09],
+    [(-311.98, 21.48, -10.0), 85.09],
+    [(-311.55, 26.46, -10.0), 85.09],
+    [(-311.12, 31.44, -10.0), 85.09],
+    [(-310.7, 36.43, -10.0), 85.09],
+    [(-310.7, 36.43, -10.0), 70.09],
+    [(-308.99, 41.13, -10.0), 70.09],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 37
+                        DistanceTraveled = 125.00000000000021
+                        AvgHeadingChange = 4.86
+
+                        # Reminder  
+                        - The target is **PotatoBoxed**, described as: Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:37 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 38 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:PotatoBoxed,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-314, -213]  
+                        **Y Range**: [min_y, max_y] = [-1, 100]
+
+                        # RGB Captions
+                        Front = trees, green leaves; grassy field, well-maintained; trees scattered throughout the scene  
+                        Left = houses, wooden structure; trees, green leaves; houses surrounded by trees and bushes  
+                        Right = trees, green leaves; grassy field, well-maintained; trees scattered throughout the scene  
+                        Down = tree shadow, cast on the ground; tree branches, visible above  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [42, 36, 47]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 35, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 36, 47]]
+
+                        DownDepth:
+                        [[18, 15, 18], [15, 12, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-312.84, 11.52, -10.0), 100.09],
+    [(-312.84, 11.52, -10.0), 85.09],
+    [(-312.41, 16.5, -10.0), 85.09],
+    [(-311.98, 21.48, -10.0), 85.09],
+    [(-311.55, 26.46, -10.0), 85.09],
+    [(-311.12, 31.44, -10.0), 85.09],
+    [(-310.7, 36.43, -10.0), 85.09],
+    [(-310.7, 36.43, -10.0), 70.09],
+    [(-308.99, 41.13, -10.0), 70.09],
+    [(-308.99, 41.13, -10.0), 55.09],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 38
+                        DistanceTraveled = 125.00000000000021
+                        AvgHeadingChange = 5.13
+
+                        # Reminder  
+                        - The target is **PotatoBoxed**, described as: Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:38 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 39 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:PotatoBoxed,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-314, -213]  
+                        **Y Range**: [min_y, max_y] = [-1, 100]
+
+                        # RGB Captions
+                        Front = green grass, wide field; several trees, tall and leafy; trees are scattered across the field; sunlight filtering through leaves  
+                        Left = houses, small and wooden; houses are in the background; tree in the foreground; telephone pole on the left  
+                        Right = trees, tall and green; trees are spread out; grassy field in the foreground; clear sky in the background  
+                        Down = tree shadow, complex pattern; shadow is on the grass; sunlight coming from above  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 35, 46]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 34, 42]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 35, 47]]
+
+                        DownDepth:
+                        [[18, 15, 18], [15, 12, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-312.84, 11.52, -10.0), 85.09],
+    [(-312.41, 16.5, -10.0), 85.09],
+    [(-311.98, 21.48, -10.0), 85.09],
+    [(-311.55, 26.46, -10.0), 85.09],
+    [(-311.12, 31.44, -10.0), 85.09],
+    [(-310.7, 36.43, -10.0), 85.09],
+    [(-310.7, 36.43, -10.0), 70.09],
+    [(-308.99, 41.13, -10.0), 70.09],
+    [(-308.99, 41.13, -10.0), 55.09],
+    [(-306.13, 45.23, -10.0), 55.09],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 39
+                        DistanceTraveled = 130.0000000000002
+                        AvgHeadingChange = 5.0
+
+                        # Reminder  
+                        - The target is **PotatoBoxed**, described as: Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:39 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 40 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:PotatoBoxed,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-314, -213]  
+                        **Y Range**: [min_y, max_y] = [-1, 100]
+
+                        # RGB Captions
+                        Front = large tree, green leaves; tree is in the foreground; sunlight filtering through branches  
+                        Left = several houses, brown roofs; houses are in the background; tree in the foreground  
+                        Right = multiple trees, green foliage; trees are spread across the scene; grassy ground  
+                        Down = tree shadow, intricate pattern; shadow is on the ground; sunlight creating contrast  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 35, 46]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 34, 46]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 35, 47]]
+
+                        DownDepth:
+                        [[18, 15, 18], [15, 12, 15], [18, 15, 17]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-312.41, 16.5, -10.0), 85.09],
+    [(-311.98, 21.48, -10.0), 85.09],
+    [(-311.55, 26.46, -10.0), 85.09],
+    [(-311.12, 31.44, -10.0), 85.09],
+    [(-310.7, 36.43, -10.0), 85.09],
+    [(-310.7, 36.43, -10.0), 70.09],
+    [(-308.99, 41.13, -10.0), 70.09],
+    [(-308.99, 41.13, -10.0), 55.09],
+    [(-306.13, 45.23, -10.0), 55.09],
+    [(-303.27, 49.33, -10.0), 55.09],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 40
+                        DistanceTraveled = 135.0000000000002
+                        AvgHeadingChange = 4.87
+
+                        # Reminder  
+                        - The target is **PotatoBoxed**, described as: Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:40 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 41 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:PotatoBoxed,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-314, -213]  
+                        **Y Range**: [min_y, max_y] = [-1, 100]
+
+                        # RGB Captions
+                        Front = large tree, green leaves; tree is in the foreground; sunlight filtering through branches  
+                        Left = small houses, brown roofs; houses are in the background; tree in the foreground  
+                        Right = trees, green leaves; trees are scattered across the landscape; sunlight casting shadows on the ground  
+                        Down = tree shadow, complex pattern; shadow is on the ground; light source from above  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 35, 46]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 34, 46]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 35, 46]]
+
+                        DownDepth:
+                        [[18, 15, 18], [15, 12, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-311.98, 21.48, -10.0), 85.09],
+    [(-311.55, 26.46, -10.0), 85.09],
+    [(-311.12, 31.44, -10.0), 85.09],
+    [(-310.7, 36.43, -10.0), 85.09],
+    [(-310.7, 36.43, -10.0), 70.09],
+    [(-308.99, 41.13, -10.0), 70.09],
+    [(-308.99, 41.13, -10.0), 55.09],
+    [(-306.13, 45.23, -10.0), 55.09],
+    [(-303.27, 49.33, -10.0), 55.09],
+    [(-300.41, 53.43, -10.0), 55.09],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 41
+                        DistanceTraveled = 140.0000000000002
+                        AvgHeadingChange = 4.76
+
+                        # Reminder  
+                        - The target is **PotatoBoxed**, described as: Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:41 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 42 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:PotatoBoxed,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-314, -213]  
+                        **Y Range**: [min_y, max_y] = [-1, 100]
+
+                        # RGB Captions
+                        Front = tree, large, green leaves; tree is in the foreground; sunlight filtering through  
+                        Left = house, small, surrounded by trees; house is in the background; bright sun shining above  
+                        Right = trees, multiple, scattered; trees are in the background; clear sky above  
+                        Down = leaves, green, casting shadows; shadows on the ground; light source from above  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 24], [100, 100, 100], [45, 35, 46]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 35, 43]]
+
+                        RightDepth:
+                        [[20, 100, 100], [100, 100, 100], [40, 35, 46]]
+
+                        DownDepth:
+                        [[18, 15, 18], [15, 11, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-311.55, 26.46, -10.0), 85.09],
+    [(-311.12, 31.44, -10.0), 85.09],
+    [(-310.7, 36.43, -10.0), 85.09],
+    [(-310.7, 36.43, -10.0), 70.09],
+    [(-308.99, 41.13, -10.0), 70.09],
+    [(-308.99, 41.13, -10.0), 55.09],
+    [(-306.13, 45.23, -10.0), 55.09],
+    [(-303.27, 49.33, -10.0), 55.09],
+    [(-300.41, 53.43, -10.0), 55.09],
+    [(-297.55, 57.53, -10.0), 55.09],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 42
+                        DistanceTraveled = 145.0000000000002
+                        AvgHeadingChange = 4.64
+
+                        # Reminder  
+                        - The target is **PotatoBoxed**, described as: Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:42 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 43 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:PotatoBoxed,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-314, -213]  
+                        **Y Range**: [min_y, max_y] = [-1, 100]
+
+                        # RGB Captions
+                        Front = tree trunk, thick, brown; leaves surrounding the trunk; sunlight filtering through  
+                        Left = leaves, green, maple-like; leaves in the foreground; sunlight shining through the leaves  
+                        Right = tree trunk, thick, brown; leaves surrounding the trunk; shadows cast on the ground  
+                        Down = leaves, green, maple-like; leaves in the foreground; shadow of a person on the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 26], [35, 33, 31]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 34, 46]]
+
+                        RightDepth:
+                        [[49, 100, 100], [100, 100, 100], [44, 35, 42]]
+
+                        DownDepth:
+                        [[18, 15, 18], [15, 11, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-311.12, 31.44, -10.0), 85.09],
+    [(-310.7, 36.43, -10.0), 85.09],
+    [(-310.7, 36.43, -10.0), 70.09],
+    [(-308.99, 41.13, -10.0), 70.09],
+    [(-308.99, 41.13, -10.0), 55.09],
+    [(-306.13, 45.23, -10.0), 55.09],
+    [(-303.27, 49.33, -10.0), 55.09],
+    [(-300.41, 53.43, -10.0), 55.09],
+    [(-297.55, 57.53, -10.0), 55.09],
+    [(-294.69, 61.63, -10.0), 55.09],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 43
+                        DistanceTraveled = 150.0000000000002
+                        AvgHeadingChange = 4.53
+
+                        # Reminder  
+                        - The target is **PotatoBoxed**, described as: Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:43 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 44 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:PotatoBoxed,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-314, -213]  
+                        **Y Range**: [min_y, max_y] = [-1, 100]
+
+                        # RGB Captions
+                        Front = tree branches, green leaves; branches in the foreground; sunlight filtering through  
+                        Left = tree branches, green leaves; branches in the foreground; house visible in the background  
+                        Right = tree trunk, rough bark; trunk in the foreground; grassy area in the background  
+                        Down = leaves, dark silhouette; leaves in the foreground; textured wall in the background  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 13], [100, 100, 100], [46, 35, 30]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 35, 46]]
+
+                        RightDepth:
+                        [[2, 17, 16], [100, 100, 100], [40, 35, 46]]
+
+                        DownDepth:
+                        [[18, 15, 18], [15, 11, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-310.7, 36.43, -10.0), 85.09],
+    [(-310.7, 36.43, -10.0), 70.09],
+    [(-308.99, 41.13, -10.0), 70.09],
+    [(-308.99, 41.13, -10.0), 55.09],
+    [(-306.13, 45.23, -10.0), 55.09],
+    [(-303.27, 49.33, -10.0), 55.09],
+    [(-300.41, 53.43, -10.0), 55.09],
+    [(-297.55, 57.53, -10.0), 55.09],
+    [(-294.69, 61.63, -10.0), 55.09],
+    [(-291.83, 65.73, -10.0), 55.09],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 44
+                        DistanceTraveled = 155.0000000000002
+                        AvgHeadingChange = 4.43
+
+                        # Reminder  
+                        - The target is **PotatoBoxed**, described as: Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:44 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 45 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:PotatoBoxed,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-314, -213]  
+                        **Y Range**: [min_y, max_y] = [-1, 100]
+
+                        # RGB Captions
+                        Front = green leaves, large, hanging; tree branches, thin, intertwining; leaves in the foreground; sunlight filtering through  
+                        Left = green leaves, medium-sized, hanging; tree branches, thin, intertwining; leaves in the foreground; house visible in the background  
+                        Right = leaves, dark, hanging; tree branches, thick, intertwining; leaves in the foreground; shadows on the ground  
+                        Down = leaves, dark, hanging; tree branches, thin, intertwining; leaves in the foreground; shadows on the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 35, 35]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 35, 46]]
+
+                        RightDepth:
+                        [[10, 29, 100], [28, 100, 100], [28, 35, 41]]
+
+                        DownDepth:
+                        [[18, 15, 18], [15, 11, 15], [18, 15, 17]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-310.7, 36.43, -10.0), 70.09],
+    [(-308.99, 41.13, -10.0), 70.09],
+    [(-308.99, 41.13, -10.0), 55.09],
+    [(-306.13, 45.23, -10.0), 55.09],
+    [(-303.27, 49.33, -10.0), 55.09],
+    [(-300.41, 53.43, -10.0), 55.09],
+    [(-297.55, 57.53, -10.0), 55.09],
+    [(-294.69, 61.63, -10.0), 55.09],
+    [(-291.83, 65.73, -10.0), 55.09],
+    [(-288.96, 69.83, -10.0), 55.09],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 45
+                        DistanceTraveled = 160.0000000000002
+                        AvgHeadingChange = 4.33
+
+                        # Reminder  
+                        - The target is **PotatoBoxed**, described as: Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:45 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 46 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:PotatoBoxed,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-314, -213]  
+                        **Y Range**: [min_y, max_y] = [-1, 100]
+
+                        # RGB Captions
+                        Front = trees, green leaves; two deer in the distance; trees are on both sides  
+                        Left = house, brown roof; tree, green leaves; house is in the background; tree is in the foreground  
+                        Right = leaves, dark green; branches, thin; leaves cover most of the image  
+                        Down = tree shadow, dark; grass, light green; shadow is on the right side; grass covers the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 35, 38]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [46, 35, 45]]
+
+                        RightDepth:
+                        [[100, 42, 16], [31, 100, 100], [23, 35, 46]]
+
+                        DownDepth:
+                        [[18, 15, 18], [15, 11, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-308.99, 41.13, -10.0), 70.09],
+    [(-308.99, 41.13, -10.0), 55.09],
+    [(-306.13, 45.23, -10.0), 55.09],
+    [(-303.27, 49.33, -10.0), 55.09],
+    [(-300.41, 53.43, -10.0), 55.09],
+    [(-297.55, 57.53, -10.0), 55.09],
+    [(-294.69, 61.63, -10.0), 55.09],
+    [(-291.83, 65.73, -10.0), 55.09],
+    [(-288.96, 69.83, -10.0), 55.09],
+    [(-286.1, 73.93, -10.0), 55.09],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 46
+                        DistanceTraveled = 165.0000000000002
+                        AvgHeadingChange = 4.24
+
+                        # Reminder  
+                        - The target is **PotatoBoxed**, described as: Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:46 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 47 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:PotatoBoxed,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-314, -213]  
+                        **Y Range**: [min_y, max_y] = [-1, 100]
+
+                        # RGB Captions
+                        Front = deer, brown; deer is in the middle of the grassy field; trees surrounding the field  
+                        Left = tree, tall, leafy; tree is in the foreground; houses in the background  
+                        Right = trees, dense, green leaves; trees are in the foreground and background; view is from below  
+                        Down = shadow of a tree on the grass; shadow is in the foreground; tree branches visible at the top  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 35, 37]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 35, 45]]
+
+                        RightDepth:
+                        [[100, 100, 9], [59, 100, 100], [29, 33, 42]]
+
+                        DownDepth:
+                        [[18, 15, 16], [15, 11, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-308.99, 41.13, -10.0), 55.09],
+    [(-306.13, 45.23, -10.0), 55.09],
+    [(-303.27, 49.33, -10.0), 55.09],
+    [(-300.41, 53.43, -10.0), 55.09],
+    [(-297.55, 57.53, -10.0), 55.09],
+    [(-294.69, 61.63, -10.0), 55.09],
+    [(-291.83, 65.73, -10.0), 55.09],
+    [(-288.96, 69.83, -10.0), 55.09],
+    [(-286.1, 73.93, -10.0), 55.09],
+    [(-283.24, 78.03, -10.0), 55.09],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 47
+                        DistanceTraveled = 170.0000000000002
+                        AvgHeadingChange = 4.15
+
+                        # Reminder  
+                        - The target is **PotatoBoxed**, described as: Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:47 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 48 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:PotatoBoxed,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-314, -213]  
+                        **Y Range**: [min_y, max_y] = [-1, 100]
+
+                        # RGB Captions
+                        Front = pine trees, green needles; bear in the background, left of center; trees in the foreground  
+                        Left = tree, thin trunk, green leaves; sun shining through branches; tree in the foreground; grassy field in the background  
+                        Right = seaweed, green and brown; underwater; seaweed fills the frame  
+                        Down = tree shadow, cast on grass; tree to the right; shadow in the foreground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 35, 44]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 35, 45]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 34, 100], [44, 27, 36]]
+
+                        DownDepth:
+                        [[18, 15, 18], [15, 11, 13], [18, 15, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-306.13, 45.23, -10.0), 55.09],
+    [(-303.27, 49.33, -10.0), 55.09],
+    [(-300.41, 53.43, -10.0), 55.09],
+    [(-297.55, 57.53, -10.0), 55.09],
+    [(-294.69, 61.63, -10.0), 55.09],
+    [(-291.83, 65.73, -10.0), 55.09],
+    [(-288.96, 69.83, -10.0), 55.09],
+    [(-286.1, 73.93, -10.0), 55.09],
+    [(-283.24, 78.03, -10.0), 55.09],
+    [(-280.38, 82.13, -10.0), 55.09],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 48
+                        DistanceTraveled = 175.0000000000002
+                        AvgHeadingChange = 4.06
+
+                        # Reminder  
+                        - The target is **PotatoBoxed**, described as: Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:48 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 49 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:PotatoBoxed,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-314, -213]  
+                        **Y Range**: [min_y, max_y] = [-1, 100]
+
+                        # RGB Captions
+                        Front = dark forest, dense trees; sunlight filtering through; trees in the foreground and background  
+                        Left = pine tree branches, green needles; sunlight shining through; branches spread across the image  
+                        Right = forest canopy, dense foliage; sunlight breaking through; leaves and branches fill the frame  
+                        Down = dark scene, sparse light; indistinct shapes; darkness dominates the image  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [42, 100, 100], [1, 3, 33]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 30, 3]]
+
+                        RightDepth:
+                        [[100, 100, 28], [100, 100, 51], [42, 33, 20]]
+
+                        DownDepth:
+                        [[3, 2, 15], [12, 4, 14], [18, 15, 14]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-303.27, 49.33, -10.0), 55.09],
+    [(-300.41, 53.43, -10.0), 55.09],
+    [(-297.55, 57.53, -10.0), 55.09],
+    [(-294.69, 61.63, -10.0), 55.09],
+    [(-291.83, 65.73, -10.0), 55.09],
+    [(-288.96, 69.83, -10.0), 55.09],
+    [(-286.1, 73.93, -10.0), 55.09],
+    [(-283.24, 78.03, -10.0), 55.09],
+    [(-280.38, 82.13, -10.0), 55.09],
+    [(-277.52, 86.23, -10.0), 55.09],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 49
+                        DistanceTraveled = 180.0000000000002
+                        AvgHeadingChange = 3.98
+
+                        # Reminder  
+                        - The target is **PotatoBoxed**, described as: Geometric rectangular form, light brown cardboard texture with visible creases, loosely enclosing organic yellowish potato-like contents, used for packaging or transport of produce.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:49 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

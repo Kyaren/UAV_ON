@@ -1,0 +1,2394 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: BusStop,
+                        Size: big(5.25*3=15.75 squares),
+                        Description: Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-12, 89]  
+                        **Y Range**: [min_y, max_y] = [-84, 17]
+
+                        # RGB Captions
+                        Front = multi-story buildings, brown and beige; snow-covered road; vehicles on the road; buildings in the midground; forested area in the background  
+                        Left = pine trees, snow-covered; wooden cabin; cabin to the right of the path; trees surrounding the cabin  
+                        Right = snowy landscape; sun low in the sky; long shadows on the ground; road stretching into the distance  
+                        Down = yellow car, small; car on the road; road partially covered in snow; car near the top of the image  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [76, 69, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [42, 66, 82]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 100]]
+
+                        DownDepth:
+                        [[34, 30, 36], [25, 23, 31], [25, 25, 37]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(38.62, -33.57, -10.0), -140.04],
+    [(38.62, -33.57, -10.0), -140.04],
+    [(38.62, -33.57, -10.0), -140.04],
+    [(38.62, -33.57, -10.0), -140.04],
+    [(38.62, -33.57, -10.0), -140.04],
+    [(38.62, -33.57, -10.0), -140.04],
+    [(38.62, -33.57, -10.0), -140.04],
+    [(38.62, -33.57, -10.0), -140.04],
+    [(38.62, -33.57, -10.0), -140.04],
+    [(38.62, -33.57, -10.0), -140.04],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** BusStop**, described as:  Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 1 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: BusStop,
+                        Size: big(5.25*3=15.75 squares),
+                        Description: Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-12, 89]  
+                        **Y Range**: [min_y, max_y] = [-84, 17]
+
+                        # RGB Captions
+                        Front = multi-story buildings, brown; snow-covered ground; buildings in the background; road with vehicles  
+                        Left = snow-covered trees, green and white; trees in the foreground; snowy ground; distant buildings  
+                        Right = snowy landscape; sun in the sky; wooden bridge; bridge spans across the scene; trees in the distance  
+                        Down = yellow car; car on the right; snow-covered ground; tire tracks visible  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [86, 72, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 55, 92]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 100]]
+
+                        DownDepth:
+                        [[35, 31, 36], [24, 24, 31], [24, 28, 37]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(38.62, -33.57, -10.0), -140.04],
+    [(34.79, -36.78, -10.0), -140.04],
+    [(34.79, -36.78, -10.0), -140.04],
+    [(34.79, -36.78, -10.0), -140.04],
+    [(34.79, -36.78, -10.0), -140.04],
+    [(34.79, -36.78, -10.0), -140.04],
+    [(34.79, -36.78, -10.0), -140.04],
+    [(34.79, -36.78, -10.0), -140.04],
+    [(34.79, -36.78, -10.0), -140.04],
+    [(34.79, -36.78, -10.0), -140.04],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 1
+                        DistanceTraveled = 4.999999999999999
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** BusStop**, described as:  Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:1 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 2 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: BusStop,
+                        Size: big(5.25*3=15.75 squares),
+                        Description: Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-12, 89]  
+                        **Y Range**: [min_y, max_y] = [-84, 17]
+
+                        # RGB Captions
+                        Front = multi-story buildings, brown; buildings in the background; snow-covered ground; yellow car on the road  
+                        Left = snow-covered trees, green and white; trees in the foreground; snowy ground; distant building  
+                        Right = snowy bridge, long; bridge spans across; sun in the sky; snow-covered ground  
+                        Down = snowy ground, white; footprints visible; shadow of a structure  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [94, 98, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [58, 65, 94]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 99, 100]]
+
+                        DownDepth:
+                        [[35, 31, 36], [28, 24, 38], [31, 33, 53]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(38.62, -33.57, -10.0), -140.04],
+    [(34.79, -36.78, -10.0), -140.04],
+    [(30.96, -39.99, -10.0), -140.04],
+    [(30.96, -39.99, -10.0), -140.04],
+    [(30.96, -39.99, -10.0), -140.04],
+    [(30.96, -39.99, -10.0), -140.04],
+    [(30.96, -39.99, -10.0), -140.04],
+    [(30.96, -39.99, -10.0), -140.04],
+    [(30.96, -39.99, -10.0), -140.04],
+    [(30.96, -39.99, -10.0), -140.04],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 2
+                        DistanceTraveled = 10.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** BusStop**, described as:  Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:2 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 3 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: BusStop,
+                        Size: big(5.25*3=15.75 squares),
+                        Description: Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-12, 89]  
+                        **Y Range**: [min_y, max_y] = [-84, 17]
+
+                        # RGB Captions
+                        Front = yellow taxi, small, on road; road is in the foreground; buildings in the background  
+                        Left = pine trees, many, snow-covered; trees are in the background; road in the foreground  
+                        Right = snowy bridge, long, over river; bridge is in the foreground; sun in the sky  
+                        Down = footprint, large, in snow; footprint is in the foreground; building in the background  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [97, 97, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [64, 69, 97]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 97, 100]]
+
+                        DownDepth:
+                        [[37, 31, 36], [29, 24, 44], [33, 39, 53]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(38.62, -33.57, -10.0), -140.04],
+    [(34.79, -36.78, -10.0), -140.04],
+    [(30.96, -39.99, -10.0), -140.04],
+    [(27.13, -43.2, -10.0), -140.04],
+    [(27.13, -43.2, -10.0), -140.04],
+    [(27.13, -43.2, -10.0), -140.04],
+    [(27.13, -43.2, -10.0), -140.04],
+    [(27.13, -43.2, -10.0), -140.04],
+    [(27.13, -43.2, -10.0), -140.04],
+    [(27.13, -43.2, -10.0), -140.04],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 3
+                        DistanceTraveled = 15.000000000000002
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** BusStop**, described as:  Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:3 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 4 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: BusStop,
+                        Size: big(5.25*3=15.75 squares),
+                        Description: Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-12, 89]  
+                        **Y Range**: [min_y, max_y] = [-84, 17]
+
+                        # RGB Captions
+                        Front = apartment buildings, tall, brown; trees, green, behind buildings; snow-covered ground, white; buildings in the background  
+                        Left = trees, snow-covered, dense; road, clear, through forest; buildings, distant, on right  
+                        Right = bridge, long, wooden; river, frozen, under bridge; trees, snow-covered, on both sides; sun, low, in sky  
+                        Down = snow, thick, white; Africa shape, cleared, in snow; road, cleared, beside shape; car, yellow, on road  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [91, 98, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [56, 65, 91]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 100]]
+
+                        DownDepth:
+                        [[36, 31, 37], [30, 24, 45], [33, 37, 53]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(38.62, -33.57, -10.0), -140.04],
+    [(34.79, -36.78, -10.0), -140.04],
+    [(30.96, -39.99, -10.0), -140.04],
+    [(27.13, -43.2, -10.0), -140.04],
+    [(23.29, -46.41, -10.0), -140.04],
+    [(23.29, -46.41, -10.0), -140.04],
+    [(23.29, -46.41, -10.0), -140.04],
+    [(23.29, -46.41, -10.0), -140.04],
+    [(23.29, -46.41, -10.0), -140.04],
+    [(23.29, -46.41, -10.0), -140.04],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 4
+                        DistanceTraveled = 20.000000000000004
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** BusStop**, described as:  Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:4 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 5 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: BusStop,
+                        Size: big(5.25*3=15.75 squares),
+                        Description: Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-12, 89]  
+                        **Y Range**: [min_y, max_y] = [-84, 17]
+
+                        # RGB Captions
+                        Front = multi-story buildings, snow-covered; trees with green foliage; vehicles on the road; buildings in the mid-ground  
+                        Left = road, cleared of snow; snow-covered trees; buildings partially visible; road stretches into the distance  
+                        Right = snow-covered bridge; sun in the sky; forested area with snow; bridge leads to a building  
+                        Down = yellow car, small; snow on the ground; road cleared of snow; car is moving along the road  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [92, 96, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [55, 67, 92]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 100]]
+
+                        DownDepth:
+                        [[36, 31, 37], [30, 24, 34], [34, 31, 53]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(38.62, -33.57, -10.0), -140.04],
+    [(34.79, -36.78, -10.0), -140.04],
+    [(30.96, -39.99, -10.0), -140.04],
+    [(27.13, -43.2, -10.0), -140.04],
+    [(23.29, -46.41, -10.0), -140.04],
+    [(19.46, -49.62, -10.0), -140.04],
+    [(19.46, -49.62, -10.0), -140.04],
+    [(19.46, -49.62, -10.0), -140.04],
+    [(19.46, -49.62, -10.0), -140.04],
+    [(19.46, -49.62, -10.0), -140.04],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 5
+                        DistanceTraveled = 25.000000000000007
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** BusStop**, described as:  Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:5 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 6 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: BusStop,
+                        Size: big(5.25*3=15.75 squares),
+                        Description: Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-12, 89]  
+                        **Y Range**: [min_y, max_y] = [-84, 17]
+
+                        # RGB Captions
+                        Front = multi-story buildings, beige; snow-covered ground; orange tractor on the left; buildings in the background  
+                        Left = trees with snow, green and white; snowy ground; train tracks on the right; buildings in the distance  
+                        Right = snowy landscape; long bridge in the center; sun in the sky; trees in the distance  
+                        Down = yellow car on the road; snow piled beside the road; road barriers on the left; car moving towards the top  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [82, 96, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [53, 69, 90]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 98, 100]]
+
+                        DownDepth:
+                        [[36, 31, 37], [31, 24, 31], [34, 31, 53]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(38.62, -33.57, -10.0), -140.04],
+    [(34.79, -36.78, -10.0), -140.04],
+    [(30.96, -39.99, -10.0), -140.04],
+    [(27.13, -43.2, -10.0), -140.04],
+    [(23.29, -46.41, -10.0), -140.04],
+    [(19.46, -49.62, -10.0), -140.04],
+    [(15.63, -52.83, -10.0), -140.04],
+    [(15.63, -52.83, -10.0), -140.04],
+    [(15.63, -52.83, -10.0), -140.04],
+    [(15.63, -52.83, -10.0), -140.04],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 6
+                        DistanceTraveled = 30.000000000000007
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** BusStop**, described as:  Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:6 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 7 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: BusStop,
+                        Size: big(5.25*3=15.75 squares),
+                        Description: Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-12, 89]  
+                        **Y Range**: [min_y, max_y] = [-84, 17]
+
+                        # RGB Captions
+                        Front = orange tractor, small; snow-covered road; snowy buildings in background; trees with green foliage  
+                        Left = snow-covered road; snowy buildings; trees with white and green foliage; buildings on the right side  
+                        Right = snowy landscape; sun in the sky; long road extending into distance; trees covered in snow  
+                        Down = yellow car on road; snow on road sides; stone barriers along the road; bench near the road  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [83, 98, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [53, 69, 85]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 100]]
+
+                        DownDepth:
+                        [[37, 31, 37], [30, 24, 31], [33, 31, 53]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(38.62, -33.57, -10.0), -140.04],
+    [(34.79, -36.78, -10.0), -140.04],
+    [(30.96, -39.99, -10.0), -140.04],
+    [(27.13, -43.2, -10.0), -140.04],
+    [(23.29, -46.41, -10.0), -140.04],
+    [(19.46, -49.62, -10.0), -140.04],
+    [(15.63, -52.83, -10.0), -140.04],
+    [(11.8, -56.04, -10.0), -140.04],
+    [(11.8, -56.04, -10.0), -140.04],
+    [(11.8, -56.04, -10.0), -140.04],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 7
+                        DistanceTraveled = 35.00000000000001
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** BusStop**, described as:  Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:7 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 8 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: BusStop,
+                        Size: big(5.25*3=15.75 squares),
+                        Description: Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-12, 89]  
+                        **Y Range**: [min_y, max_y] = [-84, 17]
+
+                        # RGB Captions
+                        Front = apartment buildings, tall, brown; buildings in the background; snow-covered ground, white; trees with green leaves; bulldozer, orange, in the foreground  
+                        Left = road, narrow, black; road in the foreground; apartment buildings, tall, brown; buildings in the background; trees with snow on branches; snow-covered ground, white  
+                        Right = snow-covered landscape; sun low in sky; long shadows; distant house, small, white; trees with snow on branches; road, narrow, black  
+                        Down = road, snowy, yellow car; car driving on road; two boats, wooden, near shore; snow on ground; road has tire tracks  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [85, 96, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [56, 69, 83]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 100]]
+
+                        DownDepth:
+                        [[36, 31, 51], [31, 24, 32], [35, 31, 54]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(38.62, -33.57, -10.0), -140.04],
+    [(34.79, -36.78, -10.0), -140.04],
+    [(30.96, -39.99, -10.0), -140.04],
+    [(27.13, -43.2, -10.0), -140.04],
+    [(23.29, -46.41, -10.0), -140.04],
+    [(19.46, -49.62, -10.0), -140.04],
+    [(15.63, -52.83, -10.0), -140.04],
+    [(11.8, -56.04, -10.0), -140.04],
+    [(7.96, -59.26, -10.0), -140.04],
+    [(7.96, -59.26, -10.0), -140.04],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 8
+                        DistanceTraveled = 40.00000000000001
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** BusStop**, described as:  Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:8 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 9 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: BusStop,
+                        Size: big(5.25*3=15.75 squares),
+                        Description: Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-12, 89]  
+                        **Y Range**: [min_y, max_y] = [-84, 17]
+
+                        # RGB Captions
+                        Front = multi-story buildings, brown; buildings in the background; snow-covered ground  
+                        Left = road, cleared of snow; snow-covered trees on both sides; buildings in the distance  
+                        Right = snow-covered landscape; sun low in sky; train tracks in foreground  
+                        Down = yellow car on road; two boats on shore; snow on ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [87, 95, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [60, 70, 81]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 98, 100]]
+
+                        DownDepth:
+                        [[37, 31, 50], [31, 24, 32], [36, 31, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(38.62, -33.57, -10.0), -140.04],
+    [(34.79, -36.78, -10.0), -140.04],
+    [(30.96, -39.99, -10.0), -140.04],
+    [(27.13, -43.2, -10.0), -140.04],
+    [(23.29, -46.41, -10.0), -140.04],
+    [(19.46, -49.62, -10.0), -140.04],
+    [(15.63, -52.83, -10.0), -140.04],
+    [(11.8, -56.04, -10.0), -140.04],
+    [(7.96, -59.26, -10.0), -140.04],
+    [(4.13, -62.47, -10.0), -140.04],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 9
+                        DistanceTraveled = 45.00000000000001
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** BusStop**, described as:  Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:9 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 10 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: BusStop,
+                        Size: big(5.25*3=15.75 squares),
+                        Description: Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-12, 89]  
+                        **Y Range**: [min_y, max_y] = [-84, 17]
+
+                        # RGB Captions
+                        Front = multi-story buildings, brown facade; buildings are in the background; snow-covered ground  
+                        Left = road, cleared of snow; orange tractor on the road; snow-covered trees beside the road  
+                        Right = snow-covered landscape; sun low in the sky; distant building with snow on the roof  
+                        Down = yellow car on the road; two boats on the snow; road partially covered with snow  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [90, 95, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [62, 70, 90]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 98, 100]]
+
+                        DownDepth:
+                        [[37, 31, 50], [31, 24, 32], [36, 31, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(34.79, -36.78, -10.0), -140.04],
+    [(30.96, -39.99, -10.0), -140.04],
+    [(27.13, -43.2, -10.0), -140.04],
+    [(23.29, -46.41, -10.0), -140.04],
+    [(19.46, -49.62, -10.0), -140.04],
+    [(15.63, -52.83, -10.0), -140.04],
+    [(11.8, -56.04, -10.0), -140.04],
+    [(7.96, -59.26, -10.0), -140.04],
+    [(4.13, -62.47, -10.0), -140.04],
+    [(0.3, -65.68, -10.0), -140.04],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 10
+                        DistanceTraveled = 50.00000000000001
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** BusStop**, described as:  Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:10 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 11 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: BusStop,
+                        Size: big(5.25*3=15.75 squares),
+                        Description: Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-12, 89]  
+                        **Y Range**: [min_y, max_y] = [-84, 17]
+
+                        # RGB Captions
+                        Front = multi-story buildings, brown; buildings in the left foreground; snow-covered ground  
+                        Left = road, blacktop; road winding through scene; orange tractor on the right; snow-covered trees on both sides  
+                        Right = snow-covered field, white; field in the foreground; sun in the sky; distant house and trees  
+                        Down = yellow car, small; car on the left; two boats, wooden; boats on the right; snow-covered dock  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [91, 95, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [69, 73, 93]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 96, 100]]
+
+                        DownDepth:
+                        [[37, 31, 50], [31, 24, 42], [37, 31, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(30.96, -39.99, -10.0), -140.04],
+    [(27.13, -43.2, -10.0), -140.04],
+    [(23.29, -46.41, -10.0), -140.04],
+    [(19.46, -49.62, -10.0), -140.04],
+    [(15.63, -52.83, -10.0), -140.04],
+    [(11.8, -56.04, -10.0), -140.04],
+    [(7.96, -59.26, -10.0), -140.04],
+    [(4.13, -62.47, -10.0), -140.04],
+    [(0.3, -65.68, -10.0), -140.04],
+    [(-3.53, -68.89, -10.0), -140.04],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 11
+                        DistanceTraveled = 55.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** BusStop**, described as:  Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:11 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 12 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: BusStop,
+                        Size: big(5.25*3=15.75 squares),
+                        Description: Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-12, 89]  
+                        **Y Range**: [min_y, max_y] = [-84, 17]
+
+                        # RGB Captions
+                        Front = multi-story buildings, brown; buildings in the left foreground; snow-covered ground  
+                        Left = road, curved; road in the middle; vehicles on the road; trees with snow  
+                        Right = snowy landscape; sun in the sky; bridge in the foreground; trees in the background  
+                        Down = yellow car, small; car on the road; footprints in the snow; road in the foreground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [93, 95, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [70, 72, 93]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 96, 100]]
+
+                        DownDepth:
+                        [[37, 31, 50], [31, 24, 42], [37, 31, 37]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(27.13, -43.2, -10.0), -140.04],
+    [(23.29, -46.41, -10.0), -140.04],
+    [(19.46, -49.62, -10.0), -140.04],
+    [(15.63, -52.83, -10.0), -140.04],
+    [(11.8, -56.04, -10.0), -140.04],
+    [(7.96, -59.26, -10.0), -140.04],
+    [(4.13, -62.47, -10.0), -140.04],
+    [(0.3, -65.68, -10.0), -140.04],
+    [(-3.53, -68.89, -10.0), -140.04],
+    [(-7.37, -72.1, -10.0), -140.04],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 12
+                        DistanceTraveled = 60.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** BusStop**, described as:  Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:12 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 13 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: BusStop,
+                        Size: big(5.25*3=15.75 squares),
+                        Description: Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-12, 89]  
+                        **Y Range**: [min_y, max_y] = [-84, 17]
+
+                        # RGB Captions
+                        Front = multi-story building, beige; snow-covered ground; trees with green foliage on the roof; building in the left foreground  
+                        Left = road, cleared of snow; snow-covered ground; multiple vehicles; buildings and snow-covered trees in the background  
+                        Right = snow-covered ground; wooden bridge; sun low in the sky; distant forest and hills  
+                        Down = orange tractor; yellow construction vehicle; snow-covered ground; tire tracks in the snow  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [94, 100, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [68, 72, 89]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 98, 100]]
+
+                        DownDepth:
+                        [[37, 31, 51], [31, 24, 32], [36, 30, 37]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(23.29, -46.41, -10.0), -140.04],
+    [(19.46, -49.62, -10.0), -140.04],
+    [(15.63, -52.83, -10.0), -140.04],
+    [(11.8, -56.04, -10.0), -140.04],
+    [(7.96, -59.26, -10.0), -140.04],
+    [(4.13, -62.47, -10.0), -140.04],
+    [(0.3, -65.68, -10.0), -140.04],
+    [(-3.53, -68.89, -10.0), -140.04],
+    [(-7.37, -72.1, -10.0), -140.04],
+    [(-10.58, -68.27, -10.0), -140.04],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 13
+                        DistanceTraveled = 65.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** BusStop**, described as:  Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:13 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 14 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: BusStop,
+                        Size: big(5.25*3=15.75 squares),
+                        Description: Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-12, 89]  
+                        **Y Range**: [min_y, max_y] = [-84, 17]
+
+                        # RGB Captions
+                        Front = high-rise buildings, beige; buildings in the midground; snow-covered ground; trees with green foliage; three cars on the road  
+                        Left = snow-covered trees, white and green; trees in the foreground; snowy ground; road cleared of snow  
+                        Right = snowy landscape; sun in the sky; trees covered in snow; small pond in the foreground  
+                        Down = orange tractor; tractor on the left; snow-covered ground; tire tracks in the snow; yellow car at the bottom  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [93, 71, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [92, 66, 93]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 98, 100]]
+
+                        DownDepth:
+                        [[37, 31, 37], [31, 24, 42], [37, 31, 51]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(19.46, -49.62, -10.0), -140.04],
+    [(15.63, -52.83, -10.0), -140.04],
+    [(11.8, -56.04, -10.0), -140.04],
+    [(7.96, -59.26, -10.0), -140.04],
+    [(4.13, -62.47, -10.0), -140.04],
+    [(0.3, -65.68, -10.0), -140.04],
+    [(-3.53, -68.89, -10.0), -140.04],
+    [(-7.37, -72.1, -10.0), -140.04],
+    [(-10.58, -68.27, -10.0), -140.04],
+    [(-10.58, -68.27, -10.0), 174.96],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 14
+                        DistanceTraveled = 65.0
+                        AvgHeadingChange = 3.21
+
+                        # Reminder  
+                        - The target is ** BusStop**, described as:  Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:14 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 15 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: BusStop,
+                        Size: big(5.25*3=15.75 squares),
+                        Description: Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-12, 89]  
+                        **Y Range**: [min_y, max_y] = [-84, 17]
+
+                        # RGB Captions
+                        Front = multi-story buildings, brown; snow-covered road; trees with snow; vehicles parked along the road; buildings in the background  
+                        Left = road partially covered in snow; several trees with snow on branches; bench near the road; trees in the mid-ground; open sky above  
+                        Right = high-rise buildings, beige; snow-covered ground; trees with snow; buildings in the background; clear path through the snow  
+                        Down = orange tractor; snow-covered ground; tire tracks in the snow; construction barriers; top-down view  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [70, 71, 93]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 64]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [93, 98, 100]]
+
+                        DownDepth:
+                        [[36, 31, 37], [30, 24, 31], [37, 31, 51]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(15.63, -52.83, -10.0), -140.04],
+    [(11.8, -56.04, -10.0), -140.04],
+    [(7.96, -59.26, -10.0), -140.04],
+    [(4.13, -62.47, -10.0), -140.04],
+    [(0.3, -65.68, -10.0), -140.04],
+    [(-3.53, -68.89, -10.0), -140.04],
+    [(-7.37, -72.1, -10.0), -140.04],
+    [(-10.58, -68.27, -10.0), -140.04],
+    [(-10.58, -68.27, -10.0), 174.96],
+    [(-10.58, -68.27, -10.0), 129.96],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 15
+                        DistanceTraveled = 65.0
+                        AvgHeadingChange = 6.0
+
+                        # Reminder  
+                        - The target is ** BusStop**, described as:  Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:15 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 16 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: BusStop,
+                        Size: big(5.25*3=15.75 squares),
+                        Description: Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-12, 89]  
+                        **Y Range**: [min_y, max_y] = [-84, 17]
+
+                        # RGB Captions
+                        Front = road, cleared of snow; snow-covered cars; orange truck; buildings in the background; trees with snow  
+                        Left = snow-covered ground; footpath cleared of snow; snow-covered trees; bench on the path; sky clear  
+                        Right = high-rise buildings, brown; snow-covered ground; road cleared of snow; trees with snow; buildings in a row  
+                        Down = yellow car on the road; snow on the ground and road edges; street lamps casting shadows; road straight  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [67, 70, 93]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 98, 57]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [93, 100, 100]]
+
+                        DownDepth:
+                        [[35, 31, 37], [30, 24, 31], [36, 31, 52]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(11.8, -56.04, -10.0), -140.04],
+    [(7.96, -59.26, -10.0), -140.04],
+    [(4.13, -62.47, -10.0), -140.04],
+    [(0.3, -65.68, -10.0), -140.04],
+    [(-3.53, -68.89, -10.0), -140.04],
+    [(-7.37, -72.1, -10.0), -140.04],
+    [(-10.58, -68.27, -10.0), -140.04],
+    [(-10.58, -68.27, -10.0), 174.96],
+    [(-10.58, -68.27, -10.0), 129.96],
+    [(-6.75, -65.06, -10.0), 129.96],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 16
+                        DistanceTraveled = 70.0
+                        AvgHeadingChange = 5.62
+
+                        # Reminder  
+                        - The target is ** BusStop**, described as:  Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:16 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 17 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: BusStop,
+                        Size: big(5.25*3=15.75 squares),
+                        Description: Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-12, 89]  
+                        **Y Range**: [min_y, max_y] = [-84, 17]
+
+                        # RGB Captions
+                        Front = road, dark asphalt; snow-covered ground; buildings on the right; trees in the background  
+                        Left = snow-covered ground; scattered trees; small wooden crate in the foreground  
+                        Right = buildings, multi-story; snow-covered ground; road with a car; trees in the background  
+                        Down = road, partially snow-covered; yellow car; orange tractor to the right; top-down view  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [65, 68, 86]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 92, 57]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [86, 96, 100]]
+
+                        DownDepth:
+                        [[35, 31, 36], [31, 24, 31], [37, 31, 51]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(7.96, -59.26, -10.0), -140.04],
+    [(4.13, -62.47, -10.0), -140.04],
+    [(0.3, -65.68, -10.0), -140.04],
+    [(-3.53, -68.89, -10.0), -140.04],
+    [(-7.37, -72.1, -10.0), -140.04],
+    [(-10.58, -68.27, -10.0), -140.04],
+    [(-10.58, -68.27, -10.0), 174.96],
+    [(-10.58, -68.27, -10.0), 129.96],
+    [(-6.75, -65.06, -10.0), 129.96],
+    [(-9.96, -61.22, -10.0), 129.96],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 17
+                        DistanceTraveled = 75.0
+                        AvgHeadingChange = 5.29
+
+                        # Reminder  
+                        - The target is ** BusStop**, described as:  Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:17 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 18 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: BusStop,
+                        Size: big(5.25*3=15.75 squares),
+                        Description: Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-12, 89]  
+                        **Y Range**: [min_y, max_y] = [-84, 17]
+
+                        # RGB Captions
+                        Front = pine trees, snow-covered; trees are in the background; snowy ground  
+                        Left = railroad tracks, snow-covered; tracks extend into the distance; trees on both sides  
+                        Right = apartment buildings, multi-story; buildings stand in the background; cars parked in front  
+                        Down = yellow car, moving; car is on the road; snowplow nearby  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [90, 64, 93]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [93, 69, 100]]
+
+                        DownDepth:
+                        [[36, 30, 36], [31, 24, 31], [37, 31, 37]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(4.13, -62.47, -10.0), -140.04],
+    [(0.3, -65.68, -10.0), -140.04],
+    [(-3.53, -68.89, -10.0), -140.04],
+    [(-7.37, -72.1, -10.0), -140.04],
+    [(-10.58, -68.27, -10.0), -140.04],
+    [(-10.58, -68.27, -10.0), 174.96],
+    [(-10.58, -68.27, -10.0), 129.96],
+    [(-6.75, -65.06, -10.0), 129.96],
+    [(-9.96, -61.22, -10.0), 129.96],
+    [(-9.96, -61.22, -10.0), 84.96],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 18
+                        DistanceTraveled = 75.0
+                        AvgHeadingChange = 7.5
+
+                        # Reminder  
+                        - The target is ** BusStop**, described as:  Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:18 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 19 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: BusStop,
+                        Size: big(5.25*3=15.75 squares),
+                        Description: Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-12, 89]  
+                        **Y Range**: [min_y, max_y] = [-84, 17]
+
+                        # RGB Captions
+                        Front = trees, snow-covered; snow on the ground; trees are in the background  
+                        Left = railroad tracks, covered in snow; trees on both sides; tracks extend into the distance  
+                        Right = apartment buildings, multiple stories; cars parked; snow on the ground and rooftops  
+                        Down = yellow car, on the road; snow plow, to the right; snow on the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [78, 60, 92]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [93, 71, 100]]
+
+                        DownDepth:
+                        [[36, 30, 36], [31, 24, 31], [37, 31, 37]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(0.3, -65.68, -10.0), -140.04],
+    [(-3.53, -68.89, -10.0), -140.04],
+    [(-7.37, -72.1, -10.0), -140.04],
+    [(-10.58, -68.27, -10.0), -140.04],
+    [(-10.58, -68.27, -10.0), 174.96],
+    [(-10.58, -68.27, -10.0), 129.96],
+    [(-6.75, -65.06, -10.0), 129.96],
+    [(-9.96, -61.22, -10.0), 129.96],
+    [(-9.96, -61.22, -10.0), 84.96],
+    [(-9.52, -56.24, -10.0), 84.96],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 19
+                        DistanceTraveled = 80.0
+                        AvgHeadingChange = 7.11
+
+                        # Reminder  
+                        - The target is ** BusStop**, described as:  Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:19 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 20 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: BusStop,
+                        Size: big(5.25*3=15.75 squares),
+                        Description: Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-12, 89]  
+                        **Y Range**: [min_y, max_y] = [-84, 17]
+
+                        # RGB Captions
+                        Front = pine trees, snow-covered; trees are scattered; snow on the ground  
+                        Left = railroad tracks, covered in snow; tracks run through the center; trees on both sides  
+                        Right = apartment buildings, multiple stories; buildings stand in a row; cars parked along the street; tractor in the foreground  
+                        Down = yellow car, small; car is on the road; road partially cleared of snow  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [91, 57, 93]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [93, 71, 100]]
+
+                        DownDepth:
+                        [[36, 30, 36], [31, 24, 31], [36, 31, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-3.53, -68.89, -10.0), -140.04],
+    [(-7.37, -72.1, -10.0), -140.04],
+    [(-10.58, -68.27, -10.0), -140.04],
+    [(-10.58, -68.27, -10.0), 174.96],
+    [(-10.58, -68.27, -10.0), 129.96],
+    [(-6.75, -65.06, -10.0), 129.96],
+    [(-9.96, -61.22, -10.0), 129.96],
+    [(-9.96, -61.22, -10.0), 84.96],
+    [(-9.52, -56.24, -10.0), 84.96],
+    [(-4.54, -56.68, -10.0), 84.96],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 20
+                        DistanceTraveled = 85.0
+                        AvgHeadingChange = 6.75
+
+                        # Reminder  
+                        - The target is ** BusStop**, described as:  Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:20 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 21 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: BusStop,
+                        Size: big(5.25*3=15.75 squares),
+                        Description: Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-12, 89]  
+                        **Y Range**: [min_y, max_y] = [-84, 17]
+
+                        # RGB Captions
+                        Front = trees, snow-covered; snow on the ground; trees are scattered  
+                        Left = railroad tracks, covered in snow; trees on both sides; tracks extend into the distance  
+                        Right = apartment buildings, multiple stories; cars parked on the street; snow on the ground and roofs  
+                        Down = road with snow; yellow car driving; snow cleared from the road  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [90, 56, 92]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [92, 70, 100]]
+
+                        DownDepth:
+                        [[35, 29, 35], [30, 23, 31], [37, 31, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-7.37, -72.1, -10.0), -140.04],
+    [(-10.58, -68.27, -10.0), -140.04],
+    [(-10.58, -68.27, -10.0), 174.96],
+    [(-10.58, -68.27, -10.0), 129.96],
+    [(-6.75, -65.06, -10.0), 129.96],
+    [(-9.96, -61.22, -10.0), 129.96],
+    [(-9.96, -61.22, -10.0), 84.96],
+    [(-9.52, -56.24, -10.0), 84.96],
+    [(-4.54, -56.68, -10.0), 84.96],
+    [(-4.1, -51.7, -10.0), 84.96],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 21
+                        DistanceTraveled = 90.0
+                        AvgHeadingChange = 6.43
+
+                        # Reminder  
+                        - The target is ** BusStop**, described as:  Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:21 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 22 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: BusStop,
+                        Size: big(5.25*3=15.75 squares),
+                        Description: Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-12, 89]  
+                        **Y Range**: [min_y, max_y] = [-84, 17]
+
+                        # RGB Captions
+                        Front = pine trees, snow-covered; trees are scattered; snowy ground  
+                        Left = snowy bridge, narrow; bridge spans across; snowy ground and trees  
+                        Right = apartment buildings, multi-story; buildings in the background; cars on the road; tractor in the foreground  
+                        Down = yellow car, small; car is on the road; snow on both sides of the road  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [89, 53, 92]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [92, 71, 100]]
+
+                        DownDepth:
+                        [[33, 27, 34], [31, 23, 31], [36, 31, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-10.58, -68.27, -10.0), -140.04],
+    [(-10.58, -68.27, -10.0), 174.96],
+    [(-10.58, -68.27, -10.0), 129.96],
+    [(-6.75, -65.06, -10.0), 129.96],
+    [(-9.96, -61.22, -10.0), 129.96],
+    [(-9.96, -61.22, -10.0), 84.96],
+    [(-9.52, -56.24, -10.0), 84.96],
+    [(-4.54, -56.68, -10.0), 84.96],
+    [(-4.1, -51.7, -10.0), 84.96],
+    [(-3.66, -46.72, -10.0), 84.96],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 22
+                        DistanceTraveled = 95.0
+                        AvgHeadingChange = 6.14
+
+                        # Reminder  
+                        - The target is ** BusStop**, described as:  Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:22 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 23 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: BusStop,
+                        Size: big(5.25*3=15.75 squares),
+                        Description: Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-12, 89]  
+                        **Y Range**: [min_y, max_y] = [-84, 17]
+
+                        # RGB Captions
+                        Front = pine trees, snow-covered; trees are in the background; snowy ground  
+                        Left = bridge, wooden planks; bridge spans a river; river is in the foreground; trees in the background  
+                        Right = apartment buildings, multi-story; buildings are in the background; cars on the road; tractor in the foreground  
+                        Down = car, yellow; car is on the road; road is partially cleared of snow; tire tracks visible  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [93, 47, 92]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [93, 70, 100]]
+
+                        DownDepth:
+                        [[31, 26, 34], [30, 23, 31], [36, 31, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-10.58, -68.27, -10.0), 174.96],
+    [(-10.58, -68.27, -10.0), 129.96],
+    [(-6.75, -65.06, -10.0), 129.96],
+    [(-9.96, -61.22, -10.0), 129.96],
+    [(-9.96, -61.22, -10.0), 84.96],
+    [(-9.52, -56.24, -10.0), 84.96],
+    [(-4.54, -56.68, -10.0), 84.96],
+    [(-4.1, -51.7, -10.0), 84.96],
+    [(-3.66, -46.72, -10.0), 84.96],
+    [(-3.22, -41.74, -10.0), 84.96],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 23
+                        DistanceTraveled = 100.0
+                        AvgHeadingChange = 5.87
+
+                        # Reminder  
+                        - The target is ** BusStop**, described as:  Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:23 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 24 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: BusStop,
+                        Size: big(5.25*3=15.75 squares),
+                        Description: Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-12, 89]  
+                        **Y Range**: [min_y, max_y] = [-84, 17]
+
+                        # RGB Captions
+                        Front = pine trees, snow-covered; trees are in the background; snowy ground  
+                        Left = bridge, metal grating; bridge spans across a river; snowy ground on both sides  
+                        Right = apartment buildings, multi-story; buildings stand in the background; cars parked along the road  
+                        Down = car, yellow; car is on the road; snow covers the surrounding ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [91, 41, 92]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [91, 69, 93]]
+
+                        DownDepth:
+                        [[29, 23, 34], [30, 23, 30], [36, 31, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-10.58, -68.27, -10.0), 129.96],
+    [(-6.75, -65.06, -10.0), 129.96],
+    [(-9.96, -61.22, -10.0), 129.96],
+    [(-9.96, -61.22, -10.0), 84.96],
+    [(-9.52, -56.24, -10.0), 84.96],
+    [(-4.54, -56.68, -10.0), 84.96],
+    [(-4.1, -51.7, -10.0), 84.96],
+    [(-3.66, -46.72, -10.0), 84.96],
+    [(-3.22, -41.74, -10.0), 84.96],
+    [(-2.78, -36.76, -10.0), 84.96],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 24
+                        DistanceTraveled = 105.0
+                        AvgHeadingChange = 5.62
+
+                        # Reminder  
+                        - The target is ** BusStop**, described as:  Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:24 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 25 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: BusStop,
+                        Size: big(5.25*3=15.75 squares),
+                        Description: Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-12, 89]  
+                        **Y Range**: [min_y, max_y] = [-84, 17]
+
+                        # RGB Captions
+                        Front = pine trees, snow-covered; trees are scattered; snow on the ground  
+                        Left = wooden bridge, covered in snow; bridge spans a frozen river; trees on both sides  
+                        Right = apartment buildings, multi-story; buildings arranged in rows; snow on the ground and roofs  
+                        Down = yellow car, small; car is on a snowy road; road has tire tracks  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [90, 35, 68]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [92, 69, 93]]
+
+                        DownDepth:
+                        [[28, 24, 33], [31, 23, 30], [36, 30, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-6.75, -65.06, -10.0), 129.96],
+    [(-9.96, -61.22, -10.0), 129.96],
+    [(-9.96, -61.22, -10.0), 84.96],
+    [(-9.52, -56.24, -10.0), 84.96],
+    [(-4.54, -56.68, -10.0), 84.96],
+    [(-4.1, -51.7, -10.0), 84.96],
+    [(-3.66, -46.72, -10.0), 84.96],
+    [(-3.22, -41.74, -10.0), 84.96],
+    [(-2.78, -36.76, -10.0), 84.96],
+    [(-2.34, -31.78, -10.0), 84.96],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 25
+                        DistanceTraveled = 110.0
+                        AvgHeadingChange = 5.4
+
+                        # Reminder  
+                        - The target is ** BusStop**, described as:  Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:25 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 26 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: BusStop,
+                        Size: big(5.25*3=15.75 squares),
+                        Description: Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-12, 89]  
+                        **Y Range**: [min_y, max_y] = [-84, 17]
+
+                        # RGB Captions
+                        Front = pine trees, snow-covered; trees are scattered; snow on the ground  
+                        Left = wooden bridge, narrow; bridge spans a river; snow on the bridge and banks  
+                        Right = apartment buildings, multi-story; buildings in the background; snow-covered road in the foreground  
+                        Down = yellow car, small; car is on the road; snow covers the surrounding area  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 34, 53]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [80, 70, 93]]
+
+                        DownDepth:
+                        [[29, 23, 28], [31, 23, 30], [36, 30, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-9.96, -61.22, -10.0), 129.96],
+    [(-9.96, -61.22, -10.0), 84.96],
+    [(-9.52, -56.24, -10.0), 84.96],
+    [(-4.54, -56.68, -10.0), 84.96],
+    [(-4.1, -51.7, -10.0), 84.96],
+    [(-3.66, -46.72, -10.0), 84.96],
+    [(-3.22, -41.74, -10.0), 84.96],
+    [(-2.78, -36.76, -10.0), 84.96],
+    [(-2.34, -31.78, -10.0), 84.96],
+    [(2.64, -32.22, -10.0), 84.96],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 26
+                        DistanceTraveled = 115.0
+                        AvgHeadingChange = 5.19
+
+                        # Reminder  
+                        - The target is ** BusStop**, described as:  Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:26 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 27 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: BusStop,
+                        Size: big(5.25*3=15.75 squares),
+                        Description: Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-12, 89]  
+                        **Y Range**: [min_y, max_y] = [-84, 17]
+
+                        # RGB Captions
+                        Front = pine trees, snow-covered; several trees; trees are in the foreground and background; snow on the ground  
+                        Left = wooden bridge, covered in snow; bridge spans a river; river is partly frozen; trees on both sides of the river  
+                        Right = apartment buildings, multi-story; buildings are in a row; snow on the ground; cars parked along the street  
+                        Down = shadow on the wall; shadow is large; wall is textured; shadow is in the foreground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 34, 48]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [77, 71, 93]]
+
+                        DownDepth:
+                        [[26, 21, 27], [100, 22, 29], [36, 31, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-9.96, -61.22, -10.0), 84.96],
+    [(-9.52, -56.24, -10.0), 84.96],
+    [(-4.54, -56.68, -10.0), 84.96],
+    [(-4.1, -51.7, -10.0), 84.96],
+    [(-3.66, -46.72, -10.0), 84.96],
+    [(-3.22, -41.74, -10.0), 84.96],
+    [(-2.78, -36.76, -10.0), 84.96],
+    [(-2.34, -31.78, -10.0), 84.96],
+    [(2.64, -32.22, -10.0), 84.96],
+    [(3.08, -27.24, -10.0), 84.96],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 27
+                        DistanceTraveled = 120.0
+                        AvgHeadingChange = 5.0
+
+                        # Reminder  
+                        - The target is ** BusStop**, described as:  Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:27 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 28 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: BusStop,
+                        Size: big(5.25*3=15.75 squares),
+                        Description: Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-12, 89]  
+                        **Y Range**: [min_y, max_y] = [-84, 17]
+
+                        # RGB Captions
+                        Front = pine trees, snow-covered; trees are in the foreground; snowy ground  
+                        Left = pine trees, snow-covered; trees are in the background; wooden bridge in the foreground  
+                        Right = apartment buildings, multi-story; buildings are in the background; snow-covered road in the foreground  
+                        Down = textured surface, beige; shadow on the surface; no distinct objects  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 36, 46]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [74, 71, 93]]
+
+                        DownDepth:
+                        [[24, 21, 29], [27, 21, 28], [36, 31, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-9.52, -56.24, -10.0), 84.96],
+    [(-4.54, -56.68, -10.0), 84.96],
+    [(-4.1, -51.7, -10.0), 84.96],
+    [(-3.66, -46.72, -10.0), 84.96],
+    [(-3.22, -41.74, -10.0), 84.96],
+    [(-2.78, -36.76, -10.0), 84.96],
+    [(-2.34, -31.78, -10.0), 84.96],
+    [(2.64, -32.22, -10.0), 84.96],
+    [(3.08, -27.24, -10.0), 84.96],
+    [(3.52, -22.26, -10.0), 84.96],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 28
+                        DistanceTraveled = 125.0
+                        AvgHeadingChange = 4.82
+
+                        # Reminder  
+                        - The target is ** BusStop**, described as:  Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:28 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 29 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: BusStop,
+                        Size: big(5.25*3=15.75 squares),
+                        Description: Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-12, 89]  
+                        **Y Range**: [min_y, max_y] = [-84, 17]
+
+                        # RGB Captions
+                        Front = pine trees, snow-covered; green pine trees; wooden cabin; cabin is in the background; trees surround the cabin  
+                        Left = snow-covered bridge; snowy ground; pine trees, snow-covered; bridge spans a river; trees are in the background  
+                        Right = trees, snow-covered; apartment buildings; road; buildings are in the background; road in the foreground  
+                        Down = white fur blanket; shadow on the blanket; blanket covers the entire frame  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 33, 44]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [72, 71, 92]]
+
+                        DownDepth:
+                        [[21, 19, 26], [27, 17, 27], [36, 30, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-4.54, -56.68, -10.0), 84.96],
+    [(-4.1, -51.7, -10.0), 84.96],
+    [(-3.66, -46.72, -10.0), 84.96],
+    [(-3.22, -41.74, -10.0), 84.96],
+    [(-2.78, -36.76, -10.0), 84.96],
+    [(-2.34, -31.78, -10.0), 84.96],
+    [(2.64, -32.22, -10.0), 84.96],
+    [(3.08, -27.24, -10.0), 84.96],
+    [(3.52, -22.26, -10.0), 84.96],
+    [(3.96, -17.28, -10.0), 84.96],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 29
+                        DistanceTraveled = 130.0
+                        AvgHeadingChange = 4.66
+
+                        # Reminder  
+                        - The target is ** BusStop**, described as:  Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:29 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 30 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: BusStop,
+                        Size: big(5.25*3=15.75 squares),
+                        Description: Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-12, 89]  
+                        **Y Range**: [min_y, max_y] = [-84, 17]
+
+                        # RGB Captions
+                        Front = pine trees, snow-covered; wooden cabin; cabin is in the foreground; trees surround the cabin  
+                        Left = pine trees, snow-covered; snowy ground; trees are in the background; ground is in the foreground  
+                        Right = apartment buildings, brown; trees, snow-covered; road; buildings are in the background; trees are near the road  
+                        Down = snowy ground; tire tracks; shadows of trees; ground is covered with snow  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 35, 43]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 71, 92]]
+
+                        DownDepth:
+                        [[19, 17, 24], [22, 17, 24], [36, 28, 35]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-4.1, -51.7, -10.0), 84.96],
+    [(-3.66, -46.72, -10.0), 84.96],
+    [(-3.22, -41.74, -10.0), 84.96],
+    [(-2.78, -36.76, -10.0), 84.96],
+    [(-2.34, -31.78, -10.0), 84.96],
+    [(2.64, -32.22, -10.0), 84.96],
+    [(3.08, -27.24, -10.0), 84.96],
+    [(3.52, -22.26, -10.0), 84.96],
+    [(3.96, -17.28, -10.0), 84.96],
+    [(4.4, -12.3, -10.0), 84.96],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 30
+                        DistanceTraveled = 135.0
+                        AvgHeadingChange = 4.5
+
+                        # Reminder  
+                        - The target is ** BusStop**, described as:  Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:30 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 31 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: BusStop,
+                        Size: big(5.25*3=15.75 squares),
+                        Description: Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-12, 89]  
+                        **Y Range**: [min_y, max_y] = [-84, 17]
+
+                        # RGB Captions
+                        Front = pine trees, snow-covered; small wooden cabin; cabin is in the background; trees surround the cabin  
+                        Left = snow-covered ground; pine trees, snow-covered; bridge, partially covered in snow; trees and bridge in the midground  
+                        Right = trees, snow-covered; apartment buildings, multi-story; buildings stand in the background; snow on rooftops  
+                        Down = textured surface, beige; shadow of a building; shadow of a tree branch; shadows are on the surface  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 35, 44]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [41, 69, 91]]
+
+                        DownDepth:
+                        [[16, 14, 18], [20, 16, 23], [33, 27, 33]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-3.66, -46.72, -10.0), 84.96],
+    [(-3.22, -41.74, -10.0), 84.96],
+    [(-2.78, -36.76, -10.0), 84.96],
+    [(-2.34, -31.78, -10.0), 84.96],
+    [(2.64, -32.22, -10.0), 84.96],
+    [(3.08, -27.24, -10.0), 84.96],
+    [(3.52, -22.26, -10.0), 84.96],
+    [(3.96, -17.28, -10.0), 84.96],
+    [(4.4, -12.3, -10.0), 84.96],
+    [(4.84, -7.32, -10.0), 84.96],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 31
+                        DistanceTraveled = 140.0
+                        AvgHeadingChange = 4.35
+
+                        # Reminder  
+                        - The target is ** BusStop**, described as:  Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:31 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 32 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: BusStop,
+                        Size: big(5.25*3=15.75 squares),
+                        Description: Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-12, 89]  
+                        **Y Range**: [min_y, max_y] = [-84, 17]
+
+                        # RGB Captions
+                        Front = house, small, brick; house is in the background; trees, snow-covered, tall; trees are in the foreground  
+                        Left = tree, large, snow-covered; tree is in the center; snow, white, covering ground; snow is in the foreground  
+                        Right = buildings, high-rise, brown; buildings are in the background; trees, snow-covered, green; trees are in the foreground  
+                        Down = ground, snowy, textured; shadow of tree on ground; tree branches, bare, top left corner  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 35, 40]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 98, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 69, 91]]
+
+                        DownDepth:
+                        [[18, 14, 18], [18, 16, 15], [27, 23, 27]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-3.22, -41.74, -10.0), 84.96],
+    [(-2.78, -36.76, -10.0), 84.96],
+    [(-2.34, -31.78, -10.0), 84.96],
+    [(2.64, -32.22, -10.0), 84.96],
+    [(3.08, -27.24, -10.0), 84.96],
+    [(3.52, -22.26, -10.0), 84.96],
+    [(3.96, -17.28, -10.0), 84.96],
+    [(4.4, -12.3, -10.0), 84.96],
+    [(4.84, -7.32, -10.0), 84.96],
+    [(5.28, -2.33, -10.0), 84.96],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 32
+                        DistanceTraveled = 145.0
+                        AvgHeadingChange = 4.22
+
+                        # Reminder  
+                        - The target is ** BusStop**, described as:  Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:32 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 33 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: BusStop,
+                        Size: big(5.25*3=15.75 squares),
+                        Description: Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-12, 89]  
+                        **Y Range**: [min_y, max_y] = [-84, 17]
+
+                        # RGB Captions
+                        Front = house, brick exterior; chimney on roof; snow-covered ground; tree with white flowers in the foreground  
+                        Left = tree, white flowers; snow-covered ground; tree is in the center  
+                        Right = tree, green leaves; snow-covered ground; buildings in the background  
+                        Down = tree branches, green leaves; snow-covered ground; branches are in the foreground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [35, 34, 38]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 97, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [89, 69, 91]]
+
+                        DownDepth:
+                        [[17, 15, 17], [15, 11, 15], [24, 21, 27]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-2.78, -36.76, -10.0), 84.96],
+    [(-2.34, -31.78, -10.0), 84.96],
+    [(2.64, -32.22, -10.0), 84.96],
+    [(3.08, -27.24, -10.0), 84.96],
+    [(3.52, -22.26, -10.0), 84.96],
+    [(3.96, -17.28, -10.0), 84.96],
+    [(4.4, -12.3, -10.0), 84.96],
+    [(4.84, -7.32, -10.0), 84.96],
+    [(5.28, -2.33, -10.0), 84.96],
+    [(5.72, 2.65, -10.0), 84.96],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 33
+                        DistanceTraveled = 150.0
+                        AvgHeadingChange = 4.09
+
+                        # Reminder  
+                        - The target is ** BusStop**, described as:  Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:33 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 34 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: BusStop,
+                        Size: big(5.25*3=15.75 squares),
+                        Description: Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-12, 89]  
+                        **Y Range**: [min_y, max_y] = [-84, 17]
+
+                        # RGB Captions
+                        Front = brick building, small; tree, bare branches; snowy ground; building in the foreground; tree to the right of the building  
+                        Left = tree, snow-covered; snowy ground; tree in the center; ground covering entire image  
+                        Right = trees, snow-covered; city buildings; trees in the foreground; buildings in the background  
+                        Down = shadow on ground; green leaves; ground texture; shadow in the foreground; leaves on the right  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [33, 33, 85]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 98, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [85, 70, 91]]
+
+                        DownDepth:
+                        [[17, 15, 17], [15, 11, 15], [18, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-2.34, -31.78, -10.0), 84.96],
+    [(2.64, -32.22, -10.0), 84.96],
+    [(3.08, -27.24, -10.0), 84.96],
+    [(3.52, -22.26, -10.0), 84.96],
+    [(3.96, -17.28, -10.0), 84.96],
+    [(4.4, -12.3, -10.0), 84.96],
+    [(4.84, -7.32, -10.0), 84.96],
+    [(5.28, -2.33, -10.0), 84.96],
+    [(5.72, 2.65, -10.0), 84.96],
+    [(6.16, 7.63, -10.0), 84.96],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 34
+                        DistanceTraveled = 155.0
+                        AvgHeadingChange = 3.97
+
+                        # Reminder  
+                        - The target is ** BusStop**, described as:  Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:34 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 35 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: BusStop,
+                        Size: big(5.25*3=15.75 squares),
+                        Description: Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-12, 89]  
+                        **Y Range**: [min_y, max_y] = [-84, 17]
+
+                        # RGB Captions
+                        Front = wooden cabin, small; snow-covered ground; tall pine trees, white leaves; cabin in the foreground; trees in the background  
+                        Left = brick building, small; snow-covered ground; large pine tree, white leaves; tree to the left of the building; building in the foreground  
+                        Right = pine trees, white leaves; apartment buildings, brown; trees in the foreground; buildings in the background  
+                        Down = bare branches, brown; snow-covered ground; branches in the foreground; ground in the background  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 32, 82]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 98, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [35, 71, 91]]
+
+                        DownDepth:
+                        [[16, 15, 17], [15, 11, 15], [17, 13, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(2.64, -32.22, -10.0), 84.96],
+    [(3.08, -27.24, -10.0), 84.96],
+    [(3.52, -22.26, -10.0), 84.96],
+    [(3.96, -17.28, -10.0), 84.96],
+    [(4.4, -12.3, -10.0), 84.96],
+    [(4.84, -7.32, -10.0), 84.96],
+    [(5.28, -2.33, -10.0), 84.96],
+    [(5.72, 2.65, -10.0), 84.96],
+    [(6.16, 7.63, -10.0), 84.96],
+    [(6.6, 12.61, -10.0), 84.96],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 35
+                        DistanceTraveled = 160.0
+                        AvgHeadingChange = 3.86
+
+                        # Reminder  
+                        - The target is ** BusStop**, described as:  Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:35 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 36 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: BusStop,
+                        Size: big(5.25*3=15.75 squares),
+                        Description: Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-12, 89]  
+                        **Y Range**: [min_y, max_y] = [-84, 17]
+
+                        # RGB Captions
+                        Front = bare branches, intertwined; snowy ground; branches in the foreground  
+                        Left = brick house, snow-covered roof; snowy trees; house in the background  
+                        Right = snow-covered trees; residential buildings; trees in the foreground  
+                        Down = tree branches, shadow cast; textured wall; branches in the foreground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [38, 33, 79]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 98, 93]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [81, 70, 88]]
+
+                        DownDepth:
+                        [[18, 15, 16], [15, 11, 16], [16, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(3.08, -27.24, -10.0), 84.96],
+    [(3.52, -22.26, -10.0), 84.96],
+    [(3.96, -17.28, -10.0), 84.96],
+    [(4.4, -12.3, -10.0), 84.96],
+    [(4.84, -7.32, -10.0), 84.96],
+    [(5.28, -2.33, -10.0), 84.96],
+    [(5.72, 2.65, -10.0), 84.96],
+    [(6.16, 7.63, -10.0), 84.96],
+    [(6.6, 12.61, -10.0), 84.96],
+    [(1.62, 13.05, -10.0), 84.96],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 36
+                        DistanceTraveled = 165.0
+                        AvgHeadingChange = 3.75
+
+                        # Reminder  
+                        - The target is ** BusStop**, described as:  Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:36 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 37 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: BusStop,
+                        Size: big(5.25*3=15.75 squares),
+                        Description: Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-12, 89]  
+                        **Y Range**: [min_y, max_y] = [-84, 17]
+
+                        # RGB Captions
+                        Front = brick house, snow-covered roof; house is in the foreground; snowy trees surrounding  
+                        Left = snowy landscape; sun low in sky; distant mountain range; bridge over frozen river  
+                        Right = bare tree branches, brown and twisted; branches in the foreground; snowy forest background  
+                        Down = shadow of tree branches on snow; branches in the foreground; snow-covered ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 32, 38]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [93, 96, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 69, 92]]
+
+                        DownDepth:
+                        [[18, 15, 17], [15, 11, 15], [18, 15, 17]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(3.52, -22.26, -10.0), 84.96],
+    [(3.96, -17.28, -10.0), 84.96],
+    [(4.4, -12.3, -10.0), 84.96],
+    [(4.84, -7.32, -10.0), 84.96],
+    [(5.28, -2.33, -10.0), 84.96],
+    [(5.72, 2.65, -10.0), 84.96],
+    [(6.16, 7.63, -10.0), 84.96],
+    [(6.6, 12.61, -10.0), 84.96],
+    [(1.62, 13.05, -10.0), 84.96],
+    [(1.62, 13.05, -10.0), 39.96],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 37
+                        DistanceTraveled = 165.0
+                        AvgHeadingChange = 4.86
+
+                        # Reminder  
+                        - The target is ** BusStop**, described as:  Rectangular shelter structure, transparent glass and dark metal frame, includes interior bench and angled roof, designed for public transport waiting area.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:37 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

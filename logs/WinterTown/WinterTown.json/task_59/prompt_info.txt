@@ -1,0 +1,1890 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: WoodTower,
+                        Size: big(8.5*8.5=72.25 squares),
+                        Description: Geometric elevated structure, dark wood planks and support braces, vertical stilts with cross-bracing, used for surveillance or lookout purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-112, -11]  
+                        **Y Range**: [min_y, max_y] = [157, 258]
+
+                        # RGB Captions
+                        Front = brick building, multiple windows; building in the center; snow-covered ground  
+                        Left = tree with white flowers, large; tree to the left of the building; snowy landscape  
+                        Right = large woven basket, dark brown; basket in the foreground; tree branches near the basket  
+                        Down = white wall, textured; shadow of branches on the wall; part of a woven basket in the top right  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [14, 12, 14]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [63, 20, 13]]
+
+                        RightDepth:
+                        [[100, 100, 100], [3, 100, 100], [4, 22, 83]]
+
+                        DownDepth:
+                        [[8, 7, 7], [9, 6, 8], [13, 10, 11]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-61.34, 207.87, -10.0), -31.2],
+    [(-61.34, 207.87, -10.0), -31.2],
+    [(-61.34, 207.87, -10.0), -31.2],
+    [(-61.34, 207.87, -10.0), -31.2],
+    [(-61.34, 207.87, -10.0), -31.2],
+    [(-61.34, 207.87, -10.0), -31.2],
+    [(-61.34, 207.87, -10.0), -31.2],
+    [(-61.34, 207.87, -10.0), -31.2],
+    [(-61.34, 207.87, -10.0), -31.2],
+    [(-61.34, 207.87, -10.0), -31.2],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** WoodTower**, described as:  Geometric elevated structure, dark wood planks and support braces, vertical stilts with cross-bracing, used for surveillance or lookout purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 1 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: WoodTower,
+                        Size: big(8.5*8.5=72.25 squares),
+                        Description: Geometric elevated structure, dark wood planks and support braces, vertical stilts with cross-bracing, used for surveillance or lookout purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-112, -11]  
+                        **Y Range**: [min_y, max_y] = [157, 258]
+
+                        # RGB Captions
+                        Front = large silo, dark brown, cylindrical; silo is in the foreground; tree with white leaves stands to the right  
+                        Left = building, brick walls, multiple windows; building is in the background; snow covers the ground and trees  
+                        Right = wooden stool, small, weathered; stool is in the foreground; tree with white leaves stands behind  
+                        Down = tree branches, bare, dark; branches are in the top left corner; textured wall fills the background  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [10, 19, 25]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [35, 22, 27]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [25, 20, 26]]
+
+                        DownDepth:
+                        [[10, 8, 10], [8, 6, 8], [10, 8, 10]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-61.34, 207.87, -10.0), -31.2],
+    [(-57.06, 205.28, -10.0), -31.2],
+    [(-57.06, 205.28, -10.0), -31.2],
+    [(-57.06, 205.28, -10.0), -31.2],
+    [(-57.06, 205.28, -10.0), -31.2],
+    [(-57.06, 205.28, -10.0), -31.2],
+    [(-57.06, 205.28, -10.0), -31.2],
+    [(-57.06, 205.28, -10.0), -31.2],
+    [(-57.06, 205.28, -10.0), -31.2],
+    [(-57.06, 205.28, -10.0), -31.2],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 1
+                        DistanceTraveled = 5.000000000000002
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** WoodTower**, described as:  Geometric elevated structure, dark wood planks and support braces, vertical stilts with cross-bracing, used for surveillance or lookout purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:1 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 2 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: WoodTower,
+                        Size: big(8.5*8.5=72.25 squares),
+                        Description: Geometric elevated structure, dark wood planks and support braces, vertical stilts with cross-bracing, used for surveillance or lookout purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-112, -11]  
+                        **Y Range**: [min_y, max_y] = [157, 258]
+
+                        # RGB Captions
+                        Front = wooden stool, small, snow-covered; stool is in the foreground; snowy ground, extensive, white; trees, multiple, snow-covered; building, large, brown; sun, bright, high in sky  
+                        Left = trees, multiple, snow-covered; building, large, brown; snowy ground, extensive, white; sun, bright, high in sky  
+                        Right = trees, multiple, snow-covered; snowy ground, extensive, white; sun, bright, high in sky  
+                        Down = textured wall, light brown; shadow, distinct, cast on wall  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [24, 19, 27]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [60, 19, 22]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [27, 35, 63]]
+
+                        DownDepth:
+                        [[10, 9, 11], [9, 7, 9], [10, 9, 11]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-61.34, 207.87, -10.0), -31.2],
+    [(-57.06, 205.28, -10.0), -31.2],
+    [(-52.78, 202.69, -10.0), -31.2],
+    [(-52.78, 202.69, -10.0), -31.2],
+    [(-52.78, 202.69, -10.0), -31.2],
+    [(-52.78, 202.69, -10.0), -31.2],
+    [(-52.78, 202.69, -10.0), -31.2],
+    [(-52.78, 202.69, -10.0), -31.2],
+    [(-52.78, 202.69, -10.0), -31.2],
+    [(-52.78, 202.69, -10.0), -31.2],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 2
+                        DistanceTraveled = 10.000000000000004
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** WoodTower**, described as:  Geometric elevated structure, dark wood planks and support braces, vertical stilts with cross-bracing, used for surveillance or lookout purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:2 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 3 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: WoodTower,
+                        Size: big(8.5*8.5=72.25 squares),
+                        Description: Geometric elevated structure, dark wood planks and support braces, vertical stilts with cross-bracing, used for surveillance or lookout purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-112, -11]  
+                        **Y Range**: [min_y, max_y] = [157, 258]
+
+                        # RGB Captions
+                        Front = wooden stool, small, dark; stool is in the foreground; snowy ground, white; trees, tall, snow-covered; building, brown, distant background  
+                        Left = trees, tall, snow-covered; trees are in the foreground; snowy ground, white; buildings, brown, distant background  
+                        Right = trees, tall, snow-covered; trees are in the foreground; snowy ground, white; sky, clear, light blue  
+                        Down = shadow on wall, textured; shadow is in the foreground; wall, textured, light color  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [25, 19, 27]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [60, 19, 25]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [28, 34, 63]]
+
+                        DownDepth:
+                        [[10, 9, 10], [9, 7, 9], [10, 9, 11]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-61.34, 207.87, -10.0), -31.2],
+    [(-57.06, 205.28, -10.0), -31.2],
+    [(-52.78, 202.69, -10.0), -31.2],
+    [(-55.37, 198.41, -10.0), -31.2],
+    [(-55.37, 198.41, -10.0), -31.2],
+    [(-55.37, 198.41, -10.0), -31.2],
+    [(-55.37, 198.41, -10.0), -31.2],
+    [(-55.37, 198.41, -10.0), -31.2],
+    [(-55.37, 198.41, -10.0), -31.2],
+    [(-55.37, 198.41, -10.0), -31.2],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 3
+                        DistanceTraveled = 14.999999999999993
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** WoodTower**, described as:  Geometric elevated structure, dark wood planks and support braces, vertical stilts with cross-bracing, used for surveillance or lookout purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:3 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 4 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: WoodTower,
+                        Size: big(8.5*8.5=72.25 squares),
+                        Description: Geometric elevated structure, dark wood planks and support braces, vertical stilts with cross-bracing, used for surveillance or lookout purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-112, -11]  
+                        **Y Range**: [min_y, max_y] = [157, 258]
+
+                        # RGB Captions
+                        Front = wooden stool, small; stool is in the foreground; snowy ground, white; building in the background, left side  
+                        Left = building, large, beige; building is in the background; trees with snow, multiple; trees are in the foreground and midground  
+                        Right = trees, tall, snow-covered; trees are in the foreground and background; snowy ground, white; sky clear, light blue  
+                        Down = textured wall, beige; shadow on the wall, diagonal; corner of a brown object, bottom right  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [22, 20, 30]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [56, 19, 25]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [30, 38, 64]]
+
+                        DownDepth:
+                        [[10, 9, 11], [8, 7, 9], [10, 8, 11]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-61.34, 207.87, -10.0), -31.2],
+    [(-57.06, 205.28, -10.0), -31.2],
+    [(-52.78, 202.69, -10.0), -31.2],
+    [(-55.37, 198.41, -10.0), -31.2],
+    [(-57.96, 194.13, -10.0), -31.2],
+    [(-57.96, 194.13, -10.0), -31.2],
+    [(-57.96, 194.13, -10.0), -31.2],
+    [(-57.96, 194.13, -10.0), -31.2],
+    [(-57.96, 194.13, -10.0), -31.2],
+    [(-57.96, 194.13, -10.0), -31.2],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 4
+                        DistanceTraveled = 19.999999999999982
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** WoodTower**, described as:  Geometric elevated structure, dark wood planks and support braces, vertical stilts with cross-bracing, used for surveillance or lookout purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:4 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 5 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: WoodTower,
+                        Size: big(8.5*8.5=72.25 squares),
+                        Description: Geometric elevated structure, dark wood planks and support braces, vertical stilts with cross-bracing, used for surveillance or lookout purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-112, -11]  
+                        **Y Range**: [min_y, max_y] = [157, 258]
+
+                        # RGB Captions
+                        Front = wooden stool, small; stool is in the foreground; snowy ground, white; building in the background, brown  
+                        Left = trees, snow-covered; trees are in the foreground; building in the background, brown  
+                        Right = trees, snow-covered; trees are in the foreground; snowy ground, white  
+                        Down = textured wall, beige; shadow on the wall, dark  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [22, 20, 29]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [60, 25, 22]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [29, 38, 62]]
+
+                        DownDepth:
+                        [[10, 8, 10], [8, 7, 9], [10, 9, 11]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-61.34, 207.87, -10.0), -31.2],
+    [(-57.06, 205.28, -10.0), -31.2],
+    [(-52.78, 202.69, -10.0), -31.2],
+    [(-55.37, 198.41, -10.0), -31.2],
+    [(-57.96, 194.13, -10.0), -31.2],
+    [(-53.69, 191.54, -10.0), -31.2],
+    [(-53.69, 191.54, -10.0), -31.2],
+    [(-53.69, 191.54, -10.0), -31.2],
+    [(-53.69, 191.54, -10.0), -31.2],
+    [(-53.69, 191.54, -10.0), -31.2],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 5
+                        DistanceTraveled = 24.999999999999986
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** WoodTower**, described as:  Geometric elevated structure, dark wood planks and support braces, vertical stilts with cross-bracing, used for surveillance or lookout purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:5 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 6 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: WoodTower,
+                        Size: big(8.5*8.5=72.25 squares),
+                        Description: Geometric elevated structure, dark wood planks and support braces, vertical stilts with cross-bracing, used for surveillance or lookout purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-112, -11]  
+                        **Y Range**: [min_y, max_y] = [157, 258]
+
+                        # RGB Captions
+                        Front = wooden stool, small, brown; stool is in the foreground; snow-covered ground  
+                        Left = snow-covered trees, tall, evergreen; trees are in the background; building in the distant background  
+                        Right = snow-covered trees, tall, evergreen; trees are in the foreground; clear sky above  
+                        Down = shadow on wall, textured surface; shadow is of a bicycle; shadow is on the right side  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [25, 19, 27]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [62, 19, 23]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [26, 35, 43]]
+
+                        DownDepth:
+                        [[10, 8, 10], [9, 7, 9], [11, 9, 11]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-61.34, 207.87, -10.0), -31.2],
+    [(-57.06, 205.28, -10.0), -31.2],
+    [(-52.78, 202.69, -10.0), -31.2],
+    [(-55.37, 198.41, -10.0), -31.2],
+    [(-57.96, 194.13, -10.0), -31.2],
+    [(-53.69, 191.54, -10.0), -31.2],
+    [(-51.1, 195.82, -10.0), -31.2],
+    [(-51.1, 195.82, -10.0), -31.2],
+    [(-51.1, 195.82, -10.0), -31.2],
+    [(-51.1, 195.82, -10.0), -31.2],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 6
+                        DistanceTraveled = 29.999999999999975
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** WoodTower**, described as:  Geometric elevated structure, dark wood planks and support braces, vertical stilts with cross-bracing, used for surveillance or lookout purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:6 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 7 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: WoodTower,
+                        Size: big(8.5*8.5=72.25 squares),
+                        Description: Geometric elevated structure, dark wood planks and support braces, vertical stilts with cross-bracing, used for surveillance or lookout purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-112, -11]  
+                        **Y Range**: [min_y, max_y] = [157, 258]
+
+                        # RGB Captions
+                        Front = wooden stool, small, four-legged; stool is in the foreground; snowy ground, white trees, building in the background  
+                        Left = water tank, large, cylindrical; tank is in the foreground; snowy ground, white trees, buildings in the background  
+                        Right = trees, tall, snow-covered; trees are in the foreground; snowy ground, clear sky  
+                        Down = shadow, elongated, on textured surface; shadow is in the foreground; light brown surface  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [25, 18, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [25, 19, 25]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [55, 34, 43]]
+
+                        DownDepth:
+                        [[10, 8, 9], [8, 7, 9], [10, 9, 10]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-61.34, 207.87, -10.0), -31.2],
+    [(-57.06, 205.28, -10.0), -31.2],
+    [(-52.78, 202.69, -10.0), -31.2],
+    [(-55.37, 198.41, -10.0), -31.2],
+    [(-57.96, 194.13, -10.0), -31.2],
+    [(-53.69, 191.54, -10.0), -31.2],
+    [(-51.1, 195.82, -10.0), -31.2],
+    [(-46.82, 193.23, -10.0), -31.2],
+    [(-46.82, 193.23, -10.0), -31.2],
+    [(-46.82, 193.23, -10.0), -31.2],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 7
+                        DistanceTraveled = 34.99999999999998
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** WoodTower**, described as:  Geometric elevated structure, dark wood planks and support braces, vertical stilts with cross-bracing, used for surveillance or lookout purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:7 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 8 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: WoodTower,
+                        Size: big(8.5*8.5=72.25 squares),
+                        Description: Geometric elevated structure, dark wood planks and support braces, vertical stilts with cross-bracing, used for surveillance or lookout purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-112, -11]  
+                        **Y Range**: [min_y, max_y] = [157, 258]
+
+                        # RGB Captions
+                        Front = wooden stool, small, rustic; stool is in the foreground; snow-covered ground, white; building in the background, left side  
+                        Left = large tank, cylindrical, metal; tank is in the foreground; snow-covered ground, white; trees with white leaves, right side; building in the background, left side  
+                        Right = trees, tall, leafy; trees are in the background; snow-covered ground, white; shadows on the ground, dark  
+                        Down = textured wall, beige; shadow of a bicycle, large; shadow is on the wall, right side  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [26, 19, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [25, 18, 19]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [92, 39, 49]]
+
+                        DownDepth:
+                        [[9, 8, 10], [8, 6, 9], [9, 9, 11]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-61.34, 207.87, -10.0), -31.2],
+    [(-57.06, 205.28, -10.0), -31.2],
+    [(-52.78, 202.69, -10.0), -31.2],
+    [(-55.37, 198.41, -10.0), -31.2],
+    [(-57.96, 194.13, -10.0), -31.2],
+    [(-53.69, 191.54, -10.0), -31.2],
+    [(-51.1, 195.82, -10.0), -31.2],
+    [(-46.82, 193.23, -10.0), -31.2],
+    [(-49.41, 188.95, -10.0), -31.2],
+    [(-49.41, 188.95, -10.0), -31.2],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 8
+                        DistanceTraveled = 39.99999999999997
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** WoodTower**, described as:  Geometric elevated structure, dark wood planks and support braces, vertical stilts with cross-bracing, used for surveillance or lookout purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:8 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 9 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: WoodTower,
+                        Size: big(8.5*8.5=72.25 squares),
+                        Description: Geometric elevated structure, dark wood planks and support braces, vertical stilts with cross-bracing, used for surveillance or lookout purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-112, -11]  
+                        **Y Range**: [min_y, max_y] = [157, 258]
+
+                        # RGB Captions
+                        Front = wooden stool, small, brown; stool is in the foreground; snow-covered ground  
+                        Left = snowy trees, tall, white; cylindrical tank, large, metal; tank is in the foreground; buildings in the background  
+                        Right = snowy trees, tall, white; trees are in the background; snow-covered ground  
+                        Down = textured wall, beige, rough; shadow of a chair on the wall  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [26, 19, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [25, 19, 27]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [87, 34, 42]]
+
+                        DownDepth:
+                        [[10, 8, 9], [8, 7, 8], [10, 9, 10]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-61.34, 207.87, -10.0), -31.2],
+    [(-57.06, 205.28, -10.0), -31.2],
+    [(-52.78, 202.69, -10.0), -31.2],
+    [(-55.37, 198.41, -10.0), -31.2],
+    [(-57.96, 194.13, -10.0), -31.2],
+    [(-53.69, 191.54, -10.0), -31.2],
+    [(-51.1, 195.82, -10.0), -31.2],
+    [(-46.82, 193.23, -10.0), -31.2],
+    [(-49.41, 188.95, -10.0), -31.2],
+    [(-46.82, 193.23, -10.0), -31.2],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 9
+                        DistanceTraveled = 44.99999999999996
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** WoodTower**, described as:  Geometric elevated structure, dark wood planks and support braces, vertical stilts with cross-bracing, used for surveillance or lookout purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:9 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 10 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: WoodTower,
+                        Size: big(8.5*8.5=72.25 squares),
+                        Description: Geometric elevated structure, dark wood planks and support braces, vertical stilts with cross-bracing, used for surveillance or lookout purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-112, -11]  
+                        **Y Range**: [min_y, max_y] = [157, 258]
+
+                        # RGB Captions
+                        Front = wooden picnic table, snow-covered; table in the foreground; snowy trees, tall and dense; trees behind the table  
+                        Left = snowy silo, cylindrical and brown; silo in the midground; apartment building, multi-story and brown; building in the background; snowy trees, tall and dense; trees to the left of the silo  
+                        Right = snowy trees, tall and dense; trees spread throughout the scene; snowy ground, white and textured; ground covers the foreground  
+                        Down = wooden structure, shadow cast on the snow; structure in the top left corner; shadow extends diagonally across the image; snow, textured and white; snow covers the entire background  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [25, 70, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [25, 19, 25]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 30, 39]]
+
+                        DownDepth:
+                        [[9, 8, 9], [8, 6, 8], [9, 9, 10]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-57.06, 205.28, -10.0), -31.2],
+    [(-52.78, 202.69, -10.0), -31.2],
+    [(-55.37, 198.41, -10.0), -31.2],
+    [(-57.96, 194.13, -10.0), -31.2],
+    [(-53.69, 191.54, -10.0), -31.2],
+    [(-51.1, 195.82, -10.0), -31.2],
+    [(-46.82, 193.23, -10.0), -31.2],
+    [(-49.41, 188.95, -10.0), -31.2],
+    [(-46.82, 193.23, -10.0), -31.2],
+    [(-42.54, 190.64, -10.0), -31.2],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 10
+                        DistanceTraveled = 49.99999999999996
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** WoodTower**, described as:  Geometric elevated structure, dark wood planks and support braces, vertical stilts with cross-bracing, used for surveillance or lookout purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:10 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 11 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: WoodTower,
+                        Size: big(8.5*8.5=72.25 squares),
+                        Description: Geometric elevated structure, dark wood planks and support braces, vertical stilts with cross-bracing, used for surveillance or lookout purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-112, -11]  
+                        **Y Range**: [min_y, max_y] = [157, 258]
+
+                        # RGB Captions
+                        Front = sun, bright; trees, snow-covered; snow, white; sun in the background; trees scattered  
+                        Left = building, brick; silo, wooden; bench, wooden; snow, white; building in the background; silo near the building; bench in the foreground  
+                        Right = trees, snow-covered; snow, white; trees spread out; snow covers the ground  
+                        Down = sled, wooden; snow, white; sled on the snow; sled casting a shadow  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [27, 71, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [24, 19, 27]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 20, 42]]
+
+                        DownDepth:
+                        [[9, 8, 9], [8, 6, 8], [9, 8, 9]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-52.78, 202.69, -10.0), -31.2],
+    [(-55.37, 198.41, -10.0), -31.2],
+    [(-57.96, 194.13, -10.0), -31.2],
+    [(-53.69, 191.54, -10.0), -31.2],
+    [(-51.1, 195.82, -10.0), -31.2],
+    [(-46.82, 193.23, -10.0), -31.2],
+    [(-49.41, 188.95, -10.0), -31.2],
+    [(-46.82, 193.23, -10.0), -31.2],
+    [(-42.54, 190.64, -10.0), -31.2],
+    [(-38.27, 188.05, -10.0), -31.2],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 11
+                        DistanceTraveled = 54.99999999999996
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** WoodTower**, described as:  Geometric elevated structure, dark wood planks and support braces, vertical stilts with cross-bracing, used for surveillance or lookout purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:11 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 12 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: WoodTower,
+                        Size: big(8.5*8.5=72.25 squares),
+                        Description: Geometric elevated structure, dark wood planks and support braces, vertical stilts with cross-bracing, used for surveillance or lookout purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-112, -11]  
+                        **Y Range**: [min_y, max_y] = [157, 258]
+
+                        # RGB Captions
+                        Front = tall tree, snow-covered branches; tree is in the foreground; snowy ground  
+                        Left = building, brown exterior; cylindrical structure; building stands in the background; snowy ground  
+                        Right = pine trees, snow-covered branches; trees are in the foreground; snowy ground  
+                        Down = shadow on the ground, textured surface; shadow is in the foreground; pole at the bottom  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 70, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [25, 19, 27]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 69, 44]]
+
+                        DownDepth:
+                        [[9, 8, 100], [8, 6, 8], [9, 8, 9]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-55.37, 198.41, -10.0), -31.2],
+    [(-57.96, 194.13, -10.0), -31.2],
+    [(-53.69, 191.54, -10.0), -31.2],
+    [(-51.1, 195.82, -10.0), -31.2],
+    [(-46.82, 193.23, -10.0), -31.2],
+    [(-49.41, 188.95, -10.0), -31.2],
+    [(-46.82, 193.23, -10.0), -31.2],
+    [(-42.54, 190.64, -10.0), -31.2],
+    [(-38.27, 188.05, -10.0), -31.2],
+    [(-33.99, 185.46, -10.0), -31.2],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 12
+                        DistanceTraveled = 59.99999999999996
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** WoodTower**, described as:  Geometric elevated structure, dark wood planks and support braces, vertical stilts with cross-bracing, used for surveillance or lookout purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:12 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 13 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: WoodTower,
+                        Size: big(8.5*8.5=72.25 squares),
+                        Description: Geometric elevated structure, dark wood planks and support braces, vertical stilts with cross-bracing, used for surveillance or lookout purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-112, -11]  
+                        **Y Range**: [min_y, max_y] = [157, 258]
+
+                        # RGB Captions
+                        Front = trees, snow-covered, white; trees are scattered across the landscape; sun low in the sky  
+                        Left = building, rectangular, brown; silo, cylindrical, brown; building and silo on snowy ground; trees to the left  
+                        Right = trees, snow-covered, white; trees are spread out; ground covered in snow; sun high in the sky  
+                        Down = shadow, tree branches, diagonal; shadow cast on textured surface  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [95, 71, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [24, 20, 90]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 69, 44]]
+
+                        DownDepth:
+                        [[13, 31, 36], [8, 7, 10], [9, 8, 9]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-57.96, 194.13, -10.0), -31.2],
+    [(-53.69, 191.54, -10.0), -31.2],
+    [(-51.1, 195.82, -10.0), -31.2],
+    [(-46.82, 193.23, -10.0), -31.2],
+    [(-49.41, 188.95, -10.0), -31.2],
+    [(-46.82, 193.23, -10.0), -31.2],
+    [(-42.54, 190.64, -10.0), -31.2],
+    [(-38.27, 188.05, -10.0), -31.2],
+    [(-33.99, 185.46, -10.0), -31.2],
+    [(-29.71, 182.87, -10.0), -31.2],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 13
+                        DistanceTraveled = 64.99999999999996
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** WoodTower**, described as:  Geometric elevated structure, dark wood planks and support braces, vertical stilts with cross-bracing, used for surveillance or lookout purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:13 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 14 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: WoodTower,
+                        Size: big(8.5*8.5=72.25 squares),
+                        Description: Geometric elevated structure, dark wood planks and support braces, vertical stilts with cross-bracing, used for surveillance or lookout purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-112, -11]  
+                        **Y Range**: [min_y, max_y] = [157, 258]
+
+                        # RGB Captions
+                        Front = trees, snow-covered, multiple; trees are in the foreground and background; sun low on the horizon  
+                        Left = building, rectangular, brown; silo, cylindrical, brown; building is to the right of the silo; snow on the ground  
+                        Right = trees, snow-covered, multiple; trees are in a row; path in the foreground; sky clear with pink hue  
+                        Down = wall, textured, beige; shadows of tree branches cast on the wall  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [48, 71, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [24, 19, 96]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 69, 38]]
+
+                        DownDepth:
+                        [[17, 31, 36], [9, 7, 10], [9, 8, 11]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-53.69, 191.54, -10.0), -31.2],
+    [(-51.1, 195.82, -10.0), -31.2],
+    [(-46.82, 193.23, -10.0), -31.2],
+    [(-49.41, 188.95, -10.0), -31.2],
+    [(-46.82, 193.23, -10.0), -31.2],
+    [(-42.54, 190.64, -10.0), -31.2],
+    [(-38.27, 188.05, -10.0), -31.2],
+    [(-33.99, 185.46, -10.0), -31.2],
+    [(-29.71, 182.87, -10.0), -31.2],
+    [(-27.12, 187.15, -10.0), -31.2],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 14
+                        DistanceTraveled = 69.99999999999994
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** WoodTower**, described as:  Geometric elevated structure, dark wood planks and support braces, vertical stilts with cross-bracing, used for surveillance or lookout purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:14 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 15 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: WoodTower,
+                        Size: big(8.5*8.5=72.25 squares),
+                        Description: Geometric elevated structure, dark wood planks and support braces, vertical stilts with cross-bracing, used for surveillance or lookout purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-112, -11]  
+                        **Y Range**: [min_y, max_y] = [157, 258]
+
+                        # RGB Captions
+                        Front = trees, snow-covered, white; trees are in the foreground and background; sun shining from the left  
+                        Left = building, rectangular, brown; silo, cylindrical, brown; building is to the right of the silo; snow on the ground  
+                        Right = trees, snow-covered, white; trees are spread out; sun casting shadows on the snow  
+                        Down = shadow, tree branches, on sand; shadow stretches diagonally across the image  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [78, 69, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [25, 19, 27]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 68, 45]]
+
+                        DownDepth:
+                        [[13, 31, 36], [8, 7, 10], [9, 8, 9]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-51.1, 195.82, -10.0), -31.2],
+    [(-46.82, 193.23, -10.0), -31.2],
+    [(-49.41, 188.95, -10.0), -31.2],
+    [(-46.82, 193.23, -10.0), -31.2],
+    [(-42.54, 190.64, -10.0), -31.2],
+    [(-38.27, 188.05, -10.0), -31.2],
+    [(-33.99, 185.46, -10.0), -31.2],
+    [(-29.71, 182.87, -10.0), -31.2],
+    [(-27.12, 187.15, -10.0), -31.2],
+    [(-29.71, 182.87, -10.0), -31.2],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 15
+                        DistanceTraveled = 74.99999999999993
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** WoodTower**, described as:  Geometric elevated structure, dark wood planks and support braces, vertical stilts with cross-bracing, used for surveillance or lookout purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:15 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 16 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: WoodTower,
+                        Size: big(8.5*8.5=72.25 squares),
+                        Description: Geometric elevated structure, dark wood planks and support braces, vertical stilts with cross-bracing, used for surveillance or lookout purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-112, -11]  
+                        **Y Range**: [min_y, max_y] = [157, 258]
+
+                        # RGB Captions
+                        Front = trees, snow-covered; sun in the sky; trees are scattered across the snowy landscape  
+                        Left = building, rectangular, brown; silo, cylindrical, brown; building and silo are in the middle of a snowy area  
+                        Right = trees, snow-covered; trees are spread out in a snowy field  
+                        Down = shadow on the wall; shadow is cast by tree branches  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [89, 70, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [19, 20, 65]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 69, 51]]
+
+                        DownDepth:
+                        [[9, 14, 36], [8, 6, 9], [9, 8, 9]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-46.82, 193.23, -10.0), -31.2],
+    [(-49.41, 188.95, -10.0), -31.2],
+    [(-46.82, 193.23, -10.0), -31.2],
+    [(-42.54, 190.64, -10.0), -31.2],
+    [(-38.27, 188.05, -10.0), -31.2],
+    [(-33.99, 185.46, -10.0), -31.2],
+    [(-29.71, 182.87, -10.0), -31.2],
+    [(-27.12, 187.15, -10.0), -31.2],
+    [(-29.71, 182.87, -10.0), -31.2],
+    [(-32.3, 178.59, -10.0), -31.2],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 16
+                        DistanceTraveled = 79.99999999999991
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** WoodTower**, described as:  Geometric elevated structure, dark wood planks and support braces, vertical stilts with cross-bracing, used for surveillance or lookout purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:16 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 17 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: WoodTower,
+                        Size: big(8.5*8.5=72.25 squares),
+                        Description: Geometric elevated structure, dark wood planks and support braces, vertical stilts with cross-bracing, used for surveillance or lookout purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-112, -11]  
+                        **Y Range**: [min_y, max_y] = [157, 258]
+
+                        # RGB Captions
+                        Front = trees, snow-covered; sun in the sky; trees are scattered across the snowy landscape  
+                        Left = building, brown; silo, cylindrical; trees, snow-covered; building and silo are in the background  
+                        Right = trees, snow-covered; trees are spread out on the snowy ground  
+                        Down = shadow, tree; sand, textured; shadow is cast on the sand  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [95, 70, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [25, 20, 91]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 67, 44]]
+
+                        DownDepth:
+                        [[13, 31, 36], [8, 7, 10], [9, 8, 9]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-49.41, 188.95, -10.0), -31.2],
+    [(-46.82, 193.23, -10.0), -31.2],
+    [(-42.54, 190.64, -10.0), -31.2],
+    [(-38.27, 188.05, -10.0), -31.2],
+    [(-33.99, 185.46, -10.0), -31.2],
+    [(-29.71, 182.87, -10.0), -31.2],
+    [(-27.12, 187.15, -10.0), -31.2],
+    [(-29.71, 182.87, -10.0), -31.2],
+    [(-32.3, 178.59, -10.0), -31.2],
+    [(-29.71, 182.87, -10.0), -31.2],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 17
+                        DistanceTraveled = 84.9999999999999
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** WoodTower**, described as:  Geometric elevated structure, dark wood planks and support braces, vertical stilts with cross-bracing, used for surveillance or lookout purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:17 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 18 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: WoodTower,
+                        Size: big(8.5*8.5=72.25 squares),
+                        Description: Geometric elevated structure, dark wood planks and support braces, vertical stilts with cross-bracing, used for surveillance or lookout purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-112, -11]  
+                        **Y Range**: [min_y, max_y] = [157, 258]
+
+                        # RGB Captions
+                        Front = trees, snow-covered; sun in the sky; trees are scattered across the snowy landscape  
+                        Left = round building, wooden; rectangular building, brick; buildings are surrounded by snow and trees  
+                        Right = trees, snow-covered; trees are spread out in a snowy field  
+                        Down = shadow of branches on a textured wall; shadow is cast diagonally across the surface  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [89, 69, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [19, 20, 92]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 69, 51]]
+
+                        DownDepth:
+                        [[9, 13, 36], [8, 6, 9], [9, 8, 9]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-46.82, 193.23, -10.0), -31.2],
+    [(-42.54, 190.64, -10.0), -31.2],
+    [(-38.27, 188.05, -10.0), -31.2],
+    [(-33.99, 185.46, -10.0), -31.2],
+    [(-29.71, 182.87, -10.0), -31.2],
+    [(-27.12, 187.15, -10.0), -31.2],
+    [(-29.71, 182.87, -10.0), -31.2],
+    [(-32.3, 178.59, -10.0), -31.2],
+    [(-29.71, 182.87, -10.0), -31.2],
+    [(-32.3, 178.59, -10.0), -31.2],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 18
+                        DistanceTraveled = 89.99999999999989
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** WoodTower**, described as:  Geometric elevated structure, dark wood planks and support braces, vertical stilts with cross-bracing, used for surveillance or lookout purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:18 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 19 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: WoodTower,
+                        Size: big(8.5*8.5=72.25 squares),
+                        Description: Geometric elevated structure, dark wood planks and support braces, vertical stilts with cross-bracing, used for surveillance or lookout purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-112, -11]  
+                        **Y Range**: [min_y, max_y] = [157, 258]
+
+                        # RGB Captions
+                        Front = sun, bright; trees, snow-covered; sun in the background; trees scattered across the landscape  
+                        Left = buildings, brick; two buildings; buildings stand in the background; trees to the left  
+                        Right = trees, snow-covered; trees spread out; ground covered in snow  
+                        Down = textured surface, beige; shadow in the corner  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [89, 67, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [20, 20, 25]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 71, 26]]
+
+                        DownDepth:
+                        [[9, 8, 36], [8, 6, 8], [9, 8, 9]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-42.54, 190.64, -10.0), -31.2],
+    [(-38.27, 188.05, -10.0), -31.2],
+    [(-33.99, 185.46, -10.0), -31.2],
+    [(-29.71, 182.87, -10.0), -31.2],
+    [(-27.12, 187.15, -10.0), -31.2],
+    [(-29.71, 182.87, -10.0), -31.2],
+    [(-32.3, 178.59, -10.0), -31.2],
+    [(-29.71, 182.87, -10.0), -31.2],
+    [(-32.3, 178.59, -10.0), -31.2],
+    [(-34.89, 174.32, -10.0), -31.2],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 19
+                        DistanceTraveled = 94.99999999999987
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** WoodTower**, described as:  Geometric elevated structure, dark wood planks and support braces, vertical stilts with cross-bracing, used for surveillance or lookout purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:19 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 20 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: WoodTower,
+                        Size: big(8.5*8.5=72.25 squares),
+                        Description: Geometric elevated structure, dark wood planks and support braces, vertical stilts with cross-bracing, used for surveillance or lookout purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-112, -11]  
+                        **Y Range**: [min_y, max_y] = [157, 258]
+
+                        # RGB Captions
+                        Front = brick building, multiple windows; building stands in the foreground on the left; snow-covered ground; trees with white foliage to the right  
+                        Left = brick buildings, multiple windows; larger building in the foreground on the right; smaller building in the background on the left; snow-covered ground; trees with white foliage on the left  
+                        Right = trees with white foliage, medium-sized; trees are in the background; wooden bench in the foreground on the right; snow-covered ground  
+                        Down = textured paper, two-tone; diagonal shadow across the surface  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [69, 67, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 13], [25, 20, 14]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 71, 24]]
+
+                        DownDepth:
+                        [[10, 8, 9], [9, 6, 8], [9, 8, 9]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-38.27, 188.05, -10.0), -31.2],
+    [(-33.99, 185.46, -10.0), -31.2],
+    [(-29.71, 182.87, -10.0), -31.2],
+    [(-27.12, 187.15, -10.0), -31.2],
+    [(-29.71, 182.87, -10.0), -31.2],
+    [(-32.3, 178.59, -10.0), -31.2],
+    [(-29.71, 182.87, -10.0), -31.2],
+    [(-32.3, 178.59, -10.0), -31.2],
+    [(-34.89, 174.32, -10.0), -31.2],
+    [(-37.48, 170.04, -10.0), -31.2],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 20
+                        DistanceTraveled = 99.99999999999986
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** WoodTower**, described as:  Geometric elevated structure, dark wood planks and support braces, vertical stilts with cross-bracing, used for surveillance or lookout purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:20 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 21 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: WoodTower,
+                        Size: big(8.5*8.5=72.25 squares),
+                        Description: Geometric elevated structure, dark wood planks and support braces, vertical stilts with cross-bracing, used for surveillance or lookout purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-112, -11]  
+                        **Y Range**: [min_y, max_y] = [157, 258]
+
+                        # RGB Captions
+                        Front = trees, snow-covered, white; trees are scattered across the landscape; sun in the sky  
+                        Left = building, brick, brown; building stands in the foreground; snow on the ground  
+                        Right = trees, snow-covered, white; trees are spread out in the scene; snow on the ground  
+                        Down = shadow, tree branches, dark; shadow falls on a textured wall  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [87, 70, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 13, 100], [24, 13, 89]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 71, 24]]
+
+                        DownDepth:
+                        [[10, 9, 14], [9, 6, 8], [10, 8, 9]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-33.99, 185.46, -10.0), -31.2],
+    [(-29.71, 182.87, -10.0), -31.2],
+    [(-27.12, 187.15, -10.0), -31.2],
+    [(-29.71, 182.87, -10.0), -31.2],
+    [(-32.3, 178.59, -10.0), -31.2],
+    [(-29.71, 182.87, -10.0), -31.2],
+    [(-32.3, 178.59, -10.0), -31.2],
+    [(-34.89, 174.32, -10.0), -31.2],
+    [(-37.48, 170.04, -10.0), -31.2],
+    [(-33.21, 167.45, -10.0), -31.2],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 21
+                        DistanceTraveled = 104.99999999999986
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** WoodTower**, described as:  Geometric elevated structure, dark wood planks and support braces, vertical stilts with cross-bracing, used for surveillance or lookout purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:21 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 22 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: WoodTower,
+                        Size: big(8.5*8.5=72.25 squares),
+                        Description: Geometric elevated structure, dark wood planks and support braces, vertical stilts with cross-bracing, used for surveillance or lookout purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-112, -11]  
+                        **Y Range**: [min_y, max_y] = [157, 258]
+
+                        # RGB Captions
+                        Front = brick building, multiple windows; building is in the foreground; snowy ground  
+                        Left = brick wall, weathered surface; wall fills the frame  
+                        Right = pine trees, snow-covered branches; trees are in the background; wooden fence on the right  
+                        Down = textured wall, shadow of tree branches; wall occupies the entire frame  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [76, 70, 100]]
+
+                        LeftDepth:
+                        [[100, 8, 7], [11, 6, 5], [12, 8, 7]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 71, 24]]
+
+                        DownDepth:
+                        [[9, 9, 11], [9, 6, 8], [10, 9, 9]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-29.71, 182.87, -10.0), -31.2],
+    [(-27.12, 187.15, -10.0), -31.2],
+    [(-29.71, 182.87, -10.0), -31.2],
+    [(-32.3, 178.59, -10.0), -31.2],
+    [(-29.71, 182.87, -10.0), -31.2],
+    [(-32.3, 178.59, -10.0), -31.2],
+    [(-34.89, 174.32, -10.0), -31.2],
+    [(-37.48, 170.04, -10.0), -31.2],
+    [(-33.21, 167.45, -10.0), -31.2],
+    [(-35.8, 163.17, -10.0), -31.2],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 22
+                        DistanceTraveled = 109.99999999999984
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** WoodTower**, described as:  Geometric elevated structure, dark wood planks and support braces, vertical stilts with cross-bracing, used for surveillance or lookout purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:22 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 23 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: WoodTower,
+                        Size: big(8.5*8.5=72.25 squares),
+                        Description: Geometric elevated structure, dark wood planks and support braces, vertical stilts with cross-bracing, used for surveillance or lookout purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-112, -11]  
+                        **Y Range**: [min_y, max_y] = [157, 258]
+
+                        # RGB Captions
+                        Front = stone wall, brown; wall is in the foreground; snowy ground to the right  
+                        Left = stone wall, brown; wall fills the image  
+                        Right = snow-covered trees, tall; trees are in the background; wooden bench on the right  
+                        Down = stone wall, brown; wall is in the foreground; shadow on the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[1, 100, 100], [1, 100, 100], [1, 71, 100]]
+
+                        LeftDepth:
+                        [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 70, 24]]
+
+                        DownDepth:
+                        [[2, 9, 10], [3, 6, 9], [9, 9, 10]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-27.12, 187.15, -10.0), -31.2],
+    [(-29.71, 182.87, -10.0), -31.2],
+    [(-32.3, 178.59, -10.0), -31.2],
+    [(-29.71, 182.87, -10.0), -31.2],
+    [(-32.3, 178.59, -10.0), -31.2],
+    [(-34.89, 174.32, -10.0), -31.2],
+    [(-37.48, 170.04, -10.0), -31.2],
+    [(-33.21, 167.45, -10.0), -31.2],
+    [(-35.8, 163.17, -10.0), -31.2],
+    [(-38.39, 158.9, -10.0), -31.2],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 23
+                        DistanceTraveled = 114.99999999999983
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** WoodTower**, described as:  Geometric elevated structure, dark wood planks and support braces, vertical stilts with cross-bracing, used for surveillance or lookout purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:23 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 24 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: WoodTower,
+                        Size: big(8.5*8.5=72.25 squares),
+                        Description: Geometric elevated structure, dark wood planks and support braces, vertical stilts with cross-bracing, used for surveillance or lookout purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-112, -11]  
+                        **Y Range**: [min_y, max_y] = [157, 258]
+
+                        # RGB Captions
+                        Front = brick building, multiple windows; building occupies the left side; snowy ground and trees in the background  
+                        Left = brick building, multiple windows; building fills the frame; windows are evenly spaced  
+                        Right = snow-covered trees, tall and medium-sized; trees are spread across the scene; wooden fence on the right side  
+                        Down = shadow of tree branches on a textured wall; shadow covers part of the wall; wall texture is rough  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [77, 69, 100]]
+
+                        LeftDepth:
+                        [[100, 9, 7], [100, 6, 6], [21, 9, 7]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 69, 24]]
+
+                        DownDepth:
+                        [[9, 9, 10], [9, 7, 8], [10, 9, 9]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-29.71, 182.87, -10.0), -31.2],
+    [(-32.3, 178.59, -10.0), -31.2],
+    [(-29.71, 182.87, -10.0), -31.2],
+    [(-32.3, 178.59, -10.0), -31.2],
+    [(-34.89, 174.32, -10.0), -31.2],
+    [(-37.48, 170.04, -10.0), -31.2],
+    [(-33.21, 167.45, -10.0), -31.2],
+    [(-35.8, 163.17, -10.0), -31.2],
+    [(-38.39, 158.9, -10.0), -31.2],
+    [(-35.8, 163.17, -10.0), -31.2],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 24
+                        DistanceTraveled = 119.99999999999982
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** WoodTower**, described as:  Geometric elevated structure, dark wood planks and support braces, vertical stilts with cross-bracing, used for surveillance or lookout purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:24 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 25 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: WoodTower,
+                        Size: big(8.5*8.5=72.25 squares),
+                        Description: Geometric elevated structure, dark wood planks and support braces, vertical stilts with cross-bracing, used for surveillance or lookout purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-112, -11]  
+                        **Y Range**: [min_y, max_y] = [157, 258]
+
+                        # RGB Captions
+                        Front = trees, snow-covered; sun in the sky; trees are scattered across the snowy landscape  
+                        Left = building, brick exterior; multiple windows; building stands in the center of the image  
+                        Right = trees, snow-covered; trees are spread out in a snowy field; sun is setting in the background  
+                        Down = shadow on the wall; shadow cast by tree branches; shadow covers part of the textured wall  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [88, 69, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 13, 100], [25, 13, 90]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 69, 24]]
+
+                        DownDepth:
+                        [[10, 9, 13], [9, 6, 8], [10, 8, 9]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-32.3, 178.59, -10.0), -31.2],
+    [(-29.71, 182.87, -10.0), -31.2],
+    [(-32.3, 178.59, -10.0), -31.2],
+    [(-34.89, 174.32, -10.0), -31.2],
+    [(-37.48, 170.04, -10.0), -31.2],
+    [(-33.21, 167.45, -10.0), -31.2],
+    [(-35.8, 163.17, -10.0), -31.2],
+    [(-38.39, 158.9, -10.0), -31.2],
+    [(-35.8, 163.17, -10.0), -31.2],
+    [(-33.21, 167.45, -10.0), -31.2],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 25
+                        DistanceTraveled = 124.9999999999998
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** WoodTower**, described as:  Geometric elevated structure, dark wood planks and support braces, vertical stilts with cross-bracing, used for surveillance or lookout purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:25 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 26 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: WoodTower,
+                        Size: big(8.5*8.5=72.25 squares),
+                        Description: Geometric elevated structure, dark wood planks and support braces, vertical stilts with cross-bracing, used for surveillance or lookout purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-112, -11]  
+                        **Y Range**: [min_y, max_y] = [157, 258]
+
+                        # RGB Captions
+                        Front = brick building, multiple windows; building is in the foreground; snowy ground  
+                        Left = brick wall, brown color; multiple windows; windows are broken  
+                        Right = snow-covered trees, tall and dense; trees are in the background; wooden fence on the right  
+                        Down = shadow of tree branches, cast on a textured surface; shadow is diagonal; surface is beige  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [77, 69, 100]]
+
+                        LeftDepth:
+                        [[100, 8, 7], [11, 6, 5], [12, 8, 7]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 69, 24]]
+
+                        DownDepth:
+                        [[9, 9, 10], [9, 6, 8], [10, 9, 9]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-29.71, 182.87, -10.0), -31.2],
+    [(-32.3, 178.59, -10.0), -31.2],
+    [(-34.89, 174.32, -10.0), -31.2],
+    [(-37.48, 170.04, -10.0), -31.2],
+    [(-33.21, 167.45, -10.0), -31.2],
+    [(-35.8, 163.17, -10.0), -31.2],
+    [(-38.39, 158.9, -10.0), -31.2],
+    [(-35.8, 163.17, -10.0), -31.2],
+    [(-33.21, 167.45, -10.0), -31.2],
+    [(-35.8, 163.17, -10.0), -31.2],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 26
+                        DistanceTraveled = 129.9999999999998
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** WoodTower**, described as:  Geometric elevated structure, dark wood planks and support braces, vertical stilts with cross-bracing, used for surveillance or lookout purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:26 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 27 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: WoodTower,
+                        Size: big(8.5*8.5=72.25 squares),
+                        Description: Geometric elevated structure, dark wood planks and support braces, vertical stilts with cross-bracing, used for surveillance or lookout purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-112, -11]  
+                        **Y Range**: [min_y, max_y] = [157, 258]
+
+                        # RGB Captions
+                        Front = trees, snow-covered; sun in the sky; trees are spread across the landscape  
+                        Left = building, brick wall; broken windows; building occupies the left side of the image  
+                        Right = trees, snow-covered; trees are scattered across the snowy ground  
+                        Down = shadow on the wall; shadow is cast by tree branches; shadow covers most of the wall  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [85, 70, 100]]
+
+                        LeftDepth:
+                        [[9, 6, 100], [7, 100, 100], [9, 6, 89]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 69, 24]]
+
+                        DownDepth:
+                        [[10, 9, 12], [8, 7, 9], [10, 9, 9]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-32.3, 178.59, -10.0), -31.2],
+    [(-34.89, 174.32, -10.0), -31.2],
+    [(-37.48, 170.04, -10.0), -31.2],
+    [(-33.21, 167.45, -10.0), -31.2],
+    [(-35.8, 163.17, -10.0), -31.2],
+    [(-38.39, 158.9, -10.0), -31.2],
+    [(-35.8, 163.17, -10.0), -31.2],
+    [(-33.21, 167.45, -10.0), -31.2],
+    [(-35.8, 163.17, -10.0), -31.2],
+    [(-31.52, 160.58, -10.0), -31.2],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 27
+                        DistanceTraveled = 134.9999999999998
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** WoodTower**, described as:  Geometric elevated structure, dark wood planks and support braces, vertical stilts with cross-bracing, used for surveillance or lookout purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:27 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 28 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: WoodTower,
+                        Size: big(8.5*8.5=72.25 squares),
+                        Description: Geometric elevated structure, dark wood planks and support braces, vertical stilts with cross-bracing, used for surveillance or lookout purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-112, -11]  
+                        **Y Range**: [min_y, max_y] = [157, 258]
+
+                        # RGB Captions
+                        Front = trees, snow-covered; sun in the sky; trees are scattered across the landscape  
+                        Left = building, brick wall; multiple windows; building stands in the foreground; snowy ground  
+                        Right = trees, snow-covered; sun in the sky; trees are scattered across the landscape  
+                        Down = shadow on the wall; tree branches casting shadow; part of a brown object in the top left corner  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [76, 71, 100]]
+
+                        LeftDepth:
+                        [[100, 8, 100], [100, 6, 100], [25, 8, 24]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 71, 74]]
+
+                        DownDepth:
+                        [[10, 9, 27], [9, 6, 9], [10, 8, 9]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-34.89, 174.32, -10.0), -31.2],
+    [(-37.48, 170.04, -10.0), -31.2],
+    [(-33.21, 167.45, -10.0), -31.2],
+    [(-35.8, 163.17, -10.0), -31.2],
+    [(-38.39, 158.9, -10.0), -31.2],
+    [(-35.8, 163.17, -10.0), -31.2],
+    [(-33.21, 167.45, -10.0), -31.2],
+    [(-35.8, 163.17, -10.0), -31.2],
+    [(-31.52, 160.58, -10.0), -31.2],
+    [(-31.52, 160.58, -10.0), -46.2],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 28
+                        DistanceTraveled = 134.9999999999998
+                        AvgHeadingChange = 0.54
+
+                        # Reminder  
+                        - The target is ** WoodTower**, described as:  Geometric elevated structure, dark wood planks and support braces, vertical stilts with cross-bracing, used for surveillance or lookout purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:28 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 29 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: WoodTower,
+                        Size: big(8.5*8.5=72.25 squares),
+                        Description: Geometric elevated structure, dark wood planks and support braces, vertical stilts with cross-bracing, used for surveillance or lookout purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-112, -11]  
+                        **Y Range**: [min_y, max_y] = [157, 258]
+
+                        # RGB Captions
+                        Front = trees, snow-covered; sun in the sky; trees are in the foreground  
+                        Left = building, brick wall; broken windows; building occupies the left side  
+                        Right = trees, snow-covered; trees are spread out; ground covered in snow  
+                        Down = wall, textured surface; shadow of branches; part of a woven object in the top left  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [24, 69, 93]]
+
+                        LeftDepth:
+                        [[100, 100, 6], [100, 11, 4], [24, 12, 6]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [93, 71, 93]]
+
+                        DownDepth:
+                        [[9, 9, 11], [9, 6, 9], [10, 8, 9]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-37.48, 170.04, -10.0), -31.2],
+    [(-33.21, 167.45, -10.0), -31.2],
+    [(-35.8, 163.17, -10.0), -31.2],
+    [(-38.39, 158.9, -10.0), -31.2],
+    [(-35.8, 163.17, -10.0), -31.2],
+    [(-33.21, 167.45, -10.0), -31.2],
+    [(-35.8, 163.17, -10.0), -31.2],
+    [(-31.52, 160.58, -10.0), -31.2],
+    [(-31.52, 160.58, -10.0), -46.2],
+    [(-31.52, 160.58, -10.0), -61.2],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 29
+                        DistanceTraveled = 134.9999999999998
+                        AvgHeadingChange = 1.03
+
+                        # Reminder  
+                        - The target is ** WoodTower**, described as:  Geometric elevated structure, dark wood planks and support braces, vertical stilts with cross-bracing, used for surveillance or lookout purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:29 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

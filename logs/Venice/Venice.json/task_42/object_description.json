@@ -1,0 +1,35 @@
+{
+  "episode_id": "42",
+  "start_pose": {
+    "start_position": [
+      -0.15090348981551926,
+      168.41869526224963,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.19646206419190423,
+      0.9805114264165696
+    ]
+  },
+  "info": {
+    "geodesic_distance": 55,
+    "euclidean_distance": 38.0985
+  },
+  "map_name": "Venice_test",
+  "true_name": " PoleNet",
+  "object_name": "SM_PoleNet_01a_21",
+  "pose": [
+    [
+      -34.90229415893555,
+      181.81698608398438,
+      1.020001769065857
+    ]
+  ],
+  "size": " small(0.25*0.25=0.0625 squares)",
+  "description": " Geometric vertical structure, slender metallic pole with circular net frame, thin wire mesh indicating function as a catching or scooping tool.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

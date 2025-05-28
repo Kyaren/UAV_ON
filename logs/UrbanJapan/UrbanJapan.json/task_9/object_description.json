@@ -1,0 +1,35 @@
+{
+  "episode_id": "9",
+  "start_pose": {
+    "start_position": [
+      -21.03590101822975,
+      169.12579769838328,
+      -6.400000095367432
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9088707368816601,
+      0.4170779107555184
+    ]
+  },
+  "info": {
+    "geodesic_distance": 63,
+    "euclidean_distance": 41.9671
+  },
+  "map_name": "UrbanJapan_test",
+  "true_name": "Car",
+  "object_name": "SM_SUV_01a_191",
+  "pose": [
+    [
+      7.0,
+      138.3000030517578,
+      1.5999999046325684
+    ]
+  ],
+  "size": "mid(1.75*4.25=7.44 squares)",
+  "description": "Geometric SUV-like form, glossy red exterior with black-tinted windows and roof rails, four-door configuration with prominent wheel arches, suitable for personal or family transportation.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

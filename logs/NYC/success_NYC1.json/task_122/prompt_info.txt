@@ -1,0 +1,567 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Truck,
+                        Size:mid(2.0*4.5=9.0 squares),
+                        Description:Classic pickup truck, yellow exterior with rounded cab and wooden cargo bed, vintage design with wide fenders and chrome accents, intended for transport and utility purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [442, 543]  
+                        **Y Range**: [min_y, max_y] = [892, 993]
+
+                        # RGB Captions
+                        Front = building, large, beige; billboard on top; tree in the foreground; building stands in the background  
+                        Left = tree, medium-sized, green leaves; tree is near the water; concrete wall beside the tree; water in the background  
+                        Right = promenade, long, paved; trees along the promenade; buildings to the left; water to the right  
+                        Down = rocks, large, brown; rocks are at the edge of the water; water below the rocks; concrete barrier above the rocks  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 35, 100], [33, 26, 34]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [80, 60, 34]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [34, 61, 80]]
+
+                        DownDepth:
+                        [[20, 15, 19], [27, 20, 27], [32, 27, 32]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(492.52, 942.34, -6.6), -175.87],
+    [(492.52, 942.34, -6.6), -175.87],
+    [(492.52, 942.34, -6.6), -175.87],
+    [(492.52, 942.34, -6.6), -175.87],
+    [(492.52, 942.34, -6.6), -175.87],
+    [(492.52, 942.34, -6.6), -175.87],
+    [(492.52, 942.34, -6.6), -175.87],
+    [(492.52, 942.34, -6.6), -175.87],
+    [(492.52, 942.34, -6.6), -175.87],
+    [(492.52, 942.34, -6.6), -175.87],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Truck**, described as: Classic pickup truck, yellow exterior with rounded cab and wooden cargo bed, vintage design with wide fenders and chrome accents, intended for transport and utility purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 1 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Truck,
+                        Size:mid(2.0*4.5=9.0 squares),
+                        Description:Classic pickup truck, yellow exterior with rounded cab and wooden cargo bed, vintage design with wide fenders and chrome accents, intended for transport and utility purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [442, 543]  
+                        **Y Range**: [min_y, max_y] = [892, 993]
+
+                        # RGB Captions
+                        Front = building, large, brown; billboard on the building; tree to the left of the building; building in the foreground  
+                        Left = tree, large, green; tree is in the foreground; water body, calm, blue; pathway along the water; tree near the edge of the pathway  
+                        Right = buildings, multiple, tall; buildings are in the background; tree, medium-sized, green; tree is in the foreground; water body, calm, blue; sidewalk along the water  
+                        Down = tree, small, green; tree is in the foreground; water body, calm, blue; tiled ground; shadow of a railing on the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 30, 100], [31, 26, 34]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [80, 60, 32]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [34, 61, 80]]
+
+                        DownDepth:
+                        [[13, 11, 13], [26, 20, 27], [32, 27, 32]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(492.52, 942.34, -6.6), -175.87],
+    [(487.54, 941.98, -6.6), -175.87],
+    [(487.54, 941.98, -6.6), -175.87],
+    [(487.54, 941.98, -6.6), -175.87],
+    [(487.54, 941.98, -6.6), -175.87],
+    [(487.54, 941.98, -6.6), -175.87],
+    [(487.54, 941.98, -6.6), -175.87],
+    [(487.54, 941.98, -6.6), -175.87],
+    [(487.54, 941.98, -6.6), -175.87],
+    [(487.54, 941.98, -6.6), -175.87],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 1
+                        DistanceTraveled = 5.000000000000012
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Truck**, described as: Classic pickup truck, yellow exterior with rounded cab and wooden cargo bed, vintage design with wide fenders and chrome accents, intended for transport and utility purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:1 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 2 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Truck,
+                        Size:mid(2.0*4.5=9.0 squares),
+                        Description:Classic pickup truck, yellow exterior with rounded cab and wooden cargo bed, vintage design with wide fenders and chrome accents, intended for transport and utility purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [442, 543]  
+                        **Y Range**: [min_y, max_y] = [892, 993]
+
+                        # RGB Captions
+                        Front = tree, dense foliage, green leaves; tree is in the foreground; building in the background  
+                        Left = tree, solitary, near edge; sidewalk, wide, tiled; water, calm, beside sidewalk; tree casts shadow on sidewalk  
+                        Right = buildings, multiple, varied architecture; tree, solitary, near edge; sidewalk, wide, tiled; water, calm, beside sidewalk; sun low in sky  
+                        Down = tree, dense foliage, green leaves; tree is in the foreground; water, calm, below; stone wall, rugged, beside water  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 44, 42], [32, 24, 34]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [80, 60, 34]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [34, 61, 80]]
+
+                        DownDepth:
+                        [[13, 11, 13], [25, 20, 27], [32, 27, 32]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(492.52, 942.34, -6.6), -175.87],
+    [(487.54, 941.98, -6.6), -175.87],
+    [(487.18, 946.96, -6.6), -175.87],
+    [(487.18, 946.96, -6.6), -175.87],
+    [(487.18, 946.96, -6.6), -175.87],
+    [(487.18, 946.96, -6.6), -175.87],
+    [(487.18, 946.96, -6.6), -175.87],
+    [(487.18, 946.96, -6.6), -175.87],
+    [(487.18, 946.96, -6.6), -175.87],
+    [(487.18, 946.96, -6.6), -175.87],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 2
+                        DistanceTraveled = 9.999999999999964
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Truck**, described as: Classic pickup truck, yellow exterior with rounded cab and wooden cargo bed, vintage design with wide fenders and chrome accents, intended for transport and utility purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:2 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 3 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Truck,
+                        Size:mid(2.0*4.5=9.0 squares),
+                        Description:Classic pickup truck, yellow exterior with rounded cab and wooden cargo bed, vintage design with wide fenders and chrome accents, intended for transport and utility purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [442, 543]  
+                        **Y Range**: [min_y, max_y] = [892, 993]
+
+                        # RGB Captions
+                        Front = building, large, brick; billboard on the building; tree to the left of the building; clear sky above  
+                        Left = pavement path, long, concrete; single tree near the edge; water body beside the path; clear sky above  
+                        Right = cityscape, buildings along the path; sunset in the background; pavement path with a dog walking; water body beside the path  
+                        Down = path, narrow, tiled; tree shadow on the path; water below the path; evening setting  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 30, 100], [27, 26, 34]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [79, 60, 32]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [34, 61, 80]]
+
+                        DownDepth:
+                        [[13, 11, 13], [26, 20, 27], [32, 27, 32]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(492.52, 942.34, -6.6), -175.87],
+    [(487.54, 941.98, -6.6), -175.87],
+    [(487.18, 946.96, -6.6), -175.87],
+    [(487.54, 941.98, -6.6), -175.87],
+    [(487.54, 941.98, -6.6), -175.87],
+    [(487.54, 941.98, -6.6), -175.87],
+    [(487.54, 941.98, -6.6), -175.87],
+    [(487.54, 941.98, -6.6), -175.87],
+    [(487.54, 941.98, -6.6), -175.87],
+    [(487.54, 941.98, -6.6), -175.87],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 3
+                        DistanceTraveled = 14.999999999999915
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Truck**, described as: Classic pickup truck, yellow exterior with rounded cab and wooden cargo bed, vintage design with wide fenders and chrome accents, intended for transport and utility purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:3 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 4 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Truck,
+                        Size:mid(2.0*4.5=9.0 squares),
+                        Description:Classic pickup truck, yellow exterior with rounded cab and wooden cargo bed, vintage design with wide fenders and chrome accents, intended for transport and utility purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [442, 543]  
+                        **Y Range**: [min_y, max_y] = [892, 993]
+
+                        # RGB Captions
+                        Front = building, large, brick; billboard on the building; car wash sign; building in the foreground  
+                        Left = tree, tall, green leaves; tree in the foreground; building, small, brick; building to the right of the tree  
+                        Right = sidewalk, long, tiled; sidewalk in the foreground; buildings, multiple, varied heights; buildings to the left of the sidewalk; water body, calm, blue; water body to the right of the sidewalk  
+                        Down = shadow, large, on the ground; shadow in the foreground; tree, small, green leaves; tree in the bottom left corner; water, still, reflecting light; water at the bottom  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [40, 25, 34], [29, 25, 33]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [79, 25, 31]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [33, 61, 80]]
+
+                        DownDepth:
+                        [[13, 11, 13], [11, 8, 11], [32, 27, 32]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(492.52, 942.34, -6.6), -175.87],
+    [(487.54, 941.98, -6.6), -175.87],
+    [(487.18, 946.96, -6.6), -175.87],
+    [(487.54, 941.98, -6.6), -175.87],
+    [(482.55, 941.62, -6.6), -175.87],
+    [(482.55, 941.62, -6.6), -175.87],
+    [(482.55, 941.62, -6.6), -175.87],
+    [(482.55, 941.62, -6.6), -175.87],
+    [(482.55, 941.62, -6.6), -175.87],
+    [(482.55, 941.62, -6.6), -175.87],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 4
+                        DistanceTraveled = 19.99999999999993
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Truck**, described as: Classic pickup truck, yellow exterior with rounded cab and wooden cargo bed, vintage design with wide fenders and chrome accents, intended for transport and utility purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:4 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 5 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Truck,
+                        Size:mid(2.0*4.5=9.0 squares),
+                        Description:Classic pickup truck, yellow exterior with rounded cab and wooden cargo bed, vintage design with wide fenders and chrome accents, intended for transport and utility purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [442, 543]  
+                        **Y Range**: [min_y, max_y] = [892, 993]
+
+                        # RGB Captions
+                        Front = building, large, brick; billboard on top of the building; Dave's Car Wash advertisement; building in the foreground  
+                        Left = yellow car, parked; tree, medium-sized; tree is near the car; sidewalk in the foreground; water body in the background  
+                        Right = street, long; buildings, tall; tree, medium-sized; tree is near the buildings; water body to the right  
+                        Down = shadow on the wall; shadow is large; wall is divided into two sections; shadow in the foreground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 24, 100], [31, 20, 27], [29, 20, 27]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [79, 25, 28]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [30, 25, 80]]
+
+                        DownDepth:
+                        [[13, 11, 13], [11, 8, 11], [13, 11, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(492.52, 942.34, -6.6), -175.87],
+    [(487.54, 941.98, -6.6), -175.87],
+    [(487.18, 946.96, -6.6), -175.87],
+    [(487.54, 941.98, -6.6), -175.87],
+    [(482.55, 941.62, -6.6), -175.87],
+    [(477.56, 941.26, -6.6), -175.87],
+    [(477.56, 941.26, -6.6), -175.87],
+    [(477.56, 941.26, -6.6), -175.87],
+    [(477.56, 941.26, -6.6), -175.87],
+    [(477.56, 941.26, -6.6), -175.87],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 5
+                        DistanceTraveled = 24.999999999999943
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Truck**, described as: Classic pickup truck, yellow exterior with rounded cab and wooden cargo bed, vintage design with wide fenders and chrome accents, intended for transport and utility purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:5 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 6 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Truck,
+                        Size:mid(2.0*4.5=9.0 squares),
+                        Description:Classic pickup truck, yellow exterior with rounded cab and wooden cargo bed, vintage design with wide fenders and chrome accents, intended for transport and utility purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [442, 543]  
+                        **Y Range**: [min_y, max_y] = [892, 993]
+
+                        # RGB Captions
+                        Front = building, brick facade; large billboard; billboard on top of the building; car wash sign  
+                        Left = tree, near water; sidewalk; lamppost; tree in the foreground; building to the right  
+                        Right = buildings, along waterfront; tree; sidewalk; lampposts; buildings in the background; tree in the middle  
+                        Down = shadow, on wall; tree shadow; shadow in the foreground; wall with tiles  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 24, 29], [34, 19, 26], [27, 20, 27]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [79, 44, 31]]
+
+                        RightDepth:
+                        [[100, 100, 100], [95, 100, 100], [30, 25, 80]]
+
+                        DownDepth:
+                        [[13, 11, 13], [11, 8, 11], [13, 11, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(492.52, 942.34, -6.6), -175.87],
+    [(487.54, 941.98, -6.6), -175.87],
+    [(487.18, 946.96, -6.6), -175.87],
+    [(487.54, 941.98, -6.6), -175.87],
+    [(482.55, 941.62, -6.6), -175.87],
+    [(477.56, 941.26, -6.6), -175.87],
+    [(477.2, 946.24, -6.6), -175.87],
+    [(477.2, 946.24, -6.6), -175.87],
+    [(477.2, 946.24, -6.6), -175.87],
+    [(477.2, 946.24, -6.6), -175.87],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 6
+                        DistanceTraveled = 29.999999999999893
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Truck**, described as: Classic pickup truck, yellow exterior with rounded cab and wooden cargo bed, vintage design with wide fenders and chrome accents, intended for transport and utility purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:6 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 7 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Truck,
+                        Size:mid(2.0*4.5=9.0 squares),
+                        Description:Classic pickup truck, yellow exterior with rounded cab and wooden cargo bed, vintage design with wide fenders and chrome accents, intended for transport and utility purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [442, 543]  
+                        **Y Range**: [min_y, max_y] = [892, 993]
+
+                        # RGB Captions
+                        Front = building, beige facade; large billboard on top right corner; streetlight and bench in front; building occupies most of the frame  
+                        Left = tree, green leaves; tree is near the edge of a cliff; yellow car parked nearby; brick building to the right; tree casts a shadow on the ground  
+                        Right = street, wide pathway; buildings on the left side; tree in the middle distance; ocean view on the right; clear sky above  
+                        Down = shadow, dark silhouette; shadow is on a textured wall; shadow appears elongated; white tiled floor below  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 17, 20], [25, 13, 18], [25, 30, 20]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [79, 48, 27]]
+
+                        RightDepth:
+                        [[100, 100, 100], [88, 100, 100], [38, 25, 79]]
+
+                        DownDepth:
+                        [[13, 11, 13], [11, 8, 11], [13, 11, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(492.52, 942.34, -6.6), -175.87],
+    [(487.54, 941.98, -6.6), -175.87],
+    [(487.18, 946.96, -6.6), -175.87],
+    [(487.54, 941.98, -6.6), -175.87],
+    [(482.55, 941.62, -6.6), -175.87],
+    [(477.56, 941.26, -6.6), -175.87],
+    [(477.2, 946.24, -6.6), -175.87],
+    [(472.22, 945.88, -6.6), -175.87],
+    [(472.22, 945.88, -6.6), -175.87],
+    [(472.22, 945.88, -6.6), -175.87],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 7
+                        DistanceTraveled = 34.99999999999991
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Truck**, described as: Classic pickup truck, yellow exterior with rounded cab and wooden cargo bed, vintage design with wide fenders and chrome accents, intended for transport and utility purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:7 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 8 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Truck,
+                        Size:mid(2.0*4.5=9.0 squares),
+                        Description:Classic pickup truck, yellow exterior with rounded cab and wooden cargo bed, vintage design with wide fenders and chrome accents, intended for transport and utility purposes.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [442, 543]  
+                        **Y Range**: [min_y, max_y] = [892, 993]
+
+                        # RGB Captions
+                        Front = brick building, tall, multiple windows; building stands in the foreground on the left; another building in the background on the right  
+                        Left = tree, large, green leaves; tree is in the center; brick building on the right; water body in the background  
+                        Right = building with sign, long, multiple windows; building is on the left; road stretches to the horizon; ocean on the right  
+                        Down = yellow truck, small, parked; truck is in the top left corner; shadow extends from the truck; ground is divided into two textures  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 20], [27, 100, 18], [25, 25, 40]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [79, 44, 29]]
+
+                        RightDepth:
+                        [[100, 100, 100], [92, 100, 100], [27, 25, 79]]
+
+                        DownDepth:
+                        [[13, 11, 13], [11, 8, 11], [13, 11, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(492.52, 942.34, -6.6), -175.87],
+    [(487.54, 941.98, -6.6), -175.87],
+    [(487.18, 946.96, -6.6), -175.87],
+    [(487.54, 941.98, -6.6), -175.87],
+    [(482.55, 941.62, -6.6), -175.87],
+    [(477.56, 941.26, -6.6), -175.87],
+    [(477.2, 946.24, -6.6), -175.87],
+    [(472.22, 945.88, -6.6), -175.87],
+    [(471.86, 950.87, -6.6), -175.87],
+    [(471.86, 950.87, -6.6), -175.87],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 8
+                        DistanceTraveled = 39.99999999999986
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Truck**, described as: Classic pickup truck, yellow exterior with rounded cab and wooden cargo bed, vintage design with wide fenders and chrome accents, intended for transport and utility purposes.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:8 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

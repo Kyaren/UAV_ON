@@ -1,0 +1,35 @@
+{
+  "episode_id": "12",
+  "start_pose": {
+    "start_position": [
+      74.0314656598444,
+      22.617000198442177,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.6535294389768359,
+      -0.7569010981565703
+    ]
+  },
+  "info": {
+    "geodesic_distance": 150,
+    "euclidean_distance": 38.3769
+  },
+  "map_name": "Venice_test",
+  "true_name": " Bookshelf",
+  "object_name": "SM_Building_Int_Shop_Shelf_2X_89",
+  "pose": [
+    [
+      110.9977035522461,
+      16.01700210571289,
+      0.9200018048286438
+    ]
+  ],
+  "size": " mid(3.75*1.25=4.69 squares)",
+  "description": " Geometric upright form, dark brown wood texture, features open shelving with lower drawers and metallic handles, designed for storage and display of books or objects.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

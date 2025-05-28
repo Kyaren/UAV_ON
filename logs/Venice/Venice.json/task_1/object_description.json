@@ -1,0 +1,35 @@
+{
+  "episode_id": "1",
+  "start_pose": {
+    "start_position": [
+      -46.85112975679832,
+      72.09347333716471,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.8779994904757762,
+      0.4786615659568642
+    ]
+  },
+  "info": {
+    "geodesic_distance": 72,
+    "euclidean_distance": 51.7577
+  },
+  "map_name": "Venice_test",
+  "true_name": " Cloth",
+  "object_name": "Cloth_06_11",
+  "pose": [
+    [
+      -25.502294540405273,
+      25.317001342773438,
+      -1.0799981355667114
+    ]
+  ],
+  "size": " small(1*0.25=0.25 squares)",
+  "description": " Organic vertical sheet, deep blue fabric with realistic folds, soft material, suspended likely for shade or signaling.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

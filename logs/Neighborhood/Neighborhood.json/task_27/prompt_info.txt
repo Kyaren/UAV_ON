@@ -1,0 +1,63 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Car,
+                        Size:big(4.75*2=9.5 squares),
+                        Description:Geometric rounded form, rusted red metal body with matte texture, visible aging and surface corrosion, whitewall tires and classic fender design suggesting mid-20th-century automobile function.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-267, -166]  
+                        **Y Range**: [min_y, max_y] = [-192, -91]
+
+                        # RGB Captions
+                        Front = telephone pole, wooden; power lines, horizontal; trees, dense foliage; grassy field, expansive; pole in the foreground; trees on both sides  
+                        Left = telephone poles, wooden; power lines, horizontal; trees, dense foliage; grassy field, expansive; poles in the background; trees on both sides  
+                        Right = house, small; roof, shingled; tree, large; hedge, neatly trimmed; house in the background; tree to the left; hedge in the foreground  
+                        Down = hedge, neatly trimmed; shadow, elongated; grass, well-maintained; hedge in the foreground; shadow stretching across the grass  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [43, 36, 47]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [35, 33, 43]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [49, 38, 39]]
+
+                        DownDepth:
+                        [[18, 15, 18], [15, 12, 16], [17, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-216.51, -141.98, -10.0), -154.57],
+    [(-216.51, -141.98, -10.0), -154.57],
+    [(-216.51, -141.98, -10.0), -154.57],
+    [(-216.51, -141.98, -10.0), -154.57],
+    [(-216.51, -141.98, -10.0), -154.57],
+    [(-216.51, -141.98, -10.0), -154.57],
+    [(-216.51, -141.98, -10.0), -154.57],
+    [(-216.51, -141.98, -10.0), -154.57],
+    [(-216.51, -141.98, -10.0), -154.57],
+    [(-216.51, -141.98, -10.0), -154.57],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Car**, described as: Geometric rounded form, rusted red metal body with matte texture, visible aging and surface corrosion, whitewall tires and classic fender design suggesting mid-20th-century automobile function.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

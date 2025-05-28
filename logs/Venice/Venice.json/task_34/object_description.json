@@ -1,0 +1,35 @@
+{
+  "episode_id": "34",
+  "start_pose": {
+    "start_position": [
+      21.017452172728937,
+      67.61862863430414,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.99528543813097,
+      0.09698915735505231
+    ]
+  },
+  "info": {
+    "geodesic_distance": 18,
+    "euclidean_distance": 12.0912
+  },
+  "map_name": "Venice_test",
+  "true_name": "Tray",
+  "object_name": "Tray_2",
+  "pose": [
+    [
+      19.197704315185547,
+      58.01700210571289,
+      0.12000183016061783
+    ]
+  ],
+  "size": "small(0.75*0.5=0.38 squares)",
+  "description": "Flat rectangular shape, dark metallic texture, thin and shallow profile, suitable for holding small items or serving purposes.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

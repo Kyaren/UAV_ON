@@ -1,0 +1,35 @@
+{
+  "episode_id": "8",
+  "start_pose": {
+    "start_position": [
+      -23.718430841616737,
+      87.5207345684497,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9681973197159849,
+      -0.2501878296296263
+    ]
+  },
+  "info": {
+    "geodesic_distance": 97,
+    "euclidean_distance": 55.694
+  },
+  "map_name": "Venice_test",
+  "true_name": " FoodCan",
+  "object_name": "SM_Food_Can1_58",
+  "pose": [
+    [
+      20.197704315185547,
+      54.01700210571289,
+      0.12000183016061783
+    ]
+  ],
+  "size": " small(0.5*0.5=0.25 squares)",
+  "description": " Geometric cylindrical form, metallic surface with printed label, pull-tab lid, standard container for preserved food items.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

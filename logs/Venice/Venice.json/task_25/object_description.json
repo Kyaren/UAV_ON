@@ -1,0 +1,35 @@
+{
+  "episode_id": "25",
+  "start_pose": {
+    "start_position": [
+      5.707545130119243,
+      34.309785935537136,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.7036266366598466,
+      0.710569881280337
+    ]
+  },
+  "info": {
+    "geodesic_distance": 42,
+    "euclidean_distance": 30.7475
+  },
+  "map_name": "Venice_test",
+  "true_name": " Trailer",
+  "object_name": "Caravan_29",
+  "pose": [
+    [
+      -22.702295303344727,
+      25.617000579833984,
+      0.9200018048286438
+    ]
+  ],
+  "size": " big(4.75*2.5=11.88 squares)",
+  "description": " Geometric rectangular form, corrugated metal surface with rust and moss patches, navy blue and silver tones, multiple windows and a rear hitch indicating mobile living or transport function.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

@@ -1,0 +1,441 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Piano,
+                        Size: small(2*1.25=2.5 squares),
+                        Description: Rectangular upright shape, dark wooden texture with ornate side carvings, visible keyboard section and foot pedals, designed for musical performance.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-111, -10]  
+                        **Y Range**: [min_y, max_y] = [-129, -28]
+
+                        # RGB Captions
+                        Front = tall building, brown facade; building is in the foreground; snowy ground  
+                        Left = row of buildings, brown facades; buildings are in the foreground; trees on rooftops  
+                        Right = road, snow-covered; road stretches across the image; cars on the right side  
+                        Down = fountain, round pool; fountain is in the foreground; snow patches around  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 71, 43]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 84]]
+
+                        DownDepth:
+                        [[36, 32, 38], [31, 24, 32], [37, 31, 38]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-60.96, -78.36, -10.0), -100.57],
+    [(-60.96, -78.36, -10.0), -100.57],
+    [(-60.96, -78.36, -10.0), -100.57],
+    [(-60.96, -78.36, -10.0), -100.57],
+    [(-60.96, -78.36, -10.0), -100.57],
+    [(-60.96, -78.36, -10.0), -100.57],
+    [(-60.96, -78.36, -10.0), -100.57],
+    [(-60.96, -78.36, -10.0), -100.57],
+    [(-60.96, -78.36, -10.0), -100.57],
+    [(-60.96, -78.36, -10.0), -100.57],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Piano**, described as:  Rectangular upright shape, dark wooden texture with ornate side carvings, visible keyboard section and foot pedals, designed for musical performance.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 1 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Piano,
+                        Size: small(2*1.25=2.5 squares),
+                        Description: Rectangular upright shape, dark wooden texture with ornate side carvings, visible keyboard section and foot pedals, designed for musical performance.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-111, -10]  
+                        **Y Range**: [min_y, max_y] = [-129, -28]
+
+                        # RGB Captions
+                        Front = multi-story building, beige; building is on the left side; snow-covered ground; sun in the sky  
+                        Left = high-rise buildings, beige and brown; buildings are in a row; fountain in the foreground; trees with white flowers on top of buildings  
+                        Right = snow-covered bridge, long; bridge spans across the image; snow-covered trees in the background; clear sky  
+                        Down = building corner, beige; building is in the top left corner; snow-covered ground; shadows on the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 25], [55, 67, 30]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 92]]
+
+                        DownDepth:
+                        [[37, 45, 54], [31, 25, 33], [36, 31, 38]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-60.96, -78.36, -10.0), -100.57],
+    [(-61.88, -83.28, -10.0), -100.57],
+    [(-61.88, -83.28, -10.0), -100.57],
+    [(-61.88, -83.28, -10.0), -100.57],
+    [(-61.88, -83.28, -10.0), -100.57],
+    [(-61.88, -83.28, -10.0), -100.57],
+    [(-61.88, -83.28, -10.0), -100.57],
+    [(-61.88, -83.28, -10.0), -100.57],
+    [(-61.88, -83.28, -10.0), -100.57],
+    [(-61.88, -83.28, -10.0), -100.57],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 1
+                        DistanceTraveled = 5.000000000000005
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Piano**, described as:  Rectangular upright shape, dark wooden texture with ornate side carvings, visible keyboard section and foot pedals, designed for musical performance.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:1 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 2 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Piano,
+                        Size: small(2*1.25=2.5 squares),
+                        Description: Rectangular upright shape, dark wooden texture with ornate side carvings, visible keyboard section and foot pedals, designed for musical performance.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-111, -10]  
+                        **Y Range**: [min_y, max_y] = [-129, -28]
+
+                        # RGB Captions
+                        Front = snow-covered ground, white; trees in the distance; sun low in the sky  
+                        Left = apartment buildings, tall, beige; balconies with greenery; buildings in a row; trees behind the buildings  
+                        Right = snow-covered ground, white; bridge over a frozen river; trees in the background; sun low in the sky  
+                        Down = building corner, beige; snow on the ground; shadow of the building; clear sky  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [74, 74, 97]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 99, 94]]
+
+                        DownDepth:
+                        [[43, 44, 52], [31, 24, 42], [37, 32, 38]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-60.96, -78.36, -10.0), -100.57],
+    [(-61.88, -83.28, -10.0), -100.57],
+    [(-62.8, -88.19, -10.0), -100.57],
+    [(-62.8, -88.19, -10.0), -100.57],
+    [(-62.8, -88.19, -10.0), -100.57],
+    [(-62.8, -88.19, -10.0), -100.57],
+    [(-62.8, -88.19, -10.0), -100.57],
+    [(-62.8, -88.19, -10.0), -100.57],
+    [(-62.8, -88.19, -10.0), -100.57],
+    [(-62.8, -88.19, -10.0), -100.57],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 2
+                        DistanceTraveled = 10.00000000000001
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Piano**, described as:  Rectangular upright shape, dark wooden texture with ornate side carvings, visible keyboard section and foot pedals, designed for musical performance.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:2 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 3 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Piano,
+                        Size: small(2*1.25=2.5 squares),
+                        Description: Rectangular upright shape, dark wooden texture with ornate side carvings, visible keyboard section and foot pedals, designed for musical performance.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-111, -10]  
+                        **Y Range**: [min_y, max_y] = [-129, -28]
+
+                        # RGB Captions
+                        Front = multi-story building, beige exterior; building is on the left side; snow-covered ground  
+                        Left = row of apartment buildings, beige and green exteriors; buildings are in the foreground; trees on rooftops  
+                        Right = snow-covered landscape, white terrain; trees scattered across the scene; bridge in the background  
+                        Down = building corner, beige exterior; shadow cast on the snow; water puddle near the building  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 99, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 13], [68, 73, 16]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 93]]
+
+                        DownDepth:
+                        [[35, 44, 52], [31, 24, 33], [37, 32, 38]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-60.96, -78.36, -10.0), -100.57],
+    [(-61.88, -83.28, -10.0), -100.57],
+    [(-62.8, -88.19, -10.0), -100.57],
+    [(-67.71, -87.28, -10.0), -100.57],
+    [(-67.71, -87.28, -10.0), -100.57],
+    [(-67.71, -87.28, -10.0), -100.57],
+    [(-67.71, -87.28, -10.0), -100.57],
+    [(-67.71, -87.28, -10.0), -100.57],
+    [(-67.71, -87.28, -10.0), -100.57],
+    [(-67.71, -87.28, -10.0), -100.57],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 3
+                        DistanceTraveled = 15.00000000000001
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Piano**, described as:  Rectangular upright shape, dark wooden texture with ornate side carvings, visible keyboard section and foot pedals, designed for musical performance.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:3 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 4 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Piano,
+                        Size: small(2*1.25=2.5 squares),
+                        Description: Rectangular upright shape, dark wooden texture with ornate side carvings, visible keyboard section and foot pedals, designed for musical performance.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-111, -10]  
+                        **Y Range**: [min_y, max_y] = [-129, -28]
+
+                        # RGB Captions
+                        Front = sun, bright, in the sky; sun is in the upper right corner; snow-covered ground, white, extensive; trees, sparse, scattered  
+                        Left = buildings, tall, with balconies; buildings are in the foreground; trees, green, behind the buildings; sky, clear, above  
+                        Right = snow-covered ground, white, extensive; bridge, wooden, in the middle; trees, sparse, scattered; sky, clear, above  
+                        Down = building, with windows, in the top left corner; snow-covered ground, white, extensive; shadow, long, on the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [76, 74, 97]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 99, 95]]
+
+                        DownDepth:
+                        [[43, 44, 52], [32, 24, 43], [38, 31, 38]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-60.96, -78.36, -10.0), -100.57],
+    [(-61.88, -83.28, -10.0), -100.57],
+    [(-62.8, -88.19, -10.0), -100.57],
+    [(-67.71, -87.28, -10.0), -100.57],
+    [(-68.63, -92.19, -10.0), -100.57],
+    [(-68.63, -92.19, -10.0), -100.57],
+    [(-68.63, -92.19, -10.0), -100.57],
+    [(-68.63, -92.19, -10.0), -100.57],
+    [(-68.63, -92.19, -10.0), -100.57],
+    [(-68.63, -92.19, -10.0), -100.57],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 4
+                        DistanceTraveled = 20.000000000000018
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Piano**, described as:  Rectangular upright shape, dark wooden texture with ornate side carvings, visible keyboard section and foot pedals, designed for musical performance.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:4 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 5 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Piano,
+                        Size: small(2*1.25=2.5 squares),
+                        Description: Rectangular upright shape, dark wooden texture with ornate side carvings, visible keyboard section and foot pedals, designed for musical performance.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-111, -10]  
+                        **Y Range**: [min_y, max_y] = [-129, -28]
+
+                        # RGB Captions
+                        Front = sun, bright, in the sky; snow-covered ground, white; trees, green, scattered; sun low on the horizon  
+                        Left = building, tall, with broken windows; building stands in the foreground; snow-covered ground, white; trees, green, in the background  
+                        Right = snow-covered ground, white; bridge, wooden, crossing a river; trees, green, scattered; bridge in the middle distance  
+                        Down = building, tall, with broken windows; building in the top left corner; snow-covered ground, white; shadows cast by the building  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 12, 100], [55, 15, 96]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 99, 95]]
+
+                        DownDepth:
+                        [[44, 44, 51], [27, 32, 43], [37, 32, 38]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-60.96, -78.36, -10.0), -100.57],
+    [(-61.88, -83.28, -10.0), -100.57],
+    [(-62.8, -88.19, -10.0), -100.57],
+    [(-67.71, -87.28, -10.0), -100.57],
+    [(-68.63, -92.19, -10.0), -100.57],
+    [(-69.55, -97.11, -10.0), -100.57],
+    [(-69.55, -97.11, -10.0), -100.57],
+    [(-69.55, -97.11, -10.0), -100.57],
+    [(-69.55, -97.11, -10.0), -100.57],
+    [(-69.55, -97.11, -10.0), -100.57],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 5
+                        DistanceTraveled = 25.000000000000025
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Piano**, described as:  Rectangular upright shape, dark wooden texture with ornate side carvings, visible keyboard section and foot pedals, designed for musical performance.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:5 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 6 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Piano,
+                        Size: small(2*1.25=2.5 squares),
+                        Description: Rectangular upright shape, dark wooden texture with ornate side carvings, visible keyboard section and foot pedals, designed for musical performance.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-111, -10]  
+                        **Y Range**: [min_y, max_y] = [-129, -28]
+
+                        # RGB Captions
+                        Front = snow-covered ground, white; trees with snow on branches; sun in the sky; trees are scattered across the landscape  
+                        Left = building wall, beige; six windows; windows have darkened panes; wall is in the foreground  
+                        Right = snow-covered ground, white; bridge over a frozen river; trees with snow on branches; bridge spans from left to right  
+                        Down = building corner, beige; multiple windows; windows have darkened panes; shadow of the building on the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 99, 100]]
+
+                        LeftDepth:
+                        [[6, 7, 100], [5, 5, 100], [6, 7, 92]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 96]]
+
+                        DownDepth:
+                        [[43, 43, 51], [24, 27, 43], [32, 31, 38]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-60.96, -78.36, -10.0), -100.57],
+    [(-61.88, -83.28, -10.0), -100.57],
+    [(-62.8, -88.19, -10.0), -100.57],
+    [(-67.71, -87.28, -10.0), -100.57],
+    [(-68.63, -92.19, -10.0), -100.57],
+    [(-69.55, -97.11, -10.0), -100.57],
+    [(-74.46, -96.19, -10.0), -100.57],
+    [(-74.46, -96.19, -10.0), -100.57],
+    [(-74.46, -96.19, -10.0), -100.57],
+    [(-74.46, -96.19, -10.0), -100.57],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 6
+                        DistanceTraveled = 30.000000000000032
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Piano**, described as:  Rectangular upright shape, dark wooden texture with ornate side carvings, visible keyboard section and foot pedals, designed for musical performance.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:6 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

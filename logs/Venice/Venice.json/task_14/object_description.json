@@ -1,0 +1,35 @@
+{
+  "episode_id": "14",
+  "start_pose": {
+    "start_position": [
+      9.925168756495808,
+      -21.34828377179104,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9326434246267115,
+      -0.3607994491411533
+    ]
+  },
+  "info": {
+    "geodesic_distance": 85,
+    "euclidean_distance": 56.2058
+  },
+  "map_name": "Venice_test",
+  "true_name": " Canopy",
+  "object_name": "Shelf_01_B_108",
+  "pose": [
+    [
+      -29.202293395996094,
+      18.21700096130371,
+      0.9200018048286438
+    ]
+  ],
+  "size": " mid(2.75*2=5.5 squares)",
+  "description": " Geometric rectangular form, faded red fabric stretched over thin blue metal poles, wrinkled canopy surface with light stains, provides shaded shelter.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

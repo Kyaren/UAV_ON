@@ -1,0 +1,35 @@
+{
+  "episode_id": "7",
+  "start_pose": {
+    "start_position": [
+      1.2535862166664877,
+      39.98669116208116,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.829956626769681,
+      -0.5578279283803317
+    ]
+  },
+  "info": {
+    "geodesic_distance": 46,
+    "euclidean_distance": 24.7796
+  },
+  "map_name": "Venice_test",
+  "true_name": " Teapot",
+  "object_name": "SM_Teapod_54",
+  "pose": [
+    [
+      20.09770393371582,
+      54.41699981689453,
+      0.12000183016061783
+    ]
+  ],
+  "size": " small(0.5*0.5=0.25 squares)",
+  "description": " Geometric rounded form, brown glazed ceramic body, visible spout and handle with a lid, designed for steeping and serving tea.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

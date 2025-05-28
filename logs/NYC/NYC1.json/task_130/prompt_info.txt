@@ -1,0 +1,756 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Table,
+                        Size:small(1*1=1 squares),
+                        Description:Geometric square form, green metallic frame with a flat dark green top, curved support legs with open underside, used for placing items or casual outdoor use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [97, 198]  
+                        **Y Range**: [min_y, max_y] = [634, 735]
+
+                        # RGB Captions
+                        Front = tall buildings, gray facade; street lamps on the left; trees along the sidewalk; buildings in the background  
+                        Left = paved walkway, white tiles; trees on both sides; tall building in the distance; clear sky above  
+                        Right = square with tiled ground; buildings surrounding; tree on the right; statue atop a column in the center  
+                        Down = bench with round planter; shadow of a person; tiled pathway; grassy area on the side  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [75, 100, 100], [40, 31, 35]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [32, 29, 40]]
+
+                        RightDepth:
+                        [[100, 100, 100], [76, 100, 100], [41, 31, 37]]
+
+                        DownDepth:
+                        [[15, 13, 16], [13, 9, 13], [15, 13, 15]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(147.64, 684.08, -7.7), 71.8],
+    [(147.64, 684.08, -7.7), 71.8],
+    [(147.64, 684.08, -7.7), 71.8],
+    [(147.64, 684.08, -7.7), 71.8],
+    [(147.64, 684.08, -7.7), 71.8],
+    [(147.64, 684.08, -7.7), 71.8],
+    [(147.64, 684.08, -7.7), 71.8],
+    [(147.64, 684.08, -7.7), 71.8],
+    [(147.64, 684.08, -7.7), 71.8],
+    [(147.64, 684.08, -7.7), 71.8],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Table**, described as: Geometric square form, green metallic frame with a flat dark green top, curved support legs with open underside, used for placing items or casual outdoor use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 1 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Table,
+                        Size:small(1*1=1 squares),
+                        Description:Geometric square form, green metallic frame with a flat dark green top, curved support legs with open underside, used for placing items or casual outdoor use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [97, 198]  
+                        **Y Range**: [min_y, max_y] = [634, 735]
+
+                        # RGB Captions
+                        Front = multi-story buildings, gray and brown facades; buildings are in the foreground and background; street is empty  
+                        Left = paved walkway, long and straight; trees on the left side; bench in the middle; sun shining from the top left  
+                        Right = square with open space, tiled ground; buildings surrounding the square; American flag on a pole in the center  
+                        Down = bench on the sidewalk, shadow cast to the right; lamp post nearby; pavement and grassy area  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [42, 100, 100], [40, 34, 40]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [32, 34, 47]]
+
+                        RightDepth:
+                        [[100, 100, 100], [87, 100, 100], [34, 35, 31]]
+
+                        DownDepth:
+                        [[16, 14, 16], [13, 10, 13], [15, 12, 14]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(147.64, 684.08, -7.7), 71.8],
+    [(149.2, 688.83, -7.7), 71.8],
+    [(149.2, 688.83, -7.7), 71.8],
+    [(149.2, 688.83, -7.7), 71.8],
+    [(149.2, 688.83, -7.7), 71.8],
+    [(149.2, 688.83, -7.7), 71.8],
+    [(149.2, 688.83, -7.7), 71.8],
+    [(149.2, 688.83, -7.7), 71.8],
+    [(149.2, 688.83, -7.7), 71.8],
+    [(149.2, 688.83, -7.7), 71.8],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 1
+                        DistanceTraveled = 5.000000000000031
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Table**, described as: Geometric square form, green metallic frame with a flat dark green top, curved support legs with open underside, used for placing items or casual outdoor use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:1 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 2 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Table,
+                        Size:small(1*1=1 squares),
+                        Description:Geometric square form, green metallic frame with a flat dark green top, curved support legs with open underside, used for placing items or casual outdoor use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [97, 198]  
+                        **Y Range**: [min_y, max_y] = [634, 735]
+
+                        # RGB Captions
+                        Front = multi-story buildings, gray and brown facades; buildings are on both sides of the street; street is empty  
+                        Left = paved walkway, wide and long; trees on both sides; person walking in the distance; buildings in the background  
+                        Right = square with tiled ground; buildings surrounding the square; clock tower in the background; clear sky  
+                        Down = bench with yellow flowers; bench is on a tiled path; lamp post casting shadow; view is from above  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [60, 100, 100], [31, 25, 35]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [30, 26, 31]]
+
+                        RightDepth:
+                        [[100, 100, 100], [84, 100, 100], [33, 35, 44]]
+
+                        DownDepth:
+                        [[14, 12, 15], [12, 10, 13], [15, 13, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(147.64, 684.08, -7.7), 71.8],
+    [(149.2, 688.83, -7.7), 71.8],
+    [(153.95, 687.27, -7.7), 71.8],
+    [(153.95, 687.27, -7.7), 71.8],
+    [(153.95, 687.27, -7.7), 71.8],
+    [(153.95, 687.27, -7.7), 71.8],
+    [(153.95, 687.27, -7.7), 71.8],
+    [(153.95, 687.27, -7.7), 71.8],
+    [(153.95, 687.27, -7.7), 71.8],
+    [(153.95, 687.27, -7.7), 71.8],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 2
+                        DistanceTraveled = 10.000000000000044
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Table**, described as: Geometric square form, green metallic frame with a flat dark green top, curved support legs with open underside, used for placing items or casual outdoor use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:2 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 3 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Table,
+                        Size:small(1*1=1 squares),
+                        Description:Geometric square form, green metallic frame with a flat dark green top, curved support legs with open underside, used for placing items or casual outdoor use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [97, 198]  
+                        **Y Range**: [min_y, max_y] = [634, 735]
+
+                        # RGB Captions
+                        Front = multi-story buildings, gray and brown facades; buildings are on both sides of the street; fire escape on the building facade  
+                        Left = paved walkway, wide and long; trees lining the left side; benches along the path; buildings in the background  
+                        Right = square with open space, surrounded by buildings; buildings have multiple stories; American flag on one building; cafe tables in front of a building  
+                        Down = sidewalk, tiled surface; lamp post casting shadow; grassy area adjacent to the sidewalk  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [44, 100, 100], [39, 34, 44]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [29, 27, 38]]
+
+                        RightDepth:
+                        [[100, 100, 100], [63, 100, 100], [30, 31, 36]]
+
+                        DownDepth:
+                        [[15, 13, 16], [12, 10, 13], [14, 12, 15]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(147.64, 684.08, -7.7), 71.8],
+    [(149.2, 688.83, -7.7), 71.8],
+    [(153.95, 687.27, -7.7), 71.8],
+    [(149.2, 688.83, -7.7), 71.8],
+    [(149.2, 688.83, -7.7), 71.8],
+    [(149.2, 688.83, -7.7), 71.8],
+    [(149.2, 688.83, -7.7), 71.8],
+    [(149.2, 688.83, -7.7), 71.8],
+    [(149.2, 688.83, -7.7), 71.8],
+    [(149.2, 688.83, -7.7), 71.8],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 3
+                        DistanceTraveled = 15.000000000000057
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Table**, described as: Geometric square form, green metallic frame with a flat dark green top, curved support legs with open underside, used for placing items or casual outdoor use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:3 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 4 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Table,
+                        Size:small(1*1=1 squares),
+                        Description:Geometric square form, green metallic frame with a flat dark green top, curved support legs with open underside, used for placing items or casual outdoor use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [97, 198]  
+                        **Y Range**: [min_y, max_y] = [634, 735]
+
+                        # RGB Captions
+                        Front = tall buildings, gray and brown; street lamps, black; trees, green; buildings in the background, slightly left of center  
+                        Left = paved walkway, wide; trees, green; lamp posts, black; buildings in the distant background, slightly right of center  
+                        Right = buildings, gray and beige; street lamps, black; awnings, red; buildings stand in the background, slightly left of center  
+                        Down = bench, wooden; trash can, metal; paved area, light-colored; grassy area, dark; bench and trash can near the edge  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [49, 100, 100], [31, 26, 29]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [39, 28, 31]]
+
+                        RightDepth:
+                        [[100, 100, 100], [83, 100, 100], [30, 33, 46]]
+
+                        DownDepth:
+                        [[14, 12, 15], [13, 10, 13], [15, 13, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(147.64, 684.08, -7.7), 71.8],
+    [(149.2, 688.83, -7.7), 71.8],
+    [(153.95, 687.27, -7.7), 71.8],
+    [(149.2, 688.83, -7.7), 71.8],
+    [(144.45, 690.39, -7.7), 71.8],
+    [(144.45, 690.39, -7.7), 71.8],
+    [(144.45, 690.39, -7.7), 71.8],
+    [(144.45, 690.39, -7.7), 71.8],
+    [(144.45, 690.39, -7.7), 71.8],
+    [(144.45, 690.39, -7.7), 71.8],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 4
+                        DistanceTraveled = 20.00000000000007
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Table**, described as: Geometric square form, green metallic frame with a flat dark green top, curved support legs with open underside, used for placing items or casual outdoor use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:4 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 5 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Table,
+                        Size:small(1*1=1 squares),
+                        Description:Geometric square form, green metallic frame with a flat dark green top, curved support legs with open underside, used for placing items or casual outdoor use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [97, 198]  
+                        **Y Range**: [min_y, max_y] = [634, 735]
+
+                        # RGB Captions
+                        Front = multi-story buildings, gray and brown facades; buildings line both sides of the street; tree in the foreground on the right side; street stretches into the distance  
+                        Left = paved walkway, wide and clean; row of green trees on the left; tall buildings in the background; lampposts along the path; clear sky above  
+                        Right = tall buildings, gray and beige facades; clock tower in the background; open square in the foreground; street lamps and signboards present  
+                        Down = brown carpet, textured surface; white tiled floor adjacent to the carpet; shadow of a standing object cast on the carpet  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [38, 100, 100], [31, 27, 31]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [40, 28, 31]]
+
+                        RightDepth:
+                        [[68, 100, 100], [61, 100, 100], [25, 33, 37]]
+
+                        DownDepth:
+                        [[14, 12, 15], [13, 21, 13], [15, 13, 30]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(147.64, 684.08, -7.7), 71.8],
+    [(149.2, 688.83, -7.7), 71.8],
+    [(153.95, 687.27, -7.7), 71.8],
+    [(149.2, 688.83, -7.7), 71.8],
+    [(144.45, 690.39, -7.7), 71.8],
+    [(146.01, 695.14, -7.7), 71.8],
+    [(146.01, 695.14, -7.7), 71.8],
+    [(146.01, 695.14, -7.7), 71.8],
+    [(146.01, 695.14, -7.7), 71.8],
+    [(146.01, 695.14, -7.7), 71.8],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 5
+                        DistanceTraveled = 25.000000000000103
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Table**, described as: Geometric square form, green metallic frame with a flat dark green top, curved support legs with open underside, used for placing items or casual outdoor use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:5 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 6 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Table,
+                        Size:small(1*1=1 squares),
+                        Description:Geometric square form, green metallic frame with a flat dark green top, curved support legs with open underside, used for placing items or casual outdoor use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [97, 198]  
+                        **Y Range**: [min_y, max_y] = [634, 735]
+
+                        # RGB Captions
+                        Front = multi-story building, gray facade; fire escape on the left; street in the foreground; buildings extend into the background  
+                        Left = paved road, wide; trees lining both sides; buildings on the right; skyscrapers in the distant background  
+                        Right = building corner, detailed facade; antenna on the roof; street lamp in the foreground; other buildings adjacent  
+                        Down = asphalt surface, dark; sidewalk with blue trash can; construction crane partially visible; brown textured ground in the foreground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [18, 100, 100], [19, 36, 45]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [32, 45, 33]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [85, 30, 36]]
+
+                        DownDepth:
+                        [[15, 14, 16], [13, 10, 13], [14, 12, 15]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(147.64, 684.08, -7.7), 71.8],
+    [(149.2, 688.83, -7.7), 71.8],
+    [(153.95, 687.27, -7.7), 71.8],
+    [(149.2, 688.83, -7.7), 71.8],
+    [(144.45, 690.39, -7.7), 71.8],
+    [(146.01, 695.14, -7.7), 71.8],
+    [(147.57, 699.89, -7.7), 71.8],
+    [(147.57, 699.89, -7.7), 71.8],
+    [(147.57, 699.89, -7.7), 71.8],
+    [(147.57, 699.89, -7.7), 71.8],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 6
+                        DistanceTraveled = 30.000000000000135
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Table**, described as: Geometric square form, green metallic frame with a flat dark green top, curved support legs with open underside, used for placing items or casual outdoor use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:6 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 7 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Table,
+                        Size:small(1*1=1 squares),
+                        Description:Geometric square form, green metallic frame with a flat dark green top, curved support legs with open underside, used for placing items or casual outdoor use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [97, 198]  
+                        **Y Range**: [min_y, max_y] = [634, 735]
+
+                        # RGB Captions
+                        Front = multi-story building, gray facade; building occupies the left side; street runs parallel to the building  
+                        Left = park area with trees, green leaves; park is on the left; buildings in the background on the right  
+                        Right = multi-story building, stone facade; building is in the foreground; street in front of the building  
+                        Down = blue umbrella, small size; umbrella is on the ground; dark surroundings  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [13, 100, 100], [15, 34, 42]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [34, 34, 36]]
+
+                        RightDepth:
+                        [[100, 100, 100], [44, 70, 100], [42, 25, 31]]
+
+                        DownDepth:
+                        [[14, 13, 30], [13, 10, 13], [15, 12, 14]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(147.64, 684.08, -7.7), 71.8],
+    [(149.2, 688.83, -7.7), 71.8],
+    [(153.95, 687.27, -7.7), 71.8],
+    [(149.2, 688.83, -7.7), 71.8],
+    [(144.45, 690.39, -7.7), 71.8],
+    [(146.01, 695.14, -7.7), 71.8],
+    [(147.57, 699.89, -7.7), 71.8],
+    [(149.13, 704.64, -7.7), 71.8],
+    [(149.13, 704.64, -7.7), 71.8],
+    [(149.13, 704.64, -7.7), 71.8],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 7
+                        DistanceTraveled = 35.00000000000016
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Table**, described as: Geometric square form, green metallic frame with a flat dark green top, curved support legs with open underside, used for placing items or casual outdoor use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:7 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 8 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Table,
+                        Size:small(1*1=1 squares),
+                        Description:Geometric square form, green metallic frame with a flat dark green top, curved support legs with open underside, used for placing items or casual outdoor use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [97, 198]  
+                        **Y Range**: [min_y, max_y] = [634, 735]
+
+                        # RGB Captions
+                        Front = stone building, tall, gray; fire escape on the side; street in front  
+                        Left = pavement path, wide, light brown; trees along the path; buildings in the background  
+                        Right = building, large, stone; multiple windows; red phone booth nearby  
+                        Down = patio area, small, tiled; blue cushion on a chair; orange object on the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[10, 100, 100], [8, 82, 100], [10, 37, 64]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [27, 25, 29]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 82, 100], [56, 24, 40]]
+
+                        DownDepth:
+                        [[12, 14, 18], [12, 10, 14], [13, 12, 15]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(147.64, 684.08, -7.7), 71.8],
+    [(149.2, 688.83, -7.7), 71.8],
+    [(153.95, 687.27, -7.7), 71.8],
+    [(149.2, 688.83, -7.7), 71.8],
+    [(144.45, 690.39, -7.7), 71.8],
+    [(146.01, 695.14, -7.7), 71.8],
+    [(147.57, 699.89, -7.7), 71.8],
+    [(149.13, 704.64, -7.7), 71.8],
+    [(153.88, 703.08, -7.7), 71.8],
+    [(153.88, 703.08, -7.7), 71.8],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 8
+                        DistanceTraveled = 40.00000000000018
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Table**, described as: Geometric square form, green metallic frame with a flat dark green top, curved support legs with open underside, used for placing items or casual outdoor use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:8 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 9 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Table,
+                        Size:small(1*1=1 squares),
+                        Description:Geometric square form, green metallic frame with a flat dark green top, curved support legs with open underside, used for placing items or casual outdoor use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [97, 198]  
+                        **Y Range**: [min_y, max_y] = [634, 735]
+
+                        # RGB Captions
+                        Front = stone building, tall, many windows; building occupies the left side; street in front with a few pedestrians  
+                        Left = fire escape, metal, attached to building; fire escape on the right side of the image; park with trees and benches in the background  
+                        Right = apartment building, multi-story, stone facade; building is in the center; other buildings in the background  
+                        Down = outdoor cafe, tables and chairs; cafe is in the foreground; dark pavement surrounding  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[7, 100, 100], [5, 21, 100], [7, 22, 58]]
+
+                        LeftDepth:
+                        [[100, 100, 5], [100, 100, 4], [28, 24, 5]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 67, 100], [80, 38, 41]]
+
+                        DownDepth:
+                        [[10, 13, 24], [11, 10, 14], [14, 13, 15]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(147.64, 684.08, -7.7), 71.8],
+    [(149.2, 688.83, -7.7), 71.8],
+    [(153.95, 687.27, -7.7), 71.8],
+    [(149.2, 688.83, -7.7), 71.8],
+    [(144.45, 690.39, -7.7), 71.8],
+    [(146.01, 695.14, -7.7), 71.8],
+    [(147.57, 699.89, -7.7), 71.8],
+    [(149.13, 704.64, -7.7), 71.8],
+    [(153.88, 703.08, -7.7), 71.8],
+    [(155.44, 707.83, -7.7), 71.8],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 9
+                        DistanceTraveled = 45.000000000000206
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Table**, described as: Geometric square form, green metallic frame with a flat dark green top, curved support legs with open underside, used for placing items or casual outdoor use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:9 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 10 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Table,
+                        Size:small(1*1=1 squares),
+                        Description:Geometric square form, green metallic frame with a flat dark green top, curved support legs with open underside, used for placing items or casual outdoor use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [97, 198]  
+                        **Y Range**: [min_y, max_y] = [634, 735]
+
+                        # RGB Captions
+                        Front = multi-story building, gray stone; fire escape on the side; street in the foreground  
+                        Left = fire escape, metal structure; building facade, brick texture; windows with blinds closed  
+                        Right = two buildings, multi-story; one with flat roof, other with sloped roof; tree in front of the building  
+                        Down = building corner, blue door; five tables with umbrellas; sidewalk in the foreground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[17, 100, 100], [14, 40, 100], [16, 16, 37]]
+
+                        LeftDepth:
+                        [[100, 5, 4], [100, 4, 3], [39, 6, 4]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [37, 31, 48]]
+
+                        DownDepth:
+                        [[8, 12, 15], [11, 10, 13], [15, 13, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(149.2, 688.83, -7.7), 71.8],
+    [(153.95, 687.27, -7.7), 71.8],
+    [(149.2, 688.83, -7.7), 71.8],
+    [(144.45, 690.39, -7.7), 71.8],
+    [(146.01, 695.14, -7.7), 71.8],
+    [(147.57, 699.89, -7.7), 71.8],
+    [(149.13, 704.64, -7.7), 71.8],
+    [(153.88, 703.08, -7.7), 71.8],
+    [(155.44, 707.83, -7.7), 71.8],
+    [(157.01, 712.58, -7.7), 71.8],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 10
+                        DistanceTraveled = 50.000000000000234
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Table**, described as: Geometric square form, green metallic frame with a flat dark green top, curved support legs with open underside, used for placing items or casual outdoor use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:10 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 11 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Table,
+                        Size:small(1*1=1 squares),
+                        Description:Geometric square form, green metallic frame with a flat dark green top, curved support legs with open underside, used for placing items or casual outdoor use.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [97, 198]  
+                        **Y Range**: [min_y, max_y] = [634, 735]
+
+                        # RGB Captions
+                        Front = stone building, tall, with arched windows; building occupies the left side; sidewalk in front of the building  
+                        Left = brick building, dark, with fire escape; fire escape on the right side; alleyway in the foreground  
+                        Right = tall buildings, stone and brick, with many windows; buildings stand in the background; tree in the center foreground  
+                        Down = stone pavement, square, with street lamps; lamps are scattered across the pavement; water body adjacent to the pavement  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[19, 7, 100], [17, 6, 100], [19, 8, 36]]
+
+                        LeftDepth:
+                        [[4, 100, 100], [4, 12, 56], [5, 9, 32]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [36, 30, 38]]
+
+                        DownDepth:
+                        [[14, 11, 15], [11, 10, 13], [14, 13, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(153.95, 687.27, -7.7), 71.8],
+    [(149.2, 688.83, -7.7), 71.8],
+    [(144.45, 690.39, -7.7), 71.8],
+    [(146.01, 695.14, -7.7), 71.8],
+    [(147.57, 699.89, -7.7), 71.8],
+    [(149.13, 704.64, -7.7), 71.8],
+    [(153.88, 703.08, -7.7), 71.8],
+    [(155.44, 707.83, -7.7), 71.8],
+    [(157.01, 712.58, -7.7), 71.8],
+    [(158.57, 717.33, -7.7), 71.8],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 11
+                        DistanceTraveled = 55.00000000000026
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Table**, described as: Geometric square form, green metallic frame with a flat dark green top, curved support legs with open underside, used for placing items or casual outdoor use.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:11 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

@@ -1,0 +1,441 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Newsstand,
+                        Size:mid(3.25*2.75=8.94 squares),
+                        Description:Geometric box-like structure, corrugated metal texture in gray tones, signage with commercial labels and stacked crates, clearly functions as a small retail kiosk for newspapers and drinks.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-258, -157]  
+                        **Y Range**: [min_y, max_y] = [-22, 79]
+
+                        # RGB Captions
+                        Front = wooden houses, scattered; green trees, dense; vehicles and people in the foreground; buildings in the background  
+                        Left = pine trees, tall; wooden fence, short; grassy field, open; house in the distant background  
+                        Right = houses, clustered; trees, large; grassy field, expansive; buildings surrounded by trees  
+                        Down = hedge trimmer, yellow; hedge, long; grass, cut; trimmer near the hedge  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [41, 36, 38]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [48, 36, 44]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [39, 36, 48]]
+
+                        DownDepth:
+                        [[19, 16, 19], [16, 12, 16], [19, 16, 19]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-207.98, 28.3, -10.0), -102.34],
+    [(-207.98, 28.3, -10.0), -102.34],
+    [(-207.98, 28.3, -10.0), -102.34],
+    [(-207.98, 28.3, -10.0), -102.34],
+    [(-207.98, 28.3, -10.0), -102.34],
+    [(-207.98, 28.3, -10.0), -102.34],
+    [(-207.98, 28.3, -10.0), -102.34],
+    [(-207.98, 28.3, -10.0), -102.34],
+    [(-207.98, 28.3, -10.0), -102.34],
+    [(-207.98, 28.3, -10.0), -102.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Newsstand**, described as: Geometric box-like structure, corrugated metal texture in gray tones, signage with commercial labels and stacked crates, clearly functions as a small retail kiosk for newspapers and drinks.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 1 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Newsstand,
+                        Size:mid(3.25*2.75=8.94 squares),
+                        Description:Geometric box-like structure, corrugated metal texture in gray tones, signage with commercial labels and stacked crates, clearly functions as a small retail kiosk for newspapers and drinks.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-258, -157]  
+                        **Y Range**: [min_y, max_y] = [-22, 79]
+
+                        # RGB Captions
+                        Front = street, paved; houses on both sides; trees lining the street; umbrella on the sidewalk  
+                        Left = garage with open doors; red car parked in front; yellow truck nearby; trees surrounding the area  
+                        Right = road with a black car; signpost on the right; buildings in the background; bushes along the road  
+                        Down = stone steps, weathered; blue umbrella at the top; shadows indicating sunny day  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [48, 36, 44]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [42, 36, 48]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 38, 42]]
+
+                        DownDepth:
+                        [[19, 16, 19], [16, 6, 16], [16, 7, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-207.98, 28.3, -10.0), -102.34],
+    [(-209.05, 23.41, -10.0), -102.34],
+    [(-209.05, 23.41, -10.0), -102.34],
+    [(-209.05, 23.41, -10.0), -102.34],
+    [(-209.05, 23.41, -10.0), -102.34],
+    [(-209.05, 23.41, -10.0), -102.34],
+    [(-209.05, 23.41, -10.0), -102.34],
+    [(-209.05, 23.41, -10.0), -102.34],
+    [(-209.05, 23.41, -10.0), -102.34],
+    [(-209.05, 23.41, -10.0), -102.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 1
+                        DistanceTraveled = 4.999999999999998
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Newsstand**, described as: Geometric box-like structure, corrugated metal texture in gray tones, signage with commercial labels and stacked crates, clearly functions as a small retail kiosk for newspapers and drinks.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:1 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 2 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Newsstand,
+                        Size:mid(3.25*2.75=8.94 squares),
+                        Description:Geometric box-like structure, corrugated metal texture in gray tones, signage with commercial labels and stacked crates, clearly functions as a small retail kiosk for newspapers and drinks.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-258, -157]  
+                        **Y Range**: [min_y, max_y] = [-22, 79]
+
+                        # RGB Captions
+                        Front = street, asphalt; houses on both sides; trees lining the street; telephone pole on the left  
+                        Left = pickup truck, parked; boxes near the truck; red car in the background; building with a white roof  
+                        Right = road, curving; houses along the road; excavator on the right; trees scattered around  
+                        Down = patio area, brick; blue umbrella; chairs and table; grassy area surrounding  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [42, 34, 39]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 34, 42]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 40, 54]]
+
+                        DownDepth:
+                        [[18, 16, 19], [15, 12, 16], [9, 9, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-207.98, 28.3, -10.0), -102.34],
+    [(-209.05, 23.41, -10.0), -102.34],
+    [(-210.12, 18.53, -10.0), -102.34],
+    [(-210.12, 18.53, -10.0), -102.34],
+    [(-210.12, 18.53, -10.0), -102.34],
+    [(-210.12, 18.53, -10.0), -102.34],
+    [(-210.12, 18.53, -10.0), -102.34],
+    [(-210.12, 18.53, -10.0), -102.34],
+    [(-210.12, 18.53, -10.0), -102.34],
+    [(-210.12, 18.53, -10.0), -102.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 2
+                        DistanceTraveled = 9.999999999999996
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Newsstand**, described as: Geometric box-like structure, corrugated metal texture in gray tones, signage with commercial labels and stacked crates, clearly functions as a small retail kiosk for newspapers and drinks.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:2 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 3 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Newsstand,
+                        Size:mid(3.25*2.75=8.94 squares),
+                        Description:Geometric box-like structure, corrugated metal texture in gray tones, signage with commercial labels and stacked crates, clearly functions as a small retail kiosk for newspapers and drinks.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-258, -157]  
+                        **Y Range**: [min_y, max_y] = [-22, 79]
+
+                        # RGB Captions
+                        Front = wooden houses, brown roofs; houses are in the background; trees on both sides of the road  
+                        Left = yellow truck, parked; red car, parked; gazebo in the center; trees surrounding the area  
+                        Right = car driving on the road; wooden houses on the left; trees and bushes on both sides  
+                        Down = blue and yellow umbrella, open; blue umbrella, closed; chairs around the umbrellas; patio in the foreground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [40, 32, 39]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 35, 42]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [40, 40, 54]]
+
+                        DownDepth:
+                        [[18, 16, 19], [15, 12, 16], [16, 13, 20]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-207.98, 28.3, -10.0), -102.34],
+    [(-209.05, 23.41, -10.0), -102.34],
+    [(-210.12, 18.53, -10.0), -102.34],
+    [(-211.19, 13.64, -10.0), -102.34],
+    [(-211.19, 13.64, -10.0), -102.34],
+    [(-211.19, 13.64, -10.0), -102.34],
+    [(-211.19, 13.64, -10.0), -102.34],
+    [(-211.19, 13.64, -10.0), -102.34],
+    [(-211.19, 13.64, -10.0), -102.34],
+    [(-211.19, 13.64, -10.0), -102.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 3
+                        DistanceTraveled = 14.999999999999995
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Newsstand**, described as: Geometric box-like structure, corrugated metal texture in gray tones, signage with commercial labels and stacked crates, clearly functions as a small retail kiosk for newspapers and drinks.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:3 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 4 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Newsstand,
+                        Size:mid(3.25*2.75=8.94 squares),
+                        Description:Geometric box-like structure, corrugated metal texture in gray tones, signage with commercial labels and stacked crates, clearly functions as a small retail kiosk for newspapers and drinks.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-258, -157]  
+                        **Y Range**: [min_y, max_y] = [-22, 79]
+
+                        # RGB Captions
+                        Front = barrier gate, horizontal, metal; barrier gate is in the foreground; car waiting at the gate  
+                        Left = red car, parked; house with gray roof; driveway in front of the house; trees surrounding the area  
+                        Right = road, straight, paved; houses on both sides; trees lining the street; power lines above  
+                        Down = umbrella, multicolored; sandbox; round bush; playground equipment nearby  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [52, 38, 45]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [42, 37, 51]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 38, 42]]
+
+                        DownDepth:
+                        [[19, 16, 20], [16, 12, 16], [17, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-207.98, 28.3, -10.0), -102.34],
+    [(-209.05, 23.41, -10.0), -102.34],
+    [(-210.12, 18.53, -10.0), -102.34],
+    [(-211.19, 13.64, -10.0), -102.34],
+    [(-216.07, 14.71, -10.0), -102.34],
+    [(-216.07, 14.71, -10.0), -102.34],
+    [(-216.07, 14.71, -10.0), -102.34],
+    [(-216.07, 14.71, -10.0), -102.34],
+    [(-216.07, 14.71, -10.0), -102.34],
+    [(-216.07, 14.71, -10.0), -102.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 4
+                        DistanceTraveled = 20.000000000000007
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Newsstand**, described as: Geometric box-like structure, corrugated metal texture in gray tones, signage with commercial labels and stacked crates, clearly functions as a small retail kiosk for newspapers and drinks.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:4 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 5 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Newsstand,
+                        Size:mid(3.25*2.75=8.94 squares),
+                        Description:Geometric box-like structure, corrugated metal texture in gray tones, signage with commercial labels and stacked crates, clearly functions as a small retail kiosk for newspapers and drinks.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-258, -157]  
+                        **Y Range**: [min_y, max_y] = [-22, 79]
+
+                        # RGB Captions
+                        Front = telephone pole, tall, wooden; power lines, horizontal; houses, small, brown; trees, large, green; pole in the foreground; houses in the background  
+                        Left = red car, parked; yellow truck, parked; dumpster, green; house, small, brown; trees, large, green; car and truck in the parking area; house in the background  
+                        Right = houses, small, brown; road, curved; telephone pole, tall, wooden; trees, large, green; houses on both sides of the road; pole near the road  
+                        Down = umbrella, blue and yellow; chairs, red; tables, black; people, walking; umbrella in the foreground; seating area on a paved surface  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [57, 39, 42]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [48, 41, 57]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [40, 35, 40]]
+
+                        DownDepth:
+                        [[20, 16, 19], [16, 12, 16], [19, 16, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-207.98, 28.3, -10.0), -102.34],
+    [(-209.05, 23.41, -10.0), -102.34],
+    [(-210.12, 18.53, -10.0), -102.34],
+    [(-211.19, 13.64, -10.0), -102.34],
+    [(-216.07, 14.71, -10.0), -102.34],
+    [(-211.19, 13.64, -10.0), -102.34],
+    [(-211.19, 13.64, -10.0), -102.34],
+    [(-211.19, 13.64, -10.0), -102.34],
+    [(-211.19, 13.64, -10.0), -102.34],
+    [(-211.19, 13.64, -10.0), -102.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 5
+                        DistanceTraveled = 25.00000000000002
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Newsstand**, described as: Geometric box-like structure, corrugated metal texture in gray tones, signage with commercial labels and stacked crates, clearly functions as a small retail kiosk for newspapers and drinks.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:5 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 6 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Newsstand,
+                        Size:mid(3.25*2.75=8.94 squares),
+                        Description:Geometric box-like structure, corrugated metal texture in gray tones, signage with commercial labels and stacked crates, clearly functions as a small retail kiosk for newspapers and drinks.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-258, -157]  
+                        **Y Range**: [min_y, max_y] = [-22, 79]
+
+                        # RGB Captions
+                        Front = telephone pole, tall, wooden; power lines, horizontal; houses, dark roofs; car parked on the street; scene is in a residential area  
+                        Left = red car, parked; driveway, paved; house, white walls; trees, green leaves; garage door, closed; scene is in a suburban area  
+                        Right = street, curved; houses, dark roofs; telephone poles, tall; cars, parked; bushes, green; scene is in a sunny neighborhood  
+                        Down = umbrella, blue and yellow; table, round; chairs, four; building, red roof; tree, small; scene is an outdoor cafe  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [50, 33, 35]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [64, 45, 51]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [33, 34, 43]]
+
+                        DownDepth:
+                        [[20, 16, 18], [17, 13, 16], [21, 17, 19]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-207.98, 28.3, -10.0), -102.34],
+    [(-209.05, 23.41, -10.0), -102.34],
+    [(-210.12, 18.53, -10.0), -102.34],
+    [(-211.19, 13.64, -10.0), -102.34],
+    [(-216.07, 14.71, -10.0), -102.34],
+    [(-211.19, 13.64, -10.0), -102.34],
+    [(-212.25, 8.76, -10.0), -102.34],
+    [(-212.25, 8.76, -10.0), -102.34],
+    [(-212.25, 8.76, -10.0), -102.34],
+    [(-212.25, 8.76, -10.0), -102.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 6
+                        DistanceTraveled = 30.00000000000002
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Newsstand**, described as: Geometric box-like structure, corrugated metal texture in gray tones, signage with commercial labels and stacked crates, clearly functions as a small retail kiosk for newspapers and drinks.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:6 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

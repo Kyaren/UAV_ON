@@ -1,0 +1,35 @@
+{
+  "episode_id": "29",
+  "start_pose": {
+    "start_position": [
+      7.565261457576085,
+      -44.538845609992904,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.7017262400570011,
+      0.7124466885427035
+    ]
+  },
+  "info": {
+    "geodesic_distance": 53,
+    "euclidean_distance": 33.0927
+  },
+  "map_name": "Venice_test",
+  "true_name": " MilkCan",
+  "object_name": "SM_Milk_Container_45",
+  "pose": [
+    [
+      -19.602294921875,
+      -27.382997512817383,
+      0.9200018048286438
+    ]
+  ],
+  "size": " small(0.5*0.5=0.25 squares)",
+  "description": " Geometric cylindrical form, weathered metallic surface with bluish-gray patina, narrow neck and flared rim, used for liquid dairy storage and transport.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

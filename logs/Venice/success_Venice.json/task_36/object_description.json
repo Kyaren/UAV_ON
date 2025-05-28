@@ -1,0 +1,35 @@
+{
+  "episode_id": "36",
+  "start_pose": {
+    "start_position": [
+      126.01648009369123,
+      34.13814013218075,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.5240034030185754,
+      -0.8517161696392481
+    ]
+  },
+  "info": {
+    "geodesic_distance": 39,
+    "euclidean_distance": 26.1614
+  },
+  "map_name": "Venice_test",
+  "true_name": " Statue",
+  "object_name": "SM_Statue02_106",
+  "pose": [
+    [
+      135.0977020263672,
+      10.917001724243164,
+      0.9200018048286438
+    ]
+  ],
+  "size": " mid(2.75*2.5=6.785 squares)",
+  "description": " Organic seated figure, oxidized bronze and dark stone, detailed clothing folds and facial expression, commemorative sculptural monument.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

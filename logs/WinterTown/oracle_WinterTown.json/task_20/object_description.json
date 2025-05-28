@@ -1,0 +1,35 @@
+{
+  "episode_id": "20",
+  "start_pose": {
+    "start_position": [
+      60.66375824813285,
+      43.4886376325924,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.27814060436736054,
+      0.9605403709382336
+    ]
+  },
+  "info": {
+    "geodesic_distance": 65,
+    "euclidean_distance": 49.8238
+  },
+  "map_name": "WinterTown_test",
+  "true_name": " Toolbox",
+  "object_name": "SM_Plastic_Crate_51",
+  "pose": [
+    [
+      13.007255554199219,
+      31.50725555419922,
+      1.228725552558899
+    ]
+  ],
+  "size": " small(1*0.75=0.75 squares)",
+  "description": " Rectangular box shape, dark blue metallic surface, visible handle and front latches, designed for storing or carrying tools.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

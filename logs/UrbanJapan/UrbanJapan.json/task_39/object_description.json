@@ -1,0 +1,35 @@
+{
+  "episode_id": "39",
+  "start_pose": {
+    "start_position": [
+      -31.141322651672915,
+      -11.294931120532327,
+      -6.400000095367432
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.6460244345647131,
+      -0.7633167297690668
+    ]
+  },
+  "info": {
+    "geodesic_distance": 90,
+    "euclidean_distance": 54.2682
+  },
+  "map_name": "UrbanJapan_test",
+  "true_name": "Limousine",
+  "object_name": "SK_Limo_Rigged_8",
+  "pose": [
+    [
+      -6.899999618530273,
+      37.0,
+      1.5999999046325684
+    ]
+  ],
+  "size": "big(6.75*2.0=13.5 squares)",
+  "description": "Long, stretched sedan with a smooth, off-white exterior, classic styling with rounded edges, chrome accents, and extended rear compartment, typical of a luxury limousine.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

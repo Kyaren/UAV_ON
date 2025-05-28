@@ -1,0 +1,35 @@
+{
+  "episode_id": "38",
+  "start_pose": {
+    "start_position": [
+      -8.901523876092696,
+      83.70027181821737,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.988992185831311,
+      0.1479677544757832
+    ]
+  },
+  "info": {
+    "geodesic_distance": 44,
+    "euclidean_distance": 33.1687
+  },
+  "map_name": "Venice_test",
+  "true_name": "Boat",
+  "object_name": "BP_gondola3_2",
+  "pose": [
+    [
+      -5.202294826507568,
+      115.31700134277344,
+      2.3200018405914307
+    ]
+  ],
+  "size": "big(8.75*2=17.5 squares)",
+  "description": "Geometric elongated form, glossy black wooden structure, red cushioned central seat with golden accents, pointed upward-curving ends indicating use for waterway transport.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

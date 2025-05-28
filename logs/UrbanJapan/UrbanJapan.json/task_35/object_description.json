@@ -1,0 +1,35 @@
+{
+  "episode_id": "35",
+  "start_pose": {
+    "start_position": [
+      2.290882069086855,
+      139.0791106635258,
+      -6.600000023841858
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.2418983087446801,
+      -0.9703016068349384
+    ]
+  },
+  "info": {
+    "geodesic_distance": 39,
+    "euclidean_distance": 25.3276
+  },
+  "map_name": "UrbanJapan_test",
+  "true_name": "Flowerpot",
+  "object_name": "SM_Flowerpot_05_82",
+  "pose": [
+    [
+      17.299999237060547,
+      119.29999542236328,
+      1.399999976158142
+    ]
+  ],
+  "size": "small(1.0*0.75=0.75 squares)",
+  "description": "Group of three cylindrical concrete pots of varying heights, grey exterior with assorted green and flowering plants, arranged together as decorative planters.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

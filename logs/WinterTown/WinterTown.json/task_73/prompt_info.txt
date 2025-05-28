@@ -1,0 +1,1953 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Fountain,
+                        Size: big(6.75*6.75=45.56 squares),
+                        Description: Tiered circular structure, smooth white stone texture, features three ascending basins with central column, functionally designed for decorative water display.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-108, -7]  
+                        **Y Range**: [min_y, max_y] = [-78, 23]
+
+                        # RGB Captions
+                        Front = pine trees, snow-covered; trees are in the foreground; snowy ground  
+                        Left = abandoned vehicles, scattered; vehicles are in the middle ground; snow-covered ground  
+                        Right = road, cleared of snow; road is in the foreground; buildings on both sides  
+                        Down = buildings, brick exterior; buildings are in the background; car parked on the side  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [98, 55, 80]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [82, 71, 80]]
+
+                        DownDepth:
+                        [[37, 100, 100], [31, 100, 100], [34, 31, 100]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-57.4, -27.18, -10.0), 25.63],
+    [(-57.4, -27.18, -10.0), 25.63],
+    [(-57.4, -27.18, -10.0), 25.63],
+    [(-57.4, -27.18, -10.0), 25.63],
+    [(-57.4, -27.18, -10.0), 25.63],
+    [(-57.4, -27.18, -10.0), 25.63],
+    [(-57.4, -27.18, -10.0), 25.63],
+    [(-57.4, -27.18, -10.0), 25.63],
+    [(-57.4, -27.18, -10.0), 25.63],
+    [(-57.4, -27.18, -10.0), 25.63],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Fountain**, described as:  Tiered circular structure, smooth white stone texture, features three ascending basins with central column, functionally designed for decorative water display.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 1 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Fountain,
+                        Size: big(6.75*6.75=45.56 squares),
+                        Description: Tiered circular structure, smooth white stone texture, features three ascending basins with central column, functionally designed for decorative water display.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-108, -7]  
+                        **Y Range**: [min_y, max_y] = [-78, 23]
+
+                        # RGB Captions
+                        Front = snow-covered ground, white; trees with snow on branches; trees in the foreground and background  
+                        Left = bridge over a frozen river, covered in snow; cars on the bridge; sun low in the sky; snowy landscape in the background  
+                        Right = road through a snowy forest; trees with snow on branches; buildings on the right side; road stretches into the distance  
+                        Down = aerial view of a snowy road; car parked on the side; street lamps along the road; buildings at the bottom  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [91, 53, 67]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 70, 91]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [82, 74, 89]]
+
+                        DownDepth:
+                        [[36, 30, 36], [31, 24, 32], [36, 31, 38]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-57.4, -27.18, -10.0), 25.63],
+    [(-52.89, -25.02, -10.0), 25.63],
+    [(-52.89, -25.02, -10.0), 25.63],
+    [(-52.89, -25.02, -10.0), 25.63],
+    [(-52.89, -25.02, -10.0), 25.63],
+    [(-52.89, -25.02, -10.0), 25.63],
+    [(-52.89, -25.02, -10.0), 25.63],
+    [(-52.89, -25.02, -10.0), 25.63],
+    [(-52.89, -25.02, -10.0), 25.63],
+    [(-52.89, -25.02, -10.0), 25.63],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 1
+                        DistanceTraveled = 5.000000000000002
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Fountain**, described as:  Tiered circular structure, smooth white stone texture, features three ascending basins with central column, functionally designed for decorative water display.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:1 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 2 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Fountain,
+                        Size: big(6.75*6.75=45.56 squares),
+                        Description: Tiered circular structure, smooth white stone texture, features three ascending basins with central column, functionally designed for decorative water display.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-108, -7]  
+                        **Y Range**: [min_y, max_y] = [-78, 23]
+
+                        # RGB Captions
+                        Front = pine trees, snow-covered; trees are in the foreground; snowy ground  
+                        Left = bridge, covered in snow; cars on the bridge; bridge spans a river; river is frozen  
+                        Right = trees, snow-covered; buildings in the background; road with a car  
+                        Down = road, partially cleared of snow; car parked near the road; snow on the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [90, 52, 49]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 71, 90]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [79, 75, 94]]
+
+                        DownDepth:
+                        [[35, 29, 34], [31, 24, 31], [36, 31, 37]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-57.4, -27.18, -10.0), 25.63],
+    [(-52.89, -25.02, -10.0), 25.63],
+    [(-48.39, -22.86, -10.0), 25.63],
+    [(-48.39, -22.86, -10.0), 25.63],
+    [(-48.39, -22.86, -10.0), 25.63],
+    [(-48.39, -22.86, -10.0), 25.63],
+    [(-48.39, -22.86, -10.0), 25.63],
+    [(-48.39, -22.86, -10.0), 25.63],
+    [(-48.39, -22.86, -10.0), 25.63],
+    [(-48.39, -22.86, -10.0), 25.63],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 2
+                        DistanceTraveled = 10.000000000000004
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Fountain**, described as:  Tiered circular structure, smooth white stone texture, features three ascending basins with central column, functionally designed for decorative water display.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:2 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 3 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Fountain,
+                        Size: big(6.75*6.75=45.56 squares),
+                        Description: Tiered circular structure, smooth white stone texture, features three ascending basins with central column, functionally designed for decorative water display.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-108, -7]  
+                        **Y Range**: [min_y, max_y] = [-78, 23]
+
+                        # RGB Captions
+                        Front = trees, snow-covered; trees are scattered across the landscape; snow on the ground  
+                        Left = road, cleared of snow; several vehicles parked along the road; buildings in the background covered in snow  
+                        Right = trees, snow-covered; road with a car driving; buildings partially visible in the background  
+                        Down = road, mostly clear; white car on the road; patches of snow on the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 56, 49]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 72, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [79, 73, 85]]
+
+                        DownDepth:
+                        [[37, 29, 34], [31, 24, 31], [36, 31, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-57.4, -27.18, -10.0), 25.63],
+    [(-52.89, -25.02, -10.0), 25.63],
+    [(-48.39, -22.86, -10.0), 25.63],
+    [(-46.22, -27.37, -10.0), 25.63],
+    [(-46.22, -27.37, -10.0), 25.63],
+    [(-46.22, -27.37, -10.0), 25.63],
+    [(-46.22, -27.37, -10.0), 25.63],
+    [(-46.22, -27.37, -10.0), 25.63],
+    [(-46.22, -27.37, -10.0), 25.63],
+    [(-46.22, -27.37, -10.0), 25.63],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 3
+                        DistanceTraveled = 15.000000000000004
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Fountain**, described as:  Tiered circular structure, smooth white stone texture, features three ascending basins with central column, functionally designed for decorative water display.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:3 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 4 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Fountain,
+                        Size: big(6.75*6.75=45.56 squares),
+                        Description: Tiered circular structure, smooth white stone texture, features three ascending basins with central column, functionally designed for decorative water display.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-108, -7]  
+                        **Y Range**: [min_y, max_y] = [-78, 23]
+
+                        # RGB Captions
+                        Front = snow-covered ground, white; trees with snow on branches; trees are scattered across the landscape; some green trees in the background  
+                        Left = bridge, long and narrow; bridge is in the foreground; cars parked on the left side of the bridge; snowy ground under the bridge  
+                        Right = road, cleared of snow; road is in the foreground; trees with snow on branches; trees are on both sides of the road; wooden structures on the right  
+                        Down = road, partially covered with snow; road is diagonal in the image; car parked on the left side of the road; snow-covered ground on both sides of the road  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 54, 47]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 70, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [77, 75, 93]]
+
+                        DownDepth:
+                        [[36, 29, 32], [31, 24, 31], [36, 31, 37]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-57.4, -27.18, -10.0), 25.63],
+    [(-52.89, -25.02, -10.0), 25.63],
+    [(-48.39, -22.86, -10.0), 25.63],
+    [(-46.22, -27.37, -10.0), 25.63],
+    [(-41.72, -25.2, -10.0), 25.63],
+    [(-41.72, -25.2, -10.0), 25.63],
+    [(-41.72, -25.2, -10.0), 25.63],
+    [(-41.72, -25.2, -10.0), 25.63],
+    [(-41.72, -25.2, -10.0), 25.63],
+    [(-41.72, -25.2, -10.0), 25.63],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 4
+                        DistanceTraveled = 20.000000000000007
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Fountain**, described as:  Tiered circular structure, smooth white stone texture, features three ascending basins with central column, functionally designed for decorative water display.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:4 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 5 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Fountain,
+                        Size: big(6.75*6.75=45.56 squares),
+                        Description: Tiered circular structure, smooth white stone texture, features three ascending basins with central column, functionally designed for decorative water display.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-108, -7]  
+                        **Y Range**: [min_y, max_y] = [-78, 23]
+
+                        # RGB Captions
+                        Front = trees, snow-covered; trees in the foreground; snowy ground  
+                        Left = cars, parked; bridge, long; cars on the left side of the bridge; snowy ground  
+                        Right = trees, snow-covered; trees in the foreground; snowy ground  
+                        Down = road, cleared; snow on both sides; road diagonally across the image  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 51, 44]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 71, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [73, 73, 98]]
+
+                        DownDepth:
+                        [[35, 29, 30], [31, 23, 31], [36, 31, 37]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-57.4, -27.18, -10.0), 25.63],
+    [(-52.89, -25.02, -10.0), 25.63],
+    [(-48.39, -22.86, -10.0), 25.63],
+    [(-46.22, -27.37, -10.0), 25.63],
+    [(-41.72, -25.2, -10.0), 25.63],
+    [(-37.21, -23.04, -10.0), 25.63],
+    [(-37.21, -23.04, -10.0), 25.63],
+    [(-37.21, -23.04, -10.0), 25.63],
+    [(-37.21, -23.04, -10.0), 25.63],
+    [(-37.21, -23.04, -10.0), 25.63],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 5
+                        DistanceTraveled = 25.000000000000007
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Fountain**, described as:  Tiered circular structure, smooth white stone texture, features three ascending basins with central column, functionally designed for decorative water display.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:5 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 6 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Fountain,
+                        Size: big(6.75*6.75=45.56 squares),
+                        Description: Tiered circular structure, smooth white stone texture, features three ascending basins with central column, functionally designed for decorative water display.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-108, -7]  
+                        **Y Range**: [min_y, max_y] = [-78, 23]
+
+                        # RGB Captions
+                        Front = snow-covered ground, white; trees with snow on branches; trees in the background; sun low in the sky  
+                        Left = road with tire tracks, snowy; cars parked along the road; tractor on the road; sun high in the sky  
+                        Right = snow-covered ground, white; trees with snow on branches; bridge over a river; sun low in the sky  
+                        Down = snow-covered ground, white; tire tracks on the road; shadows of trees on the snow  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 49, 44]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 69, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 73, 97]]
+
+                        DownDepth:
+                        [[33, 25, 30], [31, 24, 31], [37, 31, 37]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-57.4, -27.18, -10.0), 25.63],
+    [(-52.89, -25.02, -10.0), 25.63],
+    [(-48.39, -22.86, -10.0), 25.63],
+    [(-46.22, -27.37, -10.0), 25.63],
+    [(-41.72, -25.2, -10.0), 25.63],
+    [(-37.21, -23.04, -10.0), 25.63],
+    [(-32.7, -20.88, -10.0), 25.63],
+    [(-32.7, -20.88, -10.0), 25.63],
+    [(-32.7, -20.88, -10.0), 25.63],
+    [(-32.7, -20.88, -10.0), 25.63],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 6
+                        DistanceTraveled = 30.000000000000007
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Fountain**, described as:  Tiered circular structure, smooth white stone texture, features three ascending basins with central column, functionally designed for decorative water display.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:6 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 7 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Fountain,
+                        Size: big(6.75*6.75=45.56 squares),
+                        Description: Tiered circular structure, smooth white stone texture, features three ascending basins with central column, functionally designed for decorative water display.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-108, -7]  
+                        **Y Range**: [min_y, max_y] = [-78, 23]
+
+                        # RGB Captions
+                        Front = trees, snow-covered; green trees; snowy ground; trees in the foreground  
+                        Left = road, cleared of snow; cars on the road; snow-covered field; buildings in the distance  
+                        Right = trees, snow-covered; green trees; snowy ground; trees in the foreground  
+                        Down = snowy ground; road with yellow line; tree shadow on the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 43]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 73, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [70, 71, 96]]
+
+                        DownDepth:
+                        [[33, 25, 27], [31, 24, 31], [36, 31, 37]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-57.4, -27.18, -10.0), 25.63],
+    [(-52.89, -25.02, -10.0), 25.63],
+    [(-48.39, -22.86, -10.0), 25.63],
+    [(-46.22, -27.37, -10.0), 25.63],
+    [(-41.72, -25.2, -10.0), 25.63],
+    [(-37.21, -23.04, -10.0), 25.63],
+    [(-32.7, -20.88, -10.0), 25.63],
+    [(-34.86, -16.37, -10.0), 25.63],
+    [(-34.86, -16.37, -10.0), 25.63],
+    [(-34.86, -16.37, -10.0), 25.63],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 7
+                        DistanceTraveled = 35.00000000000001
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Fountain**, described as:  Tiered circular structure, smooth white stone texture, features three ascending basins with central column, functionally designed for decorative water display.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:7 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 8 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Fountain,
+                        Size: big(6.75*6.75=45.56 squares),
+                        Description: Tiered circular structure, smooth white stone texture, features three ascending basins with central column, functionally designed for decorative water display.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-108, -7]  
+                        **Y Range**: [min_y, max_y] = [-78, 23]
+
+                        # RGB Captions
+                        Front = trees, snow-covered; green trees; snowy landscape; trees in the foreground  
+                        Left = road, cleared of snow; vehicles parked; fence alongside; buildings in the distance  
+                        Right = trees, snow-covered; green trees; snowy landscape; trees in the foreground  
+                        Down = tree, isolated; road with yellow line; snow-covered ground; tree shadow on the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 47, 40]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 73, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [40, 71, 96]]
+
+                        DownDepth:
+                        [[31, 24, 26], [31, 23, 31], [37, 31, 38]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-57.4, -27.18, -10.0), 25.63],
+    [(-52.89, -25.02, -10.0), 25.63],
+    [(-48.39, -22.86, -10.0), 25.63],
+    [(-46.22, -27.37, -10.0), 25.63],
+    [(-41.72, -25.2, -10.0), 25.63],
+    [(-37.21, -23.04, -10.0), 25.63],
+    [(-32.7, -20.88, -10.0), 25.63],
+    [(-34.86, -16.37, -10.0), 25.63],
+    [(-30.35, -14.21, -10.0), 25.63],
+    [(-30.35, -14.21, -10.0), 25.63],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 8
+                        DistanceTraveled = 40.00000000000001
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Fountain**, described as:  Tiered circular structure, smooth white stone texture, features three ascending basins with central column, functionally designed for decorative water display.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:8 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 9 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Fountain,
+                        Size: big(6.75*6.75=45.56 squares),
+                        Description: Tiered circular structure, smooth white stone texture, features three ascending basins with central column, functionally designed for decorative water display.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-108, -7]  
+                        **Y Range**: [min_y, max_y] = [-78, 23]
+
+                        # RGB Captions
+                        Front = tall trees, snow-covered; green shrubs; trees in the background; snowy ground  
+                        Left = road, cleared of snow; fence alongside; vehicles on the road; house in the distance; sun overhead  
+                        Right = trees, snow-covered; wooden logs; trees in the background; snowy ground  
+                        Down = shadow on the snow; tree branches; shadow in the foreground; snowy ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 43, 40]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 70, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [41, 73, 97]]
+
+                        DownDepth:
+                        [[28, 23, 24], [30, 22, 23], [37, 31, 38]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-57.4, -27.18, -10.0), 25.63],
+    [(-52.89, -25.02, -10.0), 25.63],
+    [(-48.39, -22.86, -10.0), 25.63],
+    [(-46.22, -27.37, -10.0), 25.63],
+    [(-41.72, -25.2, -10.0), 25.63],
+    [(-37.21, -23.04, -10.0), 25.63],
+    [(-32.7, -20.88, -10.0), 25.63],
+    [(-34.86, -16.37, -10.0), 25.63],
+    [(-30.35, -14.21, -10.0), 25.63],
+    [(-25.85, -12.05, -10.0), 25.63],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 9
+                        DistanceTraveled = 45.00000000000001
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Fountain**, described as:  Tiered circular structure, smooth white stone texture, features three ascending basins with central column, functionally designed for decorative water display.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:9 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 10 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Fountain,
+                        Size: big(6.75*6.75=45.56 squares),
+                        Description: Tiered circular structure, smooth white stone texture, features three ascending basins with central column, functionally designed for decorative water display.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-108, -7]  
+                        **Y Range**: [min_y, max_y] = [-78, 23]
+
+                        # RGB Captions
+                        Front = trees, snow-covered; green pine tree; trees in the foreground; snowy ground  
+                        Left = road, cleared of snow; snowplow on the left; sun in the sky; road stretches into the distance  
+                        Right = trees, snow-covered; wooden fence; snowy ground; trees in the background  
+                        Down = shadow on the snow; shadow resembles a bird; snow surface smooth  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 38, 39]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 71, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [37, 73, 96]]
+
+                        DownDepth:
+                        [[27, 21, 22], [29, 22, 23], [37, 31, 38]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-52.89, -25.02, -10.0), 25.63],
+    [(-48.39, -22.86, -10.0), 25.63],
+    [(-46.22, -27.37, -10.0), 25.63],
+    [(-41.72, -25.2, -10.0), 25.63],
+    [(-37.21, -23.04, -10.0), 25.63],
+    [(-32.7, -20.88, -10.0), 25.63],
+    [(-34.86, -16.37, -10.0), 25.63],
+    [(-30.35, -14.21, -10.0), 25.63],
+    [(-25.85, -12.05, -10.0), 25.63],
+    [(-21.34, -9.88, -10.0), 25.63],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 10
+                        DistanceTraveled = 50.00000000000001
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Fountain**, described as:  Tiered circular structure, smooth white stone texture, features three ascending basins with central column, functionally designed for decorative water display.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:10 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 11 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Fountain,
+                        Size: big(6.75*6.75=45.56 squares),
+                        Description: Tiered circular structure, smooth white stone texture, features three ascending basins with central column, functionally designed for decorative water display.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-108, -7]  
+                        **Y Range**: [min_y, max_y] = [-78, 23]
+
+                        # RGB Captions
+                        Front = green pine tree, small; snow-covered ground, white; tree in the foreground; snow on the branches  
+                        Left = road, long, black asphalt; snow-covered ground, white; road stretches into the distance; vehicles on the left side  
+                        Right = pine trees, green and white; snow-covered ground, white; trees scattered across the landscape; sunset in the background  
+                        Down = snow-covered ground, white; shadow of a dragon, large; dragon's shadow in the foreground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 36, 44]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [93, 70, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 73, 98]]
+
+                        DownDepth:
+                        [[26, 18, 18], [28, 22, 23], [36, 29, 36]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-48.39, -22.86, -10.0), 25.63],
+    [(-46.22, -27.37, -10.0), 25.63],
+    [(-41.72, -25.2, -10.0), 25.63],
+    [(-37.21, -23.04, -10.0), 25.63],
+    [(-32.7, -20.88, -10.0), 25.63],
+    [(-34.86, -16.37, -10.0), 25.63],
+    [(-30.35, -14.21, -10.0), 25.63],
+    [(-25.85, -12.05, -10.0), 25.63],
+    [(-21.34, -9.88, -10.0), 25.63],
+    [(-16.83, -7.72, -10.0), 25.63],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 11
+                        DistanceTraveled = 55.00000000000001
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Fountain**, described as:  Tiered circular structure, smooth white stone texture, features three ascending basins with central column, functionally designed for decorative water display.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:11 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 12 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Fountain,
+                        Size: big(6.75*6.75=45.56 squares),
+                        Description: Tiered circular structure, smooth white stone texture, features three ascending basins with central column, functionally designed for decorative water display.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-108, -7]  
+                        **Y Range**: [min_y, max_y] = [-78, 23]
+
+                        # RGB Captions
+                        Front = green pine tree, small; snow-covered ground, white; tree in the foreground; snowy landscape  
+                        Left = road, long, black asphalt; snow on both sides; two cars, small, brown; road stretches into the distance  
+                        Right = pine trees, tall, green and white; snow-covered ground, white; trees scattered across the scene; snowy landscape  
+                        Down = feather, large, white; detailed texture; feather occupies the entire frame  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 38, 43]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [93, 70, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [43, 73, 98]]
+
+                        DownDepth:
+                        [[24, 15, 19], [27, 19, 22], [36, 29, 29]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-46.22, -27.37, -10.0), 25.63],
+    [(-41.72, -25.2, -10.0), 25.63],
+    [(-37.21, -23.04, -10.0), 25.63],
+    [(-32.7, -20.88, -10.0), 25.63],
+    [(-34.86, -16.37, -10.0), 25.63],
+    [(-30.35, -14.21, -10.0), 25.63],
+    [(-25.85, -12.05, -10.0), 25.63],
+    [(-21.34, -9.88, -10.0), 25.63],
+    [(-16.83, -7.72, -10.0), 25.63],
+    [(-12.32, -5.56, -10.0), 25.63],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 12
+                        DistanceTraveled = 60.00000000000001
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Fountain**, described as:  Tiered circular structure, smooth white stone texture, features three ascending basins with central column, functionally designed for decorative water display.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:12 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 13 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Fountain,
+                        Size: big(6.75*6.75=45.56 squares),
+                        Description: Tiered circular structure, smooth white stone texture, features three ascending basins with central column, functionally designed for decorative water display.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-108, -7]  
+                        **Y Range**: [min_y, max_y] = [-78, 23]
+
+                        # RGB Captions
+                        Front = pine trees, snow-covered; green pine tree in the foreground; trees are scattered across the landscape  
+                        Left = snowy bridge, long and narrow; bridge spans a frozen river; sun is high in the sky; bridge has wooden railings  
+                        Right = pine trees, snow-covered; green pine tree in the foreground; trees are scattered across the landscape  
+                        Down = shadow on sand, patterned; shadow cast by an unseen object; shadow is on the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 57, 45]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [92, 69, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 74, 98]]
+
+                        DownDepth:
+                        [[24, 15, 17], [22, 18, 18], [34, 29, 29]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-41.72, -25.2, -10.0), 25.63],
+    [(-37.21, -23.04, -10.0), 25.63],
+    [(-32.7, -20.88, -10.0), 25.63],
+    [(-34.86, -16.37, -10.0), 25.63],
+    [(-30.35, -14.21, -10.0), 25.63],
+    [(-25.85, -12.05, -10.0), 25.63],
+    [(-21.34, -9.88, -10.0), 25.63],
+    [(-16.83, -7.72, -10.0), 25.63],
+    [(-12.32, -5.56, -10.0), 25.63],
+    [(-7.81, -3.39, -10.0), 25.63],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 13
+                        DistanceTraveled = 65.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Fountain**, described as:  Tiered circular structure, smooth white stone texture, features three ascending basins with central column, functionally designed for decorative water display.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:13 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 14 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Fountain,
+                        Size: big(6.75*6.75=45.56 squares),
+                        Description: Tiered circular structure, smooth white stone texture, features three ascending basins with central column, functionally designed for decorative water display.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-108, -7]  
+                        **Y Range**: [min_y, max_y] = [-78, 23]
+
+                        # RGB Captions
+                        Front = trees, snow-covered; trees in the foreground and background; snowy landscape  
+                        Left = road, cleared of snow; vehicles on the road; fence along the road; snowy landscape with trees in the distance  
+                        Right = trees, snow-covered; green tree in the foreground; snowy landscape with hills  
+                        Down = snow, textured surface; footprints in the snow; shadows cast on the snow  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 71, 38]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [92, 71, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [45, 33, 91]]
+
+                        DownDepth:
+                        [[27, 15, 16], [23, 18, 16], [34, 29, 26]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-37.21, -23.04, -10.0), 25.63],
+    [(-32.7, -20.88, -10.0), 25.63],
+    [(-34.86, -16.37, -10.0), 25.63],
+    [(-30.35, -14.21, -10.0), 25.63],
+    [(-25.85, -12.05, -10.0), 25.63],
+    [(-21.34, -9.88, -10.0), 25.63],
+    [(-16.83, -7.72, -10.0), 25.63],
+    [(-12.32, -5.56, -10.0), 25.63],
+    [(-7.81, -3.39, -10.0), 25.63],
+    [(-7.81, -3.39, -10.0), 10.63],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 14
+                        DistanceTraveled = 65.0
+                        AvgHeadingChange = 1.07
+
+                        # Reminder  
+                        - The target is ** Fountain**, described as:  Tiered circular structure, smooth white stone texture, features three ascending basins with central column, functionally designed for decorative water display.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:14 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 15 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Fountain,
+                        Size: big(6.75*6.75=45.56 squares),
+                        Description: Tiered circular structure, smooth white stone texture, features three ascending basins with central column, functionally designed for decorative water display.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-108, -7]  
+                        **Y Range**: [min_y, max_y] = [-78, 23]
+
+                        # RGB Captions
+                        Front = trees, snow-covered; trees in the foreground; snowy ground  
+                        Left = buildings, tall, brown; buildings on the left; road with cars; snowy landscape  
+                        Right = trees, green and white; trees in the foreground; snowy ground  
+                        Down = snow, textured; footprints in the snow; shadows on the snow  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 98, 77]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [87, 71, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [38, 35, 87]]
+
+                        DownDepth:
+                        [[27, 20, 16], [22, 18, 16], [35, 29, 24]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-32.7, -20.88, -10.0), 25.63],
+    [(-34.86, -16.37, -10.0), 25.63],
+    [(-30.35, -14.21, -10.0), 25.63],
+    [(-25.85, -12.05, -10.0), 25.63],
+    [(-21.34, -9.88, -10.0), 25.63],
+    [(-16.83, -7.72, -10.0), 25.63],
+    [(-12.32, -5.56, -10.0), 25.63],
+    [(-7.81, -3.39, -10.0), 25.63],
+    [(-7.81, -3.39, -10.0), 10.63],
+    [(-7.81, -3.39, -10.0), -4.37],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 15
+                        DistanceTraveled = 65.0
+                        AvgHeadingChange = 2.0
+
+                        # Reminder  
+                        - The target is ** Fountain**, described as:  Tiered circular structure, smooth white stone texture, features three ascending basins with central column, functionally designed for decorative water display.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:15 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 16 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Fountain,
+                        Size: big(6.75*6.75=45.56 squares),
+                        Description: Tiered circular structure, smooth white stone texture, features three ascending basins with central column, functionally designed for decorative water display.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-108, -7]  
+                        **Y Range**: [min_y, max_y] = [-78, 23]
+
+                        # RGB Captions
+                        Front = pine tree, green needles; tree is in the foreground; snow-covered ground  
+                        Left = apartment building, tall structure; building is on the left; snow-covered road with cars  
+                        Right = tree with white flowers, bare branches; tree is in the center; snow-covered ground  
+                        Down = footprints in the snow, fresh tracks; footprints are in the foreground; pine tree branches at the top  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 98, 75]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [81, 69, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [41, 34, 81]]
+
+                        DownDepth:
+                        [[26, 15, 16], [24, 12, 16], [34, 27, 17]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-34.86, -16.37, -10.0), 25.63],
+    [(-30.35, -14.21, -10.0), 25.63],
+    [(-25.85, -12.05, -10.0), 25.63],
+    [(-21.34, -9.88, -10.0), 25.63],
+    [(-16.83, -7.72, -10.0), 25.63],
+    [(-12.32, -5.56, -10.0), 25.63],
+    [(-7.81, -3.39, -10.0), 25.63],
+    [(-7.81, -3.39, -10.0), 10.63],
+    [(-7.81, -3.39, -10.0), -4.37],
+    [(-7.43, 1.59, -10.0), -4.37],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 16
+                        DistanceTraveled = 70.0
+                        AvgHeadingChange = 1.88
+
+                        # Reminder  
+                        - The target is ** Fountain**, described as:  Tiered circular structure, smooth white stone texture, features three ascending basins with central column, functionally designed for decorative water display.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:16 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 17 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Fountain,
+                        Size: big(6.75*6.75=45.56 squares),
+                        Description: Tiered circular structure, smooth white stone texture, features three ascending basins with central column, functionally designed for decorative water display.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-108, -7]  
+                        **Y Range**: [min_y, max_y] = [-78, 23]
+
+                        # RGB Captions
+                        Front = snow-covered ground, white; wooden bridge, small; evergreen trees, scattered; sun low in the sky  
+                        Left = apartment buildings, tall, brown; snow-covered ground, white; road, cleared of snow; cars, parked  
+                        Right = tree with white flowers, medium-sized; snow-covered ground, white; evergreen trees, background; sun low in the sky  
+                        Down = sand dunes, beige; footprints, clear; tree branches, top right corner; shadows on the sand  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [84, 71, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 34, 83]]
+
+                        DownDepth:
+                        [[27, 22, 15], [29, 12, 15], [34, 24, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-30.35, -14.21, -10.0), 25.63],
+    [(-25.85, -12.05, -10.0), 25.63],
+    [(-21.34, -9.88, -10.0), 25.63],
+    [(-16.83, -7.72, -10.0), 25.63],
+    [(-12.32, -5.56, -10.0), 25.63],
+    [(-7.81, -3.39, -10.0), 25.63],
+    [(-7.81, -3.39, -10.0), 10.63],
+    [(-7.81, -3.39, -10.0), -4.37],
+    [(-7.43, 1.59, -10.0), -4.37],
+    [(-7.43, 1.59, -10.0), -19.37],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 17
+                        DistanceTraveled = 70.0
+                        AvgHeadingChange = 2.65
+
+                        # Reminder  
+                        - The target is ** Fountain**, described as:  Tiered circular structure, smooth white stone texture, features three ascending basins with central column, functionally designed for decorative water display.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:17 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 18 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Fountain,
+                        Size: big(6.75*6.75=45.56 squares),
+                        Description: Tiered circular structure, smooth white stone texture, features three ascending basins with central column, functionally designed for decorative water display.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-108, -7]  
+                        **Y Range**: [min_y, max_y] = [-78, 23]
+
+                        # RGB Captions
+                        Front = snow-covered ground, white; sun low in the sky; trees with snow on branches; distant mountain  
+                        Left = apartment buildings, tall, brown; snow-covered ground; cars on the road; trees with snow on branches  
+                        Right = trees, green and white flowers; snow on the ground; fence in the background  
+                        Down = sand dunes, beige; tree branch with green leaves; shadows on the sand  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [87, 71, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [92, 34, 36]]
+
+                        DownDepth:
+                        [[27, 21, 16], [29, 11, 15], [31, 15, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-25.85, -12.05, -10.0), 25.63],
+    [(-21.34, -9.88, -10.0), 25.63],
+    [(-16.83, -7.72, -10.0), 25.63],
+    [(-12.32, -5.56, -10.0), 25.63],
+    [(-7.81, -3.39, -10.0), 25.63],
+    [(-7.81, -3.39, -10.0), 10.63],
+    [(-7.81, -3.39, -10.0), -4.37],
+    [(-7.43, 1.59, -10.0), -4.37],
+    [(-7.43, 1.59, -10.0), -19.37],
+    [(-7.43, 1.59, -10.0), -34.37],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 18
+                        DistanceTraveled = 70.0
+                        AvgHeadingChange = 3.33
+
+                        # Reminder  
+                        - The target is ** Fountain**, described as:  Tiered circular structure, smooth white stone texture, features three ascending basins with central column, functionally designed for decorative water display.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:18 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 19 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Fountain,
+                        Size: big(6.75*6.75=45.56 squares),
+                        Description: Tiered circular structure, smooth white stone texture, features three ascending basins with central column, functionally designed for decorative water display.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-108, -7]  
+                        **Y Range**: [min_y, max_y] = [-78, 23]
+
+                        # RGB Captions
+                        Front = snow-covered landscape, white snow, brown fence; fence runs horizontally across the image; sun positioned high in the sky  
+                        Left = row of buildings, multiple stories, brown facade; buildings aligned in a row; road in front of the buildings; trees on either side of the road  
+                        Right = tree with white flowers, green leaves, medium-sized; tree is in the foreground; snow-covered ground; another tree with bare branches in the background  
+                        Down = sand dunes, light-colored sand, footprints; footprints lead into the distance; plant with green leaves in the foreground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [93, 100, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [89, 70, 93]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 39, 40]]
+
+                        DownDepth:
+                        [[32, 22, 17], [29, 12, 14], [29, 16, 17]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-21.34, -9.88, -10.0), 25.63],
+    [(-16.83, -7.72, -10.0), 25.63],
+    [(-12.32, -5.56, -10.0), 25.63],
+    [(-7.81, -3.39, -10.0), 25.63],
+    [(-7.81, -3.39, -10.0), 10.63],
+    [(-7.81, -3.39, -10.0), -4.37],
+    [(-7.43, 1.59, -10.0), -4.37],
+    [(-7.43, 1.59, -10.0), -19.37],
+    [(-7.43, 1.59, -10.0), -34.37],
+    [(-7.43, 1.59, -10.0), -49.37],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 19
+                        DistanceTraveled = 70.0
+                        AvgHeadingChange = 3.95
+
+                        # Reminder  
+                        - The target is ** Fountain**, described as:  Tiered circular structure, smooth white stone texture, features three ascending basins with central column, functionally designed for decorative water display.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:19 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 20 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Fountain,
+                        Size: big(6.75*6.75=45.56 squares),
+                        Description: Tiered circular structure, smooth white stone texture, features three ascending basins with central column, functionally designed for decorative water display.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-108, -7]  
+                        **Y Range**: [min_y, max_y] = [-78, 23]
+
+                        # RGB Captions
+                        Front = road, snow-covered; bridge spanning across; two vehicles on the road; sun low in the sky; snowy landscape  
+                        Left = apartment buildings, multiple units; trees with green and brown leaves; snow on the ground; buildings in the background  
+                        Right = pine tree, white flowers; snow-covered ground; tree in the foreground; distant trees in the background  
+                        Down = sand dunes, textured surface; tree branches in the foreground; shadows cast by the branches  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [93, 71, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [91, 70, 93]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 68, 43]]
+
+                        DownDepth:
+                        [[33, 23, 26], [28, 13, 14], [25, 16, 17]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-16.83, -7.72, -10.0), 25.63],
+    [(-12.32, -5.56, -10.0), 25.63],
+    [(-7.81, -3.39, -10.0), 25.63],
+    [(-7.81, -3.39, -10.0), 10.63],
+    [(-7.81, -3.39, -10.0), -4.37],
+    [(-7.43, 1.59, -10.0), -4.37],
+    [(-7.43, 1.59, -10.0), -19.37],
+    [(-7.43, 1.59, -10.0), -34.37],
+    [(-7.43, 1.59, -10.0), -49.37],
+    [(-7.43, 1.59, -10.0), -64.37],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 20
+                        DistanceTraveled = 70.0
+                        AvgHeadingChange = 4.5
+
+                        # Reminder  
+                        - The target is ** Fountain**, described as:  Tiered circular structure, smooth white stone texture, features three ascending basins with central column, functionally designed for decorative water display.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:20 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 21 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Fountain,
+                        Size: big(6.75*6.75=45.56 squares),
+                        Description: Tiered circular structure, smooth white stone texture, features three ascending basins with central column, functionally designed for decorative water display.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-108, -7]  
+                        **Y Range**: [min_y, max_y] = [-78, 23]
+
+                        # RGB Captions
+                        Front = road, long, winding; road is in the foreground; snow-covered ground, white, expansive; trees, tall, snow-covered; buildings, large, brown; buildings are in the background  
+                        Left = trees, tall, snow-covered; trees are on the left; buildings, large, brown; buildings are in the background; road, long, winding; road is in the middle  
+                        Right = tree, medium-sized, green and white; tree is in the foreground; snow-covered ground, white, expansive; sky, clear, orange-tinted; sky is in the background  
+                        Down = shadow, large, dark; shadow is in the foreground; sand, textured, beige; sand is in the background; tree branch, green, leafy; tree branch is on the right  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [91, 71, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [93, 71, 91]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 71, 43]]
+
+                        DownDepth:
+                        [[34, 23, 24], [29, 18, 15], [23, 16, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-12.32, -5.56, -10.0), 25.63],
+    [(-7.81, -3.39, -10.0), 25.63],
+    [(-7.81, -3.39, -10.0), 10.63],
+    [(-7.81, -3.39, -10.0), -4.37],
+    [(-7.43, 1.59, -10.0), -4.37],
+    [(-7.43, 1.59, -10.0), -19.37],
+    [(-7.43, 1.59, -10.0), -34.37],
+    [(-7.43, 1.59, -10.0), -49.37],
+    [(-7.43, 1.59, -10.0), -64.37],
+    [(-7.43, 1.59, -10.0), -79.37],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 21
+                        DistanceTraveled = 70.0
+                        AvgHeadingChange = 5.0
+
+                        # Reminder  
+                        - The target is ** Fountain**, described as:  Tiered circular structure, smooth white stone texture, features three ascending basins with central column, functionally designed for decorative water display.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:21 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 22 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Fountain,
+                        Size: big(6.75*6.75=45.56 squares),
+                        Description: Tiered circular structure, smooth white stone texture, features three ascending basins with central column, functionally designed for decorative water display.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-108, -7]  
+                        **Y Range**: [min_y, max_y] = [-78, 23]
+
+                        # RGB Captions
+                        Front = multi-story building, brown; building is on the left; snow-covered road in front of the building; sun low in the sky  
+                        Left = pine trees, snow-covered; trees are in the foreground; apartment buildings in the background; buildings have multiple stories  
+                        Right = pine tree, green and white; tree is in the foreground; snow-covered ground; wooden bridge in the distance  
+                        Down = snowy hill, textured surface; hill occupies most of the frame; pine tree branches at the bottom right corner  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [82, 71, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [84, 69, 85]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 98, 75]]
+
+                        DownDepth:
+                        [[34, 24, 26], [27, 12, 15], [17, 16, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-7.81, -3.39, -10.0), 25.63],
+    [(-7.81, -3.39, -10.0), 10.63],
+    [(-7.81, -3.39, -10.0), -4.37],
+    [(-7.43, 1.59, -10.0), -4.37],
+    [(-7.43, 1.59, -10.0), -19.37],
+    [(-7.43, 1.59, -10.0), -34.37],
+    [(-7.43, 1.59, -10.0), -49.37],
+    [(-7.43, 1.59, -10.0), -64.37],
+    [(-7.43, 1.59, -10.0), -79.37],
+    [(-7.43, 1.59, -10.0), -94.37],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 22
+                        DistanceTraveled = 70.0
+                        AvgHeadingChange = 5.45
+
+                        # Reminder  
+                        - The target is ** Fountain**, described as:  Tiered circular structure, smooth white stone texture, features three ascending basins with central column, functionally designed for decorative water display.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:22 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 23 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Fountain,
+                        Size: big(6.75*6.75=45.56 squares),
+                        Description: Tiered circular structure, smooth white stone texture, features three ascending basins with central column, functionally designed for decorative water display.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-108, -7]  
+                        **Y Range**: [min_y, max_y] = [-78, 23]
+
+                        # RGB Captions
+                        Front = multi-story building, brown exterior; building is on the left; snow-covered ground; sun in the sky  
+                        Left = trees, covered in snow; trees are in the foreground; multi-story buildings in the background  
+                        Right = snow-covered ground; tree with white branches; tree is in the foreground; wooden bridge in the background  
+                        Down = wrinkled paper, beige color; paper fills the frame  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [86, 71, 99]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [87, 71, 82]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 97, 78]]
+
+                        DownDepth:
+                        [[35, 27, 28], [29, 18, 20], [24, 15, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-7.81, -3.39, -10.0), 10.63],
+    [(-7.81, -3.39, -10.0), -4.37],
+    [(-7.43, 1.59, -10.0), -4.37],
+    [(-7.43, 1.59, -10.0), -19.37],
+    [(-7.43, 1.59, -10.0), -34.37],
+    [(-7.43, 1.59, -10.0), -49.37],
+    [(-7.43, 1.59, -10.0), -64.37],
+    [(-7.43, 1.59, -10.0), -79.37],
+    [(-7.43, 1.59, -10.0), -94.37],
+    [(-7.81, -3.39, -10.0), -94.37],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 23
+                        DistanceTraveled = 75.0
+                        AvgHeadingChange = 5.22
+
+                        # Reminder  
+                        - The target is ** Fountain**, described as:  Tiered circular structure, smooth white stone texture, features three ascending basins with central column, functionally designed for decorative water display.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:23 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 24 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Fountain,
+                        Size: big(6.75*6.75=45.56 squares),
+                        Description: Tiered circular structure, smooth white stone texture, features three ascending basins with central column, functionally designed for decorative water display.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-108, -7]  
+                        **Y Range**: [min_y, max_y] = [-78, 23]
+
+                        # RGB Captions
+                        Front = multi-story building, brown facade; building stands in the background; snow-covered ground; vehicles on the road  
+                        Left = pine trees, snow-covered branches; trees are in the foreground; apartment buildings in the background  
+                        Right = snow-covered ground, white and textured; tree with white leaves; wooden bridge in the distance  
+                        Down = sand dunes, light-colored sand; shadows cast by unseen objects; dunes cover the entire frame  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [85, 71, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [87, 71, 82]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 97, 78]]
+
+                        DownDepth:
+                        [[35, 22, 27], [29, 18, 20], [24, 16, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-7.81, -3.39, -10.0), -4.37],
+    [(-7.43, 1.59, -10.0), -4.37],
+    [(-7.43, 1.59, -10.0), -19.37],
+    [(-7.43, 1.59, -10.0), -34.37],
+    [(-7.43, 1.59, -10.0), -49.37],
+    [(-7.43, 1.59, -10.0), -64.37],
+    [(-7.43, 1.59, -10.0), -79.37],
+    [(-7.43, 1.59, -10.0), -94.37],
+    [(-7.81, -3.39, -10.0), -94.37],
+    [(-7.81, -3.39, -10.0), -94.37],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 24
+                        DistanceTraveled = 75.0
+                        AvgHeadingChange = 5.0
+
+                        # Reminder  
+                        - The target is ** Fountain**, described as:  Tiered circular structure, smooth white stone texture, features three ascending basins with central column, functionally designed for decorative water display.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:24 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 25 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Fountain,
+                        Size: big(6.75*6.75=45.56 squares),
+                        Description: Tiered circular structure, smooth white stone texture, features three ascending basins with central column, functionally designed for decorative water display.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-108, -7]  
+                        **Y Range**: [min_y, max_y] = [-78, 23]
+
+                        # RGB Captions
+                        Front = multi-story building, brown; building is in the background; snow-covered ground; cars on the road  
+                        Left = trees, snow-covered; trees are in the foreground; multi-story buildings, brown; buildings are in the background; snow-covered ground  
+                        Right = trees, snow-covered; trees are in the foreground; wooden bridge; bridge spans across the scene; snow-covered ground  
+                        Down = textured surface, beige; surface covers the entire image  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [84, 71, 90]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [87, 72, 84]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 98, 40]]
+
+                        DownDepth:
+                        [[35, 29, 27], [28, 19, 21], [23, 16, 17]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-7.43, 1.59, -10.0), -4.37],
+    [(-7.43, 1.59, -10.0), -19.37],
+    [(-7.43, 1.59, -10.0), -34.37],
+    [(-7.43, 1.59, -10.0), -49.37],
+    [(-7.43, 1.59, -10.0), -64.37],
+    [(-7.43, 1.59, -10.0), -79.37],
+    [(-7.43, 1.59, -10.0), -94.37],
+    [(-7.81, -3.39, -10.0), -94.37],
+    [(-7.81, -3.39, -10.0), -94.37],
+    [(-12.8, -3.01, -10.0), -94.37],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 25
+                        DistanceTraveled = 80.0
+                        AvgHeadingChange = 4.8
+
+                        # Reminder  
+                        - The target is ** Fountain**, described as:  Tiered circular structure, smooth white stone texture, features three ascending basins with central column, functionally designed for decorative water display.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:25 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 26 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Fountain,
+                        Size: big(6.75*6.75=45.56 squares),
+                        Description: Tiered circular structure, smooth white stone texture, features three ascending basins with central column, functionally designed for decorative water display.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-108, -7]  
+                        **Y Range**: [min_y, max_y] = [-78, 23]
+
+                        # RGB Captions
+                        Front = multi-story buildings, brown; buildings on the left; snow-covered ground; trees with snow; sun in the sky  
+                        Left = trees, snow-covered; buildings, multi-story; buildings on the right; road in the foreground; sun in the sky  
+                        Right = snow-covered ground; bridge in the background; tree with snow; sun in the sky  
+                        Down = snow, textured surface; footprints in the snow; shadow on the snow  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [87, 71, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [90, 70, 79]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 55]]
+
+                        DownDepth:
+                        [[36, 29, 33], [29, 22, 22], [26, 20, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-7.43, 1.59, -10.0), -19.37],
+    [(-7.43, 1.59, -10.0), -34.37],
+    [(-7.43, 1.59, -10.0), -49.37],
+    [(-7.43, 1.59, -10.0), -64.37],
+    [(-7.43, 1.59, -10.0), -79.37],
+    [(-7.43, 1.59, -10.0), -94.37],
+    [(-7.81, -3.39, -10.0), -94.37],
+    [(-7.81, -3.39, -10.0), -94.37],
+    [(-12.8, -3.01, -10.0), -94.37],
+    [(-13.18, -8.0, -10.0), -94.37],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 26
+                        DistanceTraveled = 85.0
+                        AvgHeadingChange = 4.62
+
+                        # Reminder  
+                        - The target is ** Fountain**, described as:  Tiered circular structure, smooth white stone texture, features three ascending basins with central column, functionally designed for decorative water display.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:26 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 27 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Fountain,
+                        Size: big(6.75*6.75=45.56 squares),
+                        Description: Tiered circular structure, smooth white stone texture, features three ascending basins with central column, functionally designed for decorative water display.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-108, -7]  
+                        **Y Range**: [min_y, max_y] = [-78, 23]
+
+                        # RGB Captions
+                        Front = high-rise building, brown facade; multiple cars on the road; snowy ground; building stands in the background  
+                        Left = apartment buildings, brown facades; snow-covered trees; road with no cars; buildings in the background  
+                        Right = snowy landscape; wooden bridge; scattered trees; bridge spans across the foreground  
+                        Down = shadow of a person; textured surface; shadow lies diagonally  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [89, 71, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [91, 71, 76]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 60]]
+
+                        DownDepth:
+                        [[36, 30, 36], [29, 22, 23], [28, 22, 22]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-7.43, 1.59, -10.0), -34.37],
+    [(-7.43, 1.59, -10.0), -49.37],
+    [(-7.43, 1.59, -10.0), -64.37],
+    [(-7.43, 1.59, -10.0), -79.37],
+    [(-7.43, 1.59, -10.0), -94.37],
+    [(-7.81, -3.39, -10.0), -94.37],
+    [(-7.81, -3.39, -10.0), -94.37],
+    [(-12.8, -3.01, -10.0), -94.37],
+    [(-13.18, -8.0, -10.0), -94.37],
+    [(-13.56, -12.98, -10.0), -94.37],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 27
+                        DistanceTraveled = 90.0
+                        AvgHeadingChange = 4.44
+
+                        # Reminder  
+                        - The target is ** Fountain**, described as:  Tiered circular structure, smooth white stone texture, features three ascending basins with central column, functionally designed for decorative water display.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:27 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 28 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Fountain,
+                        Size: big(6.75*6.75=45.56 squares),
+                        Description: Tiered circular structure, smooth white stone texture, features three ascending basins with central column, functionally designed for decorative water display.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-108, -7]  
+                        **Y Range**: [min_y, max_y] = [-78, 23]
+
+                        # RGB Captions
+                        Front = multi-story building, brown; snow-covered road; several cars on the road; building is to the left; sunset in the background  
+                        Left = pine trees, snow-covered; apartment buildings, brown; road between trees and buildings; buildings in the background  
+                        Right = snowy landscape; wooden bridge; pine tree, snow-covered; bridge leads to the distance; tree is to the right  
+                        Down = snowy ground; tire tracks; footprints; tracks lead from the bottom to the top  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [92, 71, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [91, 68, 88]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 86]]
+
+                        DownDepth:
+                        [[36, 29, 36], [29, 18, 23], [29, 19, 23]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-7.43, 1.59, -10.0), -49.37],
+    [(-7.43, 1.59, -10.0), -64.37],
+    [(-7.43, 1.59, -10.0), -79.37],
+    [(-7.43, 1.59, -10.0), -94.37],
+    [(-7.81, -3.39, -10.0), -94.37],
+    [(-7.81, -3.39, -10.0), -94.37],
+    [(-12.8, -3.01, -10.0), -94.37],
+    [(-13.18, -8.0, -10.0), -94.37],
+    [(-13.56, -12.98, -10.0), -94.37],
+    [(-8.58, -13.37, -10.0), -94.37],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 28
+                        DistanceTraveled = 95.0
+                        AvgHeadingChange = 4.29
+
+                        # Reminder  
+                        - The target is ** Fountain**, described as:  Tiered circular structure, smooth white stone texture, features three ascending basins with central column, functionally designed for decorative water display.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:28 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 29 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Fountain,
+                        Size: big(6.75*6.75=45.56 squares),
+                        Description: Tiered circular structure, smooth white stone texture, features three ascending basins with central column, functionally designed for decorative water display.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-108, -7]  
+                        **Y Range**: [min_y, max_y] = [-78, 23]
+
+                        # RGB Captions
+                        Front = multi-story buildings, brown; buildings are in the background; snow-covered road with cars; cars parked along the road  
+                        Left = pine trees, snow-covered; trees are in the foreground; multi-story buildings in the background; buildings have balconies  
+                        Right = snowy landscape; wooden bridge over a frozen river; bridge is in the foreground; pine trees in the background  
+                        Down = beige blanket, textured; blanket is folded; shadow on the blanket  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [76, 71, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [44, 69, 91]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 100]]
+
+                        DownDepth:
+                        [[35, 29, 36], [29, 18, 27], [25, 18, 26]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-7.43, 1.59, -10.0), -64.37],
+    [(-7.43, 1.59, -10.0), -79.37],
+    [(-7.43, 1.59, -10.0), -94.37],
+    [(-7.81, -3.39, -10.0), -94.37],
+    [(-7.81, -3.39, -10.0), -94.37],
+    [(-12.8, -3.01, -10.0), -94.37],
+    [(-13.18, -8.0, -10.0), -94.37],
+    [(-13.56, -12.98, -10.0), -94.37],
+    [(-8.58, -13.37, -10.0), -94.37],
+    [(-8.58, -13.37, -10.0), -109.37],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 29
+                        DistanceTraveled = 95.0
+                        AvgHeadingChange = 4.66
+
+                        # Reminder  
+                        - The target is ** Fountain**, described as:  Tiered circular structure, smooth white stone texture, features three ascending basins with central column, functionally designed for decorative water display.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:29 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 30 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Fountain,
+                        Size: big(6.75*6.75=45.56 squares),
+                        Description: Tiered circular structure, smooth white stone texture, features three ascending basins with central column, functionally designed for decorative water display.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-108, -7]  
+                        **Y Range**: [min_y, max_y] = [-78, 23]
+
+                        # RGB Captions
+                        Front = multi-story buildings, brown; snow-covered ground; vehicles on the road; buildings in the background  
+                        Left = pine trees, snow-covered; multi-story buildings, brown; road winding through the scene; buildings in the background  
+                        Right = snow-covered ground; wooden bridge; pine trees, snow-covered; sun in the sky  
+                        Down = feather, white; detailed texture; shadow cast on the surface  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [87, 71, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [91, 73, 82]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 95, 88]]
+
+                        DownDepth:
+                        [[36, 30, 100], [29, 22, 24], [26, 20, 23]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-7.43, 1.59, -10.0), -79.37],
+    [(-7.43, 1.59, -10.0), -94.37],
+    [(-7.81, -3.39, -10.0), -94.37],
+    [(-7.81, -3.39, -10.0), -94.37],
+    [(-12.8, -3.01, -10.0), -94.37],
+    [(-13.18, -8.0, -10.0), -94.37],
+    [(-13.56, -12.98, -10.0), -94.37],
+    [(-8.58, -13.37, -10.0), -94.37],
+    [(-8.58, -13.37, -10.0), -109.37],
+    [(-13.29, -11.71, -10.0), -109.37],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 30
+                        DistanceTraveled = 100.0
+                        AvgHeadingChange = 4.5
+
+                        # Reminder  
+                        - The target is ** Fountain**, described as:  Tiered circular structure, smooth white stone texture, features three ascending basins with central column, functionally designed for decorative water display.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:30 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

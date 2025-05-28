@@ -1,0 +1,35 @@
+{
+  "episode_id": "17",
+  "start_pose": {
+    "start_position": [
+      153.37402404503325,
+      25.48952910096235,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.506496239423598,
+      -0.86224216983963
+    ]
+  },
+  "info": {
+    "geodesic_distance": 65,
+    "euclidean_distance": 42.259
+  },
+  "map_name": "Venice_test",
+  "true_name": " Stand",
+  "object_name": "Wood_04_124",
+  "pose": [
+    [
+      123.897705078125,
+      54.71699905395508,
+      0.9200018048286438
+    ]
+  ],
+  "size": " small(2.25*1=2.25 squares)",
+  "description": " Geometric frame structure, weathered brown wood with greenish patches, uneven pole alignment and horizontal supports, possibly used as a drying rack or basic utility frame.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

@@ -1,0 +1,35 @@
+{
+  "episode_id": "144",
+  "start_pose": {
+    "start_position": [
+      288.80027677313296,
+      425.7636487070978,
+      -8.799999952316284
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.3819867246564663,
+      0.9241678106200328
+    ]
+  },
+  "info": {
+    "geodesic_distance": 59,
+    "euclidean_distance": 39.0973
+  },
+  "map_name": "NYC_test",
+  "true_name": "StatueEagle",
+  "object_name": "SM_prop_statue_eagle_382",
+  "pose": [
+    [
+      261.1999816894531,
+      453.0,
+      -0.7999999523162842
+    ]
+  ],
+  "size": "small(1.5*2=3.0 squares)",
+  "description": "Organic bird-like form, dark bronze metallic finish, wings spread mid-flight atop a rocky base, decorative sculpture or monument.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

@@ -1,0 +1,35 @@
+{
+  "episode_id": "25",
+  "start_pose": {
+    "start_position": [
+      2.2248661835651795,
+      86.66259267889349,
+      -6.599999785423279
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.2830285963681244,
+      0.9591114709135166
+    ]
+  },
+  "info": {
+    "geodesic_distance": 64,
+    "euclidean_distance": 45.897
+  },
+  "map_name": "UrbanJapan_test",
+  "true_name": "ElectricBox",
+  "object_name": "SM_ElectricBox5",
+  "pose": [
+    [
+      19.914894104003906,
+      44.6078987121582,
+      1.4000002145767212
+    ]
+  ],
+  "size": "small(0.75*0.5=0.38 squares)",
+  "description": "Rectangular, upright metal structure with a hinged top, teal blue exterior with slight rust and wear, typical of an outdoor electrical utility box.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

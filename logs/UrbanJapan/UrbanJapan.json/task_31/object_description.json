@@ -1,0 +1,35 @@
+{
+  "episode_id": "31",
+  "start_pose": {
+    "start_position": [
+      56.77428713205326,
+      149.0136366068034,
+      -6.600000023841858
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.038609989235580254,
+      -0.9992543563734052
+    ]
+  },
+  "info": {
+    "geodesic_distance": 91,
+    "euclidean_distance": 46.8964
+  },
+  "map_name": "UrbanJapan_test",
+  "true_name": "BuffetStand",
+  "object_name": "SM_Buffet_Stand_64",
+  "pose": [
+    [
+      27.399999618530273,
+      112.79999542236328,
+      1.399999976158142
+    ]
+  ],
+  "size": "big(4.75*6.5=30.88 squares)",
+  "description": "Rectangular, corrugated metal structure with open serving counter, grey exterior with weathered signs for newspapers and drinks, crates and boxes stacked in front, typical of a portable food and beverage stand.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

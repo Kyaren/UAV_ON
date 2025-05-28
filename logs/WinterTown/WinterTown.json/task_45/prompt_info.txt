@@ -1,0 +1,1197 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Hammer,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Vertical geometric form, dark metallic head with wooden or dark handle, compact build with a blunt striking end, suitable for driving nails or breaking objects.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-44, 57]  
+                        **Y Range**: [min_y, max_y] = [26, 127]
+
+                        # RGB Captions
+                        Front = bare tree branches, intertwined; branches in the foreground; snow-covered ground  
+                        Left = bare tree branches, intertwined; branches in the foreground; snow-covered ground; buildings in the background  
+                        Right = bare tree branches, intertwined; branches in the foreground; snow-covered ground; buildings in the background; person skiing  
+                        Down = bare tree branches, intertwined; branches in the foreground; snow-covered ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [74, 85, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [65, 51, 59]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 100]]
+
+                        DownDepth:
+                        [[37, 37, 51], [27, 24, 30], [23, 17, 21]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(6.28, 76.59, -10.0), 6.34],
+    [(6.28, 76.59, -10.0), 6.34],
+    [(6.28, 76.59, -10.0), 6.34],
+    [(6.28, 76.59, -10.0), 6.34],
+    [(6.28, 76.59, -10.0), 6.34],
+    [(6.28, 76.59, -10.0), 6.34],
+    [(6.28, 76.59, -10.0), 6.34],
+    [(6.28, 76.59, -10.0), 6.34],
+    [(6.28, 76.59, -10.0), 6.34],
+    [(6.28, 76.59, -10.0), 6.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Hammer**, described as: Vertical geometric form, dark metallic head with wooden or dark handle, compact build with a blunt striking end, suitable for driving nails or breaking objects.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 1 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Hammer,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Vertical geometric form, dark metallic head with wooden or dark handle, compact build with a blunt striking end, suitable for driving nails or breaking objects.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-44, 57]  
+                        **Y Range**: [min_y, max_y] = [26, 127]
+
+                        # RGB Captions
+                        Front = bare branches, intertwined; branches in the foreground; snowy ground  
+                        Left = distant buildings, urban setting; snow-covered ground; bare branches in the foreground  
+                        Right = bare branches, intertwined; branches in the foreground; snowy ground with shadows  
+                        Down = snow-covered ground; bare branches, intertwined; branches in the foreground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 82, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 63, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 54, 38]]
+
+                        DownDepth:
+                        [[40, 35, 42], [35, 27, 27], [43, 30, 22]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(6.28, 76.59, -10.0), 6.34],
+    [(11.25, 77.15, -10.0), 6.34],
+    [(11.25, 77.15, -10.0), 6.34],
+    [(11.25, 77.15, -10.0), 6.34],
+    [(11.25, 77.15, -10.0), 6.34],
+    [(11.25, 77.15, -10.0), 6.34],
+    [(11.25, 77.15, -10.0), 6.34],
+    [(11.25, 77.15, -10.0), 6.34],
+    [(11.25, 77.15, -10.0), 6.34],
+    [(11.25, 77.15, -10.0), 6.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 1
+                        DistanceTraveled = 5.000000000000001
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Hammer**, described as: Vertical geometric form, dark metallic head with wooden or dark handle, compact build with a blunt striking end, suitable for driving nails or breaking objects.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:1 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 2 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Hammer,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Vertical geometric form, dark metallic head with wooden or dark handle, compact build with a blunt striking end, suitable for driving nails or breaking objects.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-44, 57]  
+                        **Y Range**: [min_y, max_y] = [26, 127]
+
+                        # RGB Captions
+                        Front = tall trees, snow-covered branches; trees are in the foreground; buildings in the distant background  
+                        Left = snow-covered ground, scattered trees; sun low in the sky; buildings in the distant background  
+                        Right = dry tree branches, sparse leaves; branches extend across the image; snowy ground below  
+                        Down = dry plants, brown and leafless; plants are in the foreground; shadows on the snow  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 46, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 58, 47]]
+
+                        DownDepth:
+                        [[35, 34, 41], [29, 26, 32], [40, 33, 33]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(6.28, 76.59, -10.0), 6.34],
+    [(11.25, 77.15, -10.0), 6.34],
+    [(16.22, 77.7, -10.0), 6.34],
+    [(16.22, 77.7, -10.0), 6.34],
+    [(16.22, 77.7, -10.0), 6.34],
+    [(16.22, 77.7, -10.0), 6.34],
+    [(16.22, 77.7, -10.0), 6.34],
+    [(16.22, 77.7, -10.0), 6.34],
+    [(16.22, 77.7, -10.0), 6.34],
+    [(16.22, 77.7, -10.0), 6.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 2
+                        DistanceTraveled = 10.000000000000002
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Hammer**, described as: Vertical geometric form, dark metallic head with wooden or dark handle, compact build with a blunt striking end, suitable for driving nails or breaking objects.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:2 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 3 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Hammer,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Vertical geometric form, dark metallic head with wooden or dark handle, compact build with a blunt striking end, suitable for driving nails or breaking objects.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-44, 57]  
+                        **Y Range**: [min_y, max_y] = [26, 127]
+
+                        # RGB Captions
+                        Front = trees, snow-covered branches; trees in the foreground; snowy ground  
+                        Left = sun, bright sky; trees, snow-covered branches; snowy ground; buildings in the distance  
+                        Right = trees, bare branches; trees in the foreground; snowy ground; buildings in the background  
+                        Down = wall, white surface; tree branches, casting shadows; shadows on the wall  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [50, 39, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [86, 74, 62]]
+
+                        DownDepth:
+                        [[33, 33, 40], [25, 25, 33], [29, 32, 37]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(6.28, 76.59, -10.0), 6.34],
+    [(11.25, 77.15, -10.0), 6.34],
+    [(16.22, 77.7, -10.0), 6.34],
+    [(21.19, 78.25, -10.0), 6.34],
+    [(21.19, 78.25, -10.0), 6.34],
+    [(21.19, 78.25, -10.0), 6.34],
+    [(21.19, 78.25, -10.0), 6.34],
+    [(21.19, 78.25, -10.0), 6.34],
+    [(21.19, 78.25, -10.0), 6.34],
+    [(21.19, 78.25, -10.0), 6.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 3
+                        DistanceTraveled = 15.000000000000004
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Hammer**, described as: Vertical geometric form, dark metallic head with wooden or dark handle, compact build with a blunt striking end, suitable for driving nails or breaking objects.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:3 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 4 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Hammer,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Vertical geometric form, dark metallic head with wooden or dark handle, compact build with a blunt striking end, suitable for driving nails or breaking objects.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-44, 57]  
+                        **Y Range**: [min_y, max_y] = [26, 127]
+
+                        # RGB Captions
+                        Front = trees, snow-covered; multiple trees; trees are spread across the landscape; snowy ground  
+                        Left = trees, snow-covered; buildings in the background; trees in the foreground; snowy ground  
+                        Right = trees, snow-covered; multiple trees; trees are spread across the landscape; snowy ground  
+                        Down = shadow on the wall; tree branches in the foreground; shadow is on the right side; wall is plain  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 93, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [43, 74, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 73, 69]]
+
+                        DownDepth:
+                        [[34, 33, 39], [27, 25, 32], [25, 31, 37]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(6.28, 76.59, -10.0), 6.34],
+    [(11.25, 77.15, -10.0), 6.34],
+    [(16.22, 77.7, -10.0), 6.34],
+    [(21.19, 78.25, -10.0), 6.34],
+    [(26.16, 78.8, -10.0), 6.34],
+    [(26.16, 78.8, -10.0), 6.34],
+    [(26.16, 78.8, -10.0), 6.34],
+    [(26.16, 78.8, -10.0), 6.34],
+    [(26.16, 78.8, -10.0), 6.34],
+    [(26.16, 78.8, -10.0), 6.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 4
+                        DistanceTraveled = 20.000000000000004
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Hammer**, described as: Vertical geometric form, dark metallic head with wooden or dark handle, compact build with a blunt striking end, suitable for driving nails or breaking objects.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:4 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 5 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Hammer,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Vertical geometric form, dark metallic head with wooden or dark handle, compact build with a blunt striking end, suitable for driving nails or breaking objects.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-44, 57]  
+                        **Y Range**: [min_y, max_y] = [26, 127]
+
+                        # RGB Captions
+                        Front = pine trees, snow-covered; multiple trees; trees are spread across the landscape  
+                        Left = tree branches, covered in snow; branches extend from the left side; background shows a snowy landscape  
+                        Right = pine trees, snow-covered; multiple trees; trees are spread across the landscape  
+                        Down = tree branches, casting shadows; shadows fall on the wall; wall is in the foreground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 86, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 72, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 73, 76]]
+
+                        DownDepth:
+                        [[38, 32, 38], [27, 24, 32], [26, 31, 38]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(6.28, 76.59, -10.0), 6.34],
+    [(11.25, 77.15, -10.0), 6.34],
+    [(16.22, 77.7, -10.0), 6.34],
+    [(21.19, 78.25, -10.0), 6.34],
+    [(26.16, 78.8, -10.0), 6.34],
+    [(31.13, 79.35, -10.0), 6.34],
+    [(31.13, 79.35, -10.0), 6.34],
+    [(31.13, 79.35, -10.0), 6.34],
+    [(31.13, 79.35, -10.0), 6.34],
+    [(31.13, 79.35, -10.0), 6.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 5
+                        DistanceTraveled = 25.000000000000004
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Hammer**, described as: Vertical geometric form, dark metallic head with wooden or dark handle, compact build with a blunt striking end, suitable for driving nails or breaking objects.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:5 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 6 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Hammer,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Vertical geometric form, dark metallic head with wooden or dark handle, compact build with a blunt striking end, suitable for driving nails or breaking objects.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-44, 57]  
+                        **Y Range**: [min_y, max_y] = [26, 127]
+
+                        # RGB Captions
+                        Front = white trees, snow-covered; multiple trees; trees are in the foreground and background  
+                        Left = single tree, snow-covered branches; tree is in the center; branches spread out  
+                        Right = white trees, snow-covered; multiple trees; trees are in the foreground and background; green bushes on the right  
+                        Down = tree branches, with leaves; branches are on the left; shadows cast on the wall  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 83, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 70, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 72, 79]]
+
+                        DownDepth:
+                        [[38, 32, 38], [27, 24, 32], [27, 29, 38]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(6.28, 76.59, -10.0), 6.34],
+    [(11.25, 77.15, -10.0), 6.34],
+    [(16.22, 77.7, -10.0), 6.34],
+    [(21.19, 78.25, -10.0), 6.34],
+    [(26.16, 78.8, -10.0), 6.34],
+    [(31.13, 79.35, -10.0), 6.34],
+    [(36.1, 79.91, -10.0), 6.34],
+    [(36.1, 79.91, -10.0), 6.34],
+    [(36.1, 79.91, -10.0), 6.34],
+    [(36.1, 79.91, -10.0), 6.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 6
+                        DistanceTraveled = 30.000000000000004
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Hammer**, described as: Vertical geometric form, dark metallic head with wooden or dark handle, compact build with a blunt striking end, suitable for driving nails or breaking objects.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:6 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 7 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Hammer,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Vertical geometric form, dark metallic head with wooden or dark handle, compact build with a blunt striking end, suitable for driving nails or breaking objects.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-44, 57]  
+                        **Y Range**: [min_y, max_y] = [26, 127]
+
+                        # RGB Captions
+                        Front = trees, snow-covered; trees are in the foreground; snow on the ground  
+                        Left = tree, large, snow-covered; tree is in the foreground; snow on the branches  
+                        Right = trees, snow-covered; trees are in a row; snow on the ground  
+                        Down = shadow on wall, tree branches; shadow is on the right side; wall is plain  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 80, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [35, 71, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 73, 79]]
+
+                        DownDepth:
+                        [[38, 32, 38], [27, 24, 32], [27, 29, 38]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(6.28, 76.59, -10.0), 6.34],
+    [(11.25, 77.15, -10.0), 6.34],
+    [(16.22, 77.7, -10.0), 6.34],
+    [(21.19, 78.25, -10.0), 6.34],
+    [(26.16, 78.8, -10.0), 6.34],
+    [(31.13, 79.35, -10.0), 6.34],
+    [(36.1, 79.91, -10.0), 6.34],
+    [(41.06, 80.46, -10.0), 6.34],
+    [(41.06, 80.46, -10.0), 6.34],
+    [(41.06, 80.46, -10.0), 6.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 7
+                        DistanceTraveled = 35.00000000000001
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Hammer**, described as: Vertical geometric form, dark metallic head with wooden or dark handle, compact build with a blunt striking end, suitable for driving nails or breaking objects.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:7 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 8 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Hammer,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Vertical geometric form, dark metallic head with wooden or dark handle, compact build with a blunt striking end, suitable for driving nails or breaking objects.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-44, 57]  
+                        **Y Range**: [min_y, max_y] = [26, 127]
+
+                        # RGB Captions
+                        Front = trees, snow-covered; trees are in the foreground; snow on the ground  
+                        Left = trees, snow-covered; trees are in the foreground; snow on the ground  
+                        Right = trees, snow-covered; trees are in the foreground; snow on the ground  
+                        Down = shadow of tree branches on snow; shadow is in the foreground; snow on the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 82, 96]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 73, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 82]]
+
+                        DownDepth:
+                        [[46, 44, 43], [32, 24, 32], [30, 32, 38]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(6.28, 76.59, -10.0), 6.34],
+    [(11.25, 77.15, -10.0), 6.34],
+    [(16.22, 77.7, -10.0), 6.34],
+    [(21.19, 78.25, -10.0), 6.34],
+    [(26.16, 78.8, -10.0), 6.34],
+    [(31.13, 79.35, -10.0), 6.34],
+    [(36.1, 79.91, -10.0), 6.34],
+    [(41.06, 80.46, -10.0), 6.34],
+    [(46.03, 81.01, -10.0), 6.34],
+    [(46.03, 81.01, -10.0), 6.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 8
+                        DistanceTraveled = 40.00000000000001
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Hammer**, described as: Vertical geometric form, dark metallic head with wooden or dark handle, compact build with a blunt striking end, suitable for driving nails or breaking objects.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:8 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 9 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Hammer,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Vertical geometric form, dark metallic head with wooden or dark handle, compact build with a blunt striking end, suitable for driving nails or breaking objects.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-44, 57]  
+                        **Y Range**: [min_y, max_y] = [26, 127]
+
+                        # RGB Captions
+                        Front = pine trees, snow-covered; trees are in the foreground; snow on the ground  
+                        Left = pine trees, snow-covered; trees are in the foreground; snow on the ground  
+                        Right = pine trees, snow-covered; trees are in the foreground; snow on the ground  
+                        Down = snow, smooth surface; shadow of tree branches on the snow; snow covers the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 83, 94]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [55, 75, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 85]]
+
+                        DownDepth:
+                        [[52, 44, 52], [32, 24, 32], [31, 32, 38]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(6.28, 76.59, -10.0), 6.34],
+    [(11.25, 77.15, -10.0), 6.34],
+    [(16.22, 77.7, -10.0), 6.34],
+    [(21.19, 78.25, -10.0), 6.34],
+    [(26.16, 78.8, -10.0), 6.34],
+    [(31.13, 79.35, -10.0), 6.34],
+    [(36.1, 79.91, -10.0), 6.34],
+    [(41.06, 80.46, -10.0), 6.34],
+    [(46.03, 81.01, -10.0), 6.34],
+    [(51.0, 81.56, -10.0), 6.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 9
+                        DistanceTraveled = 45.00000000000001
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Hammer**, described as: Vertical geometric form, dark metallic head with wooden or dark handle, compact build with a blunt striking end, suitable for driving nails or breaking objects.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:9 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 10 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Hammer,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Vertical geometric form, dark metallic head with wooden or dark handle, compact build with a blunt striking end, suitable for driving nails or breaking objects.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-44, 57]  
+                        **Y Range**: [min_y, max_y] = [26, 127]
+
+                        # RGB Captions
+                        Front = pine trees, snow-covered; multiple trees; trees are in the foreground and background  
+                        Left = pine tree, snow-covered; tree is in the center; sun shining through branches  
+                        Right = row of pine trees, snow-covered; trees are in the middle ground; some green trees on the right  
+                        Down = textured fabric, beige color; shadow of a tree on the fabric; fabric fills the frame  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 82, 89]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [62, 100, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 89]]
+
+                        DownDepth:
+                        [[52, 44, 52], [32, 24, 32], [32, 32, 38]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(11.25, 77.15, -10.0), 6.34],
+    [(16.22, 77.7, -10.0), 6.34],
+    [(21.19, 78.25, -10.0), 6.34],
+    [(26.16, 78.8, -10.0), 6.34],
+    [(31.13, 79.35, -10.0), 6.34],
+    [(36.1, 79.91, -10.0), 6.34],
+    [(41.06, 80.46, -10.0), 6.34],
+    [(46.03, 81.01, -10.0), 6.34],
+    [(51.0, 81.56, -10.0), 6.34],
+    [(55.97, 82.11, -10.0), 6.34],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 10
+                        DistanceTraveled = 50.00000000000001
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **Hammer**, described as: Vertical geometric form, dark metallic head with wooden or dark handle, compact build with a blunt striking end, suitable for driving nails or breaking objects.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:10 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 11 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Hammer,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Vertical geometric form, dark metallic head with wooden or dark handle, compact build with a blunt striking end, suitable for driving nails or breaking objects.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-44, 57]  
+                        **Y Range**: [min_y, max_y] = [26, 127]
+
+                        # RGB Captions
+                        Front = pine trees, snow-covered; trees are in the foreground; snow on the ground  
+                        Left = pine trees, snow-covered; trees are in the foreground; sun shining through branches  
+                        Right = pine trees, snow-covered; trees are in a row; snow on the ground  
+                        Down = shadow of tree branches, cast on snow; shadow is in the foreground; snow on the ground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 84, 96]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [47, 73, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [95, 96, 96]]
+
+                        DownDepth:
+                        [[52, 44, 52], [32, 24, 36], [32, 32, 38]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(16.22, 77.7, -10.0), 6.34],
+    [(21.19, 78.25, -10.0), 6.34],
+    [(26.16, 78.8, -10.0), 6.34],
+    [(31.13, 79.35, -10.0), 6.34],
+    [(36.1, 79.91, -10.0), 6.34],
+    [(41.06, 80.46, -10.0), 6.34],
+    [(46.03, 81.01, -10.0), 6.34],
+    [(51.0, 81.56, -10.0), 6.34],
+    [(55.97, 82.11, -10.0), 6.34],
+    [(55.97, 82.11, -10.0), -8.66],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 11
+                        DistanceTraveled = 50.00000000000001
+                        AvgHeadingChange = 1.36
+
+                        # Reminder  
+                        - The target is **Hammer**, described as: Vertical geometric form, dark metallic head with wooden or dark handle, compact build with a blunt striking end, suitable for driving nails or breaking objects.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:11 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 12 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Hammer,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Vertical geometric form, dark metallic head with wooden or dark handle, compact build with a blunt striking end, suitable for driving nails or breaking objects.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-44, 57]  
+                        **Y Range**: [min_y, max_y] = [26, 127]
+
+                        # RGB Captions
+                        Front = sun, low in the sky; snow-covered trees, dense and tall; trees are in the foreground; sun is in the background  
+                        Left = snow-covered trees, dense and tall; trees are in the foreground; sun is in the background  
+                        Right = snow-covered trees, dense and tall; trees are in a row; sun is in the background  
+                        Down = shadow of tree branches on snow; shadow is in the foreground; snow is textured  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 96]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [57, 62, 100]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [96, 100, 100]]
+
+                        DownDepth:
+                        [[39, 44, 51], [31, 24, 44], [32, 32, 38]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(21.19, 78.25, -10.0), 6.34],
+    [(26.16, 78.8, -10.0), 6.34],
+    [(31.13, 79.35, -10.0), 6.34],
+    [(36.1, 79.91, -10.0), 6.34],
+    [(41.06, 80.46, -10.0), 6.34],
+    [(46.03, 81.01, -10.0), 6.34],
+    [(51.0, 81.56, -10.0), 6.34],
+    [(55.97, 82.11, -10.0), 6.34],
+    [(55.97, 82.11, -10.0), -8.66],
+    [(55.97, 82.11, -10.0), -23.66],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 12
+                        DistanceTraveled = 50.00000000000001
+                        AvgHeadingChange = 2.5
+
+                        # Reminder  
+                        - The target is **Hammer**, described as: Vertical geometric form, dark metallic head with wooden or dark handle, compact build with a blunt striking end, suitable for driving nails or breaking objects.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:12 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 13 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Hammer,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Vertical geometric form, dark metallic head with wooden or dark handle, compact build with a blunt striking end, suitable for driving nails or breaking objects.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-44, 57]  
+                        **Y Range**: [min_y, max_y] = [26, 127]
+
+                        # RGB Captions
+                        Front = pine trees, snow-covered; two trees in the foreground; sun low on the horizon  
+                        Left = pine tree, snow-covered; tree is in the foreground; sunlight filtering through branches  
+                        Right = row of pine trees, snow-covered; trees are in the midground; sky clear with a pink hue  
+                        Down = shadow of leaves on a wall; shadow is in the foreground; light source from the top left  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 96]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [88, 45, 95]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [96, 93, 100]]
+
+                        DownDepth:
+                        [[36, 44, 52], [27, 24, 44], [38, 32, 38]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(26.16, 78.8, -10.0), 6.34],
+    [(31.13, 79.35, -10.0), 6.34],
+    [(36.1, 79.91, -10.0), 6.34],
+    [(41.06, 80.46, -10.0), 6.34],
+    [(46.03, 81.01, -10.0), 6.34],
+    [(51.0, 81.56, -10.0), 6.34],
+    [(55.97, 82.11, -10.0), 6.34],
+    [(55.97, 82.11, -10.0), -8.66],
+    [(55.97, 82.11, -10.0), -23.66],
+    [(55.97, 82.11, -10.0), -38.66],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 13
+                        DistanceTraveled = 50.00000000000001
+                        AvgHeadingChange = 3.46
+
+                        # Reminder  
+                        - The target is **Hammer**, described as: Vertical geometric form, dark metallic head with wooden or dark handle, compact build with a blunt striking end, suitable for driving nails or breaking objects.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:13 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 14 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Hammer,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Vertical geometric form, dark metallic head with wooden or dark handle, compact build with a blunt striking end, suitable for driving nails or breaking objects.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-44, 57]  
+                        **Y Range**: [min_y, max_y] = [26, 127]
+
+                        # RGB Captions
+                        Front = tall pine tree, snow-covered; tree is in the foreground; snowy ground  
+                        Left = pine tree, snow-covered branches; tree is centered; snowy ground  
+                        Right = row of pine trees, snow-covered; trees are in the background; snowy ground  
+                        Down = shadow on snow, tree branches; shadow is in the foreground; smooth snow surface  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 100, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [84, 42, 95]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 97, 100]]
+
+                        DownDepth:
+                        [[38, 44, 53], [27, 24, 44], [35, 31, 38]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(31.13, 79.35, -10.0), 6.34],
+    [(36.1, 79.91, -10.0), 6.34],
+    [(41.06, 80.46, -10.0), 6.34],
+    [(46.03, 81.01, -10.0), 6.34],
+    [(51.0, 81.56, -10.0), 6.34],
+    [(55.97, 82.11, -10.0), 6.34],
+    [(55.97, 82.11, -10.0), -8.66],
+    [(55.97, 82.11, -10.0), -23.66],
+    [(55.97, 82.11, -10.0), -38.66],
+    [(52.85, 78.21, -10.0), -38.66],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 14
+                        DistanceTraveled = 55.0
+                        AvgHeadingChange = 3.21
+
+                        # Reminder  
+                        - The target is **Hammer**, described as: Vertical geometric form, dark metallic head with wooden or dark handle, compact build with a blunt striking end, suitable for driving nails or breaking objects.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:14 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 15 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Hammer,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Vertical geometric form, dark metallic head with wooden or dark handle, compact build with a blunt striking end, suitable for driving nails or breaking objects.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-44, 57]  
+                        **Y Range**: [min_y, max_y] = [26, 127]
+
+                        # RGB Captions
+                        Front = trees, snow-covered, tall; trees are in the foreground and background; sun low on the horizon  
+                        Left = trees, snow-covered, tall; trees are in the foreground and background; sun low on the horizon  
+                        Right = trees, snow-covered, tall; trees are in a row; snow on the ground; sun low on the horizon  
+                        Down = shadow, tree branches, on sand; shadow is in the foreground; sand is textured  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 97, 99]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [87, 45, 89]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [99, 93, 100]]
+
+                        DownDepth:
+                        [[36, 44, 52], [27, 24, 44], [37, 32, 38]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(36.1, 79.91, -10.0), 6.34],
+    [(41.06, 80.46, -10.0), 6.34],
+    [(46.03, 81.01, -10.0), 6.34],
+    [(51.0, 81.56, -10.0), 6.34],
+    [(55.97, 82.11, -10.0), 6.34],
+    [(55.97, 82.11, -10.0), -8.66],
+    [(55.97, 82.11, -10.0), -23.66],
+    [(55.97, 82.11, -10.0), -38.66],
+    [(52.85, 78.21, -10.0), -38.66],
+    [(55.97, 82.11, -10.0), -38.66],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 15
+                        DistanceTraveled = 59.99999999999999
+                        AvgHeadingChange = 3.0
+
+                        # Reminder  
+                        - The target is **Hammer**, described as: Vertical geometric form, dark metallic head with wooden or dark handle, compact build with a blunt striking end, suitable for driving nails or breaking objects.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:15 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 16 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Hammer,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Vertical geometric form, dark metallic head with wooden or dark handle, compact build with a blunt striking end, suitable for driving nails or breaking objects.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-44, 57]  
+                        **Y Range**: [min_y, max_y] = [26, 127]
+
+                        # RGB Captions
+                        Front = pine tree, snow-covered; tree is in the foreground; sun shining from the left  
+                        Left = pine trees, snow-covered; trees are in the foreground and background; sunlight filtering through branches  
+                        Right = pine trees, snow-covered; trees are spread across the landscape; sun low in the sky  
+                        Down = textured wall, beige color; shadow of leaves on the wall; shadow is to the left  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [81, 100, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [83, 56, 71]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 82, 100]]
+
+                        DownDepth:
+                        [[34, 43, 52], [27, 24, 44], [38, 32, 44]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(41.06, 80.46, -10.0), 6.34],
+    [(46.03, 81.01, -10.0), 6.34],
+    [(51.0, 81.56, -10.0), 6.34],
+    [(55.97, 82.11, -10.0), 6.34],
+    [(55.97, 82.11, -10.0), -8.66],
+    [(55.97, 82.11, -10.0), -23.66],
+    [(55.97, 82.11, -10.0), -38.66],
+    [(52.85, 78.21, -10.0), -38.66],
+    [(55.97, 82.11, -10.0), -38.66],
+    [(55.97, 82.11, -10.0), -53.66],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 16
+                        DistanceTraveled = 59.99999999999999
+                        AvgHeadingChange = 3.75
+
+                        # Reminder  
+                        - The target is **Hammer**, described as: Vertical geometric form, dark metallic head with wooden or dark handle, compact build with a blunt striking end, suitable for driving nails or breaking objects.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:16 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 17 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Hammer,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Vertical geometric form, dark metallic head with wooden or dark handle, compact build with a blunt striking end, suitable for driving nails or breaking objects.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-44, 57]  
+                        **Y Range**: [min_y, max_y] = [26, 127]
+
+                        # RGB Captions
+                        Front = pine tree, snow-covered; sun low in the sky; tree stands in the foreground  
+                        Left = cluster of trees, snow-covered; clear sky; trees spread across the scene  
+                        Right = row of trees, snow-covered; light sky; trees are in the midground  
+                        Down = textured wall, beige color; shadow of leaves on the surface; shadow is to the left  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [71, 100, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [79, 69, 49]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 74, 95]]
+
+                        DownDepth:
+                        [[32, 32, 52], [31, 24, 44], [38, 32, 52]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(46.03, 81.01, -10.0), 6.34],
+    [(51.0, 81.56, -10.0), 6.34],
+    [(55.97, 82.11, -10.0), 6.34],
+    [(55.97, 82.11, -10.0), -8.66],
+    [(55.97, 82.11, -10.0), -23.66],
+    [(55.97, 82.11, -10.0), -38.66],
+    [(52.85, 78.21, -10.0), -38.66],
+    [(55.97, 82.11, -10.0), -38.66],
+    [(55.97, 82.11, -10.0), -53.66],
+    [(55.97, 82.11, -10.0), -68.66],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 17
+                        DistanceTraveled = 59.99999999999999
+                        AvgHeadingChange = 4.41
+
+                        # Reminder  
+                        - The target is **Hammer**, described as: Vertical geometric form, dark metallic head with wooden or dark handle, compact build with a blunt striking end, suitable for driving nails or breaking objects.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:17 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 18 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:Hammer,
+                        Size:small(0.5*0.25=0.13 squares),
+                        Description:Vertical geometric form, dark metallic head with wooden or dark handle, compact build with a blunt striking end, suitable for driving nails or breaking objects.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-44, 57]  
+                        **Y Range**: [min_y, max_y] = [26, 127]
+
+                        # RGB Captions
+                        Front = pine trees, snow-covered; sun low in the sky; trees are in the foreground  
+                        Left = snow-covered trees, dense forest; sun low in the sky; trees spread across the scene  
+                        Right = pine trees, snow-covered; sun low in the sky; trees are in the background  
+                        Down = wall, textured surface; shadow of tree branches; shadow covers part of the wall  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[100, 100, 100], [100, 100, 100], [55, 74, 100]]
+
+                        LeftDepth:
+                        [[100, 100, 100], [100, 100, 100], [88, 70, 51]]
+
+                        RightDepth:
+                        [[100, 100, 100], [100, 100, 100], [100, 82, 90]]
+
+                        DownDepth:
+                        [[32, 32, 52], [32, 24, 44], [38, 32, 52]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(51.0, 81.56, -10.0), 6.34],
+    [(55.97, 82.11, -10.0), 6.34],
+    [(55.97, 82.11, -10.0), -8.66],
+    [(55.97, 82.11, -10.0), -23.66],
+    [(55.97, 82.11, -10.0), -38.66],
+    [(52.85, 78.21, -10.0), -38.66],
+    [(55.97, 82.11, -10.0), -38.66],
+    [(55.97, 82.11, -10.0), -53.66],
+    [(55.97, 82.11, -10.0), -68.66],
+    [(55.97, 82.11, -10.0), -83.66],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 18
+                        DistanceTraveled = 59.99999999999999
+                        AvgHeadingChange = 5.0
+
+                        # Reminder  
+                        - The target is **Hammer**, described as: Vertical geometric form, dark metallic head with wooden or dark handle, compact build with a blunt striking end, suitable for driving nails or breaking objects.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:18 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

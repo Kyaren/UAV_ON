@@ -1,0 +1,1197 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:SwingSet,
+                        Size:mid(4.25*1.5=6.38 squares),
+                        Description:Geometric frame structure, metallic blue finish with suspended black swings on chains, arched support bars and evenly spaced seats, designed for children's playground activity.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-346, -245]  
+                        **Y Range**: [min_y, max_y] = [-393, -292]
+
+                        # RGB Captions
+                        Front = green trees, lush foliage; trees are in the foreground and background; sunlight filtering through leaves  
+                        Left = umbrella, red and white stripes; umbrella is near the water's edge; trees and pathway in the foreground  
+                        Right = sun, bright light; sun is in the upper right corner; trees with green leaves in the foreground and background  
+                        Down = pathway, curved shape; pathway is in the foreground; trees and grass on either side  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        LeftDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        RightDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        DownDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-295.76, -342.02, -10.0), 6.43],
+    [(-295.76, -342.02, -10.0), 6.43],
+    [(-295.76, -342.02, -10.0), 6.43],
+    [(-295.76, -342.02, -10.0), 6.43],
+    [(-295.76, -342.02, -10.0), 6.43],
+    [(-295.76, -342.02, -10.0), 6.43],
+    [(-295.76, -342.02, -10.0), 6.43],
+    [(-295.76, -342.02, -10.0), 6.43],
+    [(-295.76, -342.02, -10.0), 6.43],
+    [(-295.76, -342.02, -10.0), 6.43],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **SwingSet**, described as: Geometric frame structure, metallic blue finish with suspended black swings on chains, arched support bars and evenly spaced seats, designed for children's playground activity.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 1 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:SwingSet,
+                        Size:mid(4.25*1.5=6.38 squares),
+                        Description:Geometric frame structure, metallic blue finish with suspended black swings on chains, arched support bars and evenly spaced seats, designed for children's playground activity.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-346, -245]  
+                        **Y Range**: [min_y, max_y] = [-393, -292]
+
+                        # RGB Captions
+                        Front = green leaves, dense, on branches; leaves are in the foreground; sunlight filtering through  
+                        Left = green tree, large, with many leaves; tree is in the foreground; umbrella in the background to the left  
+                        Right = trees, several, scattered across field; trees have green leaves; sun shining from above  
+                        Down = tree shadow, long, on grass; shadow is in the foreground; tree branches hanging down  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        LeftDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        RightDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        DownDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-295.76, -342.02, -10.0), 6.43],
+    [(-290.79, -341.46, -10.0), 6.43],
+    [(-290.79, -341.46, -10.0), 6.43],
+    [(-290.79, -341.46, -10.0), 6.43],
+    [(-290.79, -341.46, -10.0), 6.43],
+    [(-290.79, -341.46, -10.0), 6.43],
+    [(-290.79, -341.46, -10.0), 6.43],
+    [(-290.79, -341.46, -10.0), 6.43],
+    [(-290.79, -341.46, -10.0), 6.43],
+    [(-290.79, -341.46, -10.0), 6.43],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 1
+                        DistanceTraveled = 5.000000000000017
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **SwingSet**, described as: Geometric frame structure, metallic blue finish with suspended black swings on chains, arched support bars and evenly spaced seats, designed for children's playground activity.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:1 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 2 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:SwingSet,
+                        Size:mid(4.25*1.5=6.38 squares),
+                        Description:Geometric frame structure, metallic blue finish with suspended black swings on chains, arched support bars and evenly spaced seats, designed for children's playground activity.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-346, -245]  
+                        **Y Range**: [min_y, max_y] = [-393, -292]
+
+                        # RGB Captions
+                        Front = green leaves, bright sunlight; leaves in the foreground; trees in the background  
+                        Left = tree branches, dense foliage; branches spread out; leaves covering branches  
+                        Right = green leaves, bright sunlight; leaves in the foreground; trees and sky in the background  
+                        Down = tree branches, dense foliage; branches spread out; leaves covering branches  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        LeftDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        RightDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        DownDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-295.76, -342.02, -10.0), 6.43],
+    [(-290.79, -341.46, -10.0), 6.43],
+    [(-285.82, -340.9, -10.0), 6.43],
+    [(-285.82, -340.9, -10.0), 6.43],
+    [(-285.82, -340.9, -10.0), 6.43],
+    [(-285.82, -340.9, -10.0), 6.43],
+    [(-285.82, -340.9, -10.0), 6.43],
+    [(-285.82, -340.9, -10.0), 6.43],
+    [(-285.82, -340.9, -10.0), 6.43],
+    [(-285.82, -340.9, -10.0), 6.43],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 2
+                        DistanceTraveled = 10.000000000000034
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **SwingSet**, described as: Geometric frame structure, metallic blue finish with suspended black swings on chains, arched support bars and evenly spaced seats, designed for children's playground activity.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:2 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 3 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:SwingSet,
+                        Size:mid(4.25*1.5=6.38 squares),
+                        Description:Geometric frame structure, metallic blue finish with suspended black swings on chains, arched support bars and evenly spaced seats, designed for children's playground activity.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-346, -245]  
+                        **Y Range**: [min_y, max_y] = [-393, -292]
+
+                        # RGB Captions
+                        Front = green grass, lush; stone fountain in the center; trees surrounding the area  
+                        Left = concrete path, narrow; trees on both sides; clear sky above  
+                        Right = small building, brown; trees in the foreground; bright sun in the background  
+                        Down = tree trunk, dark; shadows cast on the grass; sunlight filtering through  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        LeftDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        RightDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        DownDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-295.76, -342.02, -10.0), 6.43],
+    [(-290.79, -341.46, -10.0), 6.43],
+    [(-285.82, -340.9, -10.0), 6.43],
+    [(-280.86, -340.34, -10.0), 6.43],
+    [(-280.86, -340.34, -10.0), 6.43],
+    [(-280.86, -340.34, -10.0), 6.43],
+    [(-280.86, -340.34, -10.0), 6.43],
+    [(-280.86, -340.34, -10.0), 6.43],
+    [(-280.86, -340.34, -10.0), 6.43],
+    [(-280.86, -340.34, -10.0), 6.43],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 3
+                        DistanceTraveled = 15.00000000000005
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **SwingSet**, described as: Geometric frame structure, metallic blue finish with suspended black swings on chains, arched support bars and evenly spaced seats, designed for children's playground activity.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:3 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 4 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:SwingSet,
+                        Size:mid(4.25*1.5=6.38 squares),
+                        Description:Geometric frame structure, metallic blue finish with suspended black swings on chains, arched support bars and evenly spaced seats, designed for children's playground activity.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-346, -245]  
+                        **Y Range**: [min_y, max_y] = [-393, -292]
+
+                        # RGB Captions
+                        Front = green grass, lush; fountain in the center; trees surrounding the area  
+                        Left = trees, green leaves; path between trees; sky above  
+                        Right = small building, gray roof; trees around; sun shining from above  
+                        Down = grass, green; shadows on the ground; sunlight  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        LeftDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        RightDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        DownDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-295.76, -342.02, -10.0), 6.43],
+    [(-290.79, -341.46, -10.0), 6.43],
+    [(-285.82, -340.9, -10.0), 6.43],
+    [(-280.86, -340.34, -10.0), 6.43],
+    [(-275.89, -339.78, -10.0), 6.43],
+    [(-275.89, -339.78, -10.0), 6.43],
+    [(-275.89, -339.78, -10.0), 6.43],
+    [(-275.89, -339.78, -10.0), 6.43],
+    [(-275.89, -339.78, -10.0), 6.43],
+    [(-275.89, -339.78, -10.0), 6.43],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 4
+                        DistanceTraveled = 20.000000000000068
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **SwingSet**, described as: Geometric frame structure, metallic blue finish with suspended black swings on chains, arched support bars and evenly spaced seats, designed for children's playground activity.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:4 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 5 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:SwingSet,
+                        Size:mid(4.25*1.5=6.38 squares),
+                        Description:Geometric frame structure, metallic blue finish with suspended black swings on chains, arched support bars and evenly spaced seats, designed for children's playground activity.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-346, -245]  
+                        **Y Range**: [min_y, max_y] = [-393, -292]
+
+                        # RGB Captions
+                        Front = green grass, short; stone bench in the center; trees surrounding the area; bench is in the foreground  
+                        Left = paved road, wide; trees on both sides; road stretches horizontally across the image; trees are in the background  
+                        Right = small building, brown; trees surrounding the area; building is in the center; trees are in the background  
+                        Down = grass, short; tree shadow on the right; grass covers the entire frame; shadow is in the foreground  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        LeftDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        RightDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        DownDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-295.76, -342.02, -10.0), 6.43],
+    [(-290.79, -341.46, -10.0), 6.43],
+    [(-285.82, -340.9, -10.0), 6.43],
+    [(-280.86, -340.34, -10.0), 6.43],
+    [(-275.89, -339.78, -10.0), 6.43],
+    [(-270.92, -339.22, -10.0), 6.43],
+    [(-270.92, -339.22, -10.0), 6.43],
+    [(-270.92, -339.22, -10.0), 6.43],
+    [(-270.92, -339.22, -10.0), 6.43],
+    [(-270.92, -339.22, -10.0), 6.43],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 5
+                        DistanceTraveled = 25.000000000000085
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **SwingSet**, described as: Geometric frame structure, metallic blue finish with suspended black swings on chains, arched support bars and evenly spaced seats, designed for children's playground activity.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:5 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 6 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:SwingSet,
+                        Size:mid(4.25*1.5=6.38 squares),
+                        Description:Geometric frame structure, metallic blue finish with suspended black swings on chains, arched support bars and evenly spaced seats, designed for children's playground activity.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-346, -245]  
+                        **Y Range**: [min_y, max_y] = [-393, -292]
+
+                        # RGB Captions
+                        Front = round fountain, small, stone; fountain is in the center; trees surrounding  
+                        Left = row of trees, medium-sized, green leaves; trees are along the path; path in the foreground  
+                        Right = tent, small, brown fabric; tent is in the background; trees surrounding  
+                        Down = grass, short, light green; shadow of tree on the right  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        LeftDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        RightDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        DownDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-295.76, -342.02, -10.0), 6.43],
+    [(-290.79, -341.46, -10.0), 6.43],
+    [(-285.82, -340.9, -10.0), 6.43],
+    [(-280.86, -340.34, -10.0), 6.43],
+    [(-275.89, -339.78, -10.0), 6.43],
+    [(-270.92, -339.22, -10.0), 6.43],
+    [(-265.95, -338.66, -10.0), 6.43],
+    [(-265.95, -338.66, -10.0), 6.43],
+    [(-265.95, -338.66, -10.0), 6.43],
+    [(-265.95, -338.66, -10.0), 6.43],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 6
+                        DistanceTraveled = 30.000000000000103
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **SwingSet**, described as: Geometric frame structure, metallic blue finish with suspended black swings on chains, arched support bars and evenly spaced seats, designed for children's playground activity.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:6 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 7 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:SwingSet,
+                        Size:mid(4.25*1.5=6.38 squares),
+                        Description:Geometric frame structure, metallic blue finish with suspended black swings on chains, arched support bars and evenly spaced seats, designed for children's playground activity.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-346, -245]  
+                        **Y Range**: [min_y, max_y] = [-393, -292]
+
+                        # RGB Captions
+                        Front = fountain, small, stone; fountain is in the center; trees surrounding  
+                        Left = trees, medium-sized, green leaves; trees are in a row; grassy area in the foreground  
+                        Right = small building, dark roof; building is in the background; trees on both sides  
+                        Down = grass, light green, short; shadow in the bottom right corner  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        LeftDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        RightDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        DownDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-295.76, -342.02, -10.0), 6.43],
+    [(-290.79, -341.46, -10.0), 6.43],
+    [(-285.82, -340.9, -10.0), 6.43],
+    [(-280.86, -340.34, -10.0), 6.43],
+    [(-275.89, -339.78, -10.0), 6.43],
+    [(-270.92, -339.22, -10.0), 6.43],
+    [(-265.95, -338.66, -10.0), 6.43],
+    [(-260.98, -338.1, -10.0), 6.43],
+    [(-260.98, -338.1, -10.0), 6.43],
+    [(-260.98, -338.1, -10.0), 6.43],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 7
+                        DistanceTraveled = 35.00000000000012
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **SwingSet**, described as: Geometric frame structure, metallic blue finish with suspended black swings on chains, arched support bars and evenly spaced seats, designed for children's playground activity.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:7 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 8 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:SwingSet,
+                        Size:mid(4.25*1.5=6.38 squares),
+                        Description:Geometric frame structure, metallic blue finish with suspended black swings on chains, arched support bars and evenly spaced seats, designed for children's playground activity.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-346, -245]  
+                        **Y Range**: [min_y, max_y] = [-393, -292]
+
+                        # RGB Captions
+                        Front = fountain, small, stone; fountain is in the center; trees surrounding  
+                        Left = trees, medium-sized, green leaves; trees are in a row; sidewalk in front  
+                        Right = house, distant, behind trees; trees are in the foreground; sun shining  
+                        Down = grass, short, light green; grass covers the entire frame  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        LeftDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        RightDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        DownDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-295.76, -342.02, -10.0), 6.43],
+    [(-290.79, -341.46, -10.0), 6.43],
+    [(-285.82, -340.9, -10.0), 6.43],
+    [(-280.86, -340.34, -10.0), 6.43],
+    [(-275.89, -339.78, -10.0), 6.43],
+    [(-270.92, -339.22, -10.0), 6.43],
+    [(-265.95, -338.66, -10.0), 6.43],
+    [(-260.98, -338.1, -10.0), 6.43],
+    [(-256.01, -337.54, -10.0), 6.43],
+    [(-256.01, -337.54, -10.0), 6.43],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 8
+                        DistanceTraveled = 40.000000000000135
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **SwingSet**, described as: Geometric frame structure, metallic blue finish with suspended black swings on chains, arched support bars and evenly spaced seats, designed for children's playground activity.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:8 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 9 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:SwingSet,
+                        Size:mid(4.25*1.5=6.38 squares),
+                        Description:Geometric frame structure, metallic blue finish with suspended black swings on chains, arched support bars and evenly spaced seats, designed for children's playground activity.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-346, -245]  
+                        **Y Range**: [min_y, max_y] = [-393, -292]
+
+                        # RGB Captions
+                        Front = fountain, small, stone; fountain is in the foreground; trees in a row behind the fountain  
+                        Left = trees, medium-sized, green leaves; trees are in a row; street lamp to the left of the trees  
+                        Right = house, wooden, brown; house is in the background; trees in front of the house  
+                        Down = grass, short, green; grass covers the entire frame  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        LeftDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        RightDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        DownDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-295.76, -342.02, -10.0), 6.43],
+    [(-290.79, -341.46, -10.0), 6.43],
+    [(-285.82, -340.9, -10.0), 6.43],
+    [(-280.86, -340.34, -10.0), 6.43],
+    [(-275.89, -339.78, -10.0), 6.43],
+    [(-270.92, -339.22, -10.0), 6.43],
+    [(-265.95, -338.66, -10.0), 6.43],
+    [(-260.98, -338.1, -10.0), 6.43],
+    [(-256.01, -337.54, -10.0), 6.43],
+    [(-251.05, -336.98, -10.0), 6.43],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 9
+                        DistanceTraveled = 45.00000000000012
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **SwingSet**, described as: Geometric frame structure, metallic blue finish with suspended black swings on chains, arched support bars and evenly spaced seats, designed for children's playground activity.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:9 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 10 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:SwingSet,
+                        Size:mid(4.25*1.5=6.38 squares),
+                        Description:Geometric frame structure, metallic blue finish with suspended black swings on chains, arched support bars and evenly spaced seats, designed for children's playground activity.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-346, -245]  
+                        **Y Range**: [min_y, max_y] = [-393, -292]
+
+                        # RGB Captions
+                        Front = fountain, stone base, water spout; fountain is in the foreground; trees in the background  
+                        Left = trees, green leaves, medium-sized; trees are in a row; grassy field in the foreground  
+                        Right = house, wooden structure, dark roof; house is in the background; trees in the foreground  
+                        Down = grass, light green, patches of dirt; grass covers the entire image  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        LeftDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        RightDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        DownDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-290.79, -341.46, -10.0), 6.43],
+    [(-285.82, -340.9, -10.0), 6.43],
+    [(-280.86, -340.34, -10.0), 6.43],
+    [(-275.89, -339.78, -10.0), 6.43],
+    [(-270.92, -339.22, -10.0), 6.43],
+    [(-265.95, -338.66, -10.0), 6.43],
+    [(-260.98, -338.1, -10.0), 6.43],
+    [(-256.01, -337.54, -10.0), 6.43],
+    [(-251.05, -336.98, -10.0), 6.43],
+    [(-246.08, -336.42, -10.0), 6.43],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 10
+                        DistanceTraveled = 50.00000000000011
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is **SwingSet**, described as: Geometric frame structure, metallic blue finish with suspended black swings on chains, arched support bars and evenly spaced seats, designed for children's playground activity.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:10 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 11 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:SwingSet,
+                        Size:mid(4.25*1.5=6.38 squares),
+                        Description:Geometric frame structure, metallic blue finish with suspended black swings on chains, arched support bars and evenly spaced seats, designed for children's playground activity.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-346, -245]  
+                        **Y Range**: [min_y, max_y] = [-393, -292]
+
+                        # RGB Captions
+                        Front = fountain, stone base; fountain is in the foreground; trees in a row behind the fountain  
+                        Left = trees, medium-sized, green leaves; trees are in a row; grassy area in the foreground  
+                        Right = tree, large, green leaves; tree is in the center; building in the distant background  
+                        Down = grass, short, light green; grass covers the entire image  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        LeftDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        RightDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        DownDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-285.82, -340.9, -10.0), 6.43],
+    [(-280.86, -340.34, -10.0), 6.43],
+    [(-275.89, -339.78, -10.0), 6.43],
+    [(-270.92, -339.22, -10.0), 6.43],
+    [(-265.95, -338.66, -10.0), 6.43],
+    [(-260.98, -338.1, -10.0), 6.43],
+    [(-256.01, -337.54, -10.0), 6.43],
+    [(-251.05, -336.98, -10.0), 6.43],
+    [(-246.08, -336.42, -10.0), 6.43],
+    [(-246.08, -336.42, -10.0), -8.57],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 11
+                        DistanceTraveled = 50.00000000000011
+                        AvgHeadingChange = 1.36
+
+                        # Reminder  
+                        - The target is **SwingSet**, described as: Geometric frame structure, metallic blue finish with suspended black swings on chains, arched support bars and evenly spaced seats, designed for children's playground activity.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:11 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 12 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:SwingSet,
+                        Size:mid(4.25*1.5=6.38 squares),
+                        Description:Geometric frame structure, metallic blue finish with suspended black swings on chains, arched support bars and evenly spaced seats, designed for children's playground activity.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-346, -245]  
+                        **Y Range**: [min_y, max_y] = [-393, -292]
+
+                        # RGB Captions
+                        Front = green grass, short; trees in the background; trees are scattered  
+                        Left = green grass, short; trees in the background; trees are scattered  
+                        Right = fountain, stone; trees in the background; trees are scattered  
+                        Down = green grass, short; grass is uniform  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        LeftDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        RightDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        DownDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-280.86, -340.34, -10.0), 6.43],
+    [(-275.89, -339.78, -10.0), 6.43],
+    [(-270.92, -339.22, -10.0), 6.43],
+    [(-265.95, -338.66, -10.0), 6.43],
+    [(-260.98, -338.1, -10.0), 6.43],
+    [(-256.01, -337.54, -10.0), 6.43],
+    [(-251.05, -336.98, -10.0), 6.43],
+    [(-246.08, -336.42, -10.0), 6.43],
+    [(-246.08, -336.42, -10.0), -8.57],
+    [(-246.08, -336.42, -10.0), -23.57],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 12
+                        DistanceTraveled = 50.00000000000011
+                        AvgHeadingChange = 2.5
+
+                        # Reminder  
+                        - The target is **SwingSet**, described as: Geometric frame structure, metallic blue finish with suspended black swings on chains, arched support bars and evenly spaced seats, designed for children's playground activity.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:12 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 13 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:SwingSet,
+                        Size:mid(4.25*1.5=6.38 squares),
+                        Description:Geometric frame structure, metallic blue finish with suspended black swings on chains, arched support bars and evenly spaced seats, designed for children's playground activity.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-346, -245]  
+                        **Y Range**: [min_y, max_y] = [-393, -292]
+
+                        # RGB Captions
+                        Front = green grass, short; trees in the background; trees are scattered  
+                        Left = green grass, short; trees in a row; trees along the path  
+                        Right = fountain, stone; fountain in the foreground; trees in the background  
+                        Down = grass, green; grass covers the entire frame  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        LeftDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        RightDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        DownDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-275.89, -339.78, -10.0), 6.43],
+    [(-270.92, -339.22, -10.0), 6.43],
+    [(-265.95, -338.66, -10.0), 6.43],
+    [(-260.98, -338.1, -10.0), 6.43],
+    [(-256.01, -337.54, -10.0), 6.43],
+    [(-251.05, -336.98, -10.0), 6.43],
+    [(-246.08, -336.42, -10.0), 6.43],
+    [(-246.08, -336.42, -10.0), -8.57],
+    [(-246.08, -336.42, -10.0), -23.57],
+    [(-246.08, -336.42, -10.0), -38.57],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 13
+                        DistanceTraveled = 50.00000000000011
+                        AvgHeadingChange = 3.46
+
+                        # Reminder  
+                        - The target is **SwingSet**, described as: Geometric frame structure, metallic blue finish with suspended black swings on chains, arched support bars and evenly spaced seats, designed for children's playground activity.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:13 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 14 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:SwingSet,
+                        Size:mid(4.25*1.5=6.38 squares),
+                        Description:Geometric frame structure, metallic blue finish with suspended black swings on chains, arched support bars and evenly spaced seats, designed for children's playground activity.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-346, -245]  
+                        **Y Range**: [min_y, max_y] = [-393, -292]
+
+                        # RGB Captions
+                        Front = green trees, medium-sized, leafy; trees are in the foreground and background; grassy field in the middle  
+                        Left = green trees, medium-sized, leafy; trees are in a row; grassy field in the foreground  
+                        Right = stone fountain, small, water feature; fountain is in the center; green trees, medium-sized, leafy; trees are in the background  
+                        Down = grass, short, green; grass covers the entire image  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        LeftDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        RightDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        DownDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-270.92, -339.22, -10.0), 6.43],
+    [(-265.95, -338.66, -10.0), 6.43],
+    [(-260.98, -338.1, -10.0), 6.43],
+    [(-256.01, -337.54, -10.0), 6.43],
+    [(-251.05, -336.98, -10.0), 6.43],
+    [(-246.08, -336.42, -10.0), 6.43],
+    [(-246.08, -336.42, -10.0), -8.57],
+    [(-246.08, -336.42, -10.0), -23.57],
+    [(-246.08, -336.42, -10.0), -38.57],
+    [(-246.08, -336.42, -10.0), -53.57],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 14
+                        DistanceTraveled = 50.00000000000011
+                        AvgHeadingChange = 4.29
+
+                        # Reminder  
+                        - The target is **SwingSet**, described as: Geometric frame structure, metallic blue finish with suspended black swings on chains, arched support bars and evenly spaced seats, designed for children's playground activity.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:14 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 15 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:SwingSet,
+                        Size:mid(4.25*1.5=6.38 squares),
+                        Description:Geometric frame structure, metallic blue finish with suspended black swings on chains, arched support bars and evenly spaced seats, designed for children's playground activity.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-346, -245]  
+                        **Y Range**: [min_y, max_y] = [-393, -292]
+
+                        # RGB Captions
+                        Front = green trees, medium-sized, leafy; trees are in the foreground and background; grassy field in the foreground  
+                        Left = green trees, medium-sized, leafy; trees are in the background; people walking on the path in the distance  
+                        Right = stone fountain, small, active; fountain is in the foreground; green trees, medium-sized, leafy; trees are in the background  
+                        Down = grass, short, green; grass covers the entire image  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        LeftDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        RightDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        DownDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-265.95, -338.66, -10.0), 6.43],
+    [(-260.98, -338.1, -10.0), 6.43],
+    [(-256.01, -337.54, -10.0), 6.43],
+    [(-251.05, -336.98, -10.0), 6.43],
+    [(-246.08, -336.42, -10.0), 6.43],
+    [(-246.08, -336.42, -10.0), -8.57],
+    [(-246.08, -336.42, -10.0), -23.57],
+    [(-246.08, -336.42, -10.0), -38.57],
+    [(-246.08, -336.42, -10.0), -53.57],
+    [(-246.08, -336.42, -10.0), -68.57],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 15
+                        DistanceTraveled = 50.00000000000011
+                        AvgHeadingChange = 5.0
+
+                        # Reminder  
+                        - The target is **SwingSet**, described as: Geometric frame structure, metallic blue finish with suspended black swings on chains, arched support bars and evenly spaced seats, designed for children's playground activity.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:15 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 16 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:SwingSet,
+                        Size:mid(4.25*1.5=6.38 squares),
+                        Description:Geometric frame structure, metallic blue finish with suspended black swings on chains, arched support bars and evenly spaced seats, designed for children's playground activity.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-346, -245]  
+                        **Y Range**: [min_y, max_y] = [-393, -292]
+
+                        # RGB Captions
+                        Front = trees, green leaves; trees are in the foreground and background; grassy field  
+                        Left = trees, green leaves; multiple trees; trees surround a grassy area; sunny sky  
+                        Right = fountain, stone base; fountain is in the foreground; trees in the background; grassy field  
+                        Down = grass, light green; grass covers the entire frame  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        LeftDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        RightDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        DownDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-260.98, -338.1, -10.0), 6.43],
+    [(-256.01, -337.54, -10.0), 6.43],
+    [(-251.05, -336.98, -10.0), 6.43],
+    [(-246.08, -336.42, -10.0), 6.43],
+    [(-246.08, -336.42, -10.0), -8.57],
+    [(-246.08, -336.42, -10.0), -23.57],
+    [(-246.08, -336.42, -10.0), -38.57],
+    [(-246.08, -336.42, -10.0), -53.57],
+    [(-246.08, -336.42, -10.0), -68.57],
+    [(-246.08, -336.42, -10.0), -83.57],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 16
+                        DistanceTraveled = 50.00000000000011
+                        AvgHeadingChange = 5.62
+
+                        # Reminder  
+                        - The target is **SwingSet**, described as: Geometric frame structure, metallic blue finish with suspended black swings on chains, arched support bars and evenly spaced seats, designed for children's playground activity.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:16 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 17 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:SwingSet,
+                        Size:mid(4.25*1.5=6.38 squares),
+                        Description:Geometric frame structure, metallic blue finish with suspended black swings on chains, arched support bars and evenly spaced seats, designed for children's playground activity.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-346, -245]  
+                        **Y Range**: [min_y, max_y] = [-393, -292]
+
+                        # RGB Captions
+                        Front = trees, green leaves; trees are in the background; grassy field in the foreground  
+                        Left = trees, green leaves; trees are spread across the landscape; sun shining from the top left  
+                        Right = fountain, water jets; fountain is in the foreground; trees in the background; grassy field surrounding  
+                        Down = grass, light green; grass covers the entire frame  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        LeftDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        RightDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        DownDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-256.01, -337.54, -10.0), 6.43],
+    [(-251.05, -336.98, -10.0), 6.43],
+    [(-246.08, -336.42, -10.0), 6.43],
+    [(-246.08, -336.42, -10.0), -8.57],
+    [(-246.08, -336.42, -10.0), -23.57],
+    [(-246.08, -336.42, -10.0), -38.57],
+    [(-246.08, -336.42, -10.0), -53.57],
+    [(-246.08, -336.42, -10.0), -68.57],
+    [(-246.08, -336.42, -10.0), -83.57],
+    [(-246.08, -336.42, -10.0), -98.57],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 17
+                        DistanceTraveled = 50.00000000000011
+                        AvgHeadingChange = 6.18
+
+                        # Reminder  
+                        - The target is **SwingSet**, described as: Geometric frame structure, metallic blue finish with suspended black swings on chains, arched support bars and evenly spaced seats, designed for children's playground activity.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:17 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 18 PROMPT]
+
+                        # Target Information 
+                        Target = [Name:SwingSet,
+                        Size:mid(4.25*1.5=6.38 squares),
+                        Description:Geometric frame structure, metallic blue finish with suspended black swings on chains, arched support bars and evenly spaced seats, designed for children's playground activity.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-346, -245]  
+                        **Y Range**: [min_y, max_y] = [-393, -292]
+
+                        # RGB Captions
+                        Front = green trees, medium-sized, leafy; trees are in the foreground and background; grassy area in front of trees  
+                        Left = green trees, large group, leafy; trees are spread across the field; sunny sky above  
+                        Right = green trees, medium-sized, leafy; trees are in the background; grassy area in the foreground; stone structure on the right  
+                        Down = green grass, dense, short; patch of dirt in the center; bush at the top  
+
+                        # Depth Information
+                        FrontDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        LeftDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        RightDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        DownDepth:
+                        [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-251.05, -336.98, -10.0), 6.43],
+    [(-246.08, -336.42, -10.0), 6.43],
+    [(-246.08, -336.42, -10.0), -8.57],
+    [(-246.08, -336.42, -10.0), -23.57],
+    [(-246.08, -336.42, -10.0), -38.57],
+    [(-246.08, -336.42, -10.0), -53.57],
+    [(-246.08, -336.42, -10.0), -68.57],
+    [(-246.08, -336.42, -10.0), -83.57],
+    [(-246.08, -336.42, -10.0), -98.57],
+    [(-246.82, -341.37, -10.0), -98.57],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 18
+                        DistanceTraveled = 55.00000000000013
+                        AvgHeadingChange = 5.83
+
+                        # Reminder  
+                        - The target is **SwingSet**, described as: Geometric frame structure, metallic blue finish with suspended black swings on chains, arched support bars and evenly spaced seats, designed for children's playground activity.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:18 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
