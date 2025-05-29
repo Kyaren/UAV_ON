@@ -49,10 +49,13 @@ Aerial navigation is a fundamental yet underexplored capability in embodied inte
     ```
 
 - **Step3: Get dataset json files**
+
     You can download dataset from [here](https://huggingface.co/datasets/Kyaren/UAV-ON-dataset)，you can use [script](https://github.com/Kyaren/UAV_ON/tree/main/scripts) to merge split data files into a single JSON file
 
 - **Project directory structure**
+  
   Your workspace directory should be structured as follows:
+  
   ```text
   workspace/
   ├── UAV_ON/        
@@ -81,7 +84,7 @@ Aerial navigation is a fundamental yet underexplored capability in embodied inte
   bash scripts/metric.sh
   ```
 
-  If you encounter the "**Ping returned false**" error and **no output in server console**, This is caused by the package version. You can run the following command:
+  If you encounter the "**Ping returned false**" error and **no output in server console**, this is caused by the package version. You can run the following command:
 
   ```bash 
   pip uninstall msgpack msgpack-python msgpack-rpc-python
