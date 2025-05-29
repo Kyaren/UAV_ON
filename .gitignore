@@ -7,8 +7,8 @@
 
 #other folders
 test/
-src/eval_random.py
-scripts/eval_random.sh
+/src/eval_random.py
+/scripts/eval_random.sh
 .DS_Store
 # Ignore all log folders
 CLIP_logs/
@@ -23,3 +23,4 @@ method/
 
 # Optional: Ignore logs or temp files
 *.log
+*.jsonl

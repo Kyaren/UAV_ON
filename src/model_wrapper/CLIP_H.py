@@ -88,8 +88,6 @@ class CLIP_H(BaseModelWrapper):
             
             with torch.no_grad():
                 outputs = self.model(**input[i])
-                logits_per_image = outputs.logits_per_image
-                probs = logits_per_image.squeeze(1)
 
                 img_feats = outputs.image_embeds      # shape [n_images, dim]
                 txt_feats = outputs.text_embeds       # shape [n_texts, dim]

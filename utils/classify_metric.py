@@ -251,7 +251,7 @@ osr = (oracle_tasks + success_tasks) / total_tasks if total_tasks > 0 else 0
 # ===== DTS =====
 dts_total, _ = compute_dts(all_success_dirs + all_oracle_dirs + all_fail_dirs)
 
-# ===== SPL & SAE =====
+# ===== SPL  =====
 spl_value, _ = compute_spl(
     fail_folders=all_fail_dirs,
     success_folders=all_success_dirs,

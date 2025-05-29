@@ -66,7 +66,7 @@ def generate_caption(image_file, temperature=0.7):
     
     try:
         response = MultiModalConversation.call(
-            api_key="sk-c728ec5a2c98441282a8742a21d0cec6",
+            api_key="your_api_key_here",  # 替换为你的 qwen-api
             model='qwen-vl-max',
             messages=messages
         )
@@ -89,7 +89,7 @@ def generate_caption(image_file, temperature=0.7):
         return captions
 
     except Exception as e:
-        print("⚠️ [generate_caption] Failed to get or parse caption:")
+        print("[generate_caption] Failed to get or parse caption:")
         traceback.print_exc()
         # 返回默认描述（防止程序崩溃）
         return ["Description time out. [ServerError]"] * len(image_file)
