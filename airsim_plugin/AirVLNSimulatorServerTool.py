@@ -389,16 +389,13 @@ class EventHandler(object):
         index = 0
         while len(ports) < len(scen_id_gpu_list):
             pid = FromPortGetPid(self.scene_ports[index])
-            print("pid", pid)
             if pid is None or not isinstance(pid, int):
                 ports.append(self.scene_ports[index])
                 print("scene_ports", self.scene_ports[index])
             index += 1
-        print("ports", ports)
         KillPorts(ports) 
         # Occupied GPU 2
         gpus = [scen_id_gpu_list[index][-1] for index in range(len(scen_id_gpu_list))]
-        print(scen_id_gpu_list)
 
         # search scene path 3
         choose_env_exe_paths = []
@@ -505,9 +502,7 @@ class EventHandler(object):
                 str(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())),
             )
         )
-        # print(args.port)
-        try:
-            print(scen_id_gpu_list)
+        try:  
             ip = ip
             for item in scen_id_gpu_list:
                 try:

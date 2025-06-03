@@ -200,7 +200,6 @@ class AirVLNSimulatorClientTool:
                 logger.error(f'打开场景失败，机器: {socket_client.address._host}:{socket_client.address._port}')
                 raise Exception('打开场景失败')
             
-            print("===")
             assert len(result[1]) == 2, '打开场景失败'
             print('waiting for airsim connection...')
             time.sleep(3 * len(self.machines_info[index]['open_scenes']) + 15)
@@ -217,8 +216,6 @@ class AirVLNSimulatorClientTool:
                     self.airsim_clients[index][i] = None
                 else:  
                     self.airsim_clients[index][i] = airsim.MultirotorClient(ip=ip, port=port, timeout_value=airsim_timeout)
-                    
-                    print(port)
 
             logger.info(f'打开场景完毕，机器{index}: {socket_client.address._host}:{socket_client.address._port}')
             return ports
