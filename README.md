@@ -6,6 +6,7 @@
 ## Content
 
 - [Introduction](#introduction)
+- [Demo](#demo)
 - [Getting Started](#getting-started)
 - [Usage](#usage)
 - [TODO](#todo)
@@ -20,6 +21,20 @@
 Aerial navigation is a fundamental yet underexplored capability in embodied intelligence, enabling agents to operate in large-scale, unstructured environments where traditional navigation paradigms fall short. However, most existing research follows the Vision-and-Language Navigation (VLN) paradigm, which heavily depends on step-by-step linguistic instructions, limiting its scalability and autonomy. To bridge this gap, we propose **UAV-ON**, a benchmark designed to facilitate research on large-scale **Object Goal Navigation (ObjectNav)** by aerial agents operating in open-world environments. UAV-ON comprises **14 high-fidelity Unreal Engine environments** with diverse semantic regions and complex spatial layouts, covering **urban, natural, and mixed-use** settings. It defines **1270 annotated target objects**, each paired with a structured semantic prompt that encodes category, estimated physical footprint, and detailed visual descriptors, allowing grounded reasoning. These prompts serve as semantic goals, introducing realistic ambiguity and complex reasoning challenges for aerial agents. We also propose **Aerial ObjectNav Agent (AOA)**, a modular baseline policy that integrates prompt semantics with egocentric observations to perform long-horizon, goal-directed exploration. Empirical results demonstrate that standard baselines perform poorly in this setting, underscoring the compounded difficulty of aerial navigation and semantic goal grounding. **UAV-ON aims to advance research on scalable UAV autonomy driven by semantic goal descriptions in complex real-world environments**.
 
 **For detailed supplementary information about this project, please refer to the appendix: [Click to view appendix](https://drive.google.com/file/d/11nc_SmsQ5fDNz_wON3vqqATLWKm251Ik/view?usp=drive_link)**
+
+## Demo
+
+Watch a full successful flight of our Aerial ObjectNav Agent in action:
+
+<p align="center">
+  <a href="https://youtu.be/Zx-Bhzc5Cv4">
+    <img src="https://img.youtube.com/vi/Zx-Bhzc5Cv4/0.jpg" alt="UAV-ON Demo" width="70%"/>
+  </a>
+</p>
+
+> Click the image above or [this link](https://youtu.be/Zx-Bhzc5Cv4) to view the demo video.
+
+
 
 ## Getting Started
 
